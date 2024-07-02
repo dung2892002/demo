@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: fff;
+  padding: 20px;
+}
+
+h2 {
+  margin-left: 24px;
+}
+
+.required {
+  text-align: center;
+  color: red;
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 6px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 1%;
+}
+
+input {
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.left-section,
+.right-section {
+  width: 50%;
+  margin-right: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right-section {
+  flex-direction: row;
+}
+
+.form-checkbox-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.form-checkbox input {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+select {
+  height: 40px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form label,
+form input,
+form button {
+  margin: 4px 0;
+}
+
+form label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.footer button {
+  width: 96px;
+  height: 48px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 1%;
+  border: 2px solid grey;
+  cursor: pointer;
+}
+
+.button__cancel {
+  background-color: #fff;
+}
+
+.button__complete {
+  background-color: #00af1d;
+}

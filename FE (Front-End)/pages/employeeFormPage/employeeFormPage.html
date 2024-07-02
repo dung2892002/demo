@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form thông tin nhân viên</title>
+    <link rel="stylesheet" href="../../assets/styles/main.css" />
+    <link rel="stylesheet" href="employeeFormPage.css" />
+    <script src="employeeFormPage.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Thông tin nhân viên</h2>
+      <form class="employee-form">
+        <div class="form-group">
+          <div class="left-section">
+            <div class="form-item">
+              <label for="employee-code" class="form-label"
+                >Mã nhân viên <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="employee-code"
+                class="form-input"
+                name="employee-code"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label for="fullname" class="form-label"
+                >Họ và tên <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="fullname"
+                class="form-input"
+                name="fullname"
+                required
+              />
+            </div>
+          </div>
+          <div class="right-section">
+            <div class="form-item">
+              <label for="date-of-birth" class="form-label">Ngày sinh </label>
+              <input
+                type="date"
+                id="date-of-birth"
+                class="form-input"
+                name="date-of-birth"
+              />
+            </div>
+            <div class="form-item">
+              <label for="male" class="form-label">Giới tính</label>
+              <div class="form-checkbox-group">
+                <div class="form-checkbox">
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <span>Nam</span>
+                </div>
+                <div class="form-checkbox">
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <span>Nữ</span>
+                </div>
+                <div class="form-checkbox">
+                  <input type="radio" id="other" name="gender" value="other" />
+                  <span>Khác</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="left-section">
+            <div class="form-item">
+              <label for="position" class="form-label">Vị trí</label>
+              <select id="position" class="form-input" name="position" required>
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="right-section">
+            <div class="form-item">
+              <label for="identity-number" class="form-label">Số CMTND</label>
+              <input
+                type="text"
+                id="identity-number"
+                class="form-input"
+                name="identity-number"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label for="identity-date" class="form-label">Ngày cấp</label>
+              <input
+                type="date"
+                id="identity-date"
+                class="form-input"
+                name="identity-date"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="left-section">
+            <div class="form-item">
+              <label for="department" class="form-label">Phòng ban</label>
+              <select
+                id="department"
+                class="form-input"
+                name="department"
+                required
+              >
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="right-section">
+            <div class="form-item">
+              <label for="identity-place" class="form-label">Nơi cấp</label>
+              <input
+                type="text"
+                id="identity-place"
+                class="form-input"
+                name="identity-place"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-item">
+            <label for="address" class="form-label">Địa chỉ</label>
+            <input
+              type="text"
+              id="address"
+              class="form-input"
+              name="address"
+              autocomplete="address"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-item">
+            <label for="mobile-number" class="form-label">DT di động</label>
+            <input
+              type="text"
+              id="mobile-number"
+              class="form-input"
+              name="mobile-number"
+            />
+          </div>
+          <div class="form-item">
+            <label for="phone-number" class="form-label">DT cố định</label>
+            <input
+              type="text"
+              id="phone-number"
+              class="form-input"
+              name="phone-number"
+            />
+          </div>
+          <div class="form-item">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              name="email"
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-item">
+            <label for="bank-account" class="form-label"
+              >Tài khoản ngân hàng</label
+            >
+            <input
+              type="text"
+              id="bank-account"
+              class="form-input"
+              name="bank-account"
+            />
+          </div>
+          <div class="form-item">
+            <label for="bank-name" class="form-label">Tên ngân hàng</label>
+            <input
+              type="text"
+              id="bank-name"
+              class="form-input"
+              name="bank-name"
+            />
+          </div>
+          <div class="form-item">
+            <label for="bank-place" class="form-label">Chi nhánh</label>
+            <input
+              type="text"
+              id="bank-place"
+              class="form-input"
+              name="bank-place"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="footer">
+        <button
+          class="button__cancel"
+          onclick="location.href='../EmployeeListPage/employeeListPage.html'"
+        >
+          Hủy
+        </button>
+        <button class="button__complete">Cất</button>
+      </div>
+    </div>
+  </body>
+</html>

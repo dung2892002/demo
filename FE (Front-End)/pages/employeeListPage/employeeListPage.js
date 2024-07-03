@@ -402,10 +402,10 @@ const employees = [
 ]
 
 function insertTable(employees) {
-    const tbody = document.querySelector('.employee-table tbody');
+    const tbody = document.querySelector('.employee-table tbody')
 
     employees.forEach((employee, index) => {
-        const row = document.createElement('tr');
+        const row = document.createElement('tr')
         row.innerHTML = `
       <td>${index + 1}</td>
       <td>${employee.maNhanVien}</td>
@@ -430,21 +430,37 @@ function insertTable(employees) {
               </div>
             </td>
     `;
-        tbody.appendChild(row);
+        tbody.appendChild(row)
     })
 }
 
 
-const totalEmployees = employees.length;
-
 function insertTotalEmployee(totalEmployees) {
-    const total = document.querySelector('.footer-table .footer-section');
-    const value = document.createElement('span');
+    const total = document.querySelector('.footer-table .footer-section')
+    const value = document.createElement('span')
     value.innerHTML = `Tổng: ${totalEmployees}`
     total.appendChild(value)
 }
 
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar')
+    const toggleButton = document.getElementById('toggleButton')
+    const buttonImg = toggleButton.querySelector('img')
+
+    toggleButton.addEventListener('click', function () {
+        sidebar.classList.toggle('sidebar--less');
+        if (sidebar.classList.contains('sidebar--less')) {
+            buttonImg.src = '../../assets/icon/btn-next-page.svg'
+        } else {
+            buttonImg.src = '../../assets/icon/btn-prev-page.svg'
+            buttonText.textContent = 'Thu gọn'
+        }
+        console.log('toggle')
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    insertTable(employees);
-    insertTotalEmployee(totalEmployees);
+    insertTable(employees)
+    insertTotalEmployee(employees.length)
+    toggleSidebar()
 });

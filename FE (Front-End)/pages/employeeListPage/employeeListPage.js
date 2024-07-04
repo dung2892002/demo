@@ -453,7 +453,6 @@ function toggleSidebar() {
             buttonImg.src = '../../assets/icon/btn-next-page.svg'
         } else {
             buttonImg.src = '../../assets/icon/btn-prev-page.svg'
-            buttonText.textContent = 'Thu gọn'
         }
         console.log('toggle')
     });

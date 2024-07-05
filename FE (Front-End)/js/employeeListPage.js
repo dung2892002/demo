@@ -418,13 +418,13 @@ function insertTable(employees) {
                 <span> ${employee.diaChi} </span>
                 <div class="action-buttons">
                   <button class="action-button">
-                    <img src="../../assets/icon/success-48.png" alt="logo" />
+                    <img src="../../assets/icon/icons8-pencil-58.png" alt="logo" class="icon"/>
                   </button>
                   <button class="action-button">
-                    <img src="../../assets/icon/info-48.png" alt="logo" />
+                    <img src="../../assets/icon/icons8-duplicate-50.png" alt="logo" lass="icon"/>
                   </button>
                   <button class="action-button">
-                    <img src="../../assets/icon/delete-48.png" alt="logo" />
+                    <img src="../../assets/icon/delete-48.png" alt="logo" lass="icon"/>
                   </button>
                 </div>
               </div>
@@ -436,7 +436,7 @@ function insertTable(employees) {
 
 
 function insertTotalEmployee(totalEmployees) {
-    const total = document.querySelector('.footer-table .footer-section')
+    const total = document.querySelector('.pagnigation .pagnigation-section')
     const value = document.createElement('span')
     value.innerHTML = `Tổng: ${totalEmployees}`
     total.appendChild(value)
@@ -454,8 +454,21 @@ function toggleSidebar() {
         } else {
             buttonImg.src = '../../assets/icon/btn-prev-page.svg'
         }
-        console.log('toggle')
     });
+}
+
+function showEmployeeForm() {
+    document.getElementById('employeeForm').style.display = 'block'
+}
+
+function hideEmployeeForm() {
+    document.getElementById('employeeForm').style.display = 'none'
+}
+
+window.onclick = function (event) {
+    if (event.target === document.getElementById('employeeForm')) {
+        hideEmployeeForm()
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

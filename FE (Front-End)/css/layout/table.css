@@ -1,0 +1,134 @@
+.table-container {
+  max-height: 460px;
+  overflow-y: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 12px;
+  text-align: left;
+  position: relative;
+}
+
+.employee-table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #b4f5b4;
+}
+
+.employee-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.action {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.action-buttons {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  z-index: 1;
+}
+
+.employee-table tbody tr:hover .action-buttons {
+  display: flex;
+  opacity: 1;
+  gap: 4px;
+}
+
+.action-button {
+  background-color: #fff;
+  padding: 2px;
+  width: 32px;
+  height: 32px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button img {
+  width: 28px;
+  height: 28px;
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.pagnigation {
+  margin-top: 14px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pagnigation-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pagnigation-section select {
+  border: none;
+  max-width: 64px;
+  margin: 0 12px;
+  font-size: 16px;
+}
+
+#prev-page,
+#next-page {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+}
+
+#prev-page:hover,
+#next-page:hover {
+  scale: 1.5;
+}
+
+#prev-page img,
+#next-page img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%)
+    contrast(100%);
+  width: 24px;
+  height: 24px;
+}

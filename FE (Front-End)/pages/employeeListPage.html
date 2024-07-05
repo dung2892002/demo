@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý nhân viên</title>
+    <link rel="stylesheet" href="../css/components/button.css" />
+    <link rel="stylesheet" href="../css/components/input.css" />
+    <link rel="stylesheet" href="../css/components/select.css" />
+    <link rel="stylesheet" href="../css/layout/header.css" />
+    <link rel="stylesheet" href="../css/layout/sidebar.css" />
+    <link rel="stylesheet" href="../css/layout/toolbar.css" />
+    <link rel="stylesheet" href="../css/layout/table.css" />
+    <link rel="stylesheet" href="../css/layout/form.css" />
+    <link rel="stylesheet" href="../css/pages/employeeListPage.css" />
+    <script src="../js/employeeListPage.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__left">
+        <button class="header__toggle">
+          <img
+            src="../../assets/img/toggle.png"
+            alt="toggle"
+            class="header__toggle-img"
+          />
+        </button>
+        <div class="header__logo">
+          <img
+            src="../../assets/img/cukcuk-logo.png"
+            alt="toggle"
+            class="header__logo-img"
+          />
+        </div>
+      </div>
+      <div class="header__right">
+        <select id="locations" name="locations" class="header__branch-select">
+          <option value="Ha noi">Chi nhánh Hà Nội</option>
+          <option value="Da Nang">Chi nhánh Đà Nẵng</option>
+          <option value="Ho Chi Minh">Chi nhánh TP.Hồ Chí Minh</option>
+        </select>
+        <div class="header__account">
+          <img
+            src="../../assets/icon/avatar-default.png"
+            alt="account avatar"
+            class="header__account-avatar"
+          />
+          <span class="header__account-name">Lê Văn Dũng</span>
+          <button class="header__account-option">
+            <img
+              src="../../assets/icon/option.png"
+              alt="option"
+              class="header__account-option-img"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar__buttons">
+          <button class="sidebar__button">
+            <img
+              src="../../assets/icon/dashboard.png"
+              alt="logo"
+              class="sidebar__button-logo"
+            />
+            <span class="sidebar__button-text">Trang chủ</span>
+          </button>
+          <button class="sidebar__button">
+            <img
+              src="../../assets/icon/report.png"
+              alt="logo"
+              class="sidebar__button-logo"
+            />
+            <span class="sidebar__button-text">Báo cáo</span>
+          </button>
+          <button class="sidebar__button">
+            <img
+              src="../../assets/icon/dic-employee.png"
+              alt="logo"
+              class="sidebar__button-logo"
+            />
+            <span class="sidebar__button-text">Nhân viên</span>
+          </button>
+          <button class="sidebar__button">
+            <img
+              src="../../assets/icon/setting.png"
+              alt="logo"
+              class="sidebar__button-logo"
+            />
+            <span class="sidebar__button-text">Cài đặt</span>
+          </button>
+        </div>
+        <div>
+          <div class="sidebar__separator"></div>
+          <button
+            class="sidebar__button sidebar__button--toggle"
+            id="toggleButton"
+          >
+            <img
+              src="../../assets/icon/btn-prev-page.svg"
+              alt="logo"
+              class="sidebar__button-logo"
+            />
+            <span class="sidebar__button-text">Thu gọn</span>
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content__header">
+          <h2 class="content__title">Quản lý nhân viên</h2>
+          <button
+            class="content__button button--add"
+            onclick="showEmployeeForm()"
+          >
+            <img
+              src="../../assets/icon/add.png"
+              alt="logo"
+              class="button--add-logo"
+            />
+            <span class="button--add-text">Thêm mới</span>
+          </button>
+        </div>
+        <div class="content__table">
+          <div class="toolbar">
+            <div class="toolbar__search">
+              <input
+                type="text"
+                class="search-input"
+                id="searchEmployee"
+                placeholder="Tìm kiếm theo mã, họ tên"
+              />
+              <img
+                src="../../assets/icon/search.png"
+                alt="logo"
+                class="search-logo"
+              />
+            </div>
+            <div class="toolbar__actions">
+              <button class="toolbar-action">
+                <img src="../../assets/icon/export-excel-50.png" alt="logo" />
+              </button>
+              <button class="toolbar-action">
+                <img src="../../assets/icon/refresh.png" alt="logo" />
+              </button>
+            </div>
+          </div>
+          <div class="table-container">
+            <table class="employee-table">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Mã nhân viên</th>
+                  <th>Họ và tên</th>
+                  <th>Giới tính</th>
+                  <th>Ngày sinh</th>
+                  <th>Địa chỉ Email</th>
+                  <th>Địa chỉ</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="pagnigation">
+            <div class="pagnigation-section"></div>
+            <div class="pagnigation-section">
+              <div>
+                <label for="records-per-page">Số bản ghi/trang: </label>
+                <select id="records-per-page">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+              <div>
+                <button id="prev-page" class="button--prev">
+                  <img src="../../assets/icon/btn-prev-page.svg" alt="logo" />
+                </button>
+                <button id="next-page" class="button--next">
+                  <img src="../../assets/icon/btn-next-page.svg" alt="logo" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-container" id="employeeForm">
+      <div class="form__content">
+        <div class="form__header">
+          <h2 class="form__title">Thông tin nhân viên</h2>
+          <button class="form__button" onclick="hideEmployeeForm()">
+            <img src="../../assets/icon/close-48.png" alt="logo" />
+          </button>
+        </div>
+        <form class="employee-form">
+          <div class="form-group">
+            <div class="form__section form__section--left">
+              <div class="form__item form__item--2">
+                <label for="employee-code" class="form__label"
+                  >Mã nhân viên <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="employee-code"
+                  class="form__input"
+                  name="employee-code"
+                  required
+                />
+              </div>
+              <div class="form__item form__item--2">
+                <label for="fullname" class="form__label"
+                  >Họ và tên <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="fullname"
+                  class="form__input"
+                  name="fullname"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form__section form__section--right">
+              <div class="form__item form__item--2">
+                <label for="date-of-birth" class="form__label"
+                  >Ngày sinh
+                </label>
+                <input
+                  type="date"
+                  id="date-of-birth"
+                  class="form__input form__input--date"
+                  name="date-of-birth"
+                />
+              </div>
+              <div class="form__item form__item--2">
+                <label for="male" class="form__label">Giới tính</label>
+                <div class="form__checkbox-group">
+                  <div class="form__checkbox">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="male"
+                      class="form__input form__input--radio"
+                    />
+                    <span>Nam</span>
+                  </div>
+                  <div class="form__checkbox">
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                      class="form__input form__input--radio"
+                    />
+                    <span>Nữ</span>
+                  </div>
+                  <div class="form__checkbox">
+                    <input
+                      type="radio"
+                      id="other"
+                      name="gender"
+                      value="other"
+                      class="form__input form__input--radio"
+                    />
+                    <span>Khác</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form__section form__section--left">
+              <div class="form__item">
+                <label for="position" class="form__label">Vị trí</label>
+                <select
+                  id="position"
+                  class="form__input"
+                  name="position"
+                  required
+                >
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__section form__section--right">
+              <div class="form__item form__item--2">
+                <label for="identity-number" class="form__label"
+                  >Số CMTND</label
+                >
+                <input
+                  type="text"
+                  id="identity-number"
+                  class="form__input"
+                  name="identity-number"
+                  required
+                />
+              </div>
+              <div class="form__item form__item--2">
+                <label for="identity-date" class="form__label">Ngày cấp</label>
+                <input
+                  type="date"
+                  id="identity-date"
+                  class="form__input form__input--date"
+                  name="identity-date"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form__section form__section--left">
+              <div class="form__item">
+                <label for="department" class="form__label">Phòng ban</label>
+                <select
+                  id="department"
+                  class="form__input"
+                  name="department"
+                  required
+                >
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__section form__section--right">
+              <div class="form__item">
+                <label for="identity-place" class="form__label">Nơi cấp</label>
+                <input
+                  type="text"
+                  id="identity-place"
+                  class="form__input"
+                  name="identity-place"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form__item">
+              <label for="address" class="form__label">Địa chỉ</label>
+              <input
+                type="text"
+                id="address"
+                class="form__input"
+                name="address"
+                autocomplete="address"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form__item form__item--3">
+              <label for="mobile-number" class="form__label">DT di động</label>
+              <input
+                type="text"
+                id="mobile-number"
+                class="form__input"
+                name="mobile-number"
+              />
+            </div>
+            <div class="form__item form__item--3">
+              <label for="phone-number" class="form__label">DT cố định</label>
+              <input
+                type="text"
+                id="phone-number"
+                class="form__input"
+                name="phone-number"
+              />
+            </div>
+            <div class="form__item form__item--3">
+              <label for="email" class="form__label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form__input"
+                name="email"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form__item form__item--3">
+              <label for="bank-account" class="form__label"
+                >Tài khoản ngân hàng</label
+              >
+              <input
+                type="text"
+                id="bank-account"
+                class="form__input"
+                name="bank-account"
+              />
+            </div>
+            <div class="form__item form__item--3">
+              <label for="bank-name" class="form__label">Tên ngân hàng</label>
+              <input
+                type="text"
+                id="bank-name"
+                class="form__input"
+                name="bank-name"
+              />
+            </div>
+            <div class="form__item form__item--3">
+              <label for="bank-place" class="form__label">Chi nhánh</label>
+              <input
+                type="text"
+                id="bank-place"
+                class="form__input"
+                name="bank-place"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="form__footer">
+          <button class="button--cancel" onclick="hideEmployeeForm()">
+            Hủy
+          </button>
+          <button class="button--complete">Cất</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

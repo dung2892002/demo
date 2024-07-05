@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 56px;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+}
+
+.header__left {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200px;
+  height: 100%;
+}
+
+.header__toggle {
+  background-color: #fff;
+  border: none;
+  width: 56px;
+  padding: 0;
+}
+
+.header__logo-img {
+  width: 144px;
+  height: auto;
+  cursor: pointer;
+}
+
+.header__toggle-img {
+  width: 24px;
+  height: 24px;
+  margin: 0 16px;
+  cursor: pointer;
+}
+
+.header__right {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.header__branch-select {
+  width: 200px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.header__account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__account-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.header__account-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header__account-option {
+  margin: 0 8px;
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.header__account-option-img {
+  width: 24px;
+  height: 24px;
+}

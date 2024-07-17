@@ -5,6 +5,7 @@
   justify-content: space-between;
   flex-shrink: 0;
   width: 200px;
+  height: 690px;
 }
 
 .sidebar__buttons {

@@ -89,7 +89,7 @@
   background-color: #555;
 }
 
-.pagnigation {
+.pagination {
   margin-top: 14px;
   align-items: center;
   display: flex;
@@ -97,15 +97,15 @@
   justify-content: space-between;
 }
 
-.pagnigation-section {
+.pagination-section {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.pagnigation-section select {
+.pagination-section select {
   border: none;
-  max-width: 64px;
+  max-width: 96px;
   margin: 0 12px;
   font-size: 16px;
 }

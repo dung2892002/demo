@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../css/layout/toolbar.css" />
     <link rel="stylesheet" href="../css/layout/table.css" />
     <link rel="stylesheet" href="../css/layout/form.css" />
-    <link rel="stylesheet" href="../css/pages/employeeListPage.css" />
-    <script src="../js/employeeListPage.js"></script>
+    <link rel="stylesheet" href="../css/pages/main.css" />
+    <script src="../js/utils.js"></script>
+    <script src="../js/form.js"></script>
+    <script src="../js/main.js"></script>
   </head>
   <body>
     <div class="header">
@@ -131,11 +133,13 @@
                 id="searchEmployee"
                 placeholder="Tìm kiếm theo mã, họ tên"
               />
-              <img
-                src="../../assets/icon/search.png"
-                alt="logo"
-                class="search-logo"
-              />
+              <button id="searchButton" onclick="handleSearch()">
+                <img
+                  src="../../assets/icon/search.png"
+                  alt="logo"
+                  class="search-logo"
+                />
+              </button>
             </div>
             <div class="toolbar__actions">
               <button class="toolbar-action">
@@ -162,22 +166,32 @@
               <tbody></tbody>
             </table>
           </div>
-          <div class="pagnigation">
-            <div class="pagnigation-section"></div>
-            <div class="pagnigation-section">
+          <div class="pagination">
+            <div class="pagination-section"></div>
+            <div class="pagination-section">
               <div>
                 <label for="records-per-page">Số bản ghi/trang: </label>
                 <select id="records-per-page">
                   <option value="10">10</option>
                   <option value="20">20</option>
+                  <option value="30">30</option>
                   <option value="50">50</option>
+                  <option value="100">100</option>
                 </select>
               </div>
               <div>
-                <button id="prev-page" class="button--prev">
+                <button
+                  id="prev-page"
+                  class="button--prev"
+                  onclick="handlePrevPage()"
+                >
                   <img src="../../assets/icon/btn-prev-page.svg" alt="logo" />
                 </button>
-                <button id="next-page" class="button--next">
+                <button
+                  id="next-page"
+                  class="button--next"
+                  onclick="handleNextPage()"
+                >
                   <img src="../../assets/icon/btn-next-page.svg" alt="logo" />
                 </button>
               </div>
@@ -194,7 +208,7 @@
             <img src="../../assets/icon/close-48.png" alt="logo" />
           </button>
         </div>
-        <form class="employee-form">
+        <form class="employee-form" id="form">
           <div class="form-group">
             <div class="form__section form__section--left">
               <div class="form__item form__item--2">
@@ -206,6 +220,7 @@
                   id="employee-code"
                   class="form__input"
                   name="employee-code"
+                  readonly
                   required
                 />
               </div>
@@ -242,7 +257,7 @@
                       type="radio"
                       id="male"
                       name="gender"
-                      value="male"
+                      value="0"
                       class="form__input form__input--radio"
                     />
                     <span>Nam</span>
@@ -252,7 +267,7 @@
                       type="radio"
                       id="female"
                       name="gender"
-                      value="female"
+                      value="1"
                       class="form__input form__input--radio"
                     />
                     <span>Nữ</span>
@@ -262,7 +277,7 @@
                       type="radio"
                       id="other"
                       name="gender"
-                      value="other"
+                      value="2"
                       class="form__input form__input--radio"
                     />
                     <span>Khác</span>
@@ -318,17 +333,8 @@
             <div class="form__section form__section--left">
               <div class="form__item">
                 <label for="department" class="form__label">Phòng ban</label>
-                <select
-                  id="department"
-                  class="form__input"
-                  name="department"
-                  required
-                >
+                <select id="department" class="form__input" name="department">
                   <option value=""></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
                 </select>
               </div>
             </div>
@@ -423,7 +429,7 @@
           <button class="button--cancel" onclick="hideEmployeeForm()">
             Hủy
           </button>
-          <button class="button--complete">Cất</button>
+          <button class="button--complete" id="submitButton">Cất</button>
         </div>
       </div>
     </div>

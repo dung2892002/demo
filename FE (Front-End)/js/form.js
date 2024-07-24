@@ -5,9 +5,10 @@ var isEditMode = false;
 var currentEmployeeId = null;
 
 
-function showEmployeeForm(isEdit, employee) {
+async function showEmployeeForm(isEdit, employee) {
     const employeeForm = document.getElementById('employeeForm');
     employeeForm.style.display = 'block';
+
     isEditMode = isEdit;
     currentEmployeeId = employee ? employee.EmployeeId : null;
 
@@ -16,7 +17,7 @@ function showEmployeeForm(isEdit, employee) {
     } else {
         fetchNewEmployeeCode();
     }
-    fetchDepartments();
+
 };
 
 function hideEmployeeForm() {
@@ -54,13 +55,35 @@ async function fetchDepartments() {
         departmentsList = departments
 
         const departmentSelect = document.getElementById('department');
-        departmentSelect.innerHTML = '<option value=""></option>';
 
         departments.forEach(department => {
             const option = document.createElement('option');
             option.value = department.DepartmentId;
             option.textContent = department.DepartmentName;
             departmentSelect.appendChild(option);
+        });
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+async function fetchPositions() {
+    try {
+        const response = await fetch(`${baseUrl}/Positions`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const positions = await response.json();
+        positionList = positions
+
+        const positionSelect = document.getElementById('position');
+
+        positions.forEach(position => {
+            const option = document.createElement('option');
+            option.value = position.PositionId;
+            option.textContent = position.PositionName;
+            positionSelect.appendChild(option);
         });
 
     } catch (error) {
@@ -85,44 +108,55 @@ function resetEmployeeForm() {
 
 function fillEmployeeForm(employee) {
     document.getElementById('employee-code').value = employee.EmployeeCode;
-    document.getElementById('fullname').value = employee.FullName;
+    document.getElementById('fullname').value = employee.Fullname;
     document.getElementById('date-of-birth').value = formatDateForm(employee.DateOfBirth);
-    document.getElementById('mobile-number').value = employee.PhoneNumber;
-    document.getElementById('email').value = employee.Email;
-    document.getElementById('address').value = employee.Address;
+    document.querySelector(`input[name="gender"][value="${employee.Gender}"]`).checked = true;
+
     document.getElementById('identity-number').value = employee.IdentityNumber;
     document.getElementById('identity-date').value = formatDateForm(employee.IdentityDate);
     document.getElementById('identity-place').value = employee.IdentityPlace;
-    document.getElementById('department').value = employee.DepartmentName;
 
-    document.querySelector(`input[name="gender"][value="${employee.Gender}"]`).checked = true;
+    document.getElementById('mobile-number').value = employee.MobileNumber;
+    document.getElementById('landline-number').value = employee.LandlineNumber;
+    document.getElementById('email').value = employee.Email;
+
+    document.getElementById('address').value = employee.Address;
+
+    document.getElementById('bank-number').value = employee.BankNumber;
+    document.getElementById('bank-name').value = employee.BankName;
+    document.getElementById('bank-branch').value = employee.BankBranch;
+
+    document.getElementById('department').value = employee.DepartmentId;
+    document.getElementById('position').value = employee.PositionId;
+
 }
 
 async function submitForm(event) {
     event.preventDefault();
 
     const selectedDepartmentId = document.getElementById('department').value;
-    const selectedDepartment = departmentsList.find(dept => dept.DepartmentId === selectedDepartmentId);
+    const selectedPositionId = document.getElementById('position').value;
     const selectedGender = getSelectedGender();
 
     const requestBody = {
-        createdDate: new Date().toISOString(),
-        modifiedDate: new Date().toISOString(),
-        employeeCode: document.getElementById('employee-code').value,
-        fullName: document.getElementById('fullname').value,
-        gender: selectedGender,
-        dateOfBirth: document.getElementById('date-of-birth').value,
-        phoneNumber: document.getElementById('mobile-number').value,
-        email: document.getElementById('email').value,
-        address: document.getElementById('address').value,
-        identityNumber: document.getElementById('identity-number').value,
-        identityDate: document.getElementById('identity-date').value,
-        identityPlace: document.getElementById('identity-place').value,
-        joinDate: new Date().toISOString(),
-        departmentId: selectedDepartmentId,
-        positionId: null,
-        departmentCode: selectedDepartment.DepartmentCode,
-        departmentName: selectedDepartment.DepartmentName,
+        EmployeeCode: document.getElementById('employee-code').value,
+        Fullname: document.getElementById('fullname').value,
+        DateOfBirth: document.getElementById('date-of-birth').value,
+        Gender: selectedGender,
+        IdentityNumber: document.getElementById('identity-number').value,
+        IdentityDate: document.getElementById('identity-date').value,
+        IdentityPlace: document.getElementById('identity-place').value,
+        MobileNumber: document.getElementById('mobile-number').value,
+        LandlineNumber: document.getElementById('landline-number').value,
+        Email: document.getElementById('email').value,
+        Address: document.getElementById('address').value,
+        BankNumber: document.getElementById('bank-number').value,
+        BankName: document.getElementById('bank-name').value,
+        BankBranch: document.getElementById('bank-branch').value,
+        DepartmentId: selectedDepartmentId,
+        PositionId: selectedPositionId,
+        CreatedBy: "admin",
+        ModifiedBy: "admin",
     };
 
     if (!isEditMode) {

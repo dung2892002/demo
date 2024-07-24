@@ -4,21 +4,16 @@ using BE__Back_End_.Services.IService;
 
 namespace BE__Back_End_.Services
 {
-    public class PositionService : IPositionService
+    public class PositionService(IPositionRepo positionRepo) : IPositionService
     {
-        private readonly IPositionRepo _positionRepo;
+        private readonly IPositionRepo _positionRepo = positionRepo;
 
-        public PositionService(IPositionRepo positionRepo)
-        {
-            _positionRepo = positionRepo;
-        }
-
-        public async Task<IEnumerable<Position>> GetPositions()
+        public async Task<IEnumerable<Position?>> GetPositions()
         {
             return await _positionRepo.FindAll();
         }
 
-        public async Task<Position> GetPositionById(Guid id)
+        public async Task<Position?> GetPositionById(Guid id)
         {
             return await _positionRepo.FindById(id);
         }

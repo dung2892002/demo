@@ -4,21 +4,16 @@ using BE__Back_End_.Services.IService;
 
 namespace BE__Back_End_.Services
 {
-    public class DepartmentService : IDepartmentService
+    public class DepartmentService(IDepartmentRepo departmetnRepo) : IDepartmentService
     {
-        private readonly IDepartmentRepo _departmentRepo;
+        private readonly IDepartmentRepo _departmentRepo = departmetnRepo;
 
-        public DepartmentService(IDepartmentRepo departmetnRepo)
-        {
-            _departmentRepo = departmetnRepo;
-        }
-
-        public async Task<IEnumerable<Department>> GetDepartments()
+        public async Task<IEnumerable<Department?>> GetDepartments()
         {
             return await _departmentRepo.FindAll();
         }
 
-        public async Task<Department> GetDepartmentById(Guid id)
+        public async Task<Department?> GetDepartmentById(Guid id)
         {
             return await _departmentRepo.FindById(id);
         }

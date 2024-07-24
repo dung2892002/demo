@@ -4,9 +4,9 @@ namespace BE__Back_End_.Services.IService
 {
     public interface IPositionService
     {
-        Task<IEnumerable<Position>> GetPositions();
+        Task<IEnumerable<Position?>> GetPositions();
 
-        Task<Position> GetPositionById(Guid id);
+        Task<Position?> GetPositionById(Guid id);
 
         Task CreatePosition(Position position);
 

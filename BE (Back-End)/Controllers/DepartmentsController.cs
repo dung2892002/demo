@@ -10,16 +10,12 @@ namespace BE__Back_End_.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     [EnableCors("AllowAll")]
-    public class DepartmentsController : ControllerBase
+    public class DepartmentsController(IDepartmentService departmetnService) : ControllerBase
     {
-        private readonly IDepartmentService _departmetnService;
-        public DepartmentsController(IDepartmentService departmetnService)
-        {
-            _departmetnService = departmetnService;
-        }
+        private readonly IDepartmentService _departmetnService = departmetnService;
 
         [HttpGet]
-        public async Task<IActionResult> getDepartments()
+        public async Task<IActionResult?> GetDepartments()
         {
             try
             {
@@ -33,7 +29,7 @@ namespace BE__Back_End_.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> getDepartment(Guid id)
+        public async Task<IActionResult?> GetDepartment(Guid id)
         {
             try
             {
@@ -53,7 +49,7 @@ namespace BE__Back_End_.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> createDepartment([FromBody] Department department)
+        public async Task<IActionResult?> CreateDepartment([FromBody] Department department)
         {
             try
             {

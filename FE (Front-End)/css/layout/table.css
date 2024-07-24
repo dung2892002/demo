@@ -110,6 +110,17 @@
   font-size: 16px;
 }
 
+.control_page {
+  display: flex;
+  flex-direction: ro;
+  align-items: center;
+}
+
+.current-page {
+  text-align: center;
+  font-size: 16px;
+}
+
 #prev-page,
 #next-page {
   background-color: #fff;
@@ -118,10 +129,12 @@
   width: 32px;
   height: 32px;
   padding: 4px;
+  border-radius: 50%;
 }
 
-#prev-page:hover,
-#next-page:hover {
+#prev-page:hover img,
+#next-page:hover img {
+  filter: invert(29%) sepia(77%) saturate(4244%) hue-rotate(77deg);
   scale: 1.5;
 }
 

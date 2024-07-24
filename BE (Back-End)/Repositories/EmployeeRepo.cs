@@ -31,7 +31,7 @@ namespace BE__Back_End_.Repositories
             return await _connection.QueryAsync<EmployeeResponse>(query);
         }
 
-        public async Task<EmployeeResponse> FindById(Guid id)
+        public async Task<EmployeeResponse?> FindById(Guid id)
         {
             var query = @"
                 SELECT 

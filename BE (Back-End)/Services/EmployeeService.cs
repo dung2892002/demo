@@ -5,21 +5,16 @@ using BE__Back_End_.Services.IService;
 
 namespace BE__Back_End_.Services
 {
-    public class EmployeeService : IEmployeeService
+    public class EmployeeService(IEmployeeRepo employeeRepo) : IEmployeeService
     {
-        private readonly IEmployeeRepo _employeeRepo;
+        private readonly IEmployeeRepo _employeeRepo = employeeRepo;
 
-        public EmployeeService(IEmployeeRepo employeeRepo)
-        {
-            _employeeRepo = employeeRepo;
-        }
-
-        public async Task<IEnumerable<EmployeeResponse>> GetEmployees()
+        public async Task<IEnumerable<EmployeeResponse?>> GetEmployees()
         {
             return await _employeeRepo.FindAll();
         }
 
-        public async Task<EmployeeResponse> GetEmployeeById(Guid id)
+        public async Task<EmployeeResponse?> GetEmployeeById(Guid id)
         {
             return await _employeeRepo.FindById(id);
         }

@@ -8,7 +8,7 @@ namespace BE__Back_End_.Repositories.IRepo
     {
         Task<IEnumerable<EmployeeResponse>> FindAll();
 
-        Task<EmployeeResponse> FindById(Guid id);
+        Task<EmployeeResponse?> FindById(Guid id);
 
         Task Create(EmployeeRequest employeeRequest);
 

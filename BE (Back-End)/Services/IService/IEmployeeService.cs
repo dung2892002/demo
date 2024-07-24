@@ -5,9 +5,9 @@ namespace BE__Back_End_.Services.IService
 {
     public interface IEmployeeService
     {
-        Task<IEnumerable<EmployeeResponse>> GetEmployees();
+        Task<IEnumerable<EmployeeResponse?>> GetEmployees();
 
-        Task<EmployeeResponse> GetEmployeeById(Guid id);
+        Task<EmployeeResponse?> GetEmployeeById(Guid id);
 
         Task CreateEmployee(EmployeeRequest employeeRequest);
 

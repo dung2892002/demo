@@ -6,7 +6,7 @@ namespace BE__Back_End_.Repositories.IRepo
     {
         Task<IEnumerable<Position>> FindAll();
 
-        Task<Position> FindById(Guid id);
+        Task<Position?> FindById(Guid id);
 
         Task Create(Position position);
 

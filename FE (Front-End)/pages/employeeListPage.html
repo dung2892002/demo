@@ -179,7 +179,7 @@
                   <option value="100">100</option>
                 </select>
               </div>
-              <div>
+              <div class="control_page">
                 <button
                   id="prev-page"
                   class="button--prev"
@@ -187,6 +187,7 @@
                 >
                   <img src="../assets/icon/btn-prev-page.svg" alt="logo" />
                 </button>
+                <div class="current-page">1</div>
                 <button
                   id="next-page"
                   class="button--next"
@@ -255,22 +256,22 @@
                   <div class="form__checkbox">
                     <input
                       type="radio"
-                      id="male"
+                      id="female"
                       name="gender"
                       value="0"
                       class="form__input form__input--radio"
                     />
-                    <span>Nam</span>
+                    <span>Nữ</span>
                   </div>
                   <div class="form__checkbox">
                     <input
                       type="radio"
-                      id="female"
+                      id="male"
                       name="gender"
                       value="1"
                       class="form__input form__input--radio"
                     />
-                    <span>Nữ</span>
+                    <span>Nam</span>
                   </div>
                   <div class="form__checkbox">
                     <input
@@ -295,13 +296,7 @@
                   class="form__input"
                   name="position"
                   required
-                >
-                  <option value=""></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
+                ></select>
               </div>
             </div>
             <div class="form__section form__section--right">
@@ -333,9 +328,11 @@
             <div class="form__section form__section--left">
               <div class="form__item">
                 <label for="department" class="form__label">Phòng ban</label>
-                <select id="department" class="form__input" name="department">
-                  <option value=""></option>
-                </select>
+                <select
+                  id="department"
+                  class="form__input"
+                  name="department"
+                ></select>
               </div>
             </div>
             <div class="form__section form__section--right">
@@ -374,12 +371,14 @@
               />
             </div>
             <div class="form__item form__item--3">
-              <label for="phone-number" class="form__label">DT cố định</label>
+              <label for="landline-number" class="form__label"
+                >DT cố định</label
+              >
               <input
                 type="text"
-                id="phone-number"
+                id="landline-number"
                 class="form__input"
-                name="phone-number"
+                name="landline-number"
               />
             </div>
             <div class="form__item form__item--3">
@@ -395,14 +394,14 @@
           </div>
           <div class="form-group">
             <div class="form__item form__item--3">
-              <label for="bank-account" class="form__label"
+              <label for="bank-number" class="form__label"
                 >Tài khoản ngân hàng</label
               >
               <input
                 type="text"
-                id="bank-account"
+                id="bank-number"
                 class="form__input"
-                name="bank-account"
+                name="bank-number"
               />
             </div>
             <div class="form__item form__item--3">
@@ -415,12 +414,12 @@
               />
             </div>
             <div class="form__item form__item--3">
-              <label for="bank-place" class="form__label">Chi nhánh</label>
+              <label for="bank-branch" class="form__label">Chi nhánh</label>
               <input
                 type="text"
-                id="bank-place"
+                id="bank-branch"
                 class="form__input"
-                name="bank-place"
+                name="bank-branch"
               />
             </div>
           </div>

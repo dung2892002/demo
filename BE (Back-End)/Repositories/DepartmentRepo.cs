@@ -21,7 +21,7 @@ namespace BE__Back_End_.Repositories
             return await _connection.QueryAsync<Department>(query);
         }
 
-        public async Task<Department> FindById(Guid id)
+        public async Task<Department?> FindById(Guid id)
         {
             var query = "SELECT * FROM department WHERE DepartmentId=@Id";
             return await _connection.QuerySingleOrDefaultAsync<Department>(query, new { Id = id });

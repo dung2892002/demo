@@ -10,15 +10,12 @@ namespace BE__Back_End_.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     [EnableCors]
-    public class PositionsController : ControllerBase
+    public class PositionsController(IPositionService positionService) : ControllerBase
     {
-        private readonly IPositionService _positionService;
-        public PositionsController(IPositionService positionService) {
-            _positionService = positionService;
-        }
+        private readonly IPositionService _positionService = positionService;
 
         [HttpGet]
-        public async Task<IActionResult> GetPositions()
+        public async Task<IActionResult?> GetPositions()
         {
             try
             {
@@ -31,7 +28,7 @@ namespace BE__Back_End_.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetPosition(Guid id)
+        public async Task<IActionResult?> GetPosition(Guid id)
         {
             try
             {
@@ -51,7 +48,7 @@ namespace BE__Back_End_.Controllers
         } 
 
         [HttpPost]
-        public async Task<IActionResult> CreatePosition([FromBody] Position position)
+        public async Task<IActionResult?> CreatePosition([FromBody] Position position)
         {
             try
             {
@@ -65,7 +62,7 @@ namespace BE__Back_End_.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePosition(Guid id, [FromBody] Position position)
+        public async Task<IActionResult?> UpdatePosition(Guid id, [FromBody] Position position)
         {
             try
             {
@@ -79,7 +76,7 @@ namespace BE__Back_End_.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePositon(Guid id)
+        public async Task<IActionResult?> DeletePositon(Guid id)
         {
             try
             {

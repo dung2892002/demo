@@ -13,18 +13,11 @@ namespace BE__Back_End_.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     [EnableCors("AllowAll")]
-    public class EmployeesController : ControllerBase
+    public class EmployeesController(IEmployeeService employeeService, IDepartmentService departmentService, IPositionService positionService) : ControllerBase
     {
-        private readonly IEmployeeService _employeeService;
-        private readonly IPositionService _positionService;
-        private readonly IDepartmentService _departmentService;
-
-        public EmployeesController(IEmployeeService employeeService, IDepartmentService departmentService, IPositionService positionService)
-        {
-            _employeeService = employeeService;
-            _departmentService = departmentService;
-            _positionService = positionService;
-        }
+        private readonly IEmployeeService _employeeService = employeeService;
+        private readonly IPositionService _positionService = positionService;
+        private readonly IDepartmentService _departmentService = departmentService;
 
         [HttpGet]
         public async Task<IActionResult> GetEmployees()

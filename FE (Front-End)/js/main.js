@@ -1,4 +1,4 @@
-const baseUrl = "https://cukcuk.manhnv.net/api/v1";
+const baseUrl = "https://localhost:7204/api/v1";
 
 var pageNumber = 1;
 var totalPage = 0;
@@ -19,9 +19,9 @@ async function fetchEmployees() {
         }
         const data = await response.json();
         employees = data.Data
-        totalPage = data.TotalPage;
+        totalPage = data.TotalPages;
         renderEmployeeTable(employees);
-        displayTotalEmployees(data.TotalRecord);
+        displayPageInfo(data.TotalRecords);
     } catch (error) {
         console.error('Error:', error);
     }
@@ -74,7 +74,7 @@ function renderEmployeeTable(employees) {
         row.innerHTML = `
             <td>${index + 1}</td>
             <td>${employee.EmployeeCode}</td>
-            <td>${employee.FullName}</td>
+            <td>${employee.Fullname}</td>
             <td>${employee.GenderName}</td>
             <td>${formatDate(employee.DateOfBirth)}</td>
             <td>${employee.Email}</td>
@@ -101,10 +101,11 @@ function renderEmployeeTable(employees) {
     setupEditButton();
 }
 
-function displayTotalEmployees(totalEmployees) {
+function displayPageInfo(totalEmployees) {
     const total = document.querySelector('.pagination .pagination-section');
     total.innerHTML = '';
     const value = document.createElement('span');
+    document.querySelector('.current-page').innerHTML = pageNumber;
     value.innerHTML = `Tổng: ${totalEmployees}`;
     total.appendChild(value);
 }
@@ -149,6 +150,8 @@ function toggleSidebar() {
 document.addEventListener('DOMContentLoaded', () => {
     toggleSidebar();
     fetchEmployees();
+    fetchDepartments();
+    fetchPositions();
     document.getElementById('records-per-page').addEventListener('change', updatePageSize);
     document.getElementById('searchEmployee').addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {

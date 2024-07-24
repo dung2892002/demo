@@ -6,7 +6,7 @@ namespace BE__Back_End_.Repositories.IRepo
     {
         Task<IEnumerable<Department>> FindAll();
 
-        Task<Department> FindById(Guid id);
+        Task<Department?> FindById(Guid id);
 
         Task Create(Department department);
 

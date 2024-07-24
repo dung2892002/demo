@@ -21,7 +21,7 @@ namespace BE__Back_End_.Repositories
             return await _connection.QueryAsync<Position>(query);
         }
 
-        public async Task<Position> FindById(Guid id)
+        public async Task<Position?> FindById(Guid id)
         {
             var query = @"SELECT * FROM position WHERE PositionId=@Id";
             return await _connection.QuerySingleOrDefaultAsync<Position>(query, new { Id = id });

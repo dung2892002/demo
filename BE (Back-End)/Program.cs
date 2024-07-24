@@ -1,5 +1,7 @@
+using BE__Back_End_.Extensions;
 using MySqlConnector;
 using System.Data;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,12 +9,14 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddTransient<IDbConnection>((sp) => new MySqlConnection(connectionString));
 // Add services to the container.
+builder.Services.RegisterServices(Assembly.GetExecutingAssembly());
 
 builder.Services.AddControllers()
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.PropertyNamingPolicy = null;
-                });
+                })
+                ;
 
 builder.Services.AddCors(options =>
 {

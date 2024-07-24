@@ -1,6 +1,8 @@
 ﻿using BE__Back_End_.Models;
 using BE__Back_End_.Payloads.DTOs;
 using BE__Back_End_.Payloads.Request;
+using BE__Back_End_.Services;
+using BE__Back_End_.Services.IService;
 using Dapper;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +15,15 @@ namespace BE__Back_End_.Controllers
     [EnableCors("AllowAll")]
     public class EmployeesController : ControllerBase
     {
-        private readonly IDbConnection _connection;
+        private readonly IEmployeeService _employeeService;
+        private readonly IPositionService _positionService;
+        private readonly IDepartmentService _departmentService;
 
-        public EmployeesController(IDbConnection connection)
+        public EmployeesController(IEmployeeService employeeService, IDepartmentService departmentService, IPositionService positionService)
         {
-            _connection = connection;
+            _employeeService = employeeService;
+            _departmentService = departmentService;
+            _positionService = positionService;
         }
 
         [HttpGet]
@@ -25,19 +31,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                var query = @"
-                        SELECT 
-                            e.*, 
-                            d.DepartmentId, d.DepartmentName, d.DepartmentCode, 
-                            p.PositionId, p.PositionName, p.PositionCode  
-                        FROM 
-                            employee e
-                            LEFT JOIN department d ON e.DepartmentId = d.DepartmentId
-                            LEFT JOIN position p ON e.PositionId = p.PositionId
-                        ";
-
-                var employees = await _connection.QueryAsync<EmployeeResponse>(query);
-
+                var employees = await _employeeService.GetEmployees();
                 return StatusCode(200, employees);
             }
             catch (Exception ex)
@@ -47,25 +41,13 @@ namespace BE__Back_End_.Controllers
         }
 
 
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployee(Guid id)
         {
             try
             {
-                var query = @"
-                        SELECT 
-                            e.*, 
-                            d.DepartmentId, d.DepartmentName, d.DepartmentCode, 
-                            p.PositionId, p.PositionName, p.PositionCode  
-                        FROM 
-                            employee e
-                            LEFT JOIN department d ON e.DepartmentId = d.DepartmentId
-                            LEFT JOIN position p ON e.PositionId = p.PositionId
-                        WHERE e.EmployeeId = @Id
-                        ";
-                var employee = await _connection.QuerySingleOrDefaultAsync<EmployeeResponse>(query, new { Id = id });
-
+                
+                var employee = await _employeeService.GetEmployeeById(id);
                 if (employee == null)
                 {
                     return StatusCode(404, "Employee not exist");
@@ -89,37 +71,19 @@ namespace BE__Back_End_.Controllers
                     return StatusCode(400, "PositionId and DepartmentId are required");
                 }
 
-                var existingDepartment = await _connection.QuerySingleOrDefaultAsync<Department>(
-                  "SELECT * FROM department where DepartmentId = @Id", new { Id = employeeRequest.DepartmentId });
+                var existingDepartment = await _departmentService.GetDepartmentById(employeeRequest.DepartmentId);
                 if (existingDepartment == null)
                 {
                     return StatusCode(404, "Department not exists");
                 }
 
-                var existingPosition = await _connection.QuerySingleOrDefaultAsync<Position>(
-                    "SELECT * FROM position where PositionId = @Id", new { Id = employeeRequest.PositionId });
+                var existingPosition = await _positionService.GetPositionById(employeeRequest.PositionId);
                 if (existingPosition == null)
                 {
                     return StatusCode(404, "Position not exists");
                 }
 
-                employeeRequest.EmployeeId = Guid.NewGuid();
-                employeeRequest.CreatedDate = DateTime.Now;
-                employeeRequest.ModifiedDate = DateTime.Now;
-
-                var query = @"
-                                INSERT INTO employee (
-                                    EmployeeId, EmployeeCode, Fullname, DateOfBirth, Gender, IdentityNumber,
-                                    IdentityDate, IdentityPlace, Address, MobileNumber, LandlineNumber, Email,
-                                    BankNumber, BankName, BankBranch, DepartmentId, PositionId, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy
-                                )
-                                VALUES (
-                                    @EmployeeId, @EmployeeCode, @Fullname, @DateOfBirth, @Gender, @IdentityNumber,
-                                    @IdentityDate, @IdentityPlace, @Address, @MobileNumber, @LandlineNumber, @Email,
-                                    @BankNumber, @BankName, @BankBranch, @DepartmentId, @PositionId, @CreatedDate, @CreatedBy, @ModifiedDate, @ModifiedBy
-                                )";
-
-                await _connection.ExecuteAsync(query, employeeRequest);
+                await _employeeService.CreateEmployee(employeeRequest);
 
                 return StatusCode(201, "Created employee succesfully");
             }
@@ -139,51 +103,25 @@ namespace BE__Back_End_.Controllers
                     return StatusCode(400, "PositionId and DepartmentId are required");
                 }
 
-                var existingDepartment = await _connection.QuerySingleOrDefaultAsync<Department>(
-                  "SELECT * FROM department where DepartmentId = @Id", new { Id = employeeRequest.DepartmentId });
+                var existingDepartment = await _departmentService.GetDepartmentById(employeeRequest.DepartmentId);
                 if (existingDepartment == null)
                 {
                     return StatusCode(404, "Department not exists");
                 }
 
-                var existingPosition = await _connection.QuerySingleOrDefaultAsync<Position>(
-                    "SELECT * FROM position where PositionId = @Id", new { Id = employeeRequest.PositionId });
+                var existingPosition = await _positionService.GetPositionById(employeeRequest.PositionId);
                 if (existingPosition == null)
                 {
                     return StatusCode(404, "Position not exists");
                 }
 
-                var existingEmployee = await _connection.QuerySingleOrDefaultAsync<Employee>(
-                    "SELECT * FROM employee where EmployeeId = @Id", new { Id = id });
+                var existingEmployee = await _employeeService.GetEmployeeById(id);
                 if (existingEmployee == null)
                 {
                     return StatusCode(404, "Employee not exists");
                 }
 
-                employeeRequest.EmployeeId = id;
-                employeeRequest.ModifiedDate = DateTime.Now;
-
-                var query = @"UPDATE employee SET
-                                Fullname = @Fullname,
-                                DateOfBirth = @DateOfBirth,
-                                Gender = @Gender,
-                                IdentityNumber = @IdentityNumber,
-                                IdentityDate = @IdentityDate,
-                                IdentityPlace = @IdentityPlace,
-                                Address = @Address,
-                                MobileNumber = @MobileNumber,
-                                LandlineNumber = @LandlineNumber,
-                                Email = @Email,
-                                BankNumber = @BankNumber,
-                                BankName = @BankName,
-                                BankBranch = @BankBranch,
-                                DepartmentId = @DepartmentId,
-                                PositionId = @PositionId,
-                                ModifiedDate = @ModifiedDate,
-                                ModifiedBy = @ModifiedBy
-                              WHERE EmployeeId = @EmployeeId";
-
-                await _connection.ExecuteAsync(query, employeeRequest);
+                await _employeeService.UpdateEmployee(id, employeeRequest);
 
                 return StatusCode(200, "Update employee successfully");
             }
@@ -198,16 +136,13 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                var existingEmployee = await _connection.QuerySingleOrDefaultAsync<Employee>(
-                    "SELECT * FROM employee WHERE EmployeeId = @Id", new { Id = id });
+                var existingEmployee = await _employeeService.GetEmployeeById(id);
                 if (existingEmployee == null)
                 {
                     return StatusCode(404, "Employee not exists");
                 }
 
-                var query = "DELETE FROM employee WHERE EmployeeId = @Id";
-
-                await _connection.ExecuteAsync(query, new { Id = id });
+                await _employeeService.DeleteEmployee(id);
 
                 return StatusCode(200, "Delete employee successfully");
             }
@@ -222,20 +157,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                var query = @"
-                    SELECT EmployeeCode
-                    FROM employee
-                    ORDER BY CAST(SUBSTRING(EmployeeCode, 4) AS UNSIGNED) DESC
-                    LIMIT 1;";
-
-                var lastEmployeeCode = await _connection.QueryFirstOrDefaultAsync<string>(query);
-                if (lastEmployeeCode == null)
-                {
-                    return StatusCode(200, "NV-0001");
-                }
-                int lastNumber = int.Parse(lastEmployeeCode.Substring(3));
-                int newNumber = lastNumber + 1;
-                string newEmployeeCode = "NV-" + newNumber.ToString("D4");
+                var newEmployeeCode = await _employeeService.GetNewEmployeeCode();
                 return StatusCode(200, newEmployeeCode);
             }
             catch (Exception ex)
@@ -249,61 +171,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                int offset = (pageNumber - 1) * pageSize;
-
-                string query= @"
-                    SELECT SQL_CALC_FOUND_ROWS
-                        e.*, 
-                        d.DepartmentId, d.DepartmentName, d.DepartmentCode, 
-                        p.PositionId, p.PositionName, p.PositionCode  
-                    FROM 
-                        employee e
-                        LEFT JOIN department d ON e.DepartmentId = d.DepartmentId
-                        LEFT JOIN position p ON e.PositionId = p.PositionId
-                    WHERE 1 = 1";
-
-                if (!string.IsNullOrEmpty(employeeFilter))
-                {
-                    query += " AND (e.EmployeeCode LIKE CONCAT('%', @EmployeeFilter, '%') " +
-                             "OR e.Fullname LIKE CONCAT('%', @EmployeeFilter, '%'))";
-                }
-
-
-                if (departmentId != null)
-                {
-                    query += " AND e.DepartmentId = @departmentId";
-                }
-                if (positionId != null)
-                {
-                    query += " AND e.PositionId = @positionId";
-                }
-
-                query += " ORDER BY e.EmployeeCode DESC LIMIT @PageSize OFFSET @Offset;";
-                query += " SELECT FOUND_ROWS() AS TotalCount;";
-
-                var parameters = new
-                {
-                    PageSize = pageSize,
-                    Offset = offset,
-                    EmployeeFilter = employeeFilter,
-                    DepartmentId = departmentId,
-                    PositionId = positionId
-                };
-
-                var multi = await _connection.QueryMultipleAsync(query, parameters);
-                var employees = await multi.ReadAsync<EmployeeResponse>();
-                var totalRecords = await multi.ReadSingleAsync<int>();
-
-                int totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
-
-                var response = new
-                {
-                    TotalRecords = totalRecords,
-                    TotalPages = totalPages,
-                    PageSize = pageSize,
-                    CurrentPage = pageNumber,
-                    Data = employees
-                };
+                var response = await _employeeService.FilterEmployees(pageSize, pageNumber, employeeFilter, departmentId, positionId);
 
                 return StatusCode(200, response);
             }

@@ -1,4 +1,5 @@
 ﻿using BE__Back_End_.Models;
+using BE__Back_End_.Services.IService;
 using Dapper;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,10 @@ namespace BE__Back_End_.Controllers
     [EnableCors("AllowAll")]
     public class DepartmentsController : ControllerBase
     {
-        private readonly IDbConnection _connection;
-
-        public DepartmentsController(IDbConnection connection)
+        private readonly IDepartmentService _departmetnService;
+        public DepartmentsController(IDepartmentService departmetnService)
         {
-            _connection = connection;
+            _departmetnService = departmetnService;
         }
 
         [HttpGet]
@@ -23,8 +23,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                var query = "SELECT * FROM department";
-                var departments = await _connection.QueryAsync<Department>(query);
+                var departments = await _departmetnService.GetDepartments();
                 return StatusCode(200, departments);
             }
             catch (Exception ex)
@@ -38,8 +37,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                var query = @"SELECT * FROM department WHERE DepartmentId=@Id";
-                var department = await _connection.QuerySingleOrDefaultAsync<Department>(query, new { Id = id });
+                var department = await _departmetnService.GetDepartmentById(id);
 
                 if (department == null)
                 {
@@ -59,16 +57,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                department.DepartmentId = Guid.NewGuid();
-                department.CreatedDate = DateTime.UtcNow;
-                department.ModifiedDate = department.CreatedDate;
-
-                var query = @"
-                    INSERT INTO department (DepartmentId, DepartmentCode, DepartmentName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
-                    VALUES (@DepartmentId, @DepartmentCode, @DepartmentName, @CreatedDate, @CreatedBy, @ModifiedDate, @ModifiedBy);
-                ";
-
-                await _connection.ExecuteAsync(query, department);
+                await _departmetnService.CreateDepartment(department);
 
                 return StatusCode(201, "Created department succesfully");
             }
@@ -83,25 +72,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                var existingDepartment = await _connection.QuerySingleOrDefaultAsync<Position>(
-                   "SELECT * FROM department WHERE DepartmentId = @Id", new { Id = id });
-
-                if (existingDepartment == null)
-                {
-                    return StatusCode(404, "Department not exists");
-                }
-
-                department.DepartmentId = id;
-                department.ModifiedDate = DateTime.UtcNow;
-
-                var query = @"UPDATE department 
-                            SET DepartmentName = @DepartmentName, 
-                                ModifiedDate = @ModifiedDate, 
-                                ModifiedBy = @ModifiedBy
-                            WHERE DepartmentId = @DepartmentId";
-
-                await _connection.ExecuteAsync(query, department);
-
+                await _departmetnService.UpdateDepartment(id, department);
                 return StatusCode(200, "Update department succesfully");
             }
             catch (Exception ex)
@@ -115,17 +86,7 @@ namespace BE__Back_End_.Controllers
         {
             try
             {
-                var existingDepartment = await _connection.QuerySingleOrDefaultAsync<Position>(
-                    "SELECT * FROM department WHERE DepartmentId = @Id", new { Id = id });
-
-                if (existingDepartment == null)
-                {
-                    return StatusCode(404, "Department not exists");
-                }
-
-                var query = "Delete from department where DepartmentId=@Id";
-                await _connection.ExecuteAsync(query, new { Id = id });
-
+                await _departmetnService.DeleteDepartment(id);
                 return StatusCode(200, "Delete department succesfully");
             }
             catch (Exception ex)

@@ -11,10 +11,11 @@
         {
             get
             {
+                if (Gender == 0)
+                    return "Nữ";
                 if (Gender == 1)
                     return "Nam";
-                else
-                    return "Nữ";
+                return "Không rõ";
             }
         }
         public string IdentityNumber { get; set; } = string.Empty;

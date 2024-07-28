@@ -6,14 +6,9 @@ using BE__Back_End_.Repositories.IRepo;
 
 namespace BE__Back_End_.Repositories
 {
-    public class DepartmentRepo : IDepartmentRepo
+    public class DepartmentRepo(IDbConnection connection) : IDepartmentRepo
     {
-        private readonly IDbConnection _connection;
-
-        public DepartmentRepo(IDbConnection connection)
-        {
-            _connection = connection;
-        }
+        private readonly IDbConnection _connection = connection;
 
         public async Task<IEnumerable<Department>> FindAll()
         {

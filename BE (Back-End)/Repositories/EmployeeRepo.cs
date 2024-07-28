@@ -7,14 +7,9 @@ using System.Data;
 
 namespace BE__Back_End_.Repositories
 {
-    public class EmployeeRepo : IEmployeeRepo
+    public class EmployeeRepo(IDbConnection connection) : IEmployeeRepo
     {
-        private readonly IDbConnection _connection;
-
-        public EmployeeRepo(IDbConnection connection)
-        {
-            _connection = connection;
-        }
+        private readonly IDbConnection _connection = connection;
 
         public async Task<IEnumerable<EmployeeResponse>> FindAll()
         {
@@ -100,7 +95,7 @@ namespace BE__Back_End_.Repositories
             var query = @"
                 SELECT EmployeeCode
                 FROM employee
-                ORDER BY CAST(SUBSTRING(EmployeeCode, 4) AS UNSIGNED) DESC
+                ORDER BY CAST(SUBSTRING(EmployeeCode, 5) AS UNSIGNED) DESC
                 LIMIT 1;
             ";
 
@@ -110,9 +105,9 @@ namespace BE__Back_End_.Repositories
                 return "NV-0001";
             }
 
-            int lastNumber = int.Parse(lastEmployeeCode.Substring(3));
+            int lastNumber = int.Parse(lastEmployeeCode[3..]);
             int newNumber = lastNumber + 1;
-            return "NV-" + newNumber.ToString("D4");
+            return "NV-" + newNumber.ToString("D5");
         }
 
         public async Task<(IEnumerable<EmployeeResponse> Employees, int TotalCount)> FilterEmployees(int pageSize, int pageNumber, string? employeeFilter, Guid? departmentId, Guid? positionId)

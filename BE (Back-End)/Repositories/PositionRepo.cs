@@ -5,15 +5,10 @@ using System.Data;
 
 namespace BE__Back_End_.Repositories
 {
-    public class PositionRepo : IPositionRepo
+    public class PositionRepo(IDbConnection connection) : IPositionRepo
     {   
 
-        private readonly IDbConnection _connection;
-
-        public PositionRepo(IDbConnection connection)
-        {
-            _connection = connection;
-        }
+        private readonly IDbConnection _connection = connection;
 
         public async Task<IEnumerable<Position>> FindAll()
         {

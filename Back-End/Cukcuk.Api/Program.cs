@@ -1,11 +1,9 @@
-using Cukcuk.Core.Helpers;
 using Cukcuk.Core.Interfaces.Repositories;
 using Cukcuk.Core.Interfaces.Services;
 using Cukcuk.Core.Services;
 using Cukcuk.Infrastructure.Repositories;
 using MySqlConnector;
 using System.Data;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +12,6 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddTransient<IDbConnection>((sp) => new MySqlConnection(connectionString));
 
 // Add services to the container.
-/*var coreAssembly = Assembly.Load("Cukcuk.Core");
-
-builder.Services.RegisterServices(coreAssembly);*/
 
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IPositionService, PositionService>();

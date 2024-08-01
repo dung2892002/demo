@@ -1,0 +1,16 @@
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Infrastructure.deps.json
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Infrastructure.dll
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Infrastructure.pdb
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Core.dll
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Core.pdb
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.csproj.AssemblyReference.cache
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.AssemblyInfoInputs.cache
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.AssemblyInfo.cs
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.csproj.CoreCompileInputs.cache
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.sourcelink.json
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.I.DB8872E7.Up2Date
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.dll
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\refint\Cukcuk.Infrastructure.dll
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.pdb
+D:\intern_misa\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\ref\Cukcuk.Infrastructure.dll

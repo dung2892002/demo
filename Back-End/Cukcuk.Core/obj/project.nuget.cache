@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iW7aHP09KxA=",
+  "success": true,
+  "projectFilePath": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ledun\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

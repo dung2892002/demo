@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "05IeptZs6jU=",
+  "success": true,
+  "projectFilePath": "D:\\intern_misa\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ledun\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\ledun\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

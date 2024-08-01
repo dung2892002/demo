@@ -1,4 +1,4 @@
-const baseUrl = "https://localhost:7204/api/v1";
+const baseUrl = "https://localhost:7160/api/v1";
 
 var pageNumber = 1;
 var totalPage = 0;

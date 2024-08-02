@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cukcuk.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+730b634888a68e45567ee81fe9f28a00787d1c40")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+079ffee50e2072aa555df4b9565d1dbc78f324b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cukcuk.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cukcuk.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

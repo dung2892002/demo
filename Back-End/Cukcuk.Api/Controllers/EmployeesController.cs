@@ -8,11 +8,9 @@ namespace Cukcuk.Api.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     [EnableCors("AllowAll")]
-    public class EmployeesController(IEmployeeService employeeService, IDepartmentService departmentService, IPositionService positionService) : ControllerBase
+    public class EmployeesController(IEmployeeService employeeService) : ControllerBase
     {
         private readonly IEmployeeService _employeeService = employeeService;
-        private readonly IPositionService _positionService = positionService;
-        private readonly IDepartmentService _departmentService = departmentService;
 
         [HttpGet]
         public async Task<IActionResult> GetEmployees()
@@ -54,26 +52,13 @@ namespace Cukcuk.Api.Controllers
         {
             try
             {
-                if (employeeDTO.PositionId == Guid.Empty || employeeDTO.DepartmentId == Guid.Empty)
-                {
-                    return StatusCode(400, "PositionId and DepartmentId are required");
-                }
-
-                var existingDepartment = await _departmentService.GetById(employeeDTO.DepartmentId);
-                if (existingDepartment == null)
-                {
-                    return StatusCode(404, "Department not exists");
-                }
-
-                var existingPosition = await _positionService.GetById(employeeDTO.PositionId);
-                if (existingPosition == null)
-                {
-                    return StatusCode(404, "Position not exists");
-                }
-
                 await _employeeService.Create(employeeDTO);
 
                 return StatusCode(201, "Created employee succesfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
             }
             catch (Exception ex)
             {
@@ -86,32 +71,13 @@ namespace Cukcuk.Api.Controllers
         {
             try
             {
-                if (employeeDTO.PositionId == Guid.Empty || employeeDTO.DepartmentId == Guid.Empty)
-                {
-                    return StatusCode(400, "PositionId and DepartmentId are required");
-                }
-
-                var existingDepartment = await _departmentService.GetById(employeeDTO.DepartmentId);
-                if (existingDepartment == null)
-                {
-                    return StatusCode(404, "Department not exists");
-                }
-
-                var existingPosition = await _positionService.GetById(employeeDTO.PositionId);
-                if (existingPosition == null)
-                {
-                    return StatusCode(404, "Position not exists");
-                }
-
-                var existingEmployee = await _employeeService.GetById(id);
-                if (existingEmployee == null)
-                {
-                    return StatusCode(404, "Employee not exists");
-                }
-
                 await _employeeService.Update(id, employeeDTO);
 
                 return StatusCode(200, "Update employee successfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
             }
             catch (Exception ex)
             {

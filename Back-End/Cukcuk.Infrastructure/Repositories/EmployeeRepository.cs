@@ -8,6 +8,37 @@ namespace Cukcuk.Infrastructure.Repositories
     public class EmployeeRepository(IDbConnection connection) : IEmployeeRepository
     {
         private readonly IDbConnection _connection = connection;
+
+        public async Task<bool> CheckEmployeeCode(string employeeCode)
+        {
+            var query = @"
+                SELECT
+                    EmployeeCode
+                FROM
+                    employee e
+                WHERE
+                    EmployeeCode = @employeeCode
+            ";
+
+            var code = await _connection.QueryFirstOrDefaultAsync<string>(query, new { employeeCode });
+            return code == null;
+        }
+
+        public async Task<bool> CheckMobileNumber(string mobileNumber)
+        {
+            var query = @"
+                SELECT
+                    MobileNumber
+                FROM
+                    employee e
+                WHERE
+                    MobileNumber = @mobileNumber
+            ";
+
+            var mobile = await _connection.QueryFirstOrDefaultAsync<string>(query, new { mobileNumber });
+            return mobile == null;
+        }
+
         public async Task Create(EmployeeDTO employeeDTO)
         {
             var query = @"
@@ -116,14 +147,14 @@ namespace Cukcuk.Infrastructure.Repositories
             var query = @"
                 SELECT EmployeeCode
                 FROM employee
-                ORDER BY CAST(SUBSTRING(EmployeeCode, 5) AS UNSIGNED) DESC
+                ORDER BY CAST(SUBSTRING(EmployeeCode, 4) AS UNSIGNED) DESC
                 LIMIT 1;
             ";
 
             var lastEmployeeCode = await _connection.QueryFirstOrDefaultAsync<string>(query);
             if (lastEmployeeCode == null)
             {
-                return "NV-0001";
+                return "NV-00001";
             }
 
             int lastNumber = int.Parse(lastEmployeeCode[3..]);

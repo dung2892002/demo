@@ -39,6 +39,11 @@ namespace Cukcuk.Core.Services
             return await _departmentRepository.FindById(id);
         }
 
+        public async Task<Department?> GetByName(string name)
+        {
+            return await _departmentRepository.GetByName(name);
+        }
+
         public async Task Update(Guid id,Department department)
         {
             var existingDepartment = await _departmentRepository.FindById(id);

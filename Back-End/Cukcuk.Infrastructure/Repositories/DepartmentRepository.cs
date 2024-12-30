@@ -36,6 +36,12 @@ namespace Cukcuk.Infrastructure.Repositories
             return await _connection.QuerySingleOrDefaultAsync<Department>(query, new { Id = id });
         }
 
+        public async Task<Department?> GetByName(string name)
+        {
+            var query = @"SELECT * FROM department WHERE DepartmentName=@DepartmentName";
+            return await _connection.QuerySingleOrDefaultAsync<Department>(query, new { DepartmentName = name });
+        }
+
         public async Task Update(Department department)
         {
             var query = @"UPDATE department 

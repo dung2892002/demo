@@ -11,3 +11,16 @@ D:\intern_misa\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.dll
 D:\intern_misa\Back-End\Cukcuk.Core\obj\Debug\net8.0\refint\Cukcuk.Core.dll
 D:\intern_misa\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.pdb
 D:\intern_misa\Back-End\Cukcuk.Core\obj\Debug\net8.0\ref\Cukcuk.Core.dll
+D:\intern\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.deps.json
+D:\intern\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.dll
+D:\intern\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.pdb
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.csproj.AssemblyReference.cache
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.AssemblyInfoInputs.cache
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.AssemblyInfo.cs
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.csproj.CoreCompileInputs.cache
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.sourcelink.json
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.dll
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\refint\Cukcuk.Core.dll
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.pdb
+D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\ref\Cukcuk.Core.dll

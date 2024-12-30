@@ -4,5 +4,6 @@ namespace Cukcuk.Core.Interfaces.Repositories
 {
     public interface IDepartmentRepository : IBaseRepository<Department>
     {
+        Task<Department?> GetByName(string name);   
     }
 }

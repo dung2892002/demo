@@ -5,8 +5,9 @@
         public Guid EmployeeId { get; set; }
         public string? EmployeeCode { get; set; }
         public string? Fullname { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public int Gender { get; set; }
+        private string? _genderName;
         public string? GenderName
         {
             get
@@ -17,9 +18,19 @@
                     return "Nam";
                 return "Không rõ";
             }
+            set
+            {
+                _genderName = value;
+                if (_genderName == "Nữ")
+                    Gender = 0;
+                else if (_genderName == "Nam")
+                    Gender = 1;
+                else
+                    Gender = 2; 
+            }
         }
         public string? IdentityNumber { get; set; } 
-        public DateTime IdentityDate { get; set; }
+        public DateTime? IdentityDate { get; set; }
         public string? IdentityPlace { get; set; } 
         public string? Address { get; set; } 
         public string? MobileNumber { get; set; } 

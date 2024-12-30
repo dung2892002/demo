@@ -40,6 +40,11 @@ namespace Cukcuk.Core.Services
             return await _positionRepository.FindById(id);
         }
 
+        public async Task<Position?> GetByName(string name)
+        {
+            return await _positionRepository.GetByName(name);
+        }
+
         public async Task Update(Guid id, Position position)
         {
             var existingPosition = await _positionRepository.FindById(id);

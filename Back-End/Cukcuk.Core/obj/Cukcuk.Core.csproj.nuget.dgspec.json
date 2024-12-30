@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {}
+    "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {}
   },
   "projects": {
-    "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
+    "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
+        "projectUniqueName": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
         "projectName": "Cukcuk.Core",
-        "projectPath": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
-        "packagesPath": "C:\\Users\\ledun\\.nuget\\packages\\",
-        "outputPath": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\obj\\",
+        "projectPath": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\intern\\Back-End\\Cukcuk.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ledun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,9 +46,37 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.7.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.3.0, )"
             }
           },
           "imports": [
@@ -67,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

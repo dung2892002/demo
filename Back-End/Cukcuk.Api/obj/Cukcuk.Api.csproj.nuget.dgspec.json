@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\intern_misa\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {}
+    "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {}
   },
   "projects": {
-    "D:\\intern_misa\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {
+    "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\intern_misa\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
+        "projectUniqueName": "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
         "projectName": "Cukcuk.Api",
-        "projectPath": "D:\\intern_misa\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
-        "packagesPath": "C:\\Users\\ledun\\.nuget\\packages\\",
-        "outputPath": "D:\\intern_misa\\Back-End\\Cukcuk.Api\\obj\\",
+        "projectPath": "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\intern\\Back-End\\Cukcuk.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ledun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
-                "projectPath": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
+              "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
+                "projectPath": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
               },
-              "D:\\intern_misa\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
-                "projectPath": "D:\\intern_misa\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj"
+              "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
+                "projectPath": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj"
               }
             }
           }
@@ -53,6 +53,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -60,6 +68,10 @@
             "MySqlConnector": {
               "target": "Package",
               "version": "[2.3.7, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -85,21 +97,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
+    "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
+        "projectUniqueName": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
         "projectName": "Cukcuk.Core",
-        "projectPath": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
-        "packagesPath": "C:\\Users\\ledun\\.nuget\\packages\\",
-        "outputPath": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\obj\\",
+        "projectPath": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\intern\\Back-End\\Cukcuk.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ledun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -131,9 +143,37 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.5.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.7.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.3.0, )"
             }
           },
           "imports": [
@@ -152,21 +192,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\intern_misa\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
+    "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\intern_misa\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
+        "projectUniqueName": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
         "projectName": "Cukcuk.Infrastructure",
-        "projectPath": "D:\\intern_misa\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ledun\\.nuget\\packages\\",
-        "outputPath": "D:\\intern_misa\\Back-End\\Cukcuk.Infrastructure\\obj\\",
+        "projectPath": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ledun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -181,8 +221,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
-                "projectPath": "D:\\intern_misa\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
+              "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
+                "projectPath": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
               }
             }
           }
@@ -205,6 +245,22 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -223,7 +279,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

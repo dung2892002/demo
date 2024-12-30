@@ -36,6 +36,12 @@ namespace Cukcuk.Infrastructure.Repositories
             return await _connection.QuerySingleOrDefaultAsync<Position>(query, new { Id = id });
         }
 
+        public async Task<Position?> GetByName(string name)
+        {
+            var query = @"SELECT * FROM position WHERE PositionName=@PositionName";
+            return await _connection.QuerySingleOrDefaultAsync<Position>(query, new { PositionName = name });
+        }
+
         public async Task Update(Position position)
         {
             var query = @"UPDATE position 

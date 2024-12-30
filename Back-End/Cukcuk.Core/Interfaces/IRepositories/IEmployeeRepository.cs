@@ -6,6 +6,8 @@ namespace Cukcuk.Core.Interfaces.Repositories
     {
         Task<string> GennerateNewEmployeeCode();
         Task<(IEnumerable<EmployeeDTO> Employees, int TotalCount)> FilterEmployees(
-        int pageSize, int offset, string? employeeFilter, Guid? departmentId, Guid? positionId);
+        int pageSize, int pageNumber, string? employeeFilter, Guid? departmentId, Guid? positionId);
+        Task<bool> CheckEmployeeCode(string employeeCode);
+        Task<bool> CheckMobileNumber(string mobileNumber);
     }
 }

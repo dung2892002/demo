@@ -1,5 +1,8 @@
 ﻿using Cukcuk.Core.DTOs;
+using Cukcuk.Core.Entities;
+using Cukcuk.Core.Interfaces.Repositories;
 using Cukcuk.Core.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +15,7 @@ namespace Cukcuk.Api.Controllers
     {
         private readonly IEmployeeService _employeeService = employeeService;
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetEmployees()
         {
@@ -66,6 +70,7 @@ namespace Cukcuk.Api.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateEmployee(Guid id, [FromBody] EmployeeDTO employeeDTO)
         {
@@ -85,6 +90,7 @@ namespace Cukcuk.Api.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee(Guid id)
         {
@@ -120,6 +126,7 @@ namespace Cukcuk.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("filter")]
         public async Task<IActionResult> FilterEmployee(int pageSize, int pageNumber, string? employeeFilter, Guid? departmentId, Guid? positionId)
         {
@@ -132,6 +139,85 @@ namespace Cukcuk.Api.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("export")]
+        public IActionResult ExportFile([FromBody] List<EmployeeDTO> datas)
+        {
+            try
+            {
+                var file = _employeeService.CreateExcelFile(datas);
+
+                return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "export_data.xlsx");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("import")]
+        public async Task<IActionResult> ImportFile([FromForm] List<IFormFile> file)
+        {
+            try
+            {
+                var response = await _employeeService.ImportExcelFile(file[0]);
+                return StatusCode(200, response);
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("import/{cacheId}")]
+        public async Task<IActionResult> AddDataImport(Guid cacheId)
+        {
+            try
+            {
+                await _employeeService.AddDataImport(cacheId);
+                return StatusCode(201, "success");
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("import/result")]
+        public IActionResult GetReport([FromQuery] Guid invalidCacheId, [FromQuery] Guid? validCacheId)
+        {
+            try
+            {
+                var file = _employeeService.CreateResultFile(validCacheId, invalidCacheId);
+
+                    return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "data_import_result.xlsx");
+               
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
             }
         }
     }

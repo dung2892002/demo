@@ -3,13 +3,16 @@
   "WorkspaceRootPath": "D:\\intern\\Back-End\\Cukcuk.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6A67511B-FFE4-4AFA-AD4F-0BE8597E39F6}|..\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj|d:\\intern\\back-end\\cukcuk.infrastructure\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\helper\\excelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\helper\\cache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\helper\\excelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Infrastructure\\Repositories\\DepartmentRepository.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Repositories\\DepartmentRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA3wAMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T04:43:52.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Cache.cs",
               "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Helper\\Cache.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Helper\\Cache.cs",
@@ -36,20 +52,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ExcelHelper.cs",
               "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
               "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
               "RelativeToolTip": "..\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEMAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwJAAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-30T03:55:04.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\CustomerService.cs",

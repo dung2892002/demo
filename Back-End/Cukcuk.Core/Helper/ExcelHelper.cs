@@ -130,23 +130,36 @@ namespace Cukcuk.Core.Helper
                     continue; 
                 }
                 var data = new T();
+                var errors = new List<string>();
                 for (int j = 0; j < row.Cells.Count; j++)
                 {
+                    var columnName = header.GetCell(j).ToString().Trim();
                     var property = typeof(T).GetProperty(columns[j]);
                     if (property != null)
                     {
                         var value = row.GetCell(j).ToString() ?? string.Empty; ;
                         if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
                         {
-                            property.SetValue(data, Int32.Parse(value));
+                            if (Int32.TryParse(value, out var intValue))
+                            {
+                                property.SetValue(data, intValue);
+                            }
+                            else
+                            {
+                                errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
+                            }
                         }
                         else if (property.PropertyType == typeof(decimal) || property.PropertyType == typeof(decimal?))
                         {
-                            property.SetValue(data, Decimal.Parse(value));
-                        }
-                        else if (property.PropertyType == typeof(Guid) || property.PropertyType == typeof(Guid?))
-                        {
-                            property.SetValue(data, Guid.Parse(value));
+                            if (decimal.TryParse(value, out var decimalValue))
+                            {
+                                property.SetValue(data, decimalValue);
+                            } 
+                            else
+                            {
+                                errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
+                            }
+                            
                         }
                         else if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
                         {
@@ -165,6 +178,7 @@ namespace Cukcuk.Core.Helper
                             else
                             {
                                 property.SetValue(data, null);
+                                errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
                             }
                         }
                         else
@@ -173,9 +187,14 @@ namespace Cukcuk.Core.Helper
                         }
                     }
                 }
+                var errorProperty = typeof(T).GetProperty("Errors");
+                if (errorProperty != null)
+                {
+                    errorProperty.SetValue(data, errors);
+                }
                 datas.Add(data);
             }
-            return datas; 
+            return datas;
         }
     }
 }

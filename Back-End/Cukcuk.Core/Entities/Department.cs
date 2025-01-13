@@ -1,4 +1,6 @@
-﻿namespace Cukcuk.Core.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace Cukcuk.Core.Entities
 {
     public class Department
     {
@@ -9,5 +11,8 @@
         public string CreatedBy { get; set; } = string.Empty;
         public DateTime ModifiedDate { get; set; } = new DateTime();
         public string ModifiedBy { get; set; } = string.Empty;
+
+        [JsonIgnore]
+        public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

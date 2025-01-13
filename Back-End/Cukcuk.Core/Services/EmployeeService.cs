@@ -217,16 +217,6 @@ namespace Cukcuk.Core.Services
                                 List<string> listEmployeeCode, List<string> listMobileNumber, IEmployeeRepository _employeeRepository)
         {
             employee.Status = true;
-            if (employee.DateOfBirth == null)
-            {
-                employee.Errors.Add("Ngày sinh không hợp lệ");
-                employee.Status = false;
-            }
-            if (employee.IdentityDate == null)
-            {
-                employee.Errors.Add("Ngày cấp cccd không hợp lệ");
-                employee.Status = false;
-            }
 
             var checkCodeSystem = await _employeeRepository.CheckEmployeeCode(employee.EmployeeCode);
             if (!checkCodeSystem)

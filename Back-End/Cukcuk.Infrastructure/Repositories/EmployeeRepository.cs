@@ -126,7 +126,7 @@ namespace Cukcuk.Infrastructure.Repositories
             return await _connection.QueryAsync<EmployeeDTO>(query);
         }
 
-        public async Task<EmployeeDTO?> FindById(Guid id)
+        public async Task<EmployeeDTO?> FindById(Guid? id)
         {
             var query = @"
                 SELECT 

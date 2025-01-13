@@ -1,4 +1,5 @@
-﻿using Cukcuk.Core.DTOs;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.DTOs;
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.Repositories;
 using Cukcuk.Core.Interfaces.Services;
@@ -126,7 +127,7 @@ namespace Cukcuk.Api.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, EmployeeManager")]
         [HttpGet("filter")]
         public async Task<IActionResult> FilterEmployee(int pageSize, int pageNumber, string? employeeFilter, Guid? departmentId, Guid? positionId)
         {
@@ -158,8 +159,9 @@ namespace Cukcuk.Api.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, EmployeeManager")]
         [HttpPost("import")]
+        [Permission("ImportEmployee")]
         public async Task<IActionResult> ImportFile([FromForm] List<IFormFile> file)
         {
             try

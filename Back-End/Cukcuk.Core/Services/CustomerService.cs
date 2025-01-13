@@ -174,11 +174,6 @@ namespace Cukcuk.Core.Services
                                List<string> listCustomerCode, List<string> listMobileNumber, ICustomerRepository _customerRepository)
         {
             customer.Status = true;
-            if (customer.DateOfBirth == null)
-            {
-                customer.Errors.Add("Ngày sinh không hợp lệ");
-                customer.Status = false;
-            }
 
             var checkCodeSystem = await _customerRepository.CheckCustomerCode(customer.CustomerCode);
             if (checkCodeSystem)

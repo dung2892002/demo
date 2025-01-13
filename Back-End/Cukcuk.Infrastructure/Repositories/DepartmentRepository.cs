@@ -1,55 +1,47 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.Repositories;
-using System.Data;
 using Dapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cukcuk.Infrastructure.Repositories
 {
-    public class DepartmentRepository(IDbConnection connection) : IDepartmentRepository
+    public class DepartmentRepository(ApplicationDbContext dbContext) : IDepartmentRepository
     {
-        private readonly IDbConnection _connection = connection;
+        private readonly ApplicationDbContext _dbContext = dbContext;
 
         public async Task Create(Department department)
         {
-            var query = @"
-                INSERT INTO department (DepartmentId, DepartmentCode, DepartmentName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
-                VALUES (@DepartmentId, @DepartmentCode, @DepartmentName, @CreatedDate, @CreatedBy, @ModifiedDate, @ModifiedBy);
-            ";
-            await _connection.ExecuteAsync(query, department);
+            await _dbContext.Departments.AddAsync(department);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task DeleteById(Guid id)
         {
-            var query = "DELETE FROM department WHERE DepartmentId=@Id";
-            await _connection.ExecuteAsync(query, new { Id = id });
+            var department = await _dbContext.Departments.SingleOrDefaultAsync(d => d.DepartmentId == id) ?? throw new ArgumentException("department not exist");
+            _dbContext.Departments.Remove(department);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Department?>> FindAll()
         {
-            var query = "SELECT * FROM department";
-            return await _connection.QueryAsync<Department>(query);
+            return await _dbContext.Departments.ToListAsync();
         }
 
-        public async Task<Department?> FindById(Guid id)
+        public async Task<Department?> FindById(Guid? id)
         {
-            var query = "SELECT * FROM department WHERE DepartmentId=@Id";
-            return await _connection.QuerySingleOrDefaultAsync<Department>(query, new { Id = id });
+           return await _dbContext.Departments.SingleOrDefaultAsync(d => d.DepartmentId == id);
         }
 
         public async Task<Department?> GetByName(string name)
         {
-            var query = @"SELECT * FROM department WHERE DepartmentName=@DepartmentName";
-            return await _connection.QuerySingleOrDefaultAsync<Department>(query, new { DepartmentName = name });
+            return await _dbContext.Departments.SingleOrDefaultAsync(d => d.DepartmentName == name);
         }
 
         public async Task Update(Department department)
         {
-            var query = @"UPDATE department 
-                        SET DepartmentName = @DepartmentName, 
-                            ModifiedDate = @ModifiedDate, 
-                            ModifiedBy = @ModifiedBy
-                        WHERE DepartmentId = @DepartmentId";
-            await _connection.ExecuteAsync(query, department);
+            _dbContext.Departments.Update(department);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

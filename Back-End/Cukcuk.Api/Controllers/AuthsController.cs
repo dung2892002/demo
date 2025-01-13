@@ -1,5 +1,6 @@
 ﻿using Cukcuk.Core.DTOs;
-using jwtAuth.Auth;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+using Cukcuk.Core.Auth;
 
 namespace jwtAuth.Controllers
 {
@@ -29,10 +33,84 @@ namespace jwtAuth.Controllers
             _configuration = configuration;
         }
 
+        [HttpGet("login-google")]
+        public IActionResult LoginWithGoogle()
+        {
+            var properties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Action("GoogleResponse", "Auths"),
+                Items = { { "state", Guid.NewGuid().ToString() } }
+            };
+
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet("google-response")]
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var authenticateResult = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            if (!authenticateResult.Succeeded)
+            {
+                var failure = authenticateResult.Failure;
+                return BadRequest($"Google authentication failed: {failure?.Message}");
+            }
+
+            var externalUser = authenticateResult.Principal;
+            var email = externalUser?.FindFirst(ClaimTypes.Email)?.Value;
+            var username = externalUser?.Identity?.Name;
+
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                user = new ApplicationUser { UserName = Guid.NewGuid().ToString(), Email = email,
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                };
+
+                await _userManager.CreateAsync(user, "Dung2002*");
+
+                await _userManager.AddToRoleAsync(user, UserRoles.Admin);
+            }
+            user = await _userManager.FindByEmailAsync(email);
+            var userRoles = await _userManager.GetRolesAsync(user);
+
+            var authClaims = new List<Claim>
+                {
+                    new(ClaimTypes.Name, user.UserName),
+                    new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                };
+
+            foreach (var role in userRoles)
+            {
+                authClaims.Add(new Claim(ClaimTypes.Role, role));
+            }
+
+            var token = CreateToken(authClaims);
+
+            var refreshToken = GenerateRefreshToken();
+            _ = int.TryParse(_configuration["JWT:RefreshTokenValidityInDays"], out int refreshTokenValidityInDays);
+
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiryTime = DateTime.Now.AddDays(refreshTokenValidityInDays);
+
+            await _userManager.UpdateAsync(user);
+            var accessToken = new JwtSecurityTokenHandler().WriteToken(token);
+            var redirectUrl = $"http://localhost:5173/" +
+                      $"?access_token={accessToken}" +
+                      $"&refresh_token={refreshToken}" +
+                      $"&username={user.UserName}" +
+                      $"&expiration={token.ValidTo.ToLocalTime():o}";
+
+            return Redirect(redirectUrl);
+        }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
+            //    if (!await _roleManager.RoleExistsAsync(UserRoles.EmployeeManager))
+            //        await _roleManager.CreateAsync(new IdentityRole(UserRoles.EmployeeManager));
+            //    if (!await _roleManager.RoleExistsAsync(UserRoles.CustomerManager))
+            //        await _roleManager.CreateAsync(new IdentityRole(UserRoles.CustomerManager));
             var user = await _userManager.FindByNameAsync(loginModel.Username);
             if (user != null && await _userManager.CheckPasswordAsync(user, loginModel.Password))
             {
@@ -159,6 +237,66 @@ namespace jwtAuth.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpGet("users")]
+        public async Task<IActionResult> GetUser()
+        {
+            var users = await _userManager.Users.ToListAsync();
+            return Ok(users);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("roles")]
+        public async Task<IActionResult> GetRoles()
+        {
+            var roles = await _roleManager.Roles.ToListAsync();
+            return Ok(roles);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("roles/{userId}")]
+        public async Task<IActionResult> GetRolesOfUsers(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return BadRequest("Invalid user");
+
+            var userRoles = await _userManager.GetRolesAsync(user);
+            return Ok(userRoles);
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("update-roles/{userId}")]
+        public async Task<IActionResult> UpdateRolesAccount(string userId, [FromBody] List<string> roleNames)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return BadRequest("Invalid user");
+
+            var userRoles = await _userManager.GetRolesAsync(user);
+
+            var rolesToAdd = roleNames.Except(userRoles).ToList();
+            var rolesToRemove = userRoles.Except(roleNames).ToList();
+
+            foreach (var role in rolesToAdd)
+            {
+                var result = await _userManager.AddToRoleAsync(user, role);
+                if (!result.Succeeded)
+                {
+                    return BadRequest($"Failed to add role {role}.");
+                }
+            }
+
+            foreach (var role in rolesToRemove)
+            {
+                var result = await _userManager.RemoveFromRoleAsync(user, role);
+                if (!result.Succeeded)
+                {
+                    return BadRequest($"Failed to remove role {role}.");
+                }
+            }
+            return Ok("Roles updated successfully.");
+        }
+
         private JwtSecurityToken CreateToken(List<Claim> authClaims)
         {
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
@@ -167,7 +305,7 @@ namespace jwtAuth.Controllers
             var token = new JwtSecurityToken(
                 issuer: _configuration["JWT:ValidIssuer"],
                 audience: _configuration["JWT:ValidAudience"],
-                expires: DateTime.Now.AddMinutes(tokenValidityInMinutes),
+                expires: DateTime.Now.AddHours(tokenValidityInMinutes),
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                 );

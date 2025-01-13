@@ -1,7 +1,7 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Dapper;
-using jwtAuth.Auth;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
@@ -41,7 +41,7 @@ namespace Cukcuk.Infrastructure.Repositories
             return await _dbContext.Imports.AsNoTracking().SingleOrDefaultAsync(i => i.Id == id);
         }
 
-        public async Task<Import?> FindById(Guid id)
+        public async Task<Import?> FindById(Guid? id)
         {
             var query = "select * from import where Id = @Id";
             return await _connection.QuerySingleOrDefaultAsync<Import>(query, new { Id = id });

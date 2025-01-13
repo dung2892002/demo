@@ -1,7 +1,6 @@
-﻿
+﻿using Cukcuk.Core.Auth;
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.IRepositories;
-using jwtAuth.Auth;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cukcuk.Infrastructure.Repositories
@@ -24,7 +23,7 @@ namespace Cukcuk.Infrastructure.Repositories
             return await _dbContext.CustomerGroups.ToListAsync();
         }
 
-        public Task<CustomerGroup?> FindById(Guid id)
+        public Task<CustomerGroup?> FindById(Guid? id)
         {
             throw new NotImplementedException();
         }

@@ -1,11 +1,11 @@
-﻿using Cukcuk.Core.Helper;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.Helper;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.IServices;
 using Cukcuk.Core.Interfaces.Repositories;
 using Cukcuk.Core.Interfaces.Services;
 using Cukcuk.Core.Services;
 using Cukcuk.Infrastructure.Repositories;
-using jwtAuth.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -37,8 +37,9 @@ builder.Services
     .AddAuthentication(options =>
     {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultSignInScheme = "Cookies";
     })
     .AddJwtBearer(options =>
     {
@@ -56,7 +57,19 @@ builder.Services
             ValidIssuer = configuration["JWT:ValidIssuer"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
         };
-    });
+    })
+    .AddCookie(options =>
+    {
+        options.SlidingExpiration = true;
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+        options.Cookie.HttpOnly = true;
+        options.Cookie.SameSite = SameSiteMode.Lax; 
+    })
+    .AddGoogle(options =>
+     {
+         options.ClientId = configuration["GoogleAuth:ClientId"];
+         options.ClientSecret = configuration["GoogleAuth:ClientSecret"];
+     });
 
 // Add services to the container.
 
@@ -65,6 +78,8 @@ builder.Services.AddScoped<IPositionService, PositionService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IImportService, ImportService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IMenuService, MenuService>();
+builder.Services.AddScoped<IPermissionService, PermissionService>();
 
 
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
@@ -73,6 +88,8 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IImportRepository, ImportRepository>();
 builder.Services.AddScoped<ICustomerGroupRepository, CustomerGroupRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IMenuRepository, MenuRepository>();
+builder.Services.AddScoped<IPermissionRepository, PermissionRepository>();
 
 
 builder.Services.AddMemoryCache();
@@ -100,6 +117,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -115,6 +134,7 @@ app.UseRouting();
 app.UseCors("AllowAll");
 
 app.UseAuthorization();
+app.UseMiddleware<PermissionMiddleware>();
 
 app.MapControllers();
 

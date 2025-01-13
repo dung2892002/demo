@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace jwtAuth.Auth
+namespace Cukcuk.Core.Auth
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -13,9 +13,14 @@ namespace jwtAuth.Auth
         public virtual DbSet<CustomerGroup> CustomerGroups { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Import> Imports { get; set; }
-
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Position> Positions { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; }
+        public virtual DbSet<Permission> Permissions { get; set; }
+        public virtual DbSet<UserPermission> UserPermissions { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<CustomerGroup>(entity =>
             {
                 entity.HasKey(e => e.GroupId).HasName("PRIMARY");
@@ -52,6 +57,59 @@ namespace jwtAuth.Auth
                 entity.Property(e => e.TableName).HasMaxLength(45);
             });
 
+            modelBuilder.Entity<Department>(entity =>
+            {
+                entity.HasKey(e => e.DepartmentId).HasName("PRIMARY");
+                entity.ToTable("department");
+                entity.Property(e => e.DepartmentName).HasMaxLength(45);
+                entity.Property(e => e.DepartmentCode).HasMaxLength(45);
+                entity.Property(e => e.CreatedBy).HasMaxLength(45);
+                entity.Property(e => e.ModifiedBy).HasMaxLength(45);
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+                entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
+            });
+
+            modelBuilder.Entity<Position>(entity =>
+            {
+                entity.HasKey(e => e.PositionId).HasName("PRIMARY");
+                entity.ToTable("position");
+                entity.Property(e => e.PositionName).HasMaxLength(45);
+                entity.Property(e => e.PositionCode).HasMaxLength(45);
+                entity.Property(e => e.CreatedBy).HasMaxLength(45);
+                entity.Property(e => e.ModifiedBy).HasMaxLength(45);
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+                entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
+            });
+            modelBuilder.Entity<Menu>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("PRIMARY");
+                entity.ToTable("menu");
+                entity.Property(e => e.MenuName).HasMaxLength(45);
+                entity.Property(e => e.MenuPath).HasMaxLength(45);
+                entity.Property(e => e.MenuIcon).HasMaxLength(45);
+            });
+            modelBuilder.Entity<Permission>(entity =>
+            {
+                entity.HasKey(e => e.PermissionId).HasName("PRIMARY");
+                entity.ToTable("permission");
+                entity.Property(e => e.PermissionName).HasMaxLength(100);
+                entity.Property(e => e.Description).HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<UserPermission>(entity =>
+            {
+                entity.ToTable("user_permission");
+                entity.HasKey(e => new { e.UserId, e.PermissionId });
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+
+                entity.HasOne(d => d.Permission).WithMany(g => g.UserPermissions)
+                    .HasForeignKey(d => d.PermissionId)
+                    .HasConstraintName("FK_user_permission_PermissionId");
+
+                entity.HasOne(d => d.User).WithMany(g => g.UserPermissions)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_user_permission_UserId");
+            });
             base.OnModelCreating(modelBuilder);
         }
     }

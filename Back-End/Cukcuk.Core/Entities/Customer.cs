@@ -5,7 +5,7 @@
         public Guid CustomerId { get; set; }
         public string CustomerCode { get; set; } = string.Empty;
         public string Fullname { get; set; } = string.Empty;
-        public DateTime DateOfBirth { get; set; } = new DateTime();
+        public DateTime? DateOfBirth { get; set; } = new DateTime();
         public int Gender { get; set; }
         private string? _genderName;
         public string? GenderName

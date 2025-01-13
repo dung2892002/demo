@@ -1,56 +1,45 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.Repositories;
-using Dapper;
-using System.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cukcuk.Infrastructure.Repositories
 {
-    public class PositionRepository(IDbConnection connection) : IPositionRepository
+    public class PositionRepository(ApplicationDbContext dbContext) : IPositionRepository
     {
-        private readonly IDbConnection _connection = connection;
+        private readonly ApplicationDbContext _dbContext = dbContext;
         public async Task Create(Position position)
         {
-            var query = @"
-                INSERT INTO position (PositionId, PositionCode, PositionName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
-                VALUES (@PositionId, @PositionCode, @PositionName, @CreatedDate, @CreatedBy, @ModifiedDate, @ModifiedBy);
-            ";
-
-            await _connection.ExecuteAsync(query, position);
+            await _dbContext.Positions.AddAsync(position);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task DeleteById(Guid id)
         {
-            var query = "DELETE FROM position WHERE PositionId=@Id";
-            await _connection.ExecuteAsync(query, new { Id = id });
+            var position = await _dbContext.Positions.SingleOrDefaultAsync(p => p.PositionId == id) ?? throw new ArgumentException("position not exist");
+            _dbContext.Positions.Remove(position);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Position?>> FindAll()
         {
-            var query = "SELECT * FROM position";
-            return await _connection.QueryAsync<Position>(query);
+            return await _dbContext.Positions.ToListAsync();
         }
 
-        public async Task<Position?> FindById(Guid id)
+        public async Task<Position?> FindById(Guid? id)
         {
-            var query = @"SELECT * FROM position WHERE PositionId=@Id";
-            return await _connection.QuerySingleOrDefaultAsync<Position>(query, new { Id = id });
+            return await _dbContext.Positions.SingleOrDefaultAsync(p => p.PositionId == id);
         }
 
         public async Task<Position?> GetByName(string name)
         {
-            var query = @"SELECT * FROM position WHERE PositionName=@PositionName";
-            return await _connection.QuerySingleOrDefaultAsync<Position>(query, new { PositionName = name });
+            return await _dbContext.Positions.SingleOrDefaultAsync(p => p.PositionName == name);
         }
 
         public async Task Update(Position position)
         {
-            var query = @"UPDATE position 
-                        SET PositionName = @PositionName, 
-                            ModifiedDate = @ModifiedDate, 
-                            ModifiedBy = @ModifiedBy
-                       WHERE PositionId = @PositionId";
-
-            await _connection.ExecuteAsync(query, position);
+            _dbContext.Positions.Update(position);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

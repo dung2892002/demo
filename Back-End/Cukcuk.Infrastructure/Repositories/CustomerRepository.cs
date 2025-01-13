@@ -1,7 +1,7 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Dapper;
-using jwtAuth.Auth;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
@@ -85,9 +85,9 @@ namespace Cukcuk.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Customer?> FindById(Guid id)
+        public async Task<Customer?> FindById(Guid? id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Customers.SingleOrDefaultAsync(c => c.CustomerId == id);
         }
 
         public Task<string> GennerateNewCustomerCode()

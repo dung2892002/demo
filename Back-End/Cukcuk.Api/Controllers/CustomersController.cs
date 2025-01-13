@@ -1,4 +1,5 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +12,9 @@ namespace Cukcuk.Api.Controllers
     {
         private readonly ICustomerService _customerService = customerService;
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, CustomerManager")]
         [HttpGet("filter")]
+
         public async Task<IActionResult> FilterCustomer(int pageSize, int pageNumber, string? keyword)
         {
             try
@@ -43,8 +45,9 @@ namespace Cukcuk.Api.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, CustomerManager")]
         [HttpPost("import")]
+        [Permission("ImportCustomer")]
         public async Task<IActionResult> ImportFile([FromForm] List<IFormFile> file)
         {
             try

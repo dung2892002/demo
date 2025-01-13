@@ -1,45 +1,44 @@
 <template>
   <div class="content">
-    <div class="content__header">
-      <h1 class="content__title">Cài đặt</h1>
-      <button class="content__button button--add">
-        <div class="content__button button--add" @click="showForm = true">
-          <span class="button--add-text">Thêm mới</span>
-        </div>
-      </button>
-    </div>
-    <div class="form" v-if="showForm">
-      <div>
-        <span>Đối tượng</span>
-        <select name="" id="" v-model="importValue.TableName">
-          <option v-for="(table, index) in tables" :key="index" :value="table">
-            {{ table }}
-          </option>
-        </select>
-      </div>
-      <div>
-        <span>Tên thuộc tính</span>
-        <select name="" id="" v-model="importValue.PropertyName">
-          <option v-for="(property, index) in filteredProperties" :key="index" :value="property">
-            {{ property }}
-          </option>
-        </select>
-      </div>
-      <div>
-        <span>Tên cột file excel</span>
-        <input type="text" v-model="importValue.ColumnName" />
-      </div>
-      <div>
-        <button @click="submit" class="button--add">Lưu</button>
-      </div>
-    </div>
     <div class="content-main">
       <div class="toolbar">
-        <div class="toolbar_search"></div>
+        <div class="toolbar_search content--row">
+          <button class="content__button button--add">
+            <div class="content__button button--add" @click="showForm = true">
+              <span class="button--add-text">Thêm mới</span>
+            </div>
+          </button>
+        </div>
         <div class="toolbar__actions">
           <button class="toolbar-action" @click="handleRefresh()" v-loading="refreshLoading">
             <img src="/src/assets/icon/refresh.png" alt="logo" />
           </button>
+        </div>
+      </div>
+      <div class="form" v-if="showForm">
+        <div>
+          <span>Đối tượng</span>
+          <select name="" id="" v-model="importValue.TableName">
+            <option v-for="(table, index) in tables" :key="index" :value="table">
+              {{ table }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>Tên thuộc tính</span>
+          <select name="" id="" v-model="importValue.PropertyName">
+            <option v-for="(property, index) in filteredProperties" :key="index" :value="property">
+              {{ property }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>Tên cột file excel</span>
+          <input type="text" v-model="importValue.ColumnName" />
+        </div>
+        <div>
+          <button @click="submit" class="button--add">Lưu</button>
+          <button @click="cancel" class="button--remove">Hủy</button>
         </div>
       </div>
       <div class="main-container" ref="tableContainer">
@@ -143,6 +142,10 @@ async function submit() {
     if (response) showForm.value = false
   }
   fetchSettings()
+}
+
+function cancel() {
+  showForm.value = false
 }
 
 function update(importSetting: Import) {

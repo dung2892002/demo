@@ -16,4 +16,9 @@ export const state: State = {
   totalValid: 0,
   importSettings: [],
   customers: [],
+  menus: [],
+  menu: null,
+  accounts: [],
+  roles: [],
+  accountRoles: [],
 }

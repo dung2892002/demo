@@ -2,9 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import EmployeePage from '@/views/EmployeePage.vue'
 import LoginForm from '@/components/LoginForm.vue'
-import SettingPage from '@/views/SettingPage.vue'
 import CustomerPage from '@/views/CustomerPage.vue'
 import ImportPage from '@/views/ImportPage.vue'
+import SettingImport from '@/views/settings/SettingImport.vue'
+import SettingPage from '@/views/settings/SettingPage.vue'
+import SettingMenu from '@/views/settings/SettingMenu.vue'
+import ListAccount from '@/views/account/ListAccount.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,6 +39,26 @@ const router = createRouter({
           path: '/setting',
           name: 'setting',
           component: SettingPage,
+          meta: { requiresAuth: true },
+          children: [
+            {
+              path: '/setting/import',
+              name: 'setting-import',
+              component: SettingImport,
+              meta: { requiresAuth: true },
+            },
+            {
+              path: '/setting/menu',
+              name: 'setting-menu',
+              component: SettingMenu,
+              meta: { requiresAuth: true },
+            },
+          ],
+        },
+        {
+          path: '/accounts',
+          name: 'accountList',
+          component: ListAccount,
           meta: { requiresAuth: true },
         },
         {

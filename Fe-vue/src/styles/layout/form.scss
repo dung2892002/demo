@@ -293,3 +293,24 @@ form label {
     }
   }
 }
+
+.form__item {
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      border: 1px dashed black;
+      padding: 0 10px;
+      margin-bottom: 4px;
+      width: 100%;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+}

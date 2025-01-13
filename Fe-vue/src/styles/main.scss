@@ -426,3 +426,43 @@ img.image-medicine-related {
     }
   }
 }
+
+.menu-value {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  margin: 10px 0;
+  width: fit-content;
+
+  div {
+    min-width: 240px;
+    justify-content: space-between;
+    display: flex;
+    background-color: #000000;
+    color: white;
+    padding: 6px 16px;
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      height: 36px;
+      button {
+        margin: 0 4px;
+        padding: 0 6px;
+        border: none;
+        height: 24px;
+      }
+    }
+  }
+  button {
+    padding: 6px;
+    border: 1px dashed black;
+    border-radius: 0;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

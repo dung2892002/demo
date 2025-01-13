@@ -5,20 +5,18 @@
         <img src="../assets/icon/dashboard.png" alt="logo" class="sidebar__button-logo" />
         <span class="sidebar__button-text">Trang chủ</span>
       </button>
-      <button class="sidebar__button" data-text="Báo cáo">
-        <img src="../assets/icon/report.png" alt="logo" class="sidebar__button-logo" />
-        <span class="sidebar__button-text">Báo cáo</span>
-      </button>
-      <button class="sidebar__button" data-text="Nhân viên" @click="goEmployeePage">
-        <img src="../assets/icon/dic-employee.png" alt="logo" class="sidebar__button-logo" />
-        <span class="sidebar__button-text">Nhân viên</span>
-      </button>
-      <button class="sidebar__button" data-text="Khách hàng" @click="goCustomerPage">
-        <img src="../assets/icon/dic-employee.png" alt="logo" class="sidebar__button-logo" />
-        <span class="sidebar__button-text">Khách hàng</span>
+      <button
+        v-for="menu in menus"
+        :key="menu.Id"
+        class="sidebar__button"
+        :data-text="menu.MenuName"
+        @click="handleSelectMenu(menu)"
+      >
+        <font-awesome-icon :icon="menu.MenuIcon" />
+        <span class="sidebar__button-text">{{ menu.MenuName }}</span>
       </button>
       <button class="sidebar__button" data-text="Cài đặt" @click="goSettingPage">
-        <img src="../assets/icon/setting.png" alt="logo" class="sidebar__button-logo" />
+        <font-awesome-icon icon="fa-solid fa-gear" />
         <span class="sidebar__button-text" data-text="Cài đặt">Cài đặt</span>
       </button>
     </div>
@@ -51,7 +49,11 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import '../styles/layout/sidebar.css'
-import { ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import { useStore } from 'vuex'
+import type { Menu } from '@/entities/Menu'
+
+const store = useStore()
 
 const router = useRouter()
 const isLess = ref(false)
@@ -59,17 +61,11 @@ function toggleSidebar() {
   isLess.value = !isLess.value
 }
 
-function goEmployeePage() {
-  router.push({
-    name: 'employees',
-  })
+function handleSelectMenu(menu: Menu) {
+  router.push(`${menu.MenuPath}`)
 }
 
-function goCustomerPage() {
-  router.push({
-    name: 'customers',
-  })
-}
+const menus = computed(() => store.getters.getMenus)
 
 function goHomePage() {
   router.push({
@@ -79,7 +75,11 @@ function goHomePage() {
 
 function goSettingPage() {
   router.push({
-    name: 'setting',
+    name: 'setting-import',
   })
 }
+
+onMounted(() => {
+  store.dispatch('fetchMenus')
+})
 </script>

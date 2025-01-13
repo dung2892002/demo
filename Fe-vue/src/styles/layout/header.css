@@ -27,6 +27,7 @@
   width: 144px;
   height: 56px;
   cursor: pointer;
+  object-fit: contain;
 }
 
 .header__toggle-img {

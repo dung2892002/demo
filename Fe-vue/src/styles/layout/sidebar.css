@@ -34,7 +34,6 @@
 
 .sidebar__button-logo {
   filter: brightness(0) invert(1);
-  margin-right: 12px;
   width: 24px;
   height: 24px;
 }
@@ -43,6 +42,7 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+  margin-left: 12px;
 }
 
 .sidebar__button--toggle {

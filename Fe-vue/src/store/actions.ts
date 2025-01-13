@@ -6,6 +6,7 @@ import type { LoginModel } from '@/entities/LoginModel'
 import Cookies from 'js-cookie'
 import type { Import } from '@/entities/Import'
 import type { Customer } from '@/entities/Customer'
+import type { Menu } from '@/entities/Menu'
 
 const baseUrl = 'https://localhost:7160/api/v1'
 interface Response {
@@ -354,5 +355,178 @@ export const actions: ActionTree<State, State> = {
     commit('setCustomers', customers)
     commit('setTotalRecords', totalRecords)
     commit('setTotalPages', totalPages)
+  },
+
+  async fetchMenus({ commit }) {
+    const response = await axios.get(`${baseUrl}/Menus`)
+    commit('setMenus', response.data)
+  },
+
+  async createMenu(_, menuValue): Promise<boolean> {
+    try {
+      const response = await axios.post(`${baseUrl}/Menus`, menuValue)
+      if (response.status === 201) return true
+      return false
+    } catch (error) {
+      console.log('Failed to create: ', error)
+      return false
+    }
+  },
+
+  async updateMenu(_, menuValue: Menu): Promise<boolean> {
+    try {
+      const response = await axios.put(`${baseUrl}/Menus/${menuValue.Id}`, menuValue)
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async deleteMenu(_, menuValue: Menu): Promise<boolean> {
+    try {
+      const response = await axios.delete(`${baseUrl}/Menus/${menuValue.Id}`)
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async updateOrder(_, menus: Menu[]): Promise<boolean> {
+    try {
+      const response = await axios.put(`${baseUrl}/Menus/order`, menus)
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async fetchAccounts({ commit }, token): Promise<boolean> {
+    try {
+      const response = await axios.get(`${baseUrl}/Auths/users`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      commit('setAccounts', response.data)
+      return true
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async fetchRoles({ commit }, token): Promise<boolean> {
+    try {
+      const response = await axios.get(`${baseUrl}/Auths/roles`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      commit('setRoles', response.data)
+      return true
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async fetchAccountRoles({ commit }, { accountId, token }): Promise<boolean> {
+    try {
+      const response = await axios.get(`${baseUrl}/Auths/roles/${accountId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      commit('setAccountRoles', response.data)
+      return true
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async updateRolesAccount({}, { userId, roleNames, token }): Promise<boolean> {
+    try {
+      const response = await axios.post(`${baseUrl}/Auths/update-roles/${userId}`, roleNames, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      if (response.status == 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async fetchPermissions({ commit }, { name, token }): Promise<boolean> {
+    try {
+      const response = await axios.get(`${baseUrl}/Permissions/${name}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      commit('setPermissions', response.data)
+      return true
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async fetchAccountPermissions({ commit }, { accountId, token }): Promise<boolean> {
+    try {
+      const response = await axios.get(`${baseUrl}/Permissions/user/${accountId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      commit('setAccountPermissions', response.data)
+      return true
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async addPermissionToUser({}, { permission, token }): Promise<boolean> {
+    try {
+      const response = await axios.post(`${baseUrl}/Permissions/user`, permission, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      if (response.status == 201) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async deletePermissionToUser({}, { permission, token }): Promise<boolean> {
+    try {
+      const response = await axios.post(
+        `${baseUrl}/Permissions/delete-user-permission`,
+        permission,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      )
+      if (response.status == 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
   },
 }

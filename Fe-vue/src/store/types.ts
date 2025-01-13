@@ -3,6 +3,7 @@ import type { Department } from '@/entities/Department'
 import type { Employee } from '@/entities/Employee'
 import type { Import } from '@/entities/Import'
 import type { Position } from '@/entities/Position'
+import type Menu from 'element-plus/es/components/menu/src/utils/menu-bar.mjs'
 
 export interface State {
   employees: Employee[]
@@ -20,4 +21,11 @@ export interface State {
   totalInvalid: number
   importSettings: Import[]
   customers: Customer[]
+  menus: Menu[]
+  menu: Menu | null
+  accounts: []
+  roles: []
+  accountRoles: []
+  permissions: []
+  accountPermissions: []
 }

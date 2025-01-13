@@ -4,6 +4,7 @@ import type { Position } from '@/entities/Position'
 import type { MutationTree } from 'vuex/types/index.js'
 import type { State } from './types'
 import type { Customer } from '@/entities/Customer'
+import type Menu from 'element-plus/es/components/menu/src/utils/menu-bar.mjs'
 
 export const mutations: MutationTree<State> = {
   setEmployees(state, employees: Employee[]) {
@@ -50,5 +51,26 @@ export const mutations: MutationTree<State> = {
   },
   setCustomers(state, customers: Customer[]) {
     state.customers = customers
+  },
+  setMenus(state, menus: Menu[]) {
+    state.menus = menus
+  },
+  setMenu(state, menu: Menu) {
+    state.menu = menu
+  },
+  setAccounts(state, accounts) {
+    state.accounts = accounts
+  },
+  setRoles(state, roles) {
+    state.roles = roles
+  },
+  setAccountRoles(state, roles) {
+    state.accountRoles = roles
+  },
+  setPermissions(state, permissions) {
+    state.permissions = permissions
+  },
+  setAccountPermissions(state, permissions) {
+    state.accountPermissions = permissions
   },
 }

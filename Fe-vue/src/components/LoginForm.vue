@@ -18,6 +18,22 @@
       <div>
         <button @click="login" class="button--complete" v-loading="loading">Đăng nhập</button>
       </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 10px;
+        "
+      >
+        <img
+          src="../assets/icon/google.png"
+          alt="gg"
+          style="width: 24px; height: 24px; cursor: pointer"
+          @click="loginGoogle"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +54,11 @@ const loginModel = ref<LoginModel>({
   username: '',
   password: '',
 })
+
+function loginGoogle() {
+  const backendLoginUrl = 'https://localhost:7160/api/v1/Auths/login-google'
+  window.location.href = backendLoginUrl
+}
 
 async function login() {
   loading.value = true

@@ -10,5 +10,11 @@ namespace Cukcuk.Core.Auth
         public DateTime RefreshTokenExpiryTime { get; set; }
         [JsonIgnore]
         public List<UserPermission> UserPermissions { get; set; } = new List<UserPermission>();
+
+        [JsonIgnore]
+        public List<Message> SenderMessages { get; set; } = new List<Message>();
+
+        [JsonIgnore]
+        public List<Message> ReceiverMessages { get; set; } = new List<Message>();
     }
 }

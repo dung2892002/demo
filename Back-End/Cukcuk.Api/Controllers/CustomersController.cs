@@ -12,14 +12,72 @@ namespace Cukcuk.Api.Controllers
     {
         private readonly ICustomerService _customerService = customerService;
 
-        [Authorize(Roles = "Admin, CustomerManager")]
-        [HttpGet("filter")]
 
-        public async Task<IActionResult> FilterCustomer(int pageSize, int pageNumber, string? keyword)
+        [HttpGet("file/{fileId}")]
+        public async Task<IActionResult> GetFileContent(Guid fileId)
         {
             try
             {
-                var response = await _customerService.FilterCustomer(pageSize, pageNumber, keyword);
+                var customers = await _customerService.GetFileContent(fileId);
+                return StatusCode(200, customers);
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        //[Authorize(Roles = "Admin, CustomerManager")]
+        [HttpGet("filter")]
+
+        public async Task<IActionResult> FilterCustomer(int pageSize, int pageNumber, string? keyword, Guid? groupId)
+        {
+            try
+            {
+                var response = await _customerService.FilterCustomer(pageSize, pageNumber, keyword, groupId);
+
+                return StatusCode(200, response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCustomer(Guid id)
+        {
+            try
+            {
+
+                var employee = await _customerService.GetById(id);
+                if (employee == null)
+                {
+                    return StatusCode(404, "Employee not exist");
+                }
+
+                return StatusCode(200, employee);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("groups")]
+        public async Task<IActionResult> GetGroups()
+        {
+            try
+            {
+                var response = await _customerService.GetGroups();
 
                 return StatusCode(200, response);
             }
@@ -38,6 +96,65 @@ namespace Cukcuk.Api.Controllers
                 var file = _customerService.CreateExcelFile(datas);
 
                 return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "export_data.xlsx");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [Authorize(Roles = "Admin, CustomerManager")]
+        [HttpPost]
+        [Permission("AddCustomer")]
+        public async Task<IActionResult> CreateEmployee([FromBody] Customer customer)
+        {
+            try
+            {
+                await _customerService.Create(customer);
+                return StatusCode(201, "Created customer succesfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [Authorize(Roles = "Admin, CustomerManager")]
+        [HttpPut("{id}")]
+        [Permission("EditCustomer")]
+        public async Task<IActionResult> Updatecustomer(Guid id, [FromBody] Customer customer)
+        {
+            try
+            {
+                await _customerService.Update(id, customer);
+
+                return StatusCode(200, "Update successfully");
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode(400, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [Authorize(Roles = "Admin, CustomerManager")]
+        [HttpDelete("{id}")]
+        [Permission("DeleteCustomer")]
+        public async Task<IActionResult> DeleteCustomer(Guid id)
+        {
+            try
+            {
+
+                await _customerService.DeleteById(id);
+
+                return StatusCode(200, "ok");
             }
             catch (Exception ex)
             {

@@ -4,14 +4,9 @@ using System.Security.Claims;
 
 namespace Cukcuk.Core.Auth
 {
-    public class PermissionMiddleware
+    public class PermissionMiddleware(RequestDelegate next)
     {
-        private readonly RequestDelegate _next;
-
-        public PermissionMiddleware(RequestDelegate next)
-        {
-            _next = next;
-        }
+        private readonly RequestDelegate _next = next;
 
         public async Task InvokeAsync(HttpContext context, IPermissionService permissionService)
         {

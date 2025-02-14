@@ -1,6 +1,6 @@
-﻿using Cukcuk.Core.Auth;
-using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.IRepositories;
+using Cukcuk.Infrastructure.Data;
 using Dapper;
 using Microsoft.EntityFrameworkCore;
 using System.Data;

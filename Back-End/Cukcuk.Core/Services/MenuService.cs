@@ -40,7 +40,6 @@ namespace Cukcuk.Core.Services
             var allMenus = await _menuRepository.FindAll();
             if (menuList.Count != allMenus.Count())
             {
-                //Console.WriteLine("co cai can xoa");
                 var menuDeletes = allMenus.Where(m => !menuList.Any(menu => menu.Id == m.Id));
                 foreach (var menu in menuDeletes)
                 {

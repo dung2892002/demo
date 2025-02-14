@@ -7,7 +7,7 @@ namespace Cukcuk.Core.Interfaces.IRepositories
     {
         Task<string> GennerateNewCustomerCode();
         Task<(IEnumerable<Customer> customers, int TotalCount)> FilterCustomers(
-        int pageSize, int pageNumber, string? keyword);
+        int pageSize, int pageNumber, string? keyword, Guid? groupId);
         Task<bool> CheckCustomerCode(string customerCode);
         Task<bool> CheckMobileNumber(string mobileNumber);
     }

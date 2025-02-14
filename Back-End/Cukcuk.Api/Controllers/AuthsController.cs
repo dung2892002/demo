@@ -13,25 +13,18 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Cukcuk.Core.Auth;
 
-namespace jwtAuth.Controllers
+namespace Cukcuk.Api.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class AuthsController : ControllerBase
+    public class AuthsController(
+        UserManager<ApplicationUser> userManager,
+        RoleManager<IdentityRole> roleManager,
+        IConfiguration configuration) : ControllerBase
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly IConfiguration _configuration;
-
-        public AuthsController(
-            UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager,
-            IConfiguration configuration)
-        {
-            _userManager = userManager;
-            _roleManager = roleManager;
-            _configuration = configuration;
-        }
+        private readonly UserManager<ApplicationUser> _userManager = userManager;
+        private readonly RoleManager<IdentityRole> _roleManager = roleManager;
+        private readonly IConfiguration _configuration = configuration;
 
         [HttpGet("login-google")]
         public IActionResult LoginWithGoogle()
@@ -63,7 +56,10 @@ namespace jwtAuth.Controllers
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null)
             {
-                user = new ApplicationUser { UserName = Guid.NewGuid().ToString(), Email = email,
+                user = new ApplicationUser
+                {
+                    UserName = Guid.NewGuid().ToString(),
+                    Email = email,
                     SecurityStamp = Guid.NewGuid().ToString(),
                 };
 
@@ -76,6 +72,7 @@ namespace jwtAuth.Controllers
 
             var authClaims = new List<Claim>
                 {
+                    new("Id", user.Id.ToString()),
                     new(ClaimTypes.Name, user.UserName),
                     new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
@@ -107,19 +104,18 @@ namespace jwtAuth.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            //    if (!await _roleManager.RoleExistsAsync(UserRoles.EmployeeManager))
-            //        await _roleManager.CreateAsync(new IdentityRole(UserRoles.EmployeeManager));
-            //    if (!await _roleManager.RoleExistsAsync(UserRoles.CustomerManager))
-            //        await _roleManager.CreateAsync(new IdentityRole(UserRoles.CustomerManager));
-            var user = await _userManager.FindByNameAsync(loginModel.Username);
+            var user = await _userManager.FindByNameAsync(loginModel.Username); 
             if (user != null && await _userManager.CheckPasswordAsync(user, loginModel.Password))
             {
                 var userRoles = await _userManager.GetRolesAsync(user);
 
+                Console.WriteLine(user.Id);
+                Console.WriteLine(user.UserName);
                 var authClaims = new List<Claim>
                 {
-                    new(ClaimTypes.Name, user.UserName),
-                    new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                    new ("Id", user.Id.ToString()),
+                    new (ClaimTypes.Name, user.UserName),
+                    new (JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
 
                 foreach (var role in userRoles)
@@ -136,12 +132,14 @@ namespace jwtAuth.Controllers
                 user.RefreshTokenExpiryTime = DateTime.Now.AddDays(refreshTokenValidityInDays);
 
                 await _userManager.UpdateAsync(user);
+                var jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
                 return Ok(new
                 {
-                    Token = new JwtSecurityTokenHandler().WriteToken(token),
+                    Token = jwtToken,
                     RefreshToken = refreshToken,
                     Expiration = token.ValidTo.ToLocalTime(),
                     Username = user.UserName,
+                    UserId = user.Id,
                 });
             }
             return Unauthorized();
@@ -202,7 +200,7 @@ namespace jwtAuth.Controllers
             user.RefreshToken = newRefreshToken;
             await _userManager.UpdateAsync(user);
 
-            return new ObjectResult(new
+            return Ok(new
             {
                 AccessToken = new JwtSecurityTokenHandler().WriteToken(newAccessToken),
                 RefreshToken = newRefreshToken,
@@ -210,7 +208,6 @@ namespace jwtAuth.Controllers
             });
         }
 
-        [Authorize]
         [HttpPost("revoke/{username}")]
         public async Task<IActionResult> Revoke(string username)
         {
@@ -223,7 +220,6 @@ namespace jwtAuth.Controllers
             return NoContent();
         }
 
-        [Authorize]
         [HttpPost("revoke-all")]
         public async Task<IActionResult> RevokeAll()
         {
@@ -237,7 +233,7 @@ namespace jwtAuth.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpGet("users")]
         public async Task<IActionResult> GetUser()
         {

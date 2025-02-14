@@ -1,6 +1,7 @@
 ﻿using Cukcuk.Core.DTOs;
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Helper;
+using Cukcuk.Core.Interfaces;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.IServices;
 using Microsoft.AspNetCore.Http;
@@ -8,11 +9,13 @@ using Microsoft.AspNetCore.Http;
 namespace Cukcuk.Core.Services
 {
     public class CustomerService(ICustomerRepository customerRepository, ICustomerGroupRepository customerGroupRepository,
-        IImportRepository importRepository, Cache cacheService) : ICustomerService
+        IImportRepository importRepository, Cache cacheService, IFileRepository fileRepository, IFirebaseStorageService firebaseStorageService) : ICustomerService
     {
         private readonly ICustomerRepository _customerRepository = customerRepository;
         private readonly ICustomerGroupRepository _customerGroupRepository = customerGroupRepository;
         private readonly IImportRepository _importRepository = importRepository;
+        private readonly IFirebaseStorageService _firebaseStorageService = firebaseStorageService;
+        private readonly IFileRepository _fileRepository = fileRepository;
         private readonly Cache _cacheService = cacheService;
         public async Task AddDataImport(Guid cacheId)
         {
@@ -27,6 +30,7 @@ namespace Cukcuk.Core.Services
         public async Task Create(Customer customer)
         {
             customer.CustomerId = Guid.NewGuid();
+            customer.CustomerCode = await _customerRepository.GennerateNewCustomerCode();
             await _customerRepository.Create(customer);
         }
 
@@ -87,14 +91,14 @@ namespace Cukcuk.Core.Services
             return file;
         }
 
-        public Task DeleteById(Guid id)
+        public async Task DeleteById(Guid id)
         {
-            throw new NotImplementedException();
+            await _customerRepository.DeleteById(id);
         }
 
-        public async Task<object> FilterCustomer(int pageSize, int pageNumber, string? keyword)
+        public async Task<object> FilterCustomer(int pageSize, int pageNumber, string? keyword, Guid? groupId)
         {
-            var (customers, totalRecords) = await _customerRepository.FilterCustomers(pageSize, pageNumber, keyword);
+            var (customers, totalRecords) = await _customerRepository.FilterCustomers(pageSize, pageNumber, keyword, groupId);
             int totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
 
             var response = new
@@ -114,9 +118,9 @@ namespace Cukcuk.Core.Services
             throw new NotImplementedException();
         }
 
-        public Task<Customer?> GetById(Guid id)
+        public async Task<Customer?> GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return await _customerRepository.FindById(id);
         }
 
         public Task<string> GetNewCustomerCode()
@@ -218,9 +222,29 @@ namespace Cukcuk.Core.Services
             listMobileNumber.Add(customer.MobileNumber);
         }
 
-        public Task Update(Guid id, Customer entity)
+        public async Task Update(Guid id, Customer entity)
         {
-            throw new NotImplementedException();
+            var customerExisting = await _customerRepository.FindById(id) ?? throw new ArgumentException("customer not exist");
+            entity.CustomerId = id;
+
+            await _customerRepository.Update(entity);
+        }
+
+        public async Task<IEnumerable<CustomerGroup?>> GetGroups()
+        {
+            return await _customerGroupRepository.FindAll();
+        }
+
+        public async Task<IEnumerable<Customer>> GetFileContent(Guid fileId)
+        {
+            var imports = await _importRepository.GetByTable("Customer");
+
+            var file = await _fileRepository.GetById(fileId) ?? throw new ArgumentException("File not exist");
+            var fileData = await _firebaseStorageService.DownloadFileAsIFormFile(file.FilePath);
+
+            var customers = await ExcelHelper.ReadFile<Customer>(fileData, imports);
+
+            return customers;
         }
     }
 }

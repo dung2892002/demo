@@ -1,6 +1,7 @@
 ﻿using Cukcuk.Core.DTOs;
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Helper;
+using Cukcuk.Core.Interfaces;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.Repositories;
 using Cukcuk.Core.Interfaces.Services;
@@ -9,13 +10,17 @@ using Microsoft.AspNetCore.Http;
 namespace Cukcuk.Core.Services
 {
     public class EmployeeService(IEmployeeRepository employeeRepository, IDepartmentService departmentService, 
-        IPositionService positionService, IImportRepository importRepository,
+        IPositionService positionService, IImportRepository importRepository, IFileRepository fileRepository,
+        IFirebaseStorageService firebaseStorageService,
         Cache cacheService) : IEmployeeService
     {
         private readonly IEmployeeRepository _employeeRepository = employeeRepository;
         private readonly IDepartmentService _departmentService = departmentService;
         private readonly IPositionService _positionService = positionService;
         private readonly IImportRepository _importRepository = importRepository;
+        private readonly IFileRepository _fileRepository = fileRepository;
+        private readonly IFirebaseStorageService _firebaseStorageService = firebaseStorageService;
+
         private readonly Cache _cacheService = cacheService;
 
         public async Task AddDataImport(Guid cacheId)
@@ -300,6 +305,18 @@ namespace Cukcuk.Core.Services
             employeeDTO.EmployeeId = id;
             employeeDTO.ModifiedDate = DateTime.UtcNow;
             await _employeeRepository.Update(employeeDTO);
+        }
+
+        public async Task<IEnumerable<EmployeeDTO>> GetFileContent(Guid fileId)
+        {
+            var imports = await _importRepository.GetByTable("Employee");
+
+            var file = await _fileRepository.GetById(fileId) ?? throw new ArgumentException("File not exist");
+            var fileData = await _firebaseStorageService.DownloadFileAsIFormFile(file.FilePath);
+
+            var employees = await ExcelHelper.ReadFile<EmployeeDTO>(fileData, imports);
+
+            return employees;
         }
     }
 }

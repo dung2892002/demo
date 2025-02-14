@@ -1,10 +1,14 @@
 ﻿using Cukcuk.Core.Auth;
 using Cukcuk.Core.Helper;
+using Cukcuk.Core.Interfaces;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.IServices;
 using Cukcuk.Core.Interfaces.Repositories;
 using Cukcuk.Core.Interfaces.Services;
 using Cukcuk.Core.Services;
+using Cukcuk.Core.SignalR;
+using Cukcuk.Infrastructure.Data;
+using Cukcuk.Infrastructure.Firebase;
 using Cukcuk.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -57,6 +61,19 @@ builder.Services
             ValidIssuer = configuration["JWT:ValidIssuer"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
         };
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/api/v1/chatHub"))
+                {
+                    context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            }
+        };
     })
     .AddCookie(options =>
     {
@@ -80,6 +97,7 @@ builder.Services.AddScoped<IImportService, ImportService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IMenuService, MenuService>();
 builder.Services.AddScoped<IPermissionService, PermissionService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
@@ -90,7 +108,11 @@ builder.Services.AddScoped<ICustomerGroupRepository, CustomerGroupRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 builder.Services.AddScoped<IPermissionRepository, PermissionRepository>();
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+builder.Services.AddScoped<IFolderRepository, FolderRepository>();
+builder.Services.AddScoped<IFileRepository, FileRepository>();
 
+builder.Services.AddScoped<IFirebaseStorageService, FirebaseStorageService>();
 
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<Cache>(); 
@@ -108,8 +130,20 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll",
         builder => builder.WithOrigins("http://localhost:5173")
                           .AllowAnyHeader()
-                          .AllowAnyMethod());
+                          .AllowAnyMethod()
+                          .AllowCredentials());
 });
+
+builder.Services.AddSignalR(options =>
+                            {
+                                options.ClientTimeoutInterval = TimeSpan.FromSeconds(60);
+                                options.KeepAliveInterval = TimeSpan.FromSeconds(30);    
+                                options.HandshakeTimeout = TimeSpan.FromSeconds(15);
+                            })
+                .AddJsonProtocol(options =>
+                {
+                    options.PayloadSerializerOptions.PropertyNamingPolicy = null;
+                }); 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -117,9 +151,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -133,9 +164,10 @@ app.UseRouting();
 
 app.UseCors("AllowAll");
 
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseMiddleware<PermissionMiddleware>();
-
+app.MapHub<ChatHub>("/api/v1/chatHub");
 app.MapControllers();
 
 app.Run();

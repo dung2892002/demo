@@ -1,8 +1,9 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Auth;
+using Cukcuk.Core.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cukcuk.Core.Auth
+namespace Cukcuk.Infrastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -18,6 +19,9 @@ namespace Cukcuk.Core.Auth
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<UserPermission> UserPermissions { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
+        public virtual DbSet<Folder> Folders { get; set; }
+        public virtual DbSet<UserFile> Files { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -109,6 +113,66 @@ namespace Cukcuk.Core.Auth
                 entity.HasOne(d => d.User).WithMany(g => g.UserPermissions)
                     .HasForeignKey(d => d.UserId)
                     .HasConstraintName("FK_user_permission_UserId");
+            });
+
+            modelBuilder.Entity<Message>(entity =>
+            {
+                entity.HasKey(e => e.MessageId).HasName("PRIMARY");
+                entity.ToTable("message");
+
+                entity.Property(e => e.Content).HasMaxLength(2500);
+                entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+
+                entity.HasIndex(e => e.SenderId, "FK_message_SenderId_idx");
+                entity.HasIndex(e => e.ReceiverId, "FK_message_RecivertId_idx");
+
+                entity.HasOne(e => e.Sender)
+                    .WithMany(s => s.SenderMessages)
+                    .HasForeignKey(d => d.SenderId)
+                    .HasConstraintName("FK_message_SenderId");
+
+                entity.HasOne(e => e.Receiver)
+                    .WithMany(s => s.ReceiverMessages)
+                    .HasForeignKey(d => d.ReceiverId)
+                    .HasConstraintName("FK_message_ReceiverId");
+
+            });
+
+            modelBuilder.Entity<Folder>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("PRIMARY");
+                entity.ToTable("folder");
+
+                entity.Property(e => e.FolderName).HasMaxLength(255);
+                entity.Property(e => e.FolderPath).HasMaxLength(255);
+
+                entity.HasIndex(e => e.MenuId, "FK_Folder_MenuId_idx");
+
+                entity.HasOne(e => e.Menu)
+                    .WithMany(m => m.Folders)
+                    .HasForeignKey(e => e.MenuId)
+                    .HasConstraintName("FK_Folder_MenuId");
+
+                entity.HasOne(e => e.Parent)
+                    .WithMany(p => p.SubFolders)
+                    .HasForeignKey(e => e.ParentId)
+                    .HasConstraintName("FK_Folder_ParentId");
+            });
+
+            modelBuilder.Entity<UserFile>(entity =>
+            {
+                entity.HasKey(e => e.FileId).HasName("PRIMARY");
+                entity.ToTable("user_file");
+
+                entity.Property(e => e.FileName).HasMaxLength(255);
+                entity.Property(e => e.FilePath).HasMaxLength(255);
+
+                entity.HasIndex(e => e.FolderId, "FK_File_FolderId_idx");
+
+                entity.HasOne(e => e.Folder)
+                    .WithMany(m => m.Files)
+                    .HasForeignKey(e => e.FolderId)
+                    .HasConstraintName("FK_File_FolderId");
             });
             base.OnModelCreating(modelBuilder);
         }

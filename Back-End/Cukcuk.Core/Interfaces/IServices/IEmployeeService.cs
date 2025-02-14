@@ -8,6 +8,7 @@ namespace Cukcuk.Core.Interfaces.Services
     {
         Task<string> GetNewEmployeeCode();
 
+        Task<IEnumerable<EmployeeDTO>> GetFileContent(Guid fileId);
         Task<object> FilterEmployees(int pageSize, int pageNumber, string? employeeFilter, Guid? departmentId, Guid? positionId);
 
         byte[] CreateExcelFile(List<EmployeeDTO> employees);

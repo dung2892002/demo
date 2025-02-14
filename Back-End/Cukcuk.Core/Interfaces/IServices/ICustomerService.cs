@@ -1,4 +1,5 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.DTOs;
+using Cukcuk.Core.Entities;
 using Microsoft.AspNetCore.Http;
 
 namespace Cukcuk.Core.Interfaces.IServices
@@ -7,7 +8,8 @@ namespace Cukcuk.Core.Interfaces.IServices
     {
         Task<string> GetNewCustomerCode();
 
-        Task<object> FilterCustomer(int pageSize, int pageNumber, string? keyword);
+        Task<IEnumerable<Customer>> GetFileContent(Guid fileId);
+        Task<object> FilterCustomer(int pageSize, int pageNumber, string? keyword, Guid? groupId);
 
         byte[] CreateExcelFile(List<Customer> employees);
         byte[] CreateResultFile(Guid? validCacheId, Guid InvalidCacheId);
@@ -15,5 +17,7 @@ namespace Cukcuk.Core.Interfaces.IServices
         Task<object> ImportExcelFile(IFormFile file);
 
         Task AddDataImport(Guid cacheId);
+
+        Task<IEnumerable<CustomerGroup?>> GetGroups();
     }
 }

@@ -1,6 +1,6 @@
-﻿using Cukcuk.Core.Auth;
-using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.Repositories;
+using Cukcuk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cukcuk.Infrastructure.Repositories

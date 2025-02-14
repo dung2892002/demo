@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "GoogleResponse",
     "RelativePath": "api/v1/Auths/google-response",
     "HttpMethod": "GET",
@@ -10,7 +10,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "Login",
     "RelativePath": "api/v1/Auths/login",
     "HttpMethod": "POST",
@@ -26,7 +26,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "LoginWithGoogle",
     "RelativePath": "api/v1/Auths/login-google",
     "HttpMethod": "GET",
@@ -36,7 +36,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "RefreshToken",
     "RelativePath": "api/v1/Auths/refresh-token",
     "HttpMethod": "POST",
@@ -52,7 +52,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "Register",
     "RelativePath": "api/v1/Auths/register",
     "HttpMethod": "POST",
@@ -68,7 +68,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "RevokeAll",
     "RelativePath": "api/v1/Auths/revoke-all",
     "HttpMethod": "POST",
@@ -78,7 +78,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "Revoke",
     "RelativePath": "api/v1/Auths/revoke/{username}",
     "HttpMethod": "POST",
@@ -94,7 +94,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "GetRoles",
     "RelativePath": "api/v1/Auths/roles",
     "HttpMethod": "GET",
@@ -104,7 +104,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "GetRolesOfUsers",
     "RelativePath": "api/v1/Auths/roles/{userId}",
     "HttpMethod": "GET",
@@ -120,7 +120,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "UpdateRolesAccount",
     "RelativePath": "api/v1/Auths/update-roles/{userId}",
     "HttpMethod": "POST",
@@ -141,13 +141,82 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "jwtAuth.Controllers.AuthsController",
+    "ContainingType": "Cukcuk.Api.Controllers.AuthsController",
     "Method": "GetUser",
     "RelativePath": "api/v1/Auths/users",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.CustomersController",
+    "Method": "CreateEmployee",
+    "RelativePath": "api/v1/Customers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "Cukcuk.Core.Entities.Customer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.CustomersController",
+    "Method": "GetCustomer",
+    "RelativePath": "api/v1/Customers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.CustomersController",
+    "Method": "Updatecustomer",
+    "RelativePath": "api/v1/Customers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "customer",
+        "Type": "Cukcuk.Core.Entities.Customer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.CustomersController",
+    "Method": "DeleteCustomer",
+    "RelativePath": "api/v1/Customers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -161,6 +230,22 @@
       {
         "Name": "datas",
         "Type": "System.Collections.Generic.List\u00601[[Cukcuk.Core.Entities.Customer, Cukcuk.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.CustomersController",
+    "Method": "GetFileContent",
+    "RelativePath": "api/v1/Customers/file/{fileId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -188,8 +273,23 @@
         "Name": "keyword",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "groupId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.CustomersController",
+    "Method": "GetGroups",
+    "RelativePath": "api/v1/Customers/groups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -421,6 +521,22 @@
   },
   {
     "ContainingType": "Cukcuk.Api.Controllers.EmployeesController",
+    "Method": "GetFileContent",
+    "RelativePath": "api/v1/Employees/file/{fileId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.EmployeesController",
     "Method": "FilterEmployee",
     "RelativePath": "api/v1/Employees/filter",
     "HttpMethod": "GET",
@@ -516,6 +632,171 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FilesController",
+    "Method": "GetFileByFolder",
+    "RelativePath": "api/v1/Files",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folderId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FilesController",
+    "Method": "CreateFile",
+    "RelativePath": "api/v1/Files",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folderId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "files",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FilesController",
+    "Method": "DeleteFile",
+    "RelativePath": "api/v1/Files",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FilesController",
+    "Method": "GetUrl",
+    "RelativePath": "api/v1/Files/url/{fileId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FoldersController",
+    "Method": "GetByMenu",
+    "RelativePath": "api/v1/Folders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FoldersController",
+    "Method": "Create",
+    "RelativePath": "api/v1/Folders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folder",
+        "Type": "Cukcuk.Core.Entities.Folder",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FoldersController",
+    "Method": "DeleteFolder",
+    "RelativePath": "api/v1/Folders",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FoldersController",
+    "Method": "UpdateFolder",
+    "RelativePath": "api/v1/Folders",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folder",
+        "Type": "Cukcuk.Core.Entities.Folder",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FoldersController",
+    "Method": "GetById",
+    "RelativePath": "api/v1/Folders/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.FoldersController",
+    "Method": "GetSubFolders",
+    "RelativePath": "api/v1/Folders/subs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parentId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -672,6 +953,69 @@
         "Name": "menus",
         "Type": "System.Collections.Generic.List\u00601[[Cukcuk.Core.Entities.Menu, Cukcuk.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.MessagesController",
+    "Method": "GetMessage",
+    "RelativePath": "api/v1/Messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "skipItem",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.MessagesController",
+    "Method": "GetUserToChat",
+    "RelativePath": "api/v1/Messages/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.MessagesController",
+    "Method": "GetUserToChat",
+    "RelativePath": "api/v1/Messages/user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

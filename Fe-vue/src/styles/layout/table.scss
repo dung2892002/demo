@@ -103,7 +103,6 @@ td {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 4px 0;
   position: fixed;
   transform: translate(0, 0);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -111,14 +110,18 @@ td {
   width: auto;
   align-items: center;
   z-index: 10;
-  padding: 0 8px;
+  overflow: hidden;
 
   span {
     border-bottom: 1px solid #ffffff;
+    padding: 4px 16px;
     cursor: pointer;
     width: 100%;
     text-align: center;
-    padding: 2px 0;
+
+    &:hover {
+      background-color: #078cf8;
+    }
 
     &:last-child {
       border-bottom: none;

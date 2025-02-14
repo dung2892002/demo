@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="content__header">
-      <h1 class="content__title">Quản lý phân quyền</h1>
+      <h1 class="content__title">Quản lý tài khoản</h1>
     </div>
     <div class="content-main">
       <div class="toolbar">
@@ -19,7 +19,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(account, index) in accounts" :key="account.EmployeeId">
+            <tr
+              v-for="(account, index) in accounts"
+              :key="account.Id"
+              @contextmenu="showContextMenu($event, account.Id, index)"
+            >
               <td>{{ index + 1 }}</td>
               <td>{{ account.UserName }}</td>
               <td>{{ account.Email }}</td>
@@ -36,7 +40,7 @@
                     >
                       <span
                         @click="updateAccountPermissions(account.Id, index)"
-                        v-loading="updateLoading == index"
+                        v-loading="updatePermissionLoading == index"
                         >Sửa quyền</span
                       >
                       <span
@@ -53,6 +57,13 @@
         </table>
       </div>
     </div>
+    <ContextMenu
+      v-if="showMenu"
+      :actions="contextMenuActions"
+      @actionClick="handleActionClick"
+      @close="closeContextMenu"
+      :position="menuPosition"
+    ></ContextMenu>
     <AccountRoleForm
       :id="accountUpdateId"
       @close="closeForm"
@@ -73,15 +84,55 @@ import { computed, onMounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import AccountRoleForm from './AccountRoleForm.vue'
 import AccountPermissionForm from './AccountPermissionForm.vue'
+import type { ActionMenu } from '@/entities/ActionMenu'
+import ContextMenu from '@/components/ContextMenu.vue'
 
 const store = useStore()
 
 const showPopupAction = ref<number>(-1)
 const showMenu = ref(false)
 const updateLoading = ref(-1)
+const updatePermissionLoading = ref(-1)
 const accountUpdateId = ref<string>('')
 const showForm = ref(false)
 const showFormPermission = ref(false)
+
+const targetId = ref<string>('')
+const targetIndex = ref(-1)
+
+const contextMenuActions = ref<ActionMenu[]>([
+  { label: 'Sửa quyền', action: 'updatPermission' },
+  { label: 'Sửa role', action: 'updateRole' },
+])
+
+const menuPosition = ref({
+  top: 0,
+  left: 0,
+})
+
+function handleActionClick(action: ActionMenu) {
+  if (action.action === 'updateRole') {
+    updateAccounts(targetId.value, targetIndex.value)
+  } else {
+    updateAccountPermissions(targetId.value, targetIndex.value)
+  }
+  showMenu.value = false
+}
+
+function showContextMenu(event: MouseEvent, Id: string, index: number) {
+  event.preventDefault()
+  menuPosition.value.top = event.clientY
+  menuPosition.value.left = event.clientX
+  showMenu.value = true
+  showPopupAction.value = -1
+  targetId.value = Id
+  targetIndex.value = index
+}
+
+function closeContextMenu() {
+  showMenu.value = false
+}
+
 const popupPosition = ref({
   top: 0,
   right: 100,
@@ -90,8 +141,6 @@ const popupPosition = ref({
 async function fetchAccoutns() {
   await store.dispatch('fetchAccounts', token.value)
 }
-
-// let activeButton: HTMLElement | null = null
 
 function togglePopupAction(index: number, event: MouseEvent): void {
   const target = event.target instanceof HTMLElement ? event.target : null
@@ -104,14 +153,12 @@ function togglePopupAction(index: number, event: MouseEvent): void {
     right: window.innerWidth - buttonRect.left + 10,
   }
 
-  // activeButton = target
-
   showPopupAction.value = showPopupAction.value === index ? -1 : index
   showMenu.value = false
 }
 
 function updateAccountPermissions(id: string, index: number) {
-  updateLoading.value = index
+  updatePermissionLoading.value = index
   showFormPermission.value = true
   accountUpdateId.value = id
 }
@@ -125,10 +172,12 @@ function updateAccounts(id: string, index: number) {
 function closeForm() {
   showForm.value = false
   showFormPermission.value = false
+  showMenu.value = false
 }
 
 function stopLoading() {
   updateLoading.value = -1
+  updatePermissionLoading.value = -1
   showPopupAction.value = -1
 }
 

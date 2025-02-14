@@ -11,6 +11,7 @@ import Cookies from 'js-cookie'
 import { useStore } from 'vuex'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { connection } from './signalR'
 
 const store = useStore()
 const router = useRouter()
@@ -41,8 +42,14 @@ if (window.location.pathname === '/') {
 }
 
 onMounted(() => {
+  connection.on('UserOnlineMessage', (username: string, onlineUsers: string[]) => {
+    console.log(`User ${username} đã online.`)
+    store.dispatch('setupOnlineUsers', onlineUsers)
+  })
+  connection.on('UserOfflineMessage', (onlineUsers: string[]) => {
+    store.dispatch('setupOnlineUsers', onlineUsers)
+  })
   store.dispatch('refreshToken')
-
   setInterval(() => {
     store.dispatch('refreshToken')
   }, 60000)

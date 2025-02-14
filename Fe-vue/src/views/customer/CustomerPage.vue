@@ -9,6 +9,7 @@
         </div>
       </button>
     </div>
+    <FolderList @selectFile="handleSelectFile" :loadingFileId="loadingFileId" />
     <div class="content-main">
       <div class="toolbar">
         <div class="toolbar_search">
@@ -46,13 +47,14 @@
               <th class="w-12">Ngày sinh</th>
               <th class="w-30">Email</th>
               <th>Địa chỉ</th>
+              <th class="w-14">Nhóm KH</th>
               <th class="w-10">Hành động</th>
             </tr>
           </thead>
           <tbody>
             <tr
               v-for="(customer, index) in customers"
-              :key="customer.CustomerId"
+              :key="index"
               @contextmenu.prevent="showContextMenu($event, customer.CustomerId, index)"
             >
               <td>{{ index + 1 }}</td>
@@ -62,26 +64,34 @@
               <td>{{ formatDate(customer.DateOfBirth) }}</td>
               <td>{{ customer.Email }}</td>
               <td>{{ customer.Address }}</td>
+              <td>{{ customer.GroupName }}</td>
               <td>
                 <div class="action" :ref="`action-${index}`">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
-                      <img src="../assets/icon/option.png" alt="" />
+                      <img src="/src/assets/icon/option.png" alt="" />
                     </button>
                     <div
                       class="popup-action"
                       v-if="showPopupAction == index"
                       :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
                     >
-                      <span>Xóa</span>
-                      <span>Xóa</span>
                       <span
-                        @click="updateEmployee(customer.CustomerId, index)"
+                        @click="deleteCustomer(customer.CustomerId, index)"
+                        v-loading="deleteLoading == index"
+                        >Xóa</span
+                      >
+                      <span @click="deleteCustomer(customer.CustomerId, index)">Xóa</span>
+                      <span
+                        @click="updateCustomer(customer.CustomerId, index)"
                         v-loading="updateLoading == index"
                         >Sửa
                       </span>
-                      <span>Xóa</span>
-                      <span>Xóaaaaaaaaaaaaâa</span>
+                      <span
+                        @click="updateCustomer(customer.CustomerId, index)"
+                        v-loading="updateLoading == index"
+                        >Sửa
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -104,9 +114,9 @@
       @close="closeContextMenu"
       :position="menuPosition"
     ></ContextMenu>
-    <EmployeeForm
+    <CustomerForm
       v-if="showForm"
-      :id="employeeUpdateId"
+      :id="customerUpdateId"
       @closeForm="closeForm"
       @stopLoading="stopLoading"
     />
@@ -132,7 +142,6 @@ import '/src/styles/layout/toolbar.css'
 import '/src/styles/layout/table.scss'
 import '/src/styles/utils.css'
 import ThePagnigation from '@/components/ThePagnigation.vue'
-import EmployeeForm from '@/views/EmployeeForm.vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import ContextMenu from '@/components/ContextMenu.vue'
@@ -140,19 +149,32 @@ import type { ActionMenu } from '@/entities/ActionMenu'
 import VToast from '@/components/VToast.vue'
 import type { Toast } from '@/entities/Toast'
 import router from '@/router'
+import CustomerForm from './CustomerForm.vue'
+import FolderList from '../FolderList.vue'
+import { formatDate } from '@/utils'
+import type { UserFile } from '@/entities/File'
 
 const showForm = ref(false)
-
 const pageLoading = ref(false)
 const refreshLoading = ref(false)
 const searchLoading = ref(false)
 const addLoading = ref(false)
 const updateLoading = ref(-1)
+const deleteLoading = ref(-1)
 const exportLoading = ref(false)
-
+const errorMessage = ref<string | null>(null)
 const tableContainer = ref<HTMLDivElement | null>(null)
 
 const toasts = ref<Toast[]>([])
+
+const loadingFileId = ref('')
+async function handleSelectFile(file: UserFile) {
+  loadingFileId.value = file.FileId ?? ''
+  const result = await store.dispatch('readFileCustomer', file.FileId)
+  loadingFileId.value = ''
+  if (result.success === false) errorMessage.value = result.message
+  else errorMessage.value = null
+}
 
 const contextMenuActions = ref<ActionMenu[]>([
   { label: 'Sửa', action: 'update' },
@@ -177,24 +199,25 @@ function deleteToast(index: number) {
 
 function handleActionClick(action: ActionMenu) {
   if (action.action === 'update') {
-    updateEmployee(targetEmployeeId.value, targetIndex.value)
+    updateCustomer(targetCustomerId.value, targetIndex.value)
   } else {
-    console.log(action.label)
-    showMenu.value = false
+    deleteCustomer(targetCustomerId.value, targetIndex.value)
+    closeContextMenu()
   }
 }
 
-const targetEmployeeId = ref<string>('')
+const targetCustomerId = ref<string>('')
 const targetIndex = ref(-1)
 
 const pageSize = ref(10)
 const pageNumber = ref(1)
 const keyword = ref<string>()
-const employeeUpdateId = ref<string>('')
+const customerUpdateId = ref<string>('')
 const store = useStore()
 
 const showPopupAction = ref<number>(-1)
 const showMenu = ref(false)
+const groupId = ref<string | null>(null)
 
 const popupPosition = ref({
   top: 0,
@@ -212,7 +235,7 @@ function showContextMenu(event: MouseEvent, employeeId: string, index: number) {
   menuPosition.value.left = event.clientX
   showMenu.value = true
   showPopupAction.value = -1
-  targetEmployeeId.value = employeeId
+  targetCustomerId.value = employeeId
   targetIndex.value = index
 }
 
@@ -261,13 +284,24 @@ function closeForm() {
 function addNew() {
   addLoading.value = true
   showForm.value = true
-  employeeUpdateId.value = ''
+  customerUpdateId.value = ''
 }
 
-function updateEmployee(id: string, index: number) {
+function updateCustomer(id: string, index: number) {
   updateLoading.value = index
   showForm.value = true
-  employeeUpdateId.value = id
+  customerUpdateId.value = id
+}
+
+async function deleteCustomer(id: string, index: number) {
+  deleteLoading.value = index
+  await store.dispatch('deleteCustomer', {
+    id: id,
+    token: accessToken.value,
+  })
+  await fetchCustomers()
+  deleteLoading.value = -1
+  showPopupAction.value = -1
 }
 
 function stopLoading() {
@@ -315,6 +349,7 @@ async function fetchCustomers() {
     pageNumber: pageNumber.value,
     keyword: keyword.value,
     token: accessToken.value,
+    groupId: groupId.value,
   })
   scrollTable()
 }
@@ -330,14 +365,6 @@ function scrollTable() {
 
 const customers = computed(() => store.getters.getCustomers)
 const accessToken = computed(() => store.getters.getAccessToken)
-
-function formatDate(inputDate: string) {
-  const date = new Date(inputDate)
-  const day = String(date.getDate()).padStart(2, '0')
-  const month = String(date.getMonth() + 1).padStart(2, '0')
-  const year = date.getFullYear()
-  return `${day}/${month}/${year}`
-}
 
 onMounted(() => {
   fetchCustomers()

@@ -129,28 +129,54 @@ export const actions: ActionTree<State, State> = {
     document.body.removeChild(link)
   },
 
-  async createEmployee(_, employeeDto: Employee): Promise<boolean> {
+  async createEmployee(_, { employee, token }): Promise<Response> {
     try {
-      const response = await axios.post(`${baseUrl}/Employees`, employeeDto)
-      if (response.status === 201) return true
-      return false
+      await axios.post(`${baseUrl}/Employees`, employee, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Cập nhật khách hàng thành công' }
     } catch (error) {
-      console.error('Lỗi tạo nhân viên:', error)
-      return false
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
     }
   },
 
-  async updateEmployee(_, employeeDto: Employee): Promise<boolean> {
+  async updateEmployee(_, { id, employee, token }): Promise<Response> {
     try {
-      const response = await axios.put(
-        `${baseUrl}/Employees/${employeeDto.EmployeeId}`,
-        employeeDto,
-      )
-      if (response.status === 200) return true
-      return false
+      await axios.put(`${baseUrl}/Employees/${id}`, employee, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Cập nhật khách hàng thành công' }
     } catch (error) {
-      console.error('Lỗi tạo nhân viên:', error)
-      return false
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  async deleteEmployee(_, { id, token }): Promise<Response> {
+    try {
+      await axios.delete(`${baseUrl}/Employees/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Xóa thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
     }
   },
 
@@ -209,7 +235,7 @@ export const actions: ActionTree<State, State> = {
         commit('setUsername', response.data.Username)
 
         localStorage.setItem('expirationTime', response.data.Expiration)
-
+        localStorage.setItem('userId', response.data.UserId)
         Cookies.set('refreshToken', response.data.RefreshToken, {
           expires: 7,
           secure: true,
@@ -227,7 +253,8 @@ export const actions: ActionTree<State, State> = {
 
   async logout({ commit }, request) {
     try {
-      const response = await axios.post(
+      console.log('logout')
+      await axios.post(
         `${baseUrl}/Auths/revoke/${request.username}`,
         {},
         {
@@ -237,17 +264,16 @@ export const actions: ActionTree<State, State> = {
         },
       )
 
-      if (response.status === 204) {
-        commit('setAccessToken', null)
-        commit('setUsername', null)
-        localStorage.removeItem('accessToken')
-        localStorage.removeItem('username')
-        localStorage.removeItem('expirationTime')
-        Cookies.removeItem('refreshToken')
-        return true
-      }
+      commit('setAccessToken', null)
+      commit('setUsername', null)
+      localStorage.removeItem('accessToken')
+      localStorage.removeItem('username')
+      localStorage.removeItem('expirationTime')
+      localStorage.removeItem('userId')
+      Cookies.removeItem('refreshToken')
+      return true
     } catch (error) {
-      console.log('Failed to login: ', error)
+      console.log('Failed to logout: ', error)
       return false
     }
   },
@@ -338,12 +364,13 @@ export const actions: ActionTree<State, State> = {
     }
   },
 
-  async fetchCustomers({ commit }, { pageSize, pageNumber, keyword, token } = {}) {
+  async fetchCustomers({ commit }, { pageSize, pageNumber, keyword, token, groupId } = {}) {
     const response = await axios.get(`${baseUrl}/Customers/filter`, {
       params: {
         pageSize: pageSize,
         pageNumber: pageNumber,
         keyword: keyword,
+        groupId: groupId,
       },
       headers: {
         Authorization: `Bearer ${token}`,
@@ -468,9 +495,12 @@ export const actions: ActionTree<State, State> = {
 
   async fetchPermissions({ commit }, { name, token }): Promise<boolean> {
     try {
-      const response = await axios.get(`${baseUrl}/Permissions/${name}`, {
+      const response = await axios.get(`${baseUrl}/Permissions`, {
         headers: {
           Authorization: `Bearer ${token}`,
+        },
+        params: {
+          name: name,
         },
       })
       commit('setPermissions', response.data)
@@ -527,6 +557,115 @@ export const actions: ActionTree<State, State> = {
     } catch (error) {
       console.log('Failed to update: ', error)
       return false
+    }
+  },
+
+  async fetchCustomer({ commit }, id: string) {
+    try {
+      const response = await axios.get(`${baseUrl}/Customers/${id}`)
+      const customer: Customer = response.data
+      commit('setCustomer', customer)
+    } catch (error) {
+      console.log('Failed to fetch customer data: ', error)
+    }
+  },
+
+  async fetchCustomerGroups({ commit }) {
+    try {
+      const response = await axios.get(`${baseUrl}/Customers/groups`)
+      const customerGroups = response.data
+      commit('setcustomerGroups', customerGroups)
+    } catch (error) {
+      console.log('Failed to fetch customer groups: ', error)
+    }
+  },
+
+  async createCustomer(_, { customer, token }): Promise<Response> {
+    try {
+      await axios.post(`${baseUrl}/Customers`, customer, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Cập nhật khách hàng thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  async updateCustomer(_, { id, customer, token }): Promise<Response> {
+    try {
+      await axios.put(`${baseUrl}/Customers/${id}`, customer, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Cập nhật khách hàng thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  async deleteCustomer(_, { id, token }): Promise<Response> {
+    try {
+      await axios.delete(`${baseUrl}/Customers/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Xóa thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  setupOnlineUsers({ commit }, users: string[]) {
+    commit('setOnlineUsers', users)
+  },
+
+  setupCurrentMenuId({ commit }, id: string) {
+    localStorage.setItem('currentMenuId', id)
+    commit('setCurrentMenuId', id)
+  },
+
+  async readFileEmployee({ commit }, fileId: string) {
+    try {
+      const response = await axios.get(`https://localhost:7160/api/v1/Employees/file/${fileId}`)
+      commit('setEmployees', response.data)
+      return { success: true, message: 'Đọc file thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  async readFileCustomer({ commit }, fileId: string) {
+    try {
+      const response = await axios.get(`https://localhost:7160/api/v1/Customers/file/${fileId}`)
+      commit('setCustomers', response.data)
+
+      return { success: true, message: 'Đọc file thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
     }
   },
 }

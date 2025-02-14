@@ -9,6 +9,10 @@
         </div>
       </button>
     </div>
+
+    <FolderList @selectFile="handleSelectFile" :loadingFileId="loadingFileId" />
+
+    <span v-if="errorMessage" class="error-message">{{ errorMessage }}</span>
     <div class="content-main">
       <div class="toolbar">
         <div class="toolbar_search">
@@ -26,7 +30,6 @@
           <button class="toolbar-action" @click="importFile()">
             <img src="/src/assets/icon/import.png" alt="logo" />
           </button>
-
           <button class="toolbar-action" @click="handleExportFile()" v-loading="exportLoading">
             <img src="/src/assets/icon/export-excel-50.png" alt="logo" />
           </button>
@@ -52,7 +55,7 @@
           <tbody>
             <tr
               v-for="(employee, index) in employees"
-              :key="employee.EmployeeId"
+              :key="index"
               @contextmenu.prevent="showContextMenu($event, employee.EmployeeId, index)"
             >
               <td>{{ index + 1 }}</td>
@@ -66,14 +69,18 @@
                 <div class="action" :ref="`action-${index}`">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
-                      <img src="../assets/icon/option.png" alt="" />
+                      <img src="/src/assets/icon/option.png" alt="" />
                     </button>
                     <div
                       class="popup-action"
                       v-if="showPopupAction == index"
                       :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
                     >
-                      <span>Xóa</span>
+                      <span
+                        @click="deleteEmployee(employee.EmployeeId, index)"
+                        v-loading="deleteLoading == index"
+                        >Xóa</span
+                      >
                       <span>Xóa</span>
                       <span
                         @click="updateEmployee(employee.EmployeeId, index)"
@@ -132,7 +139,6 @@ import '/src/styles/layout/toolbar.css'
 import '/src/styles/layout/table.scss'
 import '/src/styles/utils.css'
 import ThePagnigation from '@/components/ThePagnigation.vue'
-import EmployeeForm from '@/views/EmployeeForm.vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import ContextMenu from '@/components/ContextMenu.vue'
@@ -140,6 +146,10 @@ import type { ActionMenu } from '@/entities/ActionMenu'
 import VToast from '@/components/VToast.vue'
 import type { Toast } from '@/entities/Toast'
 import router from '@/router'
+import EmployeeForm from './EmployeeForm.vue'
+import FolderList from '../FolderList.vue'
+import { formatDate } from '@/utils'
+import type { UserFile } from '@/entities/File'
 
 const showForm = ref(false)
 
@@ -148,11 +158,22 @@ const refreshLoading = ref(false)
 const searchLoading = ref(false)
 const addLoading = ref(false)
 const updateLoading = ref(-1)
+const deleteLoading = ref(-1)
 const exportLoading = ref(false)
 
-const tableContainer = ref<HTMLDivElement | null>(null)
+const errorMessage = ref<string | null>(null)
 
+const tableContainer = ref<HTMLDivElement | null>(null)
 const toasts = ref<Toast[]>([])
+
+const loadingFileId = ref('')
+async function handleSelectFile(file: UserFile) {
+  loadingFileId.value = file.FileId ?? ''
+  const result = await store.dispatch('readFileEmployee', file.FileId)
+  loadingFileId.value = ''
+  if (result.success === false) errorMessage.value = result.message
+  else errorMessage.value = null
+}
 
 const contextMenuActions = ref<ActionMenu[]>([
   { label: 'Sửa', action: 'update' },
@@ -175,26 +196,12 @@ function deleteToast(index: number) {
   toasts.value.splice(index, 1)
 }
 
-// function updateToast(result) {
-//   const toast: Toast = { type: 0, message: '' }
-//   if (!result.success) {
-//     toast.message = result.message
-//   } else {
-//     toast.type = 1
-//     toast.message = result.message
-//   }
-//   if (toasts.value.length >= 5) {
-//     toasts.value.shift()
-//   }
-//   toasts.value.push(toast)
-// }
-
 function handleActionClick(action: ActionMenu) {
   if (action.action === 'update') {
     updateEmployee(targetEmployeeId.value, targetIndex.value)
   } else {
-    console.log(action.label)
-    showMenu.value = false
+    deleteEmployee(targetEmployeeId.value, targetIndex.value)
+    closeContextMenu()
   }
 }
 
@@ -204,13 +211,14 @@ const targetIndex = ref(-1)
 const pageSize = ref(10)
 const pageNumber = ref(1)
 const keyword = ref<string>()
-const selectedDepartmentId = ref<string>()
-const selectedPositionId = ref<string>()
 const employeeUpdateId = ref<string>('')
 const store = useStore()
 
 const showPopupAction = ref<number>(-1)
 const showMenu = ref(false)
+
+const departmentId = ref<string | null>(null)
+const positionId = ref<string | null>(null)
 
 const popupPosition = ref({
   top: 0,
@@ -223,7 +231,6 @@ const menuPosition = ref({
 })
 
 function showContextMenu(event: MouseEvent, employeeId: string, index: number) {
-  event.preventDefault()
   menuPosition.value.top = event.clientY
   menuPosition.value.left = event.clientX
   showMenu.value = true
@@ -262,11 +269,7 @@ async function handleRefresh() {
 
 function updatePopupPosition() {
   if (!activeButton) return
-  const buttonRect = activeButton.getBoundingClientRect()
-  popupPosition.value = {
-    top: buttonRect.top,
-    right: window.innerWidth - buttonRect.left,
-  }
+  showPopupAction.value = -1
 }
 
 function closeForm() {
@@ -284,6 +287,17 @@ function updateEmployee(id: string, index: number) {
   updateLoading.value = index
   showForm.value = true
   employeeUpdateId.value = id
+}
+
+async function deleteEmployee(id: string, index: number) {
+  deleteLoading.value = index
+  await store.dispatch('deleteEmployee', {
+    id: id,
+    token: accessToken.value,
+  })
+  await fetchEmployees()
+  deleteLoading.value = -1
+  showPopupAction.value = -1
 }
 
 function stopLoading() {
@@ -330,8 +344,8 @@ async function fetchEmployees() {
     pageSize: pageSize.value,
     pageNumber: pageNumber.value,
     keyword: keyword.value,
-    departmentId: selectedDepartmentId.value,
-    positionId: selectedPositionId.value,
+    departmentId: departmentId.value,
+    positionId: positionId.value,
     token: accessToken.value,
   })
   scrollTable()
@@ -349,17 +363,10 @@ function scrollTable() {
 const employees = computed(() => store.getters.getEmployees)
 const accessToken = computed(() => store.getters.getAccessToken)
 
-function formatDate(inputDate: string) {
-  const date = new Date(inputDate)
-  const day = String(date.getDate()).padStart(2, '0')
-  const month = String(date.getMonth() + 1).padStart(2, '0')
-  const year = date.getFullYear()
-  return `${day}/${month}/${year}`
-}
-
 onMounted(() => {
-  store.dispatch('fetchPositions')
   store.dispatch('fetchDepartments')
+  store.dispatch('fetchPositions')
+
   fetchEmployees()
 
   const scrollContainer = document.querySelector('.main-container')

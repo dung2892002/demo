@@ -1,12 +1,18 @@
 <template>
   <div class="form-container">
-    <div class="form__content" style="margin: 20% 35%; max-width: 380px">
+    <div class="form__content" v-draggable>
+      <div class="form__header">
+        <h2 class="form__title">Chỉnh sửa quyền</h2>
+        <button class="form__button" @click="cancel">
+          <img src="/src/assets/icon/close-48.png" alt="logo" />
+        </button>
+      </div>
       <span class="error-message" v-if="error">{{ error }}</span>
-      <form class="hospital-form" style="max-width: 360px">
+      <form class="hospital-form">
         <div class="form-group">
           <div class="form__item">
             <h3>Các role của account</h3>
-            <div v-for="(role, index) in accountRoles" :key="index">
+            <div v-for="(role, index) in accountRoles" :key="index" class="multi-choice">
               <span>
                 {{ role }}
               </span>
@@ -18,7 +24,7 @@
           <div class="form__item">
             <h3>Các role hệ thống</h3>
             <span v-for="(role, index) in roles" :key="index">
-              <div v-if="checkRole(role.Name) == -1">
+              <div v-if="checkRole(role.Name) == -1" class="multi-choice">
                 <span>{{ role.Name }}</span>
                 <img
                   src="../../assets/icon/success-48.png"

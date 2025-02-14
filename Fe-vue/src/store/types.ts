@@ -21,11 +21,15 @@ export interface State {
   totalInvalid: number
   importSettings: Import[]
   customers: Customer[]
+  customer: Customer | null
+  customerGroups: []
   menus: Menu[]
   menu: Menu | null
   accounts: []
-  roles: []
-  accountRoles: []
-  permissions: []
-  accountPermissions: []
+  roles: [] | null
+  accountRoles: [] | null
+  permissions: [] | null
+  accountPermissions: [] | null
+  onlineUsers: string[]
+  currentMenuId: string
 }

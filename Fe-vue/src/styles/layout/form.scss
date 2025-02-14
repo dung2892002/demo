@@ -7,13 +7,19 @@
   top: 0;
   left: 0;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form__content {
-  width: 50%;
+  width: auto;
+  min-width: 380px;
   background-color: #fff;
   position: fixed;
   padding: 24px;
+
+  border-radius: 6px;
 }
 
 .form__header {
@@ -40,6 +46,8 @@
 
 .hospital-form {
   padding: 0 12px;
+  min-width: 360px;
+  margin: auto;
 }
 
 .form-group {
@@ -195,6 +203,7 @@ form label {
   border: 1px solid #55555533;
   padding: 4px 10px;
   border-radius: 6px;
+  z-index: 2;
 
   .select-value {
     width: 100%;
@@ -295,11 +304,12 @@ form label {
 }
 
 .form__item {
-  div {
+  .multi-choice {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     span {
       border: 1px dashed black;
@@ -311,6 +321,7 @@ form label {
       width: 24px;
       height: 24px;
       cursor: pointer;
+      margin-left: 6px;
     }
   }
 }

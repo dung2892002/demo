@@ -9,6 +9,6 @@ export interface Customer {
   MobileNumber: string
   Email: string
   Amount: number
-  GroupId: string[]
-  GroupName: string[]
+  GroupId: string
+  GroupName: string
 }

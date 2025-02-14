@@ -44,6 +44,7 @@ import '../styles/layout/form.scss'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
+import { startConnection } from '@/signalR'
 const store = useStore()
 const errorMessage = ref<string | null>(null)
 const router = useRouter()
@@ -65,6 +66,9 @@ async function login() {
   const response = await store.dispatch('login', loginModel.value)
   loading.value = false
   if (response) {
+    console.log('Login success')
+    console.log('Start connection signalR')
+    await startConnection()
     router.push({
       name: 'home',
     })

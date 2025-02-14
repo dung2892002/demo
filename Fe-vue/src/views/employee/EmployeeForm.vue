@@ -1,16 +1,14 @@
 <template>
   <div class="form-container" id="employeeForm" v-if="employee.EmployeeCode.length > 0">
-    <div
-      class="form__content"
-      :style="{ top: formPosition.top + 'px', left: formPosition.left + 'px' }"
-    >
-      <div class="form__header" @mousedown="startDrag">
+    <div class="form__content" v-draggable>
+      <div class="form__header">
         <h2 class="form__title">Thông tin nhân viên</h2>
         <button class="form__button" @click="handleCloseForm">
           <img src="/src/assets/icon/close-48.png" alt="logo" />
         </button>
       </div>
       <form class="hospital-form" id="form">
+        <span v-if="error" class="error-message">{{ error }}</span>
         <div class="form-group">
           <div class="form__item form__item--3">
             <label for="employee-code" class="form__label"
@@ -263,7 +261,7 @@
                   "
                 >
                   <img
-                    src="../assets/icon/icons8-yes-50.png"
+                    src="/src/assets/icon/icons8-yes-50.png"
                     alt="logo"
                     v-if="checkContainDepartment(department)"
                   />
@@ -309,7 +307,7 @@
                   "
                 >
                   <img
-                    src="../assets/icon/icons8-yes-50.png"
+                    src="/src/assets/icon/icons8-yes-50.png"
                     alt="logo"
                     v-if="checkContainPosition(position)"
                   />
@@ -345,7 +343,7 @@ import type { Department } from '@/entities/Department'
 
 const store = useStore()
 const loading = ref(false)
-
+const error = ref<string | null>('')
 const showMaxSelect = 3
 
 const showSelectPosition = ref(false)
@@ -388,33 +386,6 @@ const props = defineProps({
 })
 
 const emits = defineEmits(['closeForm', 'stopLoading'])
-
-const formPosition = ref({
-  top: 140,
-  left: 400,
-})
-
-const isDrag = ref(false)
-const dragStart = ref({ x: 0, y: 0 })
-
-function startDrag(event: MouseEvent) {
-  isDrag.value = true
-  dragStart.value = { x: event.clientX, y: event.clientY }
-}
-
-function handleDrag(event: MouseEvent) {
-  if (!isDrag.value) return
-
-  const x = event.clientX - dragStart.value.x
-  const y = event.clientY - dragStart.value.y
-
-  formPosition.value = {
-    top: formPosition.value.top + y,
-    left: formPosition.value.left + x,
-  }
-
-  dragStart.value = { x: event.clientX, y: event.clientY }
-}
 
 function handleCloseForm() {
   emits('closeForm')
@@ -477,11 +448,20 @@ function removeDepartment(department: Department) {
 async function handleSubmitForm() {
   loading.value = true
   if (props.id) {
-    const response = await store.dispatch('updateEmployee', employee.value)
-    if (response) handleCloseForm()
+    const response = await store.dispatch('updateEmployee', {
+      id: props.id,
+      employee: employee.value,
+      token: token.value,
+    })
+    if (response.success) handleCloseForm()
+    else error.value = response.message
   } else {
-    const response = await store.dispatch('createEmployee', employee.value)
-    if (response) handleCloseForm()
+    const response = await store.dispatch('createEmployee', {
+      employee: employee.value,
+      token: token.value,
+    })
+    if (response.success) handleCloseForm()
+    else error.value = response.message
   }
   loading.value = false
 }
@@ -518,11 +498,8 @@ function formatDateForm(date: string) {
 
 const positions = computed(() => store.getters.getPositions)
 const departments = computed(() => store.getters.getDepartments)
+const token = computed(() => store.getters.getAccessToken)
 onMounted(() => {
   fetchEmployeeData()
-  document.addEventListener('mousemove', handleDrag)
-  document.addEventListener('mouseup', () => {
-    isDrag.value = false
-  })
 })
 </script>

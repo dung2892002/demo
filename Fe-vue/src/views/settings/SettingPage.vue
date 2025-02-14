@@ -4,6 +4,7 @@
     <div style="display: flex; gap: 10px">
       <button @click="goToImportSetting">Nhập khẩu</button>
       <button @click="goToMenuSetting">Menu</button>
+      <button @click="goToFolderSetting">Folder</button>
     </div>
     <RouterView />
   </div>
@@ -22,6 +23,12 @@ function goToImportSetting() {
 function goToMenuSetting() {
   router.push({
     name: 'setting-menu',
+  })
+}
+
+function goToFolderSetting() {
+  router.push({
+    name: 'setting-folder',
   })
 }
 </script>

@@ -73,4 +73,16 @@ export const mutations: MutationTree<State> = {
   setAccountPermissions(state, permissions) {
     state.accountPermissions = permissions
   },
+  setCustomer(state, customer: Customer) {
+    state.customer = customer
+  },
+  setcustomerGroups(state, groups) {
+    state.customerGroups = groups
+  },
+  setOnlineUsers(state, users) {
+    state.onlineUsers = users
+  },
+  setCurrentMenuId(state, id) {
+    state.currentMenuId = id
+  },
 }

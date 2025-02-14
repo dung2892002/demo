@@ -98,7 +98,11 @@ const updateMenuId = ref<string | null>(null)
 const error = ref<string | null>(null)
 const openSelectIcon = ref(false)
 
-const iconList = ref<string[]>(['fa-solid fa-user', 'fa-solid fa-user-group'])
+const iconList = ref<string[]>([
+  'fa-solid fa-user',
+  'fa-solid fa-user-group',
+  'fa-solid fa-comments',
+])
 
 const menuValue = ref<Menu>({
   Id: null,

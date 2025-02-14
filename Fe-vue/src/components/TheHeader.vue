@@ -9,11 +9,7 @@
       </div>
     </div>
     <div class="header__right" v-if="username">
-      <select id="locations" name="locations" class="header__branch-select">
-        <option value="Ha noi">Chi nhánh Hà Nội</option>
-        <option value="Da Nang">Chi nhánh Đà Nẵng</option>
-        <option value="Ho Chi Minh">Chi nhánh TP.Hồ Chí Minh</option>
-      </select>
+      <div></div>
       <div class="header__account">
         <img
           src="../assets/icon/avatar-default.png"
@@ -38,7 +34,8 @@ import { useStore } from 'vuex'
 import '../styles/layout/header.css'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
-
+import { connection } from '@/signalR'
+import * as signalR from '@microsoft/signalr'
 const store = useStore()
 const logoutLoading = ref(false)
 const router = useRouter()
@@ -59,6 +56,10 @@ async function logout() {
     token: token.value,
   }
   await store.dispatch('logout', request)
+  if (connection.state === signalR.HubConnectionState.Connected) {
+    await connection.stop()
+    console.log('Disconnected from SignalR.')
+  }
   logoutLoading.value = false
   router.push({
     name: 'login',

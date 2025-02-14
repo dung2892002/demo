@@ -24,4 +24,8 @@ export const getters: GetterTree<State, State> = {
   getAccountRoles: (state) => state.accountRoles,
   getPermissions: (state) => state.permissions,
   getAccountPermissions: (state) => state.accountPermissions,
+  getCustomer: (state) => state.customer,
+  getCustomerGroups: (state) => state.customerGroups,
+  getOnlineUsers: (state) => state.onlineUsers,
+  getCurrentMenuId: (state) => state.currentMenuId,
 }

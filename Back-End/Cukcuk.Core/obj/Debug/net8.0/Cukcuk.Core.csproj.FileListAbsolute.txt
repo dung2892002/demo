@@ -26,4 +26,3 @@ D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.pdb
 D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\ref\Cukcuk.Core.dll
 D:\intern\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.runtimeconfig.json
 D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.genruntimeconfig.cache
-D:\intern\Back-End\Cukcuk.Core\bin\Debug\net8.0\harfbuzz.dll

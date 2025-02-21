@@ -7,7 +7,7 @@
           <img src="/src/assets/icon/close-48.png" alt="logo" />
         </button>
       </div>
-      <form class="hospital-form" id="form">
+      <form class="cukcuk-form" id="form">
         <span v-if="error" class="error-message">{{ error }}</span>
         <div class="form-group">
           <div class="form__item form__item--3" v-if="props.id">

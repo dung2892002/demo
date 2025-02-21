@@ -8,7 +8,7 @@
         </button>
       </div>
       <span class="error-message" v-if="error">{{ error }}</span>
-      <form class="hospital-form">
+      <form class="cukcuk-form">
         <div class="form-group">
           <div class="form__item">
             <h3>Các quyền của tài khoản</h3>

@@ -25,7 +25,7 @@
     <div v-if="showForm" class="form-container">
       <div class="form__content" style="margin: 20% 35%; max-width: 380px">
         <span class="error-message" v-if="error">{{ error }}</span>
-        <form class="hospital-form" style="max-width: 360px">
+        <form class="cukcuk-form" style="max-width: 360px">
           <div class="form-group">
             <div class="form__item">
               <span>Tiêu đề</span>

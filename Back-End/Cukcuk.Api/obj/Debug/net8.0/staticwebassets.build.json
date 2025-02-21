@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "uSfT6uEBwbuwu0RpqPgKw/po+vf5mPXyAAIqX2LdL5I=",
+  "Source": "Cukcuk.Api",
+  "BasePath": "_content/Cukcuk.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Cukcuk.Api\\wwwroot",
+      "Source": "Cukcuk.Api",
+      "ContentRoot": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

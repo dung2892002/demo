@@ -1,0 +1,131 @@
+.main-container {
+  max-height: 620px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  border-bottom: 2px solid #ddd;
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 6px;
+  text-align: left;
+  position: relative;
+}
+
+.employee-table thead {
+  z-index: 1;
+  position: relative;
+}
+
+.employee-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: black;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #b4f5b4;
+}
+
+td {
+  overflow-x: hidden;
+}
+
+.employee-table thead th {
+  position: sticky;
+  top: 0;
+  text-align: center;
+}
+
+.action {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.action-buttons {
+  position: absolute;
+  right: 20%;
+}
+
+.employee-table tbody tr:hover .action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 32px;
+  gap: 4px;
+}
+
+.action-button {
+  background-color: #fff;
+  padding: 2px;
+  width: 28px;
+  height: 28px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.main-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-container::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+.main-container::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+}
+
+.main-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.popup-action {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  transform: translate(0, 0);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: auto;
+  align-items: center;
+  z-index: 10;
+  overflow: hidden;
+
+  span {
+    border-bottom: 1px solid #ffffff;
+    padding: 4px 16px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: #078cf8;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

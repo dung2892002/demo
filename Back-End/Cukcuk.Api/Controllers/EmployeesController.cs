@@ -16,28 +16,6 @@ namespace Cukcuk.Api.Controllers
         private readonly IEmployeeService _employeeService = employeeService;
 
 
-        [HttpGet("file/{fileId}")]
-        public async Task<IActionResult> GetFileContent(Guid fileId)
-        {
-            try
-            {
-                var employees = await _employeeService.GetFileContent(fileId);
-                return StatusCode(200, employees);
-            }
-            catch (ArgumentException ex)
-            {
-                return StatusCode(400, ex.Message);
-            }
-            catch (FormatException ex)
-            {
-                return StatusCode(400, ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-        }
-
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetEmployees()

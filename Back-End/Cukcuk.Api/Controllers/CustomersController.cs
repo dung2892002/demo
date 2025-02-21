@@ -13,29 +13,39 @@ namespace Cukcuk.Api.Controllers
         private readonly ICustomerService _customerService = customerService;
 
 
-        [HttpGet("file/{fileId}")]
-        public async Task<IActionResult> GetFileContent(Guid fileId)
+        [HttpGet("folder")]
+        public async Task<IActionResult> GetByFolder([FromQuery] Guid? parentId, [FromQuery] bool? sortName, [FromQuery] bool? sortDate, [FromQuery] bool? sortType)
         {
             try
             {
-                var customers = await _customerService.GetFileContent(fileId);
-                return StatusCode(200, customers);
-            }
-            catch (ArgumentException ex)
-            {
-                return StatusCode(400, ex.Message);
-            }
-            catch (FormatException ex)
-            {
-                return StatusCode(400, ex.Message);
+                var results = await _customerService.GetFolder(parentId, sortName, sortDate, sortType);
+
+                return StatusCode(200, results);
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
 
-        //[Authorize(Roles = "Admin, CustomerManager")]
+        [HttpPost("folder")]
+
+        public async Task<IActionResult> CreateFolder([FromBody] CustomerFolder folder)
+        {
+            try
+            {
+                await _customerService.CreateFolder(folder);
+
+                return StatusCode(201, "success");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+
+        [Authorize(Roles = "Admin, CustomerManager")]
         [HttpGet("filter")]
 
         public async Task<IActionResult> FilterCustomer(int pageSize, int pageNumber, string? keyword, Guid? groupId)
@@ -106,7 +116,7 @@ namespace Cukcuk.Api.Controllers
         [Authorize(Roles = "Admin, CustomerManager")]
         [HttpPost]
         [Permission("AddCustomer")]
-        public async Task<IActionResult> CreateEmployee([FromBody] Customer customer)
+        public async Task<IActionResult> CreateCustomer([FromBody] Customer customer)
         {
             try
             {
@@ -126,12 +136,11 @@ namespace Cukcuk.Api.Controllers
         [Authorize(Roles = "Admin, CustomerManager")]
         [HttpPut("{id}")]
         [Permission("EditCustomer")]
-        public async Task<IActionResult> Updatecustomer(Guid id, [FromBody] Customer customer)
+        public async Task<IActionResult> UpdateCustomer(Guid id, [FromBody] Customer customer)
         {
             try
             {
                 await _customerService.Update(id, customer);
-
                 return StatusCode(200, "Update successfully");
             }
             catch (ArgumentException ex)

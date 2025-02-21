@@ -20,8 +20,7 @@ namespace Cukcuk.Infrastructure.Data
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<UserPermission> UserPermissions { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
-        public virtual DbSet<Folder> Folders { get; set; }
-        public virtual DbSet<UserFile> Files { get; set; }
+        public virtual DbSet<CustomerFolder> CustomFolders { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -137,42 +136,24 @@ namespace Cukcuk.Infrastructure.Data
                     .HasConstraintName("FK_message_ReceiverId");
 
             });
-
-            modelBuilder.Entity<Folder>(entity =>
+            modelBuilder.Entity<CustomerFolder>(entity =>
             {
                 entity.HasKey(e => e.Id).HasName("PRIMARY");
-                entity.ToTable("folder");
+                entity.ToTable("customer_folder");
 
-                entity.Property(e => e.FolderName).HasMaxLength(255);
-                entity.Property(e => e.FolderPath).HasMaxLength(255);
+                entity.Property(e => e.Name).HasMaxLength(255);
+                entity.Property(e => e.CreatedAt).HasColumnType("date_time");
 
-                entity.HasIndex(e => e.MenuId, "FK_Folder_MenuId_idx");
-
-                entity.HasOne(e => e.Menu)
-                    .WithMany(m => m.Folders)
-                    .HasForeignKey(e => e.MenuId)
-                    .HasConstraintName("FK_Folder_MenuId");
 
                 entity.HasOne(e => e.Parent)
-                    .WithMany(p => p.SubFolders)
+                    .WithMany(m => m.Children)
                     .HasForeignKey(e => e.ParentId)
-                    .HasConstraintName("FK_Folder_ParentId");
-            });
+                    .HasConstraintName("FK_customer_folder_ParentId");
 
-            modelBuilder.Entity<UserFile>(entity =>
-            {
-                entity.HasKey(e => e.FileId).HasName("PRIMARY");
-                entity.ToTable("user_file");
-
-                entity.Property(e => e.FileName).HasMaxLength(255);
-                entity.Property(e => e.FilePath).HasMaxLength(255);
-
-                entity.HasIndex(e => e.FolderId, "FK_File_FolderId_idx");
-
-                entity.HasOne(e => e.Folder)
-                    .WithMany(m => m.Files)
-                    .HasForeignKey(e => e.FolderId)
-                    .HasConstraintName("FK_File_FolderId");
+                entity.HasOne(e => e.Customer)
+                    .WithMany(m => m.CustomerFolders)
+                    .HasForeignKey(e => e.CustomerId)
+                    .HasConstraintName("FK_customer_folder_CustomerId");
             });
             base.OnModelCreating(modelBuilder);
         }

@@ -2,7 +2,7 @@
   <div style="width: 100%; padding: 20px">
     <h1>Cài đặt</h1>
     <div style="display: flex; gap: 10px">
-      <button @click="goToImportSetting">Nhập khẩu</button>
+      <button @click="goToExcelSetting">Import</button>
       <button @click="goToMenuSetting">Menu</button>
       <button @click="goToFolderSetting">Folder</button>
     </div>
@@ -14,9 +14,9 @@ import { RouterView, useRouter } from 'vue-router'
 
 const router = useRouter()
 
-function goToImportSetting() {
+function goToExcelSetting() {
   router.push({
-    name: 'setting-import',
+    name: 'setting-excel',
   })
 }
 

@@ -24,7 +24,7 @@
               required
             />
           </div>
-          <div class="form__item form__item--3">
+          <div class="form__item form__item--2">
             <label for="fullname" class="form__label"
               >Họ và tên <span class="required">*</span></label
             >
@@ -37,7 +37,7 @@
               required
             />
           </div>
-          <div class="form__item form__item--3">
+          <div class="form__item form__item--2">
             <label for="date-of-birth" class="form__label"
               >Ngày sinh <span class="required">*</span></label
             >
@@ -84,7 +84,7 @@
                   type="radio"
                   id="female"
                   name="gender"
-                  value="0"
+                  :value="0"
                   class="form__input form__input--radio"
                   v-model="customer.Gender"
                 />
@@ -95,7 +95,7 @@
                   type="radio"
                   id="male"
                   name="gender"
-                  value="1"
+                  :value="1"
                   class="form__input form__input--radio"
                   v-model="customer.Gender"
                 />
@@ -106,7 +106,7 @@
                   type="radio"
                   id="other"
                   name="gender"
-                  value="2"
+                  :value="2"
                   class="form__input form__input--radio"
                   v-model="customer.Gender"
                 />
@@ -192,6 +192,9 @@ function handleCloseForm() {
 
 async function handleSubmitForm() {
   loading.value = true
+  customer.value.GenderName =
+    customer.value.Gender === 0 ? 'Nữ' : customer.value.Gender === 1 ? 'Nam' : 'Không rõ'
+
   if (props.id) {
     const response = await store.dispatch('updateCustomer', {
       id: props.id,

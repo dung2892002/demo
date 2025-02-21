@@ -1,11 +1,13 @@
 import type { Directive } from 'vue'
 
 const vDraggable: Directive = {
-  mounted(el, binding) {
-    const header = binding.value
+  mounted(el) {
+    const header = el.querySelector('.form__header')
     if (!header) {
-      console.log('Header element is null or undefined')
+      console.warn('Không tìm thấy phần header để làm điểm bắt đầu kéo')
+      return
     }
+
     let isDragging = false
     let offset = { x: 0, y: 0 }
 
@@ -34,9 +36,8 @@ const vDraggable: Directive = {
       document.removeEventListener('mouseup', stopDrag)
     }
 
-    // header.style.cursor = 'move'
-    // header.addEventListener('mousedown', startDrag)
-    document.addEventListener('mousedown', startDrag)
+    header.style.cursor = 'move'
+    header.addEventListener('mousedown', startDrag)
   },
 }
 

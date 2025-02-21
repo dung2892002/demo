@@ -43,42 +43,45 @@ namespace Cukcuk.Core.Helper
                 {
                     var value = property.GetValue(item, null);
                     cell = row.CreateCell(cellIndex++);
-                    if (value == null)
+                    if (value != null)
                     {
-                        cell.SetCellValue("");
-                    }
-                    else if (value.GetType() == typeof(int) || value.GetType() == typeof(int?))
-                    {
-                        cell.SetCellValue((int)value);
-                    }
-                    else if (value.GetType() == typeof(decimal) || value.GetType() == typeof(decimal?))
-                    {
-                        cell.SetCellValue(Convert.ToDouble(value));
-                    }
-                    else if (value.GetType() == typeof(DateTime) || value.GetType() == typeof(DateTime?))
-                    {
-                        cell.SetCellValue(((DateTime)value).ToString("dd/MM/yyyy"));
-                    }
-                    else if (value is List<string> stringList)
-                    {
-                        
-                        string cellContent =  string.Join("\n- ", stringList);
-                        if (stringList.Count > 0)
+                        if (value.GetType() == typeof(int) || value.GetType() == typeof(int?))
                         {
-                            cellContent = "- " + cellContent;
+                            cell.SetCellValue((int)value);
                         }
-                        cell.SetCellValue(cellContent);
+                        else if (value.GetType() == typeof(decimal) || value.GetType() == typeof(decimal?))
+                        {
+                            cell.SetCellValue(Convert.ToDouble(value));
+                        }
+                        else if (value.GetType() == typeof(DateTime) || value.GetType() == typeof(DateTime?))
+                        {
+                            cell.SetCellValue(((DateTime)value).ToString("dd/MM/yyyy"));
+                        }
+                        else if (value is List<string> stringList)
+                        {
 
-                        ICellStyle celStyle = workbook.CreateCellStyle();
-                        IFont cellFont = workbook.CreateFont();
-                        cellFont.Color = IndexedColors.Red.Index;
-                        celStyle.SetFont(cellFont);
-                        celStyle.WrapText = true; 
-                        cell.CellStyle = celStyle;
+                            string cellContent = string.Join("\n- ", stringList);
+                            if (stringList.Count > 0)
+                            {
+                                cellContent = "- " + cellContent;
+                            }
+                            cell.SetCellValue(cellContent);
+
+                            ICellStyle celStyle = workbook.CreateCellStyle();
+                            IFont cellFont = workbook.CreateFont();
+                            cellFont.Color = IndexedColors.Red.Index;
+                            celStyle.SetFont(cellFont);
+                            celStyle.WrapText = true;
+                            cell.CellStyle = celStyle;
+                        }
+                        else
+                        {
+                            cell.SetCellValue(value.ToString());
+                        }
                     }
                     else
                     {
-                        cell.SetCellValue(value.ToString());
+                        cell.SetCellValue("");
                     }
                 }
             }
@@ -98,7 +101,7 @@ namespace Cukcuk.Core.Helper
         {
             if (!file.FileName.EndsWith(".xlsx"))
             {
-                throw new Exception("Chỉ chấp nhận file có định dạng xlsx");
+                throw new InvalidOperationException("Chỉ chấp nhận file có định dạng xlsx");
             }
 
             var datas = new List<T>();
@@ -118,7 +121,7 @@ namespace Cukcuk.Core.Helper
             for (int i = 0; i < header.Cells.Count; i++)
             {
                 var columnName = header.GetCell(i).ToString().Trim();
-                var import = imports.Where(i => i.ColumnName == columnName).FirstOrDefault() ?? throw new Exception($"Cột {columnName} chưa được cấu hình phù hợp");
+                var import = imports.Where(i => i.ColumnName == columnName).FirstOrDefault() ?? throw new ArgumentException($"Cột {columnName} trong file chưa được cấu hình phù hợp");
                 columns.Add(import.PropertyName); 
             }
 
@@ -135,58 +138,63 @@ namespace Cukcuk.Core.Helper
                 {
                     var columnName = header.GetCell(j).ToString().Trim();
                     var property = typeof(T).GetProperty(columns[j]);
-                    if (property != null)
+                    if (property == null)
                     {
-                        var value = row.GetCell(j).ToString() ?? string.Empty; ;
-                        if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
+                        continue;
+                    }
+
+                    var value = row.GetCell(j).ToString() ?? string.Empty; 
+
+                    if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
+                    {
+                        if (Int32.TryParse(value, out var intValue))
                         {
-                            if (Int32.TryParse(value, out var intValue))
-                            {
-                                property.SetValue(data, intValue);
-                            }
-                            else
-                            {
-                                errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
-                            }
-                        }
-                        else if (property.PropertyType == typeof(decimal) || property.PropertyType == typeof(decimal?))
-                        {
-                            if (decimal.TryParse(value, out var decimalValue))
-                            {
-                                property.SetValue(data, decimalValue);
-                            } 
-                            else
-                            {
-                                errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
-                            }
-                            
-                        }
-                        else if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
-                        {
-                            if (Regex.IsMatch(value, @"^\d{4}$"))
-                            {
-                                value = $"01/01/{value}";
-                            }
-                            else if (Regex.IsMatch(value, @"^\d{1,2}/\d{4}$"))
-                            {
-                                value = $"01/{value}";
-                            }
-                            if (DateTime.TryParseExact(value, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedDate))
-                            {
-                                property.SetValue(data, parsedDate);
-                            }
-                            else
-                            {
-                                property.SetValue(data, null);
-                                errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
-                            }
+                            property.SetValue(data, intValue);
                         }
                         else
                         {
-                            property.SetValue(data, value);
+                            errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
                         }
                     }
+                    else if (property.PropertyType == typeof(decimal) || property.PropertyType == typeof(decimal?))
+                    {
+                        if (decimal.TryParse(value, out var decimalValue))
+                        {
+                            property.SetValue(data, decimalValue);
+                        }
+                        else
+                        {
+                            errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
+                        }
+
+                    }
+                    else if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
+                    {
+                        if (Regex.IsMatch(value, @"^\d{4}$"))
+                        {
+                            value = $"01/01/{value}";
+                        }
+                        else if (Regex.IsMatch(value, @"^\d{1,2}/\d{4}$"))
+                        {
+                            value = $"01/{value}";
+                        }
+
+                        if (DateTime.TryParseExact(value, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedDate))
+                        {
+                            property.SetValue(data, parsedDate);
+                        }
+                        else
+                        {
+                            property.SetValue(data, null);
+                            errors.Add($"Giá trị {value} cho cột {columnName} không hợp lệ");
+                        }
+                    }
+                    else
+                    {
+                        property.SetValue(data, value);
+                    }
                 }
+
                 var errorProperty = typeof(T).GetProperty("Errors");
                 if (errorProperty != null)
                 {

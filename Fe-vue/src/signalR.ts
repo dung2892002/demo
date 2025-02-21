@@ -25,7 +25,6 @@ connection.onreconnected(() => {
   console.log('Reconnected to SignalR hub.')
 })
 
-// Khi mất kết nối, thử kết nối lại
 connection.onclose(() => {
   console.log('Disconnected from SignalR hub.')
   startConnection()

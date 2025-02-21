@@ -1,4 +1,5 @@
 ﻿using Cukcuk.Core.DTOs;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.Repositories;
 using Dapper;
 using System.Data;

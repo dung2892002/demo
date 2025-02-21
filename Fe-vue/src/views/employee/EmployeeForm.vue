@@ -84,7 +84,7 @@
                   type="radio"
                   id="female"
                   name="gender"
-                  value="0"
+                  :value="0"
                   class="form__input form__input--radio"
                   v-model="employee.Gender"
                 />
@@ -95,7 +95,7 @@
                   type="radio"
                   id="male"
                   name="gender"
-                  value="1"
+                  :value="1"
                   class="form__input form__input--radio"
                   v-model="employee.Gender"
                 />
@@ -106,7 +106,7 @@
                   type="radio"
                   id="other"
                   name="gender"
-                  value="2"
+                  :value="2"
                   class="form__input form__input--radio"
                   v-model="employee.Gender"
                 />
@@ -447,6 +447,9 @@ function removeDepartment(department: Department) {
 
 async function handleSubmitForm() {
   loading.value = true
+
+  employee.value.GenderName =
+    employee.value.Gender === 0 ? 'Nữ' : employee.value.Gender === 1 ? 'Nam' : 'Không rõ'
   if (props.id) {
     const response = await store.dispatch('updateEmployee', {
       id: props.id,

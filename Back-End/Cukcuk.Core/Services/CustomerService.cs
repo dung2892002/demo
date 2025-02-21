@@ -1,7 +1,6 @@
 ﻿using Cukcuk.Core.DTOs;
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Helper;
-using Cukcuk.Core.Interfaces;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.IServices;
 using Microsoft.AspNetCore.Http;
@@ -9,13 +8,11 @@ using Microsoft.AspNetCore.Http;
 namespace Cukcuk.Core.Services
 {
     public class CustomerService(ICustomerRepository customerRepository, ICustomerGroupRepository customerGroupRepository,
-        IImportRepository importRepository, Cache cacheService, IFileRepository fileRepository, IFirebaseStorageService firebaseStorageService) : ICustomerService
+        IImportRepository importRepository, Cache cacheService) : ICustomerService
     {
         private readonly ICustomerRepository _customerRepository = customerRepository;
         private readonly ICustomerGroupRepository _customerGroupRepository = customerGroupRepository;
         private readonly IImportRepository _importRepository = importRepository;
-        private readonly IFirebaseStorageService _firebaseStorageService = firebaseStorageService;
-        private readonly IFileRepository _fileRepository = fileRepository;
         private readonly Cache _cacheService = cacheService;
         public async Task AddDataImport(Guid cacheId)
         {
@@ -183,40 +180,38 @@ namespace Cukcuk.Core.Services
             if (checkCodeSystem)
             {
                 customer.Errors.Add("Mã khách hàng đã tồn tại trong hệ thống");
-                customer.Status = false;
             }
 
             var checkCodeTable = listCustomerCode.Any(code => code == customer.CustomerCode);
             if (checkCodeTable)
             {
                 customer.Errors.Add("Mã khách hàng trùng với khách hàng khác trong tệp nhập khẩu");
-                customer.Status = false;
             }
 
             var checkMobileSys = await _customerRepository.CheckMobileNumber(customer.MobileNumber);
             if (checkMobileSys)
             {
                 customer.Errors.Add("Số điện thoại đã tồn tại trong hệ thống");
-                customer.Status = false;
             }
 
             var checkMobileTable = listMobileNumber.Any(mobile => mobile == customer.MobileNumber);
             if (checkMobileTable)
             {
                 customer.Errors.Add("Số điện thoại trùng với số điện thoại của khách hàng khác trong tệp nhập khẩu");
-                customer.Status = false;
             }
 
             var group = groups.Where(d => d.GroupName == customer.GroupName).FirstOrDefault();
             if (group == null)
             {
                 customer.Errors.Add("Nhóm khách hàng không có trong hệ thống");
-                customer.Status = false;
             }
             else
             {
                 customer.GroupId = group.GroupId;
             }
+
+            if (customer.Errors.Count != 0)
+                customer.Status = false;
 
             listCustomerCode.Add(customer.CustomerCode);
             listMobileNumber.Add(customer.MobileNumber);
@@ -225,7 +220,7 @@ namespace Cukcuk.Core.Services
         public async Task Update(Guid id, Customer entity)
         {
             var customerExisting = await _customerRepository.FindById(id) ?? throw new ArgumentException("customer not exist");
-            entity.CustomerId = id;
+            entity.CustomerId = customerExisting.CustomerId;
 
             await _customerRepository.Update(entity);
         }
@@ -235,16 +230,28 @@ namespace Cukcuk.Core.Services
             return await _customerGroupRepository.FindAll();
         }
 
-        public async Task<IEnumerable<Customer>> GetFileContent(Guid fileId)
+
+        public async Task<IEnumerable<CustomerFolder>> GetFolder(Guid? parentId, bool? sortName, bool? sortDate, bool? sortType)
         {
-            var imports = await _importRepository.GetByTable("Customer");
+            return await _customerRepository.GetFolder(parentId, sortName, sortDate, sortType);
+        }
 
-            var file = await _fileRepository.GetById(fileId) ?? throw new ArgumentException("File not exist");
-            var fileData = await _firebaseStorageService.DownloadFileAsIFormFile(file.FilePath);
+        public async Task CreateFolder(CustomerFolder folder)
+        {
 
-            var customers = await ExcelHelper.ReadFile<Customer>(fileData, imports);
+            if (folder.CustomerId != null)
+            {
+                var customer = await _customerRepository.GetById(folder.CustomerId) ?? throw new ArgumentException("Customer not exist");
+                folder.Name = customer.Fullname;
+                Console.WriteLine("Ten the muc:", folder.Name);
+            }
+            folder.CreatedAt = DateTime.Now;
+            folder.Id = Guid.NewGuid();
+            folder.Children = new List<CustomerFolder>();
+            folder.Customer = null;
+            folder.Parent = null;
 
-            return customers;
+            await _customerRepository.CreateFolder(folder);
         }
     }
 }

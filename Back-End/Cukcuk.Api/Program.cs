@@ -1,6 +1,5 @@
 ﻿using Cukcuk.Core.Auth;
 using Cukcuk.Core.Helper;
-using Cukcuk.Core.Interfaces;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.IServices;
 using Cukcuk.Core.Interfaces.Repositories;
@@ -8,7 +7,6 @@ using Cukcuk.Core.Interfaces.Services;
 using Cukcuk.Core.Services;
 using Cukcuk.Core.SignalR;
 using Cukcuk.Infrastructure.Data;
-using Cukcuk.Infrastructure.Firebase;
 using Cukcuk.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -97,7 +95,6 @@ builder.Services.AddScoped<IImportService, ImportService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IMenuService, MenuService>();
 builder.Services.AddScoped<IPermissionService, PermissionService>();
-builder.Services.AddScoped<IFileService, FileService>();
 
 
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
@@ -109,10 +106,6 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 builder.Services.AddScoped<IPermissionRepository, PermissionRepository>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
-builder.Services.AddScoped<IFolderRepository, FolderRepository>();
-builder.Services.AddScoped<IFileRepository, FileRepository>();
-
-builder.Services.AddScoped<IFirebaseStorageService, FirebaseStorageService>();
 
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<Cache>(); 

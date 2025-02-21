@@ -10,8 +10,6 @@
       </button>
     </div>
 
-    <FolderList @selectFile="handleSelectFile" :loadingFileId="loadingFileId" />
-
     <span v-if="errorMessage" class="error-message">{{ errorMessage }}</span>
     <div class="content-main">
       <div class="toolbar">
@@ -81,14 +79,26 @@
                         v-loading="deleteLoading == index"
                         >Xóa</span
                       >
-                      <span>Xóa</span>
+                      <span
+                        @click="deleteEmployee(employee.EmployeeId, index)"
+                        v-loading="deleteLoading == index"
+                        >Xóa</span
+                      >
+                      <span
+                        @click="deleteEmployee(employee.EmployeeId, index)"
+                        v-loading="deleteLoading == index"
+                        >Xóa</span
+                      >
                       <span
                         @click="updateEmployee(employee.EmployeeId, index)"
                         v-loading="updateLoading == index"
                         >Sửa
                       </span>
-                      <span>Xóa</span>
-                      <span>Xóaaaaaaaaaaaaâa</span>
+                      <span
+                        @click="updateEmployee(employee.EmployeeId, index)"
+                        v-loading="updateLoading == index"
+                        >Sửa
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -104,6 +114,7 @@
         @pageSizeChange="handlePageSizeChange"
       />
     </div>
+
     <ContextMenu
       v-if="showMenu"
       :actions="contextMenuActions"
@@ -111,6 +122,7 @@
       @close="closeContextMenu"
       :position="menuPosition"
     ></ContextMenu>
+
     <EmployeeForm
       v-if="showForm"
       :id="employeeUpdateId"
@@ -135,7 +147,7 @@
 import '/src/styles/component/button.scss'
 import '/src/styles/component/select.css'
 import '/src/styles/component/input.css'
-import '/src/styles/layout/toolbar.css'
+import '/src/styles/layout/toolbar.scss'
 import '/src/styles/layout/table.scss'
 import '/src/styles/utils.css'
 import ThePagnigation from '@/components/ThePagnigation.vue'
@@ -147,9 +159,7 @@ import VToast from '@/components/VToast.vue'
 import type { Toast } from '@/entities/Toast'
 import router from '@/router'
 import EmployeeForm from './EmployeeForm.vue'
-import FolderList from '../FolderList.vue'
 import { formatDate } from '@/utils'
-import type { UserFile } from '@/entities/File'
 
 const showForm = ref(false)
 
@@ -165,15 +175,6 @@ const errorMessage = ref<string | null>(null)
 
 const tableContainer = ref<HTMLDivElement | null>(null)
 const toasts = ref<Toast[]>([])
-
-const loadingFileId = ref('')
-async function handleSelectFile(file: UserFile) {
-  loadingFileId.value = file.FileId ?? ''
-  const result = await store.dispatch('readFileEmployee', file.FileId)
-  loadingFileId.value = ''
-  if (result.success === false) errorMessage.value = result.message
-  else errorMessage.value = null
-}
 
 const contextMenuActions = ref<ActionMenu[]>([
   { label: 'Sửa', action: 'update' },
@@ -366,7 +367,6 @@ const accessToken = computed(() => store.getters.getAccessToken)
 onMounted(() => {
   store.dispatch('fetchDepartments')
   store.dispatch('fetchPositions')
-
   fetchEmployees()
 
   const scrollContainer = document.querySelector('.main-container')

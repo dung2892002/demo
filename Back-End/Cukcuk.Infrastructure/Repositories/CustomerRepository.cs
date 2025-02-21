@@ -1,5 +1,4 @@
-﻿using Cukcuk.Core.DTOs;
-using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Infrastructure.Data;
 using Dapper;
@@ -126,8 +125,40 @@ namespace Cukcuk.Infrastructure.Repositories
             return "KH-" + newNumber.ToString("D5");
         }
 
+        public async Task<IEnumerable<CustomerFolder>> GetFolder(Guid? parentId, bool? sortName, bool? sortDate, bool? sortType)
+        {
+            var query = _dbContext.CustomFolders.AsQueryable();
+
+            if (parentId.HasValue)
+            {
+                query  = query.Where(cf => cf.ParentId == parentId.Value);
+            } else
+            {
+                query = query.Where(cf => cf.ParentId == null);
+            }
+
+            if (sortName.HasValue)
+            {
+               query = sortName.Value ? query.OrderBy(cf => cf.Name) : query.OrderByDescending(cf => cf.Name);
+            }
+
+            if (sortDate.HasValue)
+            {
+                query = sortDate.Value ? query.OrderBy(cf => cf.CreatedAt) : query.OrderByDescending(cf => cf.CreatedAt);
+            }
+
+            if (sortType.HasValue)
+            {
+                query = sortType.Value ? query.OrderBy(cf => cf.Type) : query.OrderByDescending(cf => cf.Type);
+            }
+
+            var result = await query.Include(c => c.Customer).ToListAsync();
+            return result;
+        }
+
         public async Task Update(Customer entity)
         {
+
             var query = @"
                 UPDATE customer SET
                     Fullname = @Fullname,
@@ -139,7 +170,19 @@ namespace Cukcuk.Infrastructure.Repositories
                     GroupId = @GroupId
                 WHERE CustomerId = @CustomerId";
             await _connection.ExecuteAsync(query, entity);
+            var query2 = @"UPDATE customer_folder SET NAME = @Fullname WHERE CustomerId = @CustomerId";
+            await _connection.ExecuteAsync(query2, entity);
         }
 
+        public async Task CreateFolder(CustomerFolder folder)
+        {
+            await _dbContext.CustomFolders.AddAsync(folder);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<Customer?> GetById(Guid? id)
+        {
+            return await _dbContext.Customers.FirstOrDefaultAsync(c => c.CustomerId == id);
+        }
     }
 }

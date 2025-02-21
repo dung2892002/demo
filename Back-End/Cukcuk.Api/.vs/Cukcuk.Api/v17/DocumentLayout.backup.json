@@ -3,14 +3,42 @@
   "WorkspaceRootPath": "D:\\intern\\Back-End\\Cukcuk.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|d:\\intern\\back-end\\cukcuk.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|solutionrelative:controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\helper\\excelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A67511B-FFE4-4AFA-AD4F-0BE8597E39F6}|..\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj|d:\\intern\\back-end\\cukcuk.infrastructure\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A67511B-FFE4-4AFA-AD4F-0BE8597E39F6}|..\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj|d:\\intern\\back-end\\cukcuk.infrastructure\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\irepositories\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\irepositories\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\iservices\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\iservices\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|d:\\intern\\back-end\\cukcuk.api\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|solutionrelative:controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|d:\\intern\\back-end\\cukcuk.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\entities\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A67511B-FFE4-4AFA-AD4F-0BE8597E39F6}|..\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj|d:\\intern\\back-end\\cukcuk.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,44 +48,161 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\EmployeeService.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\EmployeeService.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "..\\Cukcuk.Core\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAACUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\EmployeeService.cs*",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Services\\EmployeeService.cs*",
+              "ViewState": "AgIAABkBAAAAAAAAAAAAADABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T03:24:54.986Z"
+              "WhenOpened": "2025-02-21T01:22:02.2Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeesController.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\EmployeesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EmployeesController.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\EmployeesController.cs",
-              "RelativeToolTip": "Controllers\\EmployeesController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB8AAAANAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\CustomerService.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\CustomerService.cs*",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Services\\CustomerService.cs*",
+              "ViewState": "AgIAANYAAAAAAAAAAAAkwOcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T03:24:38.019Z",
+              "WhenOpened": "2025-02-21T01:21:54.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ExcelHelper.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
-              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
-              "RelativeToolTip": "..\\Cukcuk.Core\\Helper\\ExcelHelper.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Infrastructure\\Repositories\\EmployeeRepository.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Repositories\\EmployeeRepository.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAuwKQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T03:24:04.58Z"
+              "WhenOpened": "2025-02-21T01:21:42.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAA0wJwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T01:20:51.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IServices\\IEmployeeService.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\IEmployeeService.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IServices\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T01:20:41.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICustomerService.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\ICustomerService.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IServices\\ICustomerService.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\ICustomerService.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IServices\\ICustomerService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T01:20:31.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEmployeeRepository.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\IEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\IEmployeeRepository.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\IEmployeeRepository.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\IEmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T01:20:24.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICustomerRepository.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\ICustomerRepository.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\ICustomerRepository.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\ICustomerRepository.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\ICustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T01:20:13.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAIoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:23:42.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Entities\\Menu.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Entities\\Menu.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Entities\\Menu.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Entities\\Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:23:06.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:22:57.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAJMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:22:22.697Z"
             }
           ]
         }

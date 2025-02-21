@@ -1,13 +1,14 @@
 .main-container {
   max-height: 620px;
   overflow-y: scroll;
-  border-bottom: 2px solid #ddd;
   position: relative;
 }
 
 .employee-table {
   width: 100%;
   border-collapse: collapse;
+
+  border-bottom: 2px solid #ddd;
 }
 
 .employee-table th,

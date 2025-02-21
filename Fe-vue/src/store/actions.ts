@@ -15,30 +15,7 @@ interface Response {
 }
 
 export const actions: ActionTree<State, State> = {
-  async fetchEmployees(
-    { commit },
-    { pageSize, pageNumber, keyword, departmentId, positionId, token } = {},
-  ) {
-    const response = await axios.get(`${baseUrl}/Employees/filter`, {
-      params: {
-        pageSize: pageSize,
-        pageNumber: pageNumber,
-        employeeFilter: keyword,
-        departmentId: departmentId,
-        positionId: positionId,
-      },
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    const employees: Employee[] = response.data.Data
-    const totalRecords: number = response.data.TotalRecords
-    const totalPages: number = response.data.TotalPages
-    commit('setEmployees', employees)
-    commit('setTotalRecords', totalRecords)
-    commit('setTotalPages', totalPages)
-  },
-
+  //Excel
   async downloadExcel(_, { datas, token, object } = {}) {
     const response = await axios.post(`${baseUrl}/${object}/export`, datas, {
       headers: {
@@ -127,6 +104,31 @@ export const actions: ActionTree<State, State> = {
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
+  },
+
+  //Employee
+  async fetchEmployees(
+    { commit },
+    { pageSize, pageNumber, keyword, departmentId, positionId, token } = {},
+  ) {
+    const response = await axios.get(`${baseUrl}/Employees/filter`, {
+      params: {
+        pageSize: pageSize,
+        pageNumber: pageNumber,
+        employeeFilter: keyword,
+        departmentId: departmentId,
+        positionId: positionId,
+      },
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    const employees: Employee[] = response.data.Data
+    const totalRecords: number = response.data.TotalRecords
+    const totalPages: number = response.data.TotalPages
+    commit('setEmployees', employees)
+    commit('setTotalRecords', totalRecords)
+    commit('setTotalPages', totalPages)
   },
 
   async createEmployee(_, { employee, token }): Promise<Response> {
@@ -224,6 +226,197 @@ export const actions: ActionTree<State, State> = {
     commit('setEmployees', [])
   },
 
+  //Import
+  async fecthImportSetting({ commit }) {
+    try {
+      const response = await axios.get(`${baseUrl}/Imports`)
+      commit('setImportSettings', response.data)
+    } catch (error) {
+      console.log('Failed to login: ', error)
+      return false
+    }
+  },
+
+  async createImport(_, importValue): Promise<boolean> {
+    try {
+      const response = await axios.post(`${baseUrl}/Imports`, importValue)
+      if (response.status === 201) return true
+      return false
+    } catch (error) {
+      console.log('Failed to create: ', error)
+      return false
+    }
+  },
+
+  async updateImport(_, importValue: Import): Promise<boolean> {
+    try {
+      const response = await axios.put(`${baseUrl}/Imports/${importValue.Id}`, importValue)
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+  async deleteImport(_, importValue: Import): Promise<boolean> {
+    try {
+      const response = await axios.delete(`${baseUrl}/Imports`, {
+        params: {
+          id: importValue.Id,
+        },
+      })
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  //Customer
+  async fetchCustomers({ commit }, { pageSize, pageNumber, keyword, token, groupId } = {}) {
+    const response = await axios.get(`${baseUrl}/Customers/filter`, {
+      params: {
+        pageSize: pageSize,
+        pageNumber: pageNumber,
+        keyword: keyword,
+        groupId: groupId,
+      },
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    const customers: Customer[] = response.data.Data
+    const totalRecords: number = response.data.TotalRecords
+    const totalPages: number = response.data.TotalPages
+    commit('setCustomers', customers)
+    commit('setTotalRecords', totalRecords)
+    commit('setTotalPages', totalPages)
+  },
+
+  async fetchCustomer({ commit }, id: string) {
+    try {
+      const response = await axios.get(`${baseUrl}/Customers/${id}`)
+      const customer: Customer = response.data
+      commit('setCustomer', customer)
+    } catch (error) {
+      console.log('Failed to fetch customer data: ', error)
+    }
+  },
+
+  async fetchCustomerGroups({ commit }) {
+    try {
+      const response = await axios.get(`${baseUrl}/Customers/groups`)
+      const customerGroups = response.data
+      commit('setcustomerGroups', customerGroups)
+    } catch (error) {
+      console.log('Failed to fetch customer groups: ', error)
+    }
+  },
+
+  async createCustomer(_, { customer, token }): Promise<Response> {
+    try {
+      await axios.post(`${baseUrl}/Customers`, customer, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Cập nhật khách hàng thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  async updateCustomer(_, { id, customer, token }): Promise<Response> {
+    try {
+      await axios.put(`${baseUrl}/Customers/${id}`, customer, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Cập nhật khách hàng thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  async deleteCustomer(_, { id, token }): Promise<Response> {
+    try {
+      await axios.delete(`${baseUrl}/Customers/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return { success: true, message: 'Xóa thành công' }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverMessage = error.response?.data || 'Server error occurred'
+        return { success: false, message: serverMessage }
+      }
+      return { success: false, message: 'An unknown error occurred' }
+    }
+  },
+
+  //Menu
+  async fetchMenus({ commit }) {
+    const response = await axios.get(`${baseUrl}/Menus`)
+    commit('setMenus', response.data)
+  },
+
+  async createMenu(_, menuValue): Promise<boolean> {
+    try {
+      const response = await axios.post(`${baseUrl}/Menus`, menuValue)
+      if (response.status === 201) return true
+      return false
+    } catch (error) {
+      console.log('Failed to create: ', error)
+      return false
+    }
+  },
+
+  async updateMenu(_, menuValue: Menu): Promise<boolean> {
+    try {
+      const response = await axios.put(`${baseUrl}/Menus/${menuValue.Id}`, menuValue)
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  async deleteMenu(_, menuValue: Menu): Promise<boolean> {
+    try {
+      const response = await axios.delete(`${baseUrl}/Menus/${menuValue.Id}`)
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  //Order
+  async updateOrder(_, menus: Menu[]): Promise<boolean> {
+    try {
+      const response = await axios.put(`${baseUrl}/Menus/order`, menus)
+      if (response.status === 200) return true
+      return false
+    } catch (error) {
+      console.log('Failed to update: ', error)
+      return false
+    }
+  },
+
+  //Auth
   async login({ commit }, model: LoginModel) {
     try {
       const response = await axios.post(`${baseUrl}/Auths/login`, model)
@@ -315,121 +508,6 @@ export const actions: ActionTree<State, State> = {
         console.log('Failed to login: ', error)
         return false
       }
-    }
-  },
-
-  async fecthImportSetting({ commit }) {
-    try {
-      const response = await axios.get(`${baseUrl}/Imports`)
-      commit('setImportSettings', response.data)
-    } catch (error) {
-      console.log('Failed to login: ', error)
-      return false
-    }
-  },
-
-  async createImport(_, importValue): Promise<boolean> {
-    try {
-      const response = await axios.post(`${baseUrl}/Imports`, importValue)
-      if (response.status === 201) return true
-      return false
-    } catch (error) {
-      console.log('Failed to create: ', error)
-      return false
-    }
-  },
-
-  async updateImport(_, importValue: Import): Promise<boolean> {
-    try {
-      const response = await axios.put(`${baseUrl}/Imports/${importValue.Id}`, importValue)
-      if (response.status === 200) return true
-      return false
-    } catch (error) {
-      console.log('Failed to update: ', error)
-      return false
-    }
-  },
-  async deleteImport(_, importValue: Import): Promise<boolean> {
-    try {
-      const response = await axios.delete(`${baseUrl}/Imports`, {
-        params: {
-          id: importValue.Id,
-        },
-      })
-      if (response.status === 200) return true
-      return false
-    } catch (error) {
-      console.log('Failed to update: ', error)
-      return false
-    }
-  },
-
-  async fetchCustomers({ commit }, { pageSize, pageNumber, keyword, token, groupId } = {}) {
-    const response = await axios.get(`${baseUrl}/Customers/filter`, {
-      params: {
-        pageSize: pageSize,
-        pageNumber: pageNumber,
-        keyword: keyword,
-        groupId: groupId,
-      },
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    const customers: Customer[] = response.data.Data
-    const totalRecords: number = response.data.TotalRecords
-    const totalPages: number = response.data.TotalPages
-    commit('setCustomers', customers)
-    commit('setTotalRecords', totalRecords)
-    commit('setTotalPages', totalPages)
-  },
-
-  async fetchMenus({ commit }) {
-    const response = await axios.get(`${baseUrl}/Menus`)
-    commit('setMenus', response.data)
-  },
-
-  async createMenu(_, menuValue): Promise<boolean> {
-    try {
-      const response = await axios.post(`${baseUrl}/Menus`, menuValue)
-      if (response.status === 201) return true
-      return false
-    } catch (error) {
-      console.log('Failed to create: ', error)
-      return false
-    }
-  },
-
-  async updateMenu(_, menuValue: Menu): Promise<boolean> {
-    try {
-      const response = await axios.put(`${baseUrl}/Menus/${menuValue.Id}`, menuValue)
-      if (response.status === 200) return true
-      return false
-    } catch (error) {
-      console.log('Failed to update: ', error)
-      return false
-    }
-  },
-
-  async deleteMenu(_, menuValue: Menu): Promise<boolean> {
-    try {
-      const response = await axios.delete(`${baseUrl}/Menus/${menuValue.Id}`)
-      if (response.status === 200) return true
-      return false
-    } catch (error) {
-      console.log('Failed to update: ', error)
-      return false
-    }
-  },
-
-  async updateOrder(_, menus: Menu[]): Promise<boolean> {
-    try {
-      const response = await axios.put(`${baseUrl}/Menus/order`, menus)
-      if (response.status === 200) return true
-      return false
-    } catch (error) {
-      console.log('Failed to update: ', error)
-      return false
     }
   },
 
@@ -560,112 +638,12 @@ export const actions: ActionTree<State, State> = {
     }
   },
 
-  async fetchCustomer({ commit }, id: string) {
-    try {
-      const response = await axios.get(`${baseUrl}/Customers/${id}`)
-      const customer: Customer = response.data
-      commit('setCustomer', customer)
-    } catch (error) {
-      console.log('Failed to fetch customer data: ', error)
-    }
+  clearCustomers({ commit }) {
+    commit('setCustomers', [])
   },
 
-  async fetchCustomerGroups({ commit }) {
-    try {
-      const response = await axios.get(`${baseUrl}/Customers/groups`)
-      const customerGroups = response.data
-      commit('setcustomerGroups', customerGroups)
-    } catch (error) {
-      console.log('Failed to fetch customer groups: ', error)
-    }
-  },
-
-  async createCustomer(_, { customer, token }): Promise<Response> {
-    try {
-      await axios.post(`${baseUrl}/Customers`, customer, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      return { success: true, message: 'Cập nhật khách hàng thành công' }
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        const serverMessage = error.response?.data || 'Server error occurred'
-        return { success: false, message: serverMessage }
-      }
-      return { success: false, message: 'An unknown error occurred' }
-    }
-  },
-
-  async updateCustomer(_, { id, customer, token }): Promise<Response> {
-    try {
-      await axios.put(`${baseUrl}/Customers/${id}`, customer, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      return { success: true, message: 'Cập nhật khách hàng thành công' }
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        const serverMessage = error.response?.data || 'Server error occurred'
-        return { success: false, message: serverMessage }
-      }
-      return { success: false, message: 'An unknown error occurred' }
-    }
-  },
-
-  async deleteCustomer(_, { id, token }): Promise<Response> {
-    try {
-      await axios.delete(`${baseUrl}/Customers/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      return { success: true, message: 'Xóa thành công' }
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        const serverMessage = error.response?.data || 'Server error occurred'
-        return { success: false, message: serverMessage }
-      }
-      return { success: false, message: 'An unknown error occurred' }
-    }
-  },
-
+  //signalR
   setupOnlineUsers({ commit }, users: string[]) {
     commit('setOnlineUsers', users)
-  },
-
-  setupCurrentMenuId({ commit }, id: string) {
-    localStorage.setItem('currentMenuId', id)
-    commit('setCurrentMenuId', id)
-  },
-
-  async readFileEmployee({ commit }, fileId: string) {
-    try {
-      const response = await axios.get(`https://localhost:7160/api/v1/Employees/file/${fileId}`)
-      commit('setEmployees', response.data)
-      return { success: true, message: 'Đọc file thành công' }
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        const serverMessage = error.response?.data || 'Server error occurred'
-        return { success: false, message: serverMessage }
-      }
-      return { success: false, message: 'An unknown error occurred' }
-    }
-  },
-
-  async readFileCustomer({ commit }, fileId: string) {
-    try {
-      const response = await axios.get(`https://localhost:7160/api/v1/Customers/file/${fileId}`)
-      commit('setCustomers', response.data)
-
-      return { success: true, message: 'Đọc file thành công' }
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        const serverMessage = error.response?.data || 'Server error occurred'
-        return { success: false, message: serverMessage }
-      }
-      return { success: false, message: 'An unknown error occurred' }
-    }
   },
 }

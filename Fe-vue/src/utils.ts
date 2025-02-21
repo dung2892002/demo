@@ -5,18 +5,3 @@ export function formatDate(inputDate: string) {
   const year = date.getFullYear()
   return `${day}/${month}/${year}`
 }
-
-export function getFileFormat(name: string): string {
-  const format = name.split('.').pop()?.toLowerCase()
-
-  if (format === 'xlsx' || format === 'xls') return 'excel'
-  if (format === 'pdf') return 'pdf'
-  if (format === 'ppt' || format === 'pptx') return 'power-point'
-  if (format === 'doc' || format === 'docx') return 'word'
-  return ''
-}
-
-export function getIconUrl(name: string): string {
-  const formatFile = getFileFormat(name)
-  return `/src/assets/icon/${formatFile}.png`
-}

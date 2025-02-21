@@ -27,5 +27,4 @@ export const getters: GetterTree<State, State> = {
   getCustomer: (state) => state.customer,
   getCustomerGroups: (state) => state.customerGroups,
   getOnlineUsers: (state) => state.onlineUsers,
-  getCurrentMenuId: (state) => state.currentMenuId,
 }

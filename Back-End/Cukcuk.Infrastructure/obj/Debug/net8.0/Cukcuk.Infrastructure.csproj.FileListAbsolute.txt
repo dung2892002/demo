@@ -32,3 +32,4 @@ D:\intern\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.
 D:\intern\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\ref\Cukcuk.Infrastructure.dll
 D:\intern\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Infrastructure.runtimeconfig.json
 D:\intern\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.genruntimeconfig.cache
+D:\intern\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\harfbuzz.dll

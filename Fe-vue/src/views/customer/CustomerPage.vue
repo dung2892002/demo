@@ -9,19 +9,26 @@
         </div>
       </button>
     </div>
-    <FolderList @selectFile="handleSelectFile" :loadingFileId="loadingFileId" />
     <div class="content-main">
       <div class="toolbar">
-        <div class="toolbar_search">
-          <input
-            type="text"
-            id="search-employee"
-            placeholder="Tìm kiếm theo mã, họ tên"
-            v-model="keyword"
-          />
-          <button @click="handleSearch()" v-loading="searchLoading">
-            <img src="/src/assets/icon/search.png" alt="logo" />
-          </button>
+        <div style="display: flex; flex-direction: row; gap: 20px">
+          <div class="toolbar_search">
+            <input
+              type="text"
+              id="search-employee"
+              placeholder="Tìm kiếm theo mã, họ tên"
+              v-model="keyword"
+            />
+            <button @click="handleSearch()" v-loading="searchLoading">
+              <img src="/src/assets/icon/search.png" alt="logo" />
+            </button>
+          </div>
+
+          <div class="toolbar_sort">
+            <span v-loading="sortNameLoading" @click="handleSortByName()">Theo tên</span>
+            <span v-loading="sortDateLoading" @click="handleSortByDate()">Theo ngày tạo</span>
+            <span v-loading="sortTypeLoading" @click="handleSortByType()">Theo loại</span>
+          </div>
         </div>
         <div class="toolbar__actions">
           <button class="toolbar-action" @click="importFile()">
@@ -36,37 +43,56 @@
           </button>
         </div>
       </div>
+      <div class="content__filter">
+        <div class="folder-route">
+          <span @click="goStartFolder" v-if="listFolder.length > 0">Khách hàng</span>
+          <div
+            v-for="(folder, index) in listFolder"
+            :key="index"
+            @click="routeFolder(folder, index)"
+          >
+            ><span> {{ folder.Name }}</span>
+          </div>
+        </div>
+      </div>
       <div class="main-container" ref="tableContainer">
         <table class="employee-table">
           <thead>
             <tr>
               <th class="w-6">STT</th>
+              <th class="w-20">Tên</th>
               <th class="w-10">Mã KH</th>
-              <th class="w-20">Họ và tên</th>
               <th class="w-10">Giới tính</th>
               <th class="w-12">Ngày sinh</th>
               <th class="w-30">Email</th>
               <th>Địa chỉ</th>
-              <th class="w-14">Nhóm KH</th>
               <th class="w-10">Hành động</th>
             </tr>
           </thead>
           <tbody>
             <tr
-              v-for="(customer, index) in customers"
+              v-for="(folder, index) in customerFolders"
               :key="index"
-              @contextmenu.prevent="showContextMenu($event, customer.CustomerId, index)"
+              @contextmenu.prevent="showContextMenu($event, folder.CustomerId, index)"
+              style="cursor: pointer"
+              @click="selectFolder(folder)"
             >
               <td>{{ index + 1 }}</td>
-              <td>{{ customer.CustomerCode }}</td>
-              <td>{{ customer.Fullname }}</td>
-              <td>{{ customer.GenderName }}</td>
-              <td>{{ formatDate(customer.DateOfBirth) }}</td>
-              <td>{{ customer.Email }}</td>
-              <td>{{ customer.Address }}</td>
-              <td>{{ customer.GroupName }}</td>
               <td>
-                <div class="action" :ref="`action-${index}`">
+                <img
+                  src="/src/assets/icon/folder.png"
+                  v-if="folder.Type"
+                  style="width: 24px; height: 24px; margin-right: 6px; vertical-align: middle"
+                />
+                <span style="vertical-align: middle">{{ folder.Name }}</span>
+              </td>
+              <td>{{ folder.Customer?.CustomerCode }}</td>
+              <td>{{ folder.Customer?.GenderName }}</td>
+              <td>{{ folder.Customer ? formatDate(folder.Customer?.DateOfBirth) : '' }}</td>
+              <td>{{ folder.Customer?.Email }}</td>
+              <td>{{ folder.Customer?.Address }}</td>
+              <td>
+                <div class="action" :ref="`action-${index}`" v-if="folder.Type == false">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
                       <img src="/src/assets/icon/option.png" alt="" />
@@ -77,18 +103,18 @@
                       :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
                     >
                       <span
-                        @click="deleteCustomer(customer.CustomerId, index)"
+                        @click="deleteCustomer(folder.CustomerId, index)"
                         v-loading="deleteLoading == index"
                         >Xóa</span
                       >
-                      <span @click="deleteCustomer(customer.CustomerId, index)">Xóa</span>
+                      <span @click="deleteCustomer(folder.CustomerId, index)">Xóa</span>
                       <span
-                        @click="updateCustomer(customer.CustomerId, index)"
+                        @click="updateCustomer(folder.CustomerId, index)"
                         v-loading="updateLoading == index"
                         >Sửa
                       </span>
                       <span
-                        @click="updateCustomer(customer.CustomerId, index)"
+                        @click="updateCustomer(folder.CustomerId, index)"
                         v-loading="updateLoading == index"
                         >Sửa
                       </span>
@@ -99,13 +125,13 @@
             </tr>
           </tbody>
         </table>
+        <ThePagnigation
+          :pageNumber="pageNumber"
+          :pageLoading="pageLoading"
+          @pageChange="handlePageChange"
+          @pageSizeChange="handlePageSizeChange"
+        />
       </div>
-      <ThePagnigation
-        :pageNumber="pageNumber"
-        :pageLoading="pageLoading"
-        @pageChange="handlePageChange"
-        @pageSizeChange="handlePageSizeChange"
-      />
     </div>
     <ContextMenu
       v-if="showMenu"
@@ -138,9 +164,10 @@
 import '/src/styles/component/button.scss'
 import '/src/styles/component/select.css'
 import '/src/styles/component/input.css'
-import '/src/styles/layout/toolbar.css'
+import '/src/styles/layout/toolbar.scss'
 import '/src/styles/layout/table.scss'
 import '/src/styles/utils.css'
+
 import ThePagnigation from '@/components/ThePagnigation.vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useStore } from 'vuex'
@@ -150,9 +177,9 @@ import VToast from '@/components/VToast.vue'
 import type { Toast } from '@/entities/Toast'
 import router from '@/router'
 import CustomerForm from './CustomerForm.vue'
-import FolderList from '../FolderList.vue'
 import { formatDate } from '@/utils'
-import type { UserFile } from '@/entities/File'
+import axios from 'axios'
+import type { CustomerFolder } from '@/entities/CustomerFolder'
 
 const showForm = ref(false)
 const pageLoading = ref(false)
@@ -162,25 +189,11 @@ const addLoading = ref(false)
 const updateLoading = ref(-1)
 const deleteLoading = ref(-1)
 const exportLoading = ref(false)
-const errorMessage = ref<string | null>(null)
 const tableContainer = ref<HTMLDivElement | null>(null)
-
 const toasts = ref<Toast[]>([])
-
-const loadingFileId = ref('')
-async function handleSelectFile(file: UserFile) {
-  loadingFileId.value = file.FileId ?? ''
-  const result = await store.dispatch('readFileCustomer', file.FileId)
-  loadingFileId.value = ''
-  if (result.success === false) errorMessage.value = result.message
-  else errorMessage.value = null
-}
 
 const contextMenuActions = ref<ActionMenu[]>([
   { label: 'Sửa', action: 'update' },
-  { label: 'Sửa', action: 'update' },
-  { label: 'Xoá', action: 'delete' },
-  { label: 'Xoá', action: 'delete' },
   { label: 'Xoá', action: 'delete' },
 ])
 
@@ -219,6 +232,8 @@ const showPopupAction = ref<number>(-1)
 const showMenu = ref(false)
 const groupId = ref<string | null>(null)
 
+const listFolder = ref<CustomerFolder[]>([])
+
 const popupPosition = ref({
   top: 0,
   right: 100,
@@ -229,14 +244,15 @@ const menuPosition = ref({
   left: 0,
 })
 
-function showContextMenu(event: MouseEvent, employeeId: string, index: number) {
-  event.preventDefault()
-  menuPosition.value.top = event.clientY
-  menuPosition.value.left = event.clientX
-  showMenu.value = true
-  showPopupAction.value = -1
-  targetCustomerId.value = employeeId
-  targetIndex.value = index
+function showContextMenu(event: MouseEvent, customerId: string | null, index: number) {
+  if (customerId) {
+    menuPosition.value.top = event.clientY
+    menuPosition.value.left = event.clientX
+    showMenu.value = true
+    showPopupAction.value = -1
+    targetCustomerId.value = customerId
+    targetIndex.value = index
+  }
 }
 
 function closeContextMenu() {
@@ -278,7 +294,7 @@ function updatePopupPosition() {
 
 function closeForm() {
   showForm.value = false
-  fetchCustomers()
+  fetchCustomerFolder()
 }
 
 function addNew() {
@@ -287,19 +303,19 @@ function addNew() {
   customerUpdateId.value = ''
 }
 
-function updateCustomer(id: string, index: number) {
+function updateCustomer(id: string | null, index: number) {
   updateLoading.value = index
   showForm.value = true
-  customerUpdateId.value = id
+  if (id) customerUpdateId.value = id
 }
 
-async function deleteCustomer(id: string, index: number) {
+async function deleteCustomer(id: string | null, index: number) {
   deleteLoading.value = index
   await store.dispatch('deleteCustomer', {
     id: id,
     token: accessToken.value,
   })
-  await fetchCustomers()
+  await fetchCustomerFolder()
   deleteLoading.value = -1
   showPopupAction.value = -1
 }
@@ -363,11 +379,106 @@ function scrollTable() {
   }
 }
 
+const parentId = ref<string | null>(null)
+const sortName = ref<boolean | null>(null)
+const sortDate = ref<boolean | null>(null)
+const sortType = ref<boolean | null>(true)
+
+const sortNameLoading = ref(false)
+const sortDateLoading = ref(false)
+const sortTypeLoading = ref(false)
+
+const customerFolders = ref<CustomerFolder[]>([])
+
+async function fetchCustomerFolder() {
+  try {
+    const response = await axios.get('https://localhost:7160/api/v1/Customers/folder', {
+      params: {
+        parentId: parentId.value,
+        sortName: sortName.value,
+        sortDate: sortDate.value,
+        sortType: sortType.value,
+      },
+    })
+
+    customerFolders.value = response.data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+function selectFolder(folder: CustomerFolder) {
+  if (folder.Type) {
+    parentId.value = folder.Id
+    sortName.value = null
+    sortDate.value = null
+    sortType.value = true
+    fetchCustomerFolder()
+    listFolder.value.push(folder)
+  }
+}
+
+async function handleSortByName() {
+  if (sortName.value === null) {
+    sortName.value = true
+  } else {
+    sortName.value = !sortName.value
+  }
+  sortType.value = null
+  sortDate.value = null
+
+  sortNameLoading.value = true
+  await fetchCustomerFolder()
+  sortNameLoading.value = false
+}
+
+async function handleSortByType() {
+  sortType.value = !sortType.value
+  sortName.value = null
+  sortDate.value = null
+
+  sortTypeLoading.value = true
+  await fetchCustomerFolder()
+  sortTypeLoading.value = false
+}
+
+async function handleSortByDate() {
+  if (sortDate.value === null) {
+    sortDate.value = true
+  } else {
+    sortDate.value = !sortDate.value
+  }
+  sortName.value = null
+  sortType.value = null
+
+  sortDateLoading.value = true
+  await fetchCustomerFolder()
+  sortDateLoading.value = false
+}
+
+function goStartFolder() {
+  parentId.value = null
+  sortName.value = null
+  sortDate.value = null
+  sortType.value = null
+  fetchCustomerFolder()
+  listFolder.value = []
+}
+
+function routeFolder(folder: CustomerFolder, index: number) {
+  parentId.value = folder.Id
+  sortName.value = null
+  sortDate.value = null
+  sortType.value = true
+  fetchCustomerFolder()
+  listFolder.value = listFolder.value.slice(0, index + 1)
+}
+
 const customers = computed(() => store.getters.getCustomers)
 const accessToken = computed(() => store.getters.getAccessToken)
 
 onMounted(() => {
-  fetchCustomers()
+  fetchCustomerFolder()
   const scrollContainer = document.querySelector('.main-container')
   scrollContainer?.addEventListener('scroll', updatePopupPosition)
 })

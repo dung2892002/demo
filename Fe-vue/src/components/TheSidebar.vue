@@ -63,7 +63,7 @@ function toggleSidebar() {
 
 function handleSelectMenu(menu: Menu) {
   router.push(`${menu.MenuPath}`)
-  store.dispatch('setupCurrentMenuId', menu.Id)
+  store.dispatch('setupCurrentMenu', menu)
 }
 
 const menus = computed(() => store.getters.getMenus)
@@ -76,7 +76,7 @@ function goHomePage() {
 
 function goSettingPage() {
   router.push({
-    name: 'setting-import',
+    name: 'setting-excel',
   })
 }
 

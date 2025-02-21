@@ -82,7 +82,4 @@ export const mutations: MutationTree<State> = {
   setOnlineUsers(state, users) {
     state.onlineUsers = users
   },
-  setCurrentMenuId(state, id) {
-    state.currentMenuId = id
-  },
 }

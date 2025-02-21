@@ -247,20 +247,20 @@ img.image-medicine-related {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($color: #000000, $alpha: 0.5);
+  background-color: rgba($color: #000000, $alpha: 0.5) !important;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
 }
 
-/* Spinner CSS */
 .spin {
-  width: 24px;
-  height: 24px;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 0 !important;
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
-  border-radius: 50%;
+  border-radius: 50% !important;
   animation: spin 1s linear infinite;
 }
 
@@ -534,15 +534,17 @@ img.image-medicine-related {
   gap: 6px;
   margin-bottom: 6px;
 
-  div {
+  div:not(.folder-route) {
     border-radius: 4px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     gap: 4px;
 
     div {
       background-color: #ffffff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       cursor: pointer;
       padding: 6px 10px;
       img {
@@ -558,6 +560,37 @@ img.image-medicine-related {
 
       &.selected {
         background-color: #078cf8;
+      }
+    }
+  }
+
+  .folder-route {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+
+      &.route--back:hover {
+        background-color: #078cf8;
+      }
+    }
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+        color: #078cf8;
       }
     }
   }

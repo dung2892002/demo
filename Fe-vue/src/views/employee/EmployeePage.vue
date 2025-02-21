@@ -129,17 +129,6 @@
       @closeForm="closeForm"
       @stopLoading="stopLoading"
     />
-
-    <div class="toast-list">
-      <VToast
-        v-for="(toast, index) in toasts"
-        :key="index"
-        :type="toast.type"
-        :message="toast.message"
-        :index="index"
-        @delete="deleteToast(index)"
-      ></VToast>
-    </div>
   </div>
 </template>
 
@@ -155,8 +144,6 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import ContextMenu from '@/components/ContextMenu.vue'
 import type { ActionMenu } from '@/entities/ActionMenu'
-import VToast from '@/components/VToast.vue'
-import type { Toast } from '@/entities/Toast'
 import router from '@/router'
 import EmployeeForm from './EmployeeForm.vue'
 import { formatDate } from '@/utils'
@@ -174,7 +161,6 @@ const exportLoading = ref(false)
 const errorMessage = ref<string | null>(null)
 
 const tableContainer = ref<HTMLDivElement | null>(null)
-const toasts = ref<Toast[]>([])
 
 const contextMenuActions = ref<ActionMenu[]>([
   { label: 'Sửa', action: 'update' },
@@ -191,10 +177,6 @@ function importFile() {
       data: 'Employees',
     },
   })
-}
-
-function deleteToast(index: number) {
-  toasts.value.splice(index, 1)
 }
 
 function handleActionClick(action: ActionMenu) {

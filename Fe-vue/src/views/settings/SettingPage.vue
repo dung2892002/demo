@@ -4,7 +4,6 @@
     <div style="display: flex; gap: 10px">
       <button @click="goToExcelSetting">Import</button>
       <button @click="goToMenuSetting">Menu</button>
-      <button @click="goToFolderSetting">Folder</button>
     </div>
     <RouterView />
   </div>
@@ -23,12 +22,6 @@ function goToExcelSetting() {
 function goToMenuSetting() {
   router.push({
     name: 'setting-menu',
-  })
-}
-
-function goToFolderSetting() {
-  router.push({
-    name: 'setting-folder',
   })
 }
 </script>

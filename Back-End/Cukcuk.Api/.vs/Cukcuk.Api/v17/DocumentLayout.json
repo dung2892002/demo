@@ -1,12 +1,116 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\intern\\Back-End\\Cukcuk.Api\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A67511B-FFE4-4AFA-AD4F-0BE8597E39F6}|..\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj|d:\\intern\\back-end\\cukcuk.infrastructure\\repositories\\documentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\irepositories\\idocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\entities\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|d:\\intern\\back-end\\cukcuk.api\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|solutionrelative:controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\iservices\\idocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Document.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Entities\\Document.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Entities\\Document.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Entities\\Document.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Entities\\Document.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:44:17.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDocumentService.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:38:40.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DocumentsController.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\DocumentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocumentsController.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\DocumentsController.cs",
+              "RelativeToolTip": "Controllers\\DocumentsController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:38:30.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDocumentRepository.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABcAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:13:52.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DocumentRepository.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
+              "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:03:05.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DocumentService.cs",
+              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
+              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFwAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T07:02:33.705Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

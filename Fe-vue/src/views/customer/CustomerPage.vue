@@ -125,13 +125,13 @@
             </tr>
           </tbody>
         </table>
-        <ThePagnigation
-          :pageNumber="pageNumber"
-          :pageLoading="pageLoading"
-          @pageChange="handlePageChange"
-          @pageSizeChange="handlePageSizeChange"
-        />
       </div>
+      <ThePagnigation
+        :pageNumber="pageNumber"
+        :pageLoading="pageLoading"
+        @pageChange="handlePageChange"
+        @pageSizeChange="handlePageSizeChange"
+      />
     </div>
     <ContextMenu
       v-if="showMenu"
@@ -158,7 +158,7 @@ import '/src/styles/layout/table.scss'
 import '/src/styles/utils.css'
 
 import ThePagnigation from '@/components/ThePagnigation.vue'
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import ContextMenu from '@/components/ContextMenu.vue'
 import type { ActionMenu } from '@/entities/ActionMenu'
@@ -177,6 +177,7 @@ const updateLoading = ref(-1)
 const deleteLoading = ref(-1)
 const exportLoading = ref(false)
 const tableContainer = ref<HTMLDivElement | null>(null)
+
 const contextMenuActions = ref<ActionMenu[]>([
   { label: 'Sửa', action: 'update' },
   { label: 'Xoá', action: 'delete' },
@@ -205,13 +206,12 @@ const targetIndex = ref(-1)
 
 const pageSize = ref(10)
 const pageNumber = ref(1)
-const keyword = ref<string>()
+const keyword = ref<string | null>()
 const customerUpdateId = ref<string>('')
 const store = useStore()
 
 const showPopupAction = ref<number>(-1)
 const showMenu = ref(false)
-const groupId = ref<string | null>(null)
 
 const listFolder = ref<CustomerFolder[]>([])
 
@@ -240,7 +240,6 @@ function closeContextMenu() {
   showMenu.value = false
 }
 
-let activeButton: HTMLElement | null = null
 function togglePopupAction(index: number, event: MouseEvent): void {
   const target = event.target instanceof HTMLElement ? event.target : null
   if (!target) return
@@ -252,25 +251,14 @@ function togglePopupAction(index: number, event: MouseEvent): void {
     right: window.innerWidth - buttonRect.left,
   }
 
-  activeButton = target
-
   showPopupAction.value = showPopupAction.value === index ? -1 : index
   showMenu.value = false
 }
 
 async function handleRefresh() {
   refreshLoading.value = true
-  await fetchCustomers()
+  await fetchCustomerFolder()
   refreshLoading.value = false
-}
-
-function updatePopupPosition() {
-  if (!activeButton) return
-  const buttonRect = activeButton.getBoundingClientRect()
-  popupPosition.value = {
-    top: buttonRect.top,
-    right: window.innerWidth - buttonRect.left,
-  }
 }
 
 function closeForm() {
@@ -312,21 +300,21 @@ async function handlePageSizeChange(newPageSize: number) {
   pageLoading.value = true
   pageSize.value = newPageSize
   pageNumber.value = 1
-  await fetchCustomers()
+  await fetchCustomerFolder()
   pageLoading.value = false
 }
 
 async function handlePageChange(newPageNumber: number) {
   pageLoading.value = true
   pageNumber.value = newPageNumber
-  await fetchCustomers()
+  await fetchCustomerFolder()
   pageLoading.value = false
 }
 
 async function handleSearch() {
   searchLoading.value = true
   pageNumber.value = 1
-  await fetchCustomers()
+  await fetchCustomerFolder()
   searchLoading.value = false
 }
 
@@ -338,17 +326,6 @@ async function handleExportFile() {
     object: 'Customers',
   })
   exportLoading.value = false
-}
-
-async function fetchCustomers() {
-  await store.dispatch('fetchCustomers', {
-    pageSize: pageSize.value,
-    pageNumber: pageNumber.value,
-    keyword: keyword.value,
-    token: accessToken.value,
-    groupId: groupId.value,
-  })
-  scrollTable()
 }
 
 function scrollTable() {
@@ -376,24 +353,38 @@ async function fetchCustomerFolder() {
     const response = await axios.get('https://localhost:7160/api/v1/Customers/folder', {
       params: {
         parentId: parentId.value,
+        keyword: keyword.value,
+        pageNumber: pageNumber.value,
+        pageSize: pageSize.value,
         sortName: sortName.value,
         sortDate: sortDate.value,
         sortType: sortType.value,
       },
     })
 
-    customerFolders.value = response.data
+    customerFolders.value = response.data.Items
+    store.commit('setTotalRecords', response.data.TotalItems)
+    store.commit('setTotalPages', response.data.TotalPages)
+    scrollTable()
   } catch (error) {
     console.log(error)
   }
 }
 
+function resetQuery() {
+  parentId.value = null
+  keyword.value = null
+  sortName.value = null
+  sortDate.value = null
+  sortType.value = true
+  pageSize.value = 10
+  pageNumber.value = 1
+}
+
 function selectFolder(folder: CustomerFolder) {
   if (folder.Type) {
+    resetQuery()
     parentId.value = folder.Id
-    sortName.value = null
-    sortDate.value = null
-    sortType.value = true
     fetchCustomerFolder()
     listFolder.value.push(folder)
   }
@@ -438,19 +429,14 @@ async function handleSortByDate() {
 }
 
 function goStartFolder() {
-  parentId.value = null
-  sortName.value = null
-  sortDate.value = null
-  sortType.value = null
+  resetQuery()
   fetchCustomerFolder()
   listFolder.value = []
 }
 
 function routeFolder(folder: CustomerFolder, index: number) {
+  resetQuery()
   parentId.value = folder.Id
-  sortName.value = null
-  sortDate.value = null
-  sortType.value = true
   fetchCustomerFolder()
   listFolder.value = listFolder.value.slice(0, index + 1)
 }
@@ -460,12 +446,5 @@ const accessToken = computed(() => store.getters.getAccessToken)
 
 onMounted(() => {
   fetchCustomerFolder()
-  const scrollContainer = document.querySelector('.main-container')
-  scrollContainer?.addEventListener('scroll', updatePopupPosition)
-})
-
-onUnmounted(() => {
-  const scrollContainer = document.querySelector('.main-container')
-  scrollContainer?.removeEventListener('scroll', updatePopupPosition)
 })
 </script>

@@ -1,6 +1,7 @@
 ﻿using Cukcuk.Core.Auth;
 using Cukcuk.Core.DTOs;
 using Cukcuk.Core.Entities;
+using Cukcuk.Core.Interfaces.Repositories;
 using Cukcuk.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
@@ -11,9 +12,68 @@ namespace Cukcuk.Api.Controllers
     [Route("api/v1/[controller]")]
     [ApiController]
     [EnableCors("AllowAll")]
-    public class EmployeesController(IEmployeeService employeeService) : ControllerBase
+    public class EmployeesController(IEmployeeService employeeService, IEmployeeRepository employeeRepository) : ControllerBase
     {
         private readonly IEmployeeService _employeeService = employeeService;
+        private readonly IEmployeeRepository _employeeRepository = employeeRepository;
+
+
+        //[HttpPost("test")]
+        //public async Task<IActionResult> Test()
+        //{
+        //    var employees = await _employeeRepository.FindAll();
+        //    var folders = (await _employeeRepository.GetFolderOnly()).ToList();
+
+        //    var random = new Random();
+
+        //    foreach (var employee in employees)
+        //    {
+        //        var employeeFolder = new EmployeeFolder
+        //        {
+        //            Id = Guid.NewGuid(),
+        //            Name = employee.Fullname,
+        //            CreatedAt = DateTime.Now,
+        //            EmployeeId = employee.EmployeeId,
+        //            Type = false,
+        //            ParentId = folders.Count > 0 ? folders[random.Next(folders.Count)].Id : (Guid?)null
+        //        };
+
+        //        await _employeeRepository.CreateFolder(employeeFolder);
+        //    }
+        //    return StatusCode(200);
+        //}
+
+        [HttpGet("folder")]
+        public async Task<IActionResult> GetByFolder([FromQuery] Guid? parentId, [FromQuery] bool? sortName, [FromQuery] bool? sortDate, [FromQuery] bool? sortType,
+                                                    [FromQuery] string? keyword, [FromQuery] int pageSize, [FromQuery] int pageNumber)
+        {
+            try
+            {
+                var results = await _employeeService.GetFolder(parentId, keyword, pageSize, pageNumber, sortName, sortDate, sortType);
+
+                return StatusCode(200, results);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpPost("folder")]
+
+        public async Task<IActionResult> CreateFolder([FromBody] EmployeeFolder folder)
+        {
+            try
+            {
+                await _employeeService.CreateFolder(folder);
+
+                return StatusCode(201, "success");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
 
 
         [Authorize]

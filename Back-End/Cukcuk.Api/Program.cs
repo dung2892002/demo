@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MySqlConnector;
 using System.Data;
 using System.Text;
@@ -95,6 +96,7 @@ builder.Services.AddScoped<IImportService, ImportService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IMenuService, MenuService>();
 builder.Services.AddScoped<IPermissionService, PermissionService>();
+builder.Services.AddScoped<IDocumentService, DocumentService>();
 
 
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
@@ -106,6 +108,7 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 builder.Services.AddScoped<IPermissionRepository, PermissionRepository>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<Cache>(); 
@@ -140,7 +143,10 @@ builder.Services.AddSignalR(options =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SupportNonNullableReferenceTypes();
+});
 
 var app = builder.Build();
 

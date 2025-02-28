@@ -1,5 +1,6 @@
 ﻿using Cukcuk.Core.Auth;
 using Cukcuk.Core.Entities;
+using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,17 +9,47 @@ namespace Cukcuk.Api.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class CustomersController(ICustomerService customerService) : ControllerBase
+    public class CustomersController(ICustomerService customerService, ICustomerRepository customerRepository) : ControllerBase
     {
         private readonly ICustomerService _customerService = customerService;
+        private readonly ICustomerRepository _customerRepository = customerRepository;
 
 
-        [HttpGet("folder")]
-        public async Task<IActionResult> GetByFolder([FromQuery] Guid? parentId, [FromQuery] bool? sortName, [FromQuery] bool? sortDate, [FromQuery] bool? sortType)
+        [HttpGet("statistical/gender")]
+        public async Task<IActionResult> StatisticalGenderCustomer()
         {
             try
             {
-                var results = await _customerService.GetFolder(parentId, sortName, sortDate, sortType);
+                var result = await _customerRepository.StatisticalGenderCustomer();
+                return StatusCode(200, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("statistical/dob")]
+        public async Task<IActionResult> StatisticalDobCustomer()
+        {
+            try
+            {
+                var result = await _customerRepository.StatisticalDobCustomer();
+                return StatusCode(200, result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("folder")]
+        public async Task<IActionResult> GetByFolder([FromQuery] Guid? parentId, [FromQuery] bool? sortName, [FromQuery] bool? sortDate, [FromQuery] bool? sortType,
+                                                    [FromQuery] string? keyword, [FromQuery] int pageSize, [FromQuery] int pageNumber)
+        {
+            try
+            {
+                var results = await _customerService.GetFolder(parentId, keyword, pageSize, pageNumber, sortName, sortDate, sortType);
 
                 return StatusCode(200, results);
             }

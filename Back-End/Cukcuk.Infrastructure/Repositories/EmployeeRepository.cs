@@ -1,14 +1,17 @@
 ﻿using Cukcuk.Core.DTOs;
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.Repositories;
+using Cukcuk.Infrastructure.Data;
 using Dapper;
+using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace Cukcuk.Infrastructure.Repositories
 {
-    public class EmployeeRepository(IDbConnection connection) : IEmployeeRepository
+    public class EmployeeRepository(IDbConnection connection, ApplicationDbContext dbContext) : IEmployeeRepository
     {
         private readonly IDbConnection _connection = connection;
+        private readonly ApplicationDbContext _dbContext = dbContext;
 
         public async Task<bool> CheckEmployeeCode(string employeeCode)
         {
@@ -56,6 +59,7 @@ namespace Cukcuk.Infrastructure.Repositories
             ";
             await _connection.ExecuteAsync(query, employeeDTO);
         }
+
 
         public async Task DeleteById(Guid id)
         {
@@ -163,6 +167,57 @@ namespace Cukcuk.Infrastructure.Repositories
             return "NV-" + newNumber.ToString("D5");
         }
 
+
+        public async Task CreateFolder(EmployeeFolder folder)
+        {
+            await _dbContext.AddAsync(folder);
+            await _dbContext.SaveChangesAsync();
+        }
+
+
+        public async Task<PageResult<EmployeeFolder>> GetFolder(Guid? parentId, string? keyword, int pageSize, int pageNumber, bool? sortName, bool? sortDate, bool? sortType)
+        {
+            var query = _dbContext.EmployeesFolders.AsNoTracking().AsQueryable();
+
+            query = query.Where(cf => parentId.HasValue ? cf.ParentId == parentId.Value : cf.ParentId == null);
+
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                query = query.Where(cf => cf.Name.Contains(keyword));
+            }
+
+            var totalItems = await query.CountAsync();
+
+            if (sortName.HasValue)
+            {
+                query = sortName.Value ? query.OrderBy(cf => cf.Name) : query.OrderByDescending(cf => cf.Name);
+            }
+
+            if (sortDate.HasValue)
+            {
+                query = sortDate.Value ? query.OrderBy(cf => cf.CreatedAt) : query.OrderByDescending(cf => cf.CreatedAt);
+            }
+
+            if (sortType.HasValue)
+            {
+                query = sortType.Value ? query.OrderBy(cf => cf.Type) : query.OrderByDescending(cf => cf.Type);
+            }
+
+            var employeeFolders = await query
+                .Skip(pageSize * (pageNumber - 1))
+                .Take(pageSize)
+                .Include(c => c.Employee)
+                .ToListAsync();
+
+            return new PageResult<EmployeeFolder>
+            {
+                Items = employeeFolders,
+                TotalItems = totalItems,
+                TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
+
+            };
+        }
+
         public async Task Update(EmployeeDTO employeeDTO)
         {
             var query = @"
@@ -186,6 +241,11 @@ namespace Cukcuk.Infrastructure.Repositories
                     ModifiedBy = @ModifiedBy
                 WHERE EmployeeId = @EmployeeId";
             await _connection.ExecuteAsync(query, employeeDTO);
+        }
+
+        public async Task<IEnumerable<EmployeeFolder>> GetFolderOnly()
+        {
+            return await _dbContext.EmployeesFolders.Where(cf => cf.Type == true).ToListAsync();
         }
     }
 }

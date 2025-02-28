@@ -1,12 +1,44 @@
 {
   "Files": [
     {
-      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\40128400-ddec-436d-a4f8-6d923ad70fa6_test.xlsx",
-      "PackagePath": "staticwebassets\\files\\40128400-ddec-436d-a4f8-6d923ad70fa6_test.xlsx"
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\0ca109b4-7b1f-4764-95eb-ae7b0fbd8687_word.docx",
+      "PackagePath": "staticwebassets\\files\\0ca109b4-7b1f-4764-95eb-ae7b0fbd8687_word.docx"
     },
     {
-      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\98d29c2f-73f8-49ad-86d7-d9574122183b_nhan vien.xlsx",
-      "PackagePath": "staticwebassets\\files\\98d29c2f-73f8-49ad-86d7-d9574122183b_nhan vien.xlsx"
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\1ec4092f-e807-4870-8db0-0a800da6d506_excel.xlsx",
+      "PackagePath": "staticwebassets\\files\\1ec4092f-e807-4870-8db0-0a800da6d506_excel.xlsx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\33ee000c-16c2-4f0c-8426-ee22a81820d4_new folder (1) (1).docx",
+      "PackagePath": "staticwebassets\\files\\33ee000c-16c2-4f0c-8426-ee22a81820d4_new folder (1) (1).docx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\3cf06bfc-550a-40d3-8b4c-9b5ade79d301_word.docx",
+      "PackagePath": "staticwebassets\\files\\3cf06bfc-550a-40d3-8b4c-9b5ade79d301_word.docx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\6437f829-4826-42b5-a329-bea95688a4ca_word.docx",
+      "PackagePath": "staticwebassets\\files\\6437f829-4826-42b5-a329-bea95688a4ca_word.docx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\9efdafc8-8065-41b5-bc7d-b337f33dc0e2_word (1).docx",
+      "PackagePath": "staticwebassets\\files\\9efdafc8-8065-41b5-bc7d-b337f33dc0e2_word (1).docx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\c2042736-6eec-4e91-8afd-c03b9177a116_word.docx",
+      "PackagePath": "staticwebassets\\files\\c2042736-6eec-4e91-8afd-c03b9177a116_word.docx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\df9f793c-d19d-48d4-bab3-cbf871fb7c8b_excel.xlsx",
+      "PackagePath": "staticwebassets\\files\\df9f793c-d19d-48d4-bab3-cbf871fb7c8b_excel.xlsx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\eed5612a-2b77-4f22-8699-eabe417f46af_word.docx",
+      "PackagePath": "staticwebassets\\files\\eed5612a-2b77-4f22-8699-eabe417f46af_word.docx"
+    },
+    {
+      "Id": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\f9adb7cd-f299-42b7-ba87-bcfb1d1945e5_new folder (1) (1).docx",
+      "PackagePath": "staticwebassets\\files\\f9adb7cd-f299-42b7-ba87-bcfb1d1945e5_new folder (1) (1).docx"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssets.props",

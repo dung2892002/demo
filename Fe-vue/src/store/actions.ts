@@ -646,4 +646,9 @@ export const actions: ActionTree<State, State> = {
   setupOnlineUsers({ commit }, users: string[]) {
     commit('setOnlineUsers', users)
   },
+
+  //document
+  setListDocuments({ commit }, document: Document[]) {
+    commit('setListDocuments', document)
+  },
 }

@@ -1,7 +1,9 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.DTOs;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Infrastructure.Data;
 using Dapper;
+using MathNet.Numerics.Statistics;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
@@ -86,23 +88,14 @@ namespace Cukcuk.Infrastructure.Repositories
             return (customers, totalRecords);
         }
 
-        public Task<IEnumerable<Customer?>> FindAll()
+        public async Task<IEnumerable<Customer?>> FindAll()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Customers.ToListAsync();
         }
 
         public async Task<Customer?> FindById(Guid? id)
         {
-            var query = @"
-                SELECT 
-                    c.*, 
-                    g.GroupId, g.GroupName
-                FROM 
-                    customer c
-                    LEFT JOIN customergroup g ON c.GroupId = g.GroupId
-                WHERE c.CustomerId = @Id
-            ";
-            return await _connection.QuerySingleOrDefaultAsync<Customer>(query, new { Id = id });
+            return await _dbContext.Customers.FirstOrDefaultAsync(c => c.CustomerId == id);
         }
 
         public async Task<string> GennerateNewCustomerCode()
@@ -125,17 +118,18 @@ namespace Cukcuk.Infrastructure.Repositories
             return "KH-" + newNumber.ToString("D5");
         }
 
-        public async Task<IEnumerable<CustomerFolder>> GetFolder(Guid? parentId, bool? sortName, bool? sortDate, bool? sortType)
+        public async Task<PageResult<CustomerFolder>> GetFolder(Guid? parentId, string? keyword, int pageSize, int pageNumber, bool? sortName, bool? sortDate, bool? sortType)
         {
-            var query = _dbContext.CustomFolders.AsQueryable();
+            var query = _dbContext.CustomFolders.AsNoTracking().AsQueryable();
 
-            if (parentId.HasValue)
+            query = query.Where(cf => parentId.HasValue ? cf.ParentId == parentId.Value : cf.ParentId == null);
+
+            if (!string.IsNullOrEmpty(keyword))
             {
-                query  = query.Where(cf => cf.ParentId == parentId.Value);
-            } else
-            {
-                query = query.Where(cf => cf.ParentId == null);
+                query = query.Where(cf => cf.Name.Contains(keyword));
             }
+
+            var totalItems = await query.CountAsync();
 
             if (sortName.HasValue)
             {
@@ -152,8 +146,17 @@ namespace Cukcuk.Infrastructure.Repositories
                 query = sortType.Value ? query.OrderBy(cf => cf.Type) : query.OrderByDescending(cf => cf.Type);
             }
 
-            var result = await query.Include(c => c.Customer).ToListAsync();
-            return result;
+            var customerFoldes = await query.Skip(pageSize * (pageNumber - 1))
+                .Take(pageSize)
+                .Include(c => c.Customer)
+                .ToListAsync();
+
+            return new PageResult<CustomerFolder>
+            {
+                Items = customerFoldes,
+                TotalItems = totalItems,
+                TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
+            };
         }
 
         public async Task Update(Customer entity)
@@ -180,9 +183,49 @@ namespace Cukcuk.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<Customer?> GetById(Guid? id)
+        public async Task<IEnumerable<CustomerFolder>> GetFolderOnly()
         {
-            return await _dbContext.Customers.FirstOrDefaultAsync(c => c.CustomerId == id);
+            return await _dbContext.CustomFolders.Where(cf => cf.Type == true).ToListAsync();
+        }
+
+        public async Task<StatisticalGenderResponse> StatisticalGenderCustomer()
+        {
+            var result = await _dbContext.Customers.AsNoTracking()
+                .GroupBy(c => c.Gender)
+                .Select(g => new
+                {
+                    Gender = g.Key,
+                    Count = g.Count()
+                })
+                .ToListAsync();
+
+            int totalMale = result.FirstOrDefault(s => s.Gender == 1)?.Count ?? 0;
+            int totalFemale = result.FirstOrDefault(s => s.Gender == 0)?.Count ?? 0;
+            int total = result.Sum(s => s.Count);
+            int totalUnknown = total - totalMale - totalFemale;
+
+            return new StatisticalGenderResponse
+            {
+                Total = total,
+                TotalMale = totalMale,
+                TotalFemale = totalFemale,
+                TotalUnknown = totalUnknown
+            };
+        }
+
+        public async Task<IEnumerable<StatisticalDobResponse>> StatisticalDobCustomer()
+        {
+            var result = await _dbContext.Customers.AsNoTracking()
+                .GroupBy(c => c.DateOfBirth.Value.Year)
+                .OrderBy(g  => g.Key)
+                .Select(g => new StatisticalDobResponse
+                    {
+                        YearValue = g.Key,
+                        CountValue = g.Count()
+                    })
+                .ToListAsync();
+
+            return result;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Cukcuk.Core.DTOs;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Helper;
 using Microsoft.AspNetCore.Http;
 
@@ -15,5 +16,9 @@ namespace Cukcuk.Core.Interfaces.Services
         Task<object> ImportExcelFile(IFormFile file);
 
         Task AddDataImport(Guid cacheId);
+
+        Task<PageResult<EmployeeFolder>> GetFolder(Guid? parentId, string? keyword, int pageSize, int pageNumber, bool? sortName, bool? sortDate, bool? sortType);
+
+        Task CreateFolder(EmployeeFolder folder);
     }
 }

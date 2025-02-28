@@ -303,5 +303,25 @@ namespace Cukcuk.Core.Services
             await _employeeRepository.Update(employeeDTO);
         }
 
+        public async Task<PageResult<EmployeeFolder>> GetFolder(Guid? parentId, string? keyword, int pageSize, int pageNumber, bool? sortName, bool? sortDate, bool? sortType)
+        {
+            return await _employeeRepository.GetFolder(parentId, keyword, pageSize, pageNumber, sortName, sortDate, sortType);
+        }
+
+        public async Task CreateFolder(EmployeeFolder folder)
+        {
+            if (folder.EmployeeId != null)
+            {
+                var employee = await _employeeRepository.FindById(folder.EmployeeId) ?? throw new ArgumentException("employee not exist");
+                folder.Name = employee.Fullname;
+            }
+            folder.CreatedAt = DateTime.Now;
+            folder.Id = Guid.NewGuid();
+            folder.Children = new List<EmployeeFolder>();
+            folder.Employee = null;
+            folder.Parent = null;
+
+            await _employeeRepository.CreateFolder(folder);
+        }
     }
 }

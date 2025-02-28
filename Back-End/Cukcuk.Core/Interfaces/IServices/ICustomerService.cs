@@ -18,7 +18,7 @@ namespace Cukcuk.Core.Interfaces.IServices
 
         Task<IEnumerable<CustomerGroup?>> GetGroups();
 
-        Task<IEnumerable<CustomerFolder>> GetFolder(Guid? parentId, bool? sortName, bool? sortDate, bool? sortType);
+        Task<PageResult<CustomerFolder>> GetFolder(Guid? parentId, string? keyword, int pageSize, int pageNumber, bool? sortName, bool? sortDate, bool? sortType);
 
         Task CreateFolder(CustomerFolder folder);
     }

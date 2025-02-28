@@ -11,9 +11,12 @@ namespace Cukcuk.Core.Interfaces.IRepositories
         Task<bool> CheckCustomerCode(string customerCode);
         Task<bool> CheckMobileNumber(string mobileNumber);
 
-        Task<IEnumerable<CustomerFolder>> GetFolder(Guid? parentId, bool? sortName, bool? sortDate, bool? sortType);
+        Task<PageResult<CustomerFolder>> GetFolder(Guid? parentId, string? keyword, int pageSize, int pageNumber, bool? sortName, bool? sortDate, bool? sortType);
         Task CreateFolder(CustomerFolder folder);
 
-        Task <Customer?> GetById(Guid? id);
+        Task<IEnumerable<CustomerFolder>> GetFolderOnly();
+
+        Task<StatisticalGenderResponse> StatisticalGenderCustomer();
+        Task<IEnumerable<StatisticalDobResponse>> StatisticalDobCustomer();
     }
 }

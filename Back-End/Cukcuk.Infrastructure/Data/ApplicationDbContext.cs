@@ -21,6 +21,11 @@ namespace Cukcuk.Infrastructure.Data
         public virtual DbSet<UserPermission> UserPermissions { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<CustomerFolder> CustomFolders { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeeFolder> EmployeesFolders { get; set; }
+
+        public virtual DbSet<DocumentCategory> DocumentCategories { get; set; }
+        public virtual DbSet<Document> Documents { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -154,6 +159,63 @@ namespace Cukcuk.Infrastructure.Data
                     .WithMany(m => m.CustomerFolders)
                     .HasForeignKey(e => e.CustomerId)
                     .HasConstraintName("FK_customer_folder_CustomerId");
+            });
+
+            modelBuilder.Entity<Employee>(entity =>
+            {
+                entity.HasKey(e => e.EmployeeId).HasName("PRIMARY");
+                entity.ToTable("employee");
+            });
+
+            modelBuilder.Entity<EmployeeFolder>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("PRIMARY");
+                entity.ToTable("employee_folder");
+
+                entity.Property(e => e.Name).HasMaxLength(255);
+                entity.Property(e => e.CreatedAt).HasColumnType("date_time");
+
+
+                entity.HasOne(e => e.Parent)
+                    .WithMany(m => m.Children)
+                    .HasForeignKey(e => e.ParentId)
+                    .HasConstraintName("FK_employee_folder_ParentId");
+
+                entity.HasOne(e => e.Employee)
+                    .WithMany(m => m.EmployeeFolders)
+                    .HasForeignKey(e => e.EmployeeId)
+                    .HasConstraintName("FK_employee_folder_EmployeeId");
+            });
+
+            modelBuilder.Entity<DocumentCategory>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("PRIMARY");
+                entity.ToTable("document_category");
+
+                entity.Property(entity => entity.Name).HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<Document>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("PRIMARY");
+                entity.ToTable("document");
+
+                entity.Property(e => e.Name).HasMaxLength(255);
+                entity.Property(e => e.Path).HasMaxLength(255);
+                entity.Property(e => e.CreatedAt).HasColumnType("date_time");
+
+                entity.Property(e => e.Type).HasConversion<string>();
+
+                entity.HasOne(e => e.Parent)
+                    .WithMany(m => m.Children)
+                    .HasForeignKey(e => e.ParentId)
+                    .HasConstraintName("FK_document_ParentId")
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(e => e.Category)
+                    .WithMany(m => m.Documents)
+                    .HasForeignKey(e => e.CategoryId)
+                    .HasConstraintName("FK_document_CategoryId");
             });
             base.OnModelCreating(modelBuilder);
         }

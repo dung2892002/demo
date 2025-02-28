@@ -24,6 +24,11 @@
             <img src="/src/assets/icon/search.png" alt="logo" />
           </button>
         </div>
+        <div class="toolbar_sort">
+          <span v-loading="sortNameLoading" @click="handleSortByName()">Theo tên</span>
+          <span v-loading="sortDateLoading" @click="handleSortByDate()">Theo ngày tạo</span>
+          <span v-loading="sortTypeLoading" @click="handleSortByType()">Theo loại</span>
+        </div>
         <div class="toolbar__actions">
           <button class="toolbar-action" @click="importFile()">
             <img src="/src/assets/icon/import.png" alt="logo" />
@@ -36,13 +41,25 @@
           </button>
         </div>
       </div>
+      <div class="content__filter">
+        <div class="folder-route">
+          <span @click="goStartFolder" v-if="listFolder.length > 0">Nhân viên</span>
+          <div
+            v-for="(folder, index) in listFolder"
+            :key="index"
+            @click="routeFolder(folder, index)"
+          >
+            ><span> {{ folder.Name }}</span>
+          </div>
+        </div>
+      </div>
       <div class="main-container" ref="tableContainer">
         <table class="employee-table">
           <thead>
             <tr>
               <th class="w-6">STT</th>
-              <th class="w-10">Mã NV</th>
-              <th class="w-20">Họ và tên</th>
+              <th class="w-20">Tên</th>
+              <th class="w-10">Mã KH</th>
               <th class="w-10">Giới tính</th>
               <th class="w-12">Ngày sinh</th>
               <th class="w-30">Email</th>
@@ -52,19 +69,28 @@
           </thead>
           <tbody>
             <tr
-              v-for="(employee, index) in employees"
+              v-for="(folder, index) in employeeFolders"
               :key="index"
-              @contextmenu.prevent="showContextMenu($event, employee.EmployeeId, index)"
+              @contextmenu.prevent="showContextMenu($event, folder.EmployeeId, index)"
+              style="cursor: pointer"
+              @click="selectFolder(folder)"
             >
               <td>{{ index + 1 }}</td>
-              <td>{{ employee.EmployeeCode }}</td>
-              <td>{{ employee.Fullname }}</td>
-              <td>{{ employee.GenderName }}</td>
-              <td>{{ formatDate(employee.DateOfBirth) }}</td>
-              <td>{{ employee.Email }}</td>
-              <td>{{ employee.Address }}</td>
               <td>
-                <div class="action" :ref="`action-${index}`">
+                <img
+                  src="/src/assets/icon/folder.png"
+                  v-if="folder.Type"
+                  style="width: 24px; height: 24px; margin-right: 6px; vertical-align: middle"
+                />
+                <span style="vertical-align: middle">{{ folder.Name }}</span>
+              </td>
+              <td>{{ folder.Employee?.EmployeeCode }}</td>
+              <td>{{ folder.Employee?.GenderName }}</td>
+              <td>{{ folder.Employee ? formatDate(folder.Employee?.DateOfBirth) : '' }}</td>
+              <td>{{ folder.Employee?.Email }}</td>
+              <td>{{ folder.Employee?.Address }}</td>
+              <td>
+                <div class="action" :ref="`action-${index}`" v-if="folder.Type == false">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
                       <img src="/src/assets/icon/option.png" alt="" />
@@ -75,27 +101,18 @@
                       :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
                     >
                       <span
-                        @click="deleteEmployee(employee.EmployeeId, index)"
+                        @click="deleteEmployee(folder.EmployeeId, index)"
                         v-loading="deleteLoading == index"
                         >Xóa</span
                       >
+                      <span @click="deleteEmployee(folder.EmployeeId, index)">Xóa</span>
                       <span
-                        @click="deleteEmployee(employee.EmployeeId, index)"
-                        v-loading="deleteLoading == index"
-                        >Xóa</span
-                      >
-                      <span
-                        @click="deleteEmployee(employee.EmployeeId, index)"
-                        v-loading="deleteLoading == index"
-                        >Xóa</span
-                      >
-                      <span
-                        @click="updateEmployee(employee.EmployeeId, index)"
+                        @click="updateEmployee(folder.EmployeeId, index)"
                         v-loading="updateLoading == index"
                         >Sửa
                       </span>
                       <span
-                        @click="updateEmployee(employee.EmployeeId, index)"
+                        @click="updateEmployee(folder.EmployeeId, index)"
                         v-loading="updateLoading == index"
                         >Sửa
                       </span>
@@ -140,13 +157,15 @@ import '/src/styles/layout/toolbar.scss'
 import '/src/styles/layout/table.scss'
 import '/src/styles/utils.css'
 import ThePagnigation from '@/components/ThePagnigation.vue'
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import ContextMenu from '@/components/ContextMenu.vue'
 import type { ActionMenu } from '@/entities/ActionMenu'
 import router from '@/router'
 import EmployeeForm from './EmployeeForm.vue'
 import { formatDate } from '@/utils'
+import axios from 'axios'
+import type { EmployeeFolder } from '../../entities/EmployeeFolder'
 
 const showForm = ref(false)
 
@@ -193,15 +212,14 @@ const targetIndex = ref(-1)
 
 const pageSize = ref(10)
 const pageNumber = ref(1)
-const keyword = ref<string>()
+const keyword = ref<string | null>()
 const employeeUpdateId = ref<string>('')
 const store = useStore()
 
 const showPopupAction = ref<number>(-1)
 const showMenu = ref(false)
 
-const departmentId = ref<string | null>(null)
-const positionId = ref<string | null>(null)
+const listFolder = ref<EmployeeFolder[]>([])
 
 const popupPosition = ref({
   top: 0,
@@ -213,20 +231,19 @@ const menuPosition = ref({
   left: 0,
 })
 
-function showContextMenu(event: MouseEvent, employeeId: string, index: number) {
+function showContextMenu(event: MouseEvent, employeeId: string | null, index: number) {
   menuPosition.value.top = event.clientY
   menuPosition.value.left = event.clientX
   showMenu.value = true
   showPopupAction.value = -1
-  targetEmployeeId.value = employeeId
   targetIndex.value = index
+  targetEmployeeId.value = employeeId || ''
 }
 
 function closeContextMenu() {
   showMenu.value = false
 }
 
-let activeButton: HTMLElement | null = null
 function togglePopupAction(index: number, event: MouseEvent): void {
   const target = event.target instanceof HTMLElement ? event.target : null
   if (!target) return
@@ -238,26 +255,19 @@ function togglePopupAction(index: number, event: MouseEvent): void {
     right: window.innerWidth - buttonRect.left,
   }
 
-  activeButton = target
-
   showPopupAction.value = showPopupAction.value === index ? -1 : index
   showMenu.value = false
 }
 
 async function handleRefresh() {
   refreshLoading.value = true
-  await fetchEmployees()
+  await fetchEmployeeFolders()
   refreshLoading.value = false
-}
-
-function updatePopupPosition() {
-  if (!activeButton) return
-  showPopupAction.value = -1
 }
 
 function closeForm() {
   showForm.value = false
-  fetchEmployees()
+  fetchEmployeeFolders()
 }
 
 function addNew() {
@@ -266,19 +276,19 @@ function addNew() {
   employeeUpdateId.value = ''
 }
 
-function updateEmployee(id: string, index: number) {
+function updateEmployee(id: string | null, index: number) {
   updateLoading.value = index
   showForm.value = true
-  employeeUpdateId.value = id
+  if (id) employeeUpdateId.value = id
 }
 
-async function deleteEmployee(id: string, index: number) {
+async function deleteEmployee(id: string | null, index: number) {
   deleteLoading.value = index
   await store.dispatch('deleteEmployee', {
     id: id,
     token: accessToken.value,
   })
-  await fetchEmployees()
+  await fetchEmployeeFolders()
   deleteLoading.value = -1
   showPopupAction.value = -1
 }
@@ -294,21 +304,21 @@ async function handlePageSizeChange(newPageSize: number) {
   pageLoading.value = true
   pageSize.value = newPageSize
   pageNumber.value = 1
-  await fetchEmployees()
+  await fetchEmployeeFolders()
   pageLoading.value = false
 }
 
 async function handlePageChange(newPageNumber: number) {
   pageLoading.value = true
   pageNumber.value = newPageNumber
-  await fetchEmployees()
+  await fetchEmployeeFolders()
   pageLoading.value = false
 }
 
 async function handleSearch() {
   searchLoading.value = true
   pageNumber.value = 1
-  await fetchEmployees()
+  await fetchEmployeeFolders()
   searchLoading.value = false
 }
 
@@ -322,18 +332,6 @@ async function handleExportFile() {
   exportLoading.value = false
 }
 
-async function fetchEmployees() {
-  await store.dispatch('fetchEmployees', {
-    pageSize: pageSize.value,
-    pageNumber: pageNumber.value,
-    keyword: keyword.value,
-    departmentId: departmentId.value,
-    positionId: positionId.value,
-    token: accessToken.value,
-  })
-  scrollTable()
-}
-
 function scrollTable() {
   if (tableContainer.value) {
     tableContainer.value.scrollTo({
@@ -343,20 +341,114 @@ function scrollTable() {
   }
 }
 
+const parentId = ref<string | null>(null)
+const sortName = ref<boolean | null>(null)
+const sortDate = ref<boolean | null>(null)
+const sortType = ref<boolean | null>(false)
+
+const sortNameLoading = ref(false)
+const sortDateLoading = ref(false)
+const sortTypeLoading = ref(false)
+const employeeFolders = ref<EmployeeFolder[]>([])
+
+async function fetchEmployeeFolders() {
+  try {
+    const response = await axios.get('https://localhost:7160/api/v1/Employees/folder', {
+      params: {
+        parentId: parentId.value,
+        keyword: keyword.value,
+        pageNumber: pageNumber.value,
+        pageSize: pageSize.value,
+        sortName: sortName.value,
+        sortDate: sortDate.value,
+        sortType: sortType.value,
+      },
+    })
+
+    employeeFolders.value = response.data.Items
+    store.commit('setTotalRecords', response.data.TotalItems)
+    store.commit('setTotalPages', response.data.TotalPages)
+    scrollTable()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+function resetQuery() {
+  parentId.value = null
+  keyword.value = null
+  sortName.value = null
+  sortDate.value = null
+  sortType.value = false
+  pageNumber.value = 1
+}
+
+function selectFolder(folder: EmployeeFolder) {
+  if (folder.Type) {
+    resetQuery()
+    parentId.value = folder.Id
+    fetchEmployeeFolders()
+    listFolder.value.push(folder)
+  }
+}
+
+async function handleSortByName() {
+  if (sortName.value === null) {
+    sortName.value = true
+  } else {
+    sortName.value = !sortName.value
+  }
+  sortType.value = null
+  sortDate.value = null
+
+  sortNameLoading.value = true
+  await fetchEmployeeFolders()
+  sortNameLoading.value = false
+}
+
+async function handleSortByType() {
+  sortType.value = !sortType.value
+  sortName.value = null
+  sortDate.value = null
+
+  sortTypeLoading.value = true
+  await fetchEmployeeFolders()
+  sortTypeLoading.value = false
+}
+
+async function handleSortByDate() {
+  if (sortDate.value === null) {
+    sortDate.value = true
+  } else {
+    sortDate.value = !sortDate.value
+  }
+  sortName.value = null
+  sortType.value = null
+
+  sortDateLoading.value = true
+  await fetchEmployeeFolders()
+  sortDateLoading.value = false
+}
+
+function goStartFolder() {
+  resetQuery()
+  fetchEmployeeFolders()
+  listFolder.value = []
+}
+
+function routeFolder(folder: EmployeeFolder, index: number) {
+  resetQuery()
+  parentId.value = folder.Id
+  fetchEmployeeFolders()
+  listFolder.value = listFolder.value.slice(0, index + 1)
+}
+
 const employees = computed(() => store.getters.getEmployees)
 const accessToken = computed(() => store.getters.getAccessToken)
 
 onMounted(() => {
   store.dispatch('fetchDepartments')
   store.dispatch('fetchPositions')
-  fetchEmployees()
-
-  const scrollContainer = document.querySelector('.main-container')
-  scrollContainer?.addEventListener('scroll', updatePopupPosition)
-})
-
-onUnmounted(() => {
-  const scrollContainer = document.querySelector('.main-container')
-  scrollContainer?.removeEventListener('scroll', updatePopupPosition)
+  fetchEmployeeFolders()
 })
 </script>

@@ -34,11 +34,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 #app {
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: #e5e5e5;
+  height: 100vh;
 }
 .container {
   display: flex;
@@ -84,6 +92,7 @@ body {
   align-items: center;
   text-align: center;
   min-width: 80px;
+  margin-left: 6px;
 }
 
 .button--add-logo {
@@ -371,7 +380,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 
   div:not(.folder-route) {
     border-radius: 4px;
@@ -433,4 +442,8 @@ body {
       }
     }
   }
+}
+
+.highlight {
+  background-color: yellow;
 }

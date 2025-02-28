@@ -102,6 +102,8 @@ const iconList = ref<string[]>([
   'fa-solid fa-user',
   'fa-solid fa-user-group',
   'fa-solid fa-comments',
+  'fa-solid fa-chart-simple',
+  'fa-solid fa-book',
 ])
 
 const menuValue = ref<Menu>({

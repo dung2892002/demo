@@ -230,21 +230,15 @@ namespace Cukcuk.Core.Services
             return await _customerGroupRepository.FindAll();
         }
 
-
-        public async Task<IEnumerable<CustomerFolder>> GetFolder(Guid? parentId, bool? sortName, bool? sortDate, bool? sortType)
-        {
-            return await _customerRepository.GetFolder(parentId, sortName, sortDate, sortType);
-        }
-
         public async Task CreateFolder(CustomerFolder folder)
         {
 
             if (folder.CustomerId != null)
             {
-                var customer = await _customerRepository.GetById(folder.CustomerId) ?? throw new ArgumentException("Customer not exist");
+                var customer = await _customerRepository.FindById(folder.CustomerId) ?? throw new ArgumentException("Customer not exist");
                 folder.Name = customer.Fullname;
-                Console.WriteLine("Ten the muc:", folder.Name);
             }
+
             folder.CreatedAt = DateTime.Now;
             folder.Id = Guid.NewGuid();
             folder.Children = new List<CustomerFolder>();
@@ -252,6 +246,11 @@ namespace Cukcuk.Core.Services
             folder.Parent = null;
 
             await _customerRepository.CreateFolder(folder);
+        }
+
+        public async Task<PageResult<CustomerFolder>> GetFolder(Guid? parentId, string? keyword, int pageSize, int pageNumber, bool? sortName, bool? sortDate, bool? sortType)
+        {
+            return await _customerRepository.GetFolder(parentId, keyword, pageSize, pageNumber, sortName, sortDate, sortType);
         }
     }
 }

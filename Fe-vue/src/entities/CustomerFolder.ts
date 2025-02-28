@@ -1,6 +1,6 @@
 import type { Customer } from './Customer'
 
-export type CustomerFolder = {
+export interface CustomerFolder {
   Id: string
   Name: string
   ParentId: string | null

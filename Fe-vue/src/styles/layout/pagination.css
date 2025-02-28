@@ -1,5 +1,5 @@
 .pagination {
-  margin-top: 14px;
+  margin-top: 10px;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -21,7 +21,7 @@
 
 .control_page {
   display: flex;
-  flex-direction: ro;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -44,7 +44,6 @@
 #prev-page:hover img,
 #next-page:hover img {
   filter: invert(29%) sepia(77%) saturate(4244%) hue-rotate(77deg);
-  scale: 1.5;
 }
 
 #prev-page img,

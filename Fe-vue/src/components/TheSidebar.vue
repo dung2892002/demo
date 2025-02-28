@@ -63,7 +63,6 @@ function toggleSidebar() {
 
 function handleSelectMenu(menu: Menu) {
   router.push(`${menu.MenuPath}`)
-  store.dispatch('setupCurrentMenu', menu)
 }
 
 const menus = computed(() => store.getters.getMenus)

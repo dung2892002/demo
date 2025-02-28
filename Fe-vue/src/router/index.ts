@@ -9,6 +9,8 @@ import EmployeePage from '@/views/employee/EmployeePage.vue'
 import CustomerPage from '@/views/customer/CustomerPage.vue'
 import ChatRealtime from '@/views/ChatRealtime.vue'
 import SettingExcel from '@/views/settings/SettingExcel.vue'
+import StatisticalPage from '@/views/statistical/StatisticalPage.vue'
+import DocumentPage from '@/views/document/DocumentPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -69,6 +71,18 @@ const router = createRouter({
           path: '/chats',
           name: 'chats',
           component: ChatRealtime,
+          meta: { requiresAuth: true },
+        },
+        {
+          path: '/statistical',
+          name: 'statisticals',
+          component: StatisticalPage,
+          meta: { requiresAuth: true },
+        },
+        {
+          path: '/documents',
+          name: 'documents',
+          component: DocumentPage,
           meta: { requiresAuth: true },
         },
       ],

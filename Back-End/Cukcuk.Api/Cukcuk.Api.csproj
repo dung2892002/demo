@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +21,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Cukcuk.Core\Cukcuk.Core.csproj" />
     <ProjectReference Include="..\Cukcuk.Infrastructure\Cukcuk.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\intern\Back-End\Cukcuk.Api\.editorconfig" />
   </ItemGroup>
 
 </Project>

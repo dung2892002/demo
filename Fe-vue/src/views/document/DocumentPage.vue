@@ -6,20 +6,30 @@
           <img
             src="/src/assets/icon/btn-prev-page.svg"
             alt=""
-            v-if="listDocuments.length > 0"
-            @click="goBackDoucument"
+            v-if="currentDocument"
+            @click="goPreRequest"
           />
           <span @click="backToRoot">Tài liệu</span>
-          <div
-            v-for="(document, index) in listDocuments"
-            :key="index"
-            @click="routeDocument(document, index)"
+          <span v-if="listParents.length > 1"
+            ><img
+              src="/src/assets/icon/btn-next-page.svg"
+              alt=""
+              style="width: 16px; height: 16px"
+            />...</span
           >
+          <div v-if="listParents.length > 0" @click="routeDocument(listParents[0])">
             <img
               src="/src/assets/icon/btn-next-page.svg"
               alt=""
               style="width: 16px; height: 16px"
-            /><span> {{ document.Name }}</span>
+            /><span> {{ listParents[0].Name }}</span>
+          </div>
+          <div alt="" v-if="currentDocument">
+            <img
+              src="/src/assets/icon/btn-next-page.svg"
+              alt=""
+              style="width: 16px; height: 16px"
+            /><span> {{ currentDocument?.Name }}</span>
           </div>
         </div>
       </div>
@@ -47,6 +57,7 @@
               id="search-employee"
               placeholder="Tìm kiếm theo từ khóa"
               v-model="keyword"
+              @input="handleInput"
               @keydown.enter="fetchDocument"
             />
           </div>
@@ -142,15 +153,13 @@ import ThePagnigation from '@/components/ThePagnigation.vue'
 import { DocumentType, type Document } from '@/entities/Document'
 import { formatDate, getSrcIconDocument } from '@/utils'
 import axios from 'axios'
-import { onMounted, ref, watch } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import AddFileForm from './AddFileForm.vue'
 import AddFolderForm from './AddFolderForm.vue'
 import MoveDocument from './MoveDocument.vue'
 import FileDetail from './FileDetail.vue'
 import UpdateForm from './UpdateForm.vue'
-
-import debounce from 'lodash/debounce'
 
 const keyword = ref<string>('')
 const store = useStore()
@@ -170,18 +179,55 @@ const typeFilter = ref<DocumentType | null>(null)
 
 const documents = ref<Document[]>([])
 
-const listDocuments = ref<Document[]>([])
+const listParents = ref<Document[]>([])
 
 const showAddFileForm = ref(false)
 const showAddFolderForm = ref(false)
 const showMoveDocumentForm = ref(false)
 const showUpdateForm = ref(false)
 
-const debouncedFind = debounce(fetchDocument, 500)
+let timeout: ReturnType<typeof setTimeout> | null = null
 
-watch(keyword, () => {
-  debouncedFind()
-})
+function handleInput() {
+  if (timeout) {
+    clearTimeout(timeout)
+  }
+
+  timeout = setTimeout(() => {
+    fetchDocument()
+    handleAddRequest()
+  }, 500)
+}
+
+interface Request {
+  document: Document | null
+  keyword: string
+}
+
+const requests = ref<Request[]>([
+  {
+    document: null,
+    keyword: '',
+  },
+])
+
+function goPreRequest() {
+  requests.value.pop()
+
+  const preRequest = requests.value[requests.value.length - 1]
+  if (preRequest) {
+    keyword.value = preRequest.keyword
+    currentDocument.value = preRequest.document
+
+    fetchDocument()
+
+    if (preRequest.document?.Id) {
+      fetchParentFolders(preRequest.document.Id!)
+    } else {
+      listParents.value = []
+    }
+  }
+}
 
 const moveDocument = ref<Document>({
   Id: '',
@@ -280,45 +326,39 @@ function closeFile() {
   }
 }
 
+function handleAddRequest() {
+  requests.value.push({
+    document: currentDocument.value || null,
+    keyword: keyword.value,
+  })
+}
+
 function handleSelectDocument(document: Document) {
   if (document.Type === DocumentType.Folder) {
     resetQuery()
     currentDocument.value = document
-    listDocuments.value.push(document)
     showPopupAction.value = -1
+    keyword.value = ''
     fetchDocument()
+    fetchParentFolders(document.Id!)
+    handleAddRequest()
   } else {
     documentDetail.value = document
     showDocumentDetail.value = true
   }
 }
 
-function goBackDoucument() {
+function routeDocument(document: Document) {
   resetQuery()
-  if (listDocuments.value.length > 1) {
-    listDocuments.value.pop()
-    currentDocument.value = listDocuments.value[listDocuments.value.length - 1]
-    fetchDocument()
-  } else {
-    listDocuments.value = []
-    currentDocument.value = null
-    fetchDocument()
-  }
-}
-
-function routeDocument(document: Document, index: number) {
-  if (index < listDocuments.value.length - 1) {
-    resetQuery()
-    listDocuments.value = listDocuments.value.slice(0, index + 1)
-    currentDocument.value = document
-    fetchDocument()
-  }
+  currentDocument.value = document
+  fetchParentFolders(document.Id!)
+  fetchDocument()
 }
 
 function backToRoot() {
-  if (listDocuments.value.length > 0) {
+  if (currentDocument.value) {
     resetQuery()
-    listDocuments.value = []
+    listParents.value = []
     currentDocument.value = null
     fetchDocument()
   }
@@ -370,6 +410,20 @@ function highlightText(text: string, keyword: string) {
 
   result += text.slice(lastIndex)
   return result
+}
+
+async function fetchParentFolders(id: string) {
+  try {
+    const response = await axios.get(`https://localhost:7160/api/v1/Documents/parents`, {
+      params: {
+        id: id,
+      },
+    })
+
+    listParents.value = response.data
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 async function fetchDocument() {

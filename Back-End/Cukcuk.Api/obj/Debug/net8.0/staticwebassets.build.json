@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QhF+8z9GYGKKdxegx2i+xyJjusO7zwOHq9ODlH77z+U=",
+  "Hash": "JEro25NVhYSNWloEHv4VMBiOv9mf9A8tc+7KMKgzfP0=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx"
+    },
+    {
+      "Identity": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\intern\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx"
     }
   ]
 }

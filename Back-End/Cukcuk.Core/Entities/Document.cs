@@ -16,6 +16,7 @@ namespace Cukcuk.Core.Entities
         [JsonIgnore]
         public Document? Parent { get; set; }
 
+        [JsonIgnore]
         public List<Document> Children { get; set; } = new List<Document>();
 
         public Guid? CategoryId { get; set; }

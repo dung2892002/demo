@@ -700,6 +700,22 @@
   },
   {
     "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
+    "Method": "FilterDocuments",
+    "RelativePath": "api/v1/Documents/parents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
     "Method": "GetSubsDocumentFolder",
     "RelativePath": "api/v1/Documents/subs",
     "HttpMethod": "GET",

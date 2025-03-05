@@ -6,6 +6,7 @@ using Cukcuk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using System.Text.RegularExpressions;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace Cukcuk.Infrastructure.Repositories
 {
@@ -172,6 +173,33 @@ namespace Cukcuk.Infrastructure.Repositories
         public async Task<IEnumerable<Document>> GetSubsDocument(Guid parentId)
         {
             return await _dbContext.Documents.AsNoTracking().Where(d => d.ParentId == parentId).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Document>> GetParentDocuments(Guid id)
+        {
+            
+            var document = await _dbContext.Documents.SingleOrDefaultAsync(d => d.Id == id) ?? throw new ArgumentException("Document not exist");
+
+            var documents = new List<Document>();
+
+            await GetParent(document, documents);
+
+            return documents;
+        }
+
+        private async Task GetParent(Document document, List<Document> documents)
+        {
+
+            if (document.ParentId == null)
+            {
+                return;
+            }
+
+            var parent = await _dbContext.Documents.SingleOrDefaultAsync(d => d.Id == document.ParentId) ?? throw new ArgumentException("Document not exist");
+
+            documents.Add(parent);
+
+            await GetParent(parent, documents);
         }
     }
 }

@@ -256,5 +256,10 @@ namespace Cukcuk.Core.Services
                 await HandleUpdatePathSubDocument(children);
             }
         }
+
+        public async Task<IEnumerable<Document>> GetParentDocuments(Guid id)
+        {
+            return await _documentRepository.GetParentDocuments(id);
+        }
     }
 }

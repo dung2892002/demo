@@ -11,6 +11,22 @@ namespace Cukcuk.Api.Controllers
     {
         private readonly IDocumentService _documentService = documentService;
 
+
+        [HttpGet("parents")]
+        public async Task<IActionResult> FilterDocuments([FromQuery] Guid id)
+        {
+            try
+            {
+                var results = await _documentService.GetParentDocuments(id);
+                return Ok(results);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpGet("filter")]
         public async Task<IActionResult> FilterDocuments([FromQuery] Guid? parentId, [FromQuery] string? keyword, [FromQuery] int pageSize,
             [FromQuery] int pageNumber, [FromQuery] Guid? categoryId, [FromQuery] DocumentType? type)

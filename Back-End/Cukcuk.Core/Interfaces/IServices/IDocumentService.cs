@@ -26,5 +26,6 @@ namespace Cukcuk.Core.Interfaces.IServices
         Task<IEnumerable<Document>> GetSubsDocumentFolder(Guid? parentId);
 
         Task MoveDocument(Guid id, Guid? parentId);
+        Task<IEnumerable<Document>> GetParentDocuments(Guid id);
     }
 }

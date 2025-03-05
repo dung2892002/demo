@@ -23,5 +23,7 @@ namespace Cukcuk.Core.Interfaces.IRepositories
 
         Task<string> GetUniqueDocumentName(Guid? parentId, string inputName, DocumentType type, Guid? documentId);
         Task<IEnumerable<Document>> GetSubsDocument(Guid parentId);
+
+        Task<IEnumerable<Document>> GetParentDocuments(Guid id);
     }
 }

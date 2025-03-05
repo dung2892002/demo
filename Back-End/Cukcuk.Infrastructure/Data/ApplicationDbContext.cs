@@ -202,6 +202,7 @@ namespace Cukcuk.Infrastructure.Data
 
                 entity.Property(e => e.Name).HasMaxLength(255);
                 entity.Property(e => e.Path).HasMaxLength(255);
+                entity.Property(e => e.FolderPath).HasMaxLength(2500);
                 entity.Property(e => e.CreatedAt).HasColumnType("date_time");
 
                 entity.Property(e => e.Type).HasConversion<string>();

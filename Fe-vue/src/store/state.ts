@@ -26,5 +26,4 @@ export const state: State = {
   customer: null,
   customerGroups: [],
   onlineUsers: [],
-  listDocuments: [],
 }

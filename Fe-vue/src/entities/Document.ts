@@ -2,13 +2,15 @@ export interface Document {
   Id: string | null
   Name: string
   Path?: string
-  DocumentPath: string
+  FolderPath: string
   CreatedAt: string | null
   ParentId?: string | null
   CategoryId?: string | null
   Category?: DocumentCategory
   Type: DocumentType
   Children?: Document[]
+  IsLoaded?: boolean
+  IsExpend?: boolean
 }
 
 export interface DocumentCategory {

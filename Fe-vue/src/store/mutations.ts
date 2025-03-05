@@ -82,7 +82,4 @@ export const mutations: MutationTree<State> = {
   setOnlineUsers(state, users) {
     state.onlineUsers = users
   },
-  setListDocuments(state, documents) {
-    state.listDocuments = documents
-  },
 }

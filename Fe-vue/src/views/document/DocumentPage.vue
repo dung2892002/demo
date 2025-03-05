@@ -60,6 +60,7 @@
               <th class="w-20">Tên tài liệu</th>
               <th class="w-10">Thể loại</th>
               <th class="w-10">Ngày tạo</th>
+              <th class="w-30" v-if="keyword.trim().length > 0">Vị trí</th>
               <th class="w-10">Hành động</th>
             </tr>
           </thead>
@@ -80,6 +81,7 @@
               </td>
               <td>{{ document.Category?.Name }}</td>
               <td>{{ document.CreatedAt ? formatDate(document.CreatedAt) : '' }}</td>
+              <td v-if="keyword.trim().length > 0">{{ document.FolderPath }}</td>
               <td>
                 <div class="action" :ref="`action-${index}`">
                   <div class="action-buttons">
@@ -175,7 +177,7 @@ const showAddFolderForm = ref(false)
 const showMoveDocumentForm = ref(false)
 const showUpdateForm = ref(false)
 
-const debouncedFind = debounce(fetchDocument, 300)
+const debouncedFind = debounce(fetchDocument, 500)
 
 watch(keyword, () => {
   debouncedFind()
@@ -187,7 +189,7 @@ const moveDocument = ref<Document>({
   Type: DocumentType.Unknown,
   CategoryId: null,
   CreatedAt: '',
-  DocumentPath: '',
+  FolderPath: '',
 })
 
 const documentDetail = ref<Document>({
@@ -196,7 +198,7 @@ const documentDetail = ref<Document>({
   Type: DocumentType.Unknown,
   CategoryId: null,
   CreatedAt: '',
-  DocumentPath: '',
+  FolderPath: '',
 })
 
 const showDocumentDetail = ref(false)
@@ -274,7 +276,7 @@ function closeFile() {
     Type: DocumentType.Unknown,
     CategoryId: null,
     CreatedAt: '',
-    DocumentPath: '',
+    FolderPath: '',
   }
 }
 
@@ -285,7 +287,6 @@ function handleSelectDocument(document: Document) {
     listDocuments.value.push(document)
     showPopupAction.value = -1
     fetchDocument()
-    saveToStore()
   } else {
     documentDetail.value = document
     showDocumentDetail.value = true
@@ -303,7 +304,6 @@ function goBackDoucument() {
     currentDocument.value = null
     fetchDocument()
   }
-  saveToStore()
 }
 
 function routeDocument(document: Document, index: number) {
@@ -312,7 +312,6 @@ function routeDocument(document: Document, index: number) {
     listDocuments.value = listDocuments.value.slice(0, index + 1)
     currentDocument.value = document
     fetchDocument()
-    saveToStore()
   }
 }
 
@@ -322,16 +321,10 @@ function backToRoot() {
     listDocuments.value = []
     currentDocument.value = null
     fetchDocument()
-    saveToStore()
   }
 }
 
-function saveToStore() {
-  store.dispatch('setListDocuments', listDocuments.value)
-}
-
 function resetQuery() {
-  keyword.value = ''
   categoryFilterId.value = null
   typeFilter.value = null
   pageNumber.value = 1
@@ -354,14 +347,32 @@ async function handlePageChange(newPageNumber: number) {
 
 const highlightTexts = ref<string[]>([])
 
+function removeDiacritics(str: string) {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+}
+
 function highlightText(text: string, keyword: string) {
   if (!keyword) return text
-  const regex = new RegExp(`(${keyword})`, 'gi')
-  return text.replace(regex, `<span class="highlight">$1</span>`)
+
+  const normalizedText = removeDiacritics(text)
+  const normalizedKeyword = removeDiacritics(keyword.trim())
+  const regex = new RegExp(`(${normalizedKeyword})`, 'gi')
+
+  let result = ''
+  let lastIndex = 0
+
+  normalizedText.replace(regex, (match, _, index) => {
+    result += text.slice(lastIndex, index)
+    result += `<span class="highlight">${text.slice(index, index + match.length)}</span>`
+    lastIndex = index + match.length
+    return match
+  })
+
+  result += text.slice(lastIndex)
+  return result
 }
 
 async function fetchDocument() {
-  keyword.value = keyword.value.trim()
   loading.value = true
   const response = await axios.get('https://localhost:7160/api/v1/Documents/filter', {
     params: {

@@ -1,6 +1,5 @@
 import type { Customer } from '@/entities/Customer'
 import type { Department } from '@/entities/Department'
-import type { Document } from '@/entities/Document'
 import type { Employee } from '@/entities/Employee'
 import type { Import } from '@/entities/Import'
 import type { Position } from '@/entities/Position'
@@ -32,5 +31,4 @@ export interface State {
   permissions: [] | null
   accountPermissions: [] | null
   onlineUsers: string[]
-  listDocuments: Document[]
 }

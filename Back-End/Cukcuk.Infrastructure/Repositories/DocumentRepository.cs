@@ -4,6 +4,7 @@ using Cukcuk.Core.Enum;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Text.RegularExpressions;
 
 namespace Cukcuk.Infrastructure.Repositories
@@ -23,39 +24,68 @@ namespace Cukcuk.Infrastructure.Repositories
             _dbContext.Documents.Remove(document);
             await _dbContext.SaveChangesAsync();
         }
-
-        public async Task<PageResult<Document>> FilterDocument(Guid? parentId, string? keyword, int pageSize, int pageNumber, Guid? categoryId, DocumentType? type)
+        private async Task<List<Guid>> GetAllChildrenIds(Guid? parentId, string keyword)
         {
+            keyword = keyword.ToLower().Trim();
+
             var query = _dbContext.Documents.AsNoTracking().AsQueryable();
 
-            query = query.Where(d => parentId.HasValue ? d.ParentId == parentId.Value : d.ParentId == null);
+            if (parentId.HasValue)
+            {
+                query = query.Where(d => d.ParentId == parentId);
+            }
+
+            var children = await query
+                .Where(d => d.Name.ToLower().Contains(keyword))
+                .Select(d => d.Id)
+                .ToListAsync();
+
+            var allChildrenIds = new List<Guid>(children);
+
+            foreach (var childId in children)
+            {
+                allChildrenIds.AddRange(await GetAllChildrenIds(childId, keyword)); 
+            }
+
+            return allChildrenIds;
+        }
+
+        public async Task<PageResult<Document>> FilterDocument(Guid? parentId, string? keyword, int pageSize, int pageNumber, Guid? categoryId, DocumentType? type)
+            {
+                var query = _dbContext.Documents.AsNoTracking().AsQueryable();
 
             if (!string.IsNullOrEmpty(keyword))
             {
-                query = query.Where(d => d.Name.ToLower().Trim().Contains(keyword.ToLower().Trim()));
+                var relevantIds = await GetAllChildrenIds(parentId, keyword);
+
+                query = query.Where(d => relevantIds.Contains(d.Id));
+            }
+            else
+            {
+                query = query.Where(d => parentId.HasValue ? d.ParentId == parentId.Value : d.ParentId == null);
             }
 
             if (categoryId != null)
-            {
-                query = query.Where(d => d.CategoryId == categoryId);
+                {
+                    query = query.Where(d => d.CategoryId == categoryId);
+                }
+
+                if (type != null)
+                {
+                    query = query.Where(d => d.Type == type);
+                }
+
+                var totalItems = await query.CountAsync();
+
+                var documents = await query.OrderBy(d => d.Name).Skip((pageNumber - 1) * pageSize).Take(pageSize).Include(d => d.Category).ToListAsync();
+
+                return new PageResult<Document>
+                {
+                    Items = documents,
+                    TotalItems = totalItems,
+                    TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
+                };
             }
-
-            if (type != null)
-            {
-                query = query.Where(d => d.Type == type);
-            }
-
-            var totalItems = await query.CountAsync();
-
-            var documents = await query.OrderBy(d => d.Name).Skip((pageNumber - 1) * pageSize).Take(pageSize).Include(d => d.Category).ToListAsync();
-
-            return new PageResult<Document>
-            {
-                Items = documents,
-                TotalItems = totalItems,
-                TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
-            };
-        }
 
         public async Task<IEnumerable<DocumentCategory>> FindAllCategory()
         {
@@ -137,6 +167,11 @@ namespace Cukcuk.Infrastructure.Repositories
         {
             _dbContext.Documents.Update(document);
             await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Document>> GetSubsDocument(Guid parentId)
+        {
+            return await _dbContext.Documents.AsNoTracking().Where(d => d.ParentId == parentId).ToListAsync();
         }
     }
 }

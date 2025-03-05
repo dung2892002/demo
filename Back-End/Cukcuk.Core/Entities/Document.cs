@@ -10,6 +10,7 @@ namespace Cukcuk.Core.Entities
         public string? Path { get; set; } = string.Empty;
         public DateTime? CreatedAt { get; set; }
         public DocumentType Type { get; set; }
+        public string FolderPath { get; set; } = string.Empty;
 
         public Guid? ParentId { get; set; }
         [JsonIgnore]

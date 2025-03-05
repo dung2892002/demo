@@ -648,7 +648,4 @@ export const actions: ActionTree<State, State> = {
   },
 
   //document
-  setListDocuments({ commit }, document: Document[]) {
-    commit('setListDocuments', document)
-  },
 }

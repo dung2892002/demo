@@ -35,26 +35,16 @@
           >
             <img src="/src/assets/icon/folder.png" style="width: 24px; height: 24px" />
             <div>
-              {{ getNameParent() }}
+              {{ parentFolderName }}
             </div>
           </div>
         </div>
         <form class="cukcuk-form" id="form" style="display: flex; flex-direction: row; gap: 60px">
           <div style="width: 120px">Di chuyển tới</div>
-          <div
-            style="padding: 10px; border: 1px solid gainsboro; border-radius: 6px; min-width: 280px"
-          >
+          <div class="nodes">
             <div class="tree-view">
               <DocumentNode
                 :document="rootDocument"
-                :selectedDocument="props.document"
-                :parentId="selectedDocumentId"
-                @select="handleSelectRootFolder"
-              />
-              <DocumentNode
-                v-for="document in documents"
-                :key="document.Id!"
-                :document="document"
                 :selectedDocument="props.document"
                 :parentId="selectedDocumentId"
                 @select="handleSelectDocument"
@@ -76,20 +66,26 @@
 <script setup lang="ts">
 import { DocumentType, type Document } from '@/entities/Document'
 import axios from 'axios'
-import { computed, onMounted, ref, type PropType } from 'vue'
+import { onMounted, ref, type PropType } from 'vue'
 import DocumentNode from './DocumentNode.vue'
-import { useStore } from 'vuex'
 
 const emits = defineEmits(['closeForm'])
-const store = useStore()
+const parentFolderName = ref<string>('Tài liệu')
 
-const listDocuments = computed(() => store.getters.getListDocuments)
+async function getNameParent() {
+  if (props.document.ParentId == null) return
 
-function getNameParent(): string {
-  const len = listDocuments.value.length
-  if (len == 0) return 'Tài liệu'
+  try {
+    const response = await axios.get(
+      `https://localhost:7160/api/v1/Documents/${props.document.ParentId}`,
+    )
 
-  return listDocuments.value[len - 1].Name
+    const parentDocument: Document = response.data
+
+    parentFolderName.value = parentDocument.Name
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 function handleCloseForm(value: boolean) {
@@ -109,9 +105,9 @@ function handleSelectDocument(id: string) {
   selectedDocumentId.value = id
 }
 
-function handleSelectRootFolder() {
-  selectedDocumentId.value = 'null'
-}
+// function handleSelectRootFolder() {
+//   selectedDocumentId.value = 'null'
+// }
 
 async function handleSubmitForm() {
   const formData = new FormData()
@@ -136,13 +132,15 @@ async function handleSubmitForm() {
 const rootDocument = ref<Document>({
   Id: 'null',
   Name: 'Tài liệu',
-  Type: DocumentType.Unknown,
+  Type: DocumentType.Folder,
   CategoryId: null,
   CreatedAt: '',
-  DocumentPath: '',
+  FolderPath: '',
+  IsExpend: true,
+  IsLoaded: true,
 })
 
-const documents = ref<Document[]>([])
+// const documents = ref<Document[]>([])
 
 async function fetchDocuments(parentId: string | null) {
   try {
@@ -150,7 +148,7 @@ async function fetchDocuments(parentId: string | null) {
       params: { id: parentId },
     })
 
-    documents.value = response.data.map((doc: Document) => ({
+    rootDocument.value.Children = response.data.map((doc: Document) => ({
       ...doc,
       Children: doc.Children ?? [],
     }))
@@ -160,5 +158,34 @@ async function fetchDocuments(parentId: string | null) {
 }
 onMounted(() => {
   fetchDocuments(null)
+  getNameParent()
 })
 </script>
+
+<style lang="scss" scoped>
+.nodes {
+  padding: 10px;
+  border: 1px solid gainsboro;
+  border-radius: 6px;
+  min-width: 280px;
+  max-height: 480px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 40px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #b9b9b9;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+}
+</style>

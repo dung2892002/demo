@@ -26,6 +26,14 @@ namespace Cukcuk.Core.Services
             document.Id = Guid.NewGuid();
             document.CreatedAt = DateTime.Now;
             document.Type = DocumentType.Folder;
+            document.FolderPath = "Tài liệu";
+
+            if (document.ParentId != null)
+            {
+                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+            }
 
             await _documentRepository.Create(document);
         }
@@ -47,11 +55,19 @@ namespace Cukcuk.Core.Services
                 Category = null,
                 Children = new List<Document>(),
                 Path = filePath,
+                FolderPath = "Tài liệu",
                 Name = Path.GetFileNameWithoutExtension(file.FileName),
                 Type = GetDocumentType(file)
             };
 
             document.Name = await _documentRepository.GetUniqueDocumentName(parentId, document.Name, document.Type, null);
+
+            if (document.ParentId != null)
+            {
+                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+            }
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
@@ -114,9 +130,8 @@ namespace Cukcuk.Core.Services
             exsitingdocument.CategoryId = document.CategoryId;
             exsitingdocument.Name = await _documentRepository.GetUniqueDocumentName(document.ParentId, document.Name, document.Type, exsitingdocument.Id);
 
-            Console.WriteLine($"ten moi la {exsitingdocument.Name}");
-
             await _documentRepository.Update(exsitingdocument);
+            await HandleUpdatePathSubDocument(document);
         }
 
 
@@ -215,9 +230,31 @@ namespace Cukcuk.Core.Services
             var document = await _documentRepository.GetById(id) ?? throw new ArgumentException("document not exist");
 
             document.ParentId = parentId;
+            document.FolderPath = "Tài liệu";
 
             document.Name = await _documentRepository.GetUniqueDocumentName(parentId, document.Name, document.Type, null);
+
+            if (parentId != null)
+            {
+                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+            }
             await _documentRepository.Update(document);
+            await HandleUpdatePathSubDocument(document);
+
+        }
+
+        private async Task HandleUpdatePathSubDocument(Document parent) 
+        {
+            var childrens = await _documentRepository.GetSubsDocument(parent.Id);
+            if (!childrens.Any()) return;
+            foreach (var children in childrens)
+            {
+                children.FolderPath = parent.FolderPath + "/" + parent.Name;
+                await _documentRepository.Update(children);
+                await HandleUpdatePathSubDocument(children);
+            }
         }
     }
 }

@@ -8,21 +8,23 @@
             alt=""
             v-if="currentDocument"
             @click="goPreRequest"
+            style="cursor: pointer"
           />
-          <span @click="backToRoot">Tài liệu</span>
-          <span v-if="listParents.length > 1"
-            ><img
+          <span @click="backToRoot" :class="{ available: currentDocument }">Tài liệu</span>
+          <div v-if="listParents.length > 1">
+            <img
               src="/src/assets/icon/btn-next-page.svg"
               alt=""
               style="width: 16px; height: 16px"
-            />...</span
-          >
+            />
+            <span style="font-weight: bold; font-size: 24px">...</span>
+          </div>
           <div v-if="listParents.length > 0" @click="routeDocument(listParents[0])">
             <img
               src="/src/assets/icon/btn-next-page.svg"
               alt=""
               style="width: 16px; height: 16px"
-            /><span> {{ listParents[0].Name }}</span>
+            /><span class="available"> {{ listParents[0].Name }}</span>
           </div>
           <div alt="" v-if="currentDocument">
             <img
@@ -33,43 +35,36 @@
           </div>
         </div>
       </div>
-      <div class="content--row">
-        <button class="content__button button--add">
-          <div class="content__button button--add" @click="handleAddFile">
-            <img src="/src/assets/icon/add-file.png" alt="logo" class="button--add-logo" />
-            <span class="button--add-text">Thêm tệp</span>
-          </div>
-        </button>
-        <button class="content__button button--add">
-          <div class="content__button button--add" @click="handleAddFolder">
-            <img src="/src/assets/icon/add-folder.png" alt="logo" class="button--add-logo" />
-            <span class="button--add-text">Thêm thư mục</span>
-          </div>
-        </button>
+      <div class="header-btn">
+        <div class="btn--blue" @click="handleAddFile">
+          <img src="/src/assets/icon/add-file.png" alt="logo" class="button--add-logo" />
+          <span class="button--add-text">Thêm tệp</span>
+        </div>
+        <div class="btn--white" @click="handleAddFolder">
+          <img src="/src/assets/icon/add-folder.png" alt="logo" class="button--add-logo" />
+          <span class="button--add-text">Thêm thư mục</span>
+        </div>
+        <!-- <div class="btn--white">
+          <font-awesome-icon :icon="['fas', 'download']" />
+        </div> -->
       </div>
     </div>
     <div class="content-main">
       <div class="toolbar">
-        <div style="display: flex; flex-direction: row; gap: 20px">
-          <div class="toolbar_search">
-            <input
-              type="text"
-              id="search-employee"
-              placeholder="Tìm kiếm theo từ khóa"
-              v-model="keyword"
-              @input="handleInput"
-              @keydown.enter="fetchDocument"
-            />
-          </div>
-        </div>
-        <div class="toolbar__actions"></div>
+        <input
+          type="text"
+          placeholder="Tìm kiếm theo từ khóa"
+          v-model="keyword"
+          @input="handleInput"
+          @keydown.enter="fetchDocument"
+        />
       </div>
       <div class="main-container" ref="tableContainer" v-loading="loading">
         <table class="employee-table">
           <thead>
             <tr>
               <th class="w-20">Tên tài liệu</th>
-              <th class="w-10">Thể loại</th>
+              <th class="w-10">Chủ đề</th>
               <th class="w-10">Ngày tạo</th>
               <th class="w-30" v-if="keyword.trim().length > 0">Vị trí</th>
               <th class="w-10">Hành động</th>
@@ -88,30 +83,53 @@
                   alt="logo"
                   style="width: 24px; height: 24px; margin-right: 6px; vertical-align: middle"
                 />
-                <span style="vertical-align: middle" v-html="highlightTexts[index]"></span>
+                <span
+                  style="vertical-align: middle"
+                  v-html="highlightTexts[index]"
+                  @mouseenter="handleShowPopupText(document.Name, $event)"
+                  @mouseleave="handleClosePopupText"
+                ></span>
               </td>
               <td>{{ document.Category?.Name }}</td>
               <td>{{ document.CreatedAt ? formatDate(document.CreatedAt) : '' }}</td>
-              <td v-if="keyword.trim().length > 0">{{ document.FolderPath }}</td>
+              <td v-if="keyword.trim().length > 0">
+                <span
+                  @mouseenter="handleShowPopupText(document.FolderPath, $event)"
+                  @mouseleave="handleClosePopupText"
+                  >{{ document.FolderPath }}</span
+                >
+              </td>
               <td>
                 <div class="action" :ref="`action-${index}`">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
-                      <img src="/src/assets/icon/kebab-menu.png" alt="" />
+                      <img
+                        src="/src/assets/icon/kebab-menu.png"
+                        :class="{ selected: showPopupAction === index }"
+                      />
                     </button>
                     <div
                       class="popup-action"
                       v-if="showPopupAction == index"
                       :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
                     >
-                      <span @click="handleSelectDocument(document)">Xem</span>
-                      <span @click="handleUpdateDocument(document)">Sửa</span>
+                      <span @click="handleSelectDocument(document)"
+                        ><font-awesome-icon :icon="['fas', 'eye']" /> <span>Xem</span></span
+                      >
+                      <span @click="handleUpdateDocument(document)"
+                        ><font-awesome-icon icon="pen-to-square" /><span>Sửa</span></span
+                      >
+
+                      <span @click="handleMoveDocument(document)"
+                        ><font-awesome-icon :icon="['fas', 'file-import']" /><span
+                          >Di chuyển</span
+                        ></span
+                      >
                       <span
                         @click="handleDeleteDocument(document.Id, index)"
                         v-loading="deleteLoading == index"
-                        >Xóa</span
+                        ><font-awesome-icon :icon="['fas', 'trash']" /><span>Xóa</span></span
                       >
-                      <span @click="handleMoveDocument(document)">Di chuyển</span>
                     </div>
                   </div>
                 </div>
@@ -126,6 +144,16 @@
         @pageChange="handlePageChange"
         @pageSizeChange="handlePageSizeChange"
       />
+    </div>
+
+    <div
+      v-if="showTextPopup"
+      class="popup-text"
+      :style="{ top: textPopupPosition.top + 'px', left: textPopupPosition.left + 'px' }"
+    >
+      <span>{{ textPopupData }}</span>
+
+      <div class="popup-arrow"></div>
     </div>
 
     <AddFileForm
@@ -149,6 +177,8 @@
 </template>
 
 <script setup lang="ts">
+import '/src/styles/component/input.scss'
+
 import ThePagnigation from '@/components/ThePagnigation.vue'
 import { DocumentType, type Document } from '@/entities/Document'
 import { formatDate, getSrcIconDocument } from '@/utils'
@@ -187,6 +217,35 @@ const showMoveDocumentForm = ref(false)
 const showUpdateForm = ref(false)
 
 let timeout: ReturnType<typeof setTimeout> | null = null
+
+const textPopupPosition = ref({
+  top: 0,
+  left: 0,
+})
+
+const showTextPopup = ref(false)
+const textPopupData = ref<string | null>(null)
+
+function handleShowPopupText(data: string, event: FocusEvent) {
+  if (keyword.value == '') return
+  const target = event.target instanceof HTMLElement ? event.target : null
+  if (!target) return
+
+  const buttonRect = target.getBoundingClientRect()
+
+  textPopupPosition.value = {
+    top: buttonRect.top - 40,
+    left: buttonRect.left + buttonRect.width / 2,
+  }
+
+  textPopupData.value = data
+  showTextPopup.value = true
+}
+
+function handleClosePopupText() {
+  textPopupData.value = null
+  showTextPopup.value = false
+}
 
 function handleInput() {
   if (timeout) {
@@ -304,17 +363,15 @@ function handleAddFolder() {
   showPopupAction.value = -1
 }
 
-function closeForm(value: boolean) {
+function closeForm() {
   showAddFileForm.value = false
   showAddFolderForm.value = false
   showMoveDocumentForm.value = false
   showUpdateForm.value = false
-  if (value == true) {
-    fetchDocument()
-  }
+  fetchDocument()
 }
 
-function closeFile() {
+function closeFile(state: boolean) {
   showDocumentDetail.value = false
   documentDetail.value = {
     Id: '',
@@ -324,6 +381,8 @@ function closeFile() {
     CreatedAt: '',
     FolderPath: '',
   }
+
+  if (state == true) fetchDocument()
 }
 
 function handleAddRequest() {
@@ -451,8 +510,107 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .main-container {
   height: 580px;
+}
+
+.popup-text {
+  position: fixed;
+  background-color: black;
+  border-radius: 6px;
+  padding: 6px 12px;
+  z-index: 100;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  .popup-arrow {
+    position: absolute;
+    bottom: -6px; /* Vị trí ngay dưới popup */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid black; /* Tạo tam giác màu đen */
+  }
+}
+
+.action-button {
+  box-sizing: content-box;
+  height: 30px;
+  width: 30px;
+  background-color: none;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    border: 1px solid #078cf8;
+
+    img {
+      filter: invert(33%) sepia(92%) saturate(1000%) hue-rotate(195deg);
+    }
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+
+    &.selected {
+      filter: invert(33%) sepia(92%) saturate(1000%) hue-rotate(195deg);
+    }
+  }
+}
+
+.header-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 300;
+    min-width: 40px;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    &.btn--white {
+      background-color: #ffffff;
+      color: #078cf8;
+      border: 1px solid #078cf8;
+
+      &:hover {
+        background-color: #dddddd;
+      }
+
+      img {
+        filter: invert(47%) sepia(96%) saturate(3556%) hue-rotate(195deg) brightness(100%);
+      }
+    }
+
+    &.btn--blue {
+      background-color: #078cf8;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #9bd2ff;
+      }
+    }
+  }
 }
 </style>

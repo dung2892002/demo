@@ -1,6 +1,6 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -12,11 +12,31 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nqeiubd4bc</Fingerprint>
+      <Integrity>H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\857e62e4-788a-451e-b840-b0d9f7f3e350_17638.doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>files/857e62e4-788a-451e-b840-b0d9f7f3e350_17638.doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cayxtkrauc</Fingerprint>
+      <Integrity>1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\857e62e4-788a-451e-b840-b0d9f7f3e350_17638.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -28,9 +48,11 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a9neczbue5</Fingerprint>
+      <Integrity>PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB+HZ4k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\files\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -11,7 +11,7 @@
         <div class="form-group">
           <div class="form__item">
             <label for="employee-code" class="form__label"
-              >Thể loại <span class="required">*</span></label
+              >Chủ đề <span class="required">*</span></label
             >
             <select v-model="categoryId" class="form__input">
               <option :value="category.Id" v-for="category in categories" :key="category.Id">

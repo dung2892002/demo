@@ -1,0 +1,14 @@
+input {
+  height: 36px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px 12px;
+  margin-top: 4px;
+  margin-right: 4px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid #078cf8 !important;
+  }
+}

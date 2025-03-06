@@ -9,6 +9,7 @@ using Syncfusion.DocIO;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf;
+using NPOI.Util;
 
 namespace Cukcuk.Core.Services
 {
@@ -159,39 +160,45 @@ namespace Cukcuk.Core.Services
                 throw new FileNotFoundException($"File {document.Path} không tồn tại.");
 
             if (document.Type == DocumentType.Word)
-                return ConvertWordToHtml(document.Path);
+                return ConvertWordToMarkdown(document.Path);
             if (document.Type == DocumentType.Pdf)
                 return ConvertPdfToHtml(document.Path);
             return "Chi co the mo file word va pdf";
         }
 
-        private static string ConvertWordToHtml(string filePath)
+
+        private static string ConvertWordToMarkdown(string filePath)
         {
             if (!System.IO.File.Exists(filePath))
             {
-                throw new FileNotFoundException("file not found");
+                throw new FileNotFoundException("File không tồn tại.");
             }
 
-            using (FileStream docStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            //Open a file as a stream.
+            using (FileStream fileStreamPath = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
-                using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
+                //Load an existing Word document.
+                using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
                 {
-                    using (MemoryStream outputStream = new MemoryStream())
+                    //Create a file stream.
+                    using (FileStream outputFileStream = new FileStream("WordToMarkdown.md", FileMode.Create, FileAccess.ReadWrite))
                     {
-                        document.Save(outputStream, FormatType.Html);
+                        //Save a Markdown file to the file stream.
+                        document.Save(outputFileStream, FormatType.Markdown);
+                        outputFileStream.Position = 0;
 
-                        outputStream.Position = 0;
-
-                        using (StreamReader reader = new StreamReader(outputStream))
+                        using (StreamReader reader = new StreamReader(outputFileStream))
                         {
                             string markdownContent = reader.ReadToEnd();
 
                             return markdownContent;
                         }
                     }
+
                 }
             }
         }
+
 
         private static string ConvertPdfToHtml(string filePath)
         {

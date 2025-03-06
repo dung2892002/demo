@@ -32,7 +32,7 @@
 }
 
 .employee-table tbody tr:hover {
-  background-color: #b4f5b4;
+  background-color: #f5f7fa;
 }
 
 td {
@@ -65,7 +65,6 @@ td {
 }
 
 .action-button {
-  background-color: #fff;
   padding: 2px;
   width: 28px;
   height: 28px;
@@ -112,20 +111,23 @@ td {
   align-items: center;
   z-index: 10;
   overflow: hidden;
+  padding: 8px;
+  min-width: 80px;
 
   span {
-    border-bottom: 1px solid #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 4px 16px;
     cursor: pointer;
     width: 100%;
     text-align: center;
-
+    padding: 4px 6px;
+    gap: 6px;
+    border-radius: 4px;
+    transition: 0.1s ease-in-out;
     &:hover {
-      background-color: #078cf8;
-    }
-
-    &:last-child {
-      border-bottom: none;
+      background-color: #f1f5fc;
     }
   }
 }

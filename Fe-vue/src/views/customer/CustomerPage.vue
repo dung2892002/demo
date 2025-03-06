@@ -152,7 +152,7 @@
 <script setup lang="ts">
 import '/src/styles/component/button.scss'
 import '/src/styles/component/select.css'
-import '/src/styles/component/input.css'
+import '/src/styles/component/input.scss'
 import '/src/styles/layout/toolbar.scss'
 import '/src/styles/layout/table.scss'
 import '/src/styles/utils.css'

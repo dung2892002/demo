@@ -1,25 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\intern\\Back-End\\Cukcuk.Api\\",
+  "WorkspaceRootPath": "D:\\demo\\Back-End\\Cukcuk.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|d:\\intern\\back-end\\cukcuk.api\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|solutionrelative:controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\demo\\back-end\\cukcuk.core\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A67511B-FFE4-4AFA-AD4F-0BE8597E39F6}|..\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj|d:\\intern\\back-end\\cukcuk.infrastructure\\repositories\\documentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\entities\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\irepositories\\idocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\intern\\back-end\\cukcuk.core\\interfaces\\iservices\\idocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\demo\\back-end\\cukcuk.core\\dtos\\customerexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,84 +16,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Document.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Entities\\Document.cs",
-              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Entities\\Document.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Entities\\Document.cs",
-              "RelativeToolTip": "..\\Cukcuk.Core\\Entities\\Document.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T14:20:44.992Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DocumentsController.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\DocumentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DocumentsController.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Api\\Controllers\\DocumentsController.cs",
-              "RelativeToolTip": "Controllers\\DocumentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T14:14:01.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "DocumentService.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
+              "DocumentMoniker": "D:\\demo\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
+              "ToolTip": "D:\\demo\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
               "RelativeToolTip": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
-              "ViewState": "AgIAAPcAAAAAAAAAAAAzwAUBAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAwwLoAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T14:13:03.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IDocumentService.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
-              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
-              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBwAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T14:12:55.248Z",
+              "WhenOpened": "2025-03-06T08:27:51.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DocumentRepository.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
-              "RelativeDocumentMoniker": "..\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
-              "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Repositories\\DocumentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAIAAAAAAAAAA==",
+              "Title": "CustomerExport.cs",
+              "DocumentMoniker": "D:\\demo\\Back-End\\Cukcuk.Core\\DTOs\\CustomerExport.cs",
+              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\DTOs\\CustomerExport.cs",
+              "ToolTip": "D:\\demo\\Back-End\\Cukcuk.Core\\DTOs\\CustomerExport.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\DTOs\\CustomerExport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T14:08:53.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IDocumentRepository.cs",
-              "DocumentMoniker": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
-              "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
-              "ToolTip": "D:\\intern\\Back-End\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
-              "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IRepositories\\IDocumentRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBoAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T14:07:50.543Z",
+              "WhenOpened": "2025-03-06T07:22:23.287Z",
               "EditorCaption": ""
             }
           ]

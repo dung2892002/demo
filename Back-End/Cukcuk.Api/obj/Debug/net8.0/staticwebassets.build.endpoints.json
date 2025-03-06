@@ -1,0 +1,252 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "files/82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx",
+      "AssetFile": "files/82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6440"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 01:56:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI="
+        }
+      ]
+    },
+    {
+      "Route": "files/82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.nqeiubd4bc.docx",
+      "AssetFile": "files/82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6440"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 01:56:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nqeiubd4bc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI="
+        },
+        {
+          "Name": "label",
+          "Value": "files/82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx"
+        }
+      ]
+    },
+    {
+      "Route": "files/857e62e4-788a-451e-b840-b0d9f7f3e350_17638.cayxtkrauc.doc",
+      "AssetFile": "files/857e62e4-788a-451e-b840-b0d9f7f3e350_17638.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 08:23:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cayxtkrauc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="
+        },
+        {
+          "Name": "label",
+          "Value": "files/857e62e4-788a-451e-b840-b0d9f7f3e350_17638.doc"
+        }
+      ]
+    },
+    {
+      "Route": "files/857e62e4-788a-451e-b840-b0d9f7f3e350_17638.doc",
+      "AssetFile": "files/857e62e4-788a-451e-b840-b0d9f7f3e350_17638.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 08:23:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="
+        }
+      ]
+    },
+    {
+      "Route": "files/ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.a9neczbue5.xlsx",
+      "AssetFile": "files/ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB+HZ4k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 01:56:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a9neczbue5"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB+HZ4k="
+        },
+        {
+          "Name": "label",
+          "Value": "files/ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx"
+        }
+      ]
+    },
+    {
+      "Route": "files/ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx",
+      "AssetFile": "files/ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7758"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB+HZ4k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 01:56:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB+HZ4k="
+        }
+      ]
+    }
+  ]
+}

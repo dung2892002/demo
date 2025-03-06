@@ -424,7 +424,6 @@ body {
       img {
         width: 24px;
         height: 24px;
-        cursor: pointer;
       }
 
       &.route--back:hover {
@@ -434,9 +433,9 @@ body {
     span {
       font-weight: 500;
       font-size: 16px;
-      cursor: pointer;
 
-      &:hover {
+      &.available:hover {
+        cursor: pointer;
         text-decoration: underline;
         color: #078cf8;
       }

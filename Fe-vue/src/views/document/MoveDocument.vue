@@ -105,10 +105,6 @@ function handleSelectDocument(id: string) {
   selectedDocumentId.value = id
 }
 
-// function handleSelectRootFolder() {
-//   selectedDocumentId.value = 'null'
-// }
-
 async function handleSubmitForm() {
   const formData = new FormData()
   if (selectedDocumentId.value != null && selectedDocumentId.value != 'null')
@@ -139,8 +135,6 @@ const rootDocument = ref<Document>({
   IsExpend: true,
   IsLoaded: true,
 })
-
-// const documents = ref<Document[]>([])
 
 async function fetchDocuments(parentId: string | null) {
   try {

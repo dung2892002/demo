@@ -45,7 +45,7 @@
             <div class="tree-view">
               <DocumentNode
                 :document="rootDocument"
-                :selectedDocument="props.document"
+                :selectedDocuments="props.documents"
                 :parentId="selectedDocumentId"
                 @select="handleSelectDocument"
               />
@@ -73,11 +73,11 @@ const emits = defineEmits(['closeForm'])
 const parentFolderName = ref<string>('Tài liệu')
 
 async function getNameParent() {
-  if (props.document.ParentId == null) return
+  if (props.documents[0].ParentId == null) return
 
   try {
     const response = await axios.get(
-      `https://localhost:7160/api/v1/Documents/${props.document.ParentId}`,
+      `https://localhost:7160/api/v1/Documents/${props.documents[0].ParentId}`,
     )
 
     const parentDocument: Document = response.data
@@ -93,8 +93,8 @@ function handleCloseForm(value: boolean) {
 }
 
 const props = defineProps({
-  document: {
-    type: Object as PropType<Document>,
+  documents: {
+    type: Array as PropType<Document[]>,
     required: true,
   },
 })
@@ -106,18 +106,12 @@ function handleSelectDocument(id: string) {
 }
 
 async function handleSubmitForm() {
-  const formData = new FormData()
-  if (selectedDocumentId.value != null && selectedDocumentId.value != 'null')
-    formData.append('parentId', selectedDocumentId.value)
+  const ids = props.documents.map((doc) => doc.Id)
 
   try {
-    await axios.patch(
-      `https://localhost:7160/api/v1/Documents/move/${props.document.Id}`,
-      formData,
-      {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      },
-    )
+    await axios.put(`https://localhost:7160/api/v1/Documents/move`, ids, {
+      params: selectedDocumentId.value !== 'null' ? { parentId: selectedDocumentId.value } : {},
+    })
 
     handleCloseForm(true)
   } catch (error) {

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\files\\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx"
     },
     {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc",
+      "PackagePath": "staticwebassets\\files\\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

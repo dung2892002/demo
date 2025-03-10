@@ -11,9 +11,9 @@
           v-loading="loading"
           :class="{
             disabled:
-              document.Id === selectedDocument?.Id ||
-              (selectedDocument?.ParentId == null && document.Id == 'null') ||
-              document.Id === selectedDocument?.ParentId,
+              document.Id === selectedDocuments[0]?.Id ||
+              (selectedDocuments[0]?.ParentId == null && document.Id == 'null') ||
+              document.Id === selectedDocuments[0]?.ParentId,
           }"
         >
           <img
@@ -27,9 +27,9 @@
           style="display: flex; align-items: center; gap: 10px; padding: 0 6px"
           :class="{
             disabled:
-              document.Id === selectedDocument?.ParentId ||
-              document.Id === selectedDocument?.Id ||
-              (selectedDocument?.ParentId == null && document.Id == 'null'),
+              document.Id === selectedDocuments[0]?.ParentId ||
+              document.Id === selectedDocuments[0]?.Id ||
+              (selectedDocuments[0]?.ParentId == null && document.Id == 'null'),
           }"
         >
           <img src="/src/assets/icon/folder.png" style="width: 24px; height: 24px" />
@@ -49,7 +49,7 @@
           v-for="child in document.Children"
           :key="child.Id!"
           :document="child"
-          :selectedDocument="selectedDocument"
+          :selectedDocuments="selectedDocuments"
           :parentId="parentId"
           @select="$emit('select', $event)"
         />
@@ -67,8 +67,8 @@ const props = defineProps({
     type: Object as PropType<Document>,
     required: true,
   },
-  selectedDocument: {
-    type: Object as PropType<Document>,
+  selectedDocuments: {
+    type: Array as PropType<Document[]>,
     required: true,
   },
   parentId: {
@@ -77,7 +77,7 @@ const props = defineProps({
 })
 
 function checkDocument() {
-  const folderPath = props.selectedDocument.FolderPath.split('/')
+  const folderPath = props.selectedDocuments[0].FolderPath.split('/')
   const currentPath = [...props.document.FolderPath.split('/'), props.document.Name]
 
   return folderPath.slice(0, currentPath.length).join('/') === currentPath.join('/')
@@ -86,9 +86,9 @@ function checkDocument() {
 const loading = ref(false)
 
 function handleClickDocument() {
-  if (props.document.Id == props.selectedDocument?.Id) return
-  if (props.document.Id == props.selectedDocument?.ParentId) return
-  if (props.document.Id == 'null' && props.selectedDocument?.ParentId == null) return
+  if (props.document.Id == props.selectedDocuments[0]?.Id) return
+  if (props.document.Id == props.selectedDocuments[0]?.ParentId) return
+  if (props.document.Id == 'null' && props.selectedDocuments[0]?.ParentId == null) return
   emit('select', props.document.Id)
 }
 
@@ -99,8 +99,8 @@ async function toggleExpand() {
 
   if (
     !props.document.IsExpend &&
-    props.document.Id != props.selectedDocument?.Id &&
-    props.document.Id != props.selectedDocument?.ParentId
+    props.document.Id != props.selectedDocuments[0]?.Id &&
+    props.document.Id != props.selectedDocuments[0]?.ParentId
   ) {
     props.document.IsExpend! = true
     if (!props.document.IsLoaded) {

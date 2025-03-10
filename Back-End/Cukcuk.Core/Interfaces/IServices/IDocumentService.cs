@@ -27,5 +27,11 @@ namespace Cukcuk.Core.Interfaces.IServices
 
         Task MoveDocument(Guid id, Guid? parentId);
         Task<IEnumerable<Document>> GetParentDocuments(Guid id);
+
+        Task<byte[]> CreateExcelFile(Guid? folderId, string? keyword);
+
+        Task DeleteRange(List<Guid> ids);
+
+        Task MoveRange(List<Guid> ids, Guid? parentId);
     }
 }

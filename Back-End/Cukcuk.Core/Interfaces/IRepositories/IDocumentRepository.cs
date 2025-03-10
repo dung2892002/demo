@@ -25,5 +25,9 @@ namespace Cukcuk.Core.Interfaces.IRepositories
         Task<IEnumerable<Document>> GetSubsDocument(Guid parentId);
 
         Task<IEnumerable<Document>> GetParentDocuments(Guid id);
+
+        Task<IEnumerable<Document>> GetListDocument(Guid? folderId, string? keyword);
+        Task<IEnumerable<Document>> GetListDocumentsById(List<Guid> ids);
+        Task DeleteRange(IEnumerable<Document> document);
     }
 }

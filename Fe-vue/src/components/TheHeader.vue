@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { useStore } from 'vuex'
-import '../styles/layout/header.css'
+import '../styles/layout/header.scss'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { connection } from '@/signalR'

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KlNvSPP4ipTmLyqHVTe2365LJ97OL/HE4WC57NzYqDw=",
+  "Hash": "8pU3CJorm/YSiFH245KTAmMVo9XGQVfwbofterwSARE=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cayxtkrauc",
+      "Integrity": "1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc"
     }
   ],
   "Endpoints": [
@@ -324,6 +345,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB+HZ4k="
+        }
+      ]
+    },
+    {
+      "Route": "files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.cayxtkrauc.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 03:26:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cayxtkrauc"
+        },
+        {
+          "Name": "label",
+          "Value": "files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="
+        }
+      ]
+    },
+    {
+      "Route": "files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Mar 2025 03:26:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="
         }
       ]
     }

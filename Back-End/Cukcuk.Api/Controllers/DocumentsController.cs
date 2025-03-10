@@ -193,5 +193,50 @@ namespace Cukcuk.Api.Controllers
                 return StatusCode(500, $"Lỗi: {ex.Message}");
             }
         }
+
+        [HttpGet("export")]
+        public async Task<IActionResult> ExportListDocument([FromQuery] Guid? folderId, [FromQuery] string? keyword)
+        {
+            try
+            {
+                var file = await _documentService.CreateExcelFile(folderId, keyword);
+
+                return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Danh sách tài liệu.xlsx");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpPut("delete")]
+        public async Task<IActionResult> DeleteRange([FromBody] List<Guid> ids)
+        {
+            try
+            {
+                await _documentService.DeleteRange(ids);
+
+                return StatusCode(200);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpPut("move")]
+        public async Task<IActionResult> Moverange([FromQuery] Guid? parentId, [FromBody] List<Guid> ids)
+        {
+            try
+            {
+                await _documentService.MoveRange(ids, parentId);
+
+                return StatusCode(200);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
 }

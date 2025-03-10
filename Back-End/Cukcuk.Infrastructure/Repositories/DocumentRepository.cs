@@ -4,9 +4,7 @@ using Cukcuk.Core.Enum;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using MySqlConnector;
 using System.Text.RegularExpressions;
-using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace Cukcuk.Infrastructure.Repositories
 {
@@ -25,6 +23,7 @@ namespace Cukcuk.Infrastructure.Repositories
             _dbContext.Documents.Remove(document);
             await _dbContext.SaveChangesAsync();
         }
+
         private async Task<List<Guid>> GetAllChildrenIds(Guid? parentId, string keyword)
         {
             keyword = keyword.ToLower().Trim();
@@ -36,27 +35,29 @@ namespace Cukcuk.Infrastructure.Repositories
                 query = query.Where(d => d.ParentId == parentId);
             }
 
-            var children = await query
-                .Where(d => d.Name.ToLower().Contains(keyword))
-                .Select(d => d.Id)
-                .ToListAsync();
+            var children = await query.Select(d => new { d.Id, d.Name }).ToListAsync();
 
-            var allChildrenIds = new List<Guid>(children);
+            var allChildrenIds = new List<Guid>();
 
-            foreach (var childId in children)
+            foreach (var child in children)
             {
-                allChildrenIds.AddRange(await GetAllChildrenIds(childId, keyword)); 
+                allChildrenIds.Add(child.Id);
+                allChildrenIds.AddRange(await GetAllChildrenIds(child.Id, keyword));
             }
 
-            return allChildrenIds;
+            return allChildrenIds.Distinct()
+                                 .Where(id => _dbContext.Documents.Any(d => d.Id == id && d.Name.ToLower().Contains(keyword)))
+                                 .ToList();
         }
 
+
         public async Task<PageResult<Document>> FilterDocument(Guid? parentId, string? keyword, int pageSize, int pageNumber, Guid? categoryId, DocumentType? type)
-            {
-                var query = _dbContext.Documents.AsNoTracking().AsQueryable();
+        {
+            var query = _dbContext.Documents.AsNoTracking().AsQueryable();
 
             if (!string.IsNullOrEmpty(keyword))
             {
+
                 var relevantIds = await GetAllChildrenIds(parentId, keyword);
 
                 query = query.Where(d => relevantIds.Contains(d.Id));
@@ -67,26 +68,26 @@ namespace Cukcuk.Infrastructure.Repositories
             }
 
             if (categoryId != null)
-                {
-                    query = query.Where(d => d.CategoryId == categoryId);
-                }
-
-                if (type != null)
-                {
-                    query = query.Where(d => d.Type == type);
-                }
-
-                var totalItems = await query.CountAsync();
-
-                var documents = await query.OrderBy(d => d.Name).Skip((pageNumber - 1) * pageSize).Take(pageSize).Include(d => d.Category).ToListAsync();
-
-                return new PageResult<Document>
-                {
-                    Items = documents,
-                    TotalItems = totalItems,
-                    TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
-                };
+            {
+                query = query.Where(d => d.CategoryId == categoryId);
             }
+
+            if (type != null)
+            {
+                query = query.Where(d => d.Type == type);
+            }
+
+            var totalItems = await query.CountAsync();
+
+            var documents = await query.OrderBy(d => d.Name).Skip((pageNumber - 1) * pageSize).Take(pageSize).Include(d => d.Category).ToListAsync();
+
+            return new PageResult<Document>
+            {
+                Items = documents,
+                TotalItems = totalItems,
+                TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
+            };
+        }
 
         public async Task<IEnumerable<DocumentCategory>> FindAllCategory()
         {
@@ -201,5 +202,39 @@ namespace Cukcuk.Infrastructure.Repositories
 
             await GetParent(parent, documents);
         }
+
+        public async Task<IEnumerable<Document>> GetListDocument(Guid? folderId, string? keyword)
+        {
+            var query = _dbContext.Documents.AsNoTracking().AsQueryable();
+
+            if (!string.IsNullOrEmpty(keyword))
+            {
+
+                var relevantIds = await GetAllChildrenIds(folderId, keyword);
+
+                query = query.Where(d => relevantIds.Contains(d.Id));
+            }
+            else
+            {
+                query = query.Where(d => folderId.HasValue ? d.ParentId == folderId.Value : d.ParentId == null);
+            }
+            return await query.Where(d => d.Type != DocumentType.Folder).ToListAsync();
+        }
+
+        public async Task DeleteRange(IEnumerable<Document> document)
+        {
+            _dbContext.Documents.RemoveRange(document);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Document>> GetListDocumentsById(List<Guid> ids)
+        {
+            var documentsToDelete = await _dbContext.Documents.AsNoTracking()
+                  .Where(d => ids.Contains(d.Id))
+                  .ToListAsync();
+
+            return documentsToDelete;
+        }
+
     }
 }

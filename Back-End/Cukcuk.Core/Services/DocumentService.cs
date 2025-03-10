@@ -9,7 +9,8 @@ using Syncfusion.DocIO;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf;
-using NPOI.Util;
+using Cukcuk.Core.Helper;
+using Org.BouncyCastle.Crypto;
 
 namespace Cukcuk.Core.Services
 {
@@ -81,24 +82,23 @@ namespace Cukcuk.Core.Services
         {
             var exsitingdocument = await _documentRepository.GetById(id) ?? throw new ArgumentException("document not exist");
 
-            if (exsitingdocument.Path != null)
-            {
-                if (System.IO.File.Exists(exsitingdocument.Path))
-                {
-                    System.IO.File.Delete(exsitingdocument.Path);
-                }
-            }
-            else
+            if (exsitingdocument.Path == null)
             {
                 var paths = await _documentRepository.GetFilePathToDelete(id);
 
                 foreach (var path in paths)
                 {
-                    Console.WriteLine(path);
                     if (System.IO.File.Exists(path))
                     {
                         System.IO.File.Delete(path);
                     }
+                }
+            }
+            else
+            {
+                if (System.IO.File.Exists(exsitingdocument.Path))
+                {
+                    System.IO.File.Delete(exsitingdocument.Path);
                 }
             }
 
@@ -235,6 +235,13 @@ namespace Cukcuk.Core.Services
         public async Task MoveDocument(Guid id, Guid? parentId)
         {
             var document = await _documentRepository.GetById(id) ?? throw new ArgumentException("document not exist");
+            await HandleMoveDocument(document, parentId);
+            await HandleUpdatePathSubDocument(document);
+
+        }
+
+        private async Task HandleMoveDocument(Document document, Guid? parentId)
+        {
 
             document.ParentId = parentId;
             document.FolderPath = "Tài liệu";
@@ -248,14 +255,15 @@ namespace Cukcuk.Core.Services
                 document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
             }
             await _documentRepository.Update(document);
-            await HandleUpdatePathSubDocument(document);
-
         }
 
-        private async Task HandleUpdatePathSubDocument(Document parent) 
+        private async Task HandleUpdatePathSubDocument(Document parent)
         {
             var childrens = await _documentRepository.GetSubsDocument(parent.Id);
-            if (!childrens.Any()) return;
+            if (!childrens.Any())
+            {
+                return;
+            }
             foreach (var children in childrens)
             {
                 children.FolderPath = parent.FolderPath + "/" + parent.Name;
@@ -267,6 +275,60 @@ namespace Cukcuk.Core.Services
         public async Task<IEnumerable<Document>> GetParentDocuments(Guid id)
         {
             return await _documentRepository.GetParentDocuments(id);
+        }
+
+        public async Task<byte[]> CreateExcelFile(Guid? folderId, string? keyword)
+        {
+            var documents = await _documentRepository.GetListDocument(folderId, keyword);
+            var categories = await _documentRepository.FindAllCategory();
+
+            var documentsExport = new List<DocumentExport>();
+            var index = 1;
+            foreach (var document in documents)
+            {
+                documentsExport.Add(new DocumentExport
+                {
+                    STT = index++,
+                    CreatedAt = document.CreatedAt.ToString(),
+                    DocumentName = document.Name,
+                    Category = categories.First(c => c.Id == document.CategoryId).Name,
+                });
+            }
+
+            var file = ExcelHelper.CreateFile(documentsExport);
+            return file;
+        }
+
+        public async Task DeleteRange(List<Guid> ids)
+        {
+            var docsToDelete = await _documentRepository.GetListDocumentsById(ids);
+
+            await _documentRepository.DeleteRange(docsToDelete);
+
+            foreach (var document in docsToDelete)
+            {
+                if (document.Type == DocumentType.Folder || !System.IO.File.Exists(document.Path))
+                {
+                    continue;
+                }
+                System.IO.File.Delete(document.Path);
+            }
+        }
+
+        public async Task MoveRange(List<Guid> ids, Guid? parentId)
+        {
+            var documents = new List<Document>();
+            foreach (var id in ids)
+            {
+                var document = await _documentRepository.GetById(id) ?? throw new ArgumentException("not exist");
+
+                await HandleMoveDocument(document, parentId);
+
+                documents.Add(document);
+            }
+
+            foreach (var document in documents) 
+                await HandleUpdatePathSubDocument(document);
         }
     }
 }

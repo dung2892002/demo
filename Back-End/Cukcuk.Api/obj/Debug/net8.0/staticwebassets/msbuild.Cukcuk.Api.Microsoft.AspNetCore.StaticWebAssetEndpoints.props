@@ -36,5 +36,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB\u002BHZ4k="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7758"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},{"Name":"ETag","Value":"\u0022PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB\u002BHZ4k=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 01:56:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.cayxtkrauc.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cayxtkrauc"},{"Name":"integrity","Value":"sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="},{"Name":"label","Value":"_content/Cukcuk.Api/files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"41472"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u00221GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Mar 2025 03:26:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"41472"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u00221GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Mar 2025 03:26:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

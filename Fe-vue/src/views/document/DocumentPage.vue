@@ -44,28 +44,65 @@
           <img src="/src/assets/icon/add-folder.png" alt="logo" class="button--add-logo" />
           <span class="button--add-text">Thêm thư mục</span>
         </div>
-        <!-- <div class="btn--white">
+        <div class="btn--white" @click="handleDownloadListDocument" v-loading="downloadLoading">
           <font-awesome-icon :icon="['fas', 'download']" />
-        </div> -->
+        </div>
       </div>
     </div>
     <div class="content-main">
       <div class="toolbar">
         <input
+          v-if="selectedDocuments.length === 0"
           type="text"
           placeholder="Tìm kiếm theo từ khóa"
           v-model="keyword"
           @input="handleInput"
           @keydown.enter="fetchDocument"
         />
+        <div v-else class="toolbar--left">
+          <font-awesome-icon :icon="['fas', 'arrow-turn-down']" class="toolbar-icon" />
+          <div class="toolbar--selected-document">
+            Đã chọn
+            <span class="selected-document--value">{{ selectedDocuments.length }}</span> dữ liệu
+          </div>
+          <button class="toolbar__button--clear" @click="resetSelectedDocuments">Bỏ chọn</button>
+          <div class="toolbar__buttons">
+            <button class="toolbar-button" @click="deleteSelectedDocument">
+              <font-awesome-icon :icon="['fas', 'trash']" /><span>Xóa</span>
+            </button>
+            <button class="toolbar-button" @click="moveSelectedDocument">
+              <font-awesome-icon :icon="['fas', 'file-import']" /><span>Di chuyển</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="toolbar__actions">
+          <button class="toolbar-action" @click="fetchDocument()">
+            <img src="/src/assets/icon/refresh.png" alt="logo" />
+          </button>
+        </div>
       </div>
       <div class="main-container" ref="tableContainer" v-loading="loading">
         <table class="employee-table">
           <thead>
             <tr>
-              <th class="w-20">Tên tài liệu</th>
-              <th class="w-10">Chủ đề</th>
-              <th class="w-10">Ngày tạo</th>
+              <th style="width: 40px; padding: 0">
+                <span @click="selectAllDocuments" v-if="selectedDocuments.length === 0">
+                  <font-awesome-icon :icon="['fas', 'square']" class="square"
+                /></span>
+
+                <span
+                  @click="selectAllDocuments"
+                  v-else-if="selectedDocuments.length < documents.length"
+                  ><font-awesome-icon :icon="['fas', 'square-minus']" class="square--check"
+                /></span>
+                <span v-else @click="resetSelectedDocuments">
+                  <font-awesome-icon :icon="['fas', 'square-check']" class="square--check" />
+                </span>
+              </th>
+              <th>Tên tài liệu</th>
+              <th class="w-20">Chủ đề</th>
+              <th class="w-20">Ngày tạo</th>
               <th class="w-30" v-if="keyword.trim().length > 0">Vị trí</th>
               <th class="w-10">Hành động</th>
             </tr>
@@ -77,6 +114,14 @@
               @dblclick="handleSelectDocument(document)"
               style="cursor: pointer"
             >
+              <td style="text-align: center">
+                <span v-if="!checkDocumentSelected(document)" @click="selectDocument(document)">
+                  <font-awesome-icon :icon="['fas', 'square']" class="square" />
+                </span>
+                <span v-else @click="removeSelectDocument(document)">
+                  <font-awesome-icon :icon="['fas', 'square-check']" class="square--check" />
+                </span>
+              </td>
               <td>
                 <img
                   :src="`/src/assets/icon/${getSrcIconDocument(document.Type)}`"
@@ -170,15 +215,14 @@
 
     <UpdateForm v-if="showUpdateForm" @close-form="closeForm" :id="documentUpdatedId!" />
 
-    <MoveDocument v-if="showMoveDocumentForm" @close-form="closeForm" :document="moveDocument" />
+    <MoveDocument v-if="showMoveDocumentForm" @close-form="closeForm" :documents="moveDocuments" />
   </div>
-
   <FileDetail v-if="showDocumentDetail" :document="documentDetail" @close-file="closeFile" />
 </template>
 
 <script setup lang="ts">
 import '/src/styles/component/input.scss'
-
+import '/src/styles/layout/header.scss'
 import ThePagnigation from '@/components/ThePagnigation.vue'
 import { DocumentType, type Document } from '@/entities/Document'
 import { formatDate, getSrcIconDocument } from '@/utils'
@@ -215,6 +259,45 @@ const showAddFileForm = ref(false)
 const showAddFolderForm = ref(false)
 const showMoveDocumentForm = ref(false)
 const showUpdateForm = ref(false)
+const downloadLoading = ref(false)
+
+const selectedDocuments = ref<Document[]>([])
+
+function selectAllDocuments() {
+  selectedDocuments.value = documents.value
+}
+
+function resetSelectedDocuments() {
+  selectedDocuments.value = []
+}
+
+function selectDocument(document: Document) {
+  selectedDocuments.value.push(document)
+}
+
+function removeSelectDocument(document: Document) {
+  const index = selectedDocuments.value.findIndex((doc) => doc.Id === document.Id)
+  if (index > -1) {
+    selectedDocuments.value = [
+      ...selectedDocuments.value.slice(0, index),
+      ...selectedDocuments.value.slice(index + 1),
+    ]
+  }
+}
+
+function checkDocumentSelected(document: Document) {
+  return selectedDocuments.value.some((doc) => doc.Id === document.Id)
+}
+
+async function deleteSelectedDocument() {
+  const ids = selectedDocuments.value.map((doc) => doc.Id)
+  try {
+    await axios.put('https://localhost:7160/api/v1/Documents/delete', ids)
+    fetchDocument()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 let timeout: ReturnType<typeof setTimeout> | null = null
 
@@ -225,6 +308,25 @@ const textPopupPosition = ref({
 
 const showTextPopup = ref(false)
 const textPopupData = ref<string | null>(null)
+
+async function handleDownloadListDocument() {
+  downloadLoading.value = true
+  const response = await axios.get('https://localhost:7160/api/v1/Documents/export', {
+    params: {
+      folderId: currentDocument.value?.Id,
+      keyword: keyword.value,
+    },
+    responseType: 'blob',
+  })
+  downloadLoading.value = false
+  const url = window.URL.createObjectURL(new Blob([response.data]))
+  const link = document.createElement('a')
+  link.href = url
+  link.setAttribute('download', `Danh sách tài liệu.xlsx`)
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
 
 function handleShowPopupText(data: string, event: FocusEvent) {
   if (keyword.value == '') return
@@ -288,14 +390,7 @@ function goPreRequest() {
   }
 }
 
-const moveDocument = ref<Document>({
-  Id: '',
-  Name: '',
-  Type: DocumentType.Unknown,
-  CategoryId: null,
-  CreatedAt: '',
-  FolderPath: '',
-})
+const moveDocuments = ref<Document[]>([])
 
 const documentDetail = ref<Document>({
   Id: '',
@@ -347,8 +442,15 @@ async function handleDeleteDocument(id: string | null, index: number) {
   }
 }
 
+function moveSelectedDocument() {
+  console.log('di chuyern')
+  moveDocuments.value = selectedDocuments.value
+  showMoveDocumentForm.value = true
+  showPopupAction.value = -1
+}
+
 function handleMoveDocument(document: Document) {
-  moveDocument.value = document
+  moveDocuments.value.push(document)
   showMoveDocumentForm.value = true
   showPopupAction.value = -1
 }
@@ -417,6 +519,12 @@ function routeDocument(document: Document) {
 function backToRoot() {
   if (currentDocument.value) {
     resetQuery()
+    requests.value = [
+      {
+        document: null,
+        keyword: '',
+      },
+    ]
     listParents.value = []
     currentDocument.value = null
     fetchDocument()
@@ -487,6 +595,7 @@ async function fetchParentFolders(id: string) {
 
 async function fetchDocument() {
   loading.value = true
+  selectedDocuments.value = []
   const response = await axios.get('https://localhost:7160/api/v1/Documents/filter', {
     params: {
       parentId: currentDocument.value?.Id,
@@ -513,31 +622,6 @@ onMounted(() => {
 <style scoped lang="scss">
 .main-container {
   height: 580px;
-}
-
-.popup-text {
-  position: fixed;
-  background-color: black;
-  border-radius: 6px;
-  padding: 6px 12px;
-  z-index: 100;
-  color: white;
-  font-size: 14px;
-  text-align: center;
-  transform: translateX(-50%);
-  white-space: nowrap;
-
-  .popup-arrow {
-    position: absolute;
-    bottom: -6px; /* Vị trí ngay dưới popup */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid black; /* Tạo tam giác màu đen */
-  }
 }
 
 .action-button {
@@ -568,49 +652,23 @@ onMounted(() => {
   }
 }
 
-.header-btn {
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-
-  div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-weight: 300;
-    min-width: 40px;
-    justify-content: center;
-    cursor: pointer;
-
-    img {
-      width: 20px;
-      height: 20px;
-    }
-    &.btn--white {
-      background-color: #ffffff;
-      color: #078cf8;
-      border: 1px solid #078cf8;
-
-      &:hover {
-        background-color: #dddddd;
-      }
-
-      img {
-        filter: invert(47%) sepia(96%) saturate(3556%) hue-rotate(195deg) brightness(100%);
-      }
-    }
-
-    &.btn--blue {
-      background-color: #078cf8;
-      color: #ffffff;
-
-      &:hover {
-        background-color: #9bd2ff;
-      }
-    }
+.square {
+  color: #ffffff !important;
+  border: 1px solid gray !important;
+  border-radius: 2px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0;
+  &:hover {
+    border-color: #078cf8 !important;
   }
+}
+
+.square--check {
+  color: #078cf8;
+  border-radius: 2px;
+  width: 15.17px;
+  height: 17px;
+  cursor: pointer;
 }
 </style>

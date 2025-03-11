@@ -8,31 +8,9 @@
         </button>
       </div>
       <div style="margin-top: 10px">
-        <div
-          style="
-            display: flex;
-            flex-direction: row;
-            gap: 72px;
-            align-items: center;
-            margin-bottom: 10px;
-          "
-        >
+        <div class="current-position">
           <div style="padding: 12px; width: 120px">Vị trí hiện tại</div>
-          <div
-            style="
-              padding: 6px 20px;
-              border: 1px solid gainsboro;
-              border-radius: 6px;
-              min-width: 280px;
-              height: 36px;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              gap: 10px;
-              background-color: gainsboro;
-            "
-          >
+          <div class="current-position--value">
             <img src="/src/assets/icon/folder.png" style="width: 24px; height: 24px" />
             <div>
               {{ parentFolderName }}
@@ -73,6 +51,10 @@ const emits = defineEmits(['closeForm'])
 const parentFolderName = ref<string>('Tài liệu')
 
 async function getNameParent() {
+  if (props.documents.length > 1) {
+    parentFolderName.value = ''
+    return
+  }
   if (props.documents[0].ParentId == null) return
 
   try {
@@ -174,6 +156,28 @@ onMounted(() => {
 
   &::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+  }
+}
+
+.current-position {
+  display: flex;
+  flex-direction: row;
+  gap: 72px;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .current-position--value {
+    padding: 6px 20px;
+    border: 1px solid gainsboro;
+    border-radius: 6px;
+    min-width: 280px;
+    height: 36px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: gainsboro;
   }
 }
 </style>

@@ -18,9 +18,9 @@
         </div>
       </form>
       <div class="form__footer">
-        <button class="button--cancel" @click="handleCloseForm(false)">Hủy</button>
+        <button class="button--cancel" @click="handleCloseForm(false)">Hủy bỏ</button>
         <button class="button--complete" id="submitButton" @click="handleSubmitForm">
-          <span src="/src/assets/icon/refresh.png" alt="logo">Lưu</span>
+          <span src="/src/assets/icon/refresh.png" alt="logo">Thêm</span>
         </button>
       </div>
     </div>

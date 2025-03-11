@@ -2,32 +2,33 @@
   <div class="content">
     <div class="content__header">
       <h1 class="content__title">Quản lý nhân viên</h1>
-      <button class="content__button button--add" @click="addNew" v-loading="addLoading">
-        <div class="content__button button--add">
+      <div class="header-btn">
+        <div class="btn--blue" @click="addNew">
           <img src="/src/assets/icon/add.png" alt="logo" class="button--add-logo" />
           <span class="button--add-text">Thêm mới</span>
         </div>
-      </button>
+      </div>
     </div>
 
     <span v-if="errorMessage" class="error-message">{{ errorMessage }}</span>
     <div class="content-main">
       <div class="toolbar">
-        <div class="toolbar_search">
-          <input
-            type="text"
-            id="search-employee"
-            placeholder="Tìm kiếm theo mã, họ tên"
-            v-model="keyword"
-          />
-          <button @click="handleSearch()" v-loading="searchLoading">
-            <img src="/src/assets/icon/search.png" alt="logo" />
-          </button>
-        </div>
-        <div class="toolbar_sort">
-          <span v-loading="sortNameLoading" @click="handleSortByName()">Theo tên</span>
-          <span v-loading="sortDateLoading" @click="handleSortByDate()">Theo ngày tạo</span>
-          <span v-loading="sortTypeLoading" @click="handleSortByType()">Theo loại</span>
+        <div style="display: flex; flex-direction: row; gap: 20px">
+          <div class="toolbar_search">
+            <input
+              type="text"
+              id="search-employee"
+              placeholder="Tìm kiếm theo mã, họ tên"
+              v-model="keyword"
+              @input="handleSearch"
+            />
+          </div>
+
+          <div class="toolbar_sort">
+            <span v-loading="sortNameLoading" @click="handleSortByName()">Theo tên</span>
+            <span v-loading="sortDateLoading" @click="handleSortByDate()">Theo ngày tạo</span>
+            <span v-loading="sortTypeLoading" @click="handleSortByType()">Theo loại</span>
+          </div>
         </div>
         <div class="toolbar__actions">
           <button class="toolbar-action" @click="importFile()">
@@ -93,7 +94,11 @@
                 <div class="action" :ref="`action-${index}`" v-if="folder.Type == false">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
-                      <img src="/src/assets/icon/option.png" alt="" />
+                      <font-awesome-icon
+                        :icon="['fas', 'ellipsis-vertical']"
+                        class="button__icon"
+                        :class="{ selected: showPopupAction === index }"
+                      />
                     </button>
                     <div
                       class="popup-action"
@@ -103,18 +108,27 @@
                       <span
                         @click="deleteEmployee(folder.EmployeeId, index)"
                         v-loading="deleteLoading == index"
-                        >Xóa</span
+                        ><font-awesome-icon :icon="['fas', 'trash']" /><span>Xóa</span></span
                       >
-                      <span @click="deleteEmployee(folder.EmployeeId, index)">Xóa</span>
+
+                      <span
+                        @click="deleteEmployee(folder.EmployeeId, index)"
+                        v-loading="deleteLoading == index"
+                        ><font-awesome-icon :icon="['fas', 'trash']" /><span>Xóa</span></span
+                      >
                       <span
                         @click="updateEmployee(folder.EmployeeId, index)"
                         v-loading="updateLoading == index"
-                        >Sửa
+                      >
+                        <font-awesome-icon icon="pen-to-square" />
+                        <span>Sửa</span>
                       </span>
                       <span
                         @click="updateEmployee(folder.EmployeeId, index)"
                         v-loading="updateLoading == index"
-                        >Sửa
+                      >
+                        <font-awesome-icon icon="pen-to-square" />
+                        <span>Sửa</span>
                       </span>
                     </div>
                   </div>
@@ -245,18 +259,17 @@ function closeContextMenu() {
 }
 
 function togglePopupAction(index: number, event: MouseEvent): void {
-  const target = event.target instanceof HTMLElement ? event.target : null
+  const target = event.currentTarget as HTMLElement
   if (!target) return
 
   const buttonRect = target.getBoundingClientRect()
 
   popupPosition.value = {
-    top: buttonRect.top - 2 * buttonRect.height,
+    top: buttonRect.top - buttonRect.height,
     right: window.innerWidth - buttonRect.left,
   }
 
   showPopupAction.value = showPopupAction.value === index ? -1 : index
-  showMenu.value = false
 }
 
 async function handleRefresh() {
@@ -315,11 +328,19 @@ async function handlePageChange(newPageNumber: number) {
   pageLoading.value = false
 }
 
-async function handleSearch() {
-  searchLoading.value = true
-  pageNumber.value = 1
-  await fetchEmployeeFolders()
-  searchLoading.value = false
+let timeout: ReturnType<typeof setTimeout> | null = null
+
+function handleSearch() {
+  if (timeout) {
+    clearTimeout(timeout)
+  }
+
+  timeout = setTimeout(() => {
+    searchLoading.value = true
+    pageNumber.value = 1
+    fetchEmployeeFolders()
+    searchLoading.value = false
+  }, 500)
 }
 
 async function handleExportFile() {

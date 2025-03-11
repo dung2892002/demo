@@ -136,7 +136,9 @@
                 ></span>
               </td>
               <td>{{ document.Category?.Name }}</td>
-              <td>{{ document.CreatedAt ? formatDate(document.CreatedAt) : '' }}</td>
+              <td style="text-align: center">
+                {{ document.CreatedAt ? formatDate(document.CreatedAt) : '' }}
+              </td>
               <td v-if="keyword.trim().length > 0">
                 <span
                   @mouseenter="handleShowPopupText(document.FolderPath, $event)"
@@ -148,8 +150,9 @@
                 <div class="action" :ref="`action-${index}`">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
-                      <img
-                        src="/src/assets/icon/kebab-menu.png"
+                      <font-awesome-icon
+                        :icon="['fas', 'ellipsis-vertical']"
+                        class="button__icon"
                         :class="{ selected: showPopupAction === index }"
                       />
                     </button>
@@ -171,7 +174,7 @@
                         ></span
                       >
                       <span
-                        @click="handleDeleteDocument(document.Id, index)"
+                        @click="handleDeleteDocument(document)"
                         v-loading="deleteLoading == index"
                         ><font-awesome-icon :icon="['fas', 'trash']" /><span>Xóa</span></span
                       >
@@ -185,7 +188,7 @@
       </div>
       <ThePagnigation
         :pageNumber="pageNumber"
-        :pageLoading="pageLoading"
+        :pageLoading="false"
         @pageChange="handlePageChange"
         @pageSizeChange="handlePageSizeChange"
       />
@@ -216,6 +219,12 @@
     <UpdateForm v-if="showUpdateForm" @close-form="closeForm" :id="documentUpdatedId!" />
 
     <MoveDocument v-if="showMoveDocumentForm" @close-form="closeForm" :documents="moveDocuments" />
+
+    <ConfirmDelete
+      v-if="showConfirmDelete"
+      @close="closeForm"
+      :documents="deleteDocuments"
+    ></ConfirmDelete>
   </div>
   <FileDetail v-if="showDocumentDetail" :document="documentDetail" @close-file="closeFile" />
 </template>
@@ -234,6 +243,7 @@ import AddFolderForm from './AddFolderForm.vue'
 import MoveDocument from './MoveDocument.vue'
 import FileDetail from './FileDetail.vue'
 import UpdateForm from './UpdateForm.vue'
+import ConfirmDelete from './ConfirmDelete.vue'
 
 const keyword = ref<string>('')
 const store = useStore()
@@ -287,16 +297,6 @@ function removeSelectDocument(document: Document) {
 
 function checkDocumentSelected(document: Document) {
   return selectedDocuments.value.some((doc) => doc.Id === document.Id)
-}
-
-async function deleteSelectedDocument() {
-  const ids = selectedDocuments.value.map((doc) => doc.Id)
-  try {
-    await axios.put('https://localhost:7160/api/v1/Documents/delete', ids)
-    fetchDocument()
-  } catch (error) {
-    console.log(error)
-  }
 }
 
 let timeout: ReturnType<typeof setTimeout> | null = null
@@ -386,6 +386,7 @@ function goPreRequest() {
       fetchParentFolders(preRequest.document.Id!)
     } else {
       listParents.value = []
+      store.dispatch('setupListFolder', listParents.value)
     }
   }
 }
@@ -411,7 +412,7 @@ const popupPosition = ref({
 const showPopupAction = ref<number>(-1)
 
 function togglePopupAction(index: number, event: MouseEvent): void {
-  const target = event.target instanceof HTMLElement ? event.target : null
+  const target = event.currentTarget as HTMLElement
   if (!target) return
 
   const buttonRect = target.getBoundingClientRect()
@@ -430,26 +431,30 @@ async function handleUpdateDocument(document: Document) {
   showPopupAction.value = -1
 }
 
-async function handleDeleteDocument(id: string | null, index: number) {
-  deleteLoading.value = index
-  try {
-    await axios.delete(`https://localhost:7160/api/v1/Documents/${id}`)
-    await fetchDocument()
-    deleteLoading.value = -1
-    showPopupAction.value = -1
-  } catch (error) {
-    console.log(error)
-  }
+const deleteDocuments = ref<Document[]>([])
+const showConfirmDelete = ref(false)
+
+function deleteSelectedDocument() {
+  deleteDocuments.value = selectedDocuments.value
+  showConfirmDelete.value = true
+  showPopupAction.value = -1
+}
+
+async function handleDeleteDocument(document: Document) {
+  deleteDocuments.value = []
+  deleteDocuments.value.push(document)
+  showConfirmDelete.value = true
+  showPopupAction.value = -1
 }
 
 function moveSelectedDocument() {
-  console.log('di chuyern')
   moveDocuments.value = selectedDocuments.value
   showMoveDocumentForm.value = true
   showPopupAction.value = -1
 }
 
 function handleMoveDocument(document: Document) {
+  moveDocuments.value = []
   moveDocuments.value.push(document)
   showMoveDocumentForm.value = true
   showPopupAction.value = -1
@@ -465,12 +470,13 @@ function handleAddFolder() {
   showPopupAction.value = -1
 }
 
-function closeForm() {
+function closeForm(state: boolean) {
   showAddFileForm.value = false
   showAddFolderForm.value = false
   showMoveDocumentForm.value = false
   showUpdateForm.value = false
-  fetchDocument()
+  showConfirmDelete.value = false
+  if (state) fetchDocument()
 }
 
 function closeFile(state: boolean) {
@@ -526,6 +532,7 @@ function backToRoot() {
       },
     ]
     listParents.value = []
+    store.dispatch('setupListFolder', listParents.value)
     currentDocument.value = null
     fetchDocument()
   }
@@ -588,6 +595,7 @@ async function fetchParentFolders(id: string) {
     })
 
     listParents.value = response.data
+    store.dispatch('setupListFolder', listParents.value)
   } catch (error) {
     console.log(error)
   }
@@ -620,38 +628,6 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-.main-container {
-  height: 580px;
-}
-
-.action-button {
-  box-sizing: content-box;
-  height: 30px;
-  width: 30px;
-  background-color: none;
-  border-radius: 50%;
-  padding: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    border: 1px solid #078cf8;
-
-    img {
-      filter: invert(33%) sepia(92%) saturate(1000%) hue-rotate(195deg);
-    }
-  }
-
-  img {
-    width: 24px;
-    height: 24px;
-
-    &.selected {
-      filter: invert(33%) sepia(92%) saturate(1000%) hue-rotate(195deg);
-    }
-  }
-}
-
 .square {
   color: #ffffff !important;
   border: 1px solid gray !important;

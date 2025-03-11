@@ -40,42 +40,45 @@ namespace Cukcuk.Core.Services
             await _documentRepository.Create(document);
         }
 
-        public async Task CreateFile(IFormFile file, Guid? parentId, Guid categoryId)
+        public async Task CreateFile(List<IFormFile> files, Guid? parentId, Guid categoryId)
         {
-            ArgumentNullException.ThrowIfNull(file);
-
-            var uniqueFileName = $"{Guid.NewGuid()}_{Path.GetFileName(file.FileName)}";
-            var filePath = Path.Combine("wwwroot/files", uniqueFileName).Replace("\\", "/"); ;
-
-            var document = new Document
+            foreach (var file in files)
             {
-                Id = Guid.NewGuid(),
-                ParentId = parentId,
-                CategoryId = categoryId,
-                CreatedAt = DateTime.Now,
-                Parent = null,
-                Category = null,
-                Children = new List<Document>(),
-                Path = filePath,
-                FolderPath = "Tài liệu",
-                Name = Path.GetFileNameWithoutExtension(file.FileName),
-                Type = GetDocumentType(file)
-            };
+                ArgumentNullException.ThrowIfNull(file);
 
-            document.Name = await _documentRepository.GetUniqueDocumentName(parentId, document.Name, document.Type, null);
+                var uniqueFileName = $"{Guid.NewGuid()}_{Path.GetFileName(file.FileName)}";
+                var filePath = Path.Combine("wwwroot/files", uniqueFileName).Replace("\\", "/"); ;
 
-            if (document.ParentId != null)
-            {
-                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+                var document = new Document
+                {
+                    Id = Guid.NewGuid(),
+                    ParentId = parentId,
+                    CategoryId = categoryId,
+                    CreatedAt = DateTime.Now,
+                    Parent = null,
+                    Category = null,
+                    Children = new List<Document>(),
+                    Path = filePath,
+                    FolderPath = "Tài liệu",
+                    Name = Path.GetFileNameWithoutExtension(file.FileName),
+                    Type = GetDocumentType(file)
+                };
 
-                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+                document.Name = await _documentRepository.GetUniqueDocumentName(parentId, document.Name, document.Type, null);
+
+                if (document.ParentId != null)
+                {
+                    var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                    document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+                }
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                await _documentRepository.Create(document);
             }
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-            await _documentRepository.Create(document);
         }
 
         public async Task Delete(Guid id)
@@ -240,37 +243,7 @@ namespace Cukcuk.Core.Services
 
         }
 
-        private async Task HandleMoveDocument(Document document, Guid? parentId)
-        {
-
-            document.ParentId = parentId;
-            document.FolderPath = "Tài liệu";
-
-            document.Name = await _documentRepository.GetUniqueDocumentName(parentId, document.Name, document.Type, null);
-
-            if (parentId != null)
-            {
-                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
-
-                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
-            }
-            await _documentRepository.Update(document);
-        }
-
-        private async Task HandleUpdatePathSubDocument(Document parent)
-        {
-            var childrens = await _documentRepository.GetSubsDocument(parent.Id);
-            if (!childrens.Any())
-            {
-                return;
-            }
-            foreach (var children in childrens)
-            {
-                children.FolderPath = parent.FolderPath + "/" + parent.Name;
-                await _documentRepository.Update(children);
-                await HandleUpdatePathSubDocument(children);
-            }
-        }
+        
 
         public async Task<IEnumerable<Document>> GetParentDocuments(Guid id)
         {
@@ -329,6 +302,38 @@ namespace Cukcuk.Core.Services
 
             foreach (var document in documents) 
                 await HandleUpdatePathSubDocument(document);
+        }
+
+        private async Task HandleMoveDocument(Document document, Guid? parentId)
+        {
+
+            document.ParentId = parentId;
+            document.FolderPath = "Tài liệu";
+
+            document.Name = await _documentRepository.GetUniqueDocumentName(parentId, document.Name, document.Type, null);
+
+            if (parentId != null)
+            {
+                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+            }
+            await _documentRepository.Update(document);
+        }
+
+        private async Task HandleUpdatePathSubDocument(Document parent)
+        {
+            var childrens = await _documentRepository.GetSubsDocument(parent.Id);
+            if (!childrens.Any())
+            {
+                return;
+            }
+            foreach (var children in childrens)
+            {
+                children.FolderPath = parent.FolderPath + "/" + parent.Name;
+                await _documentRepository.Update(children);
+                await HandleUpdatePathSubDocument(children);
+            }
         }
     }
 }

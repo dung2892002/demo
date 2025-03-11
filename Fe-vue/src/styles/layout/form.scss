@@ -1,5 +1,5 @@
 .form-container {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100vh;
   border: 1px solid black;
@@ -32,6 +32,13 @@
 
 .form__button {
   padding: 0;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    border-radius: 50%;
+    background-color: #cacaca;
+  }
 }
 
 .form__button img {
@@ -139,23 +146,21 @@ form label {
 }
 
 .form__footer {
-  background-color: #f2f2f2;
-  padding: 12px;
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
-}
+  gap: 8px;
 
-.form__footer button {
-  width: 96px;
-  height: 48px;
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 400;
-  margin-right: 1%;
-  cursor: pointer;
+  button {
+    height: 18px;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-sizing: content-box;
+  }
 }
 
 .form__input--date,
@@ -322,6 +327,253 @@ form label {
       height: 24px;
       cursor: pointer;
       margin-left: 6px;
+    }
+  }
+}
+
+.content--file {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0;
+  background-color: gainsboro;
+  width: 100%;
+  min-height: 100vh;
+  .content__header {
+    background-color: #fff;
+    height: 56px;
+    padding: 0 20px;
+    margin: 0;
+    z-index: 10;
+    position: relative;
+
+    &.header--shadow {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 20px;
+        font-weight: 600;
+        color: #606266;
+      }
+    }
+  }
+
+  .content-main {
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    gap: 20px;
+
+    margin-top: 20px;
+
+    div {
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .file {
+      width: 320px;
+      background-color: #fff;
+      height: 850px;
+
+      .file-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+      }
+    }
+
+    .file-data {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      .file-content {
+        background-color: #fff;
+        height: 800px;
+        padding: 10px;
+        overflow-y: scroll;
+        width: 100%;
+        margin: 0, auto;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+          height: 40px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #f2f2f2;
+
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #b9b9b9;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: #555;
+        }
+      }
+
+      .footer {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+
+        div {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+
+          button {
+            padding: 8px 24px;
+            border-radius: 6px;
+
+            &:first-child {
+              background-color: #ffffff;
+              &:hover {
+                background-color: #dddddd;
+                border: 1px solid gray;
+              }
+            }
+
+            &:last-child {
+              background-color: #078cf8;
+              color: #ffffff;
+              &:hover {
+                background-color: #9bd2ff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .file-upload-form {
+    background-color: #ffffff;
+    width: 100%;
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+
+    .form {
+      margin: auto;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      padding: 20px;
+      height: auto;
+
+      .form-data {
+        .file-upload {
+          width: 720px;
+          border: 1px dashed #586074;
+          border-radius: 6px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #f2f2f2;
+          height: 240px;
+          margin-bottom: 20px;
+          cursor: pointer;
+
+          img {
+            width: 124px;
+            height: 124px;
+          }
+
+          .upload__title {
+            font-size: 14px;
+            font-weight: 700;
+          }
+          .upload__notice {
+            font-size: 11px;
+            color: #6e737a;
+          }
+        }
+
+        .file-category {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+
+          position: relative;
+
+          .category--current {
+            border: 1px solid #d6d6d6;
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 6px;
+          }
+          .category-data {
+            display: flex;
+            flex-direction: column;
+            width: 240px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 8px 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 2;
+            background-color: #ffffff;
+            height: 260px;
+            overflow-y: scroll;
+
+            div {
+              padding: 8px 12px;
+              color: #616060;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              &.selected {
+                color: #078cf8;
+                background-color: #c2e3fd;
+              }
+
+              &:hover {
+                color: #078cf8;
+                background-color: #a7d5f9;
+              }
+            }
+          }
+        }
+      }
+
+      .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 10px;
+        margin-top: 20px;
+        button {
+          padding: 8px 15px;
+        }
+      }
     }
   }
 }

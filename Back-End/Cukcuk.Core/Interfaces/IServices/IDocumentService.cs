@@ -19,7 +19,7 @@ namespace Cukcuk.Core.Interfaces.IServices
 
         Task<Document?> GetById(Guid id);
 
-        Task CreateFile(IFormFile file, Guid? parentId, Guid categoryId);
+        Task CreateFile(List<IFormFile> files, Guid? parentId, Guid categoryId);
 
         Task<string> GetFileDetailHtml(Guid id);
 

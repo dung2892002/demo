@@ -10,10 +10,7 @@
           @click.stop="toggleExpand"
           v-loading="loading"
           :class="{
-            disabled:
-              document.Id === selectedDocuments[0]?.Id ||
-              (selectedDocuments[0]?.ParentId == null && document.Id == 'null') ||
-              document.Id === selectedDocuments[0]?.ParentId,
+            disabled: !checkAvailableSelectFolder(),
           }"
         >
           <img
@@ -26,10 +23,7 @@
         <span
           style="display: flex; align-items: center; gap: 10px; padding: 0 6px"
           :class="{
-            disabled:
-              document.Id === selectedDocuments[0]?.ParentId ||
-              document.Id === selectedDocuments[0]?.Id ||
-              (selectedDocuments[0]?.ParentId == null && document.Id == 'null'),
+            disabled: !checkAvailableSelectFolder(),
           }"
         >
           <img src="/src/assets/icon/folder.png" style="width: 24px; height: 24px" />
@@ -61,7 +55,9 @@
 <script setup lang="ts">
 import { DocumentType, type Document } from '@/entities/Document'
 import axios from 'axios'
-import { ref, type PropType, onMounted } from 'vue'
+import { ref, type PropType, onMounted, computed } from 'vue'
+import { useStore } from 'vuex'
+const store = useStore()
 const props = defineProps({
   document: {
     type: Object as PropType<Document>,
@@ -76,19 +72,22 @@ const props = defineProps({
   },
 })
 
-function checkDocument() {
-  const folderPath = props.selectedDocuments[0].FolderPath.split('/')
-  const currentPath = [...props.document.FolderPath.split('/'), props.document.Name]
+function checkAvailableSelectFolder() {
+  return !(
+    props.selectedDocuments.some((doc) => doc.Id === props.document.Id) ||
+    props.selectedDocuments.some((doc) => doc.ParentId === props.document.Id) ||
+    (props.selectedDocuments.some((doc) => doc.ParentId === null) && props.document.Id === 'null')
+  )
+}
 
-  return folderPath.slice(0, currentPath.length).join('/') === currentPath.join('/')
+function checkDocumentIsParent() {
+  return listParent.value.some((folder) => folder.Id === props.document.Id)
 }
 
 const loading = ref(false)
 
 function handleClickDocument() {
-  if (props.document.Id == props.selectedDocuments[0]?.Id) return
-  if (props.document.Id == props.selectedDocuments[0]?.ParentId) return
-  if (props.document.Id == 'null' && props.selectedDocuments[0]?.ParentId == null) return
+  if (!checkAvailableSelectFolder()) return
   emit('select', props.document.Id)
 }
 
@@ -96,12 +95,8 @@ const emit = defineEmits(['select'])
 
 async function toggleExpand() {
   if (props.document.Type !== 'Folder') return
-
-  if (
-    !props.document.IsExpend &&
-    props.document.Id != props.selectedDocuments[0]?.Id &&
-    props.document.Id != props.selectedDocuments[0]?.ParentId
-  ) {
+  if (!checkAvailableSelectFolder()) return
+  if (!props.document.IsExpend) {
     props.document.IsExpend! = true
     if (!props.document.IsLoaded) {
       loading.value = true
@@ -127,9 +122,10 @@ async function fetchChildren() {
   }))
 }
 
+const listParent = computed(() => store.getters.getListFolder)
+
 onMounted(() => {
-  if (checkDocument() && !props.document.IsLoaded) {
-    console.log('open folder:', props.document.Name)
+  if (checkDocumentIsParent() && !props.document.IsLoaded) {
     fetchChildren()
   }
 })

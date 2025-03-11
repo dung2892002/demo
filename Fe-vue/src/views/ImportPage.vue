@@ -13,11 +13,11 @@
       </div>
       <div class="import-content">
         <div v-if="stepStatus === 0" class="step--1">
-          <span>Chọn dữ liệu {{ objectImport }} đã chuẩn bị để nhập vào phần mềm</span>
+          <span>Chọn dữ liệu đã chuẩn bị để nhập vào phần mềm</span>
           <div class="content--row">
             <input type="file" ref="fileInput" style="display: none" @change="handleFileUpload" />
             <span>{{ uploadedFile?.name }}</span>
-            <button @click="triggerFileInput">Chọn</button>
+            <button @click="triggerFileInput" style="padding: 8px 24px">Chọn</button>
           </div>
           <div v-if="error" class="error-message">{{ error }}</div>
           <span

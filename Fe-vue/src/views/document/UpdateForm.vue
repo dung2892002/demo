@@ -2,7 +2,9 @@
   <div class="form-container">
     <div class="form__content" v-draggable>
       <div class="form__header">
-        <h2 class="form__title">Chỉnh sửa tài liệu</h2>
+        <h2 class="form__title">
+          {{ document?.Type === DocumentType.Folder ? 'Sửa thư mục' : 'Chỉnh sửa tài liệu' }}
+        </h2>
         <button class="form__button" @click="handleCloseForm(false)">
           <img src="/src/assets/icon/close-48.png" alt="logo" />
         </button>
@@ -11,7 +13,8 @@
         <div class="form-group">
           <div class="form__item">
             <label for="employee-code" class="form__label"
-              >Tên <span class="required">*</span></label
+              >{{ document.Type === DocumentType.Folder ? 'Tên thư mục' : 'Tên tài liệu' }}
+              <span class="required">*</span></label
             >
             <input type="text" v-model="document.Name" class="form__input" />
           </div>
@@ -19,7 +22,7 @@
         <div class="form-group" v-if="document.Type != DocumentType.Folder">
           <div class="form__item">
             <label for="employee-code" class="form__label"
-              >Thể loại <span class="required">*</span></label
+              >Chủ đề <span class="required">*</span></label
             >
             <select v-model="document.CategoryId" class="form__input">
               <option :value="category.Id" v-for="category in categories" :key="category.Id">
@@ -30,7 +33,7 @@
         </div>
       </form>
       <div class="form__footer">
-        <button class="button--cancel" @click="handleCloseForm(false)">Hủy</button>
+        <button class="button--cancel" @click="handleCloseForm(false)">Hủy bỏ</button>
         <button class="button--complete" id="submitButton" @click="handleSubmitForm">
           <span src="/src/assets/icon/refresh.png" alt="logo">Lưu</span>
         </button>

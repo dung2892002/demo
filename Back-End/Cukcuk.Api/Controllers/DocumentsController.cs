@@ -58,11 +58,11 @@ namespace Cukcuk.Api.Controllers
         }
 
         [HttpPost("file")]
-        public async Task<IActionResult> CreateFile([FromForm] IFormFile file, [FromForm] Guid? parentId, [FromForm] Guid categoryId)
+        public async Task<IActionResult> CreateFile([FromForm] List<IFormFile> files, [FromForm] Guid? parentId, [FromForm] Guid categoryId)
         {
             try
             {
-                await _documentService.CreateFile(file, parentId, categoryId);
+                await _documentService.CreateFile(files, parentId, categoryId);
                 return StatusCode(201);
             }
             catch (Exception ex)

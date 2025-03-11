@@ -1,0 +1,116 @@
+.pagination {
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #d5d5d5;
+}
+
+.pagination-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .pagesize {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    label {
+      font-size: 15px;
+    }
+
+    button {
+      position: relative;
+      padding: 0;
+
+      .current-pagesize {
+        border: 1px solid #dddddd;
+        border-radius: 6px;
+        width: 70px;
+        padding: 8px;
+        span {
+          font-size: 16px;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .pagesize-select {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        width: 80px;
+        padding: 8px 0;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        background-color: #ffffff;
+
+        .pagesize-data {
+          padding-left: 14px;
+          padding-right: 8px;
+          height: 36px;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          width: 100%;
+
+          &:hover {
+            background-color: #f5f7fa;
+          }
+
+          &.selected {
+            color: #078cf8;
+          }
+        }
+      }
+    }
+  }
+
+  .pagenumber {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px;
+
+    .current-page {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    #prev-page,
+    #next-page {
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      padding: 4px;
+      border-radius: 50%;
+
+      img {
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+        width: 24px;
+        height: 24px;
+      }
+      &.disable {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+    #prev-page:not(.disable):hover img,
+    #next-page:not(.disable):hover img {
+      filter: invert(29%) sepia(77%) saturate(4244%) hue-rotate(77deg);
+    }
+  }
+}

@@ -31,4 +31,5 @@ export interface State {
   permissions: [] | null
   accountPermissions: [] | null
   onlineUsers: string[]
+  listFolder: Document[]
 }

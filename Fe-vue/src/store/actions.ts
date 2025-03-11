@@ -7,6 +7,7 @@ import Cookies from 'js-cookie'
 import type { Import } from '@/entities/Import'
 import type { Customer } from '@/entities/Customer'
 import type { Menu } from '@/entities/Menu'
+import type { Document } from '@/entities/Document'
 
 const baseUrl = 'https://localhost:7160/api/v1'
 interface Response {
@@ -648,4 +649,7 @@ export const actions: ActionTree<State, State> = {
   },
 
   //document
+  setupListFolder({ commit }, tree: Document[]) {
+    commit('setListFolder', tree)
+  },
 }

@@ -31,7 +31,11 @@
                 <div class="action" :ref="`action-${index}`">
                   <div class="action-buttons">
                     <button class="action-button" @click="togglePopupAction(index, $event)">
-                      <img src="../../assets/icon/option.png" alt="" />
+                      <font-awesome-icon
+                        :icon="['fas', 'ellipsis-vertical']"
+                        class="button__icon"
+                        :class="{ selected: showPopupAction === index }"
+                      />
                     </button>
                     <div
                       class="popup-action"
@@ -143,18 +147,17 @@ async function fetchAccoutns() {
 }
 
 function togglePopupAction(index: number, event: MouseEvent): void {
-  const target = event.target instanceof HTMLElement ? event.target : null
+  const target = event.currentTarget as HTMLElement
   if (!target) return
 
   const buttonRect = target.getBoundingClientRect()
 
   popupPosition.value = {
-    top: buttonRect.top - 2,
-    right: window.innerWidth - buttonRect.left + 10,
+    top: buttonRect.top - buttonRect.height,
+    right: window.innerWidth - buttonRect.left,
   }
 
   showPopupAction.value = showPopupAction.value === index ? -1 : index
-  showMenu.value = false
 }
 
 function updateAccountPermissions(id: string, index: number) {

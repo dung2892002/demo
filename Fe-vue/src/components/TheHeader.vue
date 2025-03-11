@@ -5,7 +5,7 @@
         <img src="../assets/img/toggle.png" alt="toggle" class="header__toggle-img" />
       </button>
       <div class="header__logo" @click="goHomePage">
-        <img src="../assets/img/cukcuk-logo.png" alt="toggle" class="header__logo-img" />
+        <img src="../assets/img/logo.svg" alt="logo app" class="header__logo-img" />
       </div>
     </div>
     <div class="header__right" v-if="username">

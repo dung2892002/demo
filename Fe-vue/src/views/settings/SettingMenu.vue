@@ -1,7 +1,7 @@
 <template>
   <div class="content" v-if="menus">
     <div class="content-main">
-      <button class="button--add" @click="addNew">Thêm</button>
+      <button class="button--add" @click="addNew">Thêm mới</button>
       <draggable v-model="menus" @end="onDragEnd" item-key="Id">
         <template #item="{ element: menu }">
           <div @click="update(menu)" class="menu-value">

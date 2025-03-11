@@ -167,17 +167,19 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  min-width: 28px; /* Đảm bảo đủ không gian cho spin */
+  min-height: 28px;
 }
 
 .spin {
-  width: 20px !important;
-  height: 20px !important;
-  padding: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
   border: 2px solid #f3f3f3;
   border-top: 2px solid #3498db;
   border-radius: 50% !important;
   animation: spin 1s linear infinite;
   box-sizing: border-box;
+  padding: 0 !important;
 }
 
 @keyframes spin {

@@ -15,32 +15,7 @@
           </button>
         </div>
       </div>
-      <div class="form" v-if="showForm">
-        <div>
-          <span>Đối tượng</span>
-          <select name="" id="" v-model="importValue.TableName">
-            <option v-for="(table, index) in tables" :key="index" :value="table">
-              {{ table }}
-            </option>
-          </select>
-        </div>
-        <div>
-          <span>Tên thuộc tính</span>
-          <select name="" id="" v-model="importValue.PropertyName">
-            <option v-for="(property, index) in filteredProperties" :key="index" :value="property">
-              {{ property }}
-            </option>
-          </select>
-        </div>
-        <div>
-          <span>Tên cột file excel</span>
-          <input type="text" v-model="importValue.ColumnName" />
-        </div>
-        <div>
-          <button @click="submit" class="button--add">Lưu</button>
-          <button @click="cancel" class="button--remove">Hủy</button>
-        </div>
-      </div>
+
       <div class="main-container" ref="tableContainer">
         <table class="employee-table">
           <thead>
@@ -72,6 +47,55 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-container" v-if="showForm">
+    <div class="form__content" v-draggable>
+      <div class="form__header">
+        <h2 class="form__title">Thêm tệp</h2>
+        <button class="form__button" @click="handleCloseForm(false)">
+          <img src="/src/assets/icon/close-48.png" alt="logo" />
+        </button>
+      </div>
+      <form class="cukcuk-form" id="form">
+        <div class="form-group">
+          <div class="form__item">
+            <label class="form__label">Đối tượng <span class="required">*</span></label>
+            <select name="" id="" v-model="importValue.TableName">
+              <option v-for="(table, index) in tables" :key="index" :value="table">
+                {{ table }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form__item">
+            <label class="form__label">Tên thuộc tính <span class="required">*</span></label>
+            <select name="" id="" v-model="importValue.PropertyName">
+              <option
+                v-for="(property, index) in filteredProperties"
+                :key="index"
+                :value="property"
+              >
+                {{ property }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form__item">
+            <label class="form__label">Tên cột file excel <span class="required">*</span></label>
+            <input type="text" v-model="importValue.ColumnName" />
+          </div>
+        </div>
+      </form>
+      <div class="form__footer">
+        <button class="button--cancel" @click="handleCloseForm(false)">Hủy bỏ</button>
+        <button class="button--complete" id="submitButton" @click="submit">
+          <span src="/src/assets/icon/refresh.png" alt="logo">Thêm</span>
+        </button>
       </div>
     </div>
   </div>
@@ -144,8 +168,9 @@ async function submit() {
   fetchSettings()
 }
 
-function cancel() {
+function handleCloseForm(state: boolean) {
   showForm.value = false
+  if (state) fetchSettings()
 }
 
 function update(importSetting: Import) {

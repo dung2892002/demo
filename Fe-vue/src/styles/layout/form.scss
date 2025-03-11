@@ -483,7 +483,7 @@ form label {
 
       .form-data {
         .file-upload {
-          width: 720px;
+          width: 730px;
           border: 1px dashed #586074;
           border-radius: 6px;
           display: flex;
@@ -491,7 +491,8 @@ form label {
           justify-content: center;
           align-items: center;
           background-color: #f2f2f2;
-          height: 240px;
+          height: auto;
+          padding: 40px 10px;
           margin-bottom: 20px;
           cursor: pointer;
 
@@ -500,13 +501,91 @@ form label {
             height: 124px;
           }
 
-          .upload__title {
-            font-size: 14px;
-            font-weight: 700;
+          .upload-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .upload__title {
+              font-size: 14px;
+              font-weight: 700;
+            }
+            .upload__notice {
+              font-size: 11px;
+              color: #6e737a;
+            }
           }
-          .upload__notice {
-            font-size: 11px;
-            color: #6e737a;
+
+          &.has-file {
+            flex-direction: row;
+            padding: 20px 36px;
+            justify-content: start;
+
+            img {
+              width: 100px;
+              height: 100px;
+            }
+            .upload-description {
+              align-items: self-start;
+            }
+          }
+        }
+
+        .file-review {
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            border-bottom: 1px solid #ddd;
+
+            thead {
+              position: sticky;
+              top: 0;
+              background-color: #f5f7fa;
+              z-index: 2;
+              tr {
+                z-index: 2;
+                position: sticky;
+                top: 0;
+                background-color: #f5f7fa;
+                z-index: 9;
+
+                th {
+                  text-align: start;
+                  position: sticky;
+                  padding: 12px;
+                  top: 0;
+                  background-color: #f5f7fa;
+                  z-index: 10;
+                  font-weight: 600;
+
+                  &.button {
+                    text-align: center;
+                  }
+                }
+              }
+            }
+
+            tbody {
+              tr {
+                border-top: 1px solid #ddd;
+                td {
+                  text-align: start;
+                  padding: 12px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  &.button {
+                    text-align: center;
+                  }
+
+                  &.name {
+                    max-width: 380px;
+                    white-space: nowrap; /* Ngăn text xuống dòng */
+                    overflow: hidden; /* Ẩn phần text vượt quá */
+                    text-overflow: ellipsis;
+                  }
+                }
+              }
+            }
           }
         }
 
@@ -514,8 +593,6 @@ form label {
           display: flex;
           flex-direction: column;
           width: 50%;
-
-          position: relative;
 
           .category--current {
             border: 1px solid #d6d6d6;
@@ -526,37 +603,40 @@ form label {
             justify-content: space-between;
             align-items: center;
             margin-top: 6px;
-          }
-          .category-data {
-            display: flex;
-            flex-direction: column;
-            width: 240px;
-            border-radius: 6px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            padding: 8px 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            z-index: 2;
-            background-color: #ffffff;
-            height: 260px;
-            overflow-y: scroll;
 
-            div {
-              padding: 8px 12px;
-              color: #616060;
+            position: relative;
+
+            .category-data {
               display: flex;
-              justify-content: space-between;
-              align-items: center;
+              flex-direction: column;
+              width: 240px;
+              border-radius: 6px;
+              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+              padding: 8px 0;
+              position: absolute;
+              bottom: 100%;
+              left: 0;
+              z-index: 2;
+              background-color: #ffffff;
+              height: 260px;
+              overflow-y: scroll;
 
-              &.selected {
-                color: #078cf8;
-                background-color: #c2e3fd;
-              }
+              div {
+                padding: 8px 12px;
+                color: #616060;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-              &:hover {
-                color: #078cf8;
-                background-color: #a7d5f9;
+                &.selected {
+                  color: #078cf8;
+                  background-color: #c2e3fd;
+                }
+
+                &:hover {
+                  color: #078cf8;
+                  background-color: #a7d5f9;
+                }
               }
             }
           }

@@ -36,16 +36,16 @@
         </div>
       </div>
       <div class="header-btn">
-        <div class="btn--blue" @click="handleAddFile">
+        <div class="btn btn--blue" @click="handleAddFile">
           <img src="/src/assets/icon/add-file.png" alt="logo" class="button--add-logo" />
           <span class="button--add-text">Thêm tệp</span>
         </div>
-        <div class="btn--white" @click="handleAddFolder">
+        <div class="btn btn--white" @click="handleAddFolder">
           <img src="/src/assets/icon/add-folder.png" alt="logo" class="button--add-logo" />
           <span class="button--add-text">Thêm thư mục</span>
         </div>
-        <div class="btn--white" @click="handleDownloadListDocument" v-loading="downloadLoading">
-          <font-awesome-icon :icon="['fas', 'download']" />
+        <div class="btn btn--white" @click="handleDownloadListDocument" v-loading="downloadLoading">
+          <font-awesome-icon :icon="['fas', 'download']" class="icon" />
         </div>
       </div>
     </div>
@@ -635,6 +635,8 @@ onMounted(() => {
   cursor: pointer;
   box-sizing: border-box;
   padding: 0;
+  width: 14px;
+  height: 14px;
   &:hover {
     border-color: #078cf8 !important;
   }
@@ -643,8 +645,9 @@ onMounted(() => {
 .square--check {
   color: #078cf8;
   border-radius: 2px;
-  width: 15.17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
   cursor: pointer;
 }
 </style>

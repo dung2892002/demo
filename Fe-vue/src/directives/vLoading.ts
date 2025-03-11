@@ -6,6 +6,7 @@ const vLoading: Directive = {
     loader.classList.add('loading-overlay')
     loader.style.visibility = binding.value ? 'visible' : 'hidden'
     el.style.position = 'relative'
+    el.style.overflow = 'hidden'
     el.appendChild(loader)
 
     const spin = document.createElement('div')

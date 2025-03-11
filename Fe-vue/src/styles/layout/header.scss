@@ -91,7 +91,7 @@
   flex-direction: row;
   gap: 6px;
 
-  div {
+  .btn {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -99,7 +99,6 @@
     padding: 4px 12px;
     border-radius: 6px;
     font-weight: 300;
-    min-width: 40px;
     justify-content: center;
     cursor: pointer;
 
@@ -107,6 +106,12 @@
       width: 20px;
       height: 20px;
     }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
     &.btn--white {
       background-color: #ffffff;
       color: #078cf8;

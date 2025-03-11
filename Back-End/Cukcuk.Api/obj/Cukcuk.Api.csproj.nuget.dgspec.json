@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\demo\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {}
+    "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {}
   },
   "projects": {
-    "D:\\demo\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {
+    "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\demo\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
+        "projectUniqueName": "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
         "projectName": "Cukcuk.Api",
-        "projectPath": "D:\\demo\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
-        "packagesPath": "C:\\Users\\lvdung\\.nuget\\packages\\",
-        "outputPath": "D:\\demo\\Back-End\\Cukcuk.Api\\obj\\",
+        "projectPath": "D:\\intern\\Back-End\\Cukcuk.Api\\Cukcuk.Api.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\intern\\Back-End\\Cukcuk.Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lvdung\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,17 +22,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\demo\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
-                "projectPath": "D:\\demo\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
+              "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
+                "projectPath": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
               },
-              "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
-                "projectPath": "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj"
+              "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
+                "projectPath": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj"
               }
             }
           }
@@ -51,8 +47,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -106,26 +101,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\demo\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
+    "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\demo\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
+        "projectUniqueName": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
         "projectName": "Cukcuk.Core",
-        "projectPath": "D:\\demo\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
-        "packagesPath": "C:\\Users\\lvdung\\.nuget\\packages\\",
-        "outputPath": "D:\\demo\\Back-End\\Cukcuk.Core\\obj\\",
+        "projectPath": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\intern\\Back-End\\Cukcuk.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lvdung\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -133,6 +123,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -150,8 +141,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -228,26 +218,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
+    "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
+        "projectUniqueName": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
         "projectName": "Cukcuk.Infrastructure",
-        "projectPath": "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\lvdung\\.nuget\\packages\\",
-        "outputPath": "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\obj\\",
+        "projectPath": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\intern\\Back-End\\Cukcuk.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lvdung\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -255,14 +240,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\demo\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
-                "projectPath": "D:\\demo\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
+              "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj": {
+                "projectPath": "D:\\intern\\Back-End\\Cukcuk.Core\\Cukcuk.Core.csproj"
               }
             }
           }
@@ -276,8 +262,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -324,7 +309,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -579,8 +579,8 @@ form label {
 
                   &.name {
                     max-width: 380px;
-                    white-space: nowrap; /* Ngăn text xuống dòng */
-                    overflow: hidden; /* Ẩn phần text vượt quá */
+                    white-space: nowrap;
+                    overflow: hidden;
                     text-overflow: ellipsis;
                   }
                 }

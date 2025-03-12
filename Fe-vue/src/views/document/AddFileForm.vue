@@ -9,9 +9,6 @@
     <div class="file-upload-form">
       <div class="form">
         <ToastComponent ref="toastRef" />
-        <div v-if="errors.length > 0" class="error-list">
-          <span v-for="(err, index) in errors" :key="index" class="error-message"> {{ err }}</span>
-        </div>
         <div class="form-data">
           <div
             class="file-upload"
@@ -195,28 +192,26 @@ function getIconFile(file: File) {
   return getSrcIconDocument(DocumentType.Word)
 }
 
-const errors = ref<string[]>([])
-
-const openFileDialog = (): void => {
+function openFileDialog(): void {
   fileInput.value?.click()
 }
 
-const handleDragOver = (event: DragEvent): void => {
+function handleDragOver(event: DragEvent): void {
   event.preventDefault()
 }
 
 const isDragging = ref(false)
-const handleDragEnter = (event: DragEvent): void => {
+function handleDragEnter(event: DragEvent): void {
   event.preventDefault()
   isDragging.value = true
 }
 
-const handleDragLeave = (event: DragEvent): void => {
+function handleDragLeave(event: DragEvent): void {
   event.preventDefault()
   isDragging.value = false
 }
 
-const handleDrop = (event: DragEvent): void => {
+function handleDrop(event: DragEvent): void {
   event.preventDefault()
   isDragging.value = false
 
@@ -226,7 +221,7 @@ const handleDrop = (event: DragEvent): void => {
   processFiles(Array.from(files))
 }
 
-const processFiles = (files: File[]): void => {
+function processFiles(files: File[]): void {
   files.forEach((file) => {
     if (!allowedFormats.includes(file.type)) {
       toastRef.value?.addToastError(`File ${file.name} không đúng định dạng .doc, .docx hoặc .pdf`)
@@ -247,7 +242,7 @@ const processFiles = (files: File[]): void => {
   }
 }
 
-const handleFileUpload = (event: Event): void => {
+function handleFileUpload(event: Event): void {
   const target = event.target as HTMLInputElement
   if (!target.files) return
 

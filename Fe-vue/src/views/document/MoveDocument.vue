@@ -33,12 +33,19 @@
       </div>
       <div class="form__footer" style="margin-top: 10px">
         <button class="button--cancel" @click="handleCloseForm(false)">Hủy</button>
-        <button class="button--complete" id="submitButton" @click="handleSubmitForm">
+        <button class="button--complete" id="submitButton" @click="showConfirmForm">
           <span src="/src/assets/icon/refresh.png" alt="logo">Lưu</span>
         </button>
       </div>
     </div>
   </div>
+
+  <ConfirmMove
+    v-if="showConfirm"
+    :toDocumentId="selectedDocumentId!"
+    @close="closeConfirm"
+    @submit="handleSubmitForm"
+  />
 </template>
 
 <script setup lang="ts">
@@ -46,9 +53,22 @@ import { DocumentType, type Document } from '@/entities/Document'
 import axios from 'axios'
 import { onMounted, ref, type PropType } from 'vue'
 import DocumentNode from './DocumentNode.vue'
+import ConfirmMove from './ConfirmMove.vue'
 
 const emits = defineEmits(['closeForm'])
 const parentFolderName = ref<string>('Tài liệu')
+
+const showConfirm = ref(false)
+
+function closeConfirm() {
+  showConfirm.value = false
+}
+
+function showConfirmForm() {
+  if (selectedDocumentId.value) {
+    showConfirm.value = true
+  }
+}
 
 async function getNameParent() {
   if (props.documents.length > 1) {

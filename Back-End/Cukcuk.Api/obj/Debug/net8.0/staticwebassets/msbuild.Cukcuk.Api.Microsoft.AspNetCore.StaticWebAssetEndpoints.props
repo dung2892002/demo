@@ -1,5 +1,65 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/07c42e7e-4292-4bd7-91bf-435976ea362b_Mau xin cap doi the(1).498f7ioyyp.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\07c42e7e-4292-4bd7-91bf-435976ea362b_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"498f7ioyyp"},{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="},{"Name":"label","Value":"_content/Cukcuk.Api/files/07c42e7e-4292-4bd7-91bf-435976ea362b_Mau xin cap doi the(1).doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 02:48:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/07c42e7e-4292-4bd7-91bf-435976ea362b_Mau xin cap doi the(1).doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\07c42e7e-4292-4bd7-91bf-435976ea362b_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 02:48:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/21ede7d6-339c-423e-99d1-09a6fb456a3a_word.docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\21ede7d6-339c-423e-99d1-09a6fb456a3a_word.docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6440"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 01:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/21ede7d6-339c-423e-99d1-09a6fb456a3a_word.nqeiubd4bc.docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\21ede7d6-339c-423e-99d1-09a6fb456a3a_word.docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nqeiubd4bc"},{"Name":"integrity","Value":"sha256-H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI="},{"Name":"label","Value":"_content/Cukcuk.Api/files/21ede7d6-339c-423e-99d1-09a6fb456a3a_word.docx"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6440"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 01:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/474e1919-7f09-4d94-b9dc-e1df7ac86c68_17638.cayxtkrauc.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\474e1919-7f09-4d94-b9dc-e1df7ac86c68_17638.doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cayxtkrauc"},{"Name":"integrity","Value":"sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="},{"Name":"label","Value":"_content/Cukcuk.Api/files/474e1919-7f09-4d94-b9dc-e1df7ac86c68_17638.doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"41472"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u00221GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:22:25 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/474e1919-7f09-4d94-b9dc-e1df7ac86c68_17638.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\474e1919-7f09-4d94-b9dc-e1df7ac86c68_17638.doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"41472"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u00221GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:22:25 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/4ae549a5-2608-4269-9f74-7fe4b5db3940_new folder (1) (1).docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\4ae549a5-2608-4269-9f74-7fe4b5db3940_new folder (1) (1).docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6440"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 01:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/4ae549a5-2608-4269-9f74-7fe4b5db3940_new folder (1) (1).nqeiubd4bc.docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\4ae549a5-2608-4269-9f74-7fe4b5db3940_new folder (1) (1).docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nqeiubd4bc"},{"Name":"integrity","Value":"sha256-H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI="},{"Name":"label","Value":"_content/Cukcuk.Api/files/4ae549a5-2608-4269-9f74-7fe4b5db3940_new folder (1) (1).docx"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6440"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022H9Vaile1eQ9TT53ejS261mLk6xyNiiNT/a68LlBKyVI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 01:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/5bec5e95-c1a0-4aab-ba83-3f7e7b37cabc_Ky nang giai quyet van de - Cau hoi truoc dao tao V3.docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\5bec5e95-c1a0-4aab-ba83-3f7e7b37cabc_Ky nang giai quyet van de - Cau hoi truoc dao tao V3.docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-f8xPNcGv07P/V\u002BKDkiZkpz09MWbCNv3f5uLzMS0rSEk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"13803"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022f8xPNcGv07P/V\u002BKDkiZkpz09MWbCNv3f5uLzMS0rSEk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 01:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/5bec5e95-c1a0-4aab-ba83-3f7e7b37cabc_Ky nang giai quyet van de - Cau hoi truoc dao tao V3.punnnpa1f9.docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\5bec5e95-c1a0-4aab-ba83-3f7e7b37cabc_Ky nang giai quyet van de - Cau hoi truoc dao tao V3.docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"punnnpa1f9"},{"Name":"integrity","Value":"sha256-f8xPNcGv07P/V\u002BKDkiZkpz09MWbCNv3f5uLzMS0rSEk="},{"Name":"label","Value":"_content/Cukcuk.Api/files/5bec5e95-c1a0-4aab-ba83-3f7e7b37cabc_Ky nang giai quyet van de - Cau hoi truoc dao tao V3.docx"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13803"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022f8xPNcGv07P/V\u002BKDkiZkpz09MWbCNv3f5uLzMS0rSEk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 01:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\82f5f3fb-7c94-4d8f-850e-6f44ebb3936b_word.docx'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -24,6 +84,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"41472"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u00221GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 08:23:25 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/8e960362-1473-49cf-ab71-4b1d491bd2f1_Mau xin cap doi the(1).498f7ioyyp.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\8e960362-1473-49cf-ab71-4b1d491bd2f1_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"498f7ioyyp"},{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="},{"Name":"label","Value":"_content/Cukcuk.Api/files/8e960362-1473-49cf-ab71-4b1d491bd2f1_Mau xin cap doi the(1).doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:22:25 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/8e960362-1473-49cf-ab71-4b1d491bd2f1_Mau xin cap doi the(1).doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\8e960362-1473-49cf-ab71-4b1d491bd2f1_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:22:25 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.a9neczbue5.xlsx">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ba9e6667-2946-4537-9c67-7b2d8cd6fe03_Danh sách tài liệu.xlsx'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -36,17 +108,41 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB\u002BHZ4k="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7758"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},{"Name":"ETag","Value":"\u0022PpXl5Q2LkvZRvYISgAR3Cw5RghO/DFJLEY84cB\u002BHZ4k=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 01:56:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.cayxtkrauc.doc">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/be655e2d-826a-4c76-9fd5-8629b56a5657_20_2023_QH15_513347.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\be655e2d-826a-4c76-9fd5-8629b56a5657_20_2023_QH15_513347.doc'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cayxtkrauc"},{"Name":"integrity","Value":"sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="},{"Name":"label","Value":"_content/Cukcuk.Api/files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"41472"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u00221GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Mar 2025 03:26:42 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TIuL0KwuYNRZOktE/h6Mly2g1Gx54Rl/FGwXpgw\u002Bupc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"143360"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022TIuL0KwuYNRZOktE/h6Mly2g1Gx54Rl/FGwXpgw\u002Bupc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 03:26:37 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ca5711e1-4681-4aff-ab34-193f7dd8acc4_17638.doc'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/be655e2d-826a-4c76-9fd5-8629b56a5657_20_2023_QH15_513347.gf6f1nansa.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\be655e2d-826a-4c76-9fd5-8629b56a5657_20_2023_QH15_513347.doc'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"41472"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u00221GjXxfBfh05H7egbRZ1sRrVknfILWwtg7MpYuX20pLk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Mar 2025 03:26:42 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gf6f1nansa"},{"Name":"integrity","Value":"sha256-TIuL0KwuYNRZOktE/h6Mly2g1Gx54Rl/FGwXpgw\u002Bupc="},{"Name":"label","Value":"_content/Cukcuk.Api/files/be655e2d-826a-4c76-9fd5-8629b56a5657_20_2023_QH15_513347.doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"143360"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022TIuL0KwuYNRZOktE/h6Mly2g1Gx54Rl/FGwXpgw\u002Bupc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 03:26:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/ccaa7fdd-8191-4816-9b19-1ffe2237edb2_Mau xin cap doi the(1).498f7ioyyp.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ccaa7fdd-8191-4816-9b19-1ffe2237edb2_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"498f7ioyyp"},{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="},{"Name":"label","Value":"_content/Cukcuk.Api/files/ccaa7fdd-8191-4816-9b19-1ffe2237edb2_Mau xin cap doi the(1).doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:25:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/ccaa7fdd-8191-4816-9b19-1ffe2237edb2_Mau xin cap doi the(1).doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ccaa7fdd-8191-4816-9b19-1ffe2237edb2_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:25:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/fa32bf98-44c5-4e77-9129-eb558785286a_Mau xin cap doi the(1).498f7ioyyp.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\fa32bf98-44c5-4e77-9129-eb558785286a_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"498f7ioyyp"},{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="},{"Name":"label","Value":"_content/Cukcuk.Api/files/fa32bf98-44c5-4e77-9129-eb558785286a_Mau xin cap doi the(1).doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:22:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/fa32bf98-44c5-4e77-9129-eb558785286a_Mau xin cap doi the(1).doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\fa32bf98-44c5-4e77-9129-eb558785286a_Mau xin cap doi the(1).doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"37888"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Mar 2025 10:22:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

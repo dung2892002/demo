@@ -3,7 +3,7 @@
     <div class="content__header">
       <h1 class="content__title">Quản lý nhân viên</h1>
       <div class="header-btn">
-        <div class="btn--blue" @click="addNew">
+        <div class="btn btn--blue" @click="addNew">
           <img src="/src/assets/icon/add.png" alt="logo" class="button--add-logo" />
           <span class="button--add-text">Thêm mới</span>
         </div>

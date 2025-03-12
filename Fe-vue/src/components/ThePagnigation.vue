@@ -6,7 +6,7 @@
     <div class="pagination-section">
       <div class="pagesize" style="align-items: center">
         <label for="page-size">Số dòng/trang: </label>
-        <button>
+        <div class="pagesize">
           <div class="current-pagesize" @click="togglePagesize">
             <span>{{ pageSize }}</span>
 
@@ -29,7 +29,7 @@
               />
             </div>
           </div>
-        </button>
+        </div>
       </div>
       <div class="pagenumber">
         <button

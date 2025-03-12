@@ -86,7 +86,7 @@
         <table class="employee-table">
           <thead>
             <tr>
-              <th style="width: 40px; padding: 0">
+              <th style="width: 40px">
                 <span @click="selectAllDocuments" v-if="selectedDocuments.length === 0">
                   <font-awesome-icon :icon="['fas', 'square']" class="square"
                 /></span>
@@ -104,7 +104,7 @@
               <th class="w-20">Chủ đề</th>
               <th class="w-20">Ngày tạo</th>
               <th class="w-30" v-if="keyword.trim().length > 0">Vị trí</th>
-              <th class="w-10">Hành động</th>
+              <th class="w-15">Hành động</th>
             </tr>
           </thead>
           <tbody>
@@ -114,7 +114,7 @@
               @dblclick="handleSelectDocument(document)"
               style="cursor: pointer"
             >
-              <td style="text-align: center">
+              <td style="text-align: center; width: 40px">
                 <span v-if="!checkDocumentSelected(document)" @click="selectDocument(document)">
                   <font-awesome-icon :icon="['fas', 'square']" class="square" />
                 </span>
@@ -149,7 +149,11 @@
               <td>
                 <div class="action" :ref="`action-${index}`">
                   <div class="action-buttons">
-                    <button class="action-button" @click="togglePopupAction(index, $event)">
+                    <button
+                      class="action-button"
+                      @click.stop="togglePopupAction(index, $event)"
+                      @dblclick.stop
+                    >
                       <font-awesome-icon
                         :icon="['fas', 'ellipsis-vertical']"
                         class="button__icon"
@@ -236,7 +240,7 @@ import ThePagnigation from '@/components/ThePagnigation.vue'
 import { DocumentType, type Document } from '@/entities/Document'
 import { formatDate, getSrcIconDocument } from '@/utils'
 import axios from 'axios'
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { useStore } from 'vuex'
 import AddFileForm from './AddFileForm.vue'
 import AddFolderForm from './AddFolderForm.vue'
@@ -425,10 +429,13 @@ function togglePopupAction(index: number, event: MouseEvent): void {
   showPopupAction.value = showPopupAction.value === index ? -1 : index
 }
 
+function closePopupAction() {
+  if (showPopupAction.value != -1) showPopupAction.value = -1
+}
+
 async function handleUpdateDocument(document: Document) {
   documentUpdatedId.value = document.Id
   showUpdateForm.value = true
-  showPopupAction.value = -1
 }
 
 const deleteDocuments = ref<Document[]>([])
@@ -437,37 +444,31 @@ const showConfirmDelete = ref(false)
 function deleteSelectedDocument() {
   deleteDocuments.value = selectedDocuments.value
   showConfirmDelete.value = true
-  showPopupAction.value = -1
 }
 
 async function handleDeleteDocument(document: Document) {
   deleteDocuments.value = []
   deleteDocuments.value.push(document)
   showConfirmDelete.value = true
-  showPopupAction.value = -1
 }
 
 function moveSelectedDocument() {
   moveDocuments.value = selectedDocuments.value
   showMoveDocumentForm.value = true
-  showPopupAction.value = -1
 }
 
 function handleMoveDocument(document: Document) {
   moveDocuments.value = []
   moveDocuments.value.push(document)
   showMoveDocumentForm.value = true
-  showPopupAction.value = -1
 }
 
 function handleAddFile() {
   showAddFileForm.value = true
-  showPopupAction.value = -1
 }
 
 function handleAddFolder() {
   showAddFolderForm.value = true
-  showPopupAction.value = -1
 }
 
 function closeForm(state: boolean) {
@@ -602,6 +603,7 @@ async function fetchParentFolders(id: string) {
 }
 
 async function fetchDocument() {
+  showPopupAction.value = -1
   loading.value = true
   selectedDocuments.value = []
   const response = await axios.get('https://localhost:7160/api/v1/Documents/filter', {
@@ -624,6 +626,13 @@ async function fetchDocument() {
 
 onMounted(() => {
   fetchDocument()
+  document.addEventListener('click', closePopupAction)
+  document.addEventListener('scroll', closePopupAction)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', closePopupAction)
+  document.removeEventListener('scroll', closePopupAction)
 })
 </script>
 

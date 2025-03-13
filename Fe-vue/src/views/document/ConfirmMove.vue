@@ -11,8 +11,8 @@
         <div class="form-group">
           <div class="form__item">
             <span>
-              Di chuyển tới thư mục
-              <span style="font-weight: bold">{{ toDocumentId }}</span>
+              Di chuyển tới thư mục mới
+              <!-- <span style="font-weight: bold">{{ toDocumentId }}</span> -->
             </span>
           </div>
         </div>

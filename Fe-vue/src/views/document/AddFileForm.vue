@@ -6,7 +6,7 @@
         <span>Thêm mới tài liệu</span>
       </div>
     </div>
-    <div class="file-upload-form">
+    <div class="file-upload-form" v-if="stepUploadLaw === 1">
       <div class="form">
         <ToastComponent ref="toastRef" />
         <div class="form-data">
@@ -66,26 +66,56 @@
               </tbody>
             </table>
           </div>
-          <div class="file-category">
-            <span class="form__label">Chủ đề <span class="required">*</span></span>
-            <div class="category--current" @click="toggleShowSelectCategory">
-              <span>{{ currentCategory ? currentCategory.Name : 'Chọn chủ đề' }}</span>
-              <div>
-                <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectCategory" />
-                <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              gap: 10px;
+            "
+          >
+            <div class="file-category">
+              <span class="form__label">Chủ đề <span class="required">*</span></span>
+              <div class="category--current" @click="toggleShowSelectCategory">
+                <span>{{ currentCategory ? currentCategory.Name : 'Chọn chủ đề' }}</span>
+                <div>
+                  <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectCategory" />
+                  <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
+                </div>
+                <div class="category-data" v-if="showSelectCategory">
+                  <div
+                    v-for="category in categories"
+                    :key="category.Id"
+                    @click.stop="selectCategory(category)"
+                    :class="{ selected: currentCategory?.Id === category.Id }"
+                  >
+                    <span> {{ category.Name }}</span>
+                    <font-awesome-icon
+                      :icon="['fas', 'check']"
+                      v-if="currentCategory?.Id === category.Id"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="category-data" v-if="showSelectCategory">
-                <div
-                  v-for="category in categories"
-                  :key="category.Id"
-                  @click.stop="selectCategory(category)"
-                  :class="{ selected: currentCategory?.Id === category.Id }"
-                >
-                  <span> {{ category.Name }}</span>
-                  <font-awesome-icon
-                    :icon="['fas', 'check']"
-                    v-if="currentCategory?.Id === category.Id"
-                  />
+            </div>
+            <div class="file-category">
+              <span class="form__label">Loại tri thức<span class="required">*</span></span>
+              <div class="category--current" @click="toggleShowSelectKnowledgeType">
+                <span>{{ isLaw ? 'Văn bản quy phạm pháp luật' : 'Tri thức nghiệp vụ khác' }}</span>
+                <div>
+                  <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectKnowledgeType" />
+                  <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
+                </div>
+                <div class="category-data" v-if="showSelectKnowledgeType">
+                  <div @click.stop="selectLaw(true)" :class="{ selected: isLaw }">
+                    <span> Văn bản quy phạm pháp luật</span>
+                    <font-awesome-icon :icon="['fas', 'check']" v-if="isLaw" />
+                  </div>
+                  <div @click.stop="selectLaw(false)" :class="{ selected: !isLaw }">
+                    <span> Tri thức nghiệp vụ khác</span>
+                    <font-awesome-icon :icon="['fas', 'check']" v-if="!isLaw" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,19 +127,28 @@
         </div>
       </div>
     </div>
+    <div v-else style="display: flex; overflow-y: scroll">
+      <DocumentBlock
+        v-for="(doc, index) in documentsDemo"
+        :key="index"
+        :blocks="doc.DocumentBlocks"
+      />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import ToastComponent from '@/components/ToastComponent.vue'
-import { DocumentType, type DocumentCategory } from '@/entities/Document'
+import { type Document, DocumentType, type DocumentCategory } from '@/entities/Document'
 import { getSrcIconDocument } from '@/utils'
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
+import DocumentBlock from './DocumentBlock.vue'
 
 const emits = defineEmits(['closeForm'])
 
 const currentCategory = ref<DocumentCategory | null>(null)
+const isLaw = ref(true)
 
 function handleCloseForm(value: boolean) {
   emits('closeForm', value)
@@ -118,14 +157,26 @@ function handleCloseForm(value: boolean) {
 const toastRef = ref<InstanceType<typeof ToastComponent> | null>(null)
 
 const showSelectCategory = ref(false)
+const showSelectKnowledgeType = ref(false)
 
 function toggleShowSelectCategory() {
+  showSelectKnowledgeType.value = false
   showSelectCategory.value = !showSelectCategory.value
+}
+
+function toggleShowSelectKnowledgeType() {
+  showSelectCategory.value = false
+  showSelectKnowledgeType.value = !showSelectKnowledgeType.value
 }
 
 function selectCategory(category: DocumentCategory) {
   currentCategory.value = category
   showSelectCategory.value = false
+}
+
+function selectLaw(state: boolean) {
+  isLaw.value = state
+  showSelectKnowledgeType.value = false
 }
 
 const props = defineProps({
@@ -136,6 +187,11 @@ const props = defineProps({
 })
 
 async function handleSubmitForm() {
+  if (isLaw.value) await SubmitFormLaw()
+  else await SubmitForm()
+}
+
+async function SubmitForm() {
   if (checkAvailable()) {
     const formData = new FormData()
     uploadedFiles.value.forEach((file) => {
@@ -152,6 +208,41 @@ async function handleSubmitForm() {
       })
 
       handleCloseForm(true)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
+const cacheId = ref<string | null>(null)
+
+const documentsDemo = ref<Document[]>([])
+
+const stepUploadLaw = ref(1)
+
+async function SubmitFormLaw() {
+  if (checkAvailable()) {
+    const formData = new FormData()
+    uploadedFiles.value.forEach((file) => {
+      formData.append('files', file)
+    })
+    formData.append('parentId', props.parentId)
+    formData.append('categoryId', currentCategory.value!.Id)
+
+    try {
+      const response = await axios.post(
+        'https://localhost:7160/api/v1/Documents/upload',
+        formData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        },
+      )
+      cacheId.value = response.data.CacheDataId
+      documentsDemo.value = response.data.Documents
+      stepUploadLaw.value = 2
+      // handleCloseForm(true)
     } catch (error) {
       console.log(error)
     }

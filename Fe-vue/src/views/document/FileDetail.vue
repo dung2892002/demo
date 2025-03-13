@@ -17,12 +17,37 @@
           <span>{{ props.document.Name }}</span>
         </div>
         <div class="file-form">
-          <span>Chủ đề *</span>
-          <select v-model="document!.CategoryId" class="form__input" :disabled="!isEditMode">
-            <option :value="category.Id" v-for="category in categories" :key="category.Id">
-              {{ category.Name }}
-            </option>
-          </select>
+          <div class="form-data">
+            <span>Chủ đề </span>
+            <select v-model="document!.CategoryId" class="form__input" :disabled="!isEditMode">
+              <option :value="category.Id" v-for="category in categories" :key="category.Id">
+                {{ category.Name }}
+              </option>
+            </select>
+          </div>
+          <div v-if="document.IsLaw" class="form-data--law">
+            <div class="form-data">
+              <span>Cơ quan ban hành </span>
+              <input v-model="document!.Issuer" class="form__input" :disabled="!isEditMode" />
+            </div>
+            <div class="form-data">
+              <span>Mã văn bản </span>
+              <input v-model="document!.DocumentNo" class="form__input" :disabled="!isEditMode" />
+            </div>
+            <div class="form-data">
+              <span>Người ký</span>
+              <input v-model="document!.SignerName" class="form__input" :disabled="!isEditMode" />
+            </div>
+            <div class="form-data">
+              <span>Ngày ban hành</span>
+              <input
+                v-model="document!.IssueDate"
+                class="form__input"
+                :disabled="!isEditMode"
+                type="date"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div class="file-data">
@@ -48,7 +73,7 @@
 import { ref, onMounted, type PropType, computed } from 'vue'
 import axios from 'axios'
 import { type DocumentCategory, type Document } from '@/entities/Document'
-import { getSrcIconDocument } from '@/utils'
+import { formatDateForm, getSrcIconDocument } from '@/utils'
 import { marked } from 'marked'
 
 const fileContent = ref('')
@@ -84,20 +109,11 @@ async function fetchHtmlData() {
     const response = await axios.get(
       `https://localhost:7160/api/v1/Documents/content/${props.document.Id}`,
     )
-    fileContent.value = removeSyncfusionTrialNotes(response.data)
+    fileContent.value = response.data
     console.log(compiledMarkdown)
   } catch (error) {
     console.error('Lỗi khi lấy nội dung Markdown:', error)
   }
-}
-
-function removeSyncfusionTrialNotes(text) {
-  return text
-    .replace(
-      /\*\*Created with a trial version of Syncfusion Word library.*?obtain the valid key\.\*\*\n?/gs,
-      '',
-    )
-    .trim()
 }
 
 const categories = ref<DocumentCategory[]>([])
@@ -111,7 +127,13 @@ async function fetchCategories() {
   }
 }
 
+function formatDate() {
+  // eslint-disable-next-line vue/no-mutating-props
+  props.document.IssueDate = formatDateForm(props.document.IssueDate!)
+}
+
 onMounted(() => {
+  formatDate()
   fetchHtmlData()
   fetchCategories()
 })
@@ -129,5 +151,15 @@ onMounted(() => {
 
 ::v-deep(.markdown-container em) {
   font-style: italic;
+}
+
+::v-deep(.markdown-container ul) {
+  padding-left: 20px; /* Đảm bảo lùi vào đúng */
+  list-style-position: inside; /* Di chuyển ::marker vào trong */
+}
+
+::v-deep(.markdown-container ol) {
+  margin-left: 20px;
+  // list-style-position: inside;
 }
 </style>

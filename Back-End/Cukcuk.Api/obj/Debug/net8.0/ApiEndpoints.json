@@ -765,40 +765,57 @@
   },
   {
     "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
-    "Method": "TestUpload",
+    "Method": "UploadFile",
     "RelativePath": "api/v1/Documents/upload",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ContentType",
-        "Type": "System.String",
+        "Name": "files",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
         "IsRequired": false
       },
       {
-        "Name": "ContentDisposition",
-        "Type": "System.String",
+        "Name": "categoryId",
+        "Type": "System.Guid",
         "IsRequired": false
       },
       {
-        "Name": "Headers",
-        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "Name": "parentId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
-      },
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
+    "Method": "CancelUpload",
+    "RelativePath": "api/v1/Documents/upload-cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "Length",
-        "Type": "System.Int64",
+        "Name": "cacheId",
+        "Type": "System.Guid",
         "IsRequired": false
-      },
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
+    "Method": "ConfirmUpload",
+    "RelativePath": "api/v1/Documents/upload-confirm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "FileName",
-        "Type": "System.String",
+        "Name": "cacheId",
+        "Type": "System.Guid",
         "IsRequired": false
       }
     ],

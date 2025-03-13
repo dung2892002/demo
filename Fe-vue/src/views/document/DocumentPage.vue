@@ -404,6 +404,12 @@ const documentDetail = ref<Document>({
   CategoryId: null,
   CreatedAt: '',
   FolderPath: '',
+  DocumentBlocks: [],
+  DocumentNo: null,
+  IssueDate: null,
+  SignerName: null,
+  Issuer: null,
+  IsLaw: false,
 })
 
 const showDocumentDetail = ref(false)
@@ -489,6 +495,12 @@ function closeFile(state: boolean) {
     CategoryId: null,
     CreatedAt: '',
     FolderPath: '',
+    DocumentBlocks: [],
+    DocumentNo: null,
+    IssueDate: null,
+    SignerName: null,
+    Issuer: null,
+    IsLaw: false,
   }
 
   if (state == true) fetchDocument()

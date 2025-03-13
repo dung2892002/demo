@@ -796,6 +796,99 @@
         }
       }
     },
+    "/api/v1/Documents/upload-confirm": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "parameters": [
+          {
+            "name": "cacheId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Documents/upload-cancel": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "parameters": [
+          {
+            "name": "cacheId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Documents/upload": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "categoryId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "parentId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                },
+                "categoryId": {
+                  "style": "form"
+                },
+                "parentId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/Documents/parents": {
       "get": {
         "tags": [
@@ -2518,6 +2611,69 @@
           },
           "Category": {
             "$ref": "#/components/schemas/DocumentCategory"
+          },
+          "DocumentBlocks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentBlock"
+            }
+          },
+          "Issuer": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "DocumentNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "SignerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsLaw": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentBlock": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ParentId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "DocumentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ContentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Title": {
+            "type": "string"
+          },
+          "Content": {
+            "type": "string"
+          },
+          "Order": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

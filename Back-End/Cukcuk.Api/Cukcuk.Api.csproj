@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspose.Words" Version="25.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.3.0" />
@@ -26,6 +25,11 @@
 
   <ItemGroup>
     <EditorConfigFiles Remove="D:\intern\Back-End\Cukcuk.Api\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\files\" />
+    <Folder Include="wwwroot\tmp\" />
   </ItemGroup>
 
 </Project>

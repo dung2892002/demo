@@ -303,10 +303,3 @@ D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\refint\Cukcuk.Api.dll
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\Cukcuk.Api.pdb
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\Cukcuk.Api.genruntimeconfig.cache
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\ref\Cukcuk.Api.dll
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Aspose.Words.dll
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Autofac.dll
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\SkiaSharp.dll
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\runtimes\osx\native\libSkiaSharp.dylib
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll

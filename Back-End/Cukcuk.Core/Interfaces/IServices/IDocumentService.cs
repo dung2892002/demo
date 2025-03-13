@@ -2,6 +2,7 @@
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Enum;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Cukcuk.Core.Interfaces.IServices
 {
@@ -21,7 +22,7 @@ namespace Cukcuk.Core.Interfaces.IServices
 
         Task CreateFile(List<IFormFile> files, Guid? parentId, Guid categoryId);
 
-        Task<string> GetFileDetailHtml(Guid id);
+        Task<string> GetFileDetailMarkdown(Guid id);
 
         Task<IEnumerable<Document>> GetSubsDocumentFolder(Guid? parentId);
 
@@ -33,5 +34,10 @@ namespace Cukcuk.Core.Interfaces.IServices
         Task DeleteRange(List<Guid> ids);
 
         Task MoveRange(List<Guid> ids, Guid? parentId);
+
+        Task<UploadFileReponse> UploadFile(List<IFormFile> files, Guid categoryId, Guid? parentId);
+
+        Task SaveFileUpload(Guid cacheId);
+        Task CancelUpload(Guid cacheId);
     }
 }

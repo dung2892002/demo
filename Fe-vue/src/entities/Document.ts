@@ -11,6 +11,13 @@ export interface Document {
   Children?: Document[]
   IsLoaded?: boolean
   IsExpend?: boolean
+
+  DocumentBlocks: DocumentBlock[]
+  Issuer: string | null
+  IssueDate: string | null
+  DocumentNo: string | null
+  SignerName: string | null
+  IsLaw: boolean
 }
 
 export interface DocumentCategory {
@@ -26,4 +33,16 @@ export enum DocumentType {
   Ppt = 'Ppt',
   Image = 'Image',
   Unknown = 'Unknown',
+}
+
+export interface DocumentBlock {
+  Id: string | null
+  ParentId: string | null
+  DocumentId: string
+  Title: string
+  Content: string
+  Level: number
+  ContentType: number
+  Order: number
+  IsExpend?: boolean
 }

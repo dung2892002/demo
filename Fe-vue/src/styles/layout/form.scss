@@ -390,9 +390,16 @@ form label {
       height: 850px;
 
       .file-form {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
+        .form-data {
+          display: flex;
+          flex-direction: column;
+          justify-content: left;
+          padding: 5px 0;
+        }
+
+        .form-data--law {
+          padding: 5px 0;
+        }
       }
     }
 

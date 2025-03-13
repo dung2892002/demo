@@ -26,6 +26,7 @@ namespace Cukcuk.Infrastructure.Data
 
         public virtual DbSet<DocumentCategory> DocumentCategories { get; set; }
         public virtual DbSet<Document> Documents { get; set; }
+        public virtual DbSet<DocumentBlock> DocumentBlocks { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -203,7 +204,13 @@ namespace Cukcuk.Infrastructure.Data
                 entity.Property(e => e.Name).HasMaxLength(255);
                 entity.Property(e => e.Path).HasMaxLength(255);
                 entity.Property(e => e.FolderPath).HasMaxLength(2500);
+
+                entity.Property(e => e.Issuer).HasMaxLength(255);
+                entity.Property(e => e.DocumentNo).HasMaxLength(255);
+                entity.Property(e => e.SignerName).HasMaxLength(255);
+
                 entity.Property(e => e.CreatedAt).HasColumnType("date_time");
+                entity.Property(e => e.IssueDate).HasColumnType("date_time");
 
                 entity.Property(e => e.Type).HasConversion<string>();
 
@@ -217,6 +224,28 @@ namespace Cukcuk.Infrastructure.Data
                     .WithMany(m => m.Documents)
                     .HasForeignKey(e => e.CategoryId)
                     .HasConstraintName("FK_document_CategoryId");
+            });
+
+
+            modelBuilder.Entity<DocumentBlock>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("PRIMARY");
+                entity.ToTable("document_block");
+
+                entity.Property(entity => entity.Title).HasColumnType("text"); 
+                entity.Property(entity => entity.Content).HasColumnType("text");
+
+                entity.HasOne(e => e.Parent)
+                    .WithMany(m => m.Childrens)
+                    .HasForeignKey(e => e.ParentId)
+                    .HasConstraintName("FK_document_block_ParentId")
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(e => e.Document)
+                    .WithMany(m => m.DocumentBlocks)
+                    .HasForeignKey(e => e.DocumentId)
+                    .HasConstraintName("FK_document_block_DocumentId")
+                    .OnDelete(DeleteBehavior.Cascade);
             });
             base.OnModelCreating(modelBuilder);
         }

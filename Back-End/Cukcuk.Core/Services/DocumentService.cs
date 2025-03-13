@@ -10,13 +10,16 @@ using iText.Kernel.Pdf.Canvas.Parser.Listener;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf;
 using Cukcuk.Core.Helper;
-using Org.BouncyCastle.Crypto;
+using System.Text.RegularExpressions;
+using System.Globalization;
+using NPOI.POIFS.Properties;
 
 namespace Cukcuk.Core.Services
 {
-    public class DocumentService(IDocumentRepository documentRepository) : IDocumentService
+    public class DocumentService(IDocumentRepository documentRepository, Cache cache) : IDocumentService
     {
         private readonly IDocumentRepository _documentRepository = documentRepository;
+        private readonly Cache _cache = cache;
         public async Task Create(Document document)
         {
             document.Parent = null;
@@ -154,7 +157,7 @@ namespace Cukcuk.Core.Services
             };
         }
 
-        public async Task<string> GetFileDetailHtml(Guid id)
+        public async Task<string> GetFileDetailMarkdown(Guid id)
         {
             var document = await _documentRepository.GetById(id)
                 ?? throw new ArgumentException($"ID: {id} không tồn tại trong hệ thống");
@@ -194,7 +197,7 @@ namespace Cukcuk.Core.Services
                         {
                             string markdownContent = reader.ReadToEnd();
 
-                            return markdownContent;
+                            return RemoveSyncfusionTrialMessage(markdownContent);
                         }
                     }
 
@@ -335,5 +338,375 @@ namespace Cukcuk.Core.Services
                 await HandleUpdatePathSubDocument(children);
             }
         }
+
+        public async Task SaveFileUpload(Guid cacheId)
+        {
+            var documents = _cache.GetFromCache<Document>(cacheId) ?? throw new ArgumentException("Cache khong ton tai");
+
+            foreach (var document in documents)
+            {
+                document.Name = await _documentRepository.GetUniqueDocumentName(document.ParentId, document.Name, document.Type, null);
+
+                if (document.ParentId != null)
+                {
+                    var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                    document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+                }
+
+                var blocks = document.DocumentBlocks;
+                document.DocumentBlocks = new List<DocumentBlock>();
+
+                var tempFilePath = Path.Combine("wwwroot/tmp", document.Path).Replace("\\", "/");
+                var finalPath = Path.Combine("wwwroot/files", document.Path).Replace("\\", "/");
+            
+                System.IO.File.Move(tempFilePath, finalPath);
+                document.Path = finalPath;
+
+                await _documentRepository.Create(document);
+                await _documentRepository.AddBlockRange(blocks);
+            }
+        }
+        public async Task CancelUpload(Guid cacheId)
+        {
+            var documents = _cache.GetFromCache<Document>(cacheId) ?? throw new ArgumentNullException();
+
+            foreach (var document in documents)
+            {
+                var tempFilePath = Path.Combine("wwwroot/tmp", document.Path).Replace("\\", "/");
+
+                System.IO.File.Delete(tempFilePath);
+            }
+
+            _cache.RemoveCache(cacheId);
+            await Task.CompletedTask;
+        }
+
+        public async Task<UploadFileReponse> UploadFile(List<IFormFile> files, Guid categoryId, Guid? parentId)
+        {
+
+            var documents = new List<Document>();
+
+            foreach (var file in files)
+            {
+                ArgumentNullException.ThrowIfNull(file);
+
+                var uniqueFileName = $"{Guid.NewGuid()}_{Path.GetFileName(file.FileName)}";
+                var filePath = Path.Combine("wwwroot/tmp", uniqueFileName).Replace("\\", "/"); 
+
+                var document = new Document
+                {
+                    Id = Guid.NewGuid(),
+                    ParentId = parentId,
+                    CategoryId = categoryId,
+                    CreatedAt = DateTime.Now,
+                    Parent = null,
+                    Category = null,
+                    Children = new List<Document>(),
+                    Path = uniqueFileName,
+                    FolderPath = "Tài liệu",
+                    IsLaw = true,
+                    Name = Path.GetFileNameWithoutExtension(file.FileName),
+                    Type = GetDocumentType(file)
+                };
+
+
+                
+
+                try
+                {
+                    var markdownData = RemoveSyncfusionTrialMessage(ConvertWordToMarkdown(file));
+
+                    var blocks = SplitWordDocument(markdownData, document);
+
+                    document.DocumentBlocks = blocks;
+
+                    documents.Add(document);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new InvalidDataException("Chi co the tai file chuan dinh dang quy pham phap luat");
+                }
+            }
+
+            var cacheDataId = Guid.NewGuid();
+            _cache.SaveDataToCache<Document>(cacheDataId, documents);
+            return new UploadFileReponse
+            {
+                CacheDataId = cacheDataId,
+                Documents = documents
+            };
+        }
+
+
+        
+        private static string ConvertWordToMarkdown(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return ("Vui lòng chọn một file hợp lệ.");
+            }
+
+            using (var fileStream = file.OpenReadStream())
+            {
+                if (fileStream == null)
+                {
+                    throw new ArgumentNullException(nameof(fileStream), "File stream không được null.");
+                }
+
+                if (fileStream.CanSeek)
+                {
+                    fileStream.Position = 0;
+                }
+
+                using (MemoryStream outputStream = new MemoryStream())
+                {
+                    using (WordDocument document = new WordDocument(fileStream, FormatType.Docx))
+                    {
+                        document.Save(outputStream, FormatType.Markdown);
+                    }
+
+                    outputStream.Position = 0; 
+                    using (StreamReader reader = new StreamReader(outputStream))
+                    {
+                        return reader.ReadToEnd();
+                    }
+                }
+            }
+        }
+
+        private static string NormalizeMarkdownOutput(string input)
+        {
+            // Bước 1: Chuẩn hóa dòng trống (loại bỏ nhiều dòng trống liên tiếp)
+            string normalized = Regex.Replace(input, @"(\r?\n\s*){2,}", "\n\n").Trim();
+
+            // Bước 2: Chia thành danh sách các dòng và loại bỏ dòng trống hoặc chứa toàn khoảng trắng
+            var lines = normalized
+                .Split(new[] { "\n\n" }, StringSplitOptions.None) // Giữ nguyên dòng trống cần thiết
+                .Select(line => line.Trim()) // Xóa khoảng trắng đầu/cuối dòng
+                .Where(line => !string.IsNullOrEmpty(line)) // Bỏ dòng rỗng
+                .ToList();
+
+            // Bước 3: Gộp lại thành chuỗi, giữ nguyên định dạng markdown
+            return string.Join("\n\n", lines);
+        }
+
+        private static string ExtractSignerName(string input)
+        {
+            // Regex để tìm đoạn **Tên người ký**
+            string pattern = @"\*\*(.*?)\*\*\s*\|";
+
+            // Thực hiện tìm kiếm
+            MatchCollection matches = Regex.Matches(input, pattern);
+
+            // Lấy tên cuối cùng (vì chức danh cũng có ** **)
+            if (matches.Count > 0)
+            {
+                return matches[matches.Count - 1].Groups[1].Value.Trim();
+            }
+
+            return string.Empty; // Không tìm thấy
+        }
+
+        private static (string CoQuan, string SoLuat, string NgayBanHanh) ExtractLawInfo(string input)
+        {
+            string coQuanPattern = @"\|\*\*(.*?)\*\*";  // Lấy cơ quan ban hành
+            string soLuatPattern = @"ố:\s*([\w/\-]+)"; // Bắt số luật chung
+            string ngayPattern = @"(\d{1,2}) tháng (\d{1,2}) năm (\d{4})"; // Bắt ngày ban hành
+
+            string coQuan = Regex.Match(input, coQuanPattern).Groups[1].Value.Trim();
+            string soLuat = Regex.Match(input, soLuatPattern).Groups[1].Value.Trim();
+
+            var ngayMatch = Regex.Match(input, ngayPattern);
+            string ngayBanHanh = "";
+
+            if (ngayMatch.Success)
+            {
+                string ngay = ngayMatch.Groups[1].Value;
+                string thang = ngayMatch.Groups[2].Value;
+                string nam = ngayMatch.Groups[3].Value;
+                ngayBanHanh = $"{ngay.PadLeft(2, '0')}/{thang.PadLeft(2, '0')}/{nam}";
+            }
+
+            return (coQuan, soLuat, ngayBanHanh);
+        }
+
+
+
+        private static string RemoveSyncfusionTrialMessage(string markdownContent)
+        {
+            if (string.IsNullOrWhiteSpace(markdownContent))
+                return markdownContent;
+
+            string trialMessageStart = "**Created with a trial version of Syncfusion Word library or registered the wrong key in your application.";
+            string trialMessageEnd = "to obtain the valid key.**";
+
+            // Xóa phần đầu
+            int startIndex = markdownContent.IndexOf(trialMessageStart);
+            if (startIndex != -1)
+            {
+                int endIndex = markdownContent.IndexOf(trialMessageEnd, startIndex);
+                if (endIndex != -1)
+                {
+                    markdownContent = markdownContent.Remove(startIndex, (endIndex + trialMessageEnd.Length) - startIndex);
+                }
+            }
+
+            // Xóa phần cuối (nếu có)
+            startIndex = markdownContent.LastIndexOf(trialMessageStart);
+            if (startIndex != -1)
+            {
+                int endIndex = markdownContent.IndexOf(trialMessageEnd, startIndex);
+                if (endIndex != -1)
+                {
+                    markdownContent = markdownContent.Remove(startIndex, (endIndex + trialMessageEnd.Length) - startIndex);
+                }
+            }
+
+            return NormalizeMarkdownOutput(markdownContent.Trim()); // Loại bỏ khoảng trắng thừa
+        }
+
+
+        private static List<DocumentBlock> SplitWordDocument(string markdownData, Document document)
+        {
+            Stack<DocumentBlock> blocks = new Stack<DocumentBlock>();
+            List<DocumentBlock> returnBlocks = new List<DocumentBlock>();
+
+            List<string> contents = markdownData
+                                    .Split(new[] { "\n\n" }, StringSplitOptions.None) // Tách từng dòng nhưng không loại bỏ gì
+                                    .Select(line => line.Trim()) // Xóa khoảng trắng đầu/cuối
+                                    .Where(line => !string.IsNullOrEmpty(line)) // Chỉ lấy dòng có nội dung
+                                    .ToList();
+
+
+            var firstBlock = new DocumentBlock
+            {
+                Id = Guid.NewGuid(),
+                Content = "",
+                Title = "Mở đầu",
+                ContentType = 1,
+                Order = 1,
+                ParentId = null,
+                DocumentId = document.Id
+            };
+
+            var order = 2;
+            foreach (string para in contents.Take(contents.Count() - 1))
+            {
+                string text = para.Trim();
+                if (string.IsNullOrEmpty(text)) continue;
+                var level = GetLevel(text);
+                if (level > 0)
+                {
+                    var block = new DocumentBlock
+                    {
+                        Id = Guid.NewGuid(),
+                        Content = text,
+                        Title = text,
+                        Level = level,
+                        ContentType = 2,
+                        Order = order++,
+                        ParentId = null,
+
+                        DocumentId = document.Id
+                    };
+
+                    FindParent(block, blocks, returnBlocks);
+                }
+                else
+                {
+                    if (blocks.Count > 0)
+                    {
+                        var preBlock = blocks.Pop();
+                        preBlock.Content += @"\r\n" + text;
+                        blocks.Push(preBlock);
+                    }
+                    else
+                    {
+                        firstBlock.Content += firstBlock.Content.Length > 0 ? @"\r\n" + text : text;
+                    }
+                }
+            }
+
+            returnBlocks.Insert(0, firstBlock);
+
+            var sightBlock = new DocumentBlock
+            {
+                Id = Guid.NewGuid(),
+                ParentId = null,
+                ContentType = 4,
+                Level = 0,
+                Title = "Chữ ký",
+                Order = order,
+                Content = contents.Last(),
+
+                DocumentId = document.Id
+            };
+
+            returnBlocks.Add(sightBlock);
+
+            var sighName = ExtractSignerName(sightBlock.Content);
+            var (coquan, soluat, ngaybanhanh) = ExtractLawInfo(firstBlock.Content);
+
+            document.SignerName = sighName;
+            document.Issuer = coquan;
+            document.IssueDate = DateTime.ParseExact(ngaybanhanh, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            document.DocumentNo = soluat;
+            return returnBlocks;
+        }
+
+        private static int GetLevel(string content)
+        {
+            string dataCheck = content.Trim().Trim('*').Trim();
+
+            string partRegex = @"^Phần\s+([IVXLCDM\d]+)\.?";
+            if (Regex.IsMatch(dataCheck, partRegex, RegexOptions.IgnoreCase)) return 1;
+
+            string chapterRegex = @"^Chương\s+([IVXLCDM\d]+)\.?";
+            if (Regex.IsMatch(dataCheck, chapterRegex, RegexOptions.IgnoreCase)) return 2;
+
+            string itemRegex = @"^Mục\s+([IVXLCDM\d]+)\.?";
+            if (Regex.IsMatch(dataCheck, itemRegex, RegexOptions.IgnoreCase)) return 3;
+
+            string subsectionRegex = @"^Tiểu mục\s+([IVXLCDM\d]+)\.?";
+            if (Regex.IsMatch(dataCheck, subsectionRegex, RegexOptions.IgnoreCase)) return 4;
+
+            string articleRegex = @"^Điều\s+([IVXLCDM\d]+)\.?";
+            if (Regex.IsMatch(dataCheck, articleRegex, RegexOptions.IgnoreCase)) return 5;
+
+            string clauseRegex = @"^\d+(\.|\))";
+            if (Regex.IsMatch(dataCheck, clauseRegex, RegexOptions.IgnoreCase)) return 6;
+
+            string pointRegex = @"^\p{L}(\.|\))"; 
+            if (Regex.IsMatch(dataCheck, pointRegex, RegexOptions.IgnoreCase)) return 7;
+
+            return 0;
+        }
+
+        private static void FindParent(DocumentBlock block, Stack<DocumentBlock> parentBlocks, List<DocumentBlock> returnBlocks)
+        {
+            while (parentBlocks.Count() > 0 && block.Level <= parentBlocks.Peek().Level)
+            {
+                parentBlocks.Pop();
+            }
+
+            if (parentBlocks.Count() == 0)
+            {
+                block.ParentId = null;
+            }
+            else
+            {
+                block.ParentId = parentBlocks.Peek().Id;
+            }
+            returnBlocks.Add(block);
+            parentBlocks.Push(block);
+        }
+
+       
     }
 }

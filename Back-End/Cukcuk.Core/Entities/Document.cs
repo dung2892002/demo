@@ -22,5 +22,17 @@ namespace Cukcuk.Core.Entities
         public Guid? CategoryId { get; set; }
         public DocumentCategory? Category { get; set; }
 
+        public List<DocumentBlock> DocumentBlocks { get; set; } = new List<DocumentBlock>();
+
+        public string? Issuer { get; set; }
+
+        public DateTime? IssueDate { get; set; }
+
+        public string? DocumentNo { get; set; }
+
+        public string? SignerName { get; set; }
+
+        public bool IsLaw { get; set; } = false;
+
     }
 }

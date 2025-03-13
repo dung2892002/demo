@@ -130,6 +130,12 @@ const rootDocument = ref<Document>({
   FolderPath: '',
   IsExpend: true,
   IsLoaded: true,
+  DocumentBlocks: [],
+  DocumentNo: null,
+  IssueDate: null,
+  SignerName: null,
+  Issuer: null,
+  IsLaw: false,
 })
 
 async function fetchDocuments(parentId: string | null) {

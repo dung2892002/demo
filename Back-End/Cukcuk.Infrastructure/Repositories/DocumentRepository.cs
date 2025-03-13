@@ -236,5 +236,19 @@ namespace Cukcuk.Infrastructure.Repositories
             return documentsToDelete;
         }
 
+        public async Task AddBlockRange(List<DocumentBlock> blocks)
+        {
+            using (var transaction = await _dbContext.Database.BeginTransactionAsync())
+            {
+                foreach (var block in blocks)
+                {
+                    await _dbContext.DocumentBlocks.AddAsync(block);
+                }
+
+                await _dbContext.SaveChangesAsync(); 
+                await transaction.CommitAsync(); 
+            }
+
+        }
     }
 }

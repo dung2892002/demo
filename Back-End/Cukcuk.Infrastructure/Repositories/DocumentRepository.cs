@@ -250,5 +250,10 @@ namespace Cukcuk.Infrastructure.Repositories
             }
 
         }
+
+        public async Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId)
+        {
+            return await _dbContext.DocumentBlocks.AsNoTracking().Where(d => d.DocumentId == documentId).OrderBy(b => b.Order).ToListAsync();
+        }
     }
 }

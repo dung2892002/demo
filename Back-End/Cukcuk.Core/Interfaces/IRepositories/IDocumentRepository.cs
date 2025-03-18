@@ -31,5 +31,7 @@ namespace Cukcuk.Core.Interfaces.IRepositories
         Task DeleteRange(IEnumerable<Document> document);
 
         Task AddBlockRange(List<DocumentBlock> blocks);
+
+        Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId);
     }
 }

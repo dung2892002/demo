@@ -39,5 +39,9 @@ namespace Cukcuk.Core.Interfaces.IServices
 
         Task SaveFileUpload(Guid cacheId);
         Task CancelUpload(Guid cacheId);
+
+        Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId);
+
+        Task<string> GetMarkdownReview(string path);
     }
 }

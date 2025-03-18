@@ -545,6 +545,22 @@
   },
   {
     "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
+    "Method": "GetBlockByDocumentId",
+    "RelativePath": "api/v1/Documents/blocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documentId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
     "Method": "GetAllCategoryDocument",
     "RelativePath": "api/v1/Documents/categories",
     "HttpMethod": "GET",
@@ -685,6 +701,22 @@
         "Name": "document",
         "Type": "Cukcuk.Core.Entities.Document",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cukcuk.Api.Controllers.DocumentsController",
+    "Method": "GetBlockByDocumentId",
+    "RelativePath": "api/v1/Documents/markdown-review",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "path",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

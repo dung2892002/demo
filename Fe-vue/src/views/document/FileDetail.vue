@@ -52,7 +52,29 @@
       </div>
       <div class="file-data">
         <div class="file-content">
-          <div v-html="compiledMarkdown" class="markdown-container"></div>
+          <div class="file-content__header">
+            <div class="header__color">
+              <span>Cấp hiển thị mục lục văn bản pháp luật theo màu</span>
+              <div class="color-list">
+                <div v-for="(color, index) in colors" :key="index" class="color-item">
+                  <div :style="{ backgroundColor: color.color }"></div>
+                  <span>{{ color.name }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="header__option">
+              <div @click="handleShowBlock" :class="{ selected: showBlock }">
+                Phân đoạn tri thức
+              </div>
+              <div @click="handleShowMarkdown" :class="{ selected: !showBlock }">Văn bản gốc</div>
+            </div>
+          </div>
+          <div class="file-content__body">
+            <div v-if="showBlock">
+              <DocumentBlocks :blocks="documentBlocks!" v-if="documentBlocks" />
+            </div>
+            <div v-html="compiledMarkdown" class="markdown-container" v-else></div>
+          </div>
         </div>
         <div class="footer">
           <div v-if="!isEditMode">
@@ -72,14 +94,61 @@
 <script setup lang="ts">
 import { ref, onMounted, type PropType, computed } from 'vue'
 import axios from 'axios'
-import { type DocumentCategory, type Document } from '@/entities/Document'
+import { type DocumentCategory, type Document, type DocumentBlock } from '@/entities/Document'
 import { formatDateForm, getSrcIconDocument } from '@/utils'
 import { marked } from 'marked'
+import DocumentBlocks from './DocumentBlocks.vue'
 
-const fileContent = ref('')
-const compiledMarkdown = computed(() => marked(fileContent.value))
+const fileContent = ref<string | null>(null)
+const compiledMarkdown = computed(() => marked(fileContent.value!))
 
 const isEditMode = ref(false)
+const showBlock = ref(true)
+
+const documentBlocks = ref<DocumentBlock[] | null>(null)
+
+function handleShowBlock() {
+  showBlock.value = true
+}
+
+async function handleShowMarkdown() {
+  if (fileContent.value === null) {
+    await fetchMarkDownData()
+  }
+
+  showBlock.value = false
+}
+
+const colors = [
+  {
+    color: '#e81c2b',
+    name: 'Phần',
+  },
+  {
+    color: '#f4891e',
+    name: 'Chương',
+  },
+  {
+    color: '#eace2a',
+    name: 'Mục',
+  },
+  {
+    color: '#0aa34f',
+    name: 'Tiểu mục',
+  },
+  {
+    color: '#459fe3',
+    name: 'Điều',
+  },
+  {
+    color: '#d80b8f',
+    name: 'Khoản',
+  },
+  {
+    color: '#6a3499',
+    name: 'Điểm',
+  },
+]
 
 const props = defineProps({
   document: {
@@ -104,7 +173,7 @@ async function handleUpdateFile() {
   }
 }
 
-async function fetchHtmlData() {
+async function fetchMarkDownData() {
   try {
     const response = await axios.get(
       `https://localhost:7160/api/v1/Documents/content/${props.document.Id}`,
@@ -127,6 +196,24 @@ async function fetchCategories() {
   }
 }
 
+async function fetchBlocks() {
+  try {
+    const response = await axios.get(`https://localhost:7160/api/v1/Documents/blocks`, {
+      params: {
+        documentId: props.document.Id,
+      },
+    })
+    documentBlocks.value = response.data.map((block: DocumentBlock) => {
+      return {
+        ...block,
+        IsExpend: true,
+      }
+    })
+  } catch (error) {
+    console.error('Lỗi khi lấy nội dung Markdown:', error)
+  }
+}
+
 function formatDate() {
   // eslint-disable-next-line vue/no-mutating-props
   props.document.IssueDate = formatDateForm(props.document.IssueDate!)
@@ -134,7 +221,7 @@ function formatDate() {
 
 onMounted(() => {
   formatDate()
-  fetchHtmlData()
+  fetchBlocks()
   fetchCategories()
 })
 </script>

@@ -157,6 +157,18 @@ namespace Cukcuk.Core.Services
             };
         }
 
+        public async Task<string> GetMarkdownReview(string path)
+        {
+            var pathFile = Path.Combine("wwwroot/tmp", path).Replace("\\", "/");
+
+
+            if (!File.Exists(pathFile))
+                throw new FileNotFoundException($"File {path} không tồn tại.");
+            await Task.CompletedTask;
+
+            return ConvertWordToMarkdown(pathFile);
+        }
+
         public async Task<string> GetFileDetailMarkdown(Guid id)
         {
             var document = await _documentRepository.GetById(id)
@@ -367,6 +379,7 @@ namespace Cukcuk.Core.Services
                 await _documentRepository.AddBlockRange(blocks);
             }
         }
+
         public async Task CancelUpload(Guid cacheId)
         {
             var documents = _cache.GetFromCache<Document>(cacheId) ?? throw new ArgumentNullException();
@@ -444,12 +457,12 @@ namespace Cukcuk.Core.Services
         }
 
 
-        
+
         private static string ConvertWordToMarkdown(IFormFile file)
         {
             if (file == null || file.Length == 0)
             {
-                return ("Vui lòng chọn một file hợp lệ.");
+                return "Vui lòng chọn một file hợp lệ.";
             }
 
             using (var fileStream = file.OpenReadStream())
@@ -468,10 +481,25 @@ namespace Cukcuk.Core.Services
                 {
                     using (WordDocument document = new WordDocument(fileStream, FormatType.Docx))
                     {
+                        // Duyệt qua tất cả các đoạn văn và loại bỏ hình ảnh
+                        foreach (IWSection section in document.Sections)
+                        {
+                            foreach (IWParagraph paragraph in section.Paragraphs)
+                            {
+                                for (int i = paragraph.ChildEntities.Count - 1; i >= 0; i--)
+                                {
+                                    if (paragraph.ChildEntities[i] is WPicture)
+                                    {
+                                        paragraph.ChildEntities.RemoveAt(i);
+                                    }
+                                }
+                            }
+                        }
+
                         document.Save(outputStream, FormatType.Markdown);
                     }
 
-                    outputStream.Position = 0; 
+                    outputStream.Position = 0;
                     using (StreamReader reader = new StreamReader(outputStream))
                     {
                         return reader.ReadToEnd();
@@ -479,6 +507,7 @@ namespace Cukcuk.Core.Services
                 }
             }
         }
+
 
         private static string NormalizeMarkdownOutput(string input)
         {
@@ -510,14 +539,14 @@ namespace Cukcuk.Core.Services
                 return matches[matches.Count - 1].Groups[1].Value.Trim();
             }
 
-            return string.Empty; // Không tìm thấy
+            return string.Empty;
         }
 
         private static (string CoQuan, string SoLuat, string NgayBanHanh) ExtractLawInfo(string input)
         {
-            string coQuanPattern = @"\|\*\*(.*?)\*\*";  // Lấy cơ quan ban hành
-            string soLuatPattern = @"ố:\s*([\w/\-]+)"; // Bắt số luật chung
-            string ngayPattern = @"(\d{1,2}) tháng (\d{1,2}) năm (\d{4})"; // Bắt ngày ban hành
+            string coQuanPattern = @"\|\*\*(.*?)\*\*";
+            string soLuatPattern = @"ố:\s*([\w/\-]+)";
+            string ngayPattern = @"(\d{1,2}) tháng (\d{1,2}) năm (\d{4})"; 
 
             string coQuan = Regex.Match(input, coQuanPattern).Groups[1].Value.Trim();
             string soLuat = Regex.Match(input, soLuatPattern).Groups[1].Value.Trim();
@@ -535,7 +564,6 @@ namespace Cukcuk.Core.Services
 
             return (coQuan, soLuat, ngayBanHanh);
         }
-
 
 
         private static string RemoveSyncfusionTrialMessage(string markdownContent)
@@ -583,6 +611,26 @@ namespace Cukcuk.Core.Services
                                     .Where(line => !string.IsNullOrEmpty(line)) // Chỉ lấy dòng có nội dung
                                     .ToList();
 
+            var signIndex = contents.Count - 1;
+
+            var contentIndex = 0;
+
+            for (int index = 0; index < contents.Count; index++)
+            {
+                string text = contents[index].Trim();
+                if (string.IsNullOrEmpty(text)) continue;
+
+                var level = GetLevel(text);
+                if (level > 0 && level != 8 && contentIndex == 0)
+                {
+                    contentIndex = index;
+                } 
+                if (level == 8)
+                {
+                    signIndex = index - 1;
+                    break;
+                }
+            }
 
             var firstBlock = new DocumentBlock
             {
@@ -596,11 +644,23 @@ namespace Cukcuk.Core.Services
             };
 
             var order = 2;
-            foreach (string para in contents.Take(contents.Count() - 1))
+
+            for (int index = 0; index < contentIndex; index++)
             {
-                string text = para.Trim();
+                string text = contents[index].Trim();
+                if (string.IsNullOrEmpty(text)) continue;
+                firstBlock.Content += firstBlock.Content.Length > 0 ? "\r\n" + text : text;
+            }
+            
+            returnBlocks.Add(firstBlock);
+
+
+            for (int index = contentIndex; index < signIndex; index++)
+            {
+                string text = contents[index].Trim();
                 if (string.IsNullOrEmpty(text)) continue;
                 var level = GetLevel(text);
+
                 if (level > 0)
                 {
                     var block = new DocumentBlock
@@ -612,51 +672,72 @@ namespace Cukcuk.Core.Services
                         ContentType = 2,
                         Order = order++,
                         ParentId = null,
-
                         DocumentId = document.Id
                     };
-
-                    FindParent(block, blocks, returnBlocks);
+                    FindParent(block, blocks);
+                    returnBlocks.Add(block);
                 }
                 else
                 {
-                    if (blocks.Count > 0)
-                    {
-                        var preBlock = blocks.Pop();
-                        preBlock.Content += @"\r\n" + text;
-                        blocks.Push(preBlock);
-                    }
-                    else
-                    {
-                        firstBlock.Content += firstBlock.Content.Length > 0 ? @"\r\n" + text : text;
-                    }
+                    returnBlocks.Last().Content += "\r\n" + text;  
                 }
             }
 
-            returnBlocks.Insert(0, firstBlock);
+
+            blocks.Clear();
+
 
             var sightBlock = new DocumentBlock
             {
                 Id = Guid.NewGuid(),
-                ParentId = null,
-                ContentType = 4,
-                Level = 0,
+                Content = contents[signIndex],
                 Title = "Chữ ký",
-                Order = order,
-                Content = contents.Last(),
-
-                DocumentId = document.Id
+                ContentType = 4,
+                Order = order++,
+                ParentId = null,
+                DocumentId = document.Id,
+                Level = 0,
+                    
             };
+            var sighName = ExtractSignerName(sightBlock.Content);
+            document.SignerName = sighName;
 
             returnBlocks.Add(sightBlock);
 
-            var sighName = ExtractSignerName(sightBlock.Content);
             var (coquan, soluat, ngaybanhanh) = ExtractLawInfo(firstBlock.Content);
-
-            document.SignerName = sighName;
             document.Issuer = coquan;
             document.IssueDate = DateTime.ParseExact(ngaybanhanh, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             document.DocumentNo = soluat;
+
+
+            for (int index = signIndex + 1; index < contents.Count; index++)
+            {
+                string text = contents[index].Trim();
+                if (string.IsNullOrEmpty(text)) continue;
+                var level = GetLevel(text);
+                if (level == 8)
+                {
+                    var block = new DocumentBlock
+                    {
+                        Id = Guid.NewGuid(),
+                        Content = text,
+                        Title = text,
+                        Level = 0,
+                        ContentType = 5,
+                        Order = order++,
+                        ParentId = null,
+                        DocumentId = document.Id
+                    };
+                    FindParent(block, blocks);
+                    returnBlocks.Add(block);
+                }
+                else
+                {
+                    returnBlocks.Last().Content += "\r\n" + text;
+
+                }
+            }
+
             return returnBlocks;
         }
 
@@ -685,10 +766,14 @@ namespace Cukcuk.Core.Services
             string pointRegex = @"^\p{L}(\.|\))"; 
             if (Regex.IsMatch(dataCheck, pointRegex, RegexOptions.IgnoreCase)) return 7;
 
+            string appendixRegex = @"^Phụ lục\s+([IVXLCDM\d]+)\.?";
+            if (Regex.IsMatch(dataCheck, appendixRegex, RegexOptions.IgnoreCase)) return 8;
+
+
             return 0;
         }
 
-        private static void FindParent(DocumentBlock block, Stack<DocumentBlock> parentBlocks, List<DocumentBlock> returnBlocks)
+        private static void FindParent(DocumentBlock block, Stack<DocumentBlock> parentBlocks)
         {
             while (parentBlocks.Count() > 0 && block.Level <= parentBlocks.Peek().Level)
             {
@@ -703,10 +788,12 @@ namespace Cukcuk.Core.Services
             {
                 block.ParentId = parentBlocks.Peek().Id;
             }
-            returnBlocks.Add(block);
             parentBlocks.Push(block);
         }
 
-       
+       public async Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId)
+        {
+            return await _documentRepository.GetBlockByDocumentId(documentId);
+        }
     }
 }

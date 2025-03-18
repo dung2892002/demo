@@ -2,7 +2,6 @@
 using Cukcuk.Core.Enum;
 using Cukcuk.Core.Interfaces.IServices;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 namespace Cukcuk.Api.Controllers
 {
     [Route("api/v1/[controller]")]
@@ -11,6 +10,34 @@ namespace Cukcuk.Api.Controllers
     {
         private readonly IDocumentService _documentService = documentService;
 
+
+        [HttpGet("markdown-review")]
+        public async Task<IActionResult> GetBlockByDocumentId([FromQuery] string path)
+        {
+            try
+            {
+                var markdown = await _documentService.GetMarkdownReview(path);
+                return Ok(markdown);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("blocks")]
+        public async Task<IActionResult> GetBlockByDocumentId([FromQuery] Guid documentId)
+        {
+            try
+            {
+                var blocks = await _documentService.GetBlockByDocumentId(documentId);
+                return Ok(blocks);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
 
         [HttpPost("upload-confirm")]
         public async Task<IActionResult> ConfirmUpload([FromQuery] Guid cacheId)

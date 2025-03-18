@@ -128,11 +128,88 @@
       </div>
     </div>
     <div v-else style="display: flex; overflow-y: scroll">
-      <DocumentBlock
-        v-for="(doc, index) in documentsDemo"
-        :key="index"
-        :blocks="doc.DocumentBlocks"
-      />
+      <div class="content-main">
+        <div class="file">
+          <div
+            v-for="(document, index) in documentsDemo"
+            :key="index"
+            class="file-item"
+            @click="selectDocument(document)"
+          >
+            <div>
+              <img
+                :src="`/src/assets/icon/${getSrcIconDocument(document.Type)}`"
+                alt="logo"
+                style="width: 24px; height: 24px; margin-right: 6px; vertical-align: middle"
+              />
+              <span>{{ document.Name }}</span>
+            </div>
+            <div class="file-form">
+              <div class="form-data">
+                <span>Chủ đề </span>
+                <select v-model="document!.CategoryId" class="form__input">
+                  <option :value="category.Id" v-for="category in categories" :key="category.Id">
+                    {{ category.Name }}
+                  </option>
+                </select>
+              </div>
+              <div v-if="document.IsLaw" class="form-data--law">
+                <div class="form-data">
+                  <span>Cơ quan ban hành </span>
+                  <input v-model="document!.Issuer" class="form__input" />
+                </div>
+                <div class="form-data">
+                  <span>Mã văn bản </span>
+                  <input v-model="document!.DocumentNo" class="form__input" />
+                </div>
+                <div class="form-data">
+                  <span>Người ký</span>
+                  <input v-model="document!.SignerName" class="form__input" />
+                </div>
+                <div class="form-data">
+                  <span>Ngày ban hành</span>
+                  <input v-model="document!.IssueDate" class="form__input" type="date" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="file-data">
+          <div class="file-content">
+            <div class="file-content__header">
+              <div class="header__color">
+                <span>Cấp hiển thị mục lục văn bản pháp luật theo màu</span>
+                <div class="color-list">
+                  <div v-for="(color, index) in colors" :key="index" class="color-item">
+                    <div :style="{ backgroundColor: color.color }"></div>
+                    <span>{{ color.name }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="header__option">
+                <div :class="{ selected: showBlock }" @click="showBlock = true">
+                  Phân đoạn tri thức
+                </div>
+                <div :class="{ selected: !showBlock }" @click="viewMarkdown">Văn bản gốc</div>
+              </div>
+            </div>
+            <div class="file-content__body">
+              <div v-if="showBlock">
+                <DocumentBlocks :blocks="showDocument?.DocumentBlocks!" />
+              </div>
+              <div v-else>
+                <div v-html="marked(markdownContent!)" class="markdown-container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div>
+              <button @click="cancelUpload" v-loading="cancelLoading">Hủy</button>
+              <button @click="confirmUpload" v-loading="confirmLoading">Xác nhận</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -143,9 +220,62 @@ import { type Document, DocumentType, type DocumentCategory } from '@/entities/D
 import { getSrcIconDocument } from '@/utils'
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
-import DocumentBlock from './DocumentBlock.vue'
-
+import DocumentBlocks from './DocumentBlocks.vue'
+import { marked } from 'marked'
 const emits = defineEmits(['closeForm'])
+
+const markdownContent = ref<string | null>(null)
+
+function viewMarkdown() {
+  showBlock.value = false
+  fetchMarkdownData()
+}
+
+async function fetchMarkdownData() {
+  try {
+    const response = await axios.get('https://localhost:7160/api/v1/Documents/markdown-review', {
+      params: {
+        path: showDocument.value!.Path,
+      },
+    })
+    markdownContent.value = response.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+const colors = [
+  {
+    color: '#e81c2b',
+    name: 'Phần',
+  },
+  {
+    color: '#f4891e',
+    name: 'Chương',
+  },
+  {
+    color: '#eace2a',
+    name: 'Mục',
+  },
+  {
+    color: '#0aa34f',
+    name: 'Tiểu mục',
+  },
+  {
+    color: '#459fe3',
+    name: 'Điều',
+  },
+  {
+    color: '#d80b8f',
+    name: 'Khoản',
+  },
+  {
+    color: '#6a3499',
+    name: 'Điểm',
+  },
+]
+
+const showDocument = ref<Document | null>(null)
 
 const currentCategory = ref<DocumentCategory | null>(null)
 const isLaw = ref(true)
@@ -153,6 +283,8 @@ const isLaw = ref(true)
 function handleCloseForm(value: boolean) {
   emits('closeForm', value)
 }
+
+const showBlock = ref(true)
 
 const toastRef = ref<InstanceType<typeof ToastComponent> | null>(null)
 
@@ -185,6 +317,10 @@ const props = defineProps({
     required: true,
   },
 })
+
+function selectDocument(document: Document) {
+  showDocument.value = document
+}
 
 async function handleSubmitForm() {
   if (isLaw.value) await SubmitFormLaw()
@@ -241,11 +377,53 @@ async function SubmitFormLaw() {
       )
       cacheId.value = response.data.CacheDataId
       documentsDemo.value = response.data.Documents
+      showDocument.value = documentsDemo.value[0]
       stepUploadLaw.value = 2
       // handleCloseForm(true)
     } catch (error) {
       console.log(error)
     }
+  }
+}
+
+const confirmLoading = ref(false)
+const cancelLoading = ref(false)
+
+async function confirmUpload() {
+  try {
+    confirmLoading.value = true
+    await axios.post(
+      'https://localhost:7160/api/v1/Documents/upload-confirm',
+      {},
+      {
+        params: {
+          cacheId: cacheId.value,
+        },
+      },
+    )
+    confirmLoading.value = false
+    handleCloseForm(true)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function cancelUpload() {
+  try {
+    cancelLoading.value = true
+    await axios.post(
+      'https://localhost:7160/api/v1/Documents/upload-cancel',
+      {},
+      {
+        params: {
+          cacheId: cacheId.value,
+        },
+      },
+    )
+    cancelLoading.value = false
+    handleCloseForm(true)
+  } catch (error) {
+    console.log(error)
   }
 }
 
@@ -362,3 +540,28 @@ onMounted(() => {
   fetchCategories()
 })
 </script>
+
+<style scoped lang="scss">
+.markdown-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+::v-deep(.markdown-container strong) {
+  font-weight: bold;
+}
+
+::v-deep(.markdown-container em) {
+  font-style: italic;
+}
+
+::v-deep(.markdown-container ul) {
+  padding-left: 20px; /* Đảm bảo lùi vào đúng */
+  list-style-position: inside; /* Di chuyển ::marker vào trong */
+}
+
+::v-deep(.markdown-container ol) {
+  margin-left: 20px;
+  // list-style-position: inside;
+}
+</style>

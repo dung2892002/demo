@@ -44,5 +44,6 @@ export interface DocumentBlock {
   Level: number
   ContentType: number
   Order: number
-  IsExpend?: boolean
+  IsExpand?: boolean
+  IsShow?: boolean
 }

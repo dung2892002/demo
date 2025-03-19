@@ -185,22 +185,6 @@ form label {
   border-bottom: none;
 }
 
-.form-group--column ul::-webkit-scrollbar {
-  width: 8px;
-}
-
-.form-group--column ul::-webkit-scrollbar-track {
-  background: #f2f2f2;
-}
-
-.form-group--column ul::-webkit-scrollbar-thumb {
-  background-color: #b9b9b9;
-}
-
-.form-group--column ul::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
 .form-select {
   position: relative;
   min-height: 36px;
@@ -429,13 +413,16 @@ form label {
         width: 100%;
         margin: 0, auto;
         margin-bottom: 10px;
-
         border-radius: 6px;
-
+        height: 800px;
+        display: flex;
+        flex-direction: column;
         .file-content__header {
           border-bottom: 2px solid #c5c2c2;
           border-radius: 0;
           margin-bottom: 10px;
+          flex-shrink: 0;
+          position: relative;
           .header__color {
             display: flex;
             flex-direction: column;
@@ -443,6 +430,36 @@ form label {
             padding: 20px;
             gap: 10px;
             border-radius: 6px;
+
+            .color-control {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              cursor: pointer;
+              min-width: 400px;
+
+              .title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 6px;
+                img {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+
+              .control-icon {
+                border: 2px solid #b0afaf;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+              }
+            }
             .color-list {
               display: flex;
               flex-direction: row;
@@ -471,41 +488,55 @@ form label {
             display: flex;
             flex-direction: row;
             align-items: center;
+            position: relative;
+            z-index: 1;
+            gap: 40px;
 
             div {
-              padding: 10px;
               cursor: pointer;
+              padding: 10px 0px;
+              position: relative;
 
               &.selected {
                 color: #078cf8;
                 border-radius: 0;
-                // border-bottom: 2px solid #078cf8;
+
+                span {
+                  position: relative;
+                  padding: 10px 0;
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #078cf8;
+                    z-index: 2;
+                  }
+                }
               }
+            }
+          }
+
+          &.show-color {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .header__color {
+              border: none;
+              padding: 0;
+              min-width: 360px;
             }
           }
         }
 
         .file-content__body {
-          height: 620px;
           overflow-y: scroll;
-          &::-webkit-scrollbar {
-            width: 8px;
-            height: 40px;
-          }
-
-          &::-webkit-scrollbar-track {
-            background: #f2f2f2;
-
-            border-radius: 10px;
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background-color: #b9b9b9;
-          }
-
-          &::-webkit-scrollbar-thumb:hover {
-            background-color: #555;
-          }
+          flex-grow: 1;
         }
       }
 
@@ -524,12 +555,14 @@ form label {
           button {
             padding: 8px 24px;
             border-radius: 6px;
+            box-sizing: border-box;
+            border: 1px solid transparent;
 
             &:first-child {
               background-color: #ffffff;
               &:hover {
                 background-color: #dddddd;
-                border: 1px solid gray;
+                border-color: gray;
               }
             }
 
@@ -537,7 +570,7 @@ form label {
               background-color: #078cf8;
               color: #ffffff;
               &:hover {
-                background-color: #9bd2ff;
+                background-color: #6fbeff;
               }
             }
           }

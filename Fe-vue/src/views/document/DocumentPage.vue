@@ -238,7 +238,7 @@ import '/src/styles/component/input.scss'
 import '/src/styles/layout/header.scss'
 import ThePagnigation from '@/components/ThePagnigation.vue'
 import { DocumentType, type Document } from '@/entities/Document'
-import { formatDate, getSrcIconDocument } from '@/utils'
+import { formatDate, formatDateForm, getSrcIconDocument } from '@/utils'
 import axios from 'axios'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useStore } from 'vuex'
@@ -524,6 +524,7 @@ function handleSelectDocument(document: Document) {
     handleAddRequest()
   } else {
     documentDetail.value = document
+    documentDetail.value.IssueDate = formatDateForm(documentDetail.value.IssueDate!)
     showDocumentDetail.value = true
   }
 }

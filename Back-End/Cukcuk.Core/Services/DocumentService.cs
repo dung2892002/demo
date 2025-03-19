@@ -137,6 +137,15 @@ namespace Cukcuk.Core.Services
             exsitingdocument.CategoryId = document.CategoryId;
             exsitingdocument.Name = await _documentRepository.GetUniqueDocumentName(document.ParentId, document.Name, document.Type, exsitingdocument.Id);
 
+
+            if (exsitingdocument.IsLaw)
+            {
+                exsitingdocument.IssueDate = document.IssueDate;
+                exsitingdocument.DocumentNo = document.DocumentNo;
+                exsitingdocument.Issuer = document.Issuer;
+                exsitingdocument.SignerName = document.SignerName;
+            }
+
             await _documentRepository.Update(exsitingdocument);
             await HandleUpdatePathSubDocument(document);
         }

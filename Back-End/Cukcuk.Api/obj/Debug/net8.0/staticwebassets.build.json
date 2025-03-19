@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iDwZGjhDEu5LTyX+NeyiXxhgd/1Hk45F5x1iYelgFtw=",
+  "Hash": "XyV84UXri0rVmbMEng41F4QXWBFHQKR7rxCeZc7rsrI=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "wwwroot\\files\\232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc"
     },
     {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7xw5li7z20",
+      "Integrity": "6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc"
+    },
+    {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\33c72b6c-0248-4054-b74e-a528af771718_12_2020_TT-BGTVT_292769 (1).doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
@@ -78,27 +99,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\33c72b6c-0248-4054-b74e-a528af771718_12_2020_TT-BGTVT_292769 (1).doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "7xw5li7z20",
-      "Integrity": "6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769.doc"
     },
     {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ac1ada62-0b41-462c-85d4-d084d6844ba9_12_2020_TT-BGTVT_292769.doc",
@@ -122,6 +122,27 @@
       "OriginalItemSpec": "wwwroot\\files\\ac1ada62-0b41-462c-85d4-d084d6844ba9_12_2020_TT-BGTVT_292769.doc"
     },
     {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1)#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "segt3nu9of",
+      "Integrity": "VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc"
+    },
+    {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bd7de097-50c3-457c-b224-3fa9c981dcb7_20_2023_QH15_513347.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
@@ -141,27 +162,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\bd7de097-50c3-457c-b224-3fa9c981dcb7_20_2023_QH15_513347.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "xu8ayw3482",
-      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347.doc"
     },
     {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc",
@@ -185,12 +185,12 @@
       "OriginalItemSpec": "wwwroot\\files\\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc"
     },
     {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347.doc",
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
       "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "RelativePath": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347#[.{fingerprint}]?.doc",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -203,112 +203,7 @@
       "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "7xw5li7z20",
-      "Integrity": "6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "xu8ayw3482",
-      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "xu8ayw3482",
-      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "7xw5li7z20",
-      "Integrity": "6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "7xw5li7z20",
-      "Integrity": "6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769.doc"
+      "OriginalItemSpec": "wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc"
     }
   ],
   "Endpoints": [
@@ -477,6 +372,88 @@
       ]
     },
     {
+      "Route": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.7xw5li7z20.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "78336"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7xw5li7z20"
+        },
+        {
+          "Name": "label",
+          "Value": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
+        }
+      ]
+    },
+    {
+      "Route": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "78336"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
+        }
+      ]
+    },
+    {
       "Route": "files/33c72b6c-0248-4054-b74e-a528af771718_12_2020_TT-BGTVT_292769 (1).doc",
       "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\33c72b6c-0248-4054-b74e-a528af771718_12_2020_TT-BGTVT_292769 (1).doc",
       "Selectors": [],
@@ -555,88 +532,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI="
-        }
-      ]
-    },
-    {
-      "Route": "files/4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769.7xw5li7z20.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:43:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7xw5li7z20"
-        },
-        {
-          "Name": "label",
-          "Value": "files/4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
-        }
-      ]
-    },
-    {
-      "Route": "files/4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\4f481387-d5da-4e51-9ff6-ca122fe06e29_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:43:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
         }
       ]
     },
@@ -723,6 +618,88 @@
       ]
     },
     {
+      "Route": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1065472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI="
+        }
+      ]
+    },
+    {
+      "Route": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).segt3nu9of.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1065472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "segt3nu9of"
+        },
+        {
+          "Name": "label",
+          "Value": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI="
+        }
+      ]
+    },
+    {
       "Route": "files/bd7de097-50c3-457c-b224-3fa9c981dcb7_20_2023_QH15_513347.doc",
       "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bd7de097-50c3-457c-b224-3fa9c981dcb7_20_2023_QH15_513347.doc",
       "Selectors": [],
@@ -797,88 +774,6 @@
         {
           "Name": "label",
           "Value": "files/bd7de097-50c3-457c-b224-3fa9c981dcb7_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "files/bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:43:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "files/bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:43:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xu8ayw3482"
-        },
-        {
-          "Name": "label",
-          "Value": "files/bf4c2227-e8a7-4a12-b99c-ccd9380a9e93_20_2023_QH15_513347.doc"
         },
         {
           "Name": "integrity",
@@ -969,8 +864,8 @@
       ]
     },
     {
-      "Route": "tmp/23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347.doc",
+      "Route": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -991,7 +886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 10:04:57 GMT"
+          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1006,8 +901,8 @@
       ]
     },
     {
-      "Route": "tmp/23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347.doc",
+      "Route": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.xu8ayw3482.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1028,7 +923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 10:04:57 GMT"
+          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1042,421 +937,11 @@
         },
         {
           "Name": "label",
-          "Value": "tmp/23ca0566-75a5-4314-8ab3-3965f6ce46ea_20_2023_QH15_513347.doc"
+          "Value": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc"
         },
         {
           "Name": "integrity",
           "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769.7xw5li7z20.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:48:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7xw5li7z20"
-        },
-        {
-          "Name": "label",
-          "Value": "tmp/5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\5918ba86-a4a2-40c7-8ded-4b5dab36716b_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:48:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:48:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:48:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xu8ayw3482"
-        },
-        {
-          "Name": "label",
-          "Value": "tmp/5f58c675-3102-4eec-9958-312fefb30df6_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:54:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:54:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xu8ayw3482"
-        },
-        {
-          "Name": "label",
-          "Value": "tmp/6d285863-a636-4acc-8d1d-c907e904b310_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769.7xw5li7z20.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:54:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7xw5li7z20"
-        },
-        {
-          "Name": "label",
-          "Value": "tmp/a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\a1f2a3ca-17d0-46d2-867c-c5a2503b7a07_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 09:54:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769.7xw5li7z20.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 10:04:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7xw5li7z20"
-        },
-        {
-          "Name": "label",
-          "Value": "tmp/c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\c187b8af-d4c4-4781-844e-c5cd57ca8909_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 10:04:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0="
         }
       ]
     }

@@ -99,8 +99,7 @@
               "RelativeToolTip": "..\\Cukcuk.Core\\Interfaces\\IServices\\IDocumentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T01:34:30.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T01:34:30.843Z"
             },
             {
               "$type": "Document",
@@ -110,7 +109,7 @@
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
               "ToolTip": "D:\\demo\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
               "RelativeToolTip": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAQwJEAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAowJEAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T01:28:33.999Z",
               "EditorCaption": ""
@@ -125,8 +124,7 @@
               "RelativeToolTip": "Controllers\\DocumentsController.cs",
               "ViewState": "AgIAALAAAAAAAAAAAAA7wMIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T06:43:09.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T06:43:09.006Z"
             },
             {
               "$type": "Document",
@@ -138,8 +136,7 @@
               "RelativeToolTip": "..\\Cukcuk.Core\\Entities\\DocumentBlock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T06:45:27.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T06:45:27.809Z"
             },
             {
               "$type": "Document",

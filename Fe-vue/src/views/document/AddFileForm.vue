@@ -100,7 +100,7 @@
               </div>
             </div>
             <div class="file-category">
-              <span class="form__label">Loại tri thức<span class="required">*</span></span>
+              <span class="form__label">Loại tri thức <span class="required">*</span></span>
               <div class="category--current" @click="toggleShowSelectKnowledgeType">
                 <span>{{ isLaw ? 'Văn bản quy phạm pháp luật' : 'Tri thức nghiệp vụ khác' }}</span>
                 <div>
@@ -252,6 +252,7 @@ async function SubmitFormLaw() {
       cacheId.value = response.data.CacheDataId
       documentsDemo.value = response.data.Documents.map((document: Document) => {
         document.IssueDate = formatDateForm(document.IssueDate!)
+        document.MarkdownContent = ''
         return document
       })
       saveLoading.value = false

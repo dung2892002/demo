@@ -44,6 +44,7 @@
           <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="block.IsExpand" />
           <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
         </div>
+        <div v-else class="control"></div>
         <div
           class="block__level"
           :style="{ backgroundColor: colors[block.Level - 1].color }"
@@ -80,7 +81,7 @@
         <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="showOtherBlocks" />
         <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
       </div>
-      <div v-else></div>
+      <div v-else class="control"></div>
       <span>Khác</span>
     </div>
     <div v-show="showOtherBlocks">
@@ -256,7 +257,7 @@ onMounted(() => {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 12px;
+    gap: 8px;
     border-bottom: 1px solid #d6d6d6;
     border-radius: 0;
     padding: 8px 0px;

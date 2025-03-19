@@ -11,6 +11,7 @@ export interface Document {
   Children?: Document[]
   IsLoaded?: boolean
   IsExpend?: boolean
+  MarkdownContent?: string
 
   DocumentBlocks: DocumentBlock[]
   Issuer: string | null

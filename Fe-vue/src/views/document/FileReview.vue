@@ -5,7 +5,7 @@
         v-for="(document, index) in documents"
         :key="index"
         class="file-item"
-        @click="selectDocument(document)"
+        @click="selectDocument(document, index)"
       >
         <div style="padding-left: 10px">
           <img
@@ -92,8 +92,8 @@
           <div v-show="showBlock">
             <DocumentBlocks :blocks="showDocument?.DocumentBlocks!" />
           </div>
-          <div v-show="!showBlock">
-            <div v-html="marked(markdownContent!)" class="markdown-container"></div>
+          <div v-show="!showBlock && showDocument?.MarkdownContent">
+            <div v-html="marked(showDocument?.MarkdownContent!)" class="markdown-container"></div>
           </div>
         </div>
       </div>
@@ -216,13 +216,16 @@ function checkEditMode(): boolean {
 
 //chon document de xem
 const showDocument = ref<Document | null>(props.documents[0])
-
-function selectDocument(document: Document) {
+const currentIndex = ref(0)
+function selectDocument(document: Document, index: number) {
   showDocument.value = document
+  currentIndex.value = index
+  if (showBlock.value == false) {
+    fetchMarkdownData()
+  }
 }
 
 //xem van ban goc
-const markdownContent = ref<string>('')
 
 function viewMarkdown() {
   showBlock.value = false
@@ -231,18 +234,23 @@ function viewMarkdown() {
 
 async function fetchMarkdownData() {
   try {
-    if (props.state) {
-      const response = await axios.get('https://localhost:7160/api/v1/Documents/markdown-review', {
-        params: {
-          path: showDocument.value!.Path,
-        },
-      })
-      markdownContent.value = response.data
-    } else {
-      const response = await axios.get(
-        `https://localhost:7160/api/v1/Documents/content/${showDocument.value!.Id}`,
-      )
-      markdownContent.value = response.data
+    if (showDocument.value?.MarkdownContent?.length === 0) {
+      if (props.state) {
+        const response = await axios.get(
+          'https://localhost:7160/api/v1/Documents/markdown-review',
+          {
+            params: {
+              path: showDocument.value!.Path,
+            },
+          },
+        )
+        props.documents[currentIndex.value]!.MarkdownContent = response.data
+      } else {
+        const response = await axios.get(
+          `https://localhost:7160/api/v1/Documents/content/${showDocument.value!.Id}`,
+        )
+        props.documents[currentIndex.value]!.MarkdownContent = response.data
+      }
     }
   } catch (error) {
     console.error(error)

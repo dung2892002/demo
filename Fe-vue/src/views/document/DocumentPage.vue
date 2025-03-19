@@ -525,6 +525,7 @@ function handleSelectDocument(document: Document) {
   } else {
     documentDetail.value = document
     documentDetail.value.IssueDate = formatDateForm(documentDetail.value.IssueDate!)
+    documentDetail.value.MarkdownContent = ''
     showDocumentDetail.value = true
   }
 }

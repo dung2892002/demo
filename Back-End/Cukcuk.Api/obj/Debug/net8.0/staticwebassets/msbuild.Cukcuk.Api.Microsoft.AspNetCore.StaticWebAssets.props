@@ -1,47 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>i85pzwf6nw</Fingerprint>
-      <Integrity>Pia6Zd1hehaXp8xu0G8F2DH4bgV6rmL8g8cVsbDXHbE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Cukcuk.Api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>498f7ioyyp</Fingerprint>
-      <Integrity>iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Cukcuk.Api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc</RelativePath>
+      <RelativePath>files/100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -52,50 +16,14 @@
       <Integrity>6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>segt3nu9of</Fingerprint>
-      <Integrity>VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Cukcuk.Api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>we55pm4tyk</Fingerprint>
-      <Integrity>WAR2kcgh6luUHYOnEWQXF9g6oKJZ6yqMQfQH92JmMPM=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Cukcuk.Api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc</RelativePath>
+      <RelativePath>files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -106,7 +34,79 @@
       <Integrity>WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>files/ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>segt3nu9of</Fingerprint>
+      <Integrity>VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>files/feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xu8ayw3482</Fingerprint>
+      <Integrity>WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xu8ayw3482</Fingerprint>
+      <Integrity>WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xu8ayw3482</Fingerprint>
+      <Integrity>WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

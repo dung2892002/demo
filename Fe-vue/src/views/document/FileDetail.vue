@@ -12,7 +12,9 @@
       :update-loading="updateLoading"
       @update-file="handleUpdateFile"
       @close="closeFile"
+      v-if="document.IsLaw"
     />
+    <ContentReview v-else :documentId="document.Id!" @close="closeFile" />
   </div>
 </template>
 
@@ -22,6 +24,7 @@ import axios from 'axios'
 import { type DocumentCategory, type Document } from '@/entities/Document'
 
 import FileReview from './FileReview.vue'
+import ContentReview from './ContentReview.vue'
 
 const props = defineProps({
   document: {
@@ -62,7 +65,7 @@ async function fetchCategories() {
 
 //lay danh sach block khi xem
 async function fetchBlocksData() {
-  if (!props.document || !props.document.Id) return // Kiểm tra props trước khi gọi API
+  if (!props.document || !props.document.Id) return
 
   try {
     const response = await axios.get('https://localhost:7160/api/v1/Documents/blocks', {

@@ -255,5 +255,16 @@ namespace Cukcuk.Infrastructure.Repositories
         {
             return await _dbContext.DocumentBlocks.AsNoTracking().Where(d => d.DocumentId == documentId).OrderBy(b => b.Order).ToListAsync();
         }
+
+        public async Task<DocumentBlock?> GetBlockById(Guid blockId)
+        {
+            return await _dbContext.DocumentBlocks.AsNoTracking().SingleOrDefaultAsync(b => b.Id == blockId);
+        }
+
+        public async Task UpdateBlock(DocumentBlock block)
+        {
+            _dbContext.DocumentBlocks.Update(block);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }

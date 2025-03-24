@@ -23,7 +23,7 @@ export function getSrcIconDocument(type: DocumentType) {
     case DocumentType.Image:
       return 'image.png'
     default:
-      return 'file.png'
+      return 'custom.png'
   }
 }
 

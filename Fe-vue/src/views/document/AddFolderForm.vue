@@ -47,8 +47,6 @@ const props = defineProps({
 })
 
 async function handleSubmitForm() {
-  const formData = new FormData()
-  formData.append('parentId', props.parentId)
   try {
     await axios.post('https://localhost:7160/api/v1/Documents/folder', {
       Name: folderName.value,

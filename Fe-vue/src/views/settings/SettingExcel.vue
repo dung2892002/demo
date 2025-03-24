@@ -148,6 +148,7 @@ const properties = {
     'Amount',
     'GroupName',
   ],
+  DocumentBlock: ['Title', 'Content'],
 }
 
 const filteredProperties = computed(() => {
@@ -155,7 +156,7 @@ const filteredProperties = computed(() => {
   return properties[tableName as keyof typeof properties] || []
 })
 
-const tables = ['Employee', 'Customer']
+const tables = ['Employee', 'Customer', 'DocumentBlock']
 
 async function submit() {
   if (importValue.value.Id === 0) {

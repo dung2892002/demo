@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ueTyFKeylOK/FXMxIn5M45HZJ7hjmkIUdNNtAEdeHxc=",
+  "Hash": "FG2RdKWtkVXcEjNJfuqGVCr5G8zt1z8abbF3eBLEqxM=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -17,54 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc",
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
       "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "i85pzwf6nw",
-      "Integrity": "Pia6Zd1hehaXp8xu0G8F2DH4bgV6rmL8g8cVsbDXHbE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1)#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "498f7ioyyp",
-      "Integrity": "iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
+      "RelativePath": "files/100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -77,57 +35,15 @@
       "Integrity": "6yJMF8jXO34Ij4l2APEWACUurpjjl2DSmCV6vXIwMP0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc"
+      "OriginalItemSpec": "wwwroot\\files\\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc"
     },
     {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
       "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1)#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "segt3nu9of",
-      "Integrity": "VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "we55pm4tyk",
-      "Integrity": "WAR2kcgh6luUHYOnEWQXF9g6oKJZ6yqMQfQH92JmMPM=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "RelativePath": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347#[.{fingerprint}]?.doc",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -140,177 +56,97 @@
       "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc"
+      "OriginalItemSpec": "wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1)#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "segt3nu9of",
+      "Integrity": "VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xu8ayw3482",
+      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xu8ayw3482",
+      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xu8ayw3482",
+      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc"
     }
   ],
   "Endpoints": [
     {
-      "Route": "files/2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Pia6Zd1hehaXp8xu0G8F2DH4bgV6rmL8g8cVsbDXHbE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 08:19:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Pia6Zd1hehaXp8xu0G8F2DH4bgV6rmL8g8cVsbDXHbE="
-        }
-      ]
-    },
-    {
-      "Route": "files/2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.i85pzwf6nw.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Pia6Zd1hehaXp8xu0G8F2DH4bgV6rmL8g8cVsbDXHbE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 08:19:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "i85pzwf6nw"
-        },
-        {
-          "Name": "label",
-          "Value": "files/2092267a-6c5f-4aaa-99a4-53d30b2a9bda_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Pia6Zd1hehaXp8xu0G8F2DH4bgV6rmL8g8cVsbDXHbE="
-        }
-      ]
-    },
-    {
-      "Route": "files/232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).498f7ioyyp.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "37888"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 09:45:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "498f7ioyyp"
-        },
-        {
-          "Name": "label",
-          "Value": "files/232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="
-        }
-      ]
-    },
-    {
-      "Route": "files/232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\232a150b-a6a1-4500-b602-4bed57b4b70f_Mau xin cap doi the(1).doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "37888"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 09:45:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-iMaxz1OjOeEhOth84xguHXfPshSivwNhtBIOD1U5dHE="
-        }
-      ]
-    },
-    {
-      "Route": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.7xw5li7z20.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
+      "Route": "files/100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.7xw5li7z20.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -331,7 +167,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+          "Value": "Mon, 24 Mar 2025 08:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -345,7 +181,7 @@
         },
         {
           "Name": "label",
-          "Value": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc"
+          "Value": "files/100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc"
         },
         {
           "Name": "integrity",
@@ -354,8 +190,8 @@
       ]
     },
     {
-      "Route": "files/234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\234e688f-2e2e-4bd9-89ca-27c6a2af5e40_12_2020_TT-BGTVT_292769.doc",
+      "Route": "files/100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -376,7 +212,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+          "Value": "Mon, 24 Mar 2025 08:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -391,172 +227,8 @@
       ]
     },
     {
-      "Route": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1065472"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI="
-        }
-      ]
-    },
-    {
-      "Route": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).segt3nu9of.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1065472"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "segt3nu9of"
-        },
-        {
-          "Name": "label",
-          "Value": "files/b422d442-b76d-4d3d-bcf8-fbcf6e8851cf_12_2020_TT-BGTVT_292769 (1).doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI="
-        }
-      ]
-    },
-    {
-      "Route": "files/e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WAR2kcgh6luUHYOnEWQXF9g6oKJZ6yqMQfQH92JmMPM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 08:19:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WAR2kcgh6luUHYOnEWQXF9g6oKJZ6yqMQfQH92JmMPM="
-        }
-      ]
-    },
-    {
-      "Route": "files/e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.we55pm4tyk.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "78336"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WAR2kcgh6luUHYOnEWQXF9g6oKJZ6yqMQfQH92JmMPM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 08:19:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "we55pm4tyk"
-        },
-        {
-          "Name": "label",
-          "Value": "files/e515a11d-0ea6-468e-96bf-0e2f4717dc08_12_2020_TT-BGTVT_292769.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WAR2kcgh6luUHYOnEWQXF9g6oKJZ6yqMQfQH92JmMPM="
-        }
-      ]
-    },
-    {
-      "Route": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
+      "Route": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -577,7 +249,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+          "Value": "Mon, 24 Mar 2025 09:16:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -592,8 +264,8 @@
       ]
     },
     {
-      "Route": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc",
+      "Route": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.xu8ayw3482.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -614,7 +286,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 02:55:00 GMT"
+          "Value": "Mon, 24 Mar 2025 09:16:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -628,7 +300,335 @@
         },
         {
           "Name": "label",
-          "Value": "files/ed678c99-2c8c-42a2-8614-ddbcef0beb98_20_2023_QH15_513347.doc"
+          "Value": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
+        }
+      ]
+    },
+    {
+      "Route": "files/ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1065472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 08:25:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI="
+        }
+      ]
+    },
+    {
+      "Route": "files/ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).segt3nu9of.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1065472"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 08:25:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "segt3nu9of"
+        },
+        {
+          "Name": "label",
+          "Value": "files/ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLeO9M+DUGEJHd4vjhfKWCrLjt07Jqv3jnV06SCk5QI="
+        }
+      ]
+    },
+    {
+      "Route": "files/feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 08:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
+        }
+      ]
+    },
+    {
+      "Route": "files/feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.xu8ayw3482.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 08:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xu8ayw3482"
+        },
+        {
+          "Name": "label",
+          "Value": "files/feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
+        }
+      ]
+    },
+    {
+      "Route": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 03:47:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
+        }
+      ]
+    },
+    {
+      "Route": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.xu8ayw3482.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 03:47:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xu8ayw3482"
+        },
+        {
+          "Name": "label",
+          "Value": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
+        }
+      ]
+    },
+    {
+      "Route": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 03:48:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
+        }
+      ]
+    },
+    {
+      "Route": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.xu8ayw3482.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 03:48:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xu8ayw3482"
+        },
+        {
+          "Name": "label",
+          "Value": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc"
         },
         {
           "Name": "integrity",

@@ -1,4 +1,5 @@
-﻿using Cukcuk.Core.Entities;
+﻿using Cukcuk.Core.DTOs;
+using Cukcuk.Core.Entities;
 using Cukcuk.Core.Enum;
 using Cukcuk.Core.Interfaces.IServices;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,47 @@ namespace Cukcuk.Api.Controllers
     {
         private readonly IDocumentService _documentService = documentService;
 
+        [HttpPatch("blocks/{id}")]
+        public async Task<IActionResult> UpdateBlockByDocumentId(Guid id, [FromForm] string newContent)
+        {
+            try
+            {
+                await _documentService.UpdateContentBlock(id, newContent);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost("content")]
+        public async Task<IActionResult> CreateContent([FromBody] AddContentRequest request)
+        {
+            try
+            {
+                await _documentService.CreateContent(request);
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost("content/file")]
+        public async Task<IActionResult> CreateContentFile([FromForm] List<IFormFile> files, [FromForm] Guid? parentId, [FromForm] Guid categoryId)
+        {
+            try
+            {
+                await _documentService.CreateContentFile(files[0], parentId, categoryId);
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
 
         [HttpGet("markdown-review")]
         public async Task<IActionResult> GetBlockByDocumentId([FromQuery] string path)

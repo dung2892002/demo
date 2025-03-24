@@ -43,5 +43,11 @@ namespace Cukcuk.Core.Interfaces.IServices
         Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId);
 
         Task<string> GetMarkdownReview(string path);
+
+        Task CreateContent(AddContentRequest request);
+
+        Task CreateContentFile(IFormFile files, Guid? parentId, Guid categoryId);
+
+        Task UpdateContentBlock(Guid id, string newContent);
     }
 }

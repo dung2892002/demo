@@ -12,14 +12,84 @@ using iText.Kernel.Pdf;
 using Cukcuk.Core.Helper;
 using System.Text.RegularExpressions;
 using System.Globalization;
-using NPOI.POIFS.Properties;
 
 namespace Cukcuk.Core.Services
 {
-    public class DocumentService(IDocumentRepository documentRepository, Cache cache) : IDocumentService
+    public class DocumentService(IDocumentRepository documentRepository, Cache cache, IImportRepository importRepository) : IDocumentService
     {
         private readonly IDocumentRepository _documentRepository = documentRepository;
         private readonly Cache _cache = cache;
+        private readonly IImportRepository _importRepository = importRepository;
+
+
+        public async Task UpdateContentBlock(Guid id, string newContent)
+        {
+            var block = await _documentRepository.GetBlockById(id) ?? throw new ArgumentException("Block not exist");
+
+            block.Content = newContent;
+
+            await _documentRepository.UpdateBlock(block);
+        }
+
+        public async Task CreateContentFile(IFormFile file, Guid? parentId, Guid categoryId)
+        {
+            var document = new Document
+            {
+                Id = Guid.NewGuid(),
+                ParentId = parentId,
+                CategoryId = categoryId,
+                CreatedAt = DateTime.Now,
+                Parent = null,
+                Category = null,
+                Children = new List<Document>(),
+                Path = "",
+                FolderPath = "Tài liệu",
+                Name = Path.GetFileNameWithoutExtension(file.FileName),
+                Type = GetDocumentType(file)
+            };
+
+            if (document.ParentId != null)
+            {
+                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+            }
+
+
+            var imports = await _importRepository.GetByTable("DocumentBlock");
+            var blocks = await ExcelHelper.ReadFile<DocumentBlock>(file, imports);
+
+            for (int i = 0; i < blocks.Count; i++) {
+                blocks[i].DocumentId = document.Id;
+                blocks[i].Order = i + 1;
+            }
+            await _documentRepository.Create(document);
+            await _documentRepository.AddBlockRange(blocks);
+        }
+
+        public async Task CreateContent(AddContentRequest request)
+        {
+            var document = new Document();
+            document.Id = Guid.NewGuid();
+            document.CreatedAt = DateTime.Now;
+            document.Type = DocumentType.Unknown;
+            document.Name = request.Title;
+            document.ParentId = request.ParentId;
+            document.CategoryId = request.CategoryId;
+      
+
+            var block = new DocumentBlock();
+            block.Id = Guid.NewGuid();
+            block.DocumentId = document.Id;
+            block.Content = request.Content;
+            block.Title = request.Title;
+
+            var blocks = new List<DocumentBlock>();
+            blocks.Add(block);
+
+            await _documentRepository.Create(document);
+            await _documentRepository.AddBlockRange(blocks);
+        }
         public async Task Create(Document document)
         {
             document.Parent = null;

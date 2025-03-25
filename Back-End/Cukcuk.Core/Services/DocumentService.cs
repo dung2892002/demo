@@ -12,6 +12,9 @@ using iText.Kernel.Pdf;
 using Cukcuk.Core.Helper;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
+using NPOI.POIFS.Properties;
 
 namespace Cukcuk.Core.Services
 {
@@ -22,6 +25,65 @@ namespace Cukcuk.Core.Services
         private readonly IImportRepository _importRepository = importRepository;
 
 
+        private static (string, string) ReadWebFormLink(string link)
+        {
+            try
+            {
+                var options = new ChromeOptions();
+                options.AddArgument("--headless");
+                options.AddArgument("--disable-gpu");
+                options.AddArgument("--no-sandbox");
+                options.AddArgument("--disable-dev-shm-usage");
+
+                using var driver = new ChromeDriver(options);
+                driver.Navigate().GoToUrl(link);
+                var title = driver.Title;
+                var content = driver.FindElement(By.TagName("body")).Text;
+                driver.Quit();
+                return (title, content);
+            }
+            catch (Exception)
+            {
+                throw new InvalidDataException("Link bị lỗi, kiểm tra lại");
+            }
+        }
+
+        public async Task<Guid> CreateLink(AddLinkRequest request)
+        {
+            var (title, content) = ReadWebFormLink(request.Link);
+
+            var document = new Document();
+            document.Id = Guid.NewGuid();
+            document.CreatedAt = DateTime.Now;
+            document.Type = DocumentType.Link;
+            document.Name = title;
+            document.ParentId = request.ParentId;
+            document.CategoryId = request.CategoryId;
+            document.FolderPath = "Tài liệu";
+
+            document.Name = await _documentRepository.GetUniqueDocumentName(request.ParentId, document.Name, document.Type, null);
+            if (document.ParentId != null)
+            {
+                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+            }
+
+            var block = new DocumentBlock();
+            block.Id = Guid.NewGuid();
+            block.DocumentId = document.Id;
+            block.Content = content;
+            block.Title = request.Link;
+
+            var blocks = new List<DocumentBlock>();
+            blocks.Add(block);
+
+            await _documentRepository.Create(document);
+            await _documentRepository.AddBlockRange(blocks);
+
+            return document.Id;
+        }
+
         public async Task UpdateContentBlock(Guid id, string newContent)
         {
             var block = await _documentRepository.GetBlockById(id) ?? throw new ArgumentException("Block not exist");
@@ -31,7 +93,7 @@ namespace Cukcuk.Core.Services
             await _documentRepository.UpdateBlock(block);
         }
 
-        public async Task CreateContentFile(IFormFile file, Guid? parentId, Guid categoryId)
+        public async Task<Guid> CreateContentFile(IFormFile file, Guid? parentId, Guid categoryId)
         {
             var document = new Document
             {
@@ -48,6 +110,7 @@ namespace Cukcuk.Core.Services
                 Type = GetDocumentType(file)
             };
 
+            document.Name = await _documentRepository.GetUniqueDocumentName(parentId, document.Name, document.Type, null);
             if (document.ParentId != null)
             {
                 var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
@@ -65,6 +128,8 @@ namespace Cukcuk.Core.Services
             }
             await _documentRepository.Create(document);
             await _documentRepository.AddBlockRange(blocks);
+
+            return document.Id;
         }
 
         public async Task CreateContent(AddContentRequest request)
@@ -76,7 +141,13 @@ namespace Cukcuk.Core.Services
             document.Name = request.Title;
             document.ParentId = request.ParentId;
             document.CategoryId = request.CategoryId;
-      
+            document.Name = await _documentRepository.GetUniqueDocumentName(request.ParentId, document.Name, document.Type, null);
+            if (document.ParentId != null)
+            {
+                var parentFolder = await _documentRepository.GetById(document.ParentId) ?? throw new ArgumentException("parent folder not exist");
+
+                document.FolderPath = parentFolder.FolderPath + "/" + parentFolder.Name;
+            }
 
             var block = new DocumentBlock();
             block.Id = Guid.NewGuid();

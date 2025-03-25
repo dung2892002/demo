@@ -102,6 +102,7 @@
               </th>
               <th>Tên tài liệu</th>
               <th class="w-20">Chủ đề</th>
+              <th class="w-20">Phân loại</th>
               <th class="w-20">Ngày tạo</th>
               <th class="w-30" v-if="keyword.trim().length > 0">Vị trí</th>
               <th class="w-15">Hành động</th>
@@ -129,6 +130,7 @@
                   style="width: 24px; height: 24px; margin-right: 6px; vertical-align: middle"
                 />
                 <span
+                  class="truncate-text"
                   style="vertical-align: middle"
                   v-html="highlightTexts[index]"
                   @mouseenter="handleShowPopupText(document.Name, $event)"
@@ -136,6 +138,15 @@
                 ></span>
               </td>
               <td>{{ document.Category?.Name }}</td>
+              <td>
+                {{
+                  document.Type === DocumentType.Folder
+                    ? ''
+                    : document.IsLaw
+                      ? 'Văn bản quy phạm pháp luật'
+                      : 'Tri thức nghiệp vụ khác'
+                }}
+              </td>
               <td style="text-align: center">
                 {{ document.CreatedAt ? formatDate(document.CreatedAt) : '' }}
               </td>

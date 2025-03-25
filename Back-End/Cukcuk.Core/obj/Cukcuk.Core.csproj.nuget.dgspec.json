@@ -93,6 +93,14 @@
               "target": "Package",
               "version": "[4.6.0, )"
             },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.30.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[134.0.6998.16500, )"
+            },
             "Syncfusion.DocIO.Net.Core": {
               "target": "Package",
               "version": "[28.2.7, )"

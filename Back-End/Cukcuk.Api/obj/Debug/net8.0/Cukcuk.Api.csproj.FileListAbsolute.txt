@@ -303,3 +303,7 @@ D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\refint\Cukcuk.Api.dll
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\Cukcuk.Api.pdb
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\Cukcuk.Api.genruntimeconfig.cache
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\ref\Cukcuk.Api.dll
+D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\WebDriver.dll

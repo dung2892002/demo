@@ -46,8 +46,10 @@ namespace Cukcuk.Core.Interfaces.IServices
 
         Task CreateContent(AddContentRequest request);
 
-        Task CreateContentFile(IFormFile files, Guid? parentId, Guid categoryId);
+        Task<Guid> CreateContentFile(IFormFile files, Guid? parentId, Guid categoryId);
 
         Task UpdateContentBlock(Guid id, string newContent);
+
+        Task<Guid> CreateLink(AddLinkRequest request);
     }
 }

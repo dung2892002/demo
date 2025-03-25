@@ -15,7 +15,7 @@
           >
             {{ index + 1 }}
           </div>
-          <span>{{ block.Title }}</span>
+          <span class="truncate-text">{{ block.Title }}</span>
         </div>
       </div>
     </div>

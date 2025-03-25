@@ -838,6 +838,37 @@
         }
       }
     },
+    "/api/v1/Documents/link": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddLinkRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddLinkRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddLinkRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/Documents/content": {
       "post": {
         "tags": [
@@ -2577,6 +2608,24 @@
         },
         "additionalProperties": false
       },
+      "AddLinkRequest": {
+        "type": "object",
+        "properties": {
+          "Link": {
+            "type": "string"
+          },
+          "CategoryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ParentId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ApplicationUser": {
         "type": "object",
         "properties": {
@@ -2885,6 +2934,7 @@
           "Excel",
           "Ppt",
           "Image",
+          "Link",
           "Unknown"
         ],
         "type": "string"

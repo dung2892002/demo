@@ -1,5 +1,5 @@
 <template>
-  <div class="file-upload-form">
+  <div class="file-upload-form" v-if="docReviewId == null">
     <div class="form">
       <SelectTypeUpload :type-upload="typeUpload" @select-type-upload="selectTypeUpload" />
       <div class="form-data">
@@ -68,8 +68,9 @@
                 <button class="button--cancel" @click="importMode = true">Nhập khẩu</button>
               </div>
               <div class="buttons--right">
-                <button class="button--cancel" @click="handleCloseForm(false)">Hủy</button>
-                <button class="button--complete" @click="submitForm">Lưu</button>
+                <button class="button--cancel" @click="handleCloseForm(true)">Hủy</button>
+                <button class="button--cancel" @click="submitForm(false)">Lưu</button>
+                <button class="button--complete" @click="submitForm(true)">Lưu và thêm</button>
               </div>
             </div>
 
@@ -85,6 +86,8 @@
       </div>
     </div>
   </div>
+
+  <ContentReview :document-id="docReviewId!" @close="handleCloseForm(true)" v-else />
 </template>
 
 <script setup lang="ts">
@@ -95,6 +98,7 @@ import { ref, type PropType } from 'vue'
 import SelectTypeUpload from './SelectTypeUpload.vue'
 import SelectCategoryAndKnowledge from './SelectCategoryAndKnowledge.vue'
 import axios from 'axios'
+import ContentReview from './ContentReview.vue'
 
 const typeUpload = ref(3)
 const importMode = ref(false)
@@ -106,6 +110,8 @@ const uploadedFiles = ref<File[]>([])
 const toastRef = ref<InstanceType<typeof ToastComponent> | null>(null)
 
 const emits = defineEmits(['closeForm', 'selectKnowledType', 'selectTypeUpload'])
+
+const docReviewId = ref<string | null>(null)
 
 const props = defineProps({
   categories: {
@@ -229,7 +235,7 @@ export interface AddContentRequest {
   CategoryId: string
 }
 
-async function submitForm() {
+async function submitForm(state: boolean) {
   if (!checkAvailable()) return
   const request: AddContentRequest = {
     Title: title.value!,
@@ -241,7 +247,12 @@ async function submitForm() {
   try {
     await axios.post('https://localhost:7160/api/v1/Documents/content', request)
 
-    handleCloseForm(true)
+    if (!state) handleCloseForm(true)
+    else {
+      toastRef.value?.addToastSuccess(`Thêm nội dung ${title.value} thành công`)
+      title.value = null
+      content.value = null
+    }
   } catch (error) {
     console.log(error)
   }
@@ -258,11 +269,17 @@ async function submitFileForm() {
   formData.append('categoryId', currentCategory.value!.Id)
 
   try {
-    await axios.post('https://localhost:7160/api/v1/Documents/content/file', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
+    const response = await axios.post(
+      'https://localhost:7160/api/v1/Documents/content/file',
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       },
-    })
+    )
+
+    docReviewId.value = response.data
   } catch (error) {
     console.log(error)
   }

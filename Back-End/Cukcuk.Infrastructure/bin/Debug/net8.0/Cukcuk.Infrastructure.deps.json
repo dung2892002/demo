@@ -991,6 +991,15 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "Selenium.WebDriver/4.30.0": {
+        "runtime": {
+          "lib/net8.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/134.0.6998.16500": {},
       "SharpZipLib/1.4.2": {
         "runtime": {
           "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
@@ -1853,6 +1862,8 @@
           "Microsoft.IdentityModel.Tokens": "8.3.0",
           "NPOI": "2.7.2",
           "ReverseMarkdown": "4.6.0",
+          "Selenium.WebDriver": "4.30.0",
+          "Selenium.WebDriver.ChromeDriver": "134.0.6998.16500",
           "Syncfusion.DocIO.Net.Core": "28.2.7",
           "System.IdentityModel.Tokens.Jwt": "8.3.0",
           "itext7": "9.1.0"
@@ -2466,6 +2477,20 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.30.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-POEESh6f408SNst9kT+mf4g9zVahIWXjo+/8qkjUt8dNRllD+am2Fdj30j5b54kpRIx5Nz2b08AREYvaOyQQMA==",
+      "path": "selenium.webdriver/4.30.0",
+      "hashPath": "selenium.webdriver.4.30.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/134.0.6998.16500": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mb1ajy5zmY+yXDhpUtl90spvY/OWkDcPmnFqextFEudLPbp7sFcRoQFrhNSiPa5VmTFMh1rFTpx90aIpDXrSTw==",
+      "path": "selenium.webdriver.chromedriver/134.0.6998.16500",
+      "hashPath": "selenium.webdriver.chromedriver.134.0.6998.16500.nupkg.sha512"
     },
     "SharpZipLib/1.4.2": {
       "type": "package",

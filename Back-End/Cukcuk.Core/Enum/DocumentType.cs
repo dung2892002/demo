@@ -11,6 +11,7 @@ namespace Cukcuk.Core.Enum
         Excel,
         Ppt,
         Image,
+        Link,
         Unknown
     }
 }

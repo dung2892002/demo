@@ -7,6 +7,7 @@
   font-weight: normal;
 }
 * {
+  font-family: 'Times New Roman', Times, serif;
   &::-webkit-scrollbar {
     width: 8px;
     height: 40px;
@@ -500,4 +501,12 @@ body {
     border-right: 6px solid transparent;
     border-top: 6px solid black; /* Tạo tam giác màu đen */
   }
+}
+
+.truncate-text {
+  white-space: nowrap; /* Không xuống dòng */
+  overflow: hidden; /* Ẩn phần vượt quá */
+  text-overflow: ellipsis; /* Hiển thị "..." nếu quá dài */ /* Điều chỉnh độ rộng tối đa */
+  width: 90%;
+  display: inline-block; /* Đảm bảo hiệu ứng hoạt động */
 }

@@ -34,6 +34,7 @@ export enum DocumentType {
   Ppt = 'Ppt',
   Image = 'Image',
   Unknown = 'Unknown',
+  Link = 'Link',
 }
 
 export interface DocumentBlock {

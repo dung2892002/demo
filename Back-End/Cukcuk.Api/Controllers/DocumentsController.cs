@@ -25,6 +25,20 @@ namespace Cukcuk.Api.Controllers
             }
         }
 
+        [HttpPost("link")]
+        public async Task<IActionResult> CreateLink([FromBody] AddLinkRequest request)
+        {
+            try
+            {
+                var id = await _documentService.CreateLink(request);
+                return StatusCode(201, id);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpPost("content")]
         public async Task<IActionResult> CreateContent([FromBody] AddContentRequest request)
         {
@@ -44,8 +58,9 @@ namespace Cukcuk.Api.Controllers
         {
             try
             {
-                await _documentService.CreateContentFile(files[0], parentId, categoryId);
-                return StatusCode(201);
+                var id = await _documentService.CreateContentFile(files[0], parentId, categoryId);
+                Console.WriteLine(id);
+                return StatusCode(201, id);
             }
             catch (Exception ex)
             {

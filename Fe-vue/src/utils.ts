@@ -22,6 +22,8 @@ export function getSrcIconDocument(type: DocumentType) {
       return 'ppt.png'
     case DocumentType.Image:
       return 'image.png'
+    case DocumentType.Link:
+      return 'link.png'
     default:
       return 'custom.png'
   }

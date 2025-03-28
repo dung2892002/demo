@@ -14,7 +14,6 @@ using System.Text.RegularExpressions;
 using System.Globalization;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using NPOI.POIFS.Properties;
 
 namespace Cukcuk.Core.Services
 {
@@ -289,8 +288,20 @@ namespace Cukcuk.Core.Services
 
             await _documentRepository.Update(exsitingdocument);
             await HandleUpdatePathSubDocument(document);
+            await HandleUpdateBlocks(document.DocumentBlocks);
         }
 
+        private async Task HandleUpdateBlocks(List<DocumentBlock> blocks)
+        {
+            Console.WriteLine(blocks.Count);
+            var updateBlocks = blocks.Where(b => b.State == 1).ToList();
+            var addBlocks = blocks.Where(b => b.State == 2).ToList();
+            var deleteBlocks = blocks.Where(b => b.State == 3).ToList();
+
+            addBlocks.ForEach(b => b.Id = Guid.NewGuid());
+
+            await _documentRepository.UpdateBlocks(updateBlocks, addBlocks, deleteBlocks);
+        }
 
         private static DocumentType GetDocumentType(IFormFile file)
         {
@@ -788,12 +799,12 @@ namespace Cukcuk.Core.Services
                 Content = "",
                 Title = "Mở đầu",
                 ContentType = 1,
-                Order = 1,
+                Order = 0,
                 ParentId = null,
                 DocumentId = document.Id
             };
 
-            var order = 2;
+            var order = 1;
 
             for (int index = 0; index < contentIndex; index++)
             {
@@ -820,7 +831,7 @@ namespace Cukcuk.Core.Services
                         Title = text,
                         Level = level,
                         ContentType = 2,
-                        Order = order++,
+                        Order = 2000 * order++,
                         ParentId = null,
                         DocumentId = document.Id
                     };
@@ -842,8 +853,8 @@ namespace Cukcuk.Core.Services
                 Id = Guid.NewGuid(),
                 Content = contents[signIndex],
                 Title = "Chữ ký",
-                ContentType = 4,
-                Order = order++,
+                ContentType = 3,
+                Order = 2000 * order++,
                 ParentId = null,
                 DocumentId = document.Id,
                 Level = 0,
@@ -873,8 +884,8 @@ namespace Cukcuk.Core.Services
                         Content = text,
                         Title = text,
                         Level = 0,
-                        ContentType = 5,
-                        Order = order++,
+                        ContentType = 4,
+                        Order = 2000 * order++,
                         ParentId = null,
                         DocumentId = document.Id
                     };

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FG2RdKWtkVXcEjNJfuqGVCr5G8zt1z8abbF3eBLEqxM=",
+  "Hash": "bmE1VAvcOPMFmbBm+CJIceE2vZxVVmQRMrZ2zjzOm5M=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -38,12 +38,12 @@
       "OriginalItemSpec": "wwwroot\\files\\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc"
     },
     {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
       "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "RelativePath": "files/bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347#[.{fingerprint}]?.doc",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -56,7 +56,7 @@
       "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc"
+      "OriginalItemSpec": "wwwroot\\files\\bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc"
     },
     {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc",
@@ -99,48 +99,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "xu8ayw3482",
-      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "xu8ayw3482",
-      "Integrity": "WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc"
     }
   ],
   "Endpoints": [
@@ -227,8 +185,8 @@
       ]
     },
     {
-      "Route": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
+      "Route": "files/bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -249,7 +207,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 09:16:07 GMT"
+          "Value": "Fri, 28 Mar 2025 08:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -264,8 +222,8 @@
       ]
     },
     {
-      "Route": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc",
+      "Route": "files/bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.xu8ayw3482.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -286,7 +244,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 09:16:07 GMT"
+          "Value": "Fri, 28 Mar 2025 08:15:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -300,7 +258,7 @@
         },
         {
           "Name": "label",
-          "Value": "files/24cc2e0d-e0c5-45f3-81db-af1c30a7801d_20_2023_QH15_513347.doc"
+          "Value": "files/bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc"
         },
         {
           "Name": "integrity",
@@ -465,170 +423,6 @@
         {
           "Name": "label",
           "Value": "files/feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 03:47:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 03:47:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xu8ayw3482"
-        },
-        {
-          "Name": "label",
-          "Value": "tmp/3bbd723e-18d3-4854-a782-edb95641c5f7_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 03:48:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y="
-        }
-      ]
-    },
-    {
-      "Route": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.xu8ayw3482.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WV2ZdJaRKJJ/XxKi6dh2yFtguygdgenU4Lw+gE+sf0Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 03:48:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xu8ayw3482"
-        },
-        {
-          "Name": "label",
-          "Value": "tmp/f1f82190-8597-4e14-94a3-85c881aa3c6c_20_2023_QH15_513347.doc"
         },
         {
           "Name": "integrity",

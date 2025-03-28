@@ -1,4 +1,5 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace Cukcuk.Core.Entities
@@ -22,6 +23,9 @@ namespace Cukcuk.Core.Entities
 
         [JsonIgnore]
         public List<DocumentBlock> Childrens { get; set; } = new List<DocumentBlock>();
+
+        [NotMapped]
+        public int? State { get; set; }
 
     }
 }

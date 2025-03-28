@@ -37,5 +37,7 @@ namespace Cukcuk.Core.Interfaces.IRepositories
         Task<DocumentBlock?> GetBlockById(Guid blockId);
 
         Task UpdateBlock(DocumentBlock block);
+
+        Task UpdateBlocks(List<DocumentBlock> updateBlocks, List<DocumentBlock> addBlocks, List<DocumentBlock> deleteBlocks);   
     }
 }

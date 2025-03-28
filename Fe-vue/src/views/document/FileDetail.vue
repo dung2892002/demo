@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import { ref, onMounted, type PropType } from 'vue'
 import axios from 'axios'
-import { type DocumentCategory, type Document } from '@/entities/Document'
+import { type DocumentCategory, type Document, type DocumentBlock } from '@/entities/Document'
 
 import FileReview from './FileReview.vue'
 import ContentReview from './ContentReview.vue'
@@ -41,9 +41,11 @@ function closeFile(state: boolean) {
 
 const updateLoading = ref(false)
 
-async function handleUpdateFile(file: Document) {
+async function handleUpdateFile(file: Document, blocks: DocumentBlock[]) {
   try {
     updateLoading.value = true
+    file.DocumentBlocks = blocks
+    console.log(file)
     await axios.put(`https://localhost:7160/api/v1/Documents/${props.document.Id}`, file)
     updateLoading.value = false
     closeFile(true)

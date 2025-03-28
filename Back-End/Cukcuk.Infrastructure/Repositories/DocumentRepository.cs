@@ -266,5 +266,52 @@ namespace Cukcuk.Infrastructure.Repositories
             _dbContext.DocumentBlocks.Update(block);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task UpdateBlocks(
+                            List<DocumentBlock> updateBlocks,
+                            List<DocumentBlock> addBlocks,
+                            List<DocumentBlock> deleteBlocks)
+        {
+            using var transaction = await _dbContext.Database.BeginTransactionAsync();
+            try
+            {
+                if (deleteBlocks.Any())
+                {
+                    var ids = deleteBlocks.Select(b => b.Id).ToList();
+                    var existingBlocks = await _dbContext.DocumentBlocks.Where(b => ids.Contains(b.Id)).ToListAsync();
+
+                    if (existingBlocks.Any())
+                    {
+                        _dbContext.DocumentBlocks.RemoveRange(existingBlocks);
+                    }
+                }
+
+                if (updateBlocks.Any())
+                {
+                    foreach (var block in updateBlocks)
+                    {
+                        var existingBlock = await _dbContext.DocumentBlocks.FindAsync(block.Id);
+                        if (existingBlock != null)
+                        {
+                            _dbContext.Entry(existingBlock).CurrentValues.SetValues(block);
+                        }
+                    }
+                }
+
+                if (addBlocks.Any())
+                {
+                    await _dbContext.DocumentBlocks.AddRangeAsync(addBlocks);
+                }
+
+                await _dbContext.SaveChangesAsync();
+                await transaction.CommitAsync();
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                throw new Exception("Có lỗi xảy ra khi cập nhật danh sách DocumentBlock", ex);
+            }
+        }
+
     }
 }

@@ -1,102 +1,105 @@
 <template>
   <div class="document-blocks">
-    <div class="block title">
-      <div @click="toggleFirstBlocks" v-if="firstBlocks.length > 0" class="control">
-        <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="showFirstBlocks" />
-        <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
-      </div>
-      <div v-else class="control"></div>
-      <span>Mở đầu</span>
-    </div>
-    <div v-show="showFirstBlocks">
-      <div
-        class="block"
-        v-for="(block, index) in firstBlocks"
-        :key="index"
-        :style="{ paddingLeft: block.Level != 0 ? block.Level * 20 + 'px' : '40px' }"
-        v-show="block.IsShow"
-      >
-        <div
-          class="block__level"
-          :style="{ backgroundColor: colors[block.Level - 1].color }"
-          v-if="block.Level != 0"
-        ></div>
-        <div v-html="marked(block.Content)" class="markdown-container"></div>
-      </div>
-    </div>
-    <div class="block title">
-      <div @click="toggleContentBlocks" v-if="contentBlocks.length > 0" class="control">
-        <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="showContentBlocks" />
-        <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
-      </div>
-      <div v-else class="control"></div>
-      <span>Nội dung</span>
-    </div>
-    <div v-show="showContentBlocks">
-      <div
-        class="block"
-        v-for="(block, index) in contentBlocks"
-        :key="index"
-        :style="{ paddingLeft: block.Level != 0 ? block.Level * 20 + 'px' : '40px' }"
-        v-show="block.IsShow == true"
-      >
-        <div v-if="checkHasChild(block)" @click="toggleExpandBlock(block)" class="control">
-          <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="block.IsExpand" />
+    <div v-for="(blocks, index) in blocksData" :key="index">
+      <div class="block title">
+        <div @click="toggleBlock(index)" v-if="blocksData[index].length > 0" class="control">
+          <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="showBlocks[index]" />
           <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
         </div>
         <div v-else class="control"></div>
+        <div v-html="marked(blocksTitle[index])" class="markdown-container"></div>
+        <div class="action-button" v-if="editMode">
+          <font-awesome-icon
+            :icon="['fas', 'ellipsis']"
+            style="color: black"
+            size="lg"
+            class="edit-icon"
+            @click="togglePopupContent(index, $event)"
+          />
+        </div>
         <div
-          class="block__level"
-          :style="{ backgroundColor: colors[block.Level - 1].color }"
-          v-if="block.Level != 0"
-        ></div>
-        <div v-html="marked(block.Content)" class="markdown-container"></div>
+          class="popup-action"
+          :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
+          v-if="showPopupContent === index"
+        >
+          <span @click.stop="showFormBlock(index + 1)">Thêm phân đoạn</span>
+        </div>
       </div>
-    </div>
-    <div class="block title">
-      <div @click="toggleSignBlocks" v-if="signBlocks.length > 0" class="control">
-        <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="showSignBlocks" />
-        <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
-      </div>
-      <div v-else class="control"></div>
-      <span>Ký tên</span>
-    </div>
-    <div v-show="showSignBlocks">
-      <div
-        class="block"
-        v-for="(block, index) in signBlocks"
-        :key="index"
-        :style="{ paddingLeft: block.Level != 0 ? block.Level * 20 + 'px' : '40px' }"
-      >
+      <div v-show="showBlocks[index]">
         <div
-          class="block__level"
-          :style="{ backgroundColor: colors[block.Level - 1].color }"
-          v-if="block.Level != 0"
-        ></div>
-        <div v-html="marked(block.Content)" class="markdown-container"></div>
+          class="block"
+          v-for="(block, index) in blocks"
+          :key="index"
+          :style="{ paddingLeft: block.Level != 0 ? block.Level * 20 + 'px' : '40px' }"
+          v-show="block.IsShow == true && block.State != 3"
+        >
+          <div v-if="checkHasChild(block)" @click="toggleExpandBlock(block)" class="control">
+            <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="block.IsExpand" />
+            <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
+          </div>
+          <div v-else class="control"></div>
+          <div
+            class="block__level"
+            :style="{ backgroundColor: colors[block.Level - 1].color }"
+            v-if="block.Level != 0"
+          ></div>
+          <div v-html="marked(block.Content)" class="markdown-container"></div>
+
+          <div class="action-button" v-if="editMode">
+            <font-awesome-icon
+              :icon="['fas', 'ellipsis']"
+              style="color: black"
+              size="lg"
+              class="edit-icon"
+              @click="togglePopupAction(block, $event)"
+            />
+          </div>
+          <div
+            class="popup-action"
+            v-if="showPopup != null && showPopup === block.Id"
+            :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
+          >
+            <span
+              v-if="block.Level === 5 || block.Level === 6"
+              :class="{ disable: !checkUpLevel(block) }"
+              @click.stop="showFormBlock(block.Level)"
+              >{{ block.Level === 5 ? 'Thểm khoản' : 'Thêm điểm' }}</span
+            >
+
+            <span :class="{ disable: !checkUpLevel(block) }" @click.stop="handleUpLevel(block)"
+              >Lên 1 cấp</span
+            >
+            <span :class="{ disable: !checkDownLevel(block) }" @click.stop="handleDownLevel(block)"
+              >Xuống 1 cấp</span
+            >
+            <span @click.stop="showFormBlock(0)">Sửa</span>
+            <span @click.stop="handleDelete(block)">Xóa</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="block title">
-      <div @click="toggleOtherBlocks" v-if="otherBlocks.length > 0" class="control">
-        <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="showOtherBlocks" />
-        <font-awesome-icon :icon="['fas', 'chevron-right']" size="2xs" v-else />
+  </div>
+
+  <div v-if="showForm != -1" class="form-container">
+    <div class="form__content">
+      <div class="form__header">
+        <h2 class="form__title">Nội dung</h2>
+        <button class="form__button" @click="handleCloseForm">
+          <img src="/src/assets/icon/close-48.png" alt="logo" />
+        </button>
       </div>
-      <div v-else class="control"></div>
-      <span>Khác</span>
-    </div>
-    <div v-show="showOtherBlocks">
-      <div
-        class="block"
-        v-for="(block, index) in otherBlocks"
-        :key="index"
-        :style="{ paddingLeft: block.Level != 0 ? block.Level * 20 + 'px' : '40px' }"
-      >
-        <div
-          class="block__level"
-          :style="{ backgroundColor: colors[block.Level - 1].color }"
-          v-if="block.Level != 0"
-        ></div>
-        <div v-html="marked(block.Content)" class="markdown-container"></div>
+      <form class="cukcuk-form" id="form">
+        <div class="form-group">
+          <div class="form__item">
+            <textarea type="text" rows="10" v-model="newContent" style="width: 600px"></textarea>
+          </div>
+        </div>
+      </form>
+      <div class="form__footer">
+        <button class="button--cancel" @click="handleCloseForm">Hủy</button>
+        <button class="button--complete" id="submitButton" @click="handleAddBlock">
+          <span src="/src/assets/icon/refresh.png" alt="logo">Lưu</span>
+        </button>
       </div>
     </div>
   </div>
@@ -105,12 +108,99 @@
 <script setup lang="ts">
 import type { DocumentBlock } from '@/entities/Document'
 import { marked } from 'marked'
-import { onMounted, ref, watch, type PropType } from 'vue'
+import { computed, onMounted, ref, watch, type PropType } from 'vue'
 
 marked.setOptions({
   breaks: true,
   gfm: true,
 })
+
+const showForm = ref(-1)
+const newContent = ref<string | null>(null)
+const parentBlock = ref<DocumentBlock | null>(null)
+const showPopup = ref<string | null>(null)
+const currentType = ref(-1)
+
+function showFormBlock(state: number) {
+  /*trang thai state
+  0: sua block
+  1,2,3,4: them moi block cho cac khoi first, content, sight, other
+  5: them khoan
+  6: them diem
+  */
+  showPopup.value = null
+  showPopupContent.value = -1
+  console.log(state)
+  showForm.value = state
+  if (state == 0) {
+    newContent.value = editBlock.value!.Content
+    return
+  }
+  parentBlock.value = editBlock.value
+  editBlock.value = null
+}
+
+function handleCloseForm() {
+  showForm.value = -1
+  editBlock.value = null
+  newContent.value = null
+}
+
+function handleAddBlock() {
+  if (showForm.value === 0) {
+    editBlock.value!.Content = newContent.value!
+    editBlock.value!.State = 0
+    updateBlocks()
+    handleCloseForm()
+    return
+  }
+
+  const newBlock: DocumentBlock = {
+    Id: crypto.randomUUID(),
+    ParentId: null,
+    DocumentId: blocks.value[0].DocumentId,
+    Title: newContent.value!,
+    Content: newContent.value!,
+    Level: 0,
+    ContentType: 0,
+    Order: 0,
+    IsExpand: true,
+    IsShow: true,
+    State: 2,
+  }
+
+  if (parentBlock.value) {
+    newBlock.ParentId = parentBlock.value.Id
+    newBlock.ContentType = parentBlock.value.ContentType
+    newBlock.Level = showForm.value + 1
+
+    const lastIndex = findLastChildIndex(parentBlock.value)
+    newBlock.Order = Math.round(
+      (blocks.value[lastIndex].Order + blocks.value[lastIndex + 1].Order) / 2,
+    )
+
+    blocks.value.splice(lastIndex + 1, 0, newBlock)
+  }
+
+  updateBlocks()
+  handleSplitBlock()
+  handleCloseForm()
+}
+
+function findLastChildIndex(block: DocumentBlock) {
+  const children = blocks.value.filter((b) => b.ParentId === block.Id)
+
+  // Nếu không có block con nào, trả về chỉ số của block đầu vào
+  if (children.length === 0) {
+    return blocks.value.findIndex((b) => b.Id === block.Id)
+  }
+
+  // Lấy block con cuối cùng theo thứ tự trong mảng
+  const lastChild = children[children.length - 1]
+
+  // Đệ quy để tìm phần tử con cuối cùng của lastChild
+  return findLastChildIndex(lastChild)
+}
 
 const colors = [
   {
@@ -143,8 +233,151 @@ const colors = [
   },
 ]
 
+const editBlock = ref<DocumentBlock | null>(null)
+
+const popupPosition = ref({
+  top: 0,
+  right: 200,
+})
+
+function checkUpLevel(block: DocumentBlock) {
+  if (block.Level < 3) return false
+  return true
+}
+
+function checkDownLevel(block: DocumentBlock) {
+  if (block.Level === 0) return false
+  if (block.Level === 7) return false
+  return true
+}
+const blocks = ref<DocumentBlock[]>([])
+
+function handleUpLevel(block: DocumentBlock) {
+  if (!checkUpLevel(block)) return
+  const blockIndex = blocks.value.findIndex((b) => b.Id === block.Id)
+  for (let i = blockIndex + 1; i < blocks.value.length; i++) {
+    const b = blocks.value[i]
+    if (b.State === 3) continue
+    if (b.Level < block.Level) break
+    if (b.Level === block.Level) {
+      b.ParentId = block.Id
+      if (b.State != 2) b.State = 1
+      continue
+    }
+    if (b.ParentId === block.Id) {
+      handleUpdateChildsWhenUpLevel(b)
+      b.Level = block.Level
+      if (b.State != 2) b.State = 1
+    }
+  }
+
+  for (let i = blockIndex - 1; i > 0; i--) {
+    const b = blocks.value[i]
+    if (b.State === 3) continue
+    if (b.Id === block.ParentId) {
+      if (block.Level - 1 === b.Level) block.ParentId = b.ParentId
+    }
+  }
+  block.Level--
+  if (block.State != 2) block.State = 1
+  editBlock.value = null
+  updateBlocks()
+  handleSplitBlock()
+}
+
+function handleUpdateChildsWhenUpLevel(block: DocumentBlock) {
+  const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
+  childenBlocks.forEach((b) => {
+    handleUpdateChildsWhenUpLevel(b)
+    b.Level = block.Level
+    if (b.State != 2) b.State = 1
+  })
+}
+
+function handleDownLevel(block: DocumentBlock) {
+  if (!checkDownLevel(editBlock.value!)) return
+  const blockIndex = blocks.value.findIndex((b) => b.Id === block.Id)
+  for (let i = blockIndex - 1; i > 0; i--) {
+    const b = blocks.value[i]
+    if (b.State === 3) continue
+    if (b.Level <= block.Level) {
+      if (b.Id === block.ParentId) {
+        console.log('khong the ha cap')
+        editBlock.value = null
+        return
+      }
+      block.ParentId = b.Id
+      break
+    }
+  }
+
+  for (let i = blockIndex + 1; i < blocks.value.length; i++) {
+    const b = blocks.value[i]
+    if (b.State === 3) continue
+    if (b.ParentId === block.Id) {
+      b.ParentId = block.ParentId
+      if (b.State != 2) b.State = 1
+    }
+  }
+
+  block.Level++
+  if (block.State != 2) block.State = 1
+  editBlock.value = null
+  updateBlocks()
+  handleSplitBlock()
+}
+
+function handleDelete(block: DocumentBlock) {
+  removeChild(block)
+  updateBlocks()
+  handleSplitBlock()
+}
+
+function removeChild(block: DocumentBlock) {
+  block.State = 3
+  const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
+  childenBlocks.forEach((b) => {
+    removeChild(b)
+  })
+}
+
+function togglePopupAction(block: DocumentBlock, event: MouseEvent): void {
+  const target = event.currentTarget as HTMLElement
+  if (!target) return
+
+  const buttonRect = target.getBoundingClientRect()
+
+  popupPosition.value = {
+    top: buttonRect.top - 10,
+    right: window.innerWidth - buttonRect.left + 10,
+  }
+
+  showPopupContent.value = -1
+  editBlock.value = editBlock.value?.Id === block.Id ? null : block
+  if (showPopup.value === block.Id) showPopup.value = null
+  else showPopup.value = block.Id
+}
+
+const showPopupContent = ref(-1)
+
+function togglePopupContent(index: number, event: MouseEvent): void {
+  const target = event.currentTarget as HTMLElement
+  if (!target) return
+
+  const buttonRect = target.getBoundingClientRect()
+
+  popupPosition.value = {
+    top: buttonRect.top - 10,
+    right: window.innerWidth - buttonRect.left + 10,
+  }
+  showPopup.value = null
+  editBlock.value = null
+  currentType.value = index
+  showPopupContent.value = showPopupContent.value === index ? -1 : index
+}
+
 function checkHasChild(block: DocumentBlock) {
-  return props.blocks.some((b) => b.ParentId == block.Id)
+  return blocks.value.some((b) => b.ParentId == block.Id)
 }
 
 function toggleExpandBlock(block: DocumentBlock) {
@@ -169,14 +402,14 @@ function handleExpandBlock(block: DocumentBlock) {
 
 function hiddenBlock(block: DocumentBlock) {
   block.IsShow = false
-  const childenBlocks = props.blocks.filter((b) => b.ParentId == block.Id)
+  const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
   childenBlocks.forEach((b) => {
     hiddenBlock(b)
   })
 }
 
 function showBlock(block: DocumentBlock) {
-  const childenBlocks = props.blocks.filter((b) => b.ParentId == block.Id)
+  const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
   childenBlocks.forEach((b) => {
     b.IsShow = true
     if (b.IsExpand) {
@@ -186,110 +419,75 @@ function showBlock(block: DocumentBlock) {
 }
 
 const props = defineProps({
-  blocks: {
+  propBlocks: {
     type: Array as PropType<DocumentBlock[]>,
+    required: true,
+  },
+  editMode: {
+    type: Boolean,
     required: true,
   },
 })
 
-const firstBlocks = ref<DocumentBlock[]>([])
-const showFirstBlocks = ref(true)
-function toggleFirstBlocks() {
-  showFirstBlocks.value = !showFirstBlocks.value
+const emits = defineEmits(['updateBlocks'])
+const updatedBlocks = computed(() => blocks.value.filter((b) => b.State != 0))
+
+function updateBlocks() {
+  emits('updateBlocks', updatedBlocks.value)
 }
 
-const contentBlocks = ref<DocumentBlock[]>([])
-const showContentBlocks = ref(true)
-function toggleContentBlocks() {
-  showContentBlocks.value = !showContentBlocks.value
+const showBlocks = ref([true, true, true, true])
+const blocksTitle = ['Mở đầu', 'Nội dung', 'Chữ ký', 'Khác']
+function toggleBlock(index: number) {
+  showBlocks.value[index] = !showBlocks.value[index]
 }
 
-const signBlocks = ref<DocumentBlock[]>([])
-const showSignBlocks = ref(true)
-function toggleSignBlocks() {
-  showSignBlocks.value = !showSignBlocks.value
-}
-
-const otherBlocks = ref<DocumentBlock[]>([])
-const showOtherBlocks = ref(true)
-function toggleOtherBlocks() {
-  showOtherBlocks.value = !showOtherBlocks.value
-}
+const blocksData = ref<DocumentBlock[][]>([])
 
 function handleSplitBlock() {
-  firstBlocks.value = []
-  contentBlocks.value = []
-  signBlocks.value = []
-  otherBlocks.value = []
+  const firstBlocks: DocumentBlock[] = []
+  const contentBlocks: DocumentBlock[] = []
+  const signBlocks: DocumentBlock[] = []
+  const otherBlocks: DocumentBlock[] = []
 
-  props.blocks.forEach((block) => {
-    block.IsShow = true
-    block.IsExpand = true
+  blocks.value.forEach((block) => {
+    if (block.State === 3) return
     if (block.ContentType == 1) {
-      firstBlocks.value.push(block)
+      firstBlocks.push(block)
     } else if (block.ContentType == 2) {
-      contentBlocks.value.push(block)
-    } else if (block.ContentType == 4) {
-      signBlocks.value.push(block)
+      contentBlocks.push(block)
+    } else if (block.ContentType == 3) {
+      signBlocks.push(block)
     } else {
-      otherBlocks.value.push(block)
+      otherBlocks.push(block)
     }
   })
+
+  blocksData.value = [firstBlocks, contentBlocks, signBlocks, otherBlocks]
 }
 
 watch(
-  () => props.blocks,
+  () => props.propBlocks,
   () => {
+    blocks.value = props.propBlocks.map((block) => ({
+      ...block,
+      State: 0,
+      IsExpand: true,
+      IsShow: true,
+    }))
+
     handleSplitBlock()
   },
 )
 
 onMounted(() => {
+  blocks.value = props.propBlocks.map((block) => ({
+    ...block,
+    State: 0,
+    IsExpand: true,
+    IsShow: true,
+  }))
+
   handleSplitBlock()
 })
 </script>
-
-<style lang="scss" scoped>
-.document-blocks {
-  display: flex;
-  flex-direction: column;
-  .block {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 8px;
-    border-bottom: 1px solid #d6d6d6;
-    border-radius: 0;
-    padding: 8px 0px;
-    padding-right: 20px;
-    min-height: 32px;
-    cursor: pointer;
-
-    &.title {
-      gap: 40px;
-    }
-
-    .control {
-      width: 12px;
-      padding: 0 4px;
-    }
-
-    &:hover {
-      background-color: #f5f5f5;
-    }
-
-    .block__level {
-      width: 10px !important;
-      height: 10px !important;
-      padding: 0 !important;
-      border-radius: 50% !important;
-      margin-top: 7px;
-      flex-shrink: 0;
-    }
-
-    .markdown-container {
-      width: 100%;
-    }
-  }
-}
-</style>

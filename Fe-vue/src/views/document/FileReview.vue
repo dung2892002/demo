@@ -90,7 +90,11 @@
         </div>
         <div class="file-content__body">
           <div v-show="showBlock">
-            <DocumentBlocks :blocks="showDocument?.DocumentBlocks!" />
+            <DocumentBlocks
+              :propBlocks="showDocument?.DocumentBlocks!"
+              :edit-mode="editMode"
+              @update-blocks="handleUpdateBlocks"
+            />
           </div>
           <div v-show="!showBlock && showDocument?.MarkdownContent">
             <div v-html="marked(showDocument?.MarkdownContent!)" class="markdown-container"></div>
@@ -118,7 +122,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Document, DocumentCategory } from '@/entities/Document'
+import type { Document, DocumentBlock, DocumentCategory } from '@/entities/Document'
 import { getSrcIconDocument } from '@/utils'
 import axios from 'axios'
 import { marked } from 'marked'
@@ -190,6 +194,13 @@ function cancelUpload() {
   emits('cancelUpload')
 }
 
+const updatedBlocks = ref<DocumentBlock[]>([])
+
+function handleUpdateBlocks(updated: DocumentBlock[]) {
+  updatedBlocks.value = updated
+  console.log('Danh sách block cần lưu:', updatedBlocks.value)
+}
+
 function confirmUpload() {
   emits('confirmUpload')
 }
@@ -199,7 +210,7 @@ function closeFile(value: boolean) {
 }
 
 function updateFile() {
-  emits('updateFile', showDocument.value!)
+  emits('updateFile', showDocument.value!, updatedBlocks.value)
 }
 
 const showBlock = ref(true)

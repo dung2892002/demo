@@ -5,8 +5,12 @@
       "PackagePath": "staticwebassets\\files\\100907db-a236-4176-9b20-c8c740a57aa9_12_2020_TT-BGTVT_292769.doc"
     },
     {
-      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc",
-      "PackagePath": "staticwebassets\\files\\bd42375b-7c50-4340-a084-78fb4f9d7ff4_20_2023_QH15_513347.doc"
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\15918ce8-8cc8-48df-95fe-39cbf38d45a4_20_2023_QH15_513347.doc",
+      "PackagePath": "staticwebassets\\files\\15918ce8-8cc8-48df-95fe-39cbf38d45a4_20_2023_QH15_513347.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\5366f2a5-547d-45f8-8e50-4cfb2f86ff4d_20_2023_QH15_513347.doc",
+      "PackagePath": "staticwebassets\\files\\5366f2a5-547d-45f8-8e50-4cfb2f86ff4d_20_2023_QH15_513347.doc"
     },
     {
       "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ce61c15e-56e3-4f82-a716-3423681fbe4e_12_2020_TT-BGTVT_292769 (1).doc",
@@ -15,10 +19,6 @@
     {
       "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc",
       "PackagePath": "staticwebassets\\files\\feacbb6a-43ed-40af-b7d5-f7c5997c8c1c_20_2023_QH15_513347.doc"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssets.props",

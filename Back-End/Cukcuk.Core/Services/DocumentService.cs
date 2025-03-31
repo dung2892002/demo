@@ -298,8 +298,6 @@ namespace Cukcuk.Core.Services
             var addBlocks = blocks.Where(b => b.State == 2).ToList();
             var deleteBlocks = blocks.Where(b => b.State == 3).ToList();
 
-            addBlocks.ForEach(b => b.Id = Guid.NewGuid());
-
             await _documentRepository.UpdateBlocks(updateBlocks, addBlocks, deleteBlocks);
         }
 

@@ -283,6 +283,7 @@ function handleUpLevel(block: DocumentBlock) {
   editBlock.value = null
   updateBlocks()
   handleSplitBlock()
+  showPopup.value = null
 }
 
 function handleUpdateChildsWhenUpLevel(block: DocumentBlock) {
@@ -325,6 +326,7 @@ function handleDownLevel(block: DocumentBlock) {
   editBlock.value = null
   updateBlocks()
   handleSplitBlock()
+  showPopup.value = null
 }
 
 function handleDelete(block: DocumentBlock) {
@@ -377,7 +379,7 @@ function togglePopupContent(index: number, event: MouseEvent): void {
 }
 
 function checkHasChild(block: DocumentBlock) {
-  return blocks.value.some((b) => b.ParentId == block.Id)
+  return blocks.value.some((b) => b.ParentId == block.Id && b.State != 3)
 }
 
 function toggleExpandBlock(block: DocumentBlock) {

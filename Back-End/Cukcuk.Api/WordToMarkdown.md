@@ -387,6 +387,393 @@ b) Chứng thư chữ ký điện tử nước ngoài hình thành dựa trên t
 
 4. Bộ trưởng Bộ Thông tin và Truyền thông quy định chi tiết việc công nhận tổ chức cung cấp dịch vụ chứng thực chữ ký điện tử nước ngoài tại Việt Nam; công nhận chữ ký điện tử nước ngoài, chứng thư chữ ký điện tử nước ngoài tại Việt Nam.
 
+**Điều 27. Chữ ký điện tử nước ngoài, chứng thư chữ ký điện tử nước ngoài được chấp nhận trong giao dịch quốc tế**
+
+1. Chữ ký điện tử nước ngoài, chứng thư chữ ký điện tử nước ngoài được chấp nhận trong giao dịch quốc tế là chữ ký điện tử nước ngoài, chứng thư chữ ký điện tử nước ngoài của tổ chức, cá nhân nước ngoài không hiện diện tại Việt Nam, có hiệu lực trên thông điệp dữ liệu gửi đến tổ chức, cá nhân Việt Nam.
+
+2. Tổ chức, cá nhân lựa chọn và chịu trách nhiệm về việc chấp nhận chữ ký điện tử nước ngoài, chứng thư chữ ký điện tử nước ngoài trên thông điệp dữ liệu trong giao dịch quốc tế.
+
+**Mục 2. DỊCH VỤ TIN CẬY**
+
+**Điều 28. Dịch vụ tin cậy**
+
+1. Dịch vụ tin cậy bao gồm:
+
+a) Dịch vụ cấp dấu thời gian;
+
+b) Dịch vụ chứng thực thông điệp dữ liệu;
+
+c) Dịch vụ chứng thực chữ ký số công cộng.
+
+2. Dịch vụ tin cậy là ngành, nghề đầu tư kinh doanh có điều kiện.
+
+3. Tổ chức cung cấp dịch vụ tin cậy phải có giấy phép kinh doanh dịch vụ do Bộ Thông tin và Truyền thông cấp, trừ dịch vụ chứng thực hợp đồng điện tử trong thương mại. Tổ chức được quyền đăng ký một hoặc các dịch vụ quy định tại khoản 1 Điều này. Thời hạn của giấy phép kinh doanh dịch vụ tin cậy là 10 năm.
+
+Tổ chức cung cấp dịch vụ chứng thực hợp đồng điện tử trong thương mại phải đáp ứng điều kiện hoạt động cung cấp dịch vụ chứng thực hợp đồng điện tử theo quy định của pháp luật về thương mại điện tử và điều kiện kinh doanh dịch vụ tin cậy theo quy định tại Điều 29 của Luật này.
+
+4. Chính phủ quy định chi tiết hoạt động của tổ chức cung cấp dịch vụ tin cậy; quy trình, thủ tục, hồ sơ cấp, gia hạn, thay đổi, cấp lại, tạm đình chỉ, thu hồi giấy phép kinh doanh dịch vụ tin cậy và các nội dung khác quy định tại Điều này.
+
+**Điều 29. Điều kiện kinh doanh dịch vụ tin cậy**
+
+1. Điều kiện kinh doanh dịch vụ tin cậy bao gồm:
+
+a) Là doanh nghiệp được thành lập và hoạt động hợp pháp trên lãnh thổ Việt Nam;
+
+b) Đáp ứng điều kiện tài chính, nhân lực quản lý và kỹ thuật phù hợp với từng loại dịch vụ tin cậy quy định tại khoản 1 Điều 28 của Luật này;
+
+c) Hệ thống thông tin cung cấp dịch vụ tin cậy đáp ứng yêu cầu bảo đảm an toàn thông tin mạng tối thiểu cấp độ 3 theo quy định của pháp luật về an toàn thông tin mạng;
+
+d) Có phương án kỹ thuật phục vụ hoạt động cung cấp dịch vụ phù hợp với từng loại dịch vụ tin cậy quy định tại khoản 1 Điều 28 của Luật này;
+
+đ) Có phương án sẵn sàng kết nối kỹ thuật phục vụ giám sát, kiểm tra, báo cáo số liệu bằng phương tiện điện tử đáp ứng yêu cầu quản lý nhà nước về dịch vụ tin cậy.
+
+2. Chính phủ quy định chi tiết khoản 1 Điều này.
+
+**Điều 30. Trách nhiệm của tổ chức cung cấp dịch vụ tin cậy**
+
+1. Công bố công khai quy trình đăng ký sử dụng dịch vụ, biểu mẫu và chi phí liên quan.
+
+2. Bảo đảm kênh tiếp nhận thông tin và cung cấp dịch vụ liên tục 24 giờ trong ngày và 07 ngày trong tuần.
+
+3. Thực hiện chế độ lưu trữ hồ sơ, tài liệu và kết nối, cung cấp thông tin, số liệu báo cáo bằng phương tiện điện tử theo quy định của pháp luật.
+
+4. Bảo đảm trang thiết bị trong hệ thống thông tin được cấp mã quản lý, sẵn sàng kết nối kỹ thuật phục vụ công tác quản lý nhà nước về dịch vụ tin cậy.
+
+5. Thực hiện biện pháp nghiệp vụ, tạm dừng, chấm dứt cung cấp dịch vụ hoặc biện pháp nghiệp vụ khác theo yêu cầu của cơ quan có thẩm quyền theo quy định của pháp luật.
+
+6. Thực hiện trách nhiệm của chủ quản hệ thống thông tin phục vụ cung cấp dịch vụ tin cậy đáp ứng yêu cầu bảo đảm an toàn thông tin mạng tối thiểu cấp độ 3 theo quy định của pháp luật về an toàn thông tin mạng.
+
+7. Định kỳ hằng năm, báo cáo về hoạt động cung cấp dịch vụ tin cậy theo quy định của cơ quan có thẩm quyền.
+
+8. Nộp phí dịch vụ duy trì hệ thống kiểm tra trạng thái chứng thư chữ ký số theo quy định của pháp luật về phí và lệ phí.
+
+**Điều 31. Dịch vụ cấp dấu thời gian**
+
+1. Dịch vụ cấp dấu thời gian là dịch vụ để gắn thông tin về thời gian vào thông điệp dữ liệu.
+
+2. Dấu thời gian được tạo ra dưới dạng chữ ký số.
+
+3. Thời gian được gắn vào thông điệp dữ liệu là thời gian mà tổ chức cung cấp dịch vụ cấp dấu thời gian nhận được thông điệp dữ liệu đó và được chứng thực bởi tổ chức cung cấp dịch vụ cấp dấu thời gian.
+
+4. Nguồn thời gian của tổ chức cung cấp dịch vụ cấp dấu thời gian phải theo quy định của pháp luật về nguồn thời gian chuẩn quốc gia.
+
+**Điều 32. Dịch vụ chứng thực thông điệp dữ liệu**
+
+Dịch vụ chứng thực thông điệp dữ liệu bao gồm:
+
+1. Dịch vụ lưu trữ và xác nhận tính toàn vẹn của thông điệp dữ liệu;
+
+2. Dịch vụ gửi, nhận thông điệp dữ liệu bảo đảm.
+
+**Điều 33. Dịch vụ chứng thực chữ ký số công cộng**
+
+1. Dịch vụ chứng thực chữ ký số công cộng là dịch vụ chứng thực chữ ký số trong hoạt động công cộng.
+
+2. Chứng thư chữ ký số công cộng được cung cấp bởi tổ chức cung cấp dịch vụ chứng thực chữ ký số công cộng theo quy định của Luật này.
+
+3. Tổ chức cung cấp dịch vụ chứng thực chữ ký số công cộng thực hiện các hoạt động sau đây:
+
+a) Phát hành chứng thư chữ ký số công cộng để xác nhận và duy trì trạng thái hiệu lực chứng thư chữ ký số công cộng của chủ thể ký thông điệp dữ liệu;
+
+b) Thu hồi chứng thư chữ ký số công cộng;
+
+c) Kiểm tra hiệu lực chữ ký số công cộng và duy trì trạng thái hiệu lực của chứng thư chữ ký số công cộng; không sử dụng rào cản kỹ thuật, công nghệ để hạn chế việc kiểm tra hiệu lực chữ kỹ số công cộng;
+
+d) Cung cấp thông tin cần thiết để chứng thực chữ ký số công cộng;
+
+đ) Liên thông với tổ chức cung cấp dịch vụ chứng thực điện tử quốc gia để bảo đảm cho việc kiểm tra hiệu lực chữ ký số công cộng.
+
+4. Chứng thư chữ ký số công cộng, chữ ký số công cộng phải đáp ứng quy chuẩn kỹ thuật, yêu cầu kỹ thuật đối với chữ ký số và dịch vụ chứng thực chữ ký số theo quy định của pháp luật.
+
+5. Chính phủ quy định chi tiết Điều này.
+
+**Chương IV**
+
+**GIAO KẾT VÀ THỰC HIỆN HỢP ĐỒNG ĐIỆN TỬ**
+
+**Điều 34. Hợp đồng điện tử**
+
+1. Hợp đồng điện tử được giao kết hoặc thực hiện từ sự tương tác giữa một hệ thống thông tin tự động với người hoặc giữa các hệ thống thông tin tự động với nhau không bị phủ nhận giá trị pháp lý chỉ vì không có sự kiểm tra hay can thiệp của con người vào từng hành động cụ thể do các hệ thống thông tin tự động thực hiện hay vào hợp đồng.
+
+2. Bộ trưởng, Thủ trưởng cơ quan ngang Bộ ban hành theo thẩm quyền hoặc trình cấp có thẩm quyền ban hành quy định về giao kết và thực hiện hợp đồng điện tử trong lĩnh vực thuộc phạm vi nhiệm vụ, quyền hạn được phân công, phù hợp với điều kiện thực tiễn.
+
+**Điều 35. Giao kết hợp đồng điện tử**
+
+1. Giao kết hợp đồng điện tử là việc sử dụng thông điệp dữ liệu để tiến hành một phần hoặc toàn bộ giao dịch trong quá trình giao kết hợp đồng điện tử.
+
+2. Đề nghị giao kết và chấp nhận giao kết hợp đồng điện tử được thực hiện thông qua thông điệp dữ liệu, trừ trường hợp các bên có thỏa thuận khác.
+
+**Điều 36. Nguyên tắc giao kết và thực hiện hợp đồng điện tử**
+
+1. Các bên có quyền thỏa thuận sử dụng thông điệp dữ liệu, phương tiện điện tử một phần hoặc toàn bộ trong giao kết và thực hiện hợp đồng điện tử.
+
+2. Khi giao kết và thực hiện hợp đồng điện tử, các bên có quyền thỏa thuận về yêu cầu kỹ thuật, điều kiện bảo đảm tính toàn vẹn, bảo mật có liên quan đến hợp đồng điện tử đó.
+
+3. Việc giao kết và thực hiện hợp đồng điện tử phải tuân thủ quy định của Luật này, quy định của pháp luật về hợp đồng và quy định khác của pháp luật có liên quan.
+
+**Điều 37. Việc nhận, gửi, thời điểm, địa điểm nhận, gửi thông điệp dữ liệu trong giao kết và thực hiện hợp đồng điện tử**
+
+Việc nhận, gửi, thời điểm, địa điểm nhận, gửi thông điệp dữ liệu trong giao kết và thực hiện hợp đồng điện tử được thực hiện theo quy định tại các điều 15, 16, 17 và 18 của Luật này.
+
+**Điều 38. Giá trị pháp lý của thông báo trong giao kết và thực hiện hợp đồng điện tử**
+
+Trong giao kết và thực hiện hợp đồng điện tử, thông báo dưới dạng thông điệp dữ liệu có giá trị pháp lý như thông báo bằng văn bản giấy.
+
+**Chương V**
+
+**GIAO DỊCH ĐIỆN TỬ CỦA CƠ QUAN NHÀ NƯỚC**
+
+**Điều 39. Các loại hình giao dịch điện tử của cơ quan nhà nước**
+
+1. Giao dịch điện tử trong nội bộ cơ quan nhà nước.
+
+2. Giao dịch điện tử giữa các cơ quan nhà nước với nhau.
+
+3. Giao dịch điện tử giữa cơ quan nhà nước với cơ quan, tổ chức, cá nhân.
+
+**Điều 40. Quản lý dữ liệu, cơ sở dữ liệu dùng chung**
+
+1. Dữ liệu trong cơ quan nhà nước được tổ chức thống nhất, được phân cấp quản lý theo trách nhiệm quản lý của cơ quan nhà nước nhằm thúc đẩy giao dịch điện tử; được chia sẻ phục vụ hoạt động của cơ quan nhà nước, người dân, doanh nghiệp theo quy định của pháp luật.
+
+2. Cơ sở dữ liệu dùng chung trong cơ quan nhà nước bao gồm cơ sở dữ liệu quốc gia, cơ sở dữ liệu của Bộ, ngành, địa phương.
+
+3. Việc quản lý cơ sở dữ liệu quốc gia được quy định như sau:
+
+a) Cơ sở dữ liệu quốc gia chứa dữ liệu chủ làm cơ sở tham chiếu, đồng bộ dữ liệu giữa các cơ sở dữ liệu của Bộ, ngành, địa phương;
+
+b) Dữ liệu chủ trong cơ sở dữ liệu quốc gia có giá trị sử dụng chính thức, tương đương văn bản giấy được cơ quan có thẩm quyền cung cấp, trừ trường hợp pháp luật có quy định khác;
+
+c) Dữ liệu trong cơ sở dữ liệu quốc gia được chia sẻ với Bộ, ngành, địa phương phục vụ giải quyết thủ tục hành chính, cải cách hành chính, đơn giản hóa thủ tục hành chính cho người dân, doanh nghiệp và các mục tiêu phát triển kinh tế \- xã hội;
+
+d) Thủ tướng Chính phủ phê duyệt danh mục cơ sở dữ liệu quốc gia. Danh mục cơ sở dữ liệu quốc gia phải thể hiện được các nội dung cơ bản sau đây: tên cơ sở dữ liệu quốc gia; mục tiêu xây dựng cơ sở dữ liệu quốc gia; phạm vi dữ liệu trong cơ sở dữ liệu quốc gia; thông tin về dữ liệu chủ của cơ sở dữ liệu quốc gia được lưu trữ và chia sẻ; đối tượng và mục đích sử dụng, khai thác cơ sở dữ liệu quốc gia; nguồn thông tin được xây dựng và cập nhật vào cơ sở dữ liệu quốc gia; phương thức chia sẻ dữ liệu từ cơ sở dữ liệu quốc gia;
+
+đ) Chính phủ quy định việc xây dựng, cập nhật, duy trì và khai thác, sử dụng cơ sở dữ liệu quốc gia; quy định việc chia sẻ cơ sở dữ liệu quốc gia với cơ sở dữ liệu của cơ quan khác của Nhà nước.
+
+4. Việc quản lý cơ sở dữ liệu của Bộ, ngành, địa phương được quy định như sau:
+
+a) Cơ sở dữ liệu của Bộ, ngành, địa phương là tập hợp thông tin dùng chung của Bộ, ngành, địa phương;
+
+b) Dữ liệu chủ trong cơ sở dữ liệu của Bộ, ngành, địa phương có giá trị sử dụng chính thức, tương đương văn bản giấy do Bộ, ngành, địa phương cung cấp, trừ trường hợp pháp luật có quy định khác;
+
+c) Bộ, cơ quan ngang Bộ, cơ quan thuộc Chính phủ, Ủy ban nhân dân cấp tỉnh quy định danh mục cơ sở dữ liệu; việc xây dựng, cập nhật, duy trì và khai thác, sử dụng cơ sở dữ liệu của Bộ, ngành, địa phương mình. Danh mục cơ sở dữ liệu của Bộ, ngành, địa phương phải thể hiện được các nội dung cơ bản sau đây: tên cơ sở dữ liệu; mô tả mục đích, phạm vi, nội dung của từng cơ sở dữ liệu; cơ chế thu thập, cập nhật, nguồn dữ liệu được thu thập của từng cơ sở dữ liệu; liệt kê các hạng mục dữ liệu bao gồm dữ liệu mở và dữ liệu được chia sẻ.
+
+5. Nhà nước bảo đảm một phần hoặc toàn bộ kinh phí xây dựng và duy trì cơ sở dữ liệu quốc gia, cơ sở dữ liệu của Bộ, ngành, địa phương, cơ quan khác của Nhà nước.
+
+**Điều 41. Tạo lập, thu thập dữ liệu**
+
+1. Việc tạo lập, thu thập dữ liệu, phát triển dữ liệu số được ưu tiên ở mức độ cao nhất để phát triển Chính phủ số, chuyển đổi số trong hoạt động của cơ quan nhà nước.
+
+2. Việc tạo lập dữ liệu trong cơ sở dữ liệu của cơ quan nhà nước phải sử dụng thống nhất bảng mã danh mục dùng chung do cơ quan nhà nước có thẩm quyền ban hành, thống nhất với dữ liệu chủ trong cơ sở dữ liệu quốc gia.
+
+3. Cơ quan nhà nước không được thu thập, tổ chức thu thập lại dữ liệu hoặc yêu cầu tổ chức, cá nhân cung cấp lại dữ liệu mà cơ quan đó đang quản lý hoặc dữ liệu đó được cơ quan nhà nước khác sẵn sàng kết nối, chia sẻ, trừ trường hợp yêu cầu cung cấp dữ liệu phục vụ cập nhật hoặc sử dụng cho mục đích xác minh, thẩm tra dữ liệu hoặc dữ liệu đó không bảo đảm yêu cầu về chất lượng theo tiêu chuẩn, quy chuẩn kỹ thuật hoặc pháp luật có quy định khác.
+
+4. Bộ Thông tin và Truyền thông tổng hợp và công bố danh sách các cơ quan cung cấp dữ liệu, danh mục dữ liệu được cung cấp, bảng mã danh mục dùng chung để cơ quan, tổ chức, cá nhân tra cứu, khai thác.
+
+**Điều 42. Kết nối, chia sẻ dữ liệu**
+
+1. Cơ quan nhà nước có trách nhiệm bảo đảm khả năng sẵn sàng kết nối, chia sẻ dữ liệu cho cơ quan, tổ chức, cá nhân, phục vụ giao dịch điện tử bao gồm:
+
+a) Nhân lực thực hiện kết nối, chia sẻ dữ liệu bao gồm nguồn nhân lực tại chỗ đang thực hiện quản lý, vận hành các hệ thống thông tin hoặc nhân lực khác có liên quan trong cơ quan nhà nước; trường hợp nhân lực tại chỗ không đáp ứng được thì được thuê chuyên gia;
+
+b) Dự án đầu tư ứng dụng công nghệ thông tin sử dụng ngân sách nhà nước để xây dựng các hệ thống thông tin, cơ sở dữ liệu trong cơ quan nhà nước phải có hạng mục phục vụ kết nối, chia sẻ dữ liệu. Trường hợp không có hạng mục này, phải có thuyết minh chứng minh về việc không có hoạt động kết nối, chia sẻ dữ liệu trong quá trình vận hành, khai thác;
+
+c) Ban hành và công bố công khai quy chế khai thác, sử dụng dữ liệu đối với cơ sở dữ liệu thuộc thẩm quyền quản lý;
+
+d) Áp dụng biện pháp bảo đảm an toàn thông tin mạng, an ninh mạng, bảo mật dữ liệu trong quá trình kết nối, chia sẻ dữ liệu theo quy định của pháp luật.
+
+2. Trừ trường hợp pháp luật có quy định khác, cơ quan nhà nước có trách nhiệm kết nối, chia sẻ dữ liệu với cơ quan, tổ chức khác; không cung cấp thông tin qua hình thức văn bản giấy đối với thông tin đã được khai thác qua hình thức kết nối, chia sẻ giữa các hệ thống thông tin; không thu phí việc chia sẻ dữ liệu giữa các cơ quan nhà nước.
+
+3. Cơ quan nhà nước phải áp dụng phương thức kết nối, chia sẻ dữ liệu trực tuyến trên môi trường mạng giữa các hệ thống thông tin của cơ quan cung cấp dữ liệu và cơ quan, tổ chức khai thác dữ liệu, trừ trường hợp thông tin liên quan đến bí mật nhà nước hoặc yêu cầu bảo đảm quốc phòng, an ninh. Trường hợp không áp dụng phương thức kết nối, chia sẻ dữ liệu trực tuyến, phải nêu rõ lý do bằng văn bản.
+
+4. Cơ quan nhà nước áp dụng mô hình kết nối, chia sẻ dữ liệu theo thứ tự ưu tiên sau đây:
+
+a) Kết nối, chia sẻ qua các hệ thống trung gian bao gồm: Nền tảng tích hợp, chia sẻ dữ liệu quốc gia; hạ tầng kết nối, chia sẻ dữ liệu cấp Bộ, cấp tỉnh theo Khung kiến trúc tổng thể quốc gia số;
+
+b) Kết nối trực tiếp giữa các hệ thống thông tin, cơ sở dữ liệu khi các hệ thống trung gian chưa sẵn sàng hoặc cơ quan chủ quản hệ thống trung gian xác định hệ thống trung gian không đáp ứng được yêu cầu về kết nối, chia sẻ dữ liệu.
+
+5. Khung kiến trúc tổng thể quốc gia số quy định tại điểm a khoản 4 Điều này bao gồm Khung kiến trúc Chính phủ điện tử, Chính phủ số; khung kiến trúc số của các cơ quan, tổ chức.
+
+6. Chính phủ quy định chi tiết về kết nối, chia sẻ dữ liệu; Khung kiến trúc tổng thể quốc gia số.
+
+**Điều 43. Dữ liệu mở của cơ quan nhà nước**
+
+1. Dữ liệu mở của cơ quan nhà nước là dữ liệu được cơ quan nhà nước có thẩm quyền công bố rộng rãi cho cơ quan, tổ chức, cá nhân tự do sử dụng, tái sử dụng, chia sẻ. Cơ quan nhà nước công bố dữ liệu mở để cơ quan, tổ chức, cá nhân tự do sử dụng, tái sử dụng, chia sẻ nhằm thúc đẩy giao dịch điện tử, chuyển đổi số, phát triển kinh tế số và xã hội số.
+
+2. Dữ liệu mở phải toàn vẹn và phản ánh đầy đủ thông tin do cơ quan nhà nước cung cấp, được cập nhật mới nhất, có khả năng truy cập và sử dụng trên mạng Internet, bảo đảm khả năng thiết bị số có thể gửi, nhận, lưu trữ và xử lý được, tuân thủ định dạng mở và miễn phí.
+
+3. Cơ quan, tổ chức, cá nhân được tự do truy cập sử dụng dữ liệu mở, không yêu cầu khai báo định danh khi khai thác, sử dụng dữ liệu mở.
+
+4. Cơ quan, tổ chức, cá nhân được phép tự do sao chép, chia sẻ, trao đổi, sử dụng dữ liệu mở hoặc kết hợp dữ liệu mở với dữ liệu khác; sử dụng dữ liệu mở vào sản phẩm, dịch vụ thương mại hoặc phi thương mại của mình, trừ trường hợp pháp luật có quy định khác.
+
+5. Cơ quan, tổ chức, cá nhân phải trích dẫn, ghi nhận thông tin sử dụng dữ liệu mở trong sản phẩm, dịch vụ, tài liệu liên quan có sử dụng dữ liệu mở.
+
+6. Cơ quan nhà nước không chịu trách nhiệm về bất kỳ thiệt hại nào của cơ quan, tổ chức, cá nhân phát sinh do việc sử dụng dữ liệu mở gây ra.
+
+7. Chính phủ quy định chi tiết về dữ liệu mở và điều kiện bảo đảm thực hiện quy định tại Điều này.
+
+**Điều 44. Hoạt động của cơ quan nhà nước trên môi trường điện tử**
+
+1. Cơ quan nhà nước phải bảo đảm kết quả giải quyết thủ tục hành chính hoặc kết quả hoạt động công vụ khác không thuộc phạm vi bí mật nhà nước đều có văn bản điện tử có giá trị pháp lý như văn bản giấy, có thể truy cập và sử dụng được dưới dạng hoàn chỉnh. Cơ quan nhà nước phải tiếp nhận, giải quyết yêu cầu của tổ chức, cá nhân trên môi trường điện tử, trừ trường hợp pháp luật có quy định khác.
+
+2. Các lĩnh vực hoạt động của cơ quan nhà nước ưu tiên thực hiện toàn trình trên môi trường điện tử bao gồm: cung cấp dịch vụ công; công tác quản trị nội bộ; chỉ đạo, điều hành; giám sát, kiểm tra, thanh tra.
+
+3. Cơ quan nhà nước phải sẵn sàng phương án trong tình huống khẩn cấp, trong tình huống xảy ra sự cố gián đoạn hoạt động trên môi trường mạng trực tuyến và phương án ứng cứu, khắc phục sự cố, duy trì hoạt động giao dịch bình thường.
+
+4. Cơ quan nhà nước được thuê chuyên gia từ ngân sách nhà nước hằng năm theo quy định của pháp luật để tư vấn xây dựng cơ sở dữ liệu; thực hiện các hoạt động chuyên môn kỹ thuật về quản lý, vận hành, bảo đảm an toàn thông tin mạng cho hệ thống thông tin phục vụ giao dịch điện tử của cơ quan nhà nước.
+
+5. Chính phủ quy định chi tiết Điều này.
+
+**Chương VI**
+
+**HỆ THỐNG THÔNG TIN PHỤC VỤ GIAO DỊCH ĐIỆN TỬ**
+
+**Điều 45. Hệ thống thông tin phục vụ giao dịch điện tử**
+
+1. Hệ thống thông tin phục vụ giao dịch điện tử là tập hợp phần cứng, phần mềm và cơ sở dữ liệu được thiết lập với chức năng, tính năng chính để phục vụ giao dịch điện tử, bảo đảm xác thực, tin cậy trong giao dịch điện tử.
+
+Hệ thống thông tin phục vụ giao dịch điện tử được phân loại theo chủ quản hệ thống thông tin; chức năng, tính năng của hệ thống thông tin phục vụ giao dịch điện tử; quy mô, số lượng người sử dụng tại Việt Nam hoặc số lượng truy cập hằng tháng từ người sử dụng tại Việt Nam.
+
+2. Nền tảng số phục vụ giao dịch điện tử là hệ thống thông tin quy định tại khoản 1 Điều này tạo môi trường điện tử cho phép các bên thực hiện giao dịch hoặc cung cấp, sử dụng sản phẩm, dịch vụ hoặc sử dụng để phát triển sản phẩm, dịch vụ.
+
+3. Nền tảng số trung gian phục vụ giao dịch điện tử là nền tảng số quy định tại khoản 2 Điều này mà chủ quản nền tảng số độc lập với các bên thực hiện giao dịch.
+
+4. Chính phủ quy định chi tiết Điều này.
+
+**Điều 46. Tài khoản giao dịch điện tử**
+
+1. Tài khoản giao dịch điện tử do chủ quản hệ thống thông tin phục vụ giao dịch điện tử cấp và được quản lý, sử dụng theo quy định của Luật này.
+
+2. Tài khoản giao dịch điện tử được sử dụng để thực hiện giao dịch điện tử, nhằm lưu trữ lịch sử giao dịch và bảo đảm chính xác trình tự giao dịch của chủ tài khoản, có giá trị chứng minh lịch sử giao dịch của các bên tham gia theo quy định tại khoản 4 Điều này.
+
+3. Cơ quan, tổ chức, cá nhân có quyền lựa chọn sử dụng tài khoản giao dịch điện tử phù hợp với nhu cầu, trừ trường hợp pháp luật có quy định khác.
+
+4. Lịch sử giao dịch của tài khoản giao dịch điện tử có giá trị pháp lý để chứng minh giao dịch khi đáp ứng đủ các yêu cầu sau đây:
+
+a) Hệ thống thông tin phục vụ giao dịch điện tử phải bảo đảm an toàn theo quy định của pháp luật về an toàn thông tin mạng;
+
+b) Gắn duy nhất với một cơ quan, tổ chức hoặc cá nhân là chủ tài khoản giao dịch điện tử;
+
+c) Bảo đảm chính xác thời gian giao dịch từ nguồn thời gian theo quy định của pháp luật về nguồn thời gian chuẩn quốc gia.
+
+**Điều 47. Trách nhiệm của chủ quản hệ thống thông tin phục vụ giao dịch điện tử**
+
+1. Chủ quản hệ thống thông tin phục vụ giao dịch điện tử có trách nhiệm sau đây:
+
+a) Tuân thủ quy định của Luật này và pháp luật về an toàn thông tin mạng, an ninh mạng, bảo vệ thông tin cá nhân, bảo vệ dữ liệu cá nhân và quy định khác của pháp luật có liên quan;
+
+b) Cung cấp thông tin bằng phương tiện điện tử theo quy định của pháp luật nhằm phục vụ công tác đo lường, thống kê, giám sát, thanh tra, kiểm tra, báo cáo theo yêu cầu của cơ quan quản lý nhà nước về giao dịch điện tử; chia sẻ dữ liệu phục vụ quản lý nhà nước về giao dịch điện tử;
+
+c) Giám sát an toàn hệ thống thông tin phục vụ giao dịch điện tử của mình theo quy định của pháp luật về an toàn thông tin mạng.
+
+2. Chủ quản nền tảng số trung gian quy mô lớn phục vụ giao dịch điện tử có trách nhiệm sau đây:
+
+a) Tuân thủ quy định tại khoản 1 Điều này;
+
+b) Công bố công khai, phổ biến cơ chế phản ánh vướng mắc và xử lý vướng mắc phát sinh trong giao dịch điện tử;
+
+c) Công bố công khai, phổ biến cơ chế phản ánh và xử lý nội dung vi phạm pháp luật Việt Nam trên nền tảng số trung gian từ nguồn phản ánh được đánh giá là tin cậy;
+
+d) Định kỳ hằng năm, báo cáo theo hướng dẫn của Bộ Thông tin và Truyền thông về vụ việc đã xảy ra hoặc vụ việc có dấu hiệu, nguy cơ lợi dụng hệ thống thông tin để thực hiện hành vi vi phạm pháp luật Việt Nam.
+
+3. Chủ quản nền tảng số trung gian quy mô rất lớn phục vụ giao dịch điện tử có trách nhiệm sau đây:
+
+a) Tuân thủ quy định tại khoản 2 Điều này;
+
+b) Công bố công khai nguyên tắc chung, thông số hoặc tiêu chí được sử dụng để đưa ra khuyến nghị hiển thị nội dung, hiển thị quảng cáo cho người sử dụng và cho phép người sử dụng lựa chọn phương án không sử dụng khuyến nghị hiển thị nội dung, hiển thị quảng cáo dựa trên phân tích dữ liệu về người sử dụng;
+
+c) Cho phép người sử dụng tháo gỡ cài đặt bất kỳ ứng dụng nào được cài đặt sẵn mà không ảnh hưởng đến các tính năng kỹ thuật cơ bản để hệ thống vận hành bình thường;
+
+d) Công bố công khai và phổ biến bộ quy tắc ứng xử áp dụng đối với các bên liên quan tham gia sử dụng hệ thống.
+
+4. Chính phủ quy định chi tiết trách nhiệm của chủ quản nền tảng số trung gian tại khoản 2 và khoản 3 Điều này phù hợp với quy mô, số lượng người sử dụng tại Việt Nam hoặc số lượng truy cập từ người sử dụng tại Việt Nam.
+
+**Điều 48. Báo cáo, tổng hợp, chia sẻ dữ liệu phục vụ quản lý nhà nước về giao dịch điện tử**
+
+1. Cơ quan nhà nước quản lý công tác báo cáo, tổng hợp, chia sẻ dữ liệu phục vụ quản lý nhà nước về giao dịch điện tử theo quy định của pháp luật, phù hợp với chức năng, nhiệm vụ, quyền hạn được phân công.
+
+2. Bộ Thông tin và Truyền thông thiết lập, vận hành hệ thống tiếp nhận, tổng hợp dữ liệu phục vụ quản lý nhà nước về giao dịch điện tử của cơ quan nhà nước quy định tại khoản 1 Điều này theo quy định của Chính phủ; chủ trì xây dựng, ban hành hoặc đề nghị cơ quan nhà nước có thẩm quyền ban hành quy định về kỹ thuật đối với mô hình tham chiếu kết nối phục vụ chia sẻ dữ liệu bằng phương tiện điện tử, định danh thiết bị, tiêu chí tín nhiệm mạng của hệ thống thông tin phục vụ giao dịch điện tử.
+
+**Chương VII**
+
+**QUẢN LÝ NHÀ NƯỚC VỀ GIAO DỊCH ĐIỆN TỬ**
+
+**Điều 49. Nội dung quản lý nhà nước về giao dịch điện tử**
+
+1. Xây dựng, ban hành, tổ chức thực hiện chiến lược, kế hoạch và chính sách phát triển giao dịch điện tử; văn bản quy phạm pháp luật về giao dịch điện tử; tiêu chuẩn, quy chuẩn kỹ thuật, yêu cầu kỹ thuật, định mức kinh tế \- kỹ thuật, chất lượng sản phẩm, dịch vụ trong giao dịch điện tử.
+
+2. Quản lý công tác báo cáo, đo lường, thống kê hoạt động giao dịch điện tử; quản lý việc giám sát an toàn hệ thống thông tin phục vụ giao dịch điện tử của chủ quản hệ thống thông tin.
+
+3. Quản lý dịch vụ tin cậy.
+
+4. Quản lý, tổ chức việc xây dựng, khai thác và phát triển hạ tầng chứng thực điện tử quốc gia; việc phát hành, thu hồi chứng thư chữ ký số.
+
+5. Quy định việc liên thông giữa các hệ thống cung cấp dịch vụ chữ ký số công cộng và chữ ký số chuyên dùng công vụ.
+
+6. Tuyên truyền, phổ biến chính sách, pháp luật trong giao dịch điện tử.
+
+7. Quản lý công tác đào tạo, bồi dưỡng, phát triển nguồn nhân lực, chuyên gia trong giao dịch điện tử.
+
+8. Thanh tra, kiểm tra, giải quyết khiếu nại, tố cáo và xử lý vi phạm pháp luật về giao dịch điện tử.
+
+9. Hợp tác quốc tế về giao dịch điện tử.
+
+**Điều 50. Trách nhiệm quản lý nhà nước về giao dịch điện tử**
+
+1. Chính phủ thống nhất quản lý nhà nước về giao dịch điện tử.
+
+2. Bộ Thông tin và Truyền thông là cơ quan đầu mối chịu trách nhiệm trước Chính phủ trong việc chủ trì, phối hợp với các Bộ, cơ quan ngang Bộ thực hiện quản lý nhà nước về giao dịch điện tử.
+
+3. Bộ, cơ quan ngang Bộ, Ủy ban nhân dân cấp tỉnh phối hợp với Bộ Thông tin và Truyền thông thực hiện quản lý nhà nước về giao dịch điện tử trong lĩnh vực, địa bàn thuộc phạm vi nhiệm vụ, quyền hạn được phân công.
+
+4. Bộ trưởng Bộ Quốc phòng thực hiện quản lý nhà nước về giao dịch điện tử trong lĩnh vực cơ yếu, chữ ký số chuyên dùng công vụ trên cơ sở tiêu chuẩn, quy chuẩn kỹ thuật quốc gia về chữ ký số theo quy định của pháp luật.
+
+**Chương VIII**
+
+**ĐIỀU KHOẢN THI HÀNH**
+
+**Điều 51. Sửa đổi, bổ sung, thay thế, bãi bỏ một số điều của các luật có liên quan**
+
+1. Sửa đổi, bổ sung mục 119 thuộc Phụ lục IV \- Danh mục ngành, nghề đầu tư kinh doanh có điều kiện ban hành kèm theo Luật Đầu tư số 61/2020/QH14 đã được sửa đổi, bổ sung một số điều theo Luật số 72/2020/QH14, Luật số 03/2022/QH15, Luật số 05/2022/QH15, Luật số 08/2022/QH15 và Luật số 09/2022/QH15 như sau:
+|119|Kinh doanh dịch vụ tin cậy|
+|:---:|:---|
+
+
+2. Sửa đổi, bổ sung mục 7 thuộc Phần VI \- Phí thuộc lĩnh vực thông tin và truyền thông trong Danh mục Phí, lệ phí ban hành kèm theo Luật Phí và lệ phí số 97/2015/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 09/2017/QH14, Luật số 23/2018/QH14, Luật số 72/2020/QH14 và Luật số 16/2023/QH15 như sau:
+|7|**Phí dịch vụ duy trì hệ thống kiểm tra trạng thái chứng thư chữ ký số**|Bộ Tài chính|
+|:---:|:---|:---:|
+
+
+3. Thay thế cụm từ “hệ thống chứng thực chữ ký số chuyên dùng” bằng cụm từ “hệ thống chứng thực chữ ký số chuyên dùng công vụ” tại khoản 3 Điều 19 của Luật Tổ chức Chính phủ số 76/2015/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 47/2019/QH14.
+
+4. Bãi bỏ Điều 58 và Điều 59 của Luật Công nghệ thông tin số 67/2006/QH11 đã được sửa đổi, bổ sung một số điều theo Luật số 21/2017/QH14.
+
+**Điều 52. Hiệu lực thi hành**
+
+1. Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2024.
+
+2. Luật Giao dịch điện tử số 51/2005/QH11 hết hiệu lực kể từ ngày Luật này có hiệu lực thi hành, trừ trường hợp quy định tại Điều 53 của Luật này.
+
+**Điều 53. Quy định chuyển tiếp**
+
+1. Giao dịch điện tử được xác lập trước ngày Luật này có hiệu lực thi hành và đến ngày Luật này có hiệu lực thi hành chưa thực hiện xong thì được tiếp tục thực hiện theo quy định của Luật Giao dịch điện tử số 51/2005/QH11 và các văn bản quy phạm pháp luật quy định chi tiết Luật Giao dịch điện tử số 51/2005/QH11, trừ trường hợp các bên thỏa thuận áp dụng quy định của Luật này.
+
+2. Chứng thư số được cấp trước ngày Luật này có hiệu lực thi hành và đến ngày Luật này có hiệu lực thi hành vẫn còn hiệu lực thì được tiếp tục thực hiện theo quy định của Luật Giao dịch điện tử số 51/2005/QH11 và các văn bản quy phạm pháp luật quy định chi tiết Luật Giao dịch điện tử số 51/2005/QH11 đến hết thời hạn của chứng thư số và có giá trị tương đương chứng thư chữ ký số theo quy định của Luật này.
+
+3. Giấy phép cung cấp dịch vụ chứng thực chữ ký số công cộng, Giấy phép sử dụng chứng thư số nước ngoài tại Việt Nam, Giấy chứng nhận đăng ký hoạt động của tổ chức cung cấp dịch vụ chứng thực chữ ký số chuyên dùng, Giấy chứng nhận đủ điều kiện đảm bảo an toàn cho chữ ký số chuyên dùng đã được cấp trước ngày Luật này có hiệu lực thi hành và đến ngày Luật này có hiệu lực thi hành vẫn còn hiệu lực thì được tiếp tục sử dụng đến hết thời hạn của giấy phép, giấy chứng nhận.
+
+Việc cấp chứng thư số theo giấy phép, giấy chứng nhận quy định tại khoản này được thực hiện theo quy định của Luật Giao dịch điện tử số 51/2005/QH11 và các văn bản quy phạm pháp luật quy định chi tiết Luật Giao dịch điện tử số 51/2005/QH11.
+
+4. Đối với hồ sơ đề nghị cấp Giấy phép cung cấp dịch vụ chứng thực chữ ký số công cộng, Giấy phép sử dụng chứng thư số nước ngoài tại Việt Nam, Giấy chứng nhận đăng ký hoạt động của tổ chức cung cấp dịch vụ chứng thực chữ ký số chuyên dùng, Giấy chứng nhận đủ điều kiện đảm bảo an toàn cho chữ ký số chuyên dùng đã nộp cho cơ quan nhà nước có thẩm quyền nhưng đến ngày Luật này có hiệu lực thi hành chưa được cấp giấy phép, giấy chứng nhận thì được tiếp tục áp dụng quy định của Luật Giao dịch điện tử số 51/2005/QH11 và các văn bản quy phạm pháp luật quy định chi tiết Luật Giao dịch điện tử số 51/2005/QH11.
+
+5. Xác nhận đăng ký hoạt động cung cấp dịch vụ chứng thực hợp đồng điện tử trong thương mại đã được cấp trước ngày Luật này có hiệu lực thi hành thì được tiếp tục sử dụng đến hết ngày 30 tháng 6 năm 2027.
+
+6. Đối với hồ sơ đăng ký hoạt động cung cấp dịch vụ chứng thực hợp đồng điện tử trong thương mại đã nộp cho cơ quan nhà nước có thẩm quyền nhưng đến ngày Luật này có hiệu lực thi hành chưa được xác nhận đăng ký thì được tiếp tục áp dụng quy định của pháp luật về thương mại điện tử.
+
+7. Chính phủ quy định chi tiết Điều này.
+
+*Luật này được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XV, kỳ họp thứ 5 thông qua ngày 22 tháng 6 năm 2023.*
+
+ 
 | |**CHỦ TỊCH QUỐC HỘI** \
  \
  \

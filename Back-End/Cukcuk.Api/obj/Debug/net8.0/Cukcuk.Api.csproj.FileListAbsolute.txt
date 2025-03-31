@@ -180,7 +180,6 @@ D:\intern\Back-End\Cukcuk.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyMo
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\appsettings.Development.json
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\appsettings.json
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Cukcuk.Api.staticwebassets.runtime.json
-D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Cukcuk.Api.staticwebassets.endpoints.json
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Cukcuk.Api.exe
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Cukcuk.Api.deps.json
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Cukcuk.Api.runtimeconfig.json
@@ -289,14 +288,11 @@ D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\Cukcuk.Api.sourcelink.json
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\scopedcss\bundle\Cukcuk.Api.styles.css
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets.build.json
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets.development.json
-D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssets.props
-D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets\msbuild.build.Cukcuk.Api.props
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Cukcuk.Api.props
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Cukcuk.Api.props
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets.pack.json
-D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\Cukcuk.Api.csproj.Up2Date
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\Cukcuk.Api.dll
 D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\refint\Cukcuk.Api.dll

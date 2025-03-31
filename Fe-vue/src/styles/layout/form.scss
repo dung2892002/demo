@@ -363,7 +363,7 @@ form label {
     .file {
       width: 360px;
       background: #fff;
-      height: 850px;
+      height: calc(100vh - 56px - 20px - 70px);
       overflow-y: scroll;
       border-radius: 6px;
       padding: 10px;
@@ -406,7 +406,7 @@ form label {
         width: 100%;
         margin: 0 auto 10px;
         border-radius: 6px;
-        height: 800px;
+        height: calc(100vh - 56px - 20px - 70px);
         display: flex;
         flex-flow: column;
         .file-content__header {

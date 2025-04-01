@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.dmg1oqfyma.docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dmg1oqfyma"},{"Name":"integrity","Value":"sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="},{"Name":"label","Value":"_content/Cukcuk.Api/files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Ngh\u1ECB \u0111\u1ECBnh 49_2024_ND-CP.docx"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"72543"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:07:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"72543"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:07:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

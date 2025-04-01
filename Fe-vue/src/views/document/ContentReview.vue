@@ -35,40 +35,15 @@
       </div>
     </div>
   </div>
-  <div v-if="updateBlock" class="form-container">
-    <div class="form__content">
-      <div class="form__header">
-        <h2 class="form__title">Nội dung</h2>
-        <button class="form__button" @click="handleCloseForm(false)">
-          <img src="/src/assets/icon/close-48.png" alt="logo" />
-        </button>
-      </div>
-      <form class="cukcuk-form" id="form">
-        <div class="form-group">
-          <div class="form__item">
-            <textarea type="text" rows="10" v-model="newContent" style="width: 600px"></textarea>
-          </div>
-        </div>
-      </form>
-      <div class="form__footer">
-        <button class="button--cancel" @click="handleCloseForm(false)">Hủy</button>
-        <button
-          class="button--complete"
-          id="submitButton"
-          @click="handleSubmitForm"
-          v-loading="loading"
-        >
-          <span src="/src/assets/icon/refresh.png" alt="logo">Lưu</span>
-        </button>
-      </div>
-    </div>
-  </div>
+
+  <UpdateBlockForm v-if="updateBlock" :loading="loading" :content="newContent" @close-form="handleCloseForm" @submit-form="handleSubmitForm"/>
 </template>
 
 <script setup lang="ts">
 import type { DocumentBlock } from '@/entities/Document'
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
+import UpdateBlockForm from './UpdateBlockForm.vue'
 
 const updateBlock = ref<DocumentBlock | null>(null)
 const loading = ref(false)
@@ -85,7 +60,8 @@ function handleCloseForm(state: boolean) {
   if (state) fetchBlocksData()
 }
 
-async function handleSubmitForm() {
+async function handleSubmitForm(data: string) {
+  newContent.value = data
   const formData = new FormData()
   formData.append('newContent', newContent.value)
   console.log('FormData:', [...formData.entries()])

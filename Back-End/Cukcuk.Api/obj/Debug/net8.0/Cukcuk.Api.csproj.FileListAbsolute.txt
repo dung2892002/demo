@@ -303,3 +303,7 @@ D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\selenium-manager\linux\selenium-man
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
 D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\WebDriver.dll
+D:\demo\Back-End\Cukcuk.Api\bin\Debug\net8.0\Cukcuk.Api.staticwebassets.endpoints.json
+D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\demo\Back-End\Cukcuk.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

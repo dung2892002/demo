@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.dmg1oqfyma.docx",
+      "AssetFile": "files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72543"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:07:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dmg1oqfyma"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="
+        },
+        {
+          "Name": "label",
+          "Value": "files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx"
+        }
+      ]
+    },
+    {
+      "Route": "files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
+      "AssetFile": "files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72543"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:07:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="
+        }
+      ]
+    }
+  ]
+}

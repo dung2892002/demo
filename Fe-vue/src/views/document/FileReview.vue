@@ -294,7 +294,7 @@ onMounted(() => {
 }
 
 ::v-deep(.markdown-container strong) {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 ::v-deep(.markdown-container em) {

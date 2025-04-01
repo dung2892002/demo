@@ -13,7 +13,7 @@ input {
   }
 }
 
-textarea {
+textarea, .input {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   font-size: 16px;
@@ -24,5 +24,10 @@ textarea {
   &:focus {
     outline: none;
     border: 1px solid #078cf8 !important;
+  }
+
+  p{
+    line-height: 16px;
+    margin-bottom: 10px;
   }
 }

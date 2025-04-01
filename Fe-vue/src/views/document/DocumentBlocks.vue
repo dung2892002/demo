@@ -79,36 +79,14 @@
       </div>
     </div>
   </div>
-
-  <div v-if="showForm != -1" class="form-container">
-    <div class="form__content">
-      <div class="form__header">
-        <h2 class="form__title">Nội dung</h2>
-        <button class="form__button" @click="handleCloseForm">
-          <img src="/src/assets/icon/close-48.png" alt="logo" />
-        </button>
-      </div>
-      <form class="cukcuk-form" id="form">
-        <div class="form-group">
-          <div class="form__item">
-            <textarea type="text" rows="10" v-model="newContent" style="width: 600px"></textarea>
-          </div>
-        </div>
-      </form>
-      <div class="form__footer">
-        <button class="button--cancel" @click="handleCloseForm">Hủy</button>
-        <button class="button--complete" id="submitButton" @click="handleAddBlock">
-          <span src="/src/assets/icon/refresh.png" alt="logo">Lưu</span>
-        </button>
-      </div>
-    </div>
-  </div>
+  <UpdateBlockForm v-if="showForm != -1" :loading="false" :content="newContent" @close-form="handleCloseForm" @submit-form="handleSubmitBlockForm"/>
 </template>
 
 <script setup lang="ts">
 import type { DocumentBlock } from '@/entities/Document'
 import { marked } from 'marked'
 import { computed, onMounted, ref, watch, type PropType } from 'vue'
+import UpdateBlockForm from './UpdateBlockForm.vue'
 
 marked.setOptions({
   breaks: true,
@@ -146,10 +124,11 @@ function handleCloseForm() {
   newContent.value = null
 }
 
-function handleAddBlock() {
+function handleSubmitBlockForm(data: string) {
+  newContent.value = data
   if (showForm.value === 0) {
     editBlock.value!.Content = newContent.value!
-    editBlock.value!.State = 0
+    editBlock.value!.State = 1
     updateBlocks()
     handleCloseForm()
     return
@@ -175,16 +154,38 @@ function handleAddBlock() {
     newBlock.Level = showForm.value + 1
 
     const lastIndex = findLastChildIndex(parentBlock.value)
-    newBlock.Order = Math.round(
-      (blocks.value[lastIndex].Order + blocks.value[lastIndex + 1].Order) / 2,
-    )
+    newBlock.Order =calculatorOrder(lastIndex)
 
+    blocks.value.splice(lastIndex + 1, 0, newBlock)
+  }
+  else {
+    newBlock.ContentType = showForm.value
+    const lastIndex = findLastIndexByContentType(showForm.value)
+    newBlock.Order =calculatorOrder(lastIndex)
     blocks.value.splice(lastIndex + 1, 0, newBlock)
   }
 
   updateBlocks()
   handleSplitBlock()
   handleCloseForm()
+}
+
+
+function calculatorOrder(index: number) {
+  if (index === blocks.value.length - 1) return blocks.value[index].Order + 2000;
+  return  Math.round(
+      (blocks.value[index].Order + blocks.value[index + 1].Order) / 2,
+    )
+}
+
+function findLastIndexByContentType(type: number) {
+  if (type === 4) return blocks.value.length - 1;
+  for (let i = blocks.value.length - 1; i >= 0; i--) {
+        if (blocks.value[i].ContentType === type) {
+            return i;
+        }
+    }
+    return blocks.value.length - 1;
 }
 
 function findLastChildIndex(block: DocumentBlock) {

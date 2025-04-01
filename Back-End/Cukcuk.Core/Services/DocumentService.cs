@@ -701,6 +701,7 @@ namespace Cukcuk.Core.Services
             return string.Empty;
         }
 
+
         private static (string CoQuan, string SoLuat, string NgayBanHanh) ExtractLawInfo(string input)
         {
             string coQuanPattern = @"\|\*\*(.*?)\*\*";

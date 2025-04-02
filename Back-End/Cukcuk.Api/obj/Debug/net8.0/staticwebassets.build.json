@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YwxYRtBSjgisgZ1RBZ+1aWUyMFFx5MSgABx2NNhwq1Q=",
+  "Hash": "7+s/ftwvxs7pxMIPorgkNKMG3QPwTUeDVjA5KkQgJ7E=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wqaxv4d82a",
+      "Integrity": "WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc"
     }
   ],
   "Endpoints": [
@@ -118,6 +139,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="
+        }
+      ]
+    },
+    {
+      "Route": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:15:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
+        }
+      ]
+    },
+    {
+      "Route": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.wqaxv4d82a.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:15:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wqaxv4d82a"
+        },
+        {
+          "Name": "label",
+          "Value": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
         }
       ]
     }

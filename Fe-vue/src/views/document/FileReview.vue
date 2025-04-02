@@ -308,6 +308,6 @@ onMounted(() => {
 
 ::v-deep(.markdown-container ol) {
   margin-left: 20px;
-  // list-style-position: inside;
+
 }
 </style>

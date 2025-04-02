@@ -38,8 +38,8 @@
               "Title": "DocumentService.cs",
               "DocumentMoniker": "D:\\demo\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
-              "ToolTip": "D:\\demo\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs*",
-              "RelativeToolTip": "..\\Cukcuk.Core\\Services\\DocumentService.cs*",
+              "ToolTip": "D:\\demo\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
+              "RelativeToolTip": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
               "ViewState": "AgIAAKQCAAAAAAAAAAAQwLkCAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T08:03:32.447Z",
@@ -55,8 +55,7 @@
               "RelativeToolTip": "..\\Cukcuk.Core\\Entities\\Document.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAowBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:51:57.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:51:57.824Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAMkAAAAAAAAAAAAAAPwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:48:20.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:48:20.821Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "..\\Cukcuk.Core\\Entities\\DocumentBlock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:48:10.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:48:10.729Z"
             }
           ]
         }

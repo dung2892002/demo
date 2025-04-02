@@ -83,6 +83,88 @@
           "Value": "sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="
         }
       ]
+    },
+    {
+      "Route": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
+      "AssetFile": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:15:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
+        }
+      ]
+    },
+    {
+      "Route": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.wqaxv4d82a.doc",
+      "AssetFile": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:15:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wqaxv4d82a"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
+        },
+        {
+          "Name": "label",
+          "Value": "files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc"
+        }
+      ]
     }
   ]
 }

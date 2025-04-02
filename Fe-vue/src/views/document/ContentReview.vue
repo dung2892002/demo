@@ -15,7 +15,7 @@
           >
             {{ index + 1 }}
           </div>
-          <span class="truncate-text">{{ block.Title }}</span>
+          <span class="truncate-text" v-html="marked(block.Title)"></span>
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
       <div class="file-content">
         <div class="file-content__body">
           <div v-for="(block, index) in blocks" :key="index" class="content-item">
-            <span>{{ block.Content }}</span>
+            <div v-html="marked(block.Content)" class="markdown-container"></div>
             <button @click="showUpdateBlock(block)">
               <font-awesome-icon :icon="['fas', 'pen-to-square']" size="xl" />
             </button>
@@ -44,11 +44,13 @@ import type { DocumentBlock } from '@/entities/Document'
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
 import UpdateBlockForm from './UpdateBlockForm.vue'
+import { marked } from 'marked'
 
 const updateBlock = ref<DocumentBlock | null>(null)
 const loading = ref(false)
 
-const newContent = ref('')
+
+const newContent = ref<string | null>(null)
 
 function showUpdateBlock(block: DocumentBlock) {
   updateBlock.value = block

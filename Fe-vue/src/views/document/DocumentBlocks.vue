@@ -17,8 +17,8 @@
             @click="togglePopupContent(index, $event)"
           />
         </div>
-        <div
-          class="popup-action"
+        <!-- popup them phan doan cho contentType -->
+        <div class="popup-action"
           :style="{ top: popupPosition.top + 'px', right: popupPosition.right + 'px' }"
           v-if="showPopupContent === index"
         >
@@ -43,7 +43,7 @@
             :style="{ backgroundColor: colors[block.Level - 1].color }"
             v-if="block.Level != 0"
           ></div>
-          <div v-html="marked(block.Content)" class="markdown-container"></div>
+          <div v-html="marked(formatMarkdown(block.Content))" class="markdown-container" @mouseup="handleSelection(block)"></div>
 
           <div class="action-button" v-if="editMode">
             <font-awesome-icon
@@ -54,6 +54,7 @@
               @click="togglePopupAction(block, $event)"
             />
           </div>
+          <!-- poup cac hanh dong voi block -->
           <div
             class="popup-action"
             v-if="showPopup != null && showPopup === block.Id"
@@ -79,7 +80,41 @@
       </div>
     </div>
   </div>
-  <UpdateBlockForm v-if="showForm != -1" :loading="false" :content="newContent" @close-form="handleCloseForm" @submit-form="handleSubmitBlockForm"/>
+
+  <!-- form de nhap noi dung cho block -->
+  <UpdateBlockForm
+    v-if="showForm != -1"
+    :loading="false"
+    :content="newContent"
+    @close-form="handleCloseForm"
+    @submit-form="handleSubmitBlockForm"
+  />
+
+  <!-- canh bao khi khong the xuong level -->
+  <div v-if="downLevelWarning" class="form-container">
+    <div class="form__content">
+      <div class="form__header">
+        <h2 class="form__title">Xác nhận</h2>
+        <button class="form__button" @click="downLevelWarning = false">
+          <img src="/src/assets/icon/close-48.png" alt="logo" />
+        </button>
+      </div>
+      <form class="cukcuk-form" id="form">
+        <div class="form-group">
+          <div class="form__item">
+            <span>
+              Không thể chuyển cấp do không đúng định dạng mục lục?
+            </span>
+          </div>
+        </div>
+      </form>
+      <div class="form__footer">
+        <button class="button--complete" id="submitButton" @click="downLevelWarning = false">
+          <span src="/src/assets/icon/refresh.png" alt="logo">Xác nhận</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -93,12 +128,190 @@ marked.setOptions({
   gfm: true,
 })
 
+
+function formatMarkdown(content: string) {
+  return content.replace(/^(\d+)\.\s/gm, '$1\\. ');
+}
+
 const showForm = ref(-1)
 const newContent = ref<string | null>(null)
 const parentBlock = ref<DocumentBlock | null>(null)
 const showPopup = ref<string | null>(null)
 const currentType = ref(-1)
 
+
+import TurndownService from 'turndown';
+
+const turndownService = new TurndownService();
+
+const reverseMarked = (html: string) => {
+  return turndownService.turndown(html);
+};
+
+//xu ly viec boi den 1 phan oi dung block
+function handleSelection(block: DocumentBlock) {
+  console.log('danh dau')
+
+  const selection = window.getSelection();
+  if (!selection || selection.rangeCount === 0) return;
+
+  const range = selection.getRangeAt(0);
+  const selectedText = selection.toString().trim();
+  if (!selectedText) return;
+
+  // Lấy HTML đã chọn
+  const tempDiv = document.createElement('div');
+  tempDiv.appendChild(range.cloneContents());
+  const selectedHtml = tempDiv.innerHTML; // Nội dung HTML đã chọn
+
+  console.log("Selected HTML:", selectedHtml);
+
+  // Chuyển ngược HTML về Markdown để xác định vị trí
+  const tempMarkdown = reverseMarked(selectedHtml); // Hàm này cần tự cài đặt
+
+  // Lấy Markdown gốc
+  const fullMarkdown = block.Content;
+
+  // Xác định vị trí trong Markdown gốc
+  const startIndex = fullMarkdown.indexOf(tempMarkdown);
+
+  const beforeText = fullMarkdown.substring(0, startIndex).trim();
+  const afterText = fullMarkdown.substring(startIndex + tempMarkdown.length).trim();
+
+  console.log('Trước:', beforeText.length);
+  console.log('Được chọn:', selectedText.length);
+  console.log('Sau:', afterText.length);
+
+  handleUpdateSelectionBlock(block, 5, beforeText, selectedText, afterText)
+
+}
+
+function handleUpdateSelectionBlock(block: DocumentBlock, levelSelect: number, beforeText: string, selectedText: string, afterText: string) {
+  block.State = 1;
+  const blockIndex = blocks.value.findIndex((b) => b.Id === block.Id)
+  console.log('index cua block duoc danh dau: ', blockIndex)
+  const gapLevel = levelSelect - block.Level
+  console.log(gapLevel)
+
+  if (beforeText.length === 0 && afterText.length === 0) {
+    handleUpadteLevelBlockAndChild(block);
+    return
+  }
+  if (beforeText.length === 0) {
+    console.log('chen ra truoc')
+    block.Content = afterText
+    const newBlock: DocumentBlock =
+    {
+      Id: crypto.randomUUID(),
+      ParentId: block.ParentId,
+      DocumentId: block.DocumentId,
+      Title: selectedText,
+      Content: selectedText,
+      Level: block.Level,
+      ContentType: block.ContentType,
+      Order: calculatorOrder(blockIndex - 1),
+      IsExpand: true,
+      IsShow: true,
+      State: 2,
+    }
+
+    blocks.value.splice(blockIndex , 0, newBlock)
+    handleUpadteLevelBlockAndChild(newBlock);
+  }
+  else {
+    if (afterText.length === 0) {
+      console.log('chen ra sau')
+      block.Content = beforeText
+      const newBlock: DocumentBlock =
+      {
+        Id: crypto.randomUUID(),
+        ParentId: block.ParentId,
+        DocumentId: block.DocumentId,
+        Title: selectedText,
+        Content: selectedText,
+        Level: block.Level,
+        ContentType: block.ContentType,
+        Order: calculatorOrder(blockIndex),
+        IsExpand: true,
+        IsShow: true,
+        State: 2,
+      }
+      blocks.value.splice(blockIndex + 1, 0, newBlock)
+      handleUpadteLevelBlockAndChild(newBlock);
+    }
+    else {
+      console.log('chen 2 block ra sau')
+      block.Content = beforeText
+      const newBlock: DocumentBlock =
+      {
+        Id: crypto.randomUUID(),
+        ParentId: block.ParentId,
+        DocumentId: block.DocumentId,
+        Title: selectedText,
+        Content: selectedText,
+        Level: block.Level,
+        ContentType: block.ContentType,
+        Order: calculatorOrder(blockIndex),
+        IsExpand: true,
+        IsShow: true,
+        State: 2,
+      }
+      blocks.value.splice(blockIndex + 1, 0, newBlock)
+
+      const newBlock2: DocumentBlock =
+      {
+        Id: crypto.randomUUID(),
+        ParentId: block.ParentId,
+        DocumentId: block.DocumentId,
+        Title: afterText,
+        Content: afterText,
+        Level: block.Level,
+        ContentType: block.ContentType,
+        Order: calculatorOrder(blockIndex+1),
+        IsExpand: true,
+        IsShow: true,
+        State: 2,
+      }
+      blocks.value.splice(blockIndex + 2, 0, newBlock2)
+
+      handleUpadteLevelBlockAndChild(newBlock);
+      if (gapLevel === 0) handleUpadteLevelBlockAndChild(newBlock2);
+    }
+  }
+
+  function handleUpadteLevelBlockAndChild(block: DocumentBlock) {
+    if (gapLevel === 0) {
+      const index = blocks.value.findIndex((b) => b.Id === block.Id)
+      console.log('index cua block moi duoc tach ra la: ', index)
+      for (let i = index + 1; i< blocks.value.length; i++) {
+        const b = blocks.value[i]
+        if (b.Level <= block.Level) break
+        console.log('cap nhat cha moi cho block: ', b.Content)
+        b.ParentId = block.Id
+        b.State = 1
+      }
+      updateBlocks()
+      handleSplitBlock()
+      return
+    }
+
+    if (gapLevel < 0) {
+      for (let i = 0; i> gapLevel; i--) {
+        handleUpLevel(block)
+      }
+    }
+    else {
+      for (let i = 0; i < gapLevel; i++) {
+        handleDownLevel(block)
+      }
+    }
+    updateBlocks()
+    handleSplitBlock()
+    return
+  }
+}
+
+//mo form them hoac sua block
 function showFormBlock(state: number) {
   /*trang thai state
   0: sua block
@@ -118,14 +331,20 @@ function showFormBlock(state: number) {
   editBlock.value = null
 }
 
+
+//dong form
 function handleCloseForm() {
   showForm.value = -1
   editBlock.value = null
   newContent.value = null
 }
 
+
+//them hoac sua block
 function handleSubmitBlockForm(data: string) {
   newContent.value = data
+
+  //sua block
   if (showForm.value === 0) {
     editBlock.value!.Content = newContent.value!
     editBlock.value!.State = 1
@@ -134,6 +353,7 @@ function handleSubmitBlockForm(data: string) {
     return
   }
 
+  //tao block moi
   const newBlock: DocumentBlock = {
     Id: crypto.randomUUID(),
     ParentId: null,
@@ -148,20 +368,20 @@ function handleSubmitBlockForm(data: string) {
     State: 2,
   }
 
+  //kieam tra block tao moi co thuoc block nao khong
   if (parentBlock.value) {
     newBlock.ParentId = parentBlock.value.Id
     newBlock.ContentType = parentBlock.value.ContentType
     newBlock.Level = showForm.value + 1
 
     const lastIndex = findLastChildIndex(parentBlock.value)
-    newBlock.Order =calculatorOrder(lastIndex)
+    newBlock.Order = calculatorOrder(lastIndex)
 
     blocks.value.splice(lastIndex + 1, 0, newBlock)
-  }
-  else {
+  } else {
     newBlock.ContentType = showForm.value
     const lastIndex = findLastIndexByContentType(showForm.value)
-    newBlock.Order =calculatorOrder(lastIndex)
+    newBlock.Order = calculatorOrder(lastIndex)
     blocks.value.splice(lastIndex + 1, 0, newBlock)
   }
 
@@ -171,23 +391,26 @@ function handleSubmitBlockForm(data: string) {
 }
 
 
+//tinh vi tri cho block moi tao
 function calculatorOrder(index: number) {
-  if (index === blocks.value.length - 1) return blocks.value[index].Order + 2000;
-  return  Math.round(
-      (blocks.value[index].Order + blocks.value[index + 1].Order) / 2,
-    )
+  if (index === blocks.value.length - 1) return blocks.value[index].Order + 2000
+  return Math.round((blocks.value[index].Order + blocks.value[index + 1].Order) / 2)
 }
 
+
+//tim vi tri cuoi cung cua block theo contentType
 function findLastIndexByContentType(type: number) {
-  if (type === 4) return blocks.value.length - 1;
+  if (type === 4) return blocks.value.length - 1
   for (let i = blocks.value.length - 1; i >= 0; i--) {
-        if (blocks.value[i].ContentType === type) {
-            return i;
-        }
+    if (blocks.value[i].ContentType === type) {
+      return i
     }
-    return blocks.value.length - 1;
+  }
+  return blocks.value.length - 1
 }
 
+
+//tim vi tri block con cuoi cung cua 1 block khi them con
 function findLastChildIndex(block: DocumentBlock) {
   const children = blocks.value.filter((b) => b.ParentId === block.Id)
 
@@ -203,6 +426,8 @@ function findLastChildIndex(block: DocumentBlock) {
   return findLastChildIndex(lastChild)
 }
 
+
+//danh sach cac mau cua level
 const colors = [
   {
     color: '#e81c2b',
@@ -241,30 +466,46 @@ const popupPosition = ref({
   right: 200,
 })
 
+
+//kiem tra co the len cap block khong
 function checkUpLevel(block: DocumentBlock) {
   if (block.Level < 3) return false
   return true
 }
 
+
+//kiem tra co the xuong cap block khong
 function checkDownLevel(block: DocumentBlock) {
   if (block.Level === 0) return false
   if (block.Level === 7) return false
   return true
 }
+
 const blocks = ref<DocumentBlock[]>([])
 
+
+//xu ly viec len cap block
 function handleUpLevel(block: DocumentBlock) {
   if (!checkUpLevel(block)) return
+
   const blockIndex = blocks.value.findIndex((b) => b.Id === block.Id)
+
+  //duyet cac phan tu o sau no
   for (let i = blockIndex + 1; i < blocks.value.length; i++) {
     const b = blocks.value[i]
     if (b.State === 3) continue
+
+    //gap block level cao hon thi dung lai
     if (b.Level < block.Level) break
+
+    //neu ngang level thi se cho lam con
     if (b.Level === block.Level) {
       b.ParentId = block.Id
       if (b.State != 2) b.State = 1
       continue
     }
+
+    //neu dang lam con thi update them cac con cua no
     if (b.ParentId === block.Id) {
       handleUpdateChildsWhenUpLevel(b)
       b.Level = block.Level
@@ -272,13 +513,19 @@ function handleUpLevel(block: DocumentBlock) {
     }
   }
 
+  //duyet cac block o truoc no
   for (let i = blockIndex - 1; i > 0; i--) {
     const b = blocks.value[i]
+
+    //neu block bi xoa thi bo qua
     if (b.State === 3) continue
+
+    //neu la cha cua block dang len cap, thi cap nhat cha cua block len cap
     if (b.Id === block.ParentId) {
       if (block.Level - 1 === b.Level) block.ParentId = b.ParentId
     }
   }
+
   block.Level--
   if (block.State != 2) block.State = 1
   editBlock.value = null
@@ -287,6 +534,8 @@ function handleUpLevel(block: DocumentBlock) {
   showPopup.value = null
 }
 
+
+//dequy cap nhat cac block con,chau... cua 1 block
 function handleUpdateChildsWhenUpLevel(block: DocumentBlock) {
   const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
   childenBlocks.forEach((b) => {
@@ -296,23 +545,47 @@ function handleUpdateChildsWhenUpLevel(block: DocumentBlock) {
   })
 }
 
+//canh bao khi khong the xuong cap
+const downLevelWarning = ref(false)
+
+
+//ham xu ly xuong cap 1 block
 function handleDownLevel(block: DocumentBlock) {
-  if (!checkDownLevel(editBlock.value!)) return
+  if (!checkDownLevel(block)) return
   const blockIndex = blocks.value.findIndex((b) => b.Id === block.Id)
-  for (let i = blockIndex - 1; i > 0; i--) {
+
+  //duyet cac block o truoc no
+  for (let i = blockIndex - 1; i >= 0; i--) {
     const b = blocks.value[i]
+    //neu block xuong cap la phan dau tien cua contentBlock thi khong cho xuong cap
+    if (b.ContentType === 1) {
+        downLevelWarning.value = true
+        showPopup.value = null
+        editBlock.value = null
+        return
+    }
+
+    //neu block bi xoa thi bo qua
     if (b.State === 3) continue
+
+    //neu no la cap cao hon hoac bang cua block xuong cap
     if (b.Level <= block.Level) {
+      //neu la cha cua block xuong cap(khong co block nao de chua no)
       if (b.Id === block.ParentId) {
-        console.log('khong the ha cap')
+        downLevelWarning.value = true
+        showPopup.value = null
         editBlock.value = null
         return
       }
       block.ParentId = b.Id
+      if (b.IsExpand === false) {
+        b.IsShow = false
+      }
       break
     }
   }
 
+  //duyet cac phan tu o sau no
   for (let i = blockIndex + 1; i < blocks.value.length; i++) {
     const b = blocks.value[i]
     if (b.State === 3) continue
@@ -330,12 +603,16 @@ function handleDownLevel(block: DocumentBlock) {
   showPopup.value = null
 }
 
+
+//xu ly xoa block
 function handleDelete(block: DocumentBlock) {
   removeChild(block)
   updateBlocks()
   handleSplitBlock()
 }
 
+
+//xoa block thi se de quy xoa cac ptu con,chau cua no
 function removeChild(block: DocumentBlock) {
   block.State = 3
   const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
@@ -344,15 +621,25 @@ function removeChild(block: DocumentBlock) {
   })
 }
 
+
 function togglePopupAction(block: DocumentBlock, event: MouseEvent): void {
   const target = event.currentTarget as HTMLElement
   if (!target) return
 
   const buttonRect = target.getBoundingClientRect()
 
+  let newTop = buttonRect.top - 10
+  const newRight = window.innerWidth - buttonRect.left + 10
+  const screenHeight = window.innerHeight
+
+  if (newTop + 150 > screenHeight) {
+    newTop = newTop - 100
+  }
+
   popupPosition.value = {
-    top: buttonRect.top - 10,
-    right: window.innerWidth - buttonRect.left + 10,
+    top: newTop,
+    right: newRight,
+
   }
 
   showPopupContent.value = -1
@@ -360,6 +647,7 @@ function togglePopupAction(block: DocumentBlock, event: MouseEvent): void {
   if (showPopup.value === block.Id) showPopup.value = null
   else showPopup.value = block.Id
 }
+
 
 const showPopupContent = ref(-1)
 
@@ -383,6 +671,7 @@ function checkHasChild(block: DocumentBlock) {
   return blocks.value.some((b) => b.ParentId == block.Id && b.State != 3)
 }
 
+
 function toggleExpandBlock(block: DocumentBlock) {
   if (block.IsExpand) {
     handleCollapseBlock(block)
@@ -391,18 +680,24 @@ function toggleExpandBlock(block: DocumentBlock) {
   }
 }
 
+
+//thu gon
 function handleCollapseBlock(block: DocumentBlock) {
   block.IsExpand = false
   hiddenBlock(block)
   block.IsShow = true
 }
 
+
+//mo rong
 function handleExpandBlock(block: DocumentBlock) {
   block.IsExpand = true
   showBlock(block)
   block.IsShow = true
 }
 
+
+//an block
 function hiddenBlock(block: DocumentBlock) {
   block.IsShow = false
   const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
@@ -411,6 +706,8 @@ function hiddenBlock(block: DocumentBlock) {
   })
 }
 
+
+//hien block
 function showBlock(block: DocumentBlock) {
   const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
   childenBlocks.forEach((b) => {
@@ -447,6 +744,8 @@ function toggleBlock(index: number) {
 
 const blocksData = ref<DocumentBlock[][]>([])
 
+
+//chia blocks theo contentType
 function handleSplitBlock() {
   const firstBlocks: DocumentBlock[] = []
   const contentBlocks: DocumentBlock[] = []

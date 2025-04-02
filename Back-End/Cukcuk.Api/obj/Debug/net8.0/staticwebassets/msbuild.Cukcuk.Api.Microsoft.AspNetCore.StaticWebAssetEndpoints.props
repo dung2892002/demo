@@ -12,5 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"72543"},{"Name":"Content-Type","Value":"application/vnd.openxmlformats-officedocument.wordprocessingml.document"},{"Name":"ETag","Value":"\u0022ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:07:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WGxTI1wb3nrIzLZ\u002BmKR1be9tvCWOwsRS26J8JB4aJAQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"138752"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022WGxTI1wb3nrIzLZ\u002BmKR1be9tvCWOwsRS26J8JB4aJAQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:15:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Cukcuk.Api/files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.wqaxv4d82a.doc">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wqaxv4d82a"},{"Name":"integrity","Value":"sha256-WGxTI1wb3nrIzLZ\u002BmKR1be9tvCWOwsRS26J8JB4aJAQ="},{"Name":"label","Value":"_content/Cukcuk.Api/files/b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"138752"},{"Name":"Content-Type","Value":"application/msword"},{"Name":"ETag","Value":"\u0022WGxTI1wb3nrIzLZ\u002BmKR1be9tvCWOwsRS26J8JB4aJAQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:15:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

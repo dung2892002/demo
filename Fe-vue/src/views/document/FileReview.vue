@@ -1,11 +1,11 @@
 <template>
   <div class="content-main">
-    <div class="file">
+    <div class="file" @click="handleClosePopup">
       <div
         v-for="(document, index) in documents"
         :key="index"
         class="file-item"
-        @click="selectDocument(document, index)"
+        @click.stop="selectDocument(document, index)"
       >
         <div style="padding-left: 10px">
           <img
@@ -88,12 +88,13 @@
             </div>
           </div>
         </div>
-        <div class="file-content__body">
+        <div class="file-content__body" @scroll="handleClosePopup" >
           <div v-show="showBlock">
             <DocumentBlocks
               :propBlocks="showDocument?.DocumentBlocks!"
               :edit-mode="editMode"
               @update-blocks="handleUpdateBlocks"
+              ref="blocksRef"
             />
           </div>
           <div v-show="!showBlock && showDocument?.MarkdownContent">
@@ -161,6 +162,18 @@ const colors = [
 ]
 
 const showColorList = ref(true)
+
+// const parentRef = ref(null);
+const blocksRef = ref<InstanceType<typeof DocumentBlocks> | null>(null);
+
+import { debounce } from "lodash";
+
+const handleClosePopup = debounce(() => {
+  if (blocksRef.value?.closeContextMenuAndPopup) {
+    blocksRef.value.closeContextMenuAndPopup();
+  }
+}, 100); // Chỉ gọi sau 200ms nếu không có scroll mới
+
 
 function toggleShowColorList() {
   showColorList.value = !showColorList.value

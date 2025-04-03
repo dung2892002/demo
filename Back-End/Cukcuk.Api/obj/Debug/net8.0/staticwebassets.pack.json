@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
-      "PackagePath": "staticwebassets\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx"
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc",
+      "PackagePath": "staticwebassets\\files\\69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc"
     },
     {
-      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc",
-      "PackagePath": "staticwebassets\\files\\b3ab45cb-2110-4636-86ee-17240e52333c_20_2023_QH15_513347.doc"
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
+      "PackagePath": "staticwebassets\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

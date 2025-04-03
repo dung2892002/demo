@@ -49,8 +49,7 @@
               "RelativeToolTip": "Controllers\\DocumentsController.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAowDwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T07:01:47.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T07:01:47.235Z"
             },
             {
               "$type": "Document",
@@ -62,8 +61,7 @@
               "RelativeToolTip": "..\\Cukcuk.Core\\DTOs\\AddContentRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T07:01:37.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T07:01:37.109Z"
             },
             {
               "$type": "Document",
@@ -75,8 +73,7 @@
               "RelativeToolTip": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAkwHkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T08:03:32.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T08:03:32.447Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "..\\Cukcuk.Core\\Entities\\DocumentBlock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:48:10.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:48:10.729Z"
             }
           ]
         }

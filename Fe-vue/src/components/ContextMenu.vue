@@ -9,7 +9,7 @@
       {{ action.label }}
     </span>
   </div>
-  <div class="overlay" @click="emitClose" @contextmenu.prevent="emitClose"></div>
+  <!-- <div class="overlay" @click="emitClose" @contextmenu.prevent="emitClose"></div> -->
 </template>
 
 <script setup lang="ts">
@@ -29,9 +29,6 @@ const props = defineProps({
 const emit = defineEmits(['actionClick', 'close'])
 const loading = ref(-1)
 
-function emitClose() {
-  emit('close')
-}
 
 function emitAction(action: ActionMenu, index: number) {
   loading.value = index

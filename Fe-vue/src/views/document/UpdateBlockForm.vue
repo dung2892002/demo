@@ -109,6 +109,11 @@ onMounted(async () => {
     extensions: [
       StarterKit.configure({
         bold: false,
+        heading: false,     // Tắt tự động định dạng tiêu đề
+        bulletList: false,  // Tắt danh sách không thứ tự (ul)
+        orderedList: false, // Tắt danh sách có thứ tự (ol)
+        blockquote: false,  // Tắt trích dẫn
+        codeBlock: false,
       }),
       Underline,
       Bold

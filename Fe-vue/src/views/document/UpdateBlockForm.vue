@@ -80,8 +80,7 @@ function handleCloseForm() {
 }
 
 function handleSubmitForm() {
-
-    emits('submitForm', newContent.value);
+    emits('submitForm', newContent.value?.trim());
 }
 
 const newContent = ref<string|null>(null)
@@ -123,7 +122,10 @@ onMounted(async () => {
       newContent.value = editor.getHTML();
     },
   });
+
+  console.log('Editor initialized:', newContent.value);
 });
+
 
 onBeforeUnmount(() => {
   if (editor.value) {

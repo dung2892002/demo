@@ -102,7 +102,7 @@
               </th>
               <th>Tên tài liệu</th>
               <th class="w-20">Chủ đề</th>
-              <th class="w-20">Phân loại</th>
+              <th class="w-24">Phân loại</th>
               <th class="w-20">Ngày tạo</th>
               <th class="w-30" v-if="keyword.trim().length > 0">Vị trí</th>
               <th class="w-15">Hành động</th>

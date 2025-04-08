@@ -3,8 +3,8 @@
     <span
       v-for="(action, index) in props.actions"
       :key="index"
-      @click="emitAction(action, index)"
-      v-loading="loading == index"
+      @click="emitAction(action)"
+      :class="{disable: action.state === false}"
     >
       {{ action.label }}
     </span>
@@ -14,7 +14,6 @@
 
 <script setup lang="ts">
 import type { ActionMenu } from '@/entities/ActionMenu'
-import { ref } from 'vue'
 
 const props = defineProps({
   actions: {
@@ -27,11 +26,10 @@ const props = defineProps({
   },
 })
 const emit = defineEmits(['actionClick', 'close'])
-const loading = ref(-1)
 
 
-function emitAction(action: ActionMenu, index: number) {
-  loading.value = index
+function emitAction(action: ActionMenu) {
+  if (action.state === false) return
   emit('actionClick', action)
 }
 </script>

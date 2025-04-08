@@ -211,7 +211,6 @@ const updatedBlocks = ref<DocumentBlock[]>([])
 
 function handleUpdateBlocks(updated: DocumentBlock[]) {
   updatedBlocks.value = updated
-  console.log('Danh sách block cần lưu:', updatedBlocks.value)
 }
 
 function confirmUpload() {

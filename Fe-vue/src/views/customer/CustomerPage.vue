@@ -190,8 +190,8 @@ const exportLoading = ref(false)
 const tableContainer = ref<HTMLDivElement | null>(null)
 
 const contextMenuActions = ref<ActionMenu[]>([
-  { label: 'Sửa', action: 'update' },
-  { label: 'Xoá', action: 'delete' },
+  { label: 'Sửa', action: 'update', state: true },
+  { label: 'Xoá', action: 'delete', state: true },
 ])
 
 function importFile() {

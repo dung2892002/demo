@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UQUjqRuIWyN941mTIdbCbU14dgD9Y00qN9J9k4NeUM8=",
+  "Hash": "U8HmeXyM/uI0cD9TBSplTIhroJ9K6VJf2lamJPuyWaU=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -16,27 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "wqaxv4d82a",
-      "Integrity": "WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc"
-    },
     {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
       "SourceId": "Cukcuk.Api",
@@ -57,91 +36,30 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wqaxv4d82a",
+      "Integrity": "WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347.doc"
     }
   ],
   "Endpoints": [
-    {
-      "Route": "files/69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "138752"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 10:22:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.wqaxv4d82a.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "138752"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 10:22:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wqaxv4d82a"
-        },
-        {
-          "Name": "label",
-          "Value": "files/69d30c67-5d27-4deb-8c30-290670dbae36_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
-        }
-      ]
-    },
     {
       "Route": "files/97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.dmg1oqfyma.docx",
       "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
@@ -221,6 +139,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="
+        }
+      ]
+    },
+    {
+      "Route": "files/ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 03:06:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
+        }
+      ]
+    },
+    {
+      "Route": "files/ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347.wqaxv4d82a.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 03:06:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wqaxv4d82a"
+        },
+        {
+          "Name": "label",
+          "Value": "files/ba0a40f6-02af-4e42-b50b-ed68180f5f2c_20_2023_QH15_513347.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
         }
       ]
     }

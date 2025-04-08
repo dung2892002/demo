@@ -196,11 +196,11 @@ const errorMessage = ref<string | null>(null)
 const tableContainer = ref<HTMLDivElement | null>(null)
 
 const contextMenuActions = ref<ActionMenu[]>([
-  { label: 'Sửa', action: 'update' },
-  { label: 'Sửa', action: 'update' },
-  { label: 'Xoá', action: 'delete' },
-  { label: 'Xoá', action: 'delete' },
-  { label: 'Xoá', action: 'delete' },
+  { label: 'Sửa', action: 'update', state: true },
+  { label: 'Sửa', action: 'update', state: true },
+  { label: 'Xoá', action: 'delete', state: true },
+  { label: 'Xoá', action: 'delete', state: true },
+  { label: 'Xoá', action: 'delete', state: true },
 ])
 
 function importFile() {

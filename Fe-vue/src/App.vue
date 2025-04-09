@@ -11,7 +11,7 @@ import Cookies from 'js-cookie'
 import { useStore } from 'vuex'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { connection } from './signalR'
+import { connection } from './ts/signalR'
 
 const store = useStore()
 const router = useRouter()

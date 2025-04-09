@@ -124,7 +124,7 @@
 
 <script setup lang="ts">
 import type { Document, DocumentBlock, DocumentCategory } from '@/entities/Document'
-import { getSrcIconDocument } from '@/utils'
+import { getSrcIconDocument } from '@/ts/utils'
 import axios from 'axios'
 import { marked } from 'marked'
 import { onMounted, ref, type PropType } from 'vue'

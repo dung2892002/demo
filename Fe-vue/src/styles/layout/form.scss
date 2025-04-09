@@ -32,11 +32,15 @@
 
 .form-buttons {
   display: flex;
-  flex-direction: row;
-  gap: 2px;
-  align-items: center;
+  flex-direction: column;
+  
+  .form-buttons-list {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: center;
 
-  button {
+    button {
     width: 36px;
     height: 36px;
     background-color: #f0f0f0;
@@ -48,6 +52,9 @@
       border-color: #078cf8;
     }
   }
+  }
+
+  
 }
 
 .form__button {

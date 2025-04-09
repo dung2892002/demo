@@ -86,10 +86,13 @@
   <UpdateBlockForm
     v-if="showForm != -1"
     :loading="false"
-    :content="newContent"
+    :block="editBlock"
+    :state="showForm"
+    :blocks-to-select="blocksPropToForm"
     @close-form="handleCloseForm"
     @submit-form="handleSubmitBlockForm"
   />
+
   <!-- menu de chon cac hanh dong voi block -->
   <ContextMenu
       v-if="showMenu"
@@ -97,31 +100,15 @@
       @actionClick="handleActionClick"
       :position="menuPosition"
     ></ContextMenu>
+
   <!-- canh bao khi khong the xuong level -->
-  <div v-if="downLevelWarning" class="form-container">
-    <div class="form__content">
-      <div class="form__header">
-        <h2 class="form__title">Xác nhận</h2>
-        <button class="form__button" @click="downLevelWarning = false">
-          <img src="/src/assets/icon/close-48.png" alt="logo" />
-        </button>
-      </div>
-      <form class="cukcuk-form" id="form">
-        <div class="form-group">
-          <div class="form__item">
-            <span>
-              Không thể chuyển cấp do không đúng định dạng mục lục?
-            </span>
-          </div>
-        </div>
-      </form>
-      <div class="form__footer">
-        <button class="button--complete" id="submitButton" @click="downLevelWarning = false">
-          <span src="/src/assets/icon/refresh.png" alt="logo">Xác nhận</span>
-        </button>
-      </div>
-    </div>
-  </div>
+  <WarningPopup
+    v-if="downLevelWarning"
+    :title="'Xác nhận'"
+    :content="'Không thể chuyển cấp do không đúng định dạng mục lục?'"
+    @close="downLevelWarning = false"
+    />
+
 </template>
 
 <script setup lang="ts">
@@ -134,7 +121,6 @@ marked.setOptions({
   breaks: true,
   gfm: true,
 })
-
 
 function formatMarkdown(content: string) {
   return content.replace(/^(\d+)\.\s/gm, '$1\\. ');
@@ -150,6 +136,8 @@ const currentType = ref(-1)
 
 import ContextMenu from '@/components/ContextMenu.vue'
 import type { ActionMenu } from '@/entities/ActionMenu'
+import { calculateExactIndex, calculateIndexInMarkdown, fixAndCompleteHTML, fixHTMLSubstring, getSelectedTextLengthInMarkdown, removeHtmlTags } from '@/ts/markdown'
+import WarningPopup from '@/components/WarningPopup.vue'
 
 
 const menuPosition = ref({
@@ -157,16 +145,38 @@ const menuPosition = ref({
   left: 0,
 })
 
-function showContextMenu(event: MouseEvent, block: DocumentBlock, state: boolean) {
+const contextMenuActions = ref<ActionMenu[]>([
+  { label: 'Đánh dấu là Mở đầu', action: '0',state: true  },
+  { label: 'Đánh dấu là Chương', action: '2', state: true },
+  { label: 'Đánh dấu là Mục', action: '3', state: true },
+  { label: 'Đánh dấu là Tiểu mục', action: '4', state: true },
+  { label: 'Đánh dấu là Điều', action: '5', state: true },
+  { label: 'Đánh dấu là Khoản', action: '6', state: true },
+  { label: 'Đánh dấu là Điểm', action: '7', state: true },
+  { label: 'Đánh dấu là Chữ ký', action: '8', state: true },
+  { label: 'Đánh dấu là Nội dung khác', action: '9', state: true },
+])
+
+function closeContextMenuAndPopup() {
+  contextMenuActions.value.forEach((action) => {
+    action.state = true
+  })
+  showMenu.value = false
+  showPopup.value = null
+  showPopupContent.value = -1
+}
+
+defineExpose({closeContextMenuAndPopup})
+
+async function showContextMenu(event: MouseEvent, block: DocumentBlock, state: boolean) {
   closeContextMenuAndPopup()
-  beforeText.value = ''
-  afterText.value = ''
-  selectedText.value = ''
   if (block && props.editMode) {
     if (state) {
-      handleSelection(block)
+      await handleSelection(block)
       if (block.ContentType === 2) {
-        if (selectedText.value.length === 0) contextMenuActions.value[block.Level - 1].state = false
+        if (selectedText.value.length === 0 || (beforeText.value.length === 0 && afterText.value.length === 0)) {
+          contextMenuActions.value[block.Level - 1].state = false
+        }
       }
       else {
         if (block.ContentType === 1) {
@@ -200,76 +210,82 @@ function showContextMenu(event: MouseEvent, block: DocumentBlock, state: boolean
 
 function handleActionClick(action: ActionMenu) {
   closeContextMenuAndPopup()
+  //chuyen thanh mo dau
   if (action.action === '0') {
+    selectedText.value = beforeText.value + selectedText.value
+    beforeText.value = ''
+    handleConvertToFirstBlock()
     return
   }
 
+  //chuyen thanh chu ky
   if (action.action === '8') {
-    selectedText.value = selectedText.value + afterText.value
-    afterText.value = ''
+
+    //chuyen tu tren xuong
+    if(editBlock.value!.ContentType != 4) {
+      selectedText.value = selectedText.value + afterText.value
+      afterText.value = ''
+    }
+    //chuyen tu duoi len
+    else {
+      selectedText.value = beforeText.value + selectedText.value
+      beforeText.value = ''
+    }
     handleConvertToSightBlock()
     return
   }
 
+
+  //chuyen thanh noi dung khac
   if (action.action === '9') {
+    selectedText.value = selectedText.value + afterText.value
+    afterText.value = ''
+    handleConvertToOtherBlock()
     return
   }
 
+
+  //chuyen thanh noi dung
+  //chuyen tu tren mo dau xuong
+  if (editBlock.value!.ContentType === 1) {
+    selectedText.value = selectedText.value + afterText.value
+    afterText.value = ''
+  }
+
+  //chuyen tu duoi chu ky va noi dung khac len
+  if (editBlock.value!.ContentType === 3 || editBlock.value!.ContentType === 4) {
+    selectedText.value = beforeText.value + selectedText.value
+    beforeText.value = ''
+  }
   handleUpdateSelectionBlock(editBlock.value!, Number(action.action))
 }
 
-const contextMenuActions = ref<ActionMenu[]>([
-  { label: 'Đánh dấu là Mở đầu', action: '0',state: true  },
-  { label: 'Đánh dấu là Chương', action: '2', state: true },
-  { label: 'Đánh dấu là Mục', action: '3', state: true },
-  { label: 'Đánh dấu là Tiểu mục', action: '4', state: true },
-  { label: 'Đánh dấu là Điều', action: '5', state: true },
-  { label: 'Đánh dấu là Khoản', action: '6', state: true },
-  { label: 'Đánh dấu là Điểm', action: '7', state: true },
-  { label: 'Đánh dấu là Chữ ký', action: '8', state: true },
-  { label: 'Đánh dấu là Nội dung khác', action: '9', state: true },
-])
-
-
-function closeContextMenuAndPopup() {
-  contextMenuActions.value.forEach((action) => {
-    action.state = true
-  })
-  showMenu.value = false
-  showPopup.value = null
-  showPopupContent.value = -1
-}
-
-defineExpose({closeContextMenuAndPopup})
-
 const fullMarkdown = ref<string| null>(null)
-
 const beforeText = ref<string>('')
 const selectedText = ref<string>('')
 const afterText = ref<string>('')
 
-
-function removeHtmlTags(str: string): string {
-  return str
-    .replace(/<br\s*\/?>/gi, '\n') // Thay thế thẻ <br> bằng xuống dòng
-    .replace(/<\/?[^>]+(>|$)/g, ""); // Xóa tất cả các thẻ HTML khác
-}
-
 async function handleSelection(block: DocumentBlock) {
   editBlock.value = block;
+  beforeText.value = ''
+  afterText.value = ''
+  selectedText.value = ''
 
   const selection = window.getSelection();
   if (!selection || selection.rangeCount === 0) return;
 
-  selectedText.value = selection.toString().trim().split(/\n\s*\n/).pop()!;
+  selectedText.value = selection.toString().split(/\n\s*\n/).pop()!;
   if (!selectedText.value) return;
 
   // Lấy Markdown gốc
   fullMarkdown.value = await marked.parse(formatMarkdown(block.Content));
   fullMarkdown.value = fullMarkdown.value.slice(3, -5)
 
+  // console.log('Markdown: ', fullMarkdown.value);
+
   // Loại bỏ các thẻ HTML khỏi Markdown
   const fullText = removeHtmlTags(fullMarkdown.value);
+  // console.log('Văn bản gốc:', fullText);
 
   let startIndex = 0;
   // Xác định vị trí chính xác trong văn bản gốc
@@ -277,208 +293,21 @@ async function handleSelection(block: DocumentBlock) {
     startIndex = calculateExactIndex(fullText, selectedText.value, selection.getRangeAt(0));
   }
 
-  const indexInMarkdown = calculateIndexInMarkdown(startIndex);
-  const textLenght = getSelectedTextLengthInMarkdown(indexInMarkdown)
-  /*
-  console.log('Vị trí bắt đầu trong văn bản:', startIndex);
-  console.log('Vị trí bắt đầu trong markdown:', indexInMarkdown);
-  console.log('Độ dài Văn bản được chọn:', selectedText.value.length);
-  console.log('Độ dài Văn bản được chọn trong markdown:', textLenght);
-  */
+  const indexInMarkdown = calculateIndexInMarkdown(startIndex, selectedText.value, fullText, fullMarkdown.value);
+  const textLenght = getSelectedTextLengthInMarkdown(indexInMarkdown, fullMarkdown.value, selectedText.value);
+
+  // console.log('Vị trí bắt đầu trong văn bản:', startIndex);
+  // console.log('Vị trí bắt đầu trong markdown:', indexInMarkdown);
+  // console.log('Độ dài Văn bản được chọn:', selectedText.value.length);
+  // console.log('Độ dài Văn bản được chọn trong markdown:', textLenght);
 
   selectedText.value = fixHTMLSubstring(fullMarkdown.value, indexInMarkdown, indexInMarkdown + textLenght).trim()
   beforeText.value = fixAndCompleteHTML(fullMarkdown.value.substring(0, indexInMarkdown).trim())
   afterText.value = fixAndCompleteHTML(fullMarkdown.value.substring(indexInMarkdown + textLenght).trim());
 
-  console.log('Trước:', beforeText.value);
-  console.log('Được chọn:', selectedText.value);
-  console.log('Sau:', afterText.value);
-}
-
-
-//hoan thien cac the html con thieu va xoa cac the thua
-function fixAndCompleteHTML(input: string): string {
-  const tagPattern = /<\/?([a-zA-Z0-9]+)[^>]*?>/g;
-  const selfClosingTags = ['br', 'img', 'hr', 'input', 'meta', 'link'];
-
-  // 1. Xoá các thẻ đóng và <br> ở đầu chuỗi
-  const cleanedInput = input.replace(/^(\s*<\/[^>]+>|\s*<br\s*\/?>)+/gi, '');
-
-  const openStack: string[] = [];
-  const missingOpen: string[] = [];
-
-  let match: RegExpExecArray | null;
-
-  tagPattern.lastIndex = 0; // reset regex
-  while ((match = tagPattern.exec(cleanedInput)) !== null) {
-    const fullTag = match[0];
-    const tagName = match[1].toLowerCase();
-
-    const isClosing = fullTag.startsWith('</');
-    const isSelfClosing = fullTag.endsWith('/>') || selfClosingTags.includes(tagName);
-
-    if (isSelfClosing) continue;
-
-    if (isClosing) {
-      const openIndex = openStack.lastIndexOf(tagName);
-      if (openIndex !== -1) {
-        openStack.splice(openIndex, 1); // matched → remove
-      } else {
-        missingOpen.unshift(`<${tagName}>`); // thẻ đóng không có mở → thêm mở
-      }
-    } else {
-      openStack.push(tagName); // thẻ mở
-    }
-  }
-
-  // 2. Các thẻ chưa được đóng sẽ cần đóng ở cuối
-  const missingClose = openStack.reverse().map(tag => `</${tag}>`);
-
-  // 3. Trả kết quả hoàn chỉnh
-  return missingOpen.join('') + cleanedInput + missingClose.join('');
-}
-
-
-//hoan thien cac the html cho phan text duoc chon
-function fixHTMLSubstring(input: string, startIndex: number, endIndex: number): string {
-  const selfClosingTags = ['br', 'img', 'hr', 'input', 'meta', 'link'];
-  const openingTagsStack: string[] = [];
-
-  // 1. Phân tích từ đầu đến startIndex → tìm các thẻ đang mở
-  const beforeSlice = input.slice(0, startIndex);
-  const tagPattern = /<\/?([a-zA-Z0-9]+)[^>]*?>/g;
-  let match: RegExpExecArray | null;
-
-
-  while ((match = tagPattern.exec(beforeSlice)) !== null) {
-    const fullTag = match[0];
-    const tagName = match[1].toLowerCase();
-    const isClosing = fullTag.startsWith('</');
-    const isSelfClosing = selfClosingTags.includes(tagName) || fullTag.endsWith('/>');
-
-    if (isSelfClosing) continue;
-
-    if (isClosing) {
-      // Xóa thẻ mở tương ứng nếu có
-      const lastOpen = openingTagsStack.lastIndexOf(tagName);
-      if (lastOpen !== -1) {
-        openingTagsStack.splice(lastOpen, 1);
-      }
-    } else {
-      openingTagsStack.push(tagName);
-    }
-  }
-
-  // 2. Lấy đoạn cắt
-  const extracted = input.slice(startIndex, endIndex);
-
-  // 3. Phân tích trong đoạn cắt để tìm các thẻ mở chưa đóng
-  const innerOpenStack: string[] = [];
-  tagPattern.lastIndex = 0; // reset regex
-
-  while ((match = tagPattern.exec(extracted)) !== null) {
-    const fullTag = match[0];
-    const tagName = match[1].toLowerCase();
-    const isClosing = fullTag.startsWith('</');
-    const isSelfClosing = selfClosingTags.includes(tagName) || fullTag.endsWith('/>');
-
-    if (isSelfClosing) continue;
-
-    if (isClosing) {
-      if (innerOpenStack.length > 0 && innerOpenStack[innerOpenStack.length - 1] === tagName) {
-        innerOpenStack.pop();
-      }
-    } else {
-      innerOpenStack.push(tagName);
-    }
-  }
-
-  const openingHTML = openingTagsStack.map(tag => `<${tag}>`).join('');
-  const closingHTML = [...openingTagsStack.reverse(), ...innerOpenStack.reverse()]
-    .map(tag => `</${tag}>`)
-    .join('');
-
-  return openingHTML + extracted + closingHTML;
-}
-
-//lay do dai trong markdown
-function getSelectedTextLengthInMarkdown(indexInMarkdown: number): number {
-  if (fullMarkdown.value === null) return 0
-
-  let textLength = 0
-  let check = false
-  let countText = 0
-  for (let i = indexInMarkdown; i < fullMarkdown.value.length; i++) {
-    textLength = textLength + 1
-    if (fullMarkdown.value[i] === '<') {
-      check = true
-      continue
-    }
-    if (fullMarkdown.value[i] === '>') {
-      check = false
-      continue
-    }
-    if (!check) countText = countText + 1
-    if (countText === selectedText.value.length) {
-      break
-    }
-  }
-  return textLength
-}
-
-//lay vi tri trong markdown
-function calculateIndexInMarkdown(startIndex: number): number {
-  if (fullMarkdown.value === null) return 0
-
-  let indexInMarkdown = 0;
-  let count = startIndex;
-  let checkCount = true;
-
-  for (let i = 0; i < fullMarkdown.value.length; i++) {
-    if (count === 0) {
-        break
-      }
-    if (fullMarkdown.value[i] === '<') {
-      checkCount = false
-      continue
-    }
-    if (fullMarkdown.value[i] === '>') {
-      checkCount = true
-      continue
-    }
-    if (checkCount) {
-      count--
-      indexInMarkdown = i
-    }
-  }
-  if (indexInMarkdown != 0) indexInMarkdown++
-
-  return indexInMarkdown
-}
-
-//lay vi tri chinh xac cua doan text duoc chon trong text goc
-function calculateExactIndex(fullText: string, selectedText: string, range: Range): number {
-  // Lấy vị trí của đoạn bôi đen trong DOM
-  const container = range.startContainer;
-  const offset = range.startOffset;
-
-  // Tìm vị trí của đoạn bôi đen trong nội dung gốc
-  let currentIndex = 0;
-  let matchIndex = -1;
-
-  while ((matchIndex = fullText.indexOf(selectedText, currentIndex)) !== -1) {
-    // Kiểm tra xem đoạn tìm thấy có khớp với vị trí trong DOM không
-    const textBeforeMatch = fullText.substring(0, matchIndex);
-    const domTextBeforeMatch = container.textContent?.substring(0, offset) || '';
-
-    if (textBeforeMatch.endsWith(domTextBeforeMatch)) {
-      return matchIndex; // Trả về vị trí chính xác
-    }
-
-    currentIndex = matchIndex + 1; // Tiếp tục tìm kiếm
-  }
-
-  return -1; // Không tìm thấy
+  // console.log('Trước:', beforeText.value);
+  // console.log('Được chọn:', selectedText.value);
+  // console.log('Sau:', afterText.value);
 }
 
 //cap nhat lai cac block
@@ -488,6 +317,7 @@ function handleUpdateSelectionBlock(block: DocumentBlock, levelSelect: number) {
 
   if (beforeText.value.length === 0 && afterText.value.length === 0) {
     block.Level = levelSelect
+    block.ContentType = 2
     handleUpadteLevelBlockAndChild(block)
     updateBlocks()
     handleSplitBlock()
@@ -568,7 +398,7 @@ function handleUpdateSelectionBlock(block: DocumentBlock, levelSelect: number) {
         Title: afterText.value,
         Content: afterText.value,
         Level: block.Level,
-        ContentType: block.ContentType,
+        ContentType: 2,
         Order: calculatorOrder(blockIndex+1),
         IsExpand: true,
         IsShow: true,
@@ -611,21 +441,192 @@ function handleUpdateSelectionBlock(block: DocumentBlock, levelSelect: number) {
   }
 }
 
+//chuyen thanh mo dau
+function handleConvertToFirstBlock() {
+  let index = blocks.value.findIndex((b) => b.Id === editBlock.value!.Id)
 
-function handleConvertToSightBlock() {
-  const index = blocks.value.findIndex((b) => b.Id === editBlock.value!.Id)
-  if (beforeText.value.length != 0) {
-    editBlock.value!.Content = beforeText.value
+  let lastFirstIndex = 0;
+
+  for (let i = 0; i < blocks.value.length; i++) {
+    const b = blocks.value[i]
+    if (b.ContentType != 1) {
+      lastFirstIndex = i
+      break
+    }
+  }
+
+  if (lastFirstIndex != 0) {
+    lastFirstIndex = lastFirstIndex - 1
+  }
+
+
+  const newBlock: DocumentBlock =
+  {
+    Id: crypto.randomUUID(),
+    ParentId: null,
+    DocumentId: blocks.value[0].DocumentId,
+    Title: 'Mở đầu',
+    Content: selectedText.value,
+    Level: 0,
+    ContentType: 1,
+    Order: calculatorOrder(lastFirstIndex),
+    IsExpand: true,
+    IsShow: true,
+    State: 2,
+  }
+
+
+
+  if (afterText.value.length === 0) {
+    index++
+    newBlock.Content = ''
+  }
+
+
+  if (blocksData.value[0].length === 0) {
+    newBlock.Content = marked.parse(formatMarkdown(blocks.value[0].Content)) + '\n' + newBlock.Content;
+  }
+  else {
+    for (let i = index - 1; i > lastFirstIndex; i--) {
+      const b = blocks.value[i]
+      if (b.State != 3) {
+        newBlock.Content = marked.parse(formatMarkdown(b.Content)) + '\n' + newBlock.Content;
+        handleDelete(b)
+      }
+    }
+  }
+
+
+  blocks.value.splice(lastFirstIndex + 1, 0, newBlock)
+
+  if (afterText.value.length != 0) {
+    editBlock.value!.Content = afterText.value
     editBlock.value!.State = 1
   } else {
     editBlock.value!.State = 3
   }
 
+  updateBlocks()
+  handleSplitBlock()
+}
+
+//chuyen thanh chu ky
+function handleConvertToSightBlock() {
+  let index = blocks.value.findIndex((b) => b.Id === editBlock.value!.Id)
+
+  //chuyen tu tren xuong
+  if (editBlock.value!.ContentType != 4) {
+    let lastContentIndex = blocks.value.length - 1;
+    for (let i = index + 1; i < blocks.value.length; i++) {
+      const b = blocks.value[i]
+      if (b.ContentType != 2) {
+        lastContentIndex = i - 1
+        break
+      }
+    }
+
+
+    const newBlock: DocumentBlock =
+    {
+      Id: crypto.randomUUID(),
+      ParentId: null,
+      DocumentId: blocks.value[0].DocumentId,
+      Title: 'Chu ky',
+      Content: selectedText.value,
+      Level: 0,
+      ContentType: 3,
+      Order: calculatorOrder(lastContentIndex),
+      IsExpand: true,
+      IsShow: true,
+      State: 2,
+    }
+
+
+
+    if (beforeText.value.length === 0) {
+      index--
+      newBlock.Content = ''
+    }
+
+    for (let i = index + 1; i <= lastContentIndex; i++) {
+      const b = blocks.value[i]
+      if (b.State != 3) {
+        b.State = 3
+        newBlock.Content += '\n' + marked.parse(formatMarkdown(b.Content));
+      }
+    }
+
+    blocks.value.splice(lastContentIndex + 1, 0, newBlock)
+    if (beforeText.value.length != 0) {
+      editBlock.value!.Content = beforeText.value
+      editBlock.value!.State = 1
+    } else {
+      editBlock.value!.State = 3
+    }
+  }
+  //chuyen tu duoi len
+  else {
+    let lastSightIndex = index;
+    for (let i = index; i > 0; i--) {
+      const b = blocks.value[i]
+      if (b.ContentType != 4) {
+        lastSightIndex = i
+        break
+      }
+    }
+
+
+    const newBlock: DocumentBlock =
+    {
+      Id: crypto.randomUUID(),
+      ParentId: null,
+      DocumentId: blocks.value[0].DocumentId,
+      Title: 'Chu ky',
+      Content: selectedText.value,
+      Level: 0,
+      ContentType: 3,
+      Order: calculatorOrder(lastSightIndex),
+      IsExpand: true,
+      IsShow: true,
+      State: 2,
+    }
+
+
+
+    if (afterText.value.length === 0) {
+      index++
+      newBlock.Content = ''
+    }
+
+    for (let i = index - 1; i > lastSightIndex; i--) {
+      const b = blocks.value[i]
+      if (b.State != 3) {
+        b.State = 3
+        newBlock.Content = marked.parse(formatMarkdown(b.Content))+ '\n' +  newBlock.Content;
+      }
+    }
+
+    blocks.value.splice(lastSightIndex + 1, 0, newBlock)
+    if (afterText.value.length != 0) {
+      editBlock.value!.Content = afterText.value
+      editBlock.value!.State = 1
+    } else {
+      editBlock.value!.State = 3
+    }
+  }
+  updateBlocks()
+  handleSplitBlock()
+}
+
+//chuyen thanh noi dung khac
+function handleConvertToOtherBlock() {
+  let index = blocks.value.findIndex((b) => b.Id === editBlock.value!.Id)
+
   let lastContentIndex = blocks.value.length - 1;
 
   for (let i = index + 1; i < blocks.value.length; i++) {
     const b = blocks.value[i]
-    if (b.ContentType != 2) {
+    if (b.ContentType === 4) {
       lastContentIndex = i - 1
       break
     }
@@ -637,24 +638,38 @@ function handleConvertToSightBlock() {
     Id: crypto.randomUUID(),
     ParentId: null,
     DocumentId: blocks.value[0].DocumentId,
-    Title: 'Chu ky',
+    Title: 'Nội dung khác',
     Content: selectedText.value,
     Level: 0,
-    ContentType: 3,
+    ContentType: 4,
     Order: calculatorOrder(lastContentIndex),
     IsExpand: true,
     IsShow: true,
     State: 2,
   }
 
+
+
+  if (beforeText.value.length === 0) {
+    index--
+    newBlock.Content = ''
+  }
+
   for (let i = index + 1; i <= lastContentIndex; i++) {
     const b = blocks.value[i]
-    b.State = 3
-    newBlock.Content += '\n' + marked.parse(formatMarkdown(b.Content));
+    if (b.State != 3) {
+      b.State = 3
+      newBlock.Content += '\n' + marked.parse(formatMarkdown(b.Content));
+    }
   }
 
   blocks.value.splice(lastContentIndex + 1, 0, newBlock)
-
+  if (beforeText.value.length != 0) {
+    editBlock.value!.Content = beforeText.value
+    editBlock.value!.State = 1
+  } else {
+    editBlock.value!.State = 3
+  }
   updateBlocks()
   handleSplitBlock()
 }
@@ -677,8 +692,11 @@ function updateParentBlock(block: DocumentBlock) {
   }
 }
 
+const blocksPropToForm = ref<DocumentBlock[]>([])
+
 //mo form them hoac sua block
 function showFormBlock(state: number) {
+  blocksPropToForm.value = blocks.value.filter((b) => ((b.Level === 5 || b.Level === 6) && b.State != 3))
   /*trang thai state
   0: sua block
   1,2,3,4: them moi block cho cac khoi first, content, sight, other
@@ -686,6 +704,7 @@ function showFormBlock(state: number) {
   6: them diem
   */
   showPopup.value = null
+  showMenu.value = false
   showPopupContent.value = -1
   console.log(state)
   showForm.value = state
@@ -694,9 +713,9 @@ function showFormBlock(state: number) {
     return
   }
   parentBlock.value = editBlock.value
+
   editBlock.value = null
 }
-
 
 //dong form
 function handleCloseForm() {
@@ -705,14 +724,13 @@ function handleCloseForm() {
   newContent.value = null
 }
 
-
 //them hoac sua block
 function handleSubmitBlockForm(data: string) {
   newContent.value = data
   //sua block
   if (showForm.value === 0) {
     editBlock.value!.Content = newContent.value!
-    editBlock.value!.State = 1
+    if (editBlock.value!.State != 2) editBlock.value!.State = 1
     updateBlocks()
     handleCloseForm()
     return
@@ -759,13 +777,11 @@ function handleSubmitBlockForm(data: string) {
   handleCloseForm()
 }
 
-
 //tinh vi tri cho block moi tao
 function calculatorOrder(index: number) {
   if (index === blocks.value.length - 1) return blocks.value[index].Order + 2000
   return Math.round((blocks.value[index].Order + blocks.value[index + 1].Order) / 2)
 }
-
 
 //tim vi tri cuoi cung cua block theo contentType
 function findLastIndexByContentType(type: number) {
@@ -777,7 +793,6 @@ function findLastIndexByContentType(type: number) {
   }
   return blocks.value.length - 1
 }
-
 
 //tim vi tri block con cuoi cung cua 1 block khi them con
 function findLastChildIndex(block: DocumentBlock) {
@@ -794,7 +809,6 @@ function findLastChildIndex(block: DocumentBlock) {
   // Đệ quy để tìm phần tử con cuối cùng của lastChild
   return findLastChildIndex(lastChild)
 }
-
 
 //danh sach cac mau cua level
 const colors = [
@@ -835,13 +849,11 @@ const popupPosition = ref({
   right: 200,
 })
 
-
 //kiem tra co the len cap block khong
 function checkUpLevel(block: DocumentBlock) {
   if (block.Level < 3) return false
   return true
 }
-
 
 //kiem tra co the xuong cap block khong
 function checkDownLevel(block: DocumentBlock) {
@@ -851,7 +863,6 @@ function checkDownLevel(block: DocumentBlock) {
 }
 
 const blocks = ref<DocumentBlock[]>([])
-
 
 //xu ly viec len cap block
 function handleUpLevel(block: DocumentBlock) {
@@ -903,7 +914,6 @@ function handleUpLevel(block: DocumentBlock) {
   showPopup.value = null
 }
 
-
 //dequy cap nhat cac block con,chau... cua 1 block
 function handleUpdateChildsWhenUpLevel(block: DocumentBlock) {
   const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
@@ -916,7 +926,6 @@ function handleUpdateChildsWhenUpLevel(block: DocumentBlock) {
 
 //canh bao khi khong the xuong cap
 const downLevelWarning = ref(false)
-
 
 //ham xu ly xuong cap 1 block
 function handleDownLevel(block: DocumentBlock) {
@@ -972,14 +981,12 @@ function handleDownLevel(block: DocumentBlock) {
   showPopup.value = null
 }
 
-
 //xu ly xoa block
 function handleDelete(block: DocumentBlock) {
   removeChild(block)
   updateBlocks()
   handleSplitBlock()
 }
-
 
 //xoa block thi se de quy xoa cac ptu con,chau cua no
 function removeChild(block: DocumentBlock) {
@@ -989,8 +996,6 @@ function removeChild(block: DocumentBlock) {
     removeChild(b)
   })
 }
-
-
 
 function togglePopupAction(block: DocumentBlock, event: MouseEvent): void {
   const target = event.currentTarget as HTMLElement
@@ -1019,7 +1024,6 @@ function togglePopupAction(block: DocumentBlock, event: MouseEvent): void {
   else showPopup.value = block.Id
 }
 
-
 const showPopupContent = ref(-1)
 
 function togglePopupContent(index: number, event: MouseEvent): void {
@@ -1042,7 +1046,6 @@ function checkHasChild(block: DocumentBlock) {
   return blocks.value.some((b) => b.ParentId == block.Id && b.State != 3)
 }
 
-
 function toggleExpandBlock(block: DocumentBlock) {
   showMenu.value = false
   showPopup.value = null
@@ -1054,7 +1057,6 @@ function toggleExpandBlock(block: DocumentBlock) {
   }
 }
 
-
 //thu gon
 function handleCollapseBlock(block: DocumentBlock) {
   block.IsExpand = false
@@ -1062,14 +1064,12 @@ function handleCollapseBlock(block: DocumentBlock) {
   block.IsShow = true
 }
 
-
 //mo rong
 function handleExpandBlock(block: DocumentBlock) {
   block.IsExpand = true
   showBlock(block)
   block.IsShow = true
 }
-
 
 //an block
 function hiddenBlock(block: DocumentBlock) {
@@ -1079,7 +1079,6 @@ function hiddenBlock(block: DocumentBlock) {
     hiddenBlock(b)
   })
 }
-
 
 //hien block
 function showBlock(block: DocumentBlock) {

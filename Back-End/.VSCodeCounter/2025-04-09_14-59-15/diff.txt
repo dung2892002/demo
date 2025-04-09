@@ -1,0 +1,177 @@
+Date : 2025-04-09 14:59:15
+Directory : d:\demo\Back-End\Cukcuk.Infrastructure
+Total : 115 files,  934 codes, -15 comments, -309 blanks, all 610 lines
+
+Languages
++--------------+------------+------------+------------+------------+------------+
+| language     | files      | code       | comment    | blank      | total      |
++--------------+------------+------------+------------+------------+------------+
+| JSON         |         10 |      2,462 |          0 |          0 |      2,462 |
+| EditorConfig |          4 |          0 |          0 |          0 |          0 |
+| XML          |          8 |         -4 |          0 |          1 |         -3 |
+| C#           |         93 |     -1,524 |        -15 |       -310 |     -1,849 |
++--------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                      | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                         |        115 |        934 |        -15 |       -309 |        610 |
+| . (Files)                                                                                                                 |          1 |         23 |          0 |          5 |         28 |
+| ..                                                                                                                        |         87 |    -13,591 |        -39 |       -583 |    -14,213 |
+| ..\Cukcuk.Core                                                                                                            |         87 |    -13,591 |        -39 |       -583 |    -14,213 |
+| ..\Cukcuk.Core (Files)                                                                                                    |          1 |        -27 |          0 |         -4 |        -31 |
+| ..\Cukcuk.Core\Auth                                                                                                       |          4 |        -69 |          0 |        -13 |        -82 |
+| ..\Cukcuk.Core\DTOs                                                                                                       |         19 |       -269 |          0 |        -29 |       -298 |
+| ..\Cukcuk.Core\Entities                                                                                                   |         15 |       -296 |          0 |        -63 |       -359 |
+| ..\Cukcuk.Core\Enum                                                                                                       |          1 |        -16 |          0 |         -2 |        -18 |
+| ..\Cukcuk.Core\Helper                                                                                                     |          2 |       -211 |          0 |        -33 |       -244 |
+| ..\Cukcuk.Core\Interfaces                                                                                                 |         20 |       -270 |          0 |        -94 |       -364 |
+| ..\Cukcuk.Core\Interfaces (Files)                                                                                         |          2 |        -22 |          0 |         -2 |        -24 |
+| ..\Cukcuk.Core\Interfaces\IRepositories                                                                                   |         10 |       -130 |          0 |        -45 |       -175 |
+| ..\Cukcuk.Core\Interfaces\IServices                                                                                       |          8 |       -118 |          0 |        -47 |       -165 |
+| ..\Cukcuk.Core\Services                                                                                                   |          8 |     -1,503 |        -15 |       -318 |     -1,836 |
+| ..\Cukcuk.Core\SignalR                                                                                                    |          1 |        -92 |          0 |        -10 |       -102 |
+| ..\Cukcuk.Core\bin                                                                                                        |          2 |     -2,537 |          0 |          0 |     -2,537 |
+| ..\Cukcuk.Core\bin\Debug                                                                                                  |          2 |     -2,537 |          0 |          0 |     -2,537 |
+| ..\Cukcuk.Core\bin\Debug\net8.0                                                                                           |          2 |     -2,537 |          0 |          0 |     -2,537 |
+| ..\Cukcuk.Core\obj                                                                                                        |         14 |     -8,301 |        -24 |        -17 |     -8,342 |
+| ..\Cukcuk.Core\obj (Files)                                                                                                |          5 |     -8,234 |          0 |         -1 |     -8,235 |
+| ..\Cukcuk.Core\obj\Debug                                                                                                  |          5 |        -35 |        -12 |         -8 |        -55 |
+| ..\Cukcuk.Core\obj\Debug\net8.0                                                                                           |          5 |        -35 |        -12 |         -8 |        -55 |
+| ..\Cukcuk.Core\obj\Release                                                                                                |          4 |        -32 |        -12 |         -8 |        -52 |
+| ..\Cukcuk.Core\obj\Release\net8.0                                                                                         |          4 |        -32 |        -12 |         -8 |        -52 |
+| Data                                                                                                                      |          1 |        210 |          0 |         44 |        254 |
+| Repositories                                                                                                              |         10 |        992 |          0 |        208 |      1,200 |
+| bin                                                                                                                       |          2 |      3,136 |          0 |          0 |      3,136 |
+| bin\Debug                                                                                                                 |          2 |      3,136 |          0 |          0 |      3,136 |
+| bin\Debug\net8.0                                                                                                          |          2 |      3,136 |          0 |          0 |      3,136 |
+| obj                                                                                                                       |         14 |     10,164 |         24 |         17 |     10,205 |
+| obj (Files)                                                                                                               |          5 |     10,097 |          0 |          1 |     10,098 |
+| obj\Debug                                                                                                                 |          5 |         35 |         12 |          8 |         55 |
+| obj\Debug\net8.0                                                                                                          |          5 |         35 |         12 |          8 |         55 |
+| obj\Release                                                                                                               |          4 |         32 |         12 |          8 |         52 |
+| obj\Release\net8.0                                                                                                        |          4 |         32 |         12 |          8 |         52 |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
+| filename                                                                                                                  | language     | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
+| d:\demo\Back-End\Cukcuk.Core\Auth\ApplicationUser.cs                                                                      | C#           |        -17 |          0 |         -4 |        -21 |
+| d:\demo\Back-End\Cukcuk.Core\Auth\PermissionAttribute.cs                                                                  | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Auth\PermissionMiddleware.cs                                                                 | C#           |        -34 |          0 |         -6 |        -40 |
+| d:\demo\Back-End\Cukcuk.Core\Auth\UserRoles.cs                                                                            | C#           |        -10 |          0 |         -1 |        -11 |
+| d:\demo\Back-End\Cukcuk.Core\Cukcuk.Core.csproj                                                                           | XML          |        -27 |          0 |         -4 |        -31 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\AddContentRequest.cs                                                                    | C#           |        -10 |          0 |         -1 |        -11 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\AddLinkRequest.cs                                                                       | C#           |         -9 |          0 |         -1 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\CustomerExport.cs                                                                       | C#           |        -16 |          0 |         -1 |        -17 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\CustomerImportReport.cs                                                                 | C#           |         -8 |          0 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\CustomerImportResponse.cs                                                               | C#           |         -9 |          0 |         -2 |        -11 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\DocumentExport.cs                                                                       | C#           |        -10 |          0 |         -1 |        -11 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\EmployeeDTO.cs                                                                          | C#           |        -53 |          0 |         -1 |        -54 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\EmployeeExport.cs                                                                       | C#           |        -23 |          0 |         -1 |        -24 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\EmployeeImportReport.cs                                                                 | C#           |         -8 |          0 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\EmployeeImportResponse.cs                                                               | C#           |         -8 |          0 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\LoginModel.cs                                                                           | C#           |        -11 |          0 |         -3 |        -14 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\PageResult.cs                                                                           | C#           |         -9 |          0 |         -3 |        -12 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\RegisterModel.cs                                                                        | C#           |        -14 |          0 |         -4 |        -18 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\Response.cs                                                                             | C#           |         -8 |          0 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\StatisticalDobResponse.cs                                                               | C#           |         -8 |          0 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\StatisticalGenderResponse.cs                                                            | C#           |        -34 |          0 |         -2 |        -36 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\TokenModel.cs                                                                           | C#           |         -8 |          0 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\UploadFileReponse.cs                                                                    | C#           |         -9 |          0 |         -2 |        -11 |
+| d:\demo\Back-End\Cukcuk.Core\DTOs\UserMessage.cs                                                                          | C#           |        -14 |          0 |         -1 |        -15 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Customer.cs                                                                         | C#           |        -48 |          0 |         -6 |        -54 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\CustomerFolder.cs                                                                   | C#           |        -18 |          0 |         -4 |        -22 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\CustomerGroup.cs                                                                    | C#           |        -11 |          0 |         -3 |        -14 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Department.cs                                                                       | C#           |        -16 |          0 |         -3 |        -19 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Document.cs                                                                         | C#           |        -27 |          0 |        -12 |        -39 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\DocumentBlock.cs                                                                    | C#           |        -24 |          0 |         -8 |        -32 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\DocumentCategory.cs                                                                 | C#           |        -11 |          0 |         -4 |        -15 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Employee.cs                                                                         | C#           |        -47 |          0 |         -8 |        -55 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\EmployeeFolder.cs                                                                   | C#           |        -18 |          0 |         -4 |        -22 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Import.cs                                                                           | C#           |        -10 |          0 |         -1 |        -11 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Menu.cs                                                                             | C#           |        -11 |          0 |         -1 |        -12 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Message.cs                                                                          | C#           |        -15 |          0 |         -2 |        -17 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Permission.cs                                                                       | C#           |        -12 |          0 |         -3 |        -15 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\Position.cs                                                                         | C#           |        -16 |          0 |         -2 |        -18 |
+| d:\demo\Back-End\Cukcuk.Core\Entities\UserPermission.cs                                                                   | C#           |        -12 |          0 |         -2 |        -14 |
+| d:\demo\Back-End\Cukcuk.Core\Enum\DocumentType.cs                                                                         | C#           |        -16 |          0 |         -2 |        -18 |
+| d:\demo\Back-End\Cukcuk.Core\Helper\Cache.cs                                                                              | C#           |        -28 |          0 |         -7 |        -35 |
+| d:\demo\Back-End\Cukcuk.Core\Helper\ExcelHelper.cs                                                                        | C#           |       -183 |          0 |        -26 |       -209 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IBaseRepository.cs                                                                | C#           |        -11 |          0 |         -1 |        -12 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IBaseService.cs                                                                   | C#           |        -11 |          0 |         -1 |        -12 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\ICustomerGroupRepository.cs                                         | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\ICustomerRepository.cs                                              | C#           |        -18 |          0 |         -5 |        -23 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IDepartmentRepository.cs                                            | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IDocumentRepository.cs                                              | C#           |        -28 |          0 |        -16 |        -44 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IEmployeeRepository.cs                                              | C#           |        -16 |          0 |         -5 |        -21 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IImportRepository.cs                                                | C#           |        -10 |          0 |         -3 |        -13 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IMenuRepository.cs                                                  | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IMessageRepository.cs                                               | C#           |        -12 |          0 |         -6 |        -18 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IPermissionRepository.cs                                            | C#           |        -14 |          0 |         -2 |        -16 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IRepositories\IPositionRepository.cs                                              | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\ICustomerService.cs                                                     | C#           |        -18 |          0 |         -8 |        -26 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\IDepartmentService.cs                                                   | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\IDocumentService.cs                                                     | C#           |        -34 |          0 |        -22 |        -56 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\IEmployeeService.cs                                                     | C#           |        -18 |          0 |         -7 |        -25 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\IImportService.cs                                                       | C#           |        -10 |          0 |         -2 |        -12 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\IMenuService.cs                                                         | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\IPermissionService.cs                                                   | C#           |        -14 |          0 |         -2 |        -16 |
+| d:\demo\Back-End\Cukcuk.Core\Interfaces\IServices\IPositionService.cs                                                     | C#           |         -8 |          0 |         -2 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\Services\CustomerService.cs                                                                  | C#           |       -215 |          0 |        -42 |       -257 |
+| d:\demo\Back-End\Cukcuk.Core\Services\DepartmentService.cs                                                                | C#           |        -55 |          0 |         -9 |        -64 |
+| d:\demo\Back-End\Cukcuk.Core\Services\DocumentService.cs                                                                  | C#           |       -756 |        -13 |       -191 |       -960 |
+| d:\demo\Back-End\Cukcuk.Core\Services\EmployeeService.cs                                                                  | C#           |       -282 |         -2 |        -44 |       -328 |
+| d:\demo\Back-End\Cukcuk.Core\Services\ImportService.cs                                                                    | C#           |        -41 |          0 |         -9 |        -50 |
+| d:\demo\Back-End\Cukcuk.Core\Services\MenuService.cs                                                                      | C#           |        -54 |          0 |         -7 |        -61 |
+| d:\demo\Back-End\Cukcuk.Core\Services\PermissionService.cs                                                                | C#           |        -44 |          0 |         -7 |        -51 |
+| d:\demo\Back-End\Cukcuk.Core\Services\PositionService.cs                                                                  | C#           |        -56 |          0 |         -9 |        -65 |
+| d:\demo\Back-End\Cukcuk.Core\SignalR\ChatHub.cs                                                                           | C#           |        -92 |          0 |        -10 |       -102 |
+| d:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.deps.json                                                       | JSON         |     -2,518 |          0 |          0 |     -2,518 |
+| d:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.runtimeconfig.json                                              | JSON         |        -19 |          0 |          0 |        -19 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Cukcuk.Core.csproj.EntityFrameworkCore.targets                                           | XML          |        -28 |          0 |         -1 |        -29 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Cukcuk.Core.csproj.nuget.dgspec.json                                                     | JSON         |       -138 |          0 |          0 |       -138 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Cukcuk.Core.csproj.nuget.g.props                                                         | XML          |        -24 |          0 |          0 |        -24 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Cukcuk.Core.csproj.nuget.g.targets                                                       | XML          |        -10 |          0 |          0 |        -10 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs                              | C#           |         -3 |         -1 |         -1 |         -5 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.AssemblyInfo.cs                                                 | C#           |         -9 |        -10 |         -5 |        -24 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.GeneratedMSBuildEditorConfig.editorconfig                       | EditorConfig |        -15 |          0 |         -1 |        -16 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.GlobalUsings.g.cs                                               | C#           |         -7 |         -1 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.sourcelink.json                                                 | JSON         |         -1 |          0 |          0 |         -1 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs                            | C#           |         -3 |         -1 |         -1 |         -5 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Release\net8.0\Cukcuk.Core.AssemblyInfo.cs                                               | C#           |         -9 |        -10 |         -5 |        -24 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Release\net8.0\Cukcuk.Core.GeneratedMSBuildEditorConfig.editorconfig                     | EditorConfig |        -13 |          0 |         -1 |        -14 |
+| d:\demo\Back-End\Cukcuk.Core\obj\Release\net8.0\Cukcuk.Core.GlobalUsings.g.cs                                             | C#           |         -7 |         -1 |         -1 |         -9 |
+| d:\demo\Back-End\Cukcuk.Core\obj\project.assets.json                                                                      | JSON         |     -8,034 |          0 |          0 |     -8,034 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Cukcuk.Infrastructure.csproj                                                       | XML          |         23 |          0 |          5 |         28 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Data\ApplicationDbContext.cs                                                       | C#           |        210 |          0 |         44 |        254 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\CustomerGroupRepository.cs                                            | C#           |         35 |          0 |          7 |         42 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\CustomerRepository.cs                                                 | C#           |        195 |          0 |         37 |        232 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\DepartmentRepository.cs                                               | C#           |         40 |          0 |          8 |         48 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\DocumentRepository.cs                                                 | C#           |        250 |          0 |         68 |        318 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\EmployeeRepository.cs                                                 | C#           |        215 |          0 |         37 |        252 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\ImportRepository.cs                                                   | C#           |         52 |          0 |         11 |         63 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\MenuRepository.cs                                                     | C#           |         40 |          0 |          8 |         48 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\MessageRepository.cs                                                  | C#           |         80 |          0 |         16 |         96 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\PermissionRepository.cs                                               | C#           |         46 |          0 |          9 |         55 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\Repositories\PositionRepository.cs                                                 | C#           |         39 |          0 |          7 |         46 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Infrastructure.deps.json                                   | JSON         |      3,117 |          0 |          0 |      3,117 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\bin\Debug\net8.0\Cukcuk.Infrastructure.runtimeconfig.json                          | JSON         |         19 |          0 |          0 |         19 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Cukcuk.Infrastructure.csproj.EntityFrameworkCore.targets                       | XML          |         28 |          0 |          1 |         29 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Cukcuk.Infrastructure.csproj.nuget.dgspec.json                                 | JSON         |        234 |          0 |          0 |        234 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Cukcuk.Infrastructure.csproj.nuget.g.props                                     | XML          |         25 |          0 |          0 |         25 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Cukcuk.Infrastructure.csproj.nuget.g.targets                                   | XML          |          9 |          0 |          0 |          9 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs                    | C#           |          3 |          1 |          1 |          5 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.AssemblyInfo.cs                             | C#           |          9 |         10 |          5 |         24 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig   | EditorConfig |         15 |          0 |          1 |         16 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.GlobalUsings.g.cs                           | C#           |          7 |          1 |          1 |          9 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Debug\net8.0\Cukcuk.Infrastructure.sourcelink.json                             | JSON         |          1 |          0 |          0 |          1 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs                  | C#           |          3 |          1 |          1 |          5 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Release\net8.0\Cukcuk.Infrastructure.AssemblyInfo.cs                           | C#           |          9 |         10 |          5 |         24 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Release\net8.0\Cukcuk.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig | EditorConfig |         13 |          0 |          1 |         14 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\Release\net8.0\Cukcuk.Infrastructure.GlobalUsings.g.cs                         | C#           |          7 |          1 |          1 |          9 |
+| d:\demo\Back-End\Cukcuk.Infrastructure\obj\project.assets.json                                                            | JSON         |      9,801 |          0 |          0 |      9,801 |
+| Total                                                                                                                     |              |        934 |        -15 |       -309 |        610 |
++---------------------------------------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+

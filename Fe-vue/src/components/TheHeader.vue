@@ -34,7 +34,7 @@ import { useStore } from 'vuex'
 import '../styles/layout/header.scss'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { connection } from '@/signalR'
+import { connection } from '@/ts/signalR'
 import * as signalR from '@microsoft/signalr'
 const store = useStore()
 const logoutLoading = ref(false)

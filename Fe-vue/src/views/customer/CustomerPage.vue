@@ -175,7 +175,7 @@ import ContextMenu from '@/components/ContextMenu.vue'
 import type { ActionMenu } from '@/entities/ActionMenu'
 import router from '@/router'
 import CustomerForm from './CustomerForm.vue'
-import { formatDate } from '@/utils'
+import { formatDate } from '@/ts/utils'
 import axios from 'axios'
 import type { CustomerFolder } from '@/entities/CustomerFolder'
 

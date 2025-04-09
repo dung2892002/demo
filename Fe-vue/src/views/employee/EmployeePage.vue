@@ -177,7 +177,7 @@ import ContextMenu from '@/components/ContextMenu.vue'
 import type { ActionMenu } from '@/entities/ActionMenu'
 import router from '@/router'
 import EmployeeForm from './EmployeeForm.vue'
-import { formatDate } from '@/utils'
+import { formatDate } from '@/ts/utils'
 import axios from 'axios'
 import type { EmployeeFolder } from '../../entities/EmployeeFolder'
 

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\demo\\Back-End\\Cukcuk.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|d:\\demo\\back-end\\cukcuk.api\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|solutionrelative:controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A67511B-FFE4-4AFA-AD4F-0BE8597E39F6}|..\\Cukcuk.Infrastructure\\Cukcuk.Infrastructure.csproj|d:\\demo\\back-end\\cukcuk.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -10,10 +14,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\demo\\back-end\\cukcuk.core\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|d:\\demo\\back-end\\cukcuk.api\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6199F8A4-7481-47D2-9733-E14962C899FE}|Cukcuk.Api.csproj|solutionrelative:controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9FACBF2-DD10-429D-9D2B-BBAE61060737}|..\\Cukcuk.Core\\Cukcuk.Core.csproj|d:\\demo\\back-end\\cukcuk.core\\dtos\\addcontentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -29,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,15 +41,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "DocumentsController.cs",
               "DocumentMoniker": "D:\\demo\\Back-End\\Cukcuk.Api\\Controllers\\DocumentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\DocumentsController.cs",
               "ToolTip": "D:\\demo\\Back-End\\Cukcuk.Api\\Controllers\\DocumentsController.cs",
               "RelativeToolTip": "Controllers\\DocumentsController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDwAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwDwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T07:01:47.235Z"
+              "WhenOpened": "2025-04-02T07:01:47.235Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -65,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DocumentService.cs",
               "DocumentMoniker": "D:\\demo\\Back-End\\Cukcuk.Core\\Services\\DocumentService.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Services\\DocumentService.cs",
@@ -89,20 +90,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
               "ToolTip": "D:\\demo\\Back-End\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "..\\Cukcuk.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAAAOMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAOMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:48:20.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:48:20.821Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DocumentBlock.cs",
               "DocumentMoniker": "D:\\demo\\Back-End\\Cukcuk.Core\\Entities\\DocumentBlock.cs",
               "RelativeDocumentMoniker": "..\\Cukcuk.Core\\Entities\\DocumentBlock.cs",

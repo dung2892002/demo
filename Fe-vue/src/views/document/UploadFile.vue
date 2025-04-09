@@ -91,7 +91,7 @@
 <script setup lang="ts">
 import ToastComponent from '@/components/ToastComponent.vue'
 import { DocumentType, type Document, type DocumentCategory } from '@/entities/Document'
-import { formatDateForm, getSrcIconDocument } from '@/utils'
+import { formatDateForm, getSrcIconDocument } from '@/ts/utils'
 import axios from 'axios'
 import { ref, type PropType } from 'vue'
 import FileReview from './FileReview.vue'

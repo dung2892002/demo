@@ -93,7 +93,7 @@ import '../styles/layout/chat.scss'
 
 import { ref, onMounted, computed, nextTick, onBeforeUnmount } from 'vue'
 import axios from 'axios'
-import { connection } from '@/signalR'
+import { connection } from '@/ts/signalR'
 import { useStore } from 'vuex'
 
 const store = useStore()

@@ -44,7 +44,7 @@ import '../styles/layout/form.scss'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
-import { startConnection } from '@/signalR'
+import { startConnection } from '@/ts/signalR'
 const store = useStore()
 const errorMessage = ref<string | null>(null)
 const router = useRouter()

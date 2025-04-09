@@ -1,4 +1,4 @@
-import { DocumentType } from './entities/Document'
+import { DocumentType } from '../entities/Document'
 
 export function formatDate(inputDate: string) {
   const date = new Date(inputDate)
@@ -40,5 +40,3 @@ export function formatDateForm(date: string) {
 
   return [year, month, day].join('-')
 }
-
-// markdownParser.ts

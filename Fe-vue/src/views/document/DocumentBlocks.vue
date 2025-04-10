@@ -86,7 +86,7 @@
   <UpdateBlockForm
     v-if="showForm != -1"
     :loading="false"
-    :block="editBlock"
+    :block="editBlock!"
     :state="showForm"
     :blocks-to-select="blocksPropToForm"
     @close-form="handleCloseForm"
@@ -95,11 +95,11 @@
 
   <!-- menu de chon cac hanh dong voi block -->
   <ContextMenu
-      v-if="showMenu"
-      :actions="contextMenuActions"
-      @actionClick="handleActionClick"
-      :position="menuPosition"
-    ></ContextMenu>
+    v-if="showMenu"
+    :actions="contextMenuActions"
+    @actionClick="handleActionClick"
+    :position="menuPosition"
+  />
 
   <!-- canh bao khi khong the xuong level -->
   <WarningPopup
@@ -107,7 +107,7 @@
     :title="'Xác nhận'"
     :content="'Không thể chuyển cấp do không đúng định dạng mục lục?'"
     @close="downLevelWarning = false"
-    />
+  />
 
 </template>
 
@@ -122,21 +122,16 @@ marked.setOptions({
   gfm: true,
 })
 
-function formatMarkdown(content: string) {
-  return content.replace(/^(\d+)\.\s/gm, '$1\\. ');
-}
 
 const showMenu = ref(false)
 const showForm = ref(-1)
-const newContent = ref<string | null>(null)
-const parentBlock = ref<DocumentBlock | null>(null)
 const showPopup = ref<string | null>(null)
 const currentType = ref(-1)
 
 
 import ContextMenu from '@/components/ContextMenu.vue'
 import type { ActionMenu } from '@/entities/ActionMenu'
-import { calculateExactIndex, calculateIndexInMarkdown, fixAndCompleteHTML, fixHTMLSubstring, getSelectedTextLengthInMarkdown, removeHtmlTags } from '@/ts/markdown'
+import { calculateExactIndex, calculateIndexInMarkdown, fixAndCompleteHTML, fixHTMLSubstring, formatMarkdown, getSelectedTextLengthInMarkdown,  handleCretaeTableFromMarkdown, removeHtmlTags } from '@/ts/markdown'
 import WarningPopup from '@/components/WarningPopup.vue'
 
 
@@ -279,7 +274,9 @@ async function handleSelection(block: DocumentBlock) {
 
   // Lấy Markdown gốc
   fullMarkdown.value = await marked.parse(formatMarkdown(block.Content));
-  fullMarkdown.value = fullMarkdown.value.slice(3, -5)
+  if (fullMarkdown.value.startsWith('<p>')) {
+    fullMarkdown.value = fullMarkdown.value.slice(3, -5)
+  }
 
   // console.log('Markdown: ', fullMarkdown.value);
 
@@ -696,7 +693,17 @@ const blocksPropToForm = ref<DocumentBlock[]>([])
 
 //mo form them hoac sua block
 function showFormBlock(state: number) {
-  blocksPropToForm.value = blocks.value.filter((b) => ((b.Level === 5 || b.Level === 6) && b.State != 3))
+  blocksPropToForm.value = blocks.value
+                            .filter((b) => (b.Level === 5 || b.Level === 6) && b.State != 3)
+                            .map((block) => ({
+                              ...block,
+                            }));
+
+  blocksPropToForm.value.forEach(async (block) => {
+    const content = await marked.parse(formatMarkdown(block.Content))
+    block.Content = removeHtmlTags(content.slice(3, -5))
+  })
+
   /*trang thai state
   0: sua block
   1,2,3,4: them moi block cho cac khoi first, content, sight, other
@@ -706,43 +713,18 @@ function showFormBlock(state: number) {
   showPopup.value = null
   showMenu.value = false
   showPopupContent.value = -1
-  console.log(state)
-  showForm.value = state
+
   if (state == 0) {
-    newContent.value = editBlock.value!.Content
-    return
-  }
-  parentBlock.value = editBlock.value
-
-  editBlock.value = null
-}
-
-//dong form
-function handleCloseForm() {
-  showForm.value = -1
-  editBlock.value = null
-  newContent.value = null
-}
-
-//them hoac sua block
-function handleSubmitBlockForm(data: string) {
-  newContent.value = data
-  //sua block
-  if (showForm.value === 0) {
-    editBlock.value!.Content = newContent.value!
-    if (editBlock.value!.State != 2) editBlock.value!.State = 1
-    updateBlocks()
-    handleCloseForm()
+    showForm.value = state
     return
   }
 
-  //tao block moi
   const newBlock: DocumentBlock = {
     Id: crypto.randomUUID(),
     ParentId: null,
     DocumentId: blocks.value[0].DocumentId,
-    Title: newContent.value!,
-    Content: newContent.value!,
+    Title: '',
+    Content: '',
     Level: 0,
     ContentType: showForm.value,
     Order: 0,
@@ -751,25 +733,47 @@ function handleSubmitBlockForm(data: string) {
     State: 2,
   }
 
-  if (newBlock.ContentType === 2) {
-    newBlock.Level = 2
+  if (state === 5 || state === 6) {
+    newBlock.ParentId = editBlock.value!.Id
+    newBlock.Level = state + 1
+    newBlock.ContentType = 2
   }
 
+  editBlock.value = newBlock
+  showForm.value = state
+}
+
+//dong form
+function handleCloseForm() {
+  showForm.value = -1
+  editBlock.value = null
+}
+
+//them hoac sua block
+function handleSubmitBlockForm(block: DocumentBlock) {
+  //sua block
+  if (showForm.value === 0) {
+    editBlock.value!.Content = block.Content
+    if (editBlock.value!.State != 2) editBlock.value!.State = 1
+    updateBlocks()
+    handleCloseForm()
+    return
+  }
+
+
+
   //kieam tra block tao moi co thuoc block nao khong
-  if (parentBlock.value) {
-    newBlock.ParentId = parentBlock.value.Id
-    newBlock.ContentType = parentBlock.value.ContentType
-    newBlock.Level = showForm.value + 1
+  if (block.ParentId != null) {
+    const parent = blocks.value.find((b) => b.Id === block.ParentId)
+    const lastIndex = findLastChildIndex(parent!)
+    block.Order = calculatorOrder(lastIndex)
 
-    const lastIndex = findLastChildIndex(parentBlock.value)
-    newBlock.Order = calculatorOrder(lastIndex)
-
-    blocks.value.splice(lastIndex + 1, 0, newBlock)
+    blocks.value.splice(lastIndex + 1, 0, block)
   } else {
-    newBlock.ContentType = showForm.value
+    block.ContentType = showForm.value
     const lastIndex = findLastIndexByContentType(showForm.value)
-    newBlock.Order = calculatorOrder(lastIndex)
-    blocks.value.splice(lastIndex + 1, 0, newBlock)
+    block.Order = calculatorOrder(lastIndex)
+    blocks.value.splice(lastIndex + 1, 0, block)
   }
 
   updateBlocks()
@@ -1118,6 +1122,8 @@ function toggleBlock(index: number) {
 const blocksData = ref<DocumentBlock[][]>([])
 
 
+
+const stateHandleTable = ref(false)
 //chia blocks theo contentType
 function handleSplitBlock() {
   const firstBlocks: DocumentBlock[] = []
@@ -1137,7 +1143,10 @@ function handleSplitBlock() {
       otherBlocks.push(block)
     }
   })
-
+  if (firstBlocks.length > 0 && stateHandleTable.value === false) {
+    firstBlocks[0].Content = handleCretaeTableFromMarkdown(firstBlocks[0].Content)
+    stateHandleTable.value = true
+  }
   blocksData.value = [firstBlocks, contentBlocks, signBlocks, otherBlocks]
 }
 
@@ -1150,13 +1159,14 @@ watch(
       IsExpand: true,
       IsShow: true,
     }))
-
+    stateHandleTable.value = false
     handleSplitBlock()
   },
 )
 
 onMounted(() => {
-  blocks.value = props.propBlocks.map((block) => ({
+
+  blocks.value =  props.propBlocks.map((block) => ({
     ...block,
     State: 0,
     IsExpand: true,

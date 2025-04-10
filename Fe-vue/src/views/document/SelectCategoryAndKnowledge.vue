@@ -22,6 +22,7 @@
             :key="category.Id"
             @click.stop="selectCategory(category)"
             :class="{ selected: currentCategory?.Id === category.Id }"
+            class="data"
           >
             <span> {{ category.Name }}</span>
             <font-awesome-icon
@@ -41,11 +42,11 @@
           <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
         </div>
         <div class="category-data" v-if="showSelectKnowledgeType">
-          <div @click.stop="selectLaw(true)" :class="{ selected: isLaw }">
+          <div @click.stop="selectLaw(true)" :class="{ selected: isLaw }" class="data">
             <span> Văn bản quy phạm pháp luật</span>
             <font-awesome-icon :icon="['fas', 'check']" v-if="isLaw" />
           </div>
-          <div @click.stop="selectLaw(false)" :class="{ selected: !isLaw }">
+          <div @click.stop="selectLaw(false)" :class="{ selected: !isLaw }" class="data">
             <span> Tri thức nghiệp vụ khác</span>
             <font-awesome-icon :icon="['fas', 'check']" v-if="!isLaw" />
           </div>

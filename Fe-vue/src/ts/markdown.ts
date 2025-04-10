@@ -118,7 +118,7 @@ export function fixHTMLSubstring(input: string, startIndex: number, endIndex: nu
 export function getSelectedTextLengthInMarkdown(
   indexInMarkdown: number,
   fullMarkdown: string,
-  selectedText: string,
+  selectedText: string
 ): number {
   if (fullMarkdown === null) return 0
 
@@ -149,7 +149,7 @@ export function calculateIndexInMarkdown(
   startIndex: number,
   selectedText: string,
   fullText: string,
-  fullMarkdown: string,
+  fullMarkdown: string
 ): number {
   if (fullMarkdown === null) return 0
 
@@ -215,4 +215,97 @@ export function removeHtmlTags(str: string): string {
   return str
     .replace(/<br\s*\/?>/gi, '\n') // Thay thế thẻ <br> bằng xuống dòng
     .replace(/<\/?[^>]+(>|$)/g, '') // Xóa tất cả các thẻ HTML khác
+}
+
+//xu ly các thẻ ol, ul
+export function formatMarkdown(content: string) {
+  return content.replace(/^(\d+)\.\s/gm, '$1\\. ')
+}
+
+//ham nay dung de tach thanh phan bang va phan noi dung
+function splitByDatePattern(input: string): [string, string] {
+  // 1. Xóa các dòng/đoạn chỉ gồm |, :, - (dạng kẻ bảng Markdown)
+  if (input.includes('</table>')) {
+    const tableEndIndex = input.indexOf('</table>') + '</table>'.length
+    const part1 = input.slice(0, tableEndIndex)
+    const part2 = input.slice(tableEndIndex).trim()
+    return [part1, part2]
+  }
+
+  input = input.replace(/(\|?:-+:?\|?)+/g, '')
+
+  // 2. Tìm chuỗi "ngày xx tháng xx năm xxxx"
+  const dateRegex = /ngày\s+\d{1,2}\s+tháng\s+\d{1,2}\s+năm\s+\d{4}/i
+  const match = input.match(dateRegex)
+
+  if (!match) {
+    // Không tìm thấy => trả toàn bộ chuỗi + rỗng
+    return [input, '']
+  }
+
+  const dateEndIndex = match.index! + match[0].length
+
+  // 3. Tìm ký tự đầu tiên sau chuỗi ngày tháng
+  for (let i = dateEndIndex; i < input.length; i++) {
+    const char = input[i]
+    if (char.trim() !== '') {
+      return [input.slice(0, i + 1), input.slice(i + 2)]
+    }
+  }
+
+  // Nếu không có ký tự nào sau đó
+  return [input, '']
+}
+
+function parseMarkdownTable(markdown) {
+  const lines = markdown.trim().split('|')
+
+  // Bỏ dòng định dạng căn giữa (|:---:|:---:|...)
+  const filtered = lines.filter((line) => {
+    const trimmed = line.trim()
+    return trimmed && !/^\r?$/.test(trimmed) && !/^(\|?\s*:?-+:?\s*\|?)+$/.test(trimmed)
+  })
+
+  // Tạo HTML
+  let html = '<table>\n'
+  const rows = filtered.length / 2 // Số dòng trong bảng
+  for (let i = 0; i < rows; i++) {
+    html += '  <tr>\n'
+    for (let j = 0; j < 2; j++) {
+      const cell = filtered[i * 2 + j]
+      if (cell) {
+        html += `    <td>${formatCell(cell)}</td>\n`
+      }
+    }
+    html += '  </tr>\n'
+  }
+  html += '</table>'
+
+  return html
+}
+
+function formatCell(content: string) {
+  // Nếu gặp \- thì bỏ \
+  content = content.replace(/\\-/g, '-')
+
+  // Nếu gặp \ mà không phải trước -, thay bằng <br>
+  content = content.replace(/\\(?!-)/g, '<br>')
+
+  // Nếu gặp <sup> hoặc </sup> thì thay thành <br>
+  content = content.replace(/<\/?sup>/gi, '<br>')
+
+  // In đậm: **text**
+  content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+
+  // In nghiêng: *text*
+  content = content.replace(/\*(.*?)\*/g, '<em>$1</em>')
+
+  return content
+}
+
+export function handleCretaeTableFromMarkdown(input: string): string {
+  const [table, content] = splitByDatePattern(input) // Tách chuỗi thành 2 phần
+  if (table.includes('</table>')) return table + '\n' + content // Nếu đã có bảng, trả về bảng và nội dung còn lại
+
+  return parseMarkdownTable(table) + '\n' + content // Trả về bảng và nội dung còn lại
 }

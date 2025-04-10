@@ -9,9 +9,12 @@
       </div>
 
       <form class="cukcuk-form">
-        <div class="file-category" v-if="props.state > 4">
-          <span class="form__label">Điều<span class="required">*</span></span>
-          <div class="category--current">
+        <div class="file-category" v-if="props.block.Level >= 6" style="width: 100%;">
+          <span class="form__label">Điều <span class="required">*</span></span>
+          <div class="category--current" @click.stop="toggleShowSelectArticle" :class="{ 'disabled': props.state < 5 }">
+            <span v-if="currentArticle">
+              {{ currentArticle!.Content }}
+            </span>
             <div>
               <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectArticle" />
               <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
@@ -22,8 +25,9 @@
                 :key="article.Id!"
                 @click.stop="selectArticle(article)"
                 :class="{ selected: currentArticle?.Id === article.Id }"
+                class="data"
               >
-                <span> {{ article.Content }}</span>
+                <span > {{ article.Content }}</span>
                 <font-awesome-icon
                   :icon="['fas', 'check']"
                   v-if="currentArticle?.Id === article.Id"
@@ -32,9 +36,10 @@
             </div>
           </div>
         </div>
-        <div class="file-category" v-if="props.state > 5">
-          <span class="form__label">Khoản<span class="required">*</span></span>
-          <div class="category--current">
+        <div class="file-category" v-if="props.block.Level >= 7" style="width: 100%;">
+          <span class="form__label">Khoản <span class="required">*</span></span>
+          <div class="category--current" @click.stop="toggleShowSelectClause" :class="{ 'disabled': props.state < 6 }">
+            <span v-if="currentClause" >{{ currentClause!.Content }}</span>
             <div>
               <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectClause" />
               <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
@@ -45,6 +50,7 @@
                 :key="clause.Id!"
                 @click.stop="selectClause(clause)"
                 :class="{ selected: currentClause?.Id === clause.Id }"
+                class="data"
               >
                 <span> {{ clause.Content }}</span>
                 <font-awesome-icon
@@ -52,6 +58,7 @@
                   v-if="currentClause?.Id === clause.Id"
                 />
               </div>
+              <div v-if="clauses.length === 0"> Không tìm thấy dữ liệu</div>
             </div>
           </div>
         </div>
@@ -85,13 +92,16 @@
           </div>
         </div>
         <div class="form-group">
-          <EditorContent :editor="editor" class="markdown-container" />
+          <EditorContent :editor="editor" class="markdown-container"/>
         </div>
       </form>
       <div class="form__footer">
         <button class="button--cancel" @click="handleCloseForm">Hủy</button>
-        <button class="button--complete" id="submitButton" @click="handleSubmitForm"  v-loading="loading">
-          <span src="/src/assets/icon/refresh.png" alt="logo">Lưu</span>
+        <button class="button--complete" id="submitButton" @click="handleSubmitForm"  v-loading="loading"
+            :class="{ 'disabled': !checkContentAvailable() }">
+          <span src="/src/assets/icon/refresh.png" alt="logo">
+            Xác nhận
+          </span>
         </button>
       </div>
     </div>
@@ -101,15 +111,30 @@
 <script setup lang="ts">
 import { marked } from 'marked';
 import {  onBeforeUnmount, onMounted, ref, type PropType } from 'vue';
+import type { DocumentBlock } from '@/entities/Document';
+import { removeHtmlTags } from '@/ts/markdown';
+
+
 import { Editor, EditorContent } from '@tiptap/vue-3';
 import Bold from '@tiptap/extension-bold';
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
-import type { DocumentBlock } from '@/entities/Document';
+import Table from '@tiptap/extension-table'
+import TableRow from '@tiptap/extension-table-row'
+import TableCell from '@tiptap/extension-table-cell'
+import TableHeader from '@tiptap/extension-table-header'
+
+
+
+
+marked.setOptions({
+  breaks: true,
+  gfm: true,
+})
 
 const props = defineProps({
   block: {
-    type: Object as PropType<DocumentBlock | null>,
+    type: Object as PropType<DocumentBlock>,
     required: true
   },
   loading : {
@@ -135,8 +160,29 @@ const clauses = ref<DocumentBlock[]>([])
 const currentArticle = ref<DocumentBlock | null>(null)
 const currentClause = ref<DocumentBlock | null>(null)
 
+function toggleShowSelectArticle() {
+  if (props.state < 5) {
+    showSelectClause.value = false
+    showSelectArticle.value = false
+    return
+  }
+  showSelectClause.value = false
+  showSelectArticle.value = !showSelectArticle.value
+}
+
+function toggleShowSelectClause() {
+  if (props.state < 6) {
+    showSelectClause.value = false
+    showSelectArticle.value = false
+    return
+  }
+  showSelectArticle.value = false
+  showSelectClause.value = !showSelectClause.value
+}
+
 function selectArticle(article: DocumentBlock) {
   currentArticle.value = article
+  clauses.value = props.blocksToSelect.filter((block) => block.Level === 6 && block.ParentId === article.Id);
   showSelectArticle.value = false
 }
 
@@ -194,8 +240,29 @@ function handleCloseForm() {
   emits('closeForm')
 }
 
+function checkContentAvailable() {
+  if (newContent.value === null || removeHtmlTags(newContent.value.trim()).length === 0) {
+    return false
+  }
+  return true
+}
+
 function handleSubmitForm() {
-    emits('submitForm', newContent.value?.trim());
+  if (!checkContentAvailable()) {
+    return
+  }
+
+  const block = props.block
+  block.Content = newContent.value?.trim() || ''
+  if (props.state === 5) {
+    console.log('Them khoan')
+    block.ParentId = currentArticle.value!.Id
+  }
+  if (props.state=== 6) {
+    console.log('Them diem')
+    block.ParentId = currentClause.value!.Id
+  }
+  emits('submitForm', block);
 }
 
 const newContent = ref<string|null>(null)
@@ -229,7 +296,24 @@ onMounted(async () => {
         codeBlock: false,
       }),
       Underline,
-      Bold
+      Bold,
+      Table.configure({
+        resizable: true,
+        HTMLAttributes: {
+          style: 'width: 100%;',
+        },
+      }),
+      TableRow.configure({
+        HTMLAttributes: {
+          style: 'width: 100%;',
+        },
+      }),
+      TableHeader,
+      TableCell.configure({
+        HTMLAttributes: {
+          style: 'text-align: center; width: 50%',
+        },
+      }),
     ],
     content: newContent.value,
     onUpdate: ({ editor }) => {
@@ -237,10 +321,25 @@ onMounted(async () => {
     },
   });
 
+
   getTitle()
 
-  articles.value = props.blocksToSelect.filter((block) => block.Level === 5);
-  clauses.value = props.blocksToSelect.filter((block) => block.Level === 6);
+  if (props.block.Level >= 6) {
+    articles.value = props.blocksToSelect.filter((block) => block.Level === 5);
+    clauses.value = props.blocksToSelect.filter((block) => block.Level === 6);
+
+    const clause = props.blocksToSelect.find((block) => block.Level === 6 && block.Id === props.block.ParentId);
+    if (clause) {
+      currentClause.value = clause;
+      currentArticle.value = props.blocksToSelect.find((block) => block.Level === 5 && block.Id === clause.ParentId) || null;
+      clauses.value = props.blocksToSelect.filter((block) => block.Level === 6 && block.ParentId === currentArticle.value?.Id);
+    }
+    else {
+      currentArticle.value = props.blocksToSelect.find((block) => block.Level === 5 && block.Id === props.block.ParentId) || null;
+      clauses.value = props.blocksToSelect.filter((block) => block.Level === 6 && block.ParentId === currentArticle.value?.Id);
+    }
+  }
+
 });
 
 

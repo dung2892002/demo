@@ -98,7 +98,7 @@
             />
           </div>
           <div v-show="!showBlock && showDocument?.MarkdownContent">
-            <div v-html="marked(showDocument?.MarkdownContent!)" class="markdown-container"></div>
+            <div v-html="marked(handleCretaeTableFromMarkdown(showDocument?.MarkdownContent!))" class="markdown-container"></div>
           </div>
         </div>
       </div>
@@ -167,6 +167,7 @@ const showColorList = ref(true)
 const blocksRef = ref<InstanceType<typeof DocumentBlocks> | null>(null);
 
 import { debounce } from "lodash";
+import { handleCretaeTableFromMarkdown } from '@/ts/markdown'
 
 const handleClosePopup = debounce(() => {
   if (blocksRef.value?.closeContextMenuAndPopup) {

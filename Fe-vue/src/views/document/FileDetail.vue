@@ -45,7 +45,7 @@ async function handleUpdateFile(file: Document, blocks: DocumentBlock[]) {
   try {
     updateLoading.value = true
     file.DocumentBlocks = blocks
-    console.log(file)
+
     await axios.put(`https://localhost:7160/api/v1/Documents/${props.document.Id}`, file)
     updateLoading.value = false
     closeFile(true)

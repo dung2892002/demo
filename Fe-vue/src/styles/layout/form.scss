@@ -700,6 +700,8 @@ form label {
           }
         }
         .file-review {
+          max-height: 200px;
+          overflow-y: scroll;
           table {
             width: 100%;
             border-collapse: collapse;

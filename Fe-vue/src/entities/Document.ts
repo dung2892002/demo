@@ -48,5 +48,5 @@ export interface DocumentBlock {
   Order: number
   IsExpand?: boolean
   IsShow?: boolean
-  State?: number /*0: khong thay doi, 1: cap nhat, 2: them moi, 3: xoa bo */
+  State?: number /*0: khong thay doi, 1: cap nhat, 2: them moi, 3: xoa bo, 4: xoa sau khi them */
 }

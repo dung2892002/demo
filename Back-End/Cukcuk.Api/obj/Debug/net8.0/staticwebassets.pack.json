@@ -1,12 +1,80 @@
 {
   "Files": [
     {
-      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx",
-      "PackagePath": "staticwebassets\\files\\97d151e0-e08b-4257-b13b-63fd4290487b_5.Nghị định 49_2024_ND-CP.docx"
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\09cb692a-5f29-4713-b74b-090094fd7770_12_2020_TT-BGTVT_292769.doc",
+      "PackagePath": "staticwebassets\\files\\09cb692a-5f29-4713-b74b-090094fd7770_12_2020_TT-BGTVT_292769.doc"
     },
     {
-      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\accbfdfa-5f91-4c6f-8ec1-81f5d27cba9c_20_2023_QH15_513347.doc",
-      "PackagePath": "staticwebassets\\files\\accbfdfa-5f91-4c6f-8ec1-81f5d27cba9c_20_2023_QH15_513347.doc"
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\13778164-79d4-4566-bd09-dce5f855638e_Thông tư 08_2019_TT-BKHDT.doc",
+      "PackagePath": "staticwebassets\\files\\13778164-79d4-4566-bd09-dce5f855638e_Thông tư 08_2019_TT-BKHDT.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\1b353efd-2bda-4c54-b929-1bc4a15959e3_Nghị quyết 103_2023_QH15.doc",
+      "PackagePath": "staticwebassets\\files\\1b353efd-2bda-4c54-b929-1bc4a15959e3_Nghị quyết 103_2023_QH15.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\1d5b605e-c8c3-437b-bf0c-ca19f937fd4d_Nghị định 37_2019_ND-CP.doc",
+      "PackagePath": "staticwebassets\\files\\1d5b605e-c8c3-437b-bf0c-ca19f937fd4d_Nghị định 37_2019_ND-CP.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\3ac232d2-59f8-46fe-86a6-bb61b9a02b6c_Nghị định 45_2017_ND-CP.doc",
+      "PackagePath": "staticwebassets\\files\\3ac232d2-59f8-46fe-86a6-bb61b9a02b6c_Nghị định 45_2017_ND-CP.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\41d9043c-3732-44c2-96b2-f191d851018a_Nghị định 58_2023_ND-CP.doc",
+      "PackagePath": "staticwebassets\\files\\41d9043c-3732-44c2-96b2-f191d851018a_Nghị định 58_2023_ND-CP.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\41fc285f-c581-433f-95e2-a62ef459cfbd_Thông tư 69_2017_TT-BTC.doc",
+      "PackagePath": "staticwebassets\\files\\41fc285f-c581-433f-95e2-a62ef459cfbd_Thông tư 69_2017_TT-BTC.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\57b85739-b429-4987-b081-22989e4ec21a_5.Nghị định 49_2024_ND-CP.docx",
+      "PackagePath": "staticwebassets\\files\\57b85739-b429-4987-b081-22989e4ec21a_5.Nghị định 49_2024_ND-CP.docx"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\57fd75d4-1211-4c4a-96d9-1228d8227e24_Quyết định 1497_QD-TTg.doc",
+      "PackagePath": "staticwebassets\\files\\57fd75d4-1211-4c4a-96d9-1228d8227e24_Quyết định 1497_QD-TTg.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\5a2bee4a-6518-48e4-b376-c51691777a85_Nghị quyết 16_2021_QH15.doc",
+      "PackagePath": "staticwebassets\\files\\5a2bee4a-6518-48e4-b376-c51691777a85_Nghị quyết 16_2021_QH15.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\709c1d7a-50c4-4fd6-9876-aaee43dc5e64_Chỉ thị 21_CT-TTg.doc",
+      "PackagePath": "staticwebassets\\files\\709c1d7a-50c4-4fd6-9876-aaee43dc5e64_Chỉ thị 21_CT-TTg.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\8db0ef3c-c245-482a-8e57-d0f86b77e59c_04_2023_TT-BKHDT_571327.doc",
+      "PackagePath": "staticwebassets\\files\\8db0ef3c-c245-482a-8e57-d0f86b77e59c_04_2023_TT-BKHDT_571327.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\903f8c24-5ed6-4658-a795-cb121a87169d_Chỉ thị 01_CT-BTTTT_2024.doc",
+      "PackagePath": "staticwebassets\\files\\903f8c24-5ed6-4658-a795-cb121a87169d_Chỉ thị 01_CT-BTTTT_2024.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\a7273ceb-f46b-4d2a-a167-8e9e16047aad_Nghị quyết 99_NQ-CP.doc",
+      "PackagePath": "staticwebassets\\files\\a7273ceb-f46b-4d2a-a167-8e9e16047aad_Nghị quyết 99_NQ-CP.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\ccdb2496-d49f-4304-841e-85d3782b6642_Thông tư 21_2023_TT-BKHDT.doc",
+      "PackagePath": "staticwebassets\\files\\ccdb2496-d49f-4304-841e-85d3782b6642_Thông tư 21_2023_TT-BKHDT.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\cd4b4f04-5c20-413e-9bd5-5727e1394e24_Luật 21_2017_QH14.doc",
+      "PackagePath": "staticwebassets\\files\\cd4b4f04-5c20-413e-9bd5-5727e1394e24_Luật 21_2017_QH14.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\e6b05fdf-417d-4481-9373-361a02c18346_20_2023_QH15_513347.doc",
+      "PackagePath": "staticwebassets\\files\\e6b05fdf-417d-4481-9373-361a02c18346_20_2023_QH15_513347.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\f6995934-9fa8-4c29-8665-a52cfac6c285_Chỉ thị 01_CT-BTTTT_2023.doc",
+      "PackagePath": "staticwebassets\\files\\f6995934-9fa8-4c29-8665-a52cfac6c285_Chỉ thị 01_CT-BTTTT_2023.doc"
+    },
+    {
+      "Id": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\048be6dd-b1b1-41f8-bbb0-d8461ec3c64a_12_2020_TT-BGTVT_292769.doc",
+      "PackagePath": "staticwebassets\\tmp\\048be6dd-b1b1-41f8-bbb0-d8461ec3c64a_12_2020_TT-BGTVT_292769.doc"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cukcuk.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

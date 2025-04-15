@@ -31,7 +31,7 @@
           v-for="(block, index) in blocks"
           :key="index"
           :style="{ paddingLeft: block.Level != 0 ? block.Level * 20 + 'px' : '40px' }"
-          v-show="block.IsShow == true && block.State != 3"
+          v-show="block.IsShow == true && block.State != 3 && block.State != 4"
           @contextmenu.prevent="showContextMenu($event, block, false)"
         >
           <div v-if="checkHasChild(block)" @click.stop="toggleExpandBlock(block)" class="control">
@@ -992,9 +992,10 @@ function handleDelete(block: DocumentBlock) {
   handleSplitBlock()
 }
 
-//xoa block thi se de quy xoa cac ptu con,chau cua no
+//xoa block thi se de quy xoa cac ptu con cua no
 function removeChild(block: DocumentBlock) {
-  block.State = 3
+  if (block.State != 2) block.State = 3
+  else block.State = 4
   const childenBlocks = blocks.value.filter((b) => b.ParentId == block.Id)
   childenBlocks.forEach((b) => {
     removeChild(b)
@@ -1107,9 +1108,10 @@ const props = defineProps({
 })
 
 const emits = defineEmits(['updateBlocks'])
-const updatedBlocks = computed(() => blocks.value.filter((b) => b.State != 0))
+const updatedBlocks = computed(() => blocks.value.filter((b) => b.State == 1 || b.State == 2 || b.State == 3))
 
 function updateBlocks() {
+  console.log('updatedBlocks', updatedBlocks.value)
   emits('updateBlocks', updatedBlocks.value)
 }
 

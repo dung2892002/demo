@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content" >
     <div class="content__header">
       <div class="content__filter">
         <div class="folder-route">
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="content-main">
+    <div class="content-main"  v-loading="loading">
       <div class="toolbar">
         <input
           v-if="selectedDocuments.length === 0"
@@ -82,8 +82,8 @@
           </button>
         </div>
       </div>
-      <div class="main-container" ref="tableContainer" v-loading="loading">
-        <table class="employee-table">
+      <div class="main-container" ref="tableContainer">
+        <table class="employee-table" >
           <thead>
             <tr>
               <th style="width: 40px">
@@ -200,6 +200,7 @@
             </tr>
           </tbody>
         </table>
+
       </div>
       <ThePagnigation
         :pageNumber="pageNumber"
@@ -631,6 +632,7 @@ async function fetchDocument() {
   showPopupAction.value = -1
   loading.value = true
   selectedDocuments.value = []
+
   const response = await axios.get('https://localhost:7160/api/v1/Documents/filter', {
     params: {
       parentId: currentDocument.value?.Id,
@@ -641,6 +643,7 @@ async function fetchDocument() {
       type: typeFilter.value,
     },
   })
+
   loading.value = false
 
   documents.value = response.data.Items

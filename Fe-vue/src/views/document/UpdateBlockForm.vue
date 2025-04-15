@@ -254,6 +254,7 @@ function handleSubmitForm() {
 
   const block = props.block
   block.Content = newContent.value?.trim() || ''
+  block.Title = removeHtmlTags(block.Content).trim()
   if (props.state === 5) {
     console.log('Them khoan')
     block.ParentId = currentArticle.value!.Id

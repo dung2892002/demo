@@ -27,8 +27,7 @@ table {
   &::-webkit-scrollbar-thumb {
     background-color: #b9b9b9;
     border-radius: 10px;
-    min-height: 40px;
-    max-height: 80px;
+    height: 40px;
   }
 
   &::-webkit-scrollbar-thumb:hover {

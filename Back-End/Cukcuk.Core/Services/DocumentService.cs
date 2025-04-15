@@ -640,7 +640,6 @@ namespace Cukcuk.Core.Services
                 {
                     using (WordDocument document = new WordDocument(fileStream, FormatType.Docx))
                     {
-                        // Duyệt qua tất cả các đoạn văn và loại bỏ hình ảnh
                         foreach (IWSection section in document.Sections)
                         {
                             foreach (IWParagraph paragraph in section.Paragraphs)
@@ -684,32 +683,23 @@ namespace Cukcuk.Core.Services
             return string.Join("\n\n", lines);
         }
 
-        private static string ExtractSignerName(string input)
+
+        private static string ReverseString(string input)
         {
-            // Regex để tìm đoạn **Tên người ký**
-            string pattern = @"\*\*(.*?)\*\*\s*\|";
-
-            // Thực hiện tìm kiếm
-            MatchCollection matches = Regex.Matches(input, pattern);
-
-            // Lấy tên cuối cùng (vì chức danh cũng có ** **)
-            if (matches.Count > 0)
-            {
-                return matches[matches.Count - 1].Groups[1].Value.Trim();
-            }
-
-            return string.Empty;
+            char[] array = input.ToCharArray();
+            Array.Reverse(array);
+            return new string(array);
         }
 
 
         private static (string CoQuan, string SoLuat, string NgayBanHanh) ExtractLawInfo(string input)
         {
             string coQuanPattern = @"\|\*\*(.*?)\*\*";
-            string soLuatPattern = @"ố:\s*([\w/\-]+)";
+            string soLuatPattern = @"[Ss]ố:\s*(\d{1,5}(?:\s*/\s*\d{4})?\s*/\s*[A-ZĐ]+(?:\\?-?[A-ZĐ0-9]+)*)";
             string ngayPattern = @"(\d{1,2}) tháng (\d{1,2}) năm (\d{4})"; 
 
             string coQuan = Regex.Match(input, coQuanPattern).Groups[1].Value.Trim();
-            string soLuat = Regex.Match(input, soLuatPattern).Groups[1].Value.Trim();
+            string soLuat = Regex.Match(input, soLuatPattern).Groups[1].Value.Trim().Replace("\\-","-");
 
             var ngayMatch = Regex.Match(input, ngayPattern);
             string ngayBanHanh = "";
@@ -759,6 +749,50 @@ namespace Cukcuk.Core.Services
             return NormalizeMarkdownOutput(markdownContent.Trim()); // Loại bỏ khoảng trắng thừa
         }
 
+        private static string ExtractSignerName(string input)
+        {
+            // Regex để tìm đoạn **Tên người ký**
+            string pattern = @"\*\*([^\*]+)\*\*";
+
+            string[] parts = input.Split('|');
+            // Thực hiện tìm kiếm
+            MatchCollection matches = Regex.Matches(ReverseString(parts[2]), pattern);
+
+
+            if (matches.Count > 0)
+            {
+                var result = matches[0].Groups[1].Value.Trim();
+                return ReverseString(result.ToString());
+            }
+
+            return string.Empty;
+        }
+
+
+        private static bool IsValidSignature(string input)
+        {
+            // Kiểm tra nếu input không phải bảng (không chứa ít nhất 3 dấu "|")
+            if (string.IsNullOrEmpty(input) || input.Count(c => c == '|') < 2)
+            {
+                return false;
+            }
+
+            // Tách chuỗi theo ký tự "|"
+            string[] parts = input.Split('|');
+
+            // Kiểm tra nếu không có đủ 3 phần (ít nhất 2 dấu "|")
+            if (parts.Length < 3)
+            {
+                return false;
+            }
+
+            // Lấy phần tử thứ 2 (giữa dấu | thứ 2 và 3)
+            string signature = parts[2].Trim();
+
+            // Kiểm tra chữ ký: phải chứa ít nhất 2 từ (chức danh và tên riêng)
+            string[] words = signature.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            return words.Length >= 2;
+        }
 
         private static List<DocumentBlock> SplitWordDocument(string markdownData, Document document)
         {
@@ -768,12 +802,14 @@ namespace Cukcuk.Core.Services
             List<string> contents = markdownData
                                     .Split(new[] { "\n\n" }, StringSplitOptions.None) // Tách từng dòng nhưng không loại bỏ gì
                                     .Select(line => line.Trim()) // Xóa khoảng trắng đầu/cuối
-                                    .Where(line => !string.IsNullOrEmpty(line)) // Chỉ lấy dòng có nội dung
+                                    .Where(line =>
+                                        !string.IsNullOrEmpty(line) &&
+                                        !string.IsNullOrEmpty(Regex.Replace(line, @"[\*\|]", "").Trim())
+                                    )
                                     .ToList();
 
-            var signIndex = contents.Count - 1;
-
             var contentIndex = 0;
+            var signIndex = contents.Count - 1;
 
             for (int index = 0; index < contents.Count; index++)
             {
@@ -785,11 +821,16 @@ namespace Cukcuk.Core.Services
                 {
                     contentIndex = index;
                 } 
-                if (level == 8)
+                if (level == 8 && contentIndex != 0)
                 {
                     signIndex = index - 1;
                     break;
                 }
+            }
+
+            while (IsValidSignature(contents[signIndex]) == false)
+            {
+                signIndex--;
             }
 
             var firstBlock = new DocumentBlock
@@ -828,7 +869,7 @@ namespace Cukcuk.Core.Services
                         Id = Guid.NewGuid(),
                         Content = text,
                         Title = text,
-                        Level = level,
+                        Level = level < 8 ? level : 0,
                         ContentType = 2,
                         Order = 2000 * order++,
                         ParentId = null,
@@ -894,7 +935,6 @@ namespace Cukcuk.Core.Services
                 else
                 {
                     returnBlocks.Last().Content += "\r\n" + text;
-
                 }
             }
 
@@ -926,9 +966,8 @@ namespace Cukcuk.Core.Services
             string pointRegex = @"^\p{L}(\.|\))"; 
             if (Regex.IsMatch(dataCheck, pointRegex, RegexOptions.IgnoreCase)) return 7;
 
-            string appendixRegex = @"^Phụ lục\s+([IVXLCDM\d]+)\.?";
+            string appendixRegex = @"^(\|\*\*)?ĐƠN VỊ\s*(?:\.{8,})|^(?:\|\*\*)?DANH MỤC CÁC PHỤ LỤC|^(?:\|\*\*)?FILE ĐƯỢC ĐÍNH KÈM THEO VĂN BẢN|^Phụ lục(?:\s+[IVXLCDM\d]+\.?)?|\|\*\*MẪU BIỂU SỐ";
             if (Regex.IsMatch(dataCheck, appendixRegex, RegexOptions.IgnoreCase)) return 8;
-
 
             return 0;
         }

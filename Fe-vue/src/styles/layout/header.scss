@@ -102,6 +102,14 @@
     justify-content: center;
     cursor: pointer;
 
+    span {
+      display: inline-block;     /* hoặc inline nếu không cần set width */
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     img {
       width: 20px;
       height: 20px;

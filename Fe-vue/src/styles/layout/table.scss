@@ -2,14 +2,16 @@
   position: relative;
   height: 620px;
   overflow-y: scroll;
-
+  
+  overflow-x: hidden;
   .employee-table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
-
+    overflow-x: hidden;
+    min-width: 1300px;
     th,
     td {
       border: 1px solid #ddd;

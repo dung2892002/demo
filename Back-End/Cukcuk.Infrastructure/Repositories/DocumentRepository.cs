@@ -79,7 +79,7 @@ namespace Cukcuk.Infrastructure.Repositories
 
             var totalItems = await query.CountAsync();
 
-            var documents = await query.OrderBy(d => d.Name).Skip((pageNumber - 1) * pageSize).Take(pageSize).Include(d => d.Category).ToListAsync();
+            var documents = await query.OrderBy(d => d.CreatedAt).Skip((pageNumber - 1) * pageSize).Take(pageSize).Include(d => d.Category).ToListAsync();
 
             return new PageResult<Document>
             {

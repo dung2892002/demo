@@ -101,11 +101,11 @@
                 </span>
               </th>
               <th>Tên tài liệu</th>
-              <th class="w-20">Chủ đề</th>
+              <th class="w-24">Chủ đề</th>
               <th class="w-24">Phân loại</th>
               <th class="w-20">Ngày tạo</th>
               <th class="w-30" v-if="keyword.trim().length > 0">Vị trí</th>
-              <th class="w-15">Hành động</th>
+              <th class="w-16">Hành động</th>
             </tr>
           </thead>
           <tbody>
@@ -137,21 +137,21 @@
                   @mouseleave="handleClosePopupText"
                 ></span>
               </td>
-              <td>{{ document.Category?.Name }}</td>
+              <td><span class="truncate-text">{{ document.Category?.Name }}</span></td>
               <td>
-                {{
+                <span class="truncate-text">{{
                   document.Type === DocumentType.Folder
                     ? ''
                     : document.IsLaw
                       ? 'Văn bản quy phạm pháp luật'
                       : 'Tri thức nghiệp vụ khác'
-                }}
+                }}</span>
               </td>
               <td style="text-align: center">
                 {{ document.CreatedAt ? formatDate(document.CreatedAt) : '' }}
               </td>
               <td v-if="keyword.trim().length > 0">
-                <span
+                <span class="truncate-text"
                   @mouseenter="handleShowPopupText(document.FolderPath, $event)"
                   @mouseleave="handleClosePopupText"
                   >{{ document.FolderPath }}</span

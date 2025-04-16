@@ -1,19 +1,20 @@
 ﻿using Cukcuk.Core.DTOs;
 using Cukcuk.Core.Entities;
 using Cukcuk.Core.Enum;
+using Cukcuk.Core.Helper;
 using Cukcuk.Core.Interfaces.IRepositories;
 using Cukcuk.Core.Interfaces.IServices;
-using Microsoft.AspNetCore.Http;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocIO;
-using iText.Kernel.Pdf.Canvas.Parser.Listener;
-using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf;
-using Cukcuk.Core.Helper;
-using System.Text.RegularExpressions;
-using System.Globalization;
-using OpenQA.Selenium.Chrome;
+using iText.Kernel.Pdf.Canvas.Parser;
+using iText.Kernel.Pdf.Canvas.Parser.Listener;
+using Microsoft.AspNetCore.Http;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+using System.Globalization;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Cukcuk.Core.Services
 {
@@ -602,7 +603,7 @@ namespace Cukcuk.Core.Services
                 }
                 catch (Exception ex)
                 {
-                    throw new InvalidDataException("Chi co the tai file chuan dinh dang quy pham phap luat");
+                    throw new InvalidDataException("Lỗi khi định dạng file văn bản QPPL");
                 }
             }
 
@@ -694,6 +695,9 @@ namespace Cukcuk.Core.Services
 
         private static (string CoQuan, string SoLuat, string NgayBanHanh) ExtractLawInfo(string input)
         {
+            //Console.WriteLine("input: ");
+            //Console.WriteLine(input);
+
             string coQuanPattern = @"\|\*\*(.*?)\*\*";
             string soLuatPattern = @"[Ss]ố:\s*(\d{1,5}(?:\s*/\s*\d{4})?\s*/\s*[A-ZĐ]+(?:\\?-?[A-ZĐ0-9]+)*)";
             string ngayPattern = @"(\d{1,2}) tháng (\d{1,2}) năm (\d{4})"; 
@@ -711,6 +715,10 @@ namespace Cukcuk.Core.Services
                 string nam = ngayMatch.Groups[3].Value;
                 ngayBanHanh = $"{ngay.PadLeft(2, '0')}/{thang.PadLeft(2, '0')}/{nam}";
             }
+
+            //Console.WriteLine($"co quan: {coQuan}");
+            //Console.WriteLine($"so luat: {soLuat}");
+            //Console.WriteLine($"ngay ban hanh: {ngayBanHanh}");
 
             return (coQuan, soLuat, ngayBanHanh);
         }
@@ -768,9 +776,28 @@ namespace Cukcuk.Core.Services
             return string.Empty;
         }
 
+        private static string RemoveDiacritics(string text)
+        {
+            var normalizedString = text.Normalize(NormalizationForm.FormD);
+            var stringBuilder = new StringBuilder();
+
+            foreach (var c in normalizedString)
+            {
+                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(c);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+        }
 
         private static bool IsValidSignature(string input)
         {
+            //Console.WriteLine("input: ");
+            //Console.WriteLine(input);
+
             // Kiểm tra nếu input không phải bảng (không chứa ít nhất 3 dấu "|")
             if (string.IsNullOrEmpty(input) || input.Count(c => c == '|') < 2)
             {
@@ -780,18 +807,43 @@ namespace Cukcuk.Core.Services
             // Tách chuỗi theo ký tự "|"
             string[] parts = input.Split('|');
 
-            // Kiểm tra nếu không có đủ 3 phần (ít nhất 2 dấu "|")
-            if (parts.Length < 3)
+            string signature = parts[2].Trim();
+
+            List<string> chucDanhCoTheKyVBPL = new List<string>
+                {
+                    "CHỦ TỊCH NƯỚC",
+                    "THỦ TƯỚNG CHÍNH PHỦ",
+                    "PHÓ THỦ TƯỚNG CHÍNH PHỦ",
+                    "CHỦ TỊCH QUỐC HỘI",
+                    "PHÓ CHỦ TỊCH QUỐC HỘI",
+                    "BỘ TRƯỞNG",
+                    "THỨ TRƯỞNG",
+                    "CHỦ NHIỆM ỦY BAN",
+                    "TỔNG KIỂM TOÁN NHÀ NƯỚC",
+                    "CHÁNH ÁN TÒA ÁN NHÂN DÂN TỐI CAO",
+                    "VIỆN TRƯỞNG VIỆN KIỂM SÁT NHÂN DÂN TỐI CAO",
+                    "CHỦ TỊCH ỦY BAN NHÂN DÂN CẤP TỈNH",
+                    "PHÓ CHỦ TỊCH ỦY BAN NHÂN DÂN CẤP TỈNH ĐƯỢC ỦY QUYỀN",
+                    "GIÁM ĐỐC SỞ",
+                    "TRƯỞNG PHÒNG TƯ PHÁP",
+                    "CHÍNH PHỦ",
+                    "THỦ TƯỚNG",
+                    "PHÓ THỦ TƯỚNG",
+                    "CHỦ TỊCH QUỐC HỘI"
+                };
+
+
+            string[] words = signature.Split("**", StringSplitOptions.RemoveEmptyEntries);
+            if (words== null || words.Length < 2)
             {
                 return false;
             }
-
-            // Lấy phần tử thứ 2 (giữa dấu | thứ 2 và 3)
-            string signature = parts[2].Trim();
-
-            // Kiểm tra chữ ký: phải chứa ít nhất 2 từ (chức danh và tên riêng)
-            string[] words = signature.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            return words.Length >= 2;
+            //Console.WriteLine($"word: {words[0]}");
+            var result = chucDanhCoTheKyVBPL.Any(cd =>
+                                                    RemoveDiacritics(input.ToUpper()).Contains(RemoveDiacritics(cd.ToUpper()))
+                                                );
+            //Console.WriteLine($"result: {result}");
+            return result;
         }
 
         private static List<DocumentBlock> SplitWordDocument(string markdownData, Document document)
@@ -817,21 +869,25 @@ namespace Cukcuk.Core.Services
                 if (string.IsNullOrEmpty(text)) continue;
 
                 var level = GetLevel(text);
-                if (level > 0 && level != 8 && contentIndex == 0)
+                if (level > 0)
                 {
                     contentIndex = index;
+                    break;
                 } 
-                if (level == 8 && contentIndex != 0)
+            }
+
+            for (int index = contentIndex + 1; index < contents.Count; index++)
+            {
+                string text = contents[index].Trim();
+                if (string.IsNullOrEmpty(text)) continue;
+                if (IsValidSignature(text))
                 {
-                    signIndex = index - 1;
+                    Console.WriteLine(text);
+                    signIndex = index;
                     break;
                 }
             }
 
-            while (IsValidSignature(contents[signIndex]) == false)
-            {
-                signIndex--;
-            }
 
             var firstBlock = new DocumentBlock
             {
@@ -900,21 +956,47 @@ namespace Cukcuk.Core.Services
                 Level = 0,
                     
             };
-            var sighName = ExtractSignerName(sightBlock.Content);
-            document.SignerName = sighName;
+            var signerName = ExtractSignerName(sightBlock.Content);
+            document.SignerName = signerName;
 
             returnBlocks.Add(sightBlock);
 
             var (coquan, soluat, ngaybanhanh) = ExtractLawInfo(firstBlock.Content);
+
             document.Issuer = coquan;
-            document.IssueDate = DateTime.ParseExact(ngaybanhanh, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             document.DocumentNo = soluat;
 
+            DateTime? issueDate = null;
+            if (DateTime.TryParseExact(ngaybanhanh, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+            {
+                issueDate = parsedDate;
+            }
 
-            for (int index = signIndex + 1; index < contents.Count; index++)
+            document.IssueDate = issueDate;
+
+            var otherIndex = signIndex + 1;
+            if (otherIndex < contents.Count)
+            {
+                var text = contents[otherIndex].Trim();
+                var block = new DocumentBlock
+                {
+                    Id = Guid.NewGuid(),
+                    Content = text,
+                    Title = text,
+                    Level = 0,
+                    ContentType = 4,
+                    Order = 2000 * order++,
+                    ParentId = null,
+                    DocumentId = document.Id
+                };
+                returnBlocks.Add(block);
+                otherIndex++;
+            }
+
+
+            for (int index = otherIndex; index < contents.Count; index++)
             {
                 string text = contents[index].Trim();
-                if (string.IsNullOrEmpty(text)) continue;
                 var level = GetLevel(text);
                 if (level == 8)
                 {
@@ -929,7 +1011,6 @@ namespace Cukcuk.Core.Services
                         ParentId = null,
                         DocumentId = document.Id
                     };
-                    FindParent(block, blocks);
                     returnBlocks.Add(block);
                 }
                 else
@@ -966,7 +1047,7 @@ namespace Cukcuk.Core.Services
             string pointRegex = @"^\p{L}(\.|\))"; 
             if (Regex.IsMatch(dataCheck, pointRegex, RegexOptions.IgnoreCase)) return 7;
 
-            string appendixRegex = @"^(\|\*\*)?ĐƠN VỊ\s*(?:\.{8,})|^(?:\|\*\*)?DANH MỤC CÁC PHỤ LỤC|^(?:\|\*\*)?FILE ĐƯỢC ĐÍNH KÈM THEO VĂN BẢN|^Phụ lục(?:\s+[IVXLCDM\d]+\.?)?|\|\*\*MẪU BIỂU SỐ";
+            string appendixRegex = @"^(\|\*\*)?ĐƠN VỊ\s*(?:\.{8,})|^(?:\|\*\*)?DANH MỤC CÁC PHỤ LỤC|^Phụ lục(?:\s+[IVXLCDM\d]+\.?)?|\|\*\*MẪU BIỂU SỐ";
             if (Regex.IsMatch(dataCheck, appendixRegex, RegexOptions.IgnoreCase)) return 8;
 
             return 0;

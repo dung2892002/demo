@@ -291,7 +291,8 @@ async function SubmitFormLaw() {
 
     stepUploadLaw.value = 2
   } catch (error) {
-    console.log(error)
+    saveLoading.value = false
+    toastRef.value?.addToastError(`${error}`)
   }
 }
 

@@ -6,6 +6,7 @@ input {
   padding: 8px 12px;
   margin-top: 4px;
   margin-right: 4px;
+  font-size: 14px;
 
   &:focus {
     outline: none;
@@ -16,7 +17,7 @@ input {
 textarea, .input, .tiptap {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px 12px;
   margin-top: 4px;
   margin-right: 4px;

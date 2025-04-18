@@ -4,7 +4,6 @@ wwwroot\files\032dd28f-b1c7-428a-abbb-45ae35107049_Thông tư 291_2016_TT-BTC.do
 wwwroot\files\0339cc54-0dbf-491f-bf56-69c44c9773d1_Quyết định 30_2021_QD-TTg.doc
 wwwroot\files\0393761a-5914-4c2a-be8e-a1eb911f8c35_Thông tư 09_2022_TT-BTTTT.doc
 wwwroot\files\03b5bceb-33ef-42d7-912a-f32acb2cce46_Quyết định 02_2022_QD-TTg.doc
-wwwroot\files\04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc
 wwwroot\files\055104ba-3170-406a-a33c-827ba6522ca0_Thông tư 69_2017_TT-BTC.doc
 wwwroot\files\0559bd25-e4e4-43a7-8b34-0454151768bc_Nghị định 35_2022_ND-CP.doc
 wwwroot\files\0614f934-b491-4240-954a-2e72f8cc4525_Nghị định 130_2005_ND-CP_4484.doc
@@ -103,7 +102,6 @@ wwwroot\files\3e752b3b-4740-4b02-a215-d116a1319693_Thông tư 268_2016_TT-BTC.do
 wwwroot\files\3f802d68-a808-493b-a305-7b04a7929231_Nghị định 12_2024_ND-CP.doc
 wwwroot\files\41a17d60-3cdb-4a2a-82eb-e12e11129477_Quyết định 2269_QD-TTg.doc
 wwwroot\files\427f57b0-f1b8-423e-8231-e679f2382cd6_Quyết định 2014_QD-TTg.doc
-wwwroot\files\4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc
 wwwroot\files\44c889fc-7b62-4e63-829c-a1af55c18518_Thông tư 22_2023_QH15.doc
 wwwroot\files\455c5e08-44e1-4b60-9f28-2e3ee880be7d_Quyết định 30_2021_QD-TTg.doc
 wwwroot\files\45e20532-fe13-4397-b4f7-0e8b28b81bdc_Quyết định 1945_QD-TTg.doc
@@ -131,6 +129,7 @@ wwwroot\files\4f8a465f-866d-403c-807e-58c7079ca31d_Nghị định 121_2020_ND-CP
 wwwroot\files\4f912d48-8311-46a0-af53-87f448f8156e_Thông tư 03_2018_TT-BTTTT.doc
 wwwroot\files\51e52e1c-b7b8-408d-8ee8-80ee7dc8ccf8_Quyết định 02_2022_QD-TTg.doc
 wwwroot\files\5220ed51-d0b5-4609-bec1-da5fcc77da44_Nghị định 32_2019_ND-CP.doc
+wwwroot\files\53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc
 wwwroot\files\540ed4b9-1a2a-429c-aac4-89bcfbdfb919_Nghị định 60_2018_ND-CP.doc
 wwwroot\files\5527634d-7502-4e40-8c3d-8da638be3211_Luật 88_2015_QH13.doc
 wwwroot\files\5585b159-d652-4403-83e3-0bc6e10674e0_Luật 21_2017_QH14.doc
@@ -155,6 +154,7 @@ wwwroot\files\61fea3a3-c560-4238-89a4-0109277e82b0_Luật 97_2015_QH13.doc
 wwwroot\files\62694bea-fe57-4bdf-a2a0-c52414d6e56b_Thông tư 05_2022_TT-BTTTT.doc
 wwwroot\files\64000b51-7353-49d8-931b-aec2e242767f_Thông tư 76_2014_TT-BTC.doc
 wwwroot\files\640dca6d-9f49-44ae-855c-856f1ae970e0_Nghị định 44_2014_ND-CP.doc
+wwwroot\files\64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc
 wwwroot\files\64dfc365-c8bc-4f2b-bb5e-5ac0e9d21153_Quyết định 129_QD-BTTTT.doc
 wwwroot\files\650fdf76-aa12-46c5-a9d5-25c798c7bf51_Nghị định 94_2016_ND-CP.doc
 wwwroot\files\65928d7c-9ed8-413e-bdb0-fadcdd082219_Thông tư 71_2014_TTLT-BTC-BNV.doc
@@ -308,6 +308,7 @@ wwwroot\files\c3cbc14b-885f-421b-b091-c595328e8cb7_Thông tư 19_2022_TT-BTC.doc
 wwwroot\files\c40a7413-582e-40d3-a130-b20cffe73bac_Thông tư 69_2017_TT-BTC.doc
 wwwroot\files\c46a1d80-08d5-4ea5-bcca-d59c3c4d30db_Thông tư 333_2016_TT-BTC.doc
 wwwroot\files\c487e9ec-c3ed-4d23-8047-fb11bffb300d_Quyết định 18_QD-BCDCTMTQG.doc
+wwwroot\files\c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc
 wwwroot\files\c48d0e45-a305-46ed-8410-5279776acef1_Thông tư 24_2020_TT-BTTTT.doc
 wwwroot\files\c5315f2f-b438-42f6-bfcd-37b5c914990a_Thông tư 02_2015_TT-BLDTBXH.doc
 wwwroot\files\c5fab16e-a955-4a7a-b013-2ff4265e1f8d_Thông tư 23_2023_TT-BTC.doc
@@ -325,6 +326,7 @@ wwwroot\files\cf1563c1-d629-4102-9e39-5be583a24ff9_Luật 39_2019_QH14.doc
 wwwroot\files\cf79867f-dbe8-49b1-81e0-5cb6505f8854_Thông tư 04_2022_TT-BTTTT.doc
 wwwroot\files\d016bfa5-1062-4cce-ab79-eedae421fe13_Quyết định 1265_QD-TTg.doc
 wwwroot\files\d1663ba5-4b51-4d77-a37d-334fd47b0385_Nghị định 47_2021_ND-CP.doc
+wwwroot\files\d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx
 wwwroot\files\d20ba92a-37a4-497b-99ca-57ab31664704_Thông tư 107_2017_TT-BTC.doc
 wwwroot\files\d216e5b6-e6e2-4ada-b7dd-48b05c603604_Thông tư 342_2016_TT-BTC.doc
 wwwroot\files\d223c0bb-3bea-4e02-a1c6-c2072a13cf8e_Nghị định 152_2017_ND-CP.doc
@@ -397,4 +399,4 @@ wwwroot\files\fc805bac-c5d2-4d24-806c-419e6012863f_Quyết định 263_QD-TTg.do
 wwwroot\files\fc90e6f9-9a23-48f3-b8cd-5cb96967db52_Luật 44_2013_QH13.doc
 wwwroot\files\fda20335-8d44-44bc-b52b-3e3bea975c51_Quyết định 211_QD-TTg.doc
 wwwroot\files\fe65c3dc-93e0-4f71-bc11-3ae0878faeb6_Chỉ thị 01_CT-BTTTT_2024.doc
-wwwroot\tmp\0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc
+wwwroot\tmp\c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc

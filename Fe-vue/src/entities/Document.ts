@@ -17,7 +17,9 @@ export interface Document {
   Issuer: string | null
   IssueDate: string | null
   DocumentNo: string | null
+  DocumentName: string | null
   SignerName: string | null
+  EffectiveDate: string | null
   IsLaw: boolean
 }
 

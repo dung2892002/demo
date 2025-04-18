@@ -9,9 +9,9 @@
       </div>
 
       <form class="cukcuk-form">
-        <div class="file-category" v-if="props.block.Level >= 6" style="width: 100%;">
+        <div class="data-select" v-if="props.block.Level >= 6" style="width: 100%;">
           <span class="form__label">Điều <span class="required">*</span></span>
-          <div class="category--current" @click.stop="toggleShowSelectArticle" :class="{ 'disabled': props.state < 5 }">
+          <div class="value--current" @click.stop="toggleShowSelectArticle" :class="{ 'disabled': props.state < 5 }">
             <span v-if="currentArticle">
               {{ currentArticle!.Content }}
             </span>
@@ -19,7 +19,7 @@
               <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectArticle" />
               <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
             </div>
-            <div class="category-data more" v-if="showSelectArticle">
+            <div class="value-data more" v-if="showSelectArticle">
               <div
                 v-for="article in articles"
                 :key="article.Id!"
@@ -36,15 +36,15 @@
             </div>
           </div>
         </div>
-        <div class="file-category" v-if="props.block.Level >= 7" style="width: 100%;">
+        <div class="data-select" v-if="props.block.Level >= 7" style="width: 100%;">
           <span class="form__label">Khoản <span class="required">*</span></span>
-          <div class="category--current" @click.stop="toggleShowSelectClause" :class="{ 'disabled': props.state < 6 }">
+          <div class="value--current" @click.stop="toggleShowSelectClause" :class="{ 'disabled': props.state < 6 }">
             <span v-if="currentClause" >{{ currentClause!.Content }}</span>
             <div>
               <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectClause" />
               <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
             </div>
-            <div class="category-data more" v-if="showSelectClause">
+            <div class="value-data more" v-if="showSelectClause">
               <div
                 v-for="clause in clauses"
                 :key="clause.Id!"
@@ -91,7 +91,7 @@
             </button>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="max-height: 500px; overflow-y: scroll;">
           <EditorContent :editor="editor" class="markdown-container"/>
         </div>
       </form>

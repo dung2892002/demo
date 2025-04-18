@@ -251,9 +251,9 @@ namespace Cukcuk.Infrastructure.Repositories
 
         }
 
-        public async Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId)
+        public async  Task<List<DocumentBlock>> GetBlockByDocumentId(Guid documentId)
         {
-            return await _dbContext.DocumentBlocks.AsNoTracking().Where(d => d.DocumentId == documentId).OrderBy(b => b.Order).ToListAsync();
+            return  _dbContext.DocumentBlocks.AsNoTracking().Where(d => d.DocumentId == documentId).OrderBy(b => b.Order).ToList();
         }
 
         public async Task<DocumentBlock?> GetBlockById(Guid blockId)

@@ -7,6 +7,9 @@
   padding-top: 10px;
   border-top: 1px solid #d5d5d5;
   overflow: visible !important;
+  width: 100%;
+  min-width: 800px;
+  overflow-x: hidden;
 }
 
 .pagination-section {

@@ -108,24 +108,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\03b5bceb-33ef-42d7-912a-f32acb2cce46_Quyết định 02_2022_QD-TTg.doc'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Cukcuk.Api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ktfv7vz01e</Fingerprint>
-      <Integrity>KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\055104ba-3170-406a-a33c-827ba6522ca0_Thông tư 69_2017_TT-BTC.doc'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
@@ -1890,24 +1872,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\427f57b0-f1b8-423e-8231-e679f2382cd6_Quyết định 2014_QD-TTg.doc'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Cukcuk.Api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>files/4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wqaxv4d82a</Fingerprint>
-      <Integrity>WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\44c889fc-7b62-4e63-829c-a1af55c18518_Thông tư 22_2023_QH15.doc'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
@@ -2394,6 +2358,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\5220ed51-d0b5-4609-bec1-da5fcc77da44_Nghị định 32_2019_ND-CP.doc'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>files/53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ktfv7vz01e</Fingerprint>
+      <Integrity>KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\540ed4b9-1a2a-429c-aac4-89bcfbdfb919_Nghị định 60_2018_ND-CP.doc'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
@@ -2825,6 +2807,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\640dca6d-9f49-44ae-855c-856f1ae970e0_Nghị định 44_2014_ND-CP.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>files/64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ugkym1d3wz</Fingerprint>
+      <Integrity>HqZh47K4lpE1Kg4p2EMlW8F1h229qsHb+vL8GZ0EI1w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\64dfc365-c8bc-4f2b-bb5e-5ac0e9d21153_Quyết định 129_QD-BTTTT.doc'))">
       <SourceType>Package</SourceType>
@@ -5580,6 +5580,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\c487e9ec-c3ed-4d23-8047-fb11bffb300d_Quyết định 18_QD-BCDCTMTQG.doc'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>files/c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hx9v0nrfjp</Fingerprint>
+      <Integrity>BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\c48d0e45-a305-46ed-8410-5279776acef1_Thông tư 24_2020_TT-BTTTT.doc'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
@@ -5885,6 +5903,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\d1663ba5-4b51-4d77-a37d-334fd47b0385_Nghị định 47_2021_ND-CP.doc'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Cukcuk.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Cukcuk.Api</BasePath>
+      <RelativePath>files/d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dmg1oqfyma</Fingerprint>
+      <Integrity>ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\d20ba92a-37a4-497b-99ca-57ab31664704_Thông tư 107_2017_TT-BTC.doc'))">
       <SourceType>Package</SourceType>
@@ -7182,23 +7218,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\files\fe65c3dc-93e0-4f71-bc11-3ae0878faeb6_Chỉ thị 01_CT-BTTTT_2024.doc'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc'))">
       <SourceType>Package</SourceType>
       <SourceId>Cukcuk.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Cukcuk.Api</BasePath>
-      <RelativePath>tmp/0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc</RelativePath>
+      <RelativePath>tmp/c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zfq2lzq8d9</Fingerprint>
-      <Integrity>XzPrfmtKXOg9oPTTtBoDEvvSy701fqenUFy9nKN0VP8=</Integrity>
+      <Fingerprint>hx9v0nrfjp</Fingerprint>
+      <Integrity>BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\tmp\c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

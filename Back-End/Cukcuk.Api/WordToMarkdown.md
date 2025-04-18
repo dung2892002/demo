@@ -1,1148 +1,1798 @@
 **Created with a trial version of Syncfusion Word library or registered the wrong key in your application. Click** [here](https://www.syncfusion.com/account/claim-license-key?pl=ZmlsZWZvcm1hdHM=&vs=MjguMi43) **to obtain the valid key.**
-|**CHÍNH PHỦ** \
+|**QUỐC HỘI** \
  **\-\-\-\-\-\-\-**|**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
 **Độc lập \- Tự do \- Hạnh phúc**  \
  **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**|
 |:---:|:---:|
-|Số: 81/2021/NĐ\-CP|*Hà Nội, ngày 27 tháng 8 năm 2021*|
+|Số: 39/2019/QH14|*Hà Nội, ngày 13 tháng 06 năm 2019*|
 
 
  
 
-**NGHỊ ĐỊNH**
+**LUẬT**
 
-QUY ĐỊNH VỀ CƠ CHẾ THU, QUẢN LÝ HỌC PHÍ ĐỐI VỚI CƠ SỞ GIÁO DỤC THUỘC HỆ THỐNG GIÁO DỤC QUỐC DÂN VÀ CHÍNH SÁCH MIỄN, GIẢM HỌC PHÍ, HỖ TRỢ CHI PHÍ HỌC TẬP; GIÁ DỊCH VỤ TRONG LĨNH VỰC GIÁO DỤC, ĐÀO TẠO
+**ĐẦU TƯ CÔNG**
 
-*Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019;*
+*Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam;*
 
-*Căn cứ Luật Ngân sách nhà nước ngày 25 tháng 6 năm 2015;*
-
-*Căn cứ Luật Giá ngày 20 tháng 6 năm 2012;*
-
-*Căn cứ Luật Giáo dục đại học ngày 18 tháng 6 năm 2012; Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học ngày 19 tháng 11 năm 2018;*
-
-*Căn cứ Luật Giáo dục ngày 14 tháng 6 năm 2019;*
-
-*Căn cứ Luật Giáo dục nghề nghiệp ngày 27 tháng 11 năm 2014;*
-
-*Căn cứ Pháp lệnh Ưu đãi người có công với cách mạng ngày 09 tháng 12 năm 2020;*
-
-*Căn cứ Nghị quyết số 134/2020/QH14 ngày 17 tháng 11 năm 2020 của Quốc hội về tiếp tục thực hiện các Nghị quyết của Quốc hội về giám sát chuyên đề, chất vấn trong nhiệm kỳ khóa XIV và một số Nghị quyết trong nhiệm kỳ khóa XIII;*
-
-*Theo đề nghị của Bộ trưởng Bộ Giáo dục và Đào tạo, Bộ trưởng Bộ Lao động \- Thương binh và Xã hội;*
-
-*Chính phủ ban hành Nghị định quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; giá dịch vụ trong lĩnh vực giáo dục, đào tạo.*
+*Quốc hội ban hành Luật Đầu tư công.*
 
 **Chương I**
 
-**QUY ĐỊNH CHUNG**
+**NHỮNG QUY ĐỊNH CHUNG**
 
 **Điều 1. Phạm vi điều chỉnh**
 
-Nghị định này quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; giá dịch vụ trong lĩnh vực giáo dục, đào tạo.
+Luật này quy định việc quản lý nhà nước về đầu tư công; quản lý và sử dụng vốn đầu tư công; quyền, nghĩa vụ và trách nhiệm của cơ quan, đơn vị, tổ chức, cá nhân liên quan đến hoạt động đầu tư công.
 
 **Điều 2. Đối tượng áp dụng**
 
-Nghị định này áp dụng đối với trẻ em mầm non, học sinh, sinh viên, học viên, nghiên cứu sinh (sau đây gọi chung là người học) đang học tại các cơ sở giáo dục thuộc hệ thống giáo dục quốc dân theo quy định của Luật Giáo dục, Luật Giáo dục đại học, Luật Giáo dục nghề nghiệp; các cơ sở giáo dục thuộc hệ thống giáo dục quốc dân theo quy định của Luật Giáo dục, Luật Giáo dục đại học, Luật Giáo dục nghề nghiệp và các tổ chức, cá nhân có liên quan.
+Luật này áp dụng đối với cơ quan, đơn vị, tổ chức, cá nhân tham gia hoặc có liên quan đến hoạt động đầu tư công, quản lý và sử dụng vốn đầu tư công.
 
-**Điều 3. Giải thích từ ngữ**
+**Điều 3. Áp dụng Luật Đầu tư công, điều ước quốc tế, thỏa thuận quốc tế**
 
-1. Giá dịch vụ trong lĩnh vực giáo dục, đào tạo là số tiền người sử dụng dịch vụ phải trả cho từng dịch vụ trong lĩnh vực giáo dục, đào tạo và giáo dục nghề nghiệp, bao gồm: học phí (theo các cấp học và trình độ đào tạo) và giá các dịch vụ khác trong lĩnh vực giáo dục, đào tạo (giá dịch vụ tuyển sinh; giá dịch vụ kiểm định chất lượng giáo dục; giá cấp phát các loại phôi văn bằng, chứng chỉ; giá dịch vụ hỗ trợ đào tạo, cung ứng nguồn nhân lực thông qua việc nghiên cứu xây dựng chiến lược, chính sách, quy hoạch, kế hoạch về đào tạo nhân lực theo nhu cầu xã hội; giá dịch vụ điều tra, phân tích và dự báo nhu cầu nhân lực thông qua việc kết nối cơ sở đào tạo với đơn vị sử dụng lao động nhằm khai thác các nguồn lực cho hoạt động đào tạo phát triển nguồn nhân lực; giá dịch vụ bồi dưỡng nhà giáo và cán bộ quản lý giáo dục; giá dịch vụ tư vấn cho các tổ chức, cá nhân xây dựng kế hoạch, quy hoạch phát triển nguồn nhân lực, tham gia bồi dưỡng phát triển các kỹ năng cần thiết cho người học; giá các dịch vụ hỗ trợ hoạt động giáo dục, đào tạo).
+1. Việc quản lý, sử dụng vốn đầu tư công, hoạt động đầu tư công phải tuân thủ quy định của Luật này và quy định khác của pháp luật có liên quan.
 
-2. Học phí là khoản tiền mà người học phải nộp để chi trả một phần hoặc toàn bộ chi phí của dịch vụ giáo dục, đào tạo. Mức học phí được xác định theo lộ trình bảo đảm chi phí dịch vụ giáo dục, đào tạo quy định tại Nghị định này.
+2. Trường hợp điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên có quy định khác với quy định của Luật này thì áp dụng theo quy định của điều ước quốc tế đó.
 
-3. Kiểm định chất lượng giáo dục tại Nghị định này bao gồm kiểm định chất lượng giáo dục đối với cơ sở giáo dục mầm non, cơ sở giáo dục thường xuyên, cơ sở giáo dục phổ thông, cơ sở giáo dục đại học, kiểm định chất lượng giáo dục đối với chương trình đào tạo của cơ sở giáo dục đại học theo tiêu chuẩn đánh giá chất lượng trong nước do Bộ trưởng Bộ Giáo dục và Đào tạo ban hành và kiểm định chất lượng cơ sở giáo dục nghề nghiệp, kiểm định chất lượng chương trình đào tạo các trình độ giáo dục nghề nghiệp do Bộ trưởng Bộ Lao động \- Thương binh và Xã hội ban hành (sau đây gọi tắt là kiểm định theo tiêu chuẩn trong nước) hoặc theo tiêu chuẩn đánh giá chất lượng của tổ chức kiểm định chất lượng giáo dục nước ngoài được công nhận hoạt động ở Việt Nam (sau đây gọi tắt là kiểm định theo tiêu chuẩn nước ngoài).
+3. Việc thực hiện chương trình, dự án đầu tư công tại nước ngoài tuân thủ quy định của điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên, thỏa thuận quốc tế giữa bên Việt Nam với bên nước ngoài.
 
-**Điều 4. Quản lý nhà nước về giá dịch vụ trong lĩnh vực giáo dục, đào tạo**
+4. Việc quản lý, sử dụng vốn đầu tư của Nhà nước tại doanh nghiệp thực hiện theo quy định của pháp luật về quản lý, sử dụng vốn nhà nước đầu tư vào sản xuất, kinh doanh tại doanh nghiệp.
 
-1. Bộ Giáo dục và Đào tạo, Bộ Lao động \- Thương binh và Xã hội chủ trì, phối hợp với Bộ Tài chính, các bộ, ngành liên quan thực hiện chức năng quản lý nhà nước đối với học phí, giá các dịch vụ khác trong lĩnh vực giáo dục, đào tạo:
+**Điều 4. Giải thích từ ngữ**
 
-a) Hướng dẫn quy trình và xây dựng, thẩm định, ban hành định mức kinh tế \- kỹ thuật, phương pháp xác định học phí, giá các dịch vụ khác trong lĩnh vực giáo dục, đào tạo áp dụng chung trong lĩnh vực giáo dục, đào tạo theo phân cấp quản lý;
+Trong Luật này, các từ ngữ dưới đây được hiểu như sau:
 
-b) Quyết định phương thức giao nhiệm vụ, đặt hàng, đấu thầu cung cấp sản phẩm, dịch vụ trong lĩnh vực giáo dục, đào tạo thuộc danh mục dịch vụ công sử dụng ngân sách nhà nước từ nguồn ngân sách trung ương theo lĩnh vực quản lý được phân cấp; quyết định giá đặt hàng dịch vụ trong lĩnh vực giáo dục, đào tạo thuộc danh mục dịch vụ công sử dụng ngân sách trung ương theo phạm vi quản lý được phân cấp.
+1. *Báo cáo đề xuất chủ trương đầu tư* là tài liệu trình bày các nội dung nghiên cứu sơ bộ về sự cần thiết, tính khả thi, tính hiệu quả, dự kiến nguồn vốn và mức vốn của chương trình đầu tư công, dự án nhóm B, nhóm C làm cơ sở để cấp có thẩm quyền quyết định chủ trương đầu tư.
 
-2. Bộ, cơ quan ngang bộ, trong phạm vi nhiệm vụ, quyền hạn của mình thực hiện quản lý nhà nước về học phí, giá các dịch vụ khác trong lĩnh vực giáo dục, đào tạo; ban hành định mức kinh tế \- kỹ thuật, định mức chi phí hoặc phối hợp với Bộ Giáo dục và Đào tạo, Bộ Lao động \- Thương binh và Xã hội xây dựng và ban hành định mức kinh tế \- kỹ thuật đối với ngành nghề chuyên môn đặc thù; quyết định phương thức giao nhiệm vụ, đặt hàng, đấu thầu cung cấp sản phẩm, dịch vụ trong lĩnh vực giáo dục, đào tạo từ nguồn ngân sách trung ương; quyết định giá đặt hàng dịch vụ trong lĩnh vực giáo dục, đào tạo thuộc danh mục dịch vụ công sử dụng ngân sách trung ương đối với các dịch vụ thuộc phạm vi quản lý được phân cấp.
+2. *Báo cáo nghiên cứu tiền khả thi* là tài liệu trình bày các nội dung nghiên cứu sơ bộ về sự cần thiết, tính khả thi, tính hiệu quả, dự kiến nguồn vốn và mức vốn của dự án quan trọng quốc gia và dự án nhóm A làm cơ sở để cấp có thẩm quyền quyết định chủ trương đầu tư.
 
-3. Ủy ban nhân dân cấp tỉnh thực hiện quản lý nhà nước về học phí, giá các dịch vụ khác trong lĩnh vực giáo dục, đào tạo; ban hành định mức kinh tế \- kỹ thuật, định mức chi phí áp dụng trong lĩnh vực giáo dục, đào tạo đối với các dịch vụ chưa ban hành định mức kinh tế \- kỹ thuật thuộc thẩm quyền quản lý của địa phương; quyết định phương thức giao nhiệm vụ, đặt hàng, đấu thầu cung cấp sản phẩm, dịch vụ trong lĩnh vực giáo dục, đào tạo; quyết định giá đặt hàng dịch vụ trong lĩnh vực giáo dục, đào tạo thuộc danh mục dịch vụ công sử dụng ngân sách thuộc thẩm quyền quản lý của địa phương, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh quyết định khung hoặc mức học phí giáo dục mầm non, giáo dục phổ thông công lập; quy định chi tiết danh mục các khoản thu và mức thu, cơ chế quản lý thu chi đối với các dịch vụ hỗ trợ hoạt động giáo dục, đào tạo đối với cơ sở giáo dục công lập theo thẩm quyền quản lý để áp dụng tại địa phương.
+3. *Báo cáo nghiên cứu khả thi* là tài liệu trình bày các nội dung nghiên cứu về sự cần thiết, mức độ khả thi, hiệu quả, nguồn vốn và mức vốn của chương trình, dự án đầu tư công làm cơ sở để cấp có thẩm quyền quyết định đầu tư.
 
-4. Thủ trưởng cơ sở giáo dục thuộc hệ thống giáo dục quốc dân thực hiện công khai, minh bạch, giải trình với xã hội về căn cứ, phương pháp xác định, tính giá dịch vụ trong lĩnh vực giáo dục, đào tạo đối với các dịch vụ do đơn vị xác định mức giá, báo cáo cơ quan có thẩm quyền theo quy định.
+4. *Bộ, cơ quan trung ương và địa phương* là cơ quan, tổ chức được Thủ tướng Chính phủ giao kế hoạch đầu tư công, bao gồm:
 
-**Điều 5. Nguyên tắc xác định giá dịch vụ trong lĩnh vực giáo dục, đào tạo**
+a) Cơ quan trung ương của tổ chức chính trị, Viện kiểm sát nhân dân tối cao, Tòa án nhân dân tối cao, Kiểm toán nhà nước, Văn phòng Chủ tịch nước, Văn phòng Quốc hội, Bộ, cơ quan ngang Bộ, cơ quan thuộc Chính phủ, cơ quan trung ương của Mặt trận Tổ quốc Việt Nam và của tổ chức chính trị \- xã hội (sau đây gọi là Bộ, cơ quan trung ương);
 
-1.  Giá dịch vụ trong lĩnh vực giáo dục, đào tạo được xác định theo các quy định của pháp luật về giá và quy định của Chính phủ về cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập.
+b) Ủy ban nhân dân cấp tỉnh;
 
-2. Giá dịch vụ trong lĩnh vực giáo dục, đào tạo được điều chỉnh theo lộ trình phù hợp tương xứng với chất lượng dịch vụ giáo dục, đào tạo nhưng tỷ lệ tăng mức giá dịch vụ không quá 15%/năm.
+c) Cơ quan, tổ chức khác được giao kế hoạch đầu tư công.
 
-**Điều 6. Phương pháp định giá và thẩm quyền định giá dịch vụ trong lĩnh vực giáo dục, đào tạo**
+5. *Chủ chương trình* là cơ quan, tổ chức được giao chủ trì quản lý chương trình đầu tư công.
 
-Phương pháp định giá và cơ quan có thẩm quyền định giá dịch vụ trong lĩnh vực giáo dục, đào tạo được xác định theo quy định tại Luật Giá, Luật Giáo dục, Luật Giáo dục đại học, Luật Giáo dục nghề nghiệp, các văn bản hướng dẫn thi hành và quy định của Chính phủ về cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập.
+6. *Chủ đầu tư* là cơ quan, tổ chức được giao trực tiếp quản lý dự án đầu tư công.
 
-**Điều 7. Lộ trình tính giá dịch vụ trong lĩnh vực giáo dục, đào tạo**
+7. *Chủ trương đầu tư* là quyết định của cấp có thẩm quyền về những nội dung chủ yếu của chương trình, dự án đầu tư, làm căn cứ để lập, trình và phê duyệt quyết định đầu tư chương trình, dự án đầu tư, quyết định phê duyệt báo cáo nghiên cứu khả thi dự án đầu tư công.
 
-1. Lộ trình tính giá dịch vụ trong lĩnh vực giáo dục, đào tạo được thực hiện theo quy định của Chính phủ về cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập.
+8. *Chương trình đầu tư công* là một tập hợp các mục tiêu, nhiệm vụ, giải pháp nhằm thực hiện các mục tiêu phát triển kinh tế \- xã hội.
 
-2. Học phí thực hiện theo lộ trình tính đủ chi phí quy định tại Điều 9, Điều 10, Điều 11 Nghị định này.
+9. *Chương trình mục tiêu quốc gia* là chương trình đầu tư công nhằm thực hiện các mục tiêu kinh tế \- xã hội của từng giai đoạn cụ thể trong phạm vi cả nước.
 
-3. Căn cứ chính sách phát triển giáo dục của Nhà nước và tình hình thực tế của địa phương, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh xem xét, quyết định cho phép cơ sở giáo dục mầm non, giáo dục phổ thông ở các địa bàn có khả năng xã hội hóa cao và các cơ sở giáo dục mầm non, giáo dục phổ thông trong các trường đại học, cao đẳng, viện nghiên cứu được chủ động thực hiện lộ trình tính đủ chi phí vào giá dịch vụ giáo dục, đào tạo tương xứng với chất lượng giáo dục, đào tạo; đồng thời phải bảo đảm thực hiện các mục tiêu giáo dục bắt buộc theo quy định của Luật Giáo dục và các văn bản hướng dẫn thi hành.
+10. *Cơ quan chủ quản* là Bộ, cơ quan trung ương và địa phương quy định tại khoản 4 Điều này quản lý chương trình, dự án.
+
+11. *Cơ quan chuyên môn quản lý đầu tư công* là đơn vị có chức năng quản lý đầu tư công thuộc Bộ Kế hoạch và Đầu tư; đơn vị được giao quản lý đầu tư công của Bộ, cơ quan trung ương, địa phương; phòng, ban có chức năng quản lý đầu tư công thuộc Ủy ban nhân dân cấp huyện, cấp xã.
+
+12. *Cơ quan quản lý nhà nước* *về đầu tư công* bao gồm Chính phủ, Bộ Kế hoạch và Đầu tư, Ủy ban nhân dân các cấp.
+
+13. *Dự án đầu tư công* là dự án sử dụng toàn bộ hoặc một phần vốn đầu tư công.
+
+14. *Dự án đầu tư công khẩn cấp* là dự án đầu tư công nhằm kịp thời phòng, chống, khắc phục hậu quả thiên tai, thảm họa, dịch bệnh; nhiệm vụ cấp bách để bảo đảm quốc phòng, an ninh, đối ngoại theo quyết định của cấp có thẩm quyền.
+
+15. *Đầu tư công* là hoạt động đầu tư của Nhà nước vào các chương trình, dự án và đối tượng đầu tư công khác theo quy định của Luật này.
+
+16. *Hoạt động đầu tư công* bao gồm lập, thẩm định, quyết định chủ trương đầu tư; lập, thẩm định, quyết định chương trình, dự án đầu tư công; lập, thẩm định, phê duyệt, giao, triển khai thực hiện kế hoạch, dự án đầu tư công; quản lý, sử dụng vốn đầu tư công; nghiệm thu, bàn giao chương trình, quyết toán dự án đầu tư công; theo dõi và đánh giá, kiểm tra, thanh tra kế hoạch, chương trình, dự án đầu tư công.
+
+17. *Kế hoạch đầu tư công* là một tập hợp các mục tiêu, định hướng, danh mục chương trình, dự án đầu tư công; cân đối nguồn vốn đầu tư công, phương án phân bổ vốn, các giải pháp huy động nguồn lực và triển khai thực hiện.
+
+18. *Nhiệm vụ chuẩn bị đầu tư* là các hoạt động để lập, thẩm định, quyết định chủ trương đầu tư và lập, thẩm định, quyết định đầu tư dự án.
+
+19. *Nhiệm vụ quy hoạch* là các hoạt động được thực hiện để lập, thẩm định, quyết định hoặc phê duyệt, công bố và điều chỉnh quy hoạch theo quy định của Luật Quy hoạch.
+
+20. *Nợ đọng xây dựng cơ bản* là giá trị khối lượng thực hiện đã được nghiệm thu của dự án thuộc kế hoạch đầu tư công được cấp có thẩm quyền phê duyệt nhưng chưa có vốn bố trí cho phần khối lượng thực hiện đó.
+
+21. *Phân cấp quản lý nhà nước về đầu tư công* là xác định quyền hạn và trách nhiệm của cơ quan, tổ chức, cá nhân có thẩm quyền trong hoạt động đầu tư công.
+
+22. *Vốn đầu tư công* quy định tại Luật này bao gồm: vốn ngân sách nhà nước; vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư theo quy định của pháp luật.
+
+23. *Vốn ngân sách trung ương* là vốn chi cho đầu tư phát triển thuộc ngân sách trung ương theo quy định của Luật Ngân sách nhà nước.
+
+24. *Vốn ngân sách địa phương* là vốn chi cho đầu tư phát triển thuộc ngân sách địa phương theo quy định của Luật Ngân sách nhà nước.
+
+25. *Vốn ngân sách trung ương bổ sung* *có mục tiêu cho địa phương* là vốn thuộc ngân sách trung ương bổ sung cho địa phương để đầu tư chương trình, dự án đầu tư công theo nhiệm vụ cụ thể được cấp có thẩm quyền quyết định.
+
+**Điều 5. Đối tượng đầu tư công**
+
+1. Đầu tư chương trình, dự án kết cấu hạ tầng kinh tế \- xã hội.
+
+Trường hợp thật sự cần thiết tách riêng việc bồi thường, hỗ trợ, tái định cư, giải phóng mặt bằng thành dự án độc lập, đối với dự án quan trọng quốc gia do Quốc hội xem xét, quyết định; đối với dự án nhóm A do Thủ tướng Chính phủ, Hội đồng nhân dân cấp tỉnh xem xét, quyết định theo thẩm quyền. Việc tách riêng dự án độc lập được thực hiện khi phê duyệt chủ trương đầu tư dự án quan trọng quốc gia, dự án nhóm A.
+
+2. Đầu tư phục vụ hoạt động của cơ quan nhà nước, đơn vị sự nghiệp công lập, tổ chức chính trị, tổ chức chính trị \- xã hội.
+
+3. Đầu tư và hỗ trợ hoạt động đầu tư cung cấp sản phẩm, dịch vụ công ích, phúc lợi xã hội.
+
+4. Đầu tư của Nhà nước tham gia thực hiện dự án theo phương thức đối tác công tư.
+
+5. Đầu tư phục vụ công tác lập, thẩm định, quyết định hoặc phê duyệt, công bố và điều chỉnh quy hoạch theo quy định của pháp luật về quy hoạch.
+
+6. Cấp bù lãi suất tín dụng ưu đãi, phí quản lý; cấp vốn điều lệ cho các ngân hàng chính sách, quỹ tài chính nhà nước ngoài ngân sách; hỗ trợ đầu tư cho các đối tượng chính sách khác theo quyết định của Thủ tướng Chính phủ.
+
+Chính phủ quy định trình tự, thủ tục thực hiện đầu tư đối với đối tượng quy định tại khoản này.
+
+**Điều 6. Phân loại dự án đầu tư công**
+
+1. Căn cứ vào tính chất, dự án đầu tư công được phân loại như sau:
+
+a) Dự án có cấu phần xây dựng là dự án đầu tư xây dựng mới, cải tạo, nâng cấp, mở rộng dự án đã đầu tư xây dựng, bao gồm cả phần mua tài sản, mua trang thiết bị của dự án;
+
+b) Dự án không có cấu phần xây dựng là dự án mua tài sản, nhận chuyển nhượng quyền sử dụng đất, mua, sửa chữa, nâng cấp trang thiết bị, máy móc và dự án khác không quy định tại điểm a khoản này.
+
+2. Căn cứ mức độ quan trọng và quy mô, dự án đầu tư công được phân loại thành dự án quan trọng quốc gia, dự án nhóm A, dự án nhóm B, dự án nhóm C theo tiêu chí quy định tại các điều 7, 8, 9 và 10 của Luật này.
+
+**Điều 7. Tiêu chí phân loại dự án quan trọng quốc gia**
+
+Dự án quan trọng quốc gia là dự án đầu tư độc lập hoặc cụm công trình liên kết chặt chẽ với nhau thuộc một trong các tiêu chí sau đây:
+
+1. Sử dụng vốn đầu tư công từ 10.000 tỷ đồng trở lên;
+
+2. Ảnh hưởng lớn đến môi trường hoặc tiềm ẩn khả năng ảnh hưởng nghiêm trọng đến môi trường, bao gồm:
+
+a) Nhà máy điện hạt nhân;
+
+b) Sử dụng đất có yêu cầu chuyển mục đích sử dụng đất vườn quốc gia, khu bảo tồn thiên nhiên, khu bảo vệ cảnh quan, khu rừng nghiên cứu, thực nghiệm khoa học từ 50 ha trở lên; rừng phòng hộ đầu nguồn từ 50 ha trở lên; rừng phòng hộ chắn gió, chắn cát bay, chắn sóng, lấn biển, bảo vệ môi trường từ 500 ha trở lên; rừng sản xuất từ 1.000 ha trở lên;
+
+3. Sử dụng đất có yêu cầu chuyển mục đích sử dụng đất trồng lúa nước từ hai vụ trở lên với quy mô từ 500 ha trở lên;
+
+4. Di dân tái định cư từ 20.000 người trở lên ở miền núi, từ 50.000 người trở lên ở các vùng khác;
+
+5. Dự án đòi hỏi phải áp dụng cơ chế, chính sách đặc biệt cần được Quốc hội quyết định.
+
+**Điều 8. Tiêu chí phân loại dự án nhóm A**
+
+Trừ dự án quan trọng quốc gia quy định tại Điều 7 của Luật này, dự án thuộc một trong các tiêu chí sau đây là dự án nhóm A:
+
+1. Dự án không phân biệt tổng mức đầu tư thuộc một trong các trường hợp sau đây:
+
+a) Dự án thuộc lĩnh vực quốc phòng, an ninh có mức độ tuyệt mật;
+
+b) Dự án sản xuất chất độc hại, chất nổ;
+
+c) Dự án hạ tầng khu công nghiệp, khu chế xuất, khu công nghệ cao;
+
+2. Dự án có tổng mức đầu tư từ 2.300 tỷ đồng trở lên thuộc lĩnh vực sau đây:
+
+a) Giao thông, bao gồm cầu, cảng biển, cảng sông, sân bay, đường sắt, đường quốc lộ;
+
+b) Công nghiệp điện;
+
+c) Khai thác dầu khí;
+
+d) Hóa chất, phân bón, xi măng; 
+
+đ) Chế tạo máy, luyện kim;
+
+e) Khai thác, chế biến khoáng sản;
+
+g) Xây dựng khu nhà ở;
+
+3. Dự án có tổng mức đầu tư từ 1.500 tỷ đồng trở lên thuộc lĩnh vực sau đây:
+
+a) Giao thông, trừ dự án quy định tại điểm a khoản 2 Điều này;
+
+b) Thủy lợi;
+
+c) Cấp thoát nước, xử lý rác thải và công trình hạ tầng kỹ thuật khác;
+
+d) Kỹ thuật điện;
+
+đ) Sản xuất thiết bị thông tin, điện tử;
+
+e) Hóa dược;
+
+g) Sản xuất vật liệu, trừ dự án quy định tại điểm d khoản 2 Điều này;
+
+h) Công trình cơ khí, trừ dự án quy định tại điểm đ khoản 2 Điều này;
+
+i) Bưu chính, viễn thông;
+
+4. Dự án có tổng mức đầu tư từ 1.000 tỷ đồng trở lên thuộc lĩnh vực sau đây:
+
+a) Sản xuất nông nghiệp, lâm nghiệp, nuôi trồng thủy sản;
+
+b) Vườn quốc gia, khu bảo tồn thiên nhiên;
+
+c) Hạ tầng kỹ thuật khu đô thị mới;
+
+d) Công nghiệp, trừ dự án thuộc lĩnh vực công nghiệp quy định tại các khoản 1, 2 và 3 Điều này;
+
+5. Dự án có tổng mức đầu tư từ 800 tỷ đồng trở lên thuộc lĩnh vực sau đây:
+
+a) Y tế, văn hóa, giáo dục;
+
+b) Nghiên cứu khoa học, công nghệ thông tin, phát thanh, truyền hình;
+
+c) Kho tàng;
+
+d) Du lịch, thể dục thể thao;
+
+đ) Xây dựng dân dụng, trừ xây dựng khu nhà ở quy định tại điểm g khoản 2 Điều này;
+
+e) Dự án thuộc lĩnh vực quốc phòng, an ninh, trừ dự án quy định tại các khoản 1, 2, 3 và 4 Điều này.
+
+**Điều 9. Tiêu chí phân loại dự án nhóm B**
+
+1. Dự án thuộc lĩnh vực quy định tại khoản 2 Điều 8 của Luật này có tổng mức đầu tư từ 120 tỷ đồng đến dưới 2.300 tỷ đồng.
+
+2. Dự án thuộc lĩnh vực quy định tại khoản 3 Điều 8 của Luật này có tổng mức đầu tư từ 80 tỷ đồng đến dưới 1.500 tỷ đồng.
+
+3. Dự án thuộc lĩnh vực quy định tại khoản 4 Điều 8 của Luật này có tổng mức đầu tư từ 60 tỷ đồng đến dưới 1.000 tỷ đồng.
+
+4. Dự án thuộc lĩnh vực quy định tại khoản 5 Điều 8 của Luật này có tổng mức đầu tư từ 45 tỷ đồng đến dưới 800 tỷ đồng.
+
+**Điều 10. Tiêu chí phân loại dự án nhóm C**
+
+1. Dự án thuộc lĩnh vực quy định tại khoản 2 Điều 8 của Luật này có tổng mức đầu tư dưới 120 tỷ đồng.
+
+2. Dự án thuộc lĩnh vực quy định tại khoản 3 Điều 8 của Luật này có tổng mức đầu tư dưới 80 tỷ đồng.
+
+3. Dự án thuộc lĩnh vực quy định tại khoản 4 Điều 8 của Luật này có tổng mức đầu tư dưới 60 tỷ đồng.
+
+4. Dự án thuộc lĩnh vực quy định tại khoản 5 Điều 8 của Luật này có tổng mức đầu tư dưới 45 tỷ đồng.
+
+**Điều 11. Điều chỉnh tiêu chí phân loại dự án đầu tư công**
+
+1. Quốc hội quyết định điều chỉnh tiêu chí phân loại dự án quan trọng quốc gia quy định tại Điều 7 của Luật này.
+
+2. Chính phủ trình Ủy ban Thường vụ Quốc hội quyết định điều chỉnh tiêu chí phân loại dự án đầu tư công quy định tại các điều 8, 9 và 10 của Luật này và báo cáo Quốc hội tại kỳ họp gần nhất.
+
+3. Việc điều chỉnh tiêu chí phân loại dự án đầu tư công quy định tại khoản 1 và khoản 2 Điều này được thực hiện trong trường hợp chỉ số giá có biến động lớn hoặc có điều chỉnh lớn về phân cấp quản lý đầu tư công liên quan đến tiêu chí phân loại dự án đầu tư công hoặc xuất hiện các yếu tố quan trọng khác tác động tới tiêu chí phân loại dự án đầu tư công.
+
+**Điều 12. Nguyên tắc quản lý đầu tư công**
+
+1. Tuân thủ quy định của pháp luật về quản lý và sử dụng vốn đầu tư công.
+
+2. Phù hợp với chiến lược phát triển kinh tế \- xã hội, kế hoạch phát triển kinh tế \- xã hội 05 năm của quốc gia và quy hoạch có liên quan theo quy định của pháp luật về quy hoạch.
+
+3. Thực hiện đúng trách nhiệm và quyền hạn của cơ quan quản lý nhà nước, tổ chức, cá nhân liên quan đến quản lý và sử dụng vốn đầu tư công.
+
+4. Quản lý việc sử dụng vốn đầu tư công theo đúng quy định đối với từng nguồn vốn; bảo đảm đầu tư tập trung, đồng bộ, chất lượng, tiết kiệm, hiệu quả và khả năng cân đối nguồn lực; không để thất thoát, lãng phí.
+
+5. Bảo đảm công khai, minh bạch trong hoạt động đầu tư công.
+
+**Điều 13. Nội dung quản lý nhà nước về đầu tư công**
+
+1. Ban hành và tổ chức thực hiện văn bản quy phạm pháp luật về đầu tư công.
+
+2. Xây dựng và tổ chức thực hiện chiến lược, chương trình, kế hoạch, giải pháp, chính sách đầu tư công.
+
+3. Theo dõi, cung cấp thông tin về quản lý và sử dụng vốn đầu tư công.
+
+4. Đánh giá hiệu quả đầu tư công; kiểm tra, thanh tra, giám sát việc thực hiện quy định của pháp luật về đầu tư công, việc tuân thủ kế hoạch đầu tư công.
+
+5. Xử lý vi phạm pháp luật, giải quyết khiếu nại, tố cáo của tổ chức, cá nhân liên quan đến hoạt động đầu tư công.
+
+6. Khen thưởng cơ quan, tổ chức, đơn vị, cá nhân có thành tích trong hoạt động đầu tư công.
+
+7. Hợp tác quốc tế về đầu tư công.
+
+**Điều 14. Công khai, minh bạch trong đầu tư công**
+
+1. Nội dung công khai, minh bạch trong đầu tư công bao gồm:
+
+a) Chính sách, pháp luật và việc tổ chức thực hiện chính sách, pháp luật trong quản lý và sử dụng vốn đầu tư công;
+
+b) Nguyên tắc, tiêu chí và định mức phân bổ vốn đầu tư công;
+
+c) Nguyên tắc, tiêu chí, căn cứ xác định danh mục dự án trong kế hoạch đầu tư công trung hạn và hằng năm;
+
+d) Kế hoạch, chương trình đầu tư công trên địa bàn; vốn bố trí cho từng chương trình theo từng năm, tiến độ thực hiện và giải ngân vốn chương trình đầu tư công;
+
+đ) Danh mục dự án trên địa bàn, bao gồm quy mô, tổng mức đầu tư, thời gian, địa điểm; báo cáo đánh giá tác động tổng thể của dự án tới địa bàn đầu tư;
+
+e) Kế hoạch phân bổ vốn đầu tư công trung hạn và hằng năm, bao gồm danh mục dự án và mức vốn đầu tư công bố trí cho từng dự án;
+
+g) Tình hình huy động các nguồn lực và nguồn vốn khác tham gia thực hiện dự án đầu tư công;
+
+h) Tình hình và kết quả thực hiện kế hoạch, chương trình, dự án;
+
+i) Tiến độ thực hiện và giải ngân của dự án;
+
+k) Kết quả nghiệm thu, đánh giá chương trình, dự án;
+
+l) Quyết toán vốn đầu tư công.
+
+2. Người đứng đầu cơ quan, tổ chức, đơn vị phải thực hiện việc công khai các nội dung đầu tư công theo quy định của pháp luật.
+
+**Điều 15. Chi phí lập, thẩm định, theo dõi, kiểm tra, đánh giá, thanh tra kế hoạch, chương trình, dự án đầu tư công**
+
+1. Chi phí lập, thẩm định báo cáo đề xuất chủ trương đầu tư chương trình đầu tư công sử dụng nguồn chi thường xuyên của cơ quan, đơn vị thực hiện các nhiệm vụ này.
+
+2. Chi phí lập, thẩm định báo cáo nghiên cứu tiền khả thi, báo cáo đề xuất chủ trương đầu tư dự án sử dụng vốn chuẩn bị đầu tư.
+
+3. Chi phí lập, thẩm định kế hoạch đầu tư công sử dụng nguồn chi thường xuyên của cơ quan, đơn vị lập, thẩm định kế hoạch.
+
+4. Chi phí theo dõi, kiểm tra, đánh giá kế hoạch, chương trình, dự án sử dụng nguồn chi thường xuyên của cơ quan, đơn vị thực hiện các nhiệm vụ này.
+
+5. Chi phí thanh tra sử dụng nguồn chi thường xuyên của cơ quan, đơn vị thanh tra.
+
+6. Đối với chương trình, dự án sử dụng vốn hỗ trợ phát triển chính thức (ODA) và vốn vay ưu đãi của các nhà tài trợ nước ngoài, khuyến khích nhà tài trợ hỗ trợ tài chính để thanh toán các chi phí quy định tại Điều này.
+
+**Điều 16. Các hành vi bị nghiêm cấm trong đầu tư công**
+
+1. Quyết định chủ trương đầu tư không phù hợp với chiến lược, quy hoạch, kế hoạch; không xác định được nguồn vốn và khả năng cân đối vốn; không đúng thẩm quyền, trình tự, thủ tục theo quy định của pháp luật.
+
+2. Quyết định đầu tư chương trình, dự án khi chưa được cấp có thẩm quyền quyết định chủ trương đầu tư hoặc không đúng với các nội dung về mục tiêu, phạm vi, quy mô, vượt tổng vốn đầu tư của chủ trương đầu tư đã được cấp có thẩm quyền quyết định. Quyết định điều chỉnh tổng vốn đầu tư của chương trình, tổng mức đầu tư của dự án trái với quy định của pháp luật về đầu tư công.
+
+3. Lợi dụng chức vụ, quyền hạn để chiếm đoạt, vụ lợi, tham nhũng trong quản lý và sử dụng vốn đầu tư công.
+
+4. Chủ chương trình, chủ đầu tư thông đồng với tổ chức tư vấn, nhà thầu dẫn tới quyết định chủ trương đầu tư, quyết định đầu tư chương trình, dự án gây thất thoát, lãng phí vốn, tài sản của Nhà nước, tài nguyên của quốc gia; làm tổn hại, xâm phạm lợi ích hợp pháp của công dân và của cộng đồng.
+
+5. Đưa, nhận, môi giới hối lộ.
+
+6. Yêu cầu tổ chức, cá nhân tự bỏ vốn đầu tư khi chương trình, dự án chưa được quyết định chủ trương đầu tư, chưa được phê duyệt, gây nợ đọng xây dựng cơ bản.
+
+7. Sử dụng vốn đầu tư công không đúng mục đích, không đúng đối tượng, vượt tiêu chuẩn, định mức theo quy định của pháp luật.
+
+8. Làm giả, làm sai lệch thông tin, hồ sơ, tài liệu, liên quan đến quyết định chủ trương đầu tư, quyết định đầu tư, triển khai thực hiện chương trình, dự án.
+
+9. Cố ý báo cáo, cung cấp thông tin không đúng, không trung thực, không khách quan ảnh hưởng đến việc lập, thẩm định, quyết định kế hoạch, chương trình, dự án, theo dõi, đánh giá, kiểm tra, thanh tra và xử lý vi phạm trong triển khai thực hiện kế hoạch, chương trình, dự án.
+
+10. Cố ý hủy hoại, lừa dối, che giấu hoặc lưu giữ không đầy đủ tài liệu, chứng từ, hồ sơ liên quan đến quyết định chủ trương đầu tư, quyết định đầu tư, triển khai thực hiện chương trình, dự án.
+
+11. Cản trở việc phát hiện hành vi vi phạm pháp luật về đầu tư công.
 
 **Chương II**
 
-**QUY ĐỊNH VỀ HỌC PHÍ**
+**CHỦ TRƯƠNG ĐẦU TƯ VÀ QUYẾT ĐỊNH ĐẦU TƯ CHƯƠNG TRÌNH, DỰ ÁN ĐẦU TƯ CÔNG**
 
-**Điều 8. Nguyên tắc xác định học phí**
+**Mục 1. LẬP, THẨM ĐỊNH, QUYẾT ĐỊNH CHỦ TRƯƠNG ĐẦU TƯ**
 
-1. Đối với cơ sở giáo dục mầm non, giáo dục phổ thông công lập.
+**Điều 17. Thẩm quyền quyết định chủ trương đầu tư chương trình, dự án**
 
-Mức thu học phí được xây dựng theo nguyên tắc chia sẻ giữa nhà nước và người học, phù hợp với điều kiện kinh tế xã hội của từng địa bàn dân cư, khả năng đóng góp thực tế của người dân và tốc độ tăng chỉ số giá tiêu dùng, tốc độ tăng trưởng kinh tế hàng năm, lộ trình tính giá dịch vụ giáo dục, đào tạo theo quy định và bảo đảm chất lượng giáo dục.
+1. Quốc hội quyết định chủ trương đầu tư chương trình, dự án sau đây:
 
-2. Đối với cơ sở giáo dục nghề nghiệp công lập.
+a) Chương trình mục tiêu quốc gia;
 
-a) Cơ sở giáo dục nghề nghiệp công lập tự bảo đảm một phần chi thường xuyên và cơ sở giáo dục nghề nghiệp công lập do nhà nước bảo đảm chi thường xuyên (sau đây gọi là cơ sở giáo dục nghề nghiệp công lập chưa tự bảo đảm chi thường xuyên) xác định mức học phí không vượt mức trần học phí tại điểm a khoản 1 và điểm a khoản 2 Điều 10 Nghị định này;
+b) Dự án quan trọng quốc gia.
 
-b) Cơ sở giáo dục nghề nghiệp công lập tự bảo đảm chi thường xuyên xác định mức thu học phí từng ngành theo hệ số điều chỉnh so với mức trần học phí quy định đối với cơ sở giáo dục nghề nghiệp chưa tự bảo đảm chi thường xuyên theo quy định tại khoản 2 Điều 10 Nghị định này;
+2. Chính phủ quyết định chủ trương đầu tư chương trình đầu tư công sử dụng vốn ngân sách trung ương, trừ chương trình quy định tại điểm a khoản 1 Điều này.
 
-c) Cơ sở giáo dục nghề nghiệp công lập tự bảo đảm chi thường xuyên và chi đầu tư được tự xác định mức thu học phí đảm bảo bù đắp chi phí, có tích lũy theo quy định của Luật Giáo dục nghề nghiệp và các văn bản khác có liên quan.
+3. Chính phủ quy định việc phân cấp thẩm quyền, trình tự, thủ tục quyết định chủ trương đầu tư đối với chương trình, dự án sử dụng vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư phù hợp với quy định về quyền tự chủ tài chính của các cơ quan, đơn vị.
 
-3. Học phí đối với cơ sở giáo dục đại học công lập.
+Trường hợp chương trình, dự án quy định tại khoản này có sử dụng nguồn vốn của ngân sách nhà nước thì thẩm quyền, trình tự, thủ tục thực hiện theo quy định của Luật này đối với chương trình, dự án sử dụng vốn ngân sách nhà nước.
 
-a) Cơ sở giáo dục đại học công lập tự bảo đảm một phần chi thường xuyên và cơ sở giáo dục đại học công lập do nhà nước bảo đảm chi thường xuyên (sau đây gọi là cơ sở giáo dục đại học công lập chưa tự bảo đảm chi thường xuyên) xác định mức học phí không vượt mức trần học phí tại điểm a khoản 1 và điểm a khoản 2 Điều 11 Nghị định này;
+4. Thủ tướng Chính phủ quyết định chủ trương đầu tư chương trình, dự án sau đây:
 
-b) Cơ sở giáo dục đại học công lập tự bảo đảm chi thường xuyên và chi đầu tư, cơ sở giáo dục đại học công lập tự bảo đảm chi thường xuyên xác định mức thu học phí từng ngành theo hệ số điều chỉnh so với mức trần học phí quy định đối với cơ sở giáo dục đại học công lập chưa tự bảo đảm chi thường xuyên theo quy định tại khoản 2 Điều 11 Nghị định này;
+a) Dự án quy định tại khoản 1 Điều 8 của Luật này; dự án nhóm A khác sử dụng vốn ngân sách trung ương do Bộ, cơ quan trung ương quản lý;
 
-c) Đối với chương trình đào tạo của cơ sở giáo dục đại học công lập đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn do Bộ Giáo dục và Đào tạo quy định hoặc đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn nước ngoài hoặc tương đương, cơ sở giáo dục đại học được tự xác định mức thu học phí của chương trình đó trên cơ sở định mức kinh tế \- kỹ thuật do cơ sở giáo dục ban hành, thực hiện công khai giải trình với người học, xã hội.
+b) Chương trình, dự án đầu tư sử dụng vốn vay ODA và vốn vay ưu đãi của các nhà tài trợ nước ngoài, trừ chương trình mục tiêu quốc gia, chương trình đầu tư công quy định tại khoản 1 và khoản 2 Điều này;
 
-4. Đối với cơ sở giáo dục dân lập, tư thục
+c) Chương trình, dự án đầu tư sử dụng vốn ODA viện trợ không hoàn lại trong các trường hợp sau: chương trình, dự án nhóm A và nhóm B; chương trình, dự án kèm theo khung chính sách; chương trình, dự án trong lĩnh vực quốc phòng, an ninh, tôn giáo; chương trình tiếp cận theo ngành; mua sắm các loại hàng hóa thuộc diện phải được Thủ tướng Chính phủ cho phép; sự tham gia của Việt Nam vào các chương trình, dự án khu vực;
 
-a) Cơ sở giáo dục dân lập, tư thục được quyền chủ động xây dựng mức thu học phí và giá các dịch vụ khác trong lĩnh vực giáo dục, đào tạo (trừ dịch vụ do Nhà nước định giá) bảo đảm bù đắp chi phí và có tích lũy hợp lý, có trách nhiệm công khai, giải trình với người học và xã hội về mức thu học phí, giá các dịch vụ do mình quyết định;
+d) Dự án hỗ trợ kỹ thuật sử dụng vốn ODA, vốn vay ưu đãi của các nhà tài trợ nước ngoài để chuẩn bị dự án đầu tư.
 
-b) Cơ sở giáo dục dân lập, tư thục có trách nhiệm thuyết minh chi phí giáo dục, đào tạo bình quân một học sinh, mức thu học phí hàng năm, mức thu học phí toàn cấp học đối với giáo dục mầm non, giáo dục phổ thông và toàn khóa học đối với cơ sở giáo dục đại học; thuyết minh lộ trình và tỷ lệ tăng học phí các năm tiếp theo (tỷ lệ tăng hằng năm không quá 15% đối với đào tạo đại học; tỷ lệ tăng không quá 10% đối với giáo dục mầm non, giáo dục phổ thông) và thực hiện công khai theo quy định của pháp luật và giải trình với người học, xã hội;
+5. Người đứng đầu Bộ, cơ quan trung ương quyết định chủ trương đầu tư dự án nhóm B, nhóm C sử dụng vốn đầu tư công do cơ quan, tổ chức mình quản lý, trừ dự án quy định tại khoản 4 Điều này.
 
-c) Học sinh thuộc đối tượng miễn, giảm học phí, hỗ trợ tiền đóng học phí tại các cơ sở giáo dục dân lập, tư thục được nhà nước chi trả tối đa bằng mức học phí đối với học sinh cơ sở giáo dục công lập chưa tự bảo đảm chi thường xuyên trên địa bàn;
+6. Hội đồng nhân dân cấp tỉnh quyết định chủ trương đầu tư dự án nhóm A do địa phương quản lý, trừ dự án quy định tại khoản 4 Điều này.
 
-d) Ủy ban nhân dân cấp tỉnh căn cứ vào điều kiện phát triển kinh tế \- xã hội của địa phương, yêu cầu cần đạt của chương trình giáo dục tiểu học, quy mô học sinh tiểu học trên địa bàn và định mức học sinh/lớp cấp tiểu học theo quy định để xây dựng tiêu chí xác định các địa bàn không đủ trường công lập trình Hội đồng nhân dân cấp tỉnh phê duyệt và quyết định mức hỗ trợ tiền đóng học phí cho học sinh tiểu học tại các trường tư thục ở địa bàn không đủ trường công lập theo từng năm học; kinh phí hỗ trợ tiền đóng học phí do ngân sách nhà nước cấp theo quy định của Luật Ngân sách nhà nước và các văn bản hướng dẫn thực hiện.
+7. Hội đồng nhân dân các cấp quyết định chủ trương đầu tư chương trình, dự án nhóm B, nhóm C sử dụng vốn ngân sách địa phương, bao gồm cả vốn bổ sung có mục tiêu từ ngân sách cấp trên, các nguồn vốn hợp pháp của địa phương thuộc cấp mình quản lý, trừ dự án quy định tại khoản 4 Điều này.
 
-**Điều 9. Học phí đối với giáo dục mầm non, phổ thông**
+Trong trường hợp cần thiết, Hội đồng nhân dân quyết định việc giao cho Ủy ban nhân dân cùng cấp quyết định chủ trương đầu tư dự án quy định tại khoản này phù hợp với mục tiêu, định hướng phát triển, khả năng tài chính và đặc điểm cụ thể của địa phương.
 
-1. Khung học phí năm học 2021 \- 2022
+8. Trường hợp điều chỉnh chủ trương đầu tư chương trình, dự án, thẩm quyền quyết định chủ trương đầu tư chương trình, dự án thực hiện theo quy định tại khoản 1 Điều 34 của Luật này.
 
-Căn cứ vào tình hình thực tế của địa phương, Hội đồng nhân dân cấp tỉnh quyết định khung học phí hoặc mức học phí cụ thể nhưng không vượt mức trần khung học phí hoặc mức học phí do Hội đồng nhân dân cấp tỉnh đã ban hành năm học 2020 \- 2021 đối với từng cấp học và từng khu vực thuộc thẩm quyền quản lý của địa phương.
+**Điều 18. Điều kiện quyết định chủ trương đầu tư chương trình, dự án**
 
-2. Khung học phí năm học 2022 \- 2023
+1. Phù hợp với chiến lược, kế hoạch phát triển kinh tế \- xã hội và quy hoạch có liên quan theo quy định của pháp luật về quy hoạch đã được cấp có thẩm quyền quyết định hoặc phê duyệt.
 
-a) Khung học phí (mức sàn \- mức trần) đối với cơ sở giáo dục mầm non, giáo dục phổ thông công lập chưa tự bảo đảm chi thường xuyên như sau:
+2. Không trùng lặp với các chương trình, dự án đã có quyết định chủ trương đầu tư hoặc đã có quyết định đầu tư.
 
-Đơn vị: nghìn đồng/học sinh/tháng
-|**Vùng**|**Năm học 2022 \- 2023**||||
-|:---:|:---:|:---:|:---:|:---:|
-||**Mầm non**|**Tiểu học**|**Trung học cơ sở**|**Trung học phổ thông**|
-|Thành thị|Từ 300 đến 540|Từ 300 đến 540|Từ 300 đến 650|Từ 300 đến 650|
-|Nông thôn|Từ 100 đến 220|Từ 100 đến 220|Từ 100 đến 270|Từ 200 đến 330|
-|Vùng dân tộc thiểu số và miền núi|Từ 50 đến 110|Từ 50 đến 110|Từ 50 đến 170|Từ 100 đến 220|
+3. Phù hợp với khả năng cân đối nguồn vốn đầu tư công và khả năng huy động các nguồn vốn khác đối với chương trình, dự án sử dụng nhiều nguồn vốn.
 
+4. Phù hợp với khả năng vay, trả nợ công, nợ Chính phủ và nợ chính quyền địa phương.
 
-Hội đồng nhân dân cấp tỉnh căn cứ vào quy định trên để quyết định khung học phí hoặc mức học phí cụ thể đối với cơ sở giáo dục mầm non, giáo dục phổ thông công lập thuộc thẩm quyền và quyết định việc sắp xếp, phân loại các vùng trên địa bàn để cơ sở giáo dục áp dụng mức thu học phí.
+5. Bảo đảm hiệu quả kinh tế \- xã hội, quốc phòng, an ninh và phát triển bền vững.
 
-Khung học phí đối với giáo dục tiểu học công lập quy định tại điểm này dùng làm căn cứ để Hội đồng nhân dân cấp tỉnh quyết định mức hỗ trợ tiền đóng học phí cho học sinh tiểu học tư thục ở các địa bàn chưa đủ trường tiểu học công lập và các đối tượng học sinh tiểu học tư thục thuộc đối tượng được hưởng chính sách miễn giảm học phí theo quy định.
+6. Các nhiệm vụ, dự án không phải quyết định chủ trương đầu tư bao gồm:
 
-b) Mức trần của khung học phí đối với cơ sở giáo dục mầm non, giáo dục phổ thông công lập tự bảo đảm chi thường xuyên: Tối đa bằng 2 lần mức trần học phí tại điểm a khoản này;
+a) Nhiệm vụ chuẩn bị đầu tư;
 
-b) Mức trần của khung học phí đối với cơ sở giáo dục mầm non, giáo dục phổ thông công lập tự bảo đảm chi thường xuyên và chi đầu tư: Tối đa bằng 2,5 lần mức trần học phí tại điểm a khoản này;
+b) Nhiệm vụ quy hoạch;
 
-c) Cơ sở giáo dục mầm non, giáo dục phổ thông công lập tự bảo đảm chi thường xuyên hoặc tự bảo đảm chi thường xuyên và chi đầu tư đạt mức kiểm định chất lượng cơ sở giáo dục theo tiêu chuẩn do Bộ Giáo dục và Đào tạo quy định thì được tự xác định mức thu học phí trên cơ sở định mức kinh tế \- kỹ thuật, định mức chi phí do cơ sở giáo dục ban hành; trình Ủy ban nhân dân cấp tỉnh để đề nghị Hội đồng nhân dân cấp tỉnh xem xét phê duyệt mức thu học phí.
+c) Dự án đầu tư công khẩn cấp;
 
-3. Khung học phí từ năm học 2023 \- 2024 trở đi
+d) Dự án thuộc chương trình mục tiêu quốc gia;
 
-a) Từ năm học 2023 \- 2024 trở đi, khung học phí được điều chỉnh theo tỷ lệ phù hợp với điều kiện kinh tế xã hội của địa phương, tốc độ tăng chỉ số giá tiêu dùng, tốc độ tăng trưởng kinh tế hàng năm và khả năng chi trả của người dân nhưng không quá 7,5%/năm;
+đ) Dự án thành phần thuộc dự án đã được cấp có thẩm quyền quyết định chủ trương đầu tư.
 
-b) Căn cứ khung học phí quy định tại điểm a khoản này, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh quyết định mức thu học phí cụ thể nhưng không vượt mức trần quy định.
+**Điều 19. Trình tự, thủ tục quyết định chủ trương đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia**
 
-4. Ở các địa bàn có khả năng xã hội hóa cao, căn cứ chính sách phát triển giáo dục của Nhà nước và tình hình thực tế của địa phương, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh xem xét, quyết định khung học phí hoặc mức học phí đối với các cơ sở giáo dục mầm non, giáo dục phổ thông công lập (gồm cả cơ sở giáo dục mầm non, giáo dục phổ thông do các trường đại học, cao đẳng, viện nghiên cứu thành lập) trên cơ sở định mức kinh tế \- kỹ thuật, định mức chi phí do cơ quan có thẩm quyền ban hành bảo đảm mức thu học phí tương xứng với chất lượng dịch vụ giáo dục đồng thời phải bảo đảm thực hiện các mục tiêu giáo dục bắt buộc theo quy định của Luật Giáo dục và các văn bản hướng dẫn thi hành.
+1. Cơ quan được giao nhiệm vụ chuẩn bị đầu tư chương trình, dự án có trách nhiệm:
 
-5. Trường hợp học trực tuyến (học online), Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh quy định cụ thể mức thu học phí đối với cơ sở giáo dục công lập theo phân cấp quản lý trên cơ sở chi phí phát sinh thực tế hợp lý, tối đa bằng mức học phí của cơ sở giáo dục đã được ban hành.
+a) Giao đơn vị trực thuộc lập báo cáo đề xuất chủ trương đầu tư đối với chương trình mục tiêu quốc gia, báo cáo nghiên cứu tiền khả thi đối với dự án quan trọng quốc gia;
 
-6. Đối với cơ sở giáo dục thường xuyên, cơ sở đào tạo khác thực hiện chương trình giáo dục phổ thông được áp dụng mức học phí tương đương với mức học phí của cơ sở giáo dục phổ thông công lập cùng cấp học trên địa bàn. Đối với các loại hình giáo dục thường xuyên khác, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh phê duyệt mức thu cụ thể phù hợp với từng loại hình đào tạo và điều kiện thực tế của từng địa bàn.
+b) Thành lập Hội đồng để thẩm định báo cáo đề xuất chủ trương đầu tư, báo cáo nghiên cứu tiền khả thi;
 
-**Điều 10. Học phí đối với giáo dục nghề nghiệp**
+c) Hoàn thiện báo cáo đề xuất chủ trương đầu tư, báo cáo nghiên cứu tiền khả thi trình Thủ tướng Chính phủ.
 
-1. Mức trần học phí năm học 2021 \- 2022:
+2. Thủ tướng Chính phủ thành lập Hội đồng thẩm định nhà nước do Bộ trưởng Bộ Kế hoạch và Đầu tư làm Chủ tịch để thẩm định báo cáo đề xuất chủ trương đầu tư chương trình mục tiêu quốc gia, báo cáo nghiên cứu tiền khả thi dự án quan trọng quốc gia.
 
-Mức trần học phí năm học 2021 \- 2022 đối với các ngành đào tạo của các cơ sở giáo dục nghề nghiệp công lập được áp dụng bằng mức trần học phí của các cơ sở giáo dục nghề nghiệp công lập do Nhà nước quy định áp dụng cho năm học 2020 \- 2021, cụ thể như sau:
+3. Chính phủ trình Quốc hội xem xét, quyết định chủ trương đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia.
 
-a) Mức trần học phí đối với các chương trình đào tạo trình độ cao đẳng, trung cấp tại các cơ sở giáo dục nghề nghiệp công lập chưa tự bảo đảm chi thường xuyên và chi đầu tư như sau:
+4. Cơ quan của Quốc hội thẩm tra hồ sơ về chương trình mục tiêu quốc gia, dự án quan trọng quốc gia do Chính phủ trình.
 
-Đơn vị: nghìn đồng/sinh viên/tháng
-|**TT**|**Nhóm ngành, nghề đào tạo**|**Năm học 2021 \- 2022**|
-|:---:|:---:|:---:|
-|1|Khoa học xã hội nhân văn, nghệ thuật, giáo dục và đào tạo, báo chí, thông tin và kinh doanh| |
-|1.1|Khoa học xã hội nhân văn, giáo dục và đào tạo, báo chí, thông tin và kinh doanh|780|
-|1.2|Nghệ thuật|940|
-|2|Khoa học, pháp luật và toán|940|
-|3|Kỹ thuật và công nghệ thông tin|940|
-|4|Sản xuất, chế biến và xây dựng|940|
-|5|Nông, lâm, ngư nghiệp và thú y|780|
-|6|Sức khỏe|1.140|
-|7|Dịch vụ, du lịch và môi trường|940|
-|8|An ninh, quốc phòng|940|
+5. Quốc hội xem xét, thông qua nghị quyết về chủ trương đầu tư đối với chương trình mục tiêu quốc gia, dự án quan trọng quốc gia. Nội dung chủ yếu của nghị quyết bao gồm: mục tiêu, quy mô, tổng vốn đầu tư, công nghệ chính, địa điểm, thời gian, tiến độ thực hiện, cơ chế và giải pháp, chính sách thực hiện.
 
+**Điều 20. Hồ sơ quyết định chủ trương đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia**
 
-b) Mức trần học phí đối với các chương trình đào tạo trình độ cao đẳng, trung cấp tại các cơ sở giáo dục nghề nghiệp công lập tự bảo đảm chi thường xuyên và chi đầu tư như sau:
+1. Tờ trình của Chính phủ.
 
-Đơn vị: nghìn đồng/sinh viên/tháng
-|**TT**|**Nhóm ngành, nghề đào tạo**|**Năm học 2021 \- 2022**|
-|:---:|:---:|:---:|
-|1|Khoa học xã hội nhân văn, nghệ thuật, giáo dục và đào tạo, báo chí, thông tin và kinh doanh| |
-|1.1|Khoa học xã hội nhân văn, giáo dục và đào tạo, báo chí, thông tin và kinh doanh|1.640|
-|1.2|Nghệ thuật|1.920|
-|2|Khoa học, pháp luật và toán|1.920|
-|3|Kỹ thuật và công nghệ thông tin|1.920|
-|4|Sản xuất, chế biến và xây dựng|1.920|
-|5|Nông, lâm, ngư nghiệp và thú y|1.640|
-|6|Sức khỏe|4.040|
-|7|Dịch vụ, du lịch và môi trường|1.920|
-|8|An ninh, quốc phòng|1.920|
+2. Báo cáo đề xuất chủ trương đầu tư đối với chương trình mục tiêu quốc gia, báo cáo nghiên cứu tiền khả thi đối với dự án quan trọng quốc gia.
 
+3. Báo cáo thẩm định của Hội đồng thẩm định nhà nước.
 
-2. Mức trần học phí từ năm học 2022 \- 2023 đến năm học 2025 \- 2026 như sau:
+4. Tài liệu khác có liên quan.
 
-a) Đối với cơ sở giáo dục nghề nghiệp công lập chưa tự bảo đảm chi thường xuyên:
+**Điều 21. Thủ tục và nội dung thẩm tra chủ trương đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia**
 
-Căn cứ danh mục ngành, nghề đào tạo cấp IV trình độ cao đẳng, trung cấp do Bộ trưởng Bộ Lao động \- Thương binh và Xã hội quy định, mức trần học phí được xác định theo định mức kinh tế \- kỹ thuật và được tính theo lộ trình đến năm học 2025 \- 2026. Mức trần học phí như sau:
+1. Thủ tục thẩm tra được quy định như sau:
 
-Đơn vị: nghìn đồng/sinh viên/tháng
-|**TT**|**Nhóm ngành, nghề đào tạo**|**Năm 2022\-2023**|**Năm 2023\-2024**|**Năm 2024\-2025**|**Năm 2025\-2026**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|1|Khoa học xã hội nhân văn, nghệ thuật, giáo dục và đào tạo, báo chí, thông tin và kinh doanh|1.248|1.328|1.360|1.600|
-|2|Khoa học, pháp luật và toán|1.326|1.411|1.445|1.700|
-|3|Kỹ thuật và công nghệ thông tin|1.870|1.992|2.040|2.400|
-|4|Sản xuất, chế biến và xây dựng|1.794|1.909|1.955|2.300|
-|5|Nông, lâm, ngư nghiệp và thú y|1.287|1.370|1.400|1.650|
-|6|Sức khỏe|2.184|2.324|2.380|2.800|
-|7|Dịch vụ, du lịch và môi trường|1.560|1.660|1.700|2.000|
-|8|An ninh, quốc phòng|1.716|1.820|1.870|2.200|
+a) Chậm nhất là 60 ngày trước ngày khai mạc kỳ họp Quốc hội, Chính phủ gửi hồ sơ quyết định chủ trương đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia đến cơ quan chủ trì thẩm tra;
 
+b) Cơ quan chủ trì thẩm tra có quyền yêu cầu Chính phủ và cơ quan, tổ chức, cá nhân có liên quan báo cáo về những vấn đề thuộc nội dung chương trình mục tiêu quốc gia, dự án quan trọng quốc gia; tổ chức khảo sát thực tế về những vấn đề thuộc nội dung chương trình mục tiêu quốc gia, dự án quan trọng quốc gia;
 
-b) Đối với cơ sở giáo dục nghề nghiệp công lập tự bảo đảm chi thường xuyên: Mức học phí tối đa không quá 2 lần so với mức học phí quy định tại điểm a khoản 2 Điều này;
+c) Cơ quan, tổ chức, cá nhân được cơ quan chủ trì thẩm tra yêu cầu có trách nhiệm cung cấp đầy đủ thông tin, tài liệu phục vụ cho việc thẩm tra.
 
-c) Đối với cơ sở giáo dục nghề nghiệp công lập tự bảo đảm chi thường xuyên và chi đầu tư: Được chủ động xây dựng và quyết định mức học phí theo quy định của Luật Giáo dục nghề nghiệp và các văn bản khác có liên quan;
+2. Nội dung thẩm tra bao gồm:
 
-d) Đối với các chương trình đào tạo chất lượng cao (kể cả chương trình chuyển giao từ nước ngoài đối với giáo dục nghề nghiệp) các cơ sở giáo dục nghề nghiệp chủ động quyết định mức học phí của chương trình đó trên cơ sở định mức kinh tế \- kỹ thuật bảo đảm đủ bù đắp chi phí đào tạo, có tích luỹ và thực hiện việc công khai trước khi tuyển sinh;
+a) Việc đáp ứng tiêu chí xác định chương trình mục tiêu quốc gia, dự án quan trọng quốc gia;
 
-đ) Đối với các chương trình đào tạo đã đạt chuẩn kiểm định tại các cơ sở giáo dục nghề nghiệp công lập tự bảo đảm chi thường xuyên, cơ sở giáo dục nghề nghiệp đảm bảo một phần chi thường xuyên và cơ sở giáo dục nghề nghiệp do nhà nước đảm bảo chi thường xuyên mức học phí tối đa không quá 2,5 lần so với mức học phí quy định tại điểm a khoản 2 Điều này.
+b) Sự cần thiết đầu tư chương trình, dự án;
 
-3. Mức học phí đào tạo theo hình thức vừa làm vừa học; đào tạo từ xa được xác định trên cơ sở chi phí hợp lý thực tế với mức thu không vượt quá 150% mức học phí của hệ đào tạo chính quy tương ứng.
+c) Việc tuân thủ các quy định của pháp luật;
 
-4. Mức học phí của các ngành, nghề đào tạo theo hình thức học trực tuyến (học online), cơ sở giáo dục nghề nghiệp xác định trên cơ sở chi phí hợp lý thực tế, tối đa bằng mức học phí của các ngành, nghề đào tạo theo hình thức đào tạo trực tiếp.
+d) Sự phù hợp với chiến lược, kế hoạch phát triển kinh tế \- xã hội và quy hoạch có liên quan theo quy định của pháp luật về quy hoạch;
 
-5. Mức học phí đối với các chương trình đào tạo trình độ sơ cấp, đào tạo thường xuyên, đào tạo kỹ năng và các chương trình đào tạo, bồi dưỡng ngắn hạn khác do các cơ sở giáo dục nghề nghiệp chủ động xây dựng và quy định mức thu theo sự đồng thuận giữa người học và cơ sở giáo dục nghề nghiệp, bảo đảm công khai, minh bạch và trách nhiệm giải trình với người học, xã hội.
+đ) Những thông số cơ bản của chương trình, dự án, bao gồm mục tiêu, quy mô, hình thức đầu tư, phạm vi, địa điểm, diện tích đất cần sử dụng, thời gian, tiến độ thực hiện, phương án lựa chọn công nghệ chính, giải pháp bảo vệ môi trường, nguồn vốn, khả năng thu hồi vốn và trả nợ vốn vay;
 
-6. Học phí giáo dục nghề nghiệp tính theo tín chỉ, mô\-đun:
+e) Đánh giá hiệu quả kinh tế \- xã hội, bảo đảm quốc phòng, an ninh và phát triển bền vững;
 
-a) Mức thu học phí của một tín chỉ, mô\-đun được xác định căn cứ vào tổng thu học phí của toàn khóa học theo nhóm ngành, nghề đào tạo và tổng số tín chỉ, mô\-đun toàn khóa theo công thức dưới đây:
-|Học phí tín chỉ, mô\-đun \=|Tổng học phí toàn khóa|
-|:---:|:---:|
-||Tổng số tín chỉ, mô\-đun toàn khóa|
+g) Đánh giá sự phù hợp với quy hoạch sử dụng đất, phương án phân bổ và khoanh vùng đất đai trong quy hoạch có liên quan, quy hoạch khác có liên quan đến tài nguyên, phương án di dân, tái định canh, định cư đối với dự án quan trọng quốc gia đầu tư trong nước;
 
+h) Đánh giá mức độ rủi ro tại quốc gia đầu tư đối với dự án quan trọng quốc gia đầu tư tại nước ngoài.
 
-Tổng học phí toàn khóa \= mức thu học phí 1 sinh viên/1 tháng x 10 tháng x số năm học, bảo đảm nguyên tắc tổng học phí theo tín chỉ của chương trình đào tạo tối đa bằng tổng học phí tính theo niên chế.
+**Điều 22. Trình tự, thủ tục quyết định chủ trương đầu tư chương trình đầu tư công thuộc thẩm quyền của Chính phủ**
 
-b) Trường hợp học quá thời hạn quy định của chương trình đào tạo, học phí tín chỉ áp dụng từ thời điểm quá hạn được xác định lại trên cơ sở thời gian học thực tế trên nguyên tắc bù đắp chi phí và thực hiện công khai, minh bạch với người học;
+1. Chủ chương trình có trách nhiệm:
 
-c) Trường hợp học văn bằng 2 chỉ phải đóng học phí của các tín chỉ, mô\-đun thực học theo chương trình đào tạo.
+a) Giao đơn vị trực thuộc lập báo cáo đề xuất chủ trương đầu tư;
 
-7. Quy định mức thu học phí đối với các cơ sở giáo dục nghề nghiệp công lập: Căn cứ vào quy định trần học phí nêu trên tương ứng với từng năm học, đặc điểm tính chất đơn vị, yêu cầu phát triển ngành, nghề đào tạo, hình thức đào tạo và điều kiện thực tiễn, Thủ trưởng các cơ sở giáo dục nghề nghiệp công lập quy định mức thu học phí cụ thể đối với các ngành, nghề đào tạo thuộc thẩm quyền quản lý và thực hiện công khai cho toàn khóa học.
+b) Giao đơn vị có chức năng thẩm định hoặc thành lập Hội đồng để thẩm định báo cáo đề xuất chủ trương đầu tư;
 
-8. Đối với các cơ sở giáo dục nghề nghiệp do các tổ chức kinh tế, doanh nghiệp nhà nước quản lý trực tiếp: Thủ trưởng các cơ sở giáo dục nghề nghiệp quy định mức thu học phí từng năm học theo từng ngành, nghề đào tạo nhưng không vượt quá mức trần học phí theo quy định tại điểm b khoản 1 và điểm b khoản 2 Điều này.
+c) Hoàn thiện báo cáo đề xuất chủ trương đầu tư trình Thủ tướng Chính phủ.
 
-Ngân sách nhà nước thực hiện cấp bù học phí cho người học thuộc diện được miễn, giảm học phí đang học tại các cơ sở giáo dục nghề nghiệp do các tổ chức kinh tế, doanh nghiệp nhà nước trực tiếp quản lý theo mức trần học phí tương ứng với ngành đào tạo của cơ sở giáo dục nghề nghiệp công lập chưa tự bảo đảm chi thường xuyên tại điểm a khoản 1 và điểm a khoản 2 Điều này.
+2. Thủ tướng Chính phủ thành lập Hội đồng liên ngành hoặc giao Bộ Kế hoạch và Đầu tư chủ trì, phối hợp với các cơ quan có liên quan thẩm định báo cáo đề xuất chủ trương đầu tư.
 
-9. Các cơ sở giáo dục nghề nghiệp công lập được quy định mức học phí đối với các trường hợp học lại. Mức học phí học lại tối đa không vượt quá mức trần học phí quy định tại Nghị định này. Trường hợp tổ chức học riêng theo nhu cầu người học thì mức thu theo thỏa thuận giữa người học và cơ sở giáo dục nghề nghiệp trên cơ sở bù đắp đủ chi phí.
+3. Chủ chương trình hoàn chỉnh báo cáo đề xuất chủ trương đầu tư theo ý kiến thẩm định quy định tại khoản 2 Điều này trình Chính phủ.
 
-10. Học sinh, sinh viên là người nước ngoài tham gia các khóa đào tạo tại cơ sở giáo dục nghề nghiệp nộp học phí theo mức thu do cơ sở giáo dục nghề nghiệp quy định hoặc theo hiệp định, thỏa thuận hợp tác với bên nước ngoài.
+4. Chính phủ xem xét, quyết định chủ trương đầu tư chương trình, bao gồm mục tiêu, phạm vi, quy mô, tổng vốn đầu tư, thời gian, tiến độ, cơ chế và giải pháp, chính sách thực hiện.
 
-**Điều 11. Học phí đối với giáo dục đại học**
+**Điều 23. Trình tự, thủ tục quyết định chủ trương đầu tư dự án nhóm A thuộc thẩm quyền của Thủ tướng Chính phủ**
 
-1. Mức trần học phí năm học 2021 \- 2022:
+1. Người đứng đầu Bộ, cơ quan trung ương và địa phương có trách nhiệm:
 
-Mức trần học phí năm học 2021 \- 2022 đối với các ngành đào tạo của các cơ sở giáo dục đại học công lập được áp dụng bằng mức trần học phí của các cơ sở giáo dục đại học công lập do Nhà nước quy định áp dụng cho năm học 2020 \- 2021, mức cụ thể như sau:
+a) Giao đơn vị trực thuộc, cơ quan chuyên môn tổ chức lập báo cáo nghiên cứu tiền khả thi;
 
-a) Mức trần học phí đối với các khối ngành đào tạo trình độ đại học tại các cơ sở giáo dục đại học công lập chưa tự bảo đảm chi thường xuyên và chi đầu tư như sau:
+b) Giao đơn vị, cơ quan có chức năng thẩm định hoặc thành lập Hội đồng để thẩm định báo cáo nghiên cứu tiền khả thi;
 
-Đơn vị: nghìn đồng/sinh viên/tháng
-|**Khối ngành**|**Năm học 2021 \- 2022**|
-|:---:|:---:|
-|Khối ngành I: Khoa học giáo dục và đào tạo giáo viên|980|
-|Khối ngành II: Nghệ thuật|1.170|
-|Khối ngành III: Kinh doanh và quản lý, pháp luật|980|
-|Khối ngành IV: Khoa học sự sống, khoa học tự nhiên|1.170|
-|Khối ngành V: Toán, thống kê máy tính, công nghệ thông tin, công nghệ kỹ thuật, kỹ thuật, sản xuất và chế biến, kiến trúc và xây dựng, nông lâm nghiệp và thủy sản, thú y|1.170|
-|Khối ngành VI.1: Các khối ngành sức khỏe khác|1.430|
-|Khối ngành VI.2: Y dược|1.430|
-|Khối ngành VII: Nhân văn, khoa học xã hội và hành vi, báo chí và thông tin, dịch vụ xã hội, du lịch, khách sạn, thể dục thể thao, dịch vụ vận tải, môi trường và bảo vệ môi trường|980|
+c) Chỉ đạo đơn vị, cơ quan quy định tại điểm a khoản này hoàn chỉnh báo cáo nghiên cứu tiền khả thi trình Thủ tướng Chính phủ.
 
+Đối với dự án nhóm A sử dụng vốn ODA, vốn vay ưu đãi của các nhà tài trợ nước ngoài và dự án quy định tại khoản 1 Điều 8 của Luật này do Ủy ban nhân dân cấp tỉnh chuẩn bị báo cáo nghiên cứu tiền khả thi, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cùng cấp cho ý kiến trước khi trình Thủ tướng Chính phủ.
 
-b) Mức trần học phí đối với các khối ngành đào tạo trình độ đại học tại các cơ sở giáo dục đại học công lập tự bảo đảm chi thường xuyên và chi đầu tư như sau:
+2. Thủ tướng Chính phủ quyết định thành lập Hội đồng thẩm định liên ngành hoặc giao cho một cơ quan chủ trì thẩm định báo cáo nghiên cứu tiền khả thi làm cơ sở cho việc quyết định chủ trương đầu tư dự án.
 
-Đơn vị: nghìn đồng/sinh viên/tháng
-|**Khối ngành**|**Năm học 2021 \-2022**|
-|:---:|:---:|
-|Khối ngành I: Khoa học giáo dục và đào tạo giáo viên|2.050|
-|Khối ngành II: Nghệ thuật|2.400|
-|Khối ngành III: Kinh doanh và quản lý, pháp luật|2.050|
-|Khối ngành IV: Khoa học sự sống, khoa học tự nhiên|2.400|
-|Khối ngành V: Toán, thống kê máy tính, công nghệ thông tin, công nghệ kỹ thuật, kỹ thuật, sản xuất và chế biến, kiến trúc và xây dựng, nông lâm nghiệp và thủy sản, thú y|2.400|
-|Khối ngành VI.1: Các khối ngành sức khỏe khác|5.050|
-|Khối ngành VI.2: Y dược|5.050|
-|Khối ngành VII: Nhân văn, khoa học xã hội và hành vi, báo chí và thông tin, dịch vụ xã hội, du lịch, khách sạn, thể dục thể thao, dịch vụ vận tải, môi trường và bảo vệ môi trường|2.050|
+Hội đồng thẩm định liên ngành hoặc cơ quan chủ trì thẩm định được mời tổ chức, cá nhân có chuyên môn, kinh nghiệm tham gia thẩm định báo cáo nghiên cứu tiền khả thi hoặc yêu cầu chủ đầu tư lựa chọn tổ chức, cá nhân có chuyên môn, kinh nghiệm tham gia thẩm định báo cáo nghiên cứu tiền khả thi.
 
+3. Bộ Kế hoạch và Đầu tư chủ trì thẩm định nguồn vốn và khả năng cân đối vốn gửi Hội đồng thẩm định liên ngành hoặc cơ quan chủ trì thẩm định.
 
-2. Học phí từ năm học 2022 \- 2023 đến năm học 2025 \- 2026 như sau:
+4. Hội đồng thẩm định liên ngành hoặc cơ quan chủ trì thẩm định quy định tại khoản 2 Điều này gửi ý kiến thẩm định để Bộ, cơ quan trung ương và địa phương hoàn chỉnh báo cáo nghiên cứu tiền khả thi trình Thủ tướng Chính phủ.
 
-a) Mức trần học phí đối với cơ sở giáo dục đại học công lập chưa tự bảo đảm chi thường xuyên như sau:
+5. Thủ tướng Chính phủ quyết định chủ trương đầu tư, bao gồm mục tiêu, quy mô, tổng mức đầu tư, cơ cấu nguồn vốn, địa điểm, thời gian, tiến độ thực hiện, dự kiến kế hoạch bố trí vốn.
 
-Đơn vị: nghìn đồng/sinh viên/tháng
-|**Khối ngành**|**Năm học 2022 \-2023**|**Năm học 2023\-2024**|**Năm học 2024\-2025**|**Năm học 2025\-2026**|
-|:---:|:---:|:---:|:---:|:---:|
-|Khối ngành I: Khoa học giáo dục và đào tạo giáo viên|1.250|1.410|1.590|1.790|
-|Khối ngành II: Nghệ thuật|1.200|1.350|1.520|1.710|
-|Khối ngành III: Kinh doanh và quản lý, pháp luật|1.250|1.410|1.590|1.790|
-|Khối ngành IV: Khoa học sự sống, khoa học tự nhiên|1.350|1.520|1.710|1.930|
-|Khối ngành V: Toán và thống kê, máy tính và công nghệ thông tin, công nghệ kỹ thuật, kỹ thuật, sản xuất và chế biến, kiến trúc và xây dựng, nông lâm nghiệp và thủy sản, thú y|1.450|1.640|1.850|2.090|
-|Khối ngành VI.1: Các khối ngành sức khỏe khác|1.850|2.090|2.360|2.660|
-|Khối ngành VI.2: Y dược|2.450|2.760|3.110|3.500|
-|Khối ngành VII: Nhân văn, khoa học xã hội và hành vi, báo chí và thông tin, dịch vụ xã hội, du lịch, khách sạn, thể dục thể thao, dịch vụ vận tải, môi trường và bảo vệ môi trường|1.200|1.500|1.690|1.910|
+**Điều 24. Trình tự, thủ tục quyết định chủ trương đầu tư dự án nhóm A thuộc thẩm quyền của Hội đồng nhân dân cấp tỉnh**
 
+1. Chủ tịch Ủy ban nhân dân cấp tỉnh có trách nhiệm:
 
-b) Cơ sở giáo dục đại học công lập tự bảo đảm chi thường xuyên: Mức học phí được xác định tối đa bằng 2 lần mức trần học phí tại điểm a khoản này tương ứng với từng khối ngành và từng năm học;
+a) Giao cơ quan chuyên môn hoặc Ủy ban nhân dân cấp huyện tổ chức lập báo cáo nghiên cứu tiền khả thi;
 
-c) Cơ sở giáo dục đại học công lập tự bảo đảm chi thường xuyên và chi đầu tư: Mức học phí được xác định tối đa bằng 2,5 lần mức trần học phí tại điểm a khoản này tương ứng với từng khối ngành và từng năm học;
+b) Thành lập Hội đồng thẩm định do Chủ tịch hoặc một Phó Chủ tịch Ủy ban nhân dân cấp tỉnh làm Chủ tịch Hội đồng, cơ quan chuyên môn quản lý đầu tư công cấp tỉnh là Thường trực Hội đồng thẩm định và các cơ quan liên quan là thành viên để thẩm định báo cáo nghiên cứu tiền khả thi, nguồn vốn và khả năng cân đối vốn;
 
-d) Đối với chương trình đào tạo của cơ sở giáo dục đại học công lập đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn do Bộ Giáo dục và Đào tạo quy định hoặc đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn nước ngoài hoặc tương đương, cơ sở giáo dục đại học được tự xác định mức thu học phí của chương trình đó trên cơ sở định mức kinh tế \- kỹ thuật do cơ sở giáo dục ban hành, thực hiện công khai giải trình với người học, xã hội.
+c) Chỉ đạo cơ quan quy định tại điểm a khoản này hoàn chỉnh báo cáo nghiên cứu tiền khả thi theo ý kiến thẩm định.
 
-3. Mức trần học phí đối với đào tạo thạc sĩ, tiến sĩ của các cơ sở giáo dục đại học công lập được xác định bằng mức trần học phí đào tạo đại học quy định tại khoản 1, khoản 2 Điều này nhân hệ số 1,5 đối với đào tạo thạc sĩ, nhân hệ số 2,5 đối với đào tạo tiến sĩ tương ứng với từng khối ngành đào tạo của từng năm học theo các mức độ tự chủ.
+2. Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cùng cấp quyết định chủ trương đầu tư, bao gồm mục tiêu, quy mô, tổng mức đầu tư, cơ cấu nguồn vốn, địa điểm, thời gian, tiến độ thực hiện, dự kiến kế hoạch bố trí vốn.
 
-4. Mức học phí đào tạo hình thức vừa làm vừa học; đào tạo từ xa được xác định trên cơ sở chi phí hợp lý thực tế với mức thu không vượt quá 150% mức thu học phí so với hệ đào tạo chính quy tương ứng.
+**Điều 25. Trình tự, thủ tục quyết định chủ trương đầu tư chương trình, dự án sử dụng vốn ODA và vốn vay ưu đãi của các nhà tài trợ nước ngoài**
 
-5. Trường hợp học trực tuyến (học online), cơ sở giáo dục đại học xác định mức thu học phí trên cơ sở chi phí phát sinh thực tế hợp lý, tối đa bằng mức học phí của cơ sở giáo dục đại học tương ứng từng khối ngành theo mức độ tự chủ.
+1. Các Bộ, cơ quan trung ương và địa phương lập đề xuất chương trình, dự án sử dụng vốn vay ODA, vay ưu đãi nước ngoài gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính và các cơ quan liên quan theo quy định của pháp luật.
 
-6. Mức học phí đối với các chương trình giáo dục thường xuyên; dịch vụ đào tạo, bồi dưỡng ngắn hạn cấp chứng chỉ, chứng nhận phù hợp với ngành, lĩnh vực đào tạo của mỗi cơ sở theo quy định của pháp luật được các cơ sở giáo dục chủ động tính toán, quy định mức thu theo sự đồng thuận giữa người học và cơ sở giáo dục, bảo đảm tính công khai, minh bạch và giải trình với người học, xã hội.
+2. Bộ Tài chính chủ trì xác định thành tố ưu đãi, đánh giá tác động của khoản vay ODA và vay ưu đãi của các nhà tài trợ nước ngoài đối với các chỉ tiêu an toàn nợ công, xác định cơ chế tài chính trong nước theo quy định của Luật Quản lý nợ công.
 
-7. Mức học phí đối với các chương trình đào tạo, bồi dưỡng ngắn hạn khác được áp dụng thu theo sự thỏa thuận chi phí giữa cơ sở giáo dục và người học.
+3. Bộ Kế hoạch và Đầu tư tổng hợp ý kiến của các Bộ, cơ quan trung ương, địa phương có liên quan và đánh giá sự cần thiết của chương trình, dự án, đánh giá sơ bộ tính khả thi, hiệu quả kinh tế \- xã hội, sơ bộ tác động môi trường (nếu có) và tác động của chương trình, dự án đối với kế hoạch đầu tư công trung hạn, lựa chọn đề xuất chương trình, dự án phù hợp trình Thủ tướng Chính phủ xem xét, quyết định.
 
-8. Học phí đào tạo đại học tính theo tín chỉ, mô\-đun:
+4. Thủ tướng Chính phủ xem xét, phê duyệt đề xuất chương trình, dự án.
 
-a) Mức thu học phí của một tín chỉ, mô\-đun được xác định căn cứ vào tổng thu học phí của toàn khóa học theo nhóm ngành, nghề đào tạo và tổng số tín chỉ, mô\-đun toàn khóa theo công thức dưới đây:
-|Học phí tín chỉ, mô\-đun \=|Tổng học phí toàn khóa|
-|:---:|:---:|
-||Tổng số tín chỉ, mô\-đun toàn khóa|
+5. Đối với chương trình mục tiêu quốc gia, dự án quan trọng quốc gia, trình tự, thủ tục quyết định chủ trương đầu tư thực hiện theo quy định tại các điều 19, 20 và 21 của Luật này.
 
+6. Đối với chương trình thuộc thẩm quyền quyết định chủ trương đầu tư của Chính phủ, trình tự, thủ tục quyết định chủ trương đầu tư thực hiện theo quy định tại Điều 22 của Luật này.
 
-Tổng học phí toàn khóa \= mức thu học phí 1 sinh viên/1 tháng x 10 tháng x số năm học, bảo đảm nguyên tắc tổng học phí theo tín chỉ của chương trình đào tạo tối đa bằng tổng học phí tính theo niên chế.
+7. Đối với dự án nhóm A, trình tự, thủ tục quyết định chủ trương đầu tư thực hiện theo quy định tại Điều 23 của Luật này.
 
-b) Trường hợp học quá thời hạn quy định của chương trình đào tạo, học phí tín chỉ áp dụng từ thời điểm quá hạn được xác định lại trên cơ sở thời gian học thực tế trên nguyên tắc bù đắp chi phí và thực hiện công khai, giải trình với người học;
+8. Đối với chương trình, dự án khác thuộc thẩm quyền quyết định chủ trương đầu tư của Thủ tướng Chính phủ quy định tại các điểm b, c và d khoản 4 Điều 17 của Luật này, trình tự, thủ tục quyết định chủ trương đầu tư được quy định như sau:
 
-c) Trường hợp đào tạo bằng tốt nghiệp thứ 2 trình độ đại học, người đóng học phí của các tín chỉ thực học theo chương trình đào tạo.
+a) Cơ quan chủ quản gửi Bộ Kế hoạch và Đầu tư báo cáo đề xuất chủ trương đầu tư;
 
-9. Quy định mức thu học phí đối với các cơ sở giáo dục đại học công lập: Căn cứ vào quy định trần học phí tại Điều này tương ứng với từng năm học, đặc điểm tính chất đơn vị, yêu cầu phát triển ngành nghề đào tạo, hình thức đào tạo và điều kiện thực tiễn, Giám đốc các Đại học Quốc gia, Đại học vùng, Thủ trưởng các cơ sở giáo dục đại học công lập chủ động quy định mức thu học phí cụ thể đối với các đơn vị, chương trình đào tạo thuộc thẩm quyền quản lý.
+b) Bộ Kế hoạch và Đầu tư chủ trì thẩm định báo cáo đề xuất chủ trương đầu tư, nguồn vốn và khả năng cân đối vốn trình Thủ tướng Chính phủ;
 
-10. Đối với các cơ sở giáo dục đại học do các tổ chức kinh tế, doanh nghiệp nhà nước quản lý trực tiếp: Thủ trưởng các cơ sở giáo dục đại học quy định mức thu học phí từng năm học theo từng ngành đào tạo nhưng không vượt quá mức trần học phí theo quy định tại điểm b khoản 1 và điểm c khoản 2 Điều này.
+c) Thủ tướng Chính phủ xem xét, quyết định chủ trương đầu tư.
 
-Ngân sách nhà nước thực hiện cấp bù học phí cho người học thuộc diện được miễn, giảm học phí đang học tại các cơ sở giáo dục đại học do các tổ chức kinh tế, doanh nghiệp nhà nước trực tiếp quản lý theo mức trần học phí tương ứng với ngành đào tạo của cơ sở giáo dục đại học công lập chưa tự bảo đảm chi thường xuyên tại điểm a khoản 1 và điểm a khoản 2 Điều này.
+9. Đối với chương trình, dự án không thuộc thẩm quyền quyết định chủ trương đầu tư của cơ quan, tổ chức, cá nhân quy định tại các khoản 1, 2, 3 và 4 Điều 17 của Luật này, trình tự, thủ tục quyết định chủ trương đầu tư được quy định như sau:
 
-11. Các cơ sở giáo dục đại học công lập được quy định mức học phí đối với các trường hợp học lại. Mức học phí học lại tối đa không vượt quá mức trần học phí quy định tại Nghị định này phù hợp với từng loại hình đơn vị. Trường hợp tổ chức học riêng theo nhu cầu người học thì mức thu theo thỏa thuận giữa người học và cơ sở giáo dục đại học công lập trên cơ sở bù đắp đủ chi phí.
+a) Cơ quan chủ quản lấy ý kiến Bộ Kế hoạch và Đầu tư, Bộ Tài chính và cơ quan có liên quan về báo cáo đề xuất chủ trương đầu tư;
 
-12. Sinh viên đại học, học viên cao học, nghiên cứu sinh là người nước ngoài đang theo học tại cơ sở giáo dục đại học công lập nộp học phí theo mức thu do cơ sở giáo dục đại học quy định hoặc theo hiệp định, thỏa thuận hợp tác với bên nước ngoài.
+b) Căn cứ ý kiến của các cơ quan, cơ quan chủ quản tổ chức thẩm định và quyết định chủ trương đầu tư.
+
+10. Chương trình, dự án sử dụng vốn ODA viện trợ không hoàn lại và không gắn với khoản vay thì không phải lập đề xuất dự án.
+
+**Điều 26. Trình tự, thủ tục quyết định chủ trương đầu tư dự án nhóm B, nhóm C sử dụng vốn đầu tư công do Bộ, cơ quan trung ương quản lý**
+
+1. Người đứng đầu Bộ, cơ quan trung ương có trách nhiệm:
+
+a) Giao đơn vị trực thuộc tổ chức lập báo cáo đề xuất chủ trương đầu tư;
+
+b) Thành lập Hội đồng thẩm định hoặc giao đơn vị có chức năng để thẩm định báo cáo đề xuất chủ trương đầu tư, thẩm định nguồn vốn và khả năng cân đối vốn;
+
+c) Chỉ đạo đơn vị quy định tại điểm a khoản này hoàn chỉnh báo cáo đề xuất chủ trương đầu tư theo ý kiến thẩm định.
+
+2. Căn cứ ý kiến thẩm định quy định tại khoản 1 Điều này, người đứng đầu Bộ, cơ quan trung ương quyết định chủ trương đầu tư, bao gồm mục tiêu, quy mô, tổng mức đầu tư, cơ cấu nguồn vốn, địa điểm, thời gian, tiến độ thực hiện, dự kiến kế hoạch bố trí vốn.
+
+**Điều 27. Trình tự, thủ tục quyết định chủ trương đầu tư chương trình, dự án nhóm B, nhóm C sử dụng vốn đầu tư công do địa phương quản lý**
+
+1. Chủ tịch Ủy ban nhân dân các cấp có trách nhiệm:
+
+a) Giao cơ quan chuyên môn hoặc Ủy ban nhân dân cấp dưới trực tiếp lập báo cáo đề xuất chủ trương đầu tư;
+
+b) Thành lập Hội đồng thẩm định hoặc giao đơn vị có chức năng để thẩm định báo cáo đề xuất chủ trương đầu tư, thẩm định nguồn vốn và khả năng cân đối vốn đối với chương trình, dự án sử dụng vốn đầu tư công thuộc cấp mình quản lý;
+
+c) Chỉ đạo cơ quan quy định tại điểm a khoản này hoàn chỉnh báo cáo đề xuất chủ trương đầu tư theo ý kiến thẩm định.
+
+2 . Ủy ban nhân dân trình Hội đồng nhân dân cùng cấp quyết định chủ trương đầu tư, bao gồm mục tiêu, phạm vi, quy mô, tổng vốn đầu tư, cơ cấu nguồn vốn, địa điểm, thời gian, tiến độ, dự kiến kế hoạch bố trí vốn, cơ chế và giải pháp, chính sách thực hiện.
+
+**Điều 28. Nguyên tắc, thẩm quyền, trình tự, thủ tục quyết định chủ trương đầu tư dự án đầu tư công tại nước ngoài và dự án đầu tư theo phương thức đối tác công tư**
+
+1. Nguyên tắc, thẩm quyền, trình tự, thủ tục quyết định chủ trương đầu tư dự án đầu tư công nhóm A, nhóm B, nhóm C tại nước ngoài thực hiện theo quy định của Chính phủ.
+
+2. Nguyên tắc, thẩm quyền, trình tự, thủ tục quyết định chủ trương đầu tư dự án đầu tư theo phương thức đối tác công tư thực hiện theo quy định của pháp luật về đầu tư theo phương thức đối tác công tư.
+
+**Điều 29. Nội dung báo cáo đề xuất chủ trương đầu tư chương trình đầu tư công**
+
+Nội dung chủ yếu của báo cáo đề xuất chủ trương đầu tư chương trình đầu tư công bao gồm:
+
+1. Sự cần thiết của chương trình để thực hiện các mục tiêu chiến lược, kế hoạch phát triển kinh tế \- xã hội và quy hoạch có liên quan theo quy định của pháp luật về quy hoạch;
+
+2. Mục tiêu, phạm vi và quy mô chương trình;
+
+3. Dự kiến tổng mức vốn và cơ cấu nguồn lực thực hiện chương trình, bao gồm danh mục dự án, khả năng cân đối nguồn vốn đầu tư công, huy động các nguồn vốn và nguồn lực khác;
+
+4. Dự kiến kế hoạch bố trí vốn và tiến độ thực hiện chương trình phù hợp với điều kiện thực tế và khả năng huy động các nguồn lực theo thứ tự ưu tiên hợp lý, bảo đảm đầu tư tập trung, có hiệu quả;
+
+5. Xác định chi phí liên quan trong quá trình thực hiện và chi phí vận hành sau khi chương trình kết thúc;
+
+6. Phân tích, đánh giá sơ bộ những ảnh hưởng, tác động về môi trường, xã hội của chương trình, tính toán hiệu quả đầu tư về mặt kinh tế \- xã hội của chương trình;
+
+7. Phân chia các dự án thành phần của chương trình theo quy định của pháp luật;
+
+8. Giải pháp tổ chức thực hiện.
+
+**Điều 30. Nội dung báo cáo nghiên cứu tiền khả thi dự án quan trọng quốc gia và dự án nhóm A**
+
+1. Nội dung báo cáo nghiên cứu tiền khả thi dự án quan trọng quốc gia và dự án nhóm A có cấu phần xây dựng thực hiện theo quy định của pháp luật về xây dựng.
+
+2. Nội dung chủ yếu của báo cáo nghiên cứu tiền khả thi dự án quan trọng quốc gia và dự án nhóm A không có cấu phần xây dựng bao gồm:
+
+a) Sự cần thiết đầu tư, các điều kiện để thực hiện đầu tư, đánh giá về sự phù hợp với quy hoạch có liên quan theo quy định của pháp luật về quy hoạch, kế hoạch đầu tư;
+
+b) Dự báo nhu cầu, phạm vi phục vụ và dự kiến mục tiêu đầu tư, quy mô và hình thức đầu tư;
+
+c) Khu vực, địa điểm đầu tư, dự kiến nhu cầu diện tích sử dụng đất và nhu cầu sử dụng tài nguyên khác;
+
+d) Phân tích, lựa chọn sơ bộ về công nghệ, kỹ thuật và các điều kiện cung cấp vật tư, thiết bị, nguyên liệu, năng lượng, dịch vụ, hạ tầng;
+
+đ) Phân tích, lựa chọn sơ bộ các phương án đầu tư và quy mô các hạng mục đầu tư;
+
+e) Phương án tổng thể đền bù, giải phóng mặt bằng, tái định cư, biện pháp bảo vệ môi trường;
+
+g) Phân tích, đánh giá sơ bộ tác động về môi trường, xã hội;
+
+h) Xác định sơ bộ tổng mức đầu tư, phương án huy động vốn, cơ cấu nguồn vốn;
+
+i) Xác định sơ bộ chi phí vận hành, bảo dưỡng, duy tu, sửa chữa lớn trong giai đoạn khai thác dự án;
+
+k) Dự kiến kế hoạch bố trí vốn, tiến độ thực hiện dự án, phân chia giai đoạn đầu tư;
+
+l) Xác định sơ bộ hiệu quả đầu tư về kinh tế \- xã hội của dự án;
+
+m) Phân chia các dự án thành phần hoặc tiểu dự án (nếu có);
+
+n) Giải pháp tổ chức thực hiện.
+
+**Điều 31. Nội dung báo cáo đề xuất chủ trương đầu tư dự án nhóm B, nhóm C**
+
+Nội dung chủ yếu của báo cáo đề xuất chủ trương đầu tư dự án nhóm B, nhóm C bao gồm:
+
+1. Sự cần thiết đầu tư, các điều kiện để thực hiện đầu tư, đánh giá về sự phù hợp với quy hoạch có liên quan theo quy định của pháp luật về quy hoạch, kế hoạch đầu tư;
+
+2. Mục tiêu, quy mô, địa điểm và phạm vi đầu tư;
+
+3. Dự kiến tổng mức đầu tư và cơ cấu nguồn vốn đầu tư, khả năng cân đối nguồn vốn đầu tư công và việc huy động các nguồn vốn, nguồn lực khác để thực hiện dự án;
+
+4. Dự kiến tiến độ triển khai thực hiện đầu tư, dự kiến kế hoạch bố trí vốn phù hợp với điều kiện thực tế và khả năng huy động các nguồn lực theo thứ tự ưu tiên hợp lý, bảo đảm đầu tư tập trung, có hiệu quả;
+
+5. Xác định sơ bộ chi phí liên quan trong quá trình thực hiện và chi phí vận hành dự án sau khi hoàn thành;
+
+6. Phân tích, đánh giá sơ bộ tác động về môi trường, xã hội; xác định sơ bộ hiệu quả đầu tư về kinh tế \- xã hội;
+
+7. Phân chia các dự án thành phần (nếu có);
+
+8. Giải pháp tổ chức thực hiện.
+
+**Điều 32. Hồ sơ, nội dung và thời gian thẩm định, quyết định chủ trương đầu tư chương trình, dự án**
+
+Hồ sơ, nội dung và thời gian thẩm định, quyết định chủ trương đầu tư chương trình, dự án thực hiện theo quy định của Chính phủ.
+
+**Điều 33. Phân cấp thẩm định nguồn vốn và khả năng cân đối vốn chương trình, dự án**
+
+1. Việc thẩm định nguồn vốn và khả năng cân đối vốn là một nội dung trong thẩm định chủ trương đầu tư.
+
+2. Bộ Kế hoạch và Đầu tư chủ trì thẩm định nguồn vốn và khả năng cân đối vốn đối với chương trình, dự án sau đây:
+
+a) Chương trình mục tiêu quốc gia;
+
+b) Dự án quan trọng quốc gia;
+
+c) Chương trình đầu tư công do Chính phủ quyết định chủ trương đầu tư;
+
+d) Chương trình, dự án đầu tư công do Thủ tướng Chính phủ quyết định chủ trương đầu tư.
+
+3. Người đứng đầu Bộ, cơ quan trung ương giao cơ quan chuyên môn quản lý đầu tư công chủ trì, phối hợp với các cơ quan liên quan thẩm định nguồn vốn và khả năng cân đối vốn đối với dự án sử dụng vốn đầu tư công thuộc cơ quan mình quản lý trong phạm vi tổng số vốn đầu tư công trung hạn được Thủ tướng Chính phủ thông báo cho giai đoạn sau và tổng mức vốn đầu tư công trung hạn được Quốc hội quyết định cho Bộ, cơ quan trung ương trong giai đoạn trung hạn đang thực hiện, trừ dự án quy định tại khoản 2 Điều này.
+
+4. Chủ tịch Ủy ban nhân dân các cấp giao cơ quan chuyên môn quản lý đầu tư công chủ trì, phối hợp với các cơ quan liên quan thẩm định nguồn vốn và khả năng cân đối vốn đối với chương trình, dự án sử dụng vốn đầu tư công thuộc cấp mình quản lý trong phạm vi tổng số vốn đầu tư công trung hạn được Thủ tướng Chính phủ hoặc cấp có thẩm quyền thông báo cho giai đoạn sau, tổng mức vốn đầu tư công trung hạn được Quốc hội, Hội đồng nhân dân các cấp quyết định cho địa phương và số vượt thu thực tế của ngân sách địa phương (nếu có) dành cho đầu tư phát triển, trừ dự án quy định tại khoản 2 Điều này.
+
+**Điều 34. Điều chỉnh chủ trương đầu tư**
+
+1. Cấp quyết định chủ trương đầu tư chương trình, dự án thì có thẩm quyền quyết định điều chỉnh chủ trương đầu tư chương trình, dự án đó và chịu trách nhiệm về quyết định của mình.
+
+2. Trình tự, thủ tục quyết định điều chỉnh chủ trương đầu tư được quy định như sau:
+
+a) Đối với chương trình đầu tư công, thực hiện theo quy định tại các điều 19, 20, 21, 22, 25 và 27 của Luật này;
+
+b) Đối với dự án quan trọng quốc gia, thực hiện theo quy định tại các điều 19, 20, 21 và 25 của Luật này;
+
+c) Đối với dự án nhóm A, thực hiện theo quy định tại các điều 23, 24 và 25 của Luật này;
+
+d) Đối với dự án nhóm B, nhóm C, thực hiện theo quy định tại các điều 25, 26 và 27 của Luật này.
+
+3. Hồ sơ trình cấp có thẩm quyền quyết định điều chỉnh chủ trương đầu tư chương trình, dự án thực hiện theo quy định của Chính phủ.
+
+**Mục 2. LẬP, THẨM ĐỊNH, QUYẾT ĐỊNH ĐẦU TƯ CHƯƠNG TRÌNH, DỰ ÁN ĐẦU TƯ CÔNG**
+
+**Điều 35. Thẩm quyền quyết định đầu tư chương trình, dự án**
+
+1. Thủ tướng Chính phủ quyết định đầu tư chương trình, dự án sau đây:
+
+a) Chương trình mục tiêu quốc gia, dự án quan trọng quốc gia đã được Quốc hội quyết định chủ trương đầu tư;
+
+b) Chương trình đầu tư công đã được Chính phủ quyết định chủ trương đầu tư;
+
+c) Chương trình, dự án sử dụng vốn ODA và vốn vay ưu đãi của các nhà tài trợ nước ngoài trong lĩnh vực quốc phòng, an ninh, tôn giáo và các chương trình, dự án khác theo quy định của Chính phủ.
+
+2. Người đứng đầu Bộ, cơ quan trung ương có thẩm quyền sau đây:
+
+a) Quyết định đầu tư dự án nhóm A, nhóm B, nhóm C sử dụng vốn đầu tư công thuộc thẩm quyền quản lý, trừ dự án quy định tại điểm c khoản 1 Điều này;
+
+b) Được phân cấp hoặc ủy quyền quyết định đầu tư đối với các dự án nhóm B, nhóm C quy định tại điểm a khoản này cho cơ quan trực thuộc.
+
+3. Chủ tịch Ủy ban nhân dân cấp tỉnh quyết định đầu tư chương trình, dự án sau đây:
+
+a) Chương trình đầu tư công đã được Hội đồng nhân dân cấp tỉnh quyết định chủ trương đầu tư;
+
+b) Dự án nhóm A, nhóm B, nhóm C do cấp tỉnh quản lý, trừ dự án quy định tại điểm c khoản 1 Điều này.
+
+4. Chủ tịch Ủy ban nhân dân cấp huyện, cấp xã quyết định đầu tư chương trình, dự án sau đây:
+
+a) Chương trình đầu tư công đã được Hội đồng nhân dân cùng cấp quyết định chủ trương đầu tư;
+
+b) Dự án nhóm B, nhóm C do cấp mình quản lý, trừ dự án quy định tại điểm c khoản 1 Điều này.
+
+5. Trường hợp điều chỉnh quyết định đầu tư chương trình, dự án, thẩm quyền quyết định đầu tư chương trình, dự án thực hiện theo quy định tại khoản 3 Điều 43 của Luật này.
+
+6. Chính phủ quy định việc phân cấp thẩm quyền, trình tự, thủ tục quyết định đầu tư đối với chương trình, dự án sử dụng vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư phù hợp với quy định về quyền tự chủ tài chính của các cơ quan, đơn vị.
+
+7. Người đứng đầu Bộ, cơ quan trung ương, địa phương quyết định đầu tư chương trình, dự án chịu trách nhiệm về hiệu quả đầu tư các chương trình, dự án được phê duyệt.
+
+**Điều 36. Căn cứ lập, thẩm định, quyết định đầu tư chương trình, dự án**
+
+1. Chiến lược và kế hoạch phát triển kinh tế \- xã hội.
+
+2. Quy hoạch có liên quan theo quy định của pháp luật về quy hoạch.
+
+3. Sự cần thiết của chương trình, dự án.
+
+4. Mục tiêu của chương trình, dự án.
+
+5. Chủ trương đầu tư đã được cấp có thẩm quyền quyết định.
+
+6. Khả năng huy động và cân đối nguồn vốn đầu tư công và các nguồn vốn khác để thực hiện chương trình, dự án.
+
+**Điều 37. Trình tự lập, thẩm định, quyết định đầu tư chương trình mục tiêu quốc gia**
+
+1. Căn cứ chủ trương đầu tư đã được Quốc hội quyết định, chủ chương trình lập báo cáo nghiên cứu khả thi chương trình trình Thủ tướng Chính phủ.
+
+2. Thủ tướng Chính phủ thành lập Hội đồng thẩm định nhà nước do Bộ trưởng Bộ Kế hoạch và Đầu tư làm Chủ tịch Hội đồng để thẩm định chương trình.
+
+3. Hội đồng thẩm định nhà nước thẩm định các nội dung quy định tại khoản 1 Điều 44 và khoản 2 Điều 45 của Luật này.
+
+4. Căn cứ ý kiến thẩm định của Hội đồng thẩm định nhà nước, chủ chương trình hoàn chỉnh báo cáo nghiên cứu khả thi chương trình và dự thảo quyết định đầu tư chương trình gửi Hội đồng thẩm định nhà nước trình Thủ tướng Chính phủ xem xét, quyết định.
+
+**Điều 38. Trình tự lập, thẩm định, quyết định đầu tư chương trình đầu tư công do Chính phủ quyết định chủ trương đầu tư**
+
+1. Căn cứ chủ trương đầu tư đã được Chính phủ quyết định, chủ chương trình lập báo cáo nghiên cứu khả thi chương trình và tổ chức thẩm định theo quy định của pháp luật trình Thủ tướng Chính phủ.
+
+2. Bộ Kế hoạch và Đầu tư tổ chức thẩm định các nội dung quy định tại khoản 1 Điều 44 và khoản 2 Điều 45 của Luật này.
+
+3. Căn cứ ý kiến thẩm định của Bộ Kế hoạch và Đầu tư, chủ chương trình hoàn chỉnh báo cáo nghiên cứu khả thi chương trình và dự thảo quyết định đầu tư chương trình gửi Bộ Kế hoạch và Đầu tư trình Thủ tướng Chính phủ xem xét, quyết định.
+
+**Điều 39. Trình tự lập, thẩm định, quyết định đầu tư chương trình đầu tư công do Hội đồng nhân dân quyết định chủ trương đầu tư**
+
+1. Căn cứ chủ trương đầu tư đã được Hội đồng nhân dân quyết định, chủ chương trình lập báo cáo nghiên cứu khả thi chương trình và tổ chức thẩm định theo quy định của pháp luật trình Ủy ban nhân dân cùng cấp.
+
+2. Ủy ban nhân dân tổ chức thẩm định các nội dung quy định tại khoản 1 Điều 44 và khoản 2 Điều 45 của Luật này.
+
+3. Căn cứ ý kiến thẩm định của Ủy ban nhân dân, chủ chương trình hoàn chỉnh báo cáo nghiên cứu khả thi chương trình và dự thảo quyết định đầu tư chương trình trình Chủ tịch Ủy ban nhân dân xem xét, quyết định.
+
+**Điều 40. Trình tự lập, thẩm định, quyết định đầu tư dự án**
+
+1. Trình tự lập, thẩm định, quyết định đầu tư dự án quan trọng quốc gia được quy định như sau:
+
+a) Căn cứ chủ trương đầu tư đã được Quốc hội quyết định, chủ đầu tư lập báo cáo nghiên cứu khả thi dự án báo cáo cơ quan chủ quản xem xét, trình Thủ tướng Chính phủ;
+
+b) Bộ Kế hoạch và Đầu tư báo cáo Thủ tướng Chính phủ thành lập Hội đồng thẩm định nhà nước để thẩm định dự án;
+
+c) Hội đồng thẩm định nhà nước thẩm định các nội dung quy định tại khoản 2 và khoản 3 Điều 44, khoản 2 Điều 45 của Luật này;
+
+d) Căn cứ ý kiến thẩm định, chủ đầu tư hoàn chỉnh báo cáo nghiên cứu khả thi dự án báo cáo cơ quan chủ quản thông qua, gửi Hội đồng thẩm định nhà nước;
+
+đ) Hội đồng thẩm định nhà nước trình Thủ tướng Chính phủ xem xét, quyết định đầu tư dự án.
+
+2. Trình tự lập, thẩm định, quyết định đầu tư dự án không thuộc trường hợp quy định tại khoản 1 Điều này và không có cấu phần xây dựng được quy định như sau:
+
+a) Căn cứ chủ trương đầu tư đã được cấp có thẩm quyền quyết định, chủ đầu tư lập báo cáo nghiên cứu khả thi dự án trình cấp có thẩm quyền quyết định đầu tư;
+
+b) Người đứng đầu Bộ, cơ quan trung ương, Chủ tịch Ủy ban nhân dân các cấp thành lập Hội đồng thẩm định hoặc giao cơ quan chuyên môn quản lý đầu tư công tổ chức thẩm định dự án;
+
+c) Hội đồng thẩm định hoặc cơ quan chuyên môn quản lý đầu tư công thẩm định các nội dung quy định tại khoản 2 Điều 44 và khoản 2 Điều 45 của Luật này;
+
+d) Căn cứ ý kiến thẩm định, chủ đầu tư hoàn chỉnh báo cáo nghiên cứu khả thi dự án để cấp có thẩm quyền xem xét, quyết định đầu tư.
+
+3. Trình tự lập, thẩm định, quyết định đầu tư dự án có cấu phần xây dựng thực hiện theo quy định của pháp luật về xây dựng và quy định khác của pháp luật có liên quan, trừ dự án quan trọng quốc gia.
+
+4. Nguyên tắc, thẩm quyền, nội dung, trình tự, thủ tục lập, thẩm định, quyết định báo cáo nghiên cứu khả thi dự án theo phương thức đối tác công tư thực hiện theo quy định của pháp luật về đầu tư theo phương thức đối tác công tư, trừ dự án quan trọng quốc gia.
+
+5. Trình tự lập, thẩm định, phê duyệt dự toán nhiệm vụ chuẩn bị đầu tư và nhiệm vụ quy hoạch được quy định như sau:
+
+a) Căn cứ nhiệm vụ chuẩn bị đầu tư và nhiệm vụ quy hoạch được cấp có thẩm quyền quyết định, cơ quan, tổ chức được giao nhiệm vụ chuẩn bị đầu tư và nhiệm vụ quy hoạch lập dự toán nhiệm vụ chuẩn bị đầu tư, nhiệm vụ quy hoạch trình người đứng đầu Bộ, cơ quan trung ương, Chủ tịch Ủy ban nhân dân các cấp quyết định;
+
+b) Người đứng đầu Bộ, cơ quan trung ương, Chủ tịch Ủy ban nhân dân các cấp thành lập Hội đồng thẩm định hoặc giao cơ quan chuyên môn quản lý đầu tư công tổ chức thẩm định dự toán nhiệm vụ chuẩn bị đầu tư, nhiệm vụ quy hoạch;
+
+c) Hội đồng thẩm định hoặc cơ quan chuyên môn quản lý đầu tư công thẩm định các nội dung dự toán theo quy định của pháp luật về tiêu chuẩn, định mức kinh phí nhiệm vụ chuẩn bị đầu tư, nhiệm vụ quy hoạch;
+
+d) Căn cứ ý kiến thẩm định, chủ đầu tư hoàn chỉnh dự toán nhiệm vụ chuẩn bị đầu tư, nhiệm vụ quy hoạch để người đứng đầu Bộ, cơ quan trung ương, Chủ tịch Ủy ban nhân dân các cấp phê duyệt dự toán.
+
+6. Nguyên tắc, thẩm quyền, nội dung, trình tự, thủ tục lập, thẩm định, quyết định đầu tư dự án đầu tư công tại nước ngoài thực hiện theo quy định của Chính phủ.
+
+**Điều 41. Trình tự lập, thẩm định, quyết định đầu tư chương trình, dự án sử dụng vốn ODA và vốn vay ưu đãi của các nhà tài trợ nước ngoài**
+
+1. Sau khi có quyết định chủ trương đầu tư, cơ quan chủ quản ban hành quyết định về chủ đầu tư, giao chủ đầu tư phối hợp với nhà tài trợ lập báo cáo nghiên cứu khả thi chương trình, dự án trình cấp có thẩm quyền quyết định đầu tư chương trình, dự án.
+
+2. Đối với chương trình, dự án thuộc thẩm quyền quyết định của Thủ tướng Chính phủ theo quy định tại điểm c khoản 1 Điều 35 của Luật này:
+
+a) Trình tự lập, thẩm định, quyết định đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia thực hiện theo quy định tại Điều 37 và khoản 1 Điều 40 của Luật này;
+
+b) Bộ Kế hoạch và Đầu tư thẩm định báo cáo nghiên cứu khả thi chương trình, dự án khác, trình Thủ tướng Chính phủ xem xét, quyết định.
+
+3. Người đứng đầu cơ quan chủ quản chịu trách nhiệm tổ chức thẩm định và quyết định đầu tư đối với chương trình, dự án thuộc thẩm quyền quyết định của mình.
+
+4. Đối với chương trình, dự án sử dụng vốn ODA và vốn vay ưu đãi của các nhà tài trợ nước ngoài áp dụng cơ chế tài chính trong nước theo hình thức cho vay lại, việc lập, thẩm định chương trình, dự án theo quy định của Luật này và phải được thẩm định phương án tài chính của chương trình, dự án, năng lực tài chính của chủ đầu tư theo quy định của pháp luật về quản lý nợ công và quy định khác của pháp luật có liên quan.
+
+5. Cơ quan, đơn vị chủ trì thẩm định phải lấy ý kiến của các cơ quan có liên quan, xem xét trình tự, thủ tục, tiến độ và ý kiến của nhà tài trợ.
+
+**Điều 42. Trình tự, thủ tục quyết định đầu tư đối với dự án đầu tư công khẩn cấp**
+
+1. Người đứng đầu Bộ, cơ quan trung ương, Chủ tịch Ủy ban nhân dân các cấp có thẩm quyền quyết định và chịu trách nhiệm về việc thực hiện dự án đầu tư công khẩn cấp thuộc cấp mình quản lý.
+
+2. Người đứng đầu Bộ, cơ quan trung ương, Chủ tịch Ủy ban nhân dân các cấp quyết định đầu tư theo trình tự, thủ tục sau đây:
+
+a) Giao cơ quan chuyên môn hoặc đơn vị có chức năng tổ chức khảo sát, lập báo cáo đề xuất dự án;
+
+b) Giao cơ quan chuyên môn quản lý đầu tư công hoặc đơn vị có chức năng thẩm định dự án;
+
+c) Chỉ đạo cơ quan, đơn vị quy định tại điểm a khoản này hoàn chỉnh báo cáo đề xuất dự án trình cấp có thẩm quyền xem xét, quyết định theo quy định tại Điều 35 của Luật này.
+
+3. Người đứng đầu Bộ, cơ quan trung ương báo cáo Chính phủ việc thực hiện dự án đầu tư công khẩn cấp. Chủ tịch Ủy ban nhân dân báo cáo Hội đồng nhân dân cùng cấp việc thực hiện dự án đầu tư công khẩn cấp tại kỳ họp gần nhất.
+
+**Điều 43. Điều chỉnh chương trình, dự án**
+
+1. Việc điều chỉnh chương trình được thực hiện trong các trường hợp sau đây:
+
+a) Khi điều chỉnh mục tiêu và thay đổi điều kiện thực hiện trong chiến lược, kế hoạch phát triển kinh tế \- xã hội và quy hoạch có liên quan theo quy định của pháp luật về quy hoạch;
+
+b) Khi điều chỉnh hoặc dừng chủ trương đầu tư của cấp có thẩm quyền;
+
+c) Do nguyên nhân bất khả kháng làm thay đổi về mục tiêu, quy mô đầu tư, chi phí và thời gian thực hiện chương trình.
+
+2. Việc điều chỉnh dự án được thực hiện trong các trường hợp sau đây:
+
+a) Khi điều chỉnh hoặc dừng chủ trương đầu tư của cấp có thẩm quyền;
+
+b) Khi điều chỉnh quy hoạch ảnh hưởng trực tiếp tới dự án;
+
+c) Do nguyên nhân bất khả kháng làm thay đổi về mục tiêu, quy mô đầu tư, chi phí và thời gian thực hiện dự án;
+
+d) Do ảnh hưởng của sự cố thiên tai, hỏa hoạn hoặc yếu tố bất khả kháng khác khi đã hết thời gian bảo hiểm của dự án;
+
+đ) Xuất hiện các yếu tố mang lại hiệu quả cao hơn về tài chính, kinh tế \- xã hội do việc điều chỉnh dự án mang lại và được cơ quan có thẩm quyền thẩm định;
+
+e) Khi chỉ số giá trong thời gian thực hiện dự án lớn hơn chỉ số giá được sử dụng để tính dự phòng trượt giá trong tổng mức đầu tư dự án được cấp có thẩm quyền quyết định.
+
+3. Cấp quyết định đầu tư chương trình, dự án có thẩm quyền quyết định điều chỉnh chương trình, dự án đó và chịu trách nhiệm về quyết định của mình.
+
+4. Cấp có thẩm quyền chỉ được điều chỉnh chương trình, dự án sau khi chương trình, dự án đã được thực hiện thẩm định, kiểm tra, đánh giá theo quy định của Luật này.
+
+5. Trường hợp điều chỉnh làm tăng tổng mức đầu tư dự án lớn hơn tổng mức đầu tư đã được cấp có thẩm quyền quyết định chủ trương đầu tư, dự án phải thực hiện trình tự, thủ tục quyết định điều chỉnh chủ trương đầu tư trước khi cấp có thẩm quyền quyết định điều chỉnh dự án.
+
+6. Nội dung, trình tự, thủ tục lập, thẩm định điều chỉnh chương trình, dự án thực hiện theo quy định của Chính phủ.
+
+**Điều 44. Nội dung báo cáo nghiên cứu khả thi chương trình, dự án**
+
+1. Báo cáo nghiên cứu khả thi chương trình đầu tư công bao gồm các nội dung chủ yếu sau đây:
+
+a) Sự cần thiết đầu tư;
+
+b) Đánh giá thực trạng của ngành, lĩnh vực thuộc mục tiêu và phạm vi của chương trình; những vấn đề cấp bách cần được giải quyết trong chương trình;
+
+c) Mục tiêu tổng quát, mục tiêu cụ thể, kết quả, các chỉ tiêu chủ yếu trong từng giai đoạn;
+
+d) Phạm vi và quy mô của chương trình;
+
+đ) Các dự án thành phần thuộc chương trình cần thực hiện để đạt được mục tiêu của chương trình, thứ tự ưu tiên và thời gian thực hiện các dự án thành phần;
+
+e) Dự kiến tổng mức vốn để thực hiện chương trình, phân bổ vốn theo mục tiêu, dự án thành phần và thời gian thực hiện, nguồn vốn và phương án huy động vốn;
+
+g) Dự kiến thời gian và tiến độ thực hiện chương trình;
+
+h) Giải pháp để thực hiện chương trình; cơ chế, chính sách áp dụng đối với chương trình; khả năng lồng ghép, phối hợp với các chương trình khác;
+
+i) Yêu cầu hợp tác quốc tế (nếu có);
+
+k) Tổ chức thực hiện chương trình;
+
+l) Đánh giá hiệu quả kinh tế \- xã hội chung của chương trình.
+
+2. Báo cáo nghiên cứu khả thi dự án không có cấu phần xây dựng bao gồm các nội dung chủ yếu sau đây:
+
+a) Sự cần thiết đầu tư;
+
+b) Đánh giá sự phù hợp với quy hoạch có liên quan theo quy định của pháp luật về quy hoạch;
+
+c) Phân tích, xác định mục tiêu, nhiệm vụ, kết quả đầu ra của dự án; phân tích, lựa chọn quy mô hợp lý; xác định phân kỳ đầu tư; lựa chọn hình thức đầu tư;
+
+d) Phân tích các điều kiện tự nhiên, điều kiện kinh tế \- kỹ thuật, lựa chọn địa điểm đầu tư;
+
+đ) Phương án tổ chức quản lý, khai thác, sử dụng dự án;
+
+e) Đánh giá tác động môi trường và giải pháp bảo vệ môi trường;
+
+g) Phương án tổng thể đền bù, giải phóng mặt bằng, tái định cư;
+
+h) Dự kiến tiến độ thực hiện dự án; các mốc thời gian chính thực hiện đầu tư;
+
+i) Xác định tổng mức đầu tư, cơ cấu nguồn vốn, phương án huy động vốn;
+
+k) Xác định chi phí vận hành, bảo dưỡng, duy tu, sửa chữa lớn trong giai đoạn khai thác dự án;
+
+l) Tổ chức quản lý dự án, bao gồm xác định chủ đầu tư, phân tích lựa chọn hình thức tổ chức quản lý thực hiện dự án, mối quan hệ và trách nhiệm của các chủ thể liên quan đến quá trình thực hiện dự án, tổ chức bộ máy quản lý khai thác dự án;
+
+m) Phân tích hiệu quả đầu tư, bao gồm hiệu quả và tác động kinh tế \- xã hội, quốc phòng, an ninh; khả năng thu hồi vốn đầu tư (nếu có).
+
+3. Nội dung báo cáo nghiên cứu khả thi dự án có cấu phần xây dựng thực hiện theo quy định của pháp luật về xây dựng và quy định khác của pháp luật có liên quan.
+
+**Điều 45. Hồ sơ, nội dung, thời gian thẩm định, quyết định chương trình, dự án**
+
+1. Hồ sơ thẩm định chương trình, dự án bao gồm:
+
+a) Tờ trình thẩm định chương trình, dự án;
+
+b) Báo cáo nghiên cứu khả thi chương trình, dự án;
+
+c) Các tài liệu khác có liên quan.
+
+2. Hồ sơ quyết định chương trình, dự án, nội dung, thời gian thẩm định, quyết định chương trình, dự án thực hiện theo quy định của Chính phủ.
 
 **Chương III**
 
-**THU, QUẢN LÝ VÀ SỬ DỤNG HỌC PHÍ**
+**LẬP, THẨM ĐỊNH, PHÊ DUYỆT VÀ GIAO KẾ HOẠCH ĐẦU TƯ CÔNG**
 
-**Điều 12. Thu học phí**
+**Mục 1. QUY ĐỊNH CHUNG**
 
-1. Học phí được thu định kỳ hàng tháng; nếu người học tự nguyện, nhà trường có thể thu một lần cho cả học kỳ hoặc cả năm học. Đối với cơ sở giáo dục thường xuyên, đào tạo thường xuyên và các khóa đào tạo, bồi dưỡng ngắn hạn, học phí được thu theo số tháng thực học. Đối với cơ sở giáo dục mầm non, giáo dục phổ thông, học phí được thu tối đa 9 tháng/năm. Đối với cơ sở giáo dục đại học, giáo dục nghề nghiệp học phí được thu tối đa 10 tháng/năm.
+**Điều 46. Phân loại kế hoạch đầu tư công**
 
-2. Trường hợp xảy ra thiên tai, dịch bệnh, các sự kiện bất khả kháng thì học phí được thu theo số tháng học thực tế (bao gồm cả thời gian tổ chức dạy học trực tuyến hoặc bố trí thời gian học bù tại trường); không thu học phí trong thời gian không tổ chức dạy học. Mức thu học phí đảm bảo nguyên tắc theo số tháng thực học và chi phí phát sinh cần thiết để tổ chức dạy học nhưng không vượt quá tổng thu học phí tính theo số tháng tối đa của 01 năm học (tối đa 9 tháng/năm đối với cơ sở giáo dục mầm non, phổ thông và tối đa 10 tháng/năm đối với cơ sở giáo dục đại học, cơ sở giáo dục nghề nghiệp) và công khai từ đầu năm học trong các cơ sở giáo dục. Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân quyết định cụ thể thời gian thu, mức học phí đối với giáo dục mầm non, giáo dục phổ thông công lập trên địa bàn; Thủ trưởng các cơ sở giáo dục đại học, cơ sở giáo dục nghề nghiệp quy định thời gian thu, mức học phí trong trường hợp xảy ra thiên tai, dịch bệnh, các sự kiện bất khả kháng.
+1. Phân loại kế hoạch đầu tư công theo thời hạn kế hoạch bao gồm:
 
-3. Trong trường hợp tổ chức giảng dạy, học tập theo học chế tín chỉ, cơ sở giáo dục có thể quy đổi để thu học phí theo tín chỉ, tuy nhiên tổng số học phí thu theo tín chỉ của cả khóa học không được vượt quá mức học phí quy định cho khóa học nếu thu theo năm học.
+a) Kế hoạch đầu tư công trung hạn được lập trong thời hạn 05 năm, phù hợp với kế hoạch phát triển kinh tế \- xã hội 05 năm;
 
-4. Các cơ sở giáo dục có trách nhiệm tổ chức thu học phí và nộp học phí vào ngân hàng thương mại hoặc Kho bạc Nhà nước để quản lý, sử dụng. Trong trường hợp phát sinh khoản thu học phí bằng tiền mặt thì định kỳ, đơn vị phải làm thủ tục chuyển (nộp) toàn bộ học phí đã thu bằng tiền mặt còn dư tại quỹ vào tài khoản của đơn vị tại Kho bạc Nhà nước hoặc ngân hàng thương mại để quản lý theo quy định.
+b) Kế hoạch đầu tư công hằng năm để triển khai thực hiện kế hoạch đầu tư công trung hạn, phù hợp với mục tiêu kế hoạch phát triển kinh tế \- xã hội hằng năm và cân đối vốn đầu tư công hằng năm.
 
-**Điều 13. Quản lý và sử dụng học phí**
+2. Phân loại kế hoạch đầu tư công theo cấp quản lý bao gồm:
 
-1. Cơ sở giáo dục công lập sử dụng học phí theo quy định của Chính phủ về cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập và tổng hợp vào báo cáo tài chính hằng năm của cơ sở giáo dục theo quy định của pháp luật.
+a) Kế hoạch đầu tư công của quốc gia;
 
-2. Cơ sở giáo dục dân lập, tư thục sử dụng học phí theo nguyên tắc tự bảo đảm thu, chi và chịu trách nhiệm về quản lý tài chính đối với hoạt động của mình. Tổ chức công tác kế toán, nộp thuế và thực hiện các nghĩa vụ tài chính khác theo quy định của pháp luật.
+b) Kế hoạch đầu tư công của các Bộ, cơ quan trung ương;
 
-3. Cơ sở giáo dục thực hiện quản lý các khoản thu, chi học phí theo chế độ kế toán, kiểm toán, thuế và công khai tài chính theo quy định của pháp luật; thực hiện yêu cầu về thanh tra, kiểm tra của cơ quan tài chính và cơ quan quản lý giáo dục có thẩm quyền và chịu trách nhiệm trước pháp luật về tính chính xác, trung thực của các thông tin, tài liệu cung cấp.
+c) Kế hoạch đầu tư công của các cấp chính quyền địa phương.
 
-4. Cơ sở giáo dục trước khi tuyển sinh hoặc xét tuyển phải công bố, công khai mức thu học phí, chi phí đào tạo cho từng năm học, cấp học đối với giáo dục mầm non, giáo dục phổ thông, lộ trình tăng học phí (nếu có) cho từng năm học và dự kiến cho cả khóa học đối với giáo dục đại học.
+3. Phân loại kế hoạch đầu tư công theo nguồn vốn đầu tư bao gồm:
 
-5. Cơ sở giáo dục có trách nhiệm công khai, giải trình chi phí đào tạo, mức thu học phí, lộ trình tăng học phí cho từng năm học, cấp học, khóa học; công khai các điều kiện đảm bảo chất lượng theo quy định; công khai chính sách miễn, giảm học phí và mức thu, miễn giảm học phí trong trường hợp xảy ra thiên tai, dịch bệnh, các sự kiện bất khả kháng.
+a) Kế hoạch đầu tư vốn ngân sách trung ương, bao gồm đầu tư theo ngành, lĩnh vực, chương trình đầu tư công, phần vốn đầu tư của Nhà nước tham gia thực hiện các dự án theo phương thức đối tác công tư theo quy định của pháp luật về ngân sách nhà nước;
+
+b) Kế hoạch đầu tư vốn ngân sách địa phương, bao gồm đầu tư theo ngành, lĩnh vực, chương trình đầu tư công, phần vốn đầu tư của Nhà nước tham gia thực hiện các dự án theo phương thức đối tác công tư theo quy định của pháp luật về ngân sách nhà nước;
+
+c) Kế hoạch đầu tư vốn từ nguồn thu hợp pháp của cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư.
+
+**Điều 47. Căn cứ lập kế hoạch đầu tư công trung hạn và hằng năm**
+
+1. Căn cứ lập kế hoạch đầu tư công trung hạn bao gồm:
+
+a) Tình hình và kết quả thực hiện kế hoạch phát triển kinh tế \- xã hội 05 năm và kế hoạch đầu tư công trung hạn giai đoạn trước;
+
+b) Chiến lược phát triển kinh tế \- xã hội; kế hoạch phát triển kinh tế \- xã hội 05 năm của quốc gia, ngành, lĩnh vực, địa phương; kế hoạch tài chính 05 năm; kế hoạch vay, trả nợ công 05 năm; mục tiêu ưu tiên đầu tư trong kế hoạch 05 năm của quốc gia, ngành, lĩnh vực, địa phương;
+
+c) Quy hoạch có liên quan theo quy định của pháp luật về quy hoạch;
+
+d) Nhu cầu và dự báo khả năng huy động các nguồn vốn đầu tư để xây dựng kết cấu hạ tầng kinh tế \- xã hội, khả năng cân đối vốn ngân sách nhà nước;
+
+đ) Dự báo tác động của tình hình thế giới và trong nước đến sự phát triển và khả năng huy động các nguồn vốn đầu tư;
+
+e) Cơ chế và chính sách thu hút các nguồn vốn đầu tư của các thành phần kinh tế để xây dựng kết cấu hạ tầng kinh tế \- xã hội.
+
+2. Căn cứ lập kế hoạch đầu tư công hằng năm bao gồm:
+
+a) Tình hình và kết quả thực hiện kế hoạch phát triển kinh tế \- xã hội của quốc gia, ngành, lĩnh vực, địa phương; kết quả thực hiện kế hoạch đầu tư công năm trước;
+
+b) Kế hoạch phát triển kinh tế \- xã hội hằng năm;
+
+c) Kế hoạch đầu tư công trung hạn;
+
+d) Nhu cầu và khả năng cân đối các nguồn lực để đầu tư xây dựng kết cấu hạ tầng kinh tế \- xã hội trong năm kế hoạch.
+
+**Điều 48. Nguyên tắc lập kế hoạch đầu tư công trung hạn và hằng năm**
+
+1. Phù hợp với các mục tiêu phát triển tại chiến lược phát triển kinh tế \- xã hội, kế hoạch phát triển kinh tế \- xã hội 05 năm và hằng năm của quốc gia, ngành, lĩnh vực, địa phương và các quy hoạch đã được phê duyệt, kế hoạch tài chính 05 năm, kế hoạch vay, trả nợ công 05 năm.
+
+2. Phù hợp với khả năng cân đối nguồn vốn đầu tư công và thu hút các nguồn vốn đầu tư của các thành phần kinh tế khác; bảo đảm cân đối vĩ mô, ưu tiên an toàn nợ công.
+
+3. Việc phân bổ vốn đầu tư công phải tuân thủ nguyên tắc, tiêu chí, định mức phân bổ vốn đầu tư công trong từng giai đoạn đã được cấp có thẩm quyền phê duyệt.
+
+4. Ưu tiên bố trí vốn cho các ngành, lĩnh vực, vùng lãnh thổ theo mục tiêu và định hướng phát triển của từng thời kỳ.
+
+5. Bảo đảm công khai, minh bạch và công bằng.
+
+6. Bảo đảm quản lý tập trung, thống nhất về mục tiêu, cơ chế, chính sách; thực hiện phân cấp trong quản lý đầu tư, tạo quyền chủ động cho Bộ, cơ quan trung ương và địa phương theo quy định của pháp luật nhằm nâng cao hiệu quả đầu tư.
+
+7. Kế hoạch đầu tư công hằng năm phải phù hợp với kế hoạch đầu tư công trung hạn đã được phê duyệt.
+
+**Điều 49. Nội dung báo cáo kế hoạch đầu tư công trung hạn trình cấp có thẩm quyền phê duyệt**
+
+1. Tình hình triển khai và kết quả thực hiện kế hoạch đầu tư công trung hạn giai đoạn trước.
+
+2. Mục tiêu phát triển kinh tế \- xã hội; mục tiêu, định hướng cơ cấu đầu tư theo ngành, lĩnh vực trong trung hạn. Việc phân loại theo ngành, lĩnh vực được thực hiện theo quy định của Luật Ngân sách nhà nước.
+
+3. Khả năng huy động và cân đối các nguồn vốn; dự kiến tổng số vốn đầu tư để thực hiện các mục tiêu, nhiệm vụ phát triển kinh tế \- xã hội, ngành, lĩnh vực trong trung hạn, bao gồm vốn thực hiện nhiệm vụ quy hoạch, nhiệm vụ chuẩn bị đầu tư, thực hiện dự án, hoàn trả các khoản ứng trước, hoàn trả các khoản vốn vay khác của ngân sách địa phương để đầu tư.
+
+4. Tổng mức vốn kế hoạch đầu tư công trung hạn nguồn ngân sách nhà nước, bao gồm vốn ngân sách trung ương, vốn ngân sách từng địa phương; tổng mức vốn ngân sách trung ương chi tiết theo từng ngành, lĩnh vực, dự kiến mức phân bổ cho từng Bộ, cơ quan trung ương và mức vốn bổ sung có mục tiêu từ ngân sách trung ương cho ngân sách từng địa phương đối với báo cáo trình Quốc hội. Tổng mức vốn của từng cơ quan, tổ chức được giao kế hoạch vốn đầu tư công sử dụng nguồn ngân sách địa phương chi tiết theo từng ngành, lĩnh vực và mức vốn bổ sung có mục tiêu cho ngân sách cấp dưới đối với báo cáo trình Hội đồng nhân dân các cấp.
+
+5. Nguyên tắc, tiêu chí phân bổ vốn kế hoạch đầu tư công trung hạn.
+
+6. Sắp xếp thứ tự ưu tiên, lựa chọn danh mục dự án và mức vốn bố trí cụ thể cho từng dự án trong trung hạn phù hợp với khả năng cân đối vốn đầu tư công và khả năng huy động các nguồn vốn khác để thực hiện các mục tiêu, nhiệm vụ và định hướng kế hoạch phát triển kinh tế \- xã hội 05 năm.
+
+7. Giải pháp thực hiện và dự kiến kết quả đạt được.
+
+**Điều 50. Nội dung báo cáo kế hoạch đầu tư công hằng năm trình cấp có thẩm quyền phê duyệt**
+
+1. Tình hình thực hiện kế hoạch đầu tư công năm trước.
+
+2. Định hướng đầu tư công trong năm kế hoạch.
+
+3. Khả năng huy động và cân đối các nguồn vốn thực hiện trong năm kế hoạch.
+
+4. Lựa chọn danh mục dự án và mức vốn bố trí cụ thể cho từng dự án phù hợp với danh mục dự án thuộc kế hoạch đầu tư công trung hạn và khả năng cân đối nguồn vốn kế hoạch hằng năm.
+
+5. Giải pháp điều hành, tổ chức thực hiện và dự kiến kết quả đạt được.
+
+**Điều 51. Nguyên tắc bố trí vốn kế hoạch đầu tư công trung hạn và hằng năm cho chương trình, dự án**
+
+1. Nhằm thực hiện mục tiêu, định hướng phát triển trong chiến lược, kế hoạch phát triển kinh tế \- xã hội và quy hoạch đã được phê duyệt.
+
+2. Tuân thủ nguyên tắc, tiêu chí và định mức phân bổ vốn được cấp có thẩm quyền quyết định.
+
+3. Tập trung bố trí vốn đầu tư công để hoàn thành và đẩy nhanh tiến độ chương trình mục tiêu quốc gia, dự án quan trọng quốc gia, chương trình, dự án trọng điểm có ý nghĩa lớn đối với phát triển kinh tế \- xã hội của đất nước, của các cấp, các ngành.
+
+4. Trong từng ngành, lĩnh vực, việc bố trí vốn thực hiện theo thứ tự ưu tiên như sau:
+
+a) Dự án đã hoàn thành và bàn giao đưa vào sử dụng nhưng chưa bố trí đủ vốn;
+
+b) Vốn đối ứng cho dự án sử dụng vốn ODA và vốn vay ưu đãi của các nhà tài trợ nước ngoài;
+
+c) Vốn đầu tư của Nhà nước tham gia thực hiện dự án theo phương thức đối tác công tư;
+
+d) Dự án chuyển tiếp thực hiện theo tiến độ được phê duyệt;
+
+đ) Dự án dự kiến hoàn thành trong kỳ kế hoạch;
+
+e) Dự án khởi công mới đáp ứng yêu cầu quy định tại khoản 5 Điều này.
+
+5. Việc bố trí vốn kế hoạch cho chương trình, dự án khởi công mới phải đáp ứng các yêu cầu sau đây:
+
+a) Chương trình, dự án cần thiết, có đủ điều kiện được bố trí vốn kế hoạch theo quy định tại Điều 52 và Điều 53 của Luật này;
+
+b) Sau khi đã bố trí vốn để thanh toán nợ đọng xây dựng cơ bản theo quy định tại khoản 4 Điều 101 của Luật này;
+
+c) Bảo đảm bố trí đủ vốn để hoàn thành chương trình, dự án theo tiến độ đầu tư đã được phê duyệt.
+
+6. Quốc hội quyết định mức vốn, việc sử dụng, thời điểm sử dụng dự phòng chung nguồn ngân sách trung ương của kế hoạch đầu tư công trung hạn quốc gia. Hội đồng nhân dân các cấp quyết định mức vốn, việc sử dụng, thời điểm sử dụng dự phòng chung kế hoạch đầu tư công trung hạn nguồn ngân sách cấp mình quản lý.
+
+**Điều 52. Điều kiện để chương trình, dự án, nhiệm vụ, đối tượng đầu tư công khác được đưa vào kế hoạch đầu tư công trung hạn**
+
+Chương trình, dự án, nhiệm vụ, đối tượng đầu tư công khác được đưa vào kế hoạch đầu tư công trung hạn phải bảo đảm tuân thủ quy định của pháp luật về nguyên tắc, tiêu chí phân bổ vốn đầu tư công và đáp ứng một trong các điều kiện sau đây:
+
+1. Dự án chuyển tiếp thuộc danh mục của kế hoạch đầu tư công trung hạn giai đoạn trước;
+
+2. Các chương trình, dự án đã được cấp có thẩm quyền quyết định chủ trương đầu tư, các dự án mới phải bảo đảm thời gian bố trí vốn thực hiện dự án nhóm A không quá 06 năm, nhóm B không quá 04 năm, nhóm C không quá 03 năm.
+
+Trường hợp không đáp ứng thời hạn trên, Thủ tướng Chính phủ quyết định thời gian bố trí vốn thực hiện dự án đối với các dự án sử dụng vốn ngân sách trung ương, Hội đồng nhân dân cấp tỉnh quyết định thời gian bố trí vốn thực hiện dự án đối với dự án sử dụng vốn ngân sách địa phương;
+
+3. Nhiệm vụ, dự án thuộc đối tượng quy định tại khoản 6 Điều 18 của Luật này;
+
+4. Các đối tượng quy định tại khoản 4 và khoản 6 Điều 5 của Luật này.
+
+**Điều 53. Điều kiện để chương trình, dự án, nhiệm vụ, đối tượng đầu tư công khác được bố trí vốn kế hoạch đầu tư công hằng năm**
+
+1. Chương trình, dự án, nhiệm vụ, đối tượng đầu tư công khác phải có trong kế hoạch đầu tư công trung hạn, trừ dự án đầu tư công khẩn cấp.
+
+2. Chương trình, dự án, nhiệm vụ, đối tượng đầu tư công khác đã được cấp có thẩm quyền quyết định.
+
+**Điều 54. Vốn chuẩn bị đầu tư, vốn thực hiện nhiệm vụ quy hoạch và vốn thực hiện dự án trong kế hoạch đầu tư công trung hạn và hằng năm**
+
+1. Vốn chuẩn bị đầu tư được bố trí để lập, thẩm định, quyết định chủ trương đầu tư dự án; lập, thẩm định, quyết định đầu tư dự án.
+
+2. Vốn thực hiện nhiệm vụ quy hoạch được bố trí để lập, thẩm định, quyết định hoặc phê duyệt, công bố và điều chỉnh quy hoạch theo quy định của pháp luật về quy hoạch.
+
+3. Vốn thực hiện dự án được bố trí để giải phóng mặt bằng, lập thiết kế kỹ thuật, lập thiết kế bản vẽ thi công, lập dự toán của dự án hoặc hạng mục của dự án, tổ chức thi công và các công việc khác theo quyết định phê duyệt dự án.
+
+**Điều 55. Trình tư lập, thẩm định kế hoạch đầu tư công trung hạn**
+
+1. Trước ngày 30 tháng 6 năm thứ tư của kế hoạch đầu tư công trung hạn giai đoạn trước, Bộ Kế hoạch và Đầu tư xây dựng, trình Thủ tướng Chính phủ phê duyệt định hướng, tiêu chí phân bổ mức vốn đầu tư công trung hạn dự kiến cho các Bộ, cơ quan trung ương và địa phương.
+
+2. Trước ngày 31 tháng 7 năm thứ tư của kế hoạch đầu tư công trung hạn giai đoạn trước, Thủ tướng Chính phủ ban hành chỉ thị về việc lập kế hoạch đầu tư công trung hạn giai đoạn sau với tổng mức vốn đầu tư công dự kiến bằng tổng mức vốn đầu tư công của kế hoạch đầu tư công trung hạn giai đoạn trước, thông báo tổng mức vốn đầu tư công dự kiến của các Bộ, cơ quan trung ương và địa phương để làm căn cứ quyết định chủ trương đầu tư chương trình, dự án giai đoạn sau.
+
+3. Trước ngày 15 tháng 8 năm thứ tư của kế hoạch đầu tư công trung hạn giai đoạn trước, Bộ Kế hoạch và Đầu tư hướng dẫn các Bộ, cơ quan trung ương và địa phương về mục tiêu, yêu cầu, nội dung, thời gian, tiến độ lập kế hoạch đầu tư công trung hạn.
+
+4. Căn cứ quy định của Thủ tướng Chính phủ, hướng dẫn của Bộ Kế hoạch và Đầu tư, các Bộ, cơ quan trung ương có trách nhiệm:
+
+a) Giao cơ quan chuyên môn quản lý đầu tư công hướng dẫn lập kế hoạch đầu tư công trung hạn;
+
+b) Giao cơ quan, đơn vị trực thuộc sử dụng vốn đầu tư công lập kế hoạch đầu tư công trung hạn giai đoạn sau trong phạm vi nhiệm vụ được giao, báo cáo cơ quan cấp trên xem xét theo tiến độ theo quy định của Thủ tướng Chính phủ và hướng dẫn của Bộ Kế hoạch và Đầu tư;
+
+c) Giao cơ quan chuyên môn quản lý đầu tư công tổ chức thẩm định kế hoạch đầu tư công trung hạn giai đoạn sau theo tiến độ theo quy định của Thủ tướng Chính phủ và hướng dẫn của Bộ Kế hoạch và Đầu tư;
+
+d) Giao cơ quan chuyên môn quản lý đầu tư công lập kế hoạch đầu tư công trung hạn trình cấp có thẩm quyền xem xét, hoàn chỉnh và gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính theo tiến độ theo quy định của Thủ tướng Chính phủ và hướng dẫn của Bộ Kế hoạch và Đầu tư.
+
+5. Căn cứ quy định của Thủ tướng Chính phủ, hướng dẫn của Bộ Kế hoạch và Đầu tư, Ủy ban nhân dân cấp tỉnh có trách nhiệm:
+
+a) Hướng dẫn cho các cơ quan, đơn vị ở địa phương lập kế hoạch đầu tư công trung hạn giai đoạn sau;
+
+b) Giao cơ quan, đơn vị sử dụng vốn đầu tư công tổ chức lập, thẩm định kế hoạch đầu tư công trung hạn giai đoạn sau trong phạm vi nhiệm vụ được giao và nguồn vốn thuộc cấp mình quản lý, báo cáo cơ quan cấp trên xem xét và gửi cơ quan chuyên môn quản lý đầu tư công cấp tỉnh;
+
+c) Tổ chức thẩm định hoặc giao cơ quan chuyên môn quản lý đầu tư công cấp tỉnh thẩm định kế hoạch đầu tư công trung hạn của sở, ban, ngành thuộc tỉnh;
+
+d) Giao cơ quan chuyên môn quản lý đầu tư công cấp tỉnh lập kế hoạch đầu tư công trung hạn cấp tỉnh giai đoạn sau, trình Ủy ban nhân dân cấp tỉnh xem xét;
+
+đ) Trình Hội đồng nhân dân cấp tỉnh cho ý kiến về kế hoạch đầu tư công trung hạn giai đoạn sau;
+
+e) Hoàn chỉnh kế hoạch đầu tư công trung hạn giai đoạn sau gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính.
+
+6. Ủy ban nhân dân cấp huyện, cấp xã tổ chức lập, thẩm định hoặc giao cơ quan chuyên môn quản lý đầu tư công lập, thẩm định kế hoạch đầu tư công trung hạn giai đoạn sau của cấp mình, trình Hội đồng nhân dân cùng cấp cho ý kiến và gửi Ủy ban nhân dân cấp trên theo quy định tại điểm a khoản 5 Điều này.
+
+7. Trước ngày 31 tháng 01 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước, Chính phủ dự kiến khả năng cân đối ngân sách nhà nước cho chi đầu tư phát triển trong giai đoạn sau.
+
+8. Từ ngày 01 tháng 02 đến ngày 30 tháng 4 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước, Bộ Kế hoạch và Đầu tư chủ trì thẩm định kế hoạch và phương án phân bổ vốn kế hoạch đầu tư công trung hạn vốn ngân sách trung ương của các Bộ, cơ quan trung ương và địa phương.
+
+9. Sau khi có ý kiến thẩm định của Bộ Kế hoạch và Đầu tư, các Bộ, cơ quan trung ương hoàn thiện kế hoạch đầu tư công trung hạn giai đoạn sau gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính trước ngày 30 tháng 6 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước.
+
+10. Sau khi có ý kiến thẩm định của Bộ Kế hoạch và Đầu tư, Ủy ban nhân dân cấp tỉnh có trách nhiệm:
+
+a) Giao Ủy ban nhân dân cấp huyện, cấp xã hoàn chỉnh kế hoạch đầu tư công trung hạn của cấp mình, báo cáo Hội đồng nhân dân cùng cấp cho ý kiến và gửi Ủy ban nhân dân cấp tỉnh trước ngày 31 tháng 5 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước;
+
+b) Giao cơ quan chuyên môn quản lý đầu tư công cấp tỉnh hoàn chỉnh kế hoạch đầu tư công trung hạn của cấp mình, báo cáo Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cùng cấp cho ý kiến trước ngày 15 tháng 6 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước;
+
+c) Hoàn chỉnh kế hoạch đầu tư công trung hạn giai đoạn sau gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính trước ngày 30 tháng 6 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước.
+
+11. Trước ngày 31 tháng 7 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước, Bộ Kế hoạch và Đầu tư tổng hợp kế hoạch đầu tư công trung hạn của quốc gia báo cáo Chính phủ.
+
+**Điều 56. Trình tự lập, thẩm định kế hoạch đầu tư công hằng năm**
+
+1. Trước ngày 15 tháng 5 hằng năm, Thủ tướng Chính phủ ban hành quy định về việc lập kế hoạch phát triển kinh tế \- xã hội và dự toán ngân sách nhà nước năm sau, bao gồm mục tiêu, định hướng chủ yếu và giao nhiệm vụ triển khai xây dựng kế hoạch đầu tư công năm sau.
+
+2. Trước ngày 15 tháng 6 hằng năm, Bộ Kế hoạch và Đầu tư hướng dẫn các Bộ, cơ quan trung ương và địa phương kế hoạch phát triển kinh tế \- xã hội và mục tiêu, yêu cầu, nội dung, thời gian, tiến độ lập kế hoạch đầu tư công năm sau.
+
+3. Trước ngày 30 tháng 6 hằng năm, các Bộ, cơ quan trung ương và địa phương hướng dẫn cơ quan, đơn vị cấp dưới lập kế hoạch đầu tư công năm sau.
+
+4. Trước ngày 20 tháng 7 hằng năm, các cơ quan chuyên môn quản lý đầu tư công tổ chức lập, thẩm định, tổng hợp kế hoạch đầu tư công năm sau trong phạm vi nhiệm vụ được giao và nguồn vốn thuộc cấp mình quản lý, báo cáo Ủy ban nhân dân cùng cấp.
+
+5. Trước ngày 25 tháng 7 hằng năm, Ủy ban nhân dân báo cáo Hội đồng nhân dân cùng cấp thông qua dự kiến kế hoạch đầu tư công năm sau.
+
+6. Trước ngày 31 tháng 7 hằng năm, các Bộ, cơ quan trung ương và địa phương hoàn chỉnh dự kiến kế hoạch đầu tư công năm sau, gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính.
+
+7. Trước ngày 15 tháng 8 hằng năm, Bộ Tài chính chủ trì, phối hợp với Bộ Kế hoạch và Đầu tư dự kiến khả năng thu, chi ngân sách nhà nước và chi đầu tư phát triển vốn ngân sách nhà nước kế hoạch năm sau. Bộ Kế hoạch và Đầu tư thông báo số vốn đầu tư phát triển nguồn ngân sách trung ương dự kiến phân bổ cho các Bộ, cơ quan trung ương và địa phương của kế hoạch năm sau.
+
+8. Trước ngày 25 tháng 8 hằng năm, các Bộ, cơ quan trung ương và địa phương hoàn thiện dự kiến kế hoạch đầu tư công năm sau, gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính.
+
+9. Trước ngày 31 tháng 8 hằng năm, Bộ Kế hoạch và Đầu tư tổng hợp kế hoạch đầu tư công năm sau của quốc gia báo cáo Chính phủ.
+
+**Mục 2. LẬP, THẨM ĐỊNH, PHÊ DUYỆT VÀ GIAO KẾ HOẠCH ĐẦU TƯ CÔNG**
+
+**Điều 57. Nguyên tắc lựa chọn danh mục dự án, dự kiến mức vốn bố trí cho từng dự án trong kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách nhà nước**
+
+1. Thực hiện theo quy định tại các điều 51, 52, 53 và 54 của Luật này.
+
+2. Phù hợp với khả năng cân đối vốn ngân sách nhà nước trong kế hoạch đầu tư công trung hạn và hằng năm, dự kiến khả năng huy động các nguồn vốn đầu tư khác đối với các dự án sử dụng nhiều nguồn vốn đầu tư.
+
+3. Thuộc chương trình, nhiệm vụ chi đầu tư phát triển của ngân sách nhà nước đã được phê duyệt.
+
+4. Phù hợp nguyên tắc, tiêu chí, định mức phân bổ vốn đầu tư phát triển nguồn ngân sách nhà nước trong kỳ kế hoạch.
+
+5. Mức vốn bố trí cho từng chương trình, dự án không vượt quá tổng mức vốn của chương trình, dự án đã được phê duyệt
+
+**Điều 58. Nguyên tắc lựa chọn danh mục dự án, dự kiến mức vốn bố trí cho từng dự án trong kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách địa phương**
+
+1. Thực hiện theo quy định tại các điều 51, 52, 53 và 54, khoản 4 và khoản 5 Điều 57 của Luật này.
+
+2. Phù hợp với khả năng cân đối thu, chi ngân sách địa phương, kế hoạch đầu tư công trung hạn và hằng năm, khả năng huy động các nguồn vốn đầu tư khác đối với các dự án sử dụng nhiều nguồn vốn đầu tư.
+
+3. Thuộc chương trình, nhiệm vụ chi đầu tư phát triển nguồn ngân sách địa phương đã được phê duyệt.
+
+**Điều 59. Lập, thẩm định, phê duyệt, giao kế hoạch vốn trung hạn và hằng năm vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư**
+
+1. Các cơ quan nhà nước, đơn vị sự nghiệp công lập sử dụng vốn từ nguồn thu hợp pháp dành để đầu tư phải lập kế hoạch đầu tư trung hạn và hằng năm trình Bộ, cơ quan trung ương, Ủy ban nhân dân các cấp trực tiếp quản lý.
+
+2. Các Bộ, cơ quan trung ương, Ủy ban nhân dân các cấp có trách nhiệm thẩm định, phê duyệt, giao kế hoạch vốn hằng năm, phê duyệt điều chỉnh kế hoạch hằng năm nguồn vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư phù hợp với khả năng thực tế cho đầu tư phát triển theo quy định của pháp luật có liên quan.
+
+3. Kế hoạch đầu tư trung hạn và hằng năm đối với vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư không thuộc kế hoạch đầu tư công trung hạn và hằng năm từ nguồn vốn ngân sách nhà nước.
+
+4. Các Bộ, cơ quan trung ương, Ủy ban nhân dân cấp tỉnh có trách nhiệm tổng hợp kế hoạch trung hạn và hằng năm vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư gửi Bộ Kế hoạch và Đầu tư, Bộ Tài chính để tổng hợp, báo cáo Chính phủ, Quốc hội.
+
+5. Chính phủ quy định chi tiết Điều này.
+
+**Điều 60. Trình, phê duyệt và giao kế hoạch đầu tư công trung hạn vốn ngân sách nhà nước**
+
+1. Tại kỳ họp cuối năm của năm thứ năm nhiệm kỳ Quốc hội, Chính phủ trình Quốc hội kế hoạch đầu tư công trung hạn giai đoạn sau để Quốc hội cho ý kiến về các nội dung theo quy định tại Điều 49 của Luật này; riêng kế hoạch đầu tư công năm đầu tiên của giai đoạn sau, căn cứ vào dự toán chi ngân sách nhà nước cho đầu tư phát triển của năm đầu tiên, Chính phủ trình Quốc hội xem xét, quyết định tại kỳ họp này.
+
+2. Trên cơ sở ý kiến của Quốc hội khóa trước, Chính phủ trình Quốc hội khóa mới tại kỳ họp thứ nhất các nội dung theo quy định tại Điều 49 của Luật này. Quốc hội xem xét, quyết định kế hoạch đầu tư công trung hạn bao gồm các nội dung sau đây:
+
+a) Mục tiêu, định hướng đầu tư công trung hạn vốn ngân sách nhà nước của cả nước;
+
+b) Tổng mức vốn kế hoạch đầu tư công trung hạn nguồn ngân sách nhà nước, bao gồm vốn ngân sách trung ương, vốn ngân sách từng địa phương;
+
+c) Tổng mức vốn kế hoạch đầu tư công trung hạn vốn ngân sách trung ương chi tiết theo từng ngành, lĩnh vực, dự kiến mức phân bổ cho từng Bộ, cơ quan trung ương và mức vốn bổ sung có mục tiêu từ ngân sách trung ương cho ngân sách từng địa phương;
+
+d) Danh mục và mức vốn của các dự án quan trọng quốc gia, chương trình mục tiêu quốc gia;
+
+đ) Giải pháp, chính sách chủ yếu để thực hiện kế hoạch đầu tư công trung hạn.
+
+3. Thủ tướng Chính phủ giao kế hoạch đầu tư công trung hạn, bao gồm tổng số vốn và cơ cấu vốn ngân sách nhà nước cho các Bộ, cơ quan trung ương và địa phương; danh mục, mức vốn của các chương trình, dự án đầu tư công, mức vốn cho nhiệm vụ quy hoạch, nhiệm vụ chuẩn bị đầu tư và đối tượng đầu tư công khác nguồn vốn ngân sách trung ương.
+
+**Điều 61. Trình, phê duyệt và giao kế hoạch đầu tư công hằng năm vốn ngân sách nhà nước**
+
+1. Trước ngày 20 tháng 9 hằng năm, Chính phủ trình Ủy ban Thường vụ Quốc hội cho ý kiến về kế hoạch đầu tư công hằng năm vốn ngân sách nhà nước.
+
+2. Trước ngày 20 tháng 10 hằng năm, Chính phủ trình Quốc hội kế hoạch đầu tư công vốn ngân sách nhà nước năm sau.
+
+3. Trước ngày 15 tháng 11 hằng năm, Quốc hội quyết định kế hoạch đầu tư công vốn ngân sách nhà nước năm sau.
+
+4. Trước ngày 30 tháng 11 hằng năm, Thủ tướng Chính phủ giao kế hoạch đầu tư công vốn ngân sách nhà nước năm sau theo tổng mức vốn và cơ cấu vốn đã được Quốc hội quyết định cho các Bộ, cơ quan trung ương và địa phương.
+
+5. Trước ngày 31 tháng 12 hằng năm, các Bộ, cơ quan trung ương và địa phương phân bổ chi tiết mức vốn kế hoạch đầu tư vốn ngân sách trung ương năm sau, danh mục, mức vốn bố trí của từng dự án cho các cơ quan, đơn vị trực thuộc và Ủy ban nhân dân cấp dưới, gửi phương án phân bổ chi tiết cho Bộ Kế hoạch và Đầu tư để tổng hợp, báo cáo Chính phủ và theo dõi thực hiện.
+
+**Điều 62. Trình, phê duyệt và giao kế hoạch đầu tư công trung hạn vốn ngân sách địa phương**
+
+1. Trước ngày 05 tháng 12 năm thứ năm của kế hoạch đầu tư công trung hạn giai đoạn trước, Ủy ban nhân dân trình Hội đồng nhân dân cùng cấp cho ý kiến về các nội dung theo quy định tại Điều 49 của Luật này; riêng kế hoạch đầu tư công năm đầu tiên của giai đoạn sau, căn cứ vào dự toán chi ngân sách địa phương cho đầu tư phát triển, Ủy ban nhân dân trình Hội đồng nhân dân cùng cấp xem xét, quyết định.
+
+2. Căn cứ nghị quyết của Quốc hội về kế hoạch đầu tư công trung hạn giai đoạn mới và nghị quyết của Hội đồng nhân dân cấp tỉnh về kế hoạch phát triển kinh tế xã hội 05 năm, Hội đồng nhân dân cấp tỉnh quyết định kế hoạch đầu tư công trung hạn của địa phương, bao gồm tổng mức vốn kế hoạch đầu tư công trung hạn, danh mục, mức vốn bố trí cho từng dự án sử dụng nguồn vốn ngân sách cấp tỉnh và mức vốn bổ sung có mục tiêu cho ngân sách cấp dưới, gửi báo cáo cho Bộ Kế hoạch và Đầu tư, Bộ Tài chính để tổng hợp, báo cáo Chính phủ.
+
+3. Căn cứ nghị quyết của Hội đồng nhân dân cấp tỉnh về kế hoạch đầu tư công trung hạn, Hội đồng nhân dân cấp huyện quyết định kế hoạch đầu tư công trung hạn của cấp mình, bao gồm tổng mức vốn kế hoạch đầu tư công trung hạn, danh mục, mức vốn ngân sách địa phương bố trí cho từng dự án và mức vốn bổ sung có mục tiêu cho ngân sách cấp dưới.
+
+4. Căn cứ nghị quyết của Hội đồng nhân dân cấp huyện về kế hoạch đầu tư công trung hạn, Hội đồng nhân dân cấp xã quyết định kế hoạch đầu tư công trung hạn của cấp mình, bao gồm tổng mức vốn kế hoạch đầu tư công trung hạn, danh mục và mức vốn ngân sách địa phương bố trí cho từng dự án.
+
+5. Trong thời hạn 30 ngày kể từ ngày Hội đồng nhân dân các cấp ban hành nghị quyết về kế hoạch đầu tư công trung hạn, Ủy ban nhân dân cùng cấp giao kế hoạch đầu tư công trung hạn cho các đơn vị thực hiện, bao gồm tổng mức vốn, danh mục chương trình, dự án và mức vốn bố trí cho từng dự án.
+
+**Điều 63. Trình, phê duyệt và giao kế hoạch đầu tư công hằng năm vốn ngân sách địa phương**
+
+1. Trước ngày 05 tháng 12 hằng năm, Ủy ban nhân dân trình Hội đồng nhân dân cùng cấp kế hoạch đầu tư công năm sau, bao gồm danh mục và mức vốn bố trí cho từng dự án.
+
+2. Trước ngày 10 tháng 12 hằng năm, Hội đồng nhân dân cấp tỉnh quyết định kế hoạch đầu tư công năm sau của cấp mình, bao gồm danh mục và mức vốn bố trí cho từng dự án.
+
+3. Trước ngày 20 tháng 12 hằng năm, Hội đồng nhân dân cấp huyện, cấp xã quyết định kế hoạch đầu tư công năm sau của cấp mình, bao gồm danh mục và mức vốn bố trí cho từng dự án.
+
+4. Trước ngày 31 tháng 12 hằng năm, Ủy ban nhân dân các cấp giao kế hoạch đầu tư công năm sau cho các đơn vị thực hiện.
 
 **Chương IV**
 
-**CHÍNH SÁCH MIỄN GIẢM HỌC PHÍ VÀ HỖ TRỢ CHI PHÍ HỌC TẬP, HỖ TRỢ TIỀN ĐÓNG HỌC PHÍ, PHƯƠNG THỨC CHI TRẢ**
+**THỰC HIỆN VÀ THEO DÕI, KIỂM TRA, ĐÁNH GIÁ, THANH TRA, GIÁM SÁT KẾ HOẠCH, CHƯƠNG TRÌNH, DỰ ÁN ĐẦU TƯ CÔNG**
 
-**Mục 1. CHÍNH SÁCH MIỄN GIẢM HỌC PHÍ, HỖ TRỢ CHI PHÍ HỌC TẬP, HỖ TRỢ TIỀN ĐÓNG HỌC PHÍ**
+**Mục 1. TRIỂN KHAI THỰC HIỆN KẾ HOẠCH ĐẦU TƯ CÔNG**
 
-**Điều 14. Đối tượng không phải đóng học phí**
+**Điều 64. Tổ chức điều hành kế hoạch đầu tư công**
 
-1. Học sinh tiểu học trường công lập.
+1. Căn cứ nghị quyết của Quốc hội về kế hoạch đầu tư công trung hạn và hằng năm, Chính phủ quy định các giải pháp tổ chức, thực hiện.
 
-2. Người theo học các ngành chuyên môn đặc thù đáp ứng yêu cầu phát triển kinh tế \- xã hội, quốc phòng, an ninh theo quy định của Luật Giáo dục đại học. Các ngành chuyên môn đặc thù do Thủ tướng Chính phủ quy định.
+2. Căn cứ nghị quyết của Quốc hội, quyết định giao kế hoạch của cấp có thẩm quyền, nghị quyết của Hội đồng nhân dân các cấp về kế hoạch đầu tư công trung hạn và hằng năm, Bộ, cơ quan trung ương và địa phương, Ủy ban nhân dân cấp huyện, cấp xã và các cơ quan, đơn vị sử dụng vốn đầu tư công quyết định các giải pháp tổ chức điều hành kế hoạch đầu tư công thuộc nguồn vốn do cấp mình quản lý.
 
-**Điều 15. Đối tượng được miễn học phí**
+3. Thủ tướng Chính phủ điều phối, lồng ghép các nguồn vốn thực hiện các chương trình đầu tư sử dụng vốn ngân sách nhà nước của các Bộ, cơ quan trung ương và địa phương, cơ quan, đơn vị sử dụng vốn đầu tư công nhưng không làm thay đổi mục tiêu thực hiện của chương trình, dự án.
 
-1. Các đối tượng theo quy định tại Pháp lệnh Ưu đãi người có công với cách mạng nếu đang theo học tại các cơ sở giáo dục thuộc hệ thống giáo dục quốc dân.
+4. Chủ tịch Ủy ban nhân dân cấp tỉnh quyết định việc điều phối, lồng ghép các nguồn vốn thực hiện các chương trình, dự án sử dụng vốn ngân sách địa phương, các khoản vốn vay khác của ngân sách địa phương để đầu tư nhưng không làm thay đổi mục tiêu thực hiện chương trình, dự án.
 
-2. Trẻ em học mẫu giáo và học sinh, sinh viên khuyết tật.
+**Điều 65. Chấp hành kế hoạch đầu tư công**
 
-3. Trẻ em học mẫu giáo và học sinh dưới 16 tuổi không có nguồn nuôi dưỡng và người từ 16 tuổi đến 22 tuổi đang học phổ thông, giáo dục đại học văn bằng thứ nhất thuộc đối tượng hưởng trợ cấp xã hội hàng tháng theo quy định tại khoản 1 và khoản 2 Điều 5 Nghị định số 20/2021/NĐ\-CP ngày 15 tháng 3 năm 2021 của Chính phủ về chính sách trợ giúp xã hội đối với đối tượng bảo trợ xã hội. Người học các trình độ trung cấp, cao đẳng mồ côi cả cha lẫn mẹ, không nơi nương tựa theo quy định của Luật Giáo dục nghề nghiệp.
+1. Bộ, cơ quan trung ương và địa phương, Ủy ban nhân dân cấp huyện, cấp xã có trách nhiệm:
 
-4. Trẻ em học mẫu giáo và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông có cha hoặc mẹ hoặc cả cha và mẹ hoặc ông bà (trong trường hợp ở với ông bà) thuộc diện hộ nghèo theo quy định của Thủ tướng Chính phủ.
+a) Thông báo hoặc quyết định giao kế hoạch đầu tư công cho các cơ quan, đơn vị sử dụng vốn đầu tư công;
 
-5. Trẻ em mầm non 05 tuổi ở thôn/bản đặc biệt khó khăn, xã khu vực III vùng dân tộc và miền núi, xã đặc biệt khó khăn vùng bãi ngang ven biển, hải đảo theo quy định của cơ quan có thẩm quyền.
+b) Báo cáo cấp có thẩm quyền về việc giao kế hoạch đầu tư công.
 
-6. Trẻ em mầm non 05 tuổi không thuộc đối tượng quy định tại khoản 5 Điều này được miễn học phí từ năm học 2024 \- 2025 (được hưởng từ ngày 01 tháng 9 năm 2024).
+2. Cơ quan, đơn vị sử dụng vốn đầu tư công báo cáo cấp có thẩm quyền tình hình thực hiện kế hoạch theo quy định của Chính phủ.
 
-7. Trẻ em mầm non và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông là con đẻ, con nuôi hợp pháp của hạ sĩ quan, binh sĩ tại ngũ theo quy định tại khoản 2 Điều 6 Nghị định số 27/2016/NĐ\-CP ngày 06 tháng 4 năm 2016 của Chính phủ quy định một số chế độ, chính sách đối với hạ sỹ quan, binh sĩ phục vụ tại ngũ, xuất ngũ và thân nhân của hạ sỹ quan, binh sĩ tại ngũ.
+3. Bộ Kế hoạch và Đầu tư, cơ quan chuyên môn quản lý đầu tư công có trách nhiệm kiểm tra, đôn đốc để bảo đảm việc giao, chấp hành kế hoạch đầu tư công theo quyết định của cấp có thẩm quyền.
 
-8. Học sinh trung học cơ sở ở thôn/bản đặc biệt khó khăn, xã khu vực III vùng dân tộc và miền núi, xã đặc biệt khó khăn vùng bãi ngang ven biển, hải đảo theo quy định của cơ quan có thẩm quyền được miễn học phí từ năm học 2022 \- 2023 (được hưởng từ ngày 01 tháng 9 năm 2022).
+**Điều 66. Triển khai kế hoạch đầu tư công**
 
-9. Học sinh trung học cơ sở không thuộc đối tượng quy định tại khoản 8 Điều này được miễn học phí từ năm học 2025 \- 2026 (được hưởng từ ngày 01 tháng 9 năm 2025).
+1. Bộ, cơ quan trung ương và địa phương, Ủy ban nhân dân cấp huyện, cấp xã, cơ quan, đơn vị sử dụng vốn đầu tư công có trách nhiệm:
 
-10. Học sinh, sinh viên hệ cử tuyển (kể cả học sinh cử tuyển học nghề nội trú với thời gian đào tạo từ 3 tháng trở lên) theo quy định của Chính phủ về chế độ cử tuyển vào các cơ sở giáo dục đại học và giáo dục nghề nghiệp thuộc hệ thống giáo dục quốc dân.
+a) Tổ chức thực hiện kế hoạch đầu tư công đúng mục tiêu đã được cấp có thẩm quyền quyết định;
 
-11. Học sinh trường phổ thông dân tộc nội trú, trường dự bị đại học, khoa dự bị đại học.
+b) Triển khai thực hiện dự án theo đúng tiến độ và kế hoạch vốn đã được cấp có thẩm quyền quyết định;
 
-12. Học sinh, sinh viên học tại các cơ sở giáo dục nghề nghiệp và giáo dục đại học người dân tộc thiểu số có cha hoặc mẹ hoặc cả cha và mẹ hoặc ông bà (trong trường hợp ở với ông bà) thuộc hộ nghèo và hộ cận nghèo theo quy định của Thủ tướng Chính phủ.
+c) Lập kế hoạch và tổ chức lựa chọn nhà thầu đối với gói thầu thuộc dự án được bố trí vốn theo kế hoạch đầu tư công đã được cấp có thẩm quyền quyết định;
 
-13. Sinh viên học chuyên ngành Mác\-Lê nin và Tư tưởng Hồ Chí Minh.
+d) Tổ chức nghiệm thu và thanh toán, quyết toán theo đúng hợp đồng đối với gói thầu đã hoàn thành và bàn giao đưa vào sử dụng;
 
-14. Học sinh, sinh viên, học viên cao học, nghiên cứu sinh học một trong các chuyên ngành Lao, Phong, Tâm thần, Giám định pháp Y, Pháp y tâm thần và Giải phẫu bệnh tại các cơ sở đào tạo nhân lực y tế công lập theo chỉ tiêu đặt hàng của Nhà nước.
+đ) Cân đối các nguồn vốn để thanh toán nợ đọng xây dựng cơ bản theo quy định tại khoản 4 Điều 101 của Luật này;
 
-15. Học sinh, sinh viên người dân tộc thiểu số rất ít người quy định tại khoản 1 Điều 2 Nghị định số 57/2017/NĐ\-CP ngày 09 tháng 5 năm 2017 của Chính phủ quy định chính sách ưu tiên tuyển sinh và hỗ trợ học tập đối với trẻ mẫu giáo, học sinh, sinh viên dân tộc thiểu số rất ít người ở vùng có điều kiện kinh tế \- xã hội khó khăn hoặc đặc biệt khó khăn theo quy định hiện hành của cơ quan có thẩm quyền.
+e) Bảo đảm phạm vi, quy mô đầu tư của từng dự án thực hiện theo đúng mục tiêu, lĩnh vực, chương trình đã được phê duyệt và theo kế hoạch vốn đã được bố trí;
 
-16. Người học thuộc các đối tượng của các chương trình, đề án được miễn học phí theo quy định của Chính phủ.
+g) Theo dõi, kiểm tra, đánh giá việc thực hiện kế hoạch đầu tư công.
 
-17. Người tốt nghiệp trung học cơ sở học tiếp lên trình độ trung cấp.
+2. Bộ Kế hoạch và Đầu tư hướng dẫn, theo dõi, kiểm tra, thanh tra việc thực hiện kế hoạch đầu tư công trung hạn và hằng năm của các Bộ, cơ quan trung ương và Ủy ban nhân dân cấp tỉnh.
 
-18. Người học các trình độ trung cấp, cao đẳng, đối với các ngành, nghề khó tuyển sinh nhưng xã hội có nhu cầu theo danh mục do Bộ Lao động \- Thương binh và Xã hội quy định.
+3. Bộ Tài chính bảo đảm thanh toán đủ vốn ngân sách trung ương theo kế hoạch đầu tư công đã được cấp có thẩm quyền quyết định.
 
-19. Người học các ngành, nghề chuyên môn đặc thù đáp ứng yêu cầu phát triển kinh tế \- xã hội, quốc phòng, an ninh theo quy định của Luật Giáo dục nghề nghiệp. Các ngành, nghề chuyên môn đặc thù do Thủ tướng Chính phủ quy định.
+4. Chính phủ quy định chi tiết việc triển khai thực hiện kế hoạch đầu tư công.
 
-**Điều 16. Đối tượng được giảm học phí và hỗ trợ tiền đóng học phí**
+**Điều 67. Điều chỉnh kế hoạch đầu tư công**
 
-1. Các đối tượng được giảm 70% học phí gồm:
+1. Quốc hội quyết định điều chỉnh tổng thể kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách nhà nước trong các trường hợp sau đây:
 
-a) Học sinh, sinh viên học các ngành nghệ thuật truyền thống và đặc thù trong các cơ sở giáo dục nghề nghiệp, cơ sở giáo dục đại học công lập, tư thục có đào tạo về văn hóa \- nghệ thuật bao gồm: Nhạc công kịch hát dân tộc, nhạc công truyền thống Huế, đờn ca tài tử Nam Bộ, diễn viên sân khấu kịch hát, nghệ thuật biểu diễn dân ca, nghệ thuật ca trù, nghệ thuật bài chòi, biểu diễn nhạc cụ truyền thống;
+a) Do điều chỉnh mục tiêu của chiến lược, kế hoạch phát triển kinh tế \- xã hội của quốc gia;
 
-b) Học sinh, sinh viên học các chuyên ngành nhã nhạc cung đình, chèo, tuồng, cải lương, múa, xiếc; một số nghề học nặng nhọc, độc hại, nguy hiểm đối với giáo dục nghề nghiệp theo danh mục các nghề học nặng nhọc, độc hại, nguy hiểm do Bộ Lao động \- Thương binh và Xã hội quy định;
+b) Do thay đổi đột biến về cân đối ngân sách nhà nước hoặc khả năng huy động các nguồn vốn.
 
-c) Trẻ em học mẫu giáo và học sinh, sinh viên là người dân tộc thiểu số (ngoài đối tượng dân tộc thiểu số rất ít người) ở thôn/bản đặc biệt khó khăn, xã khu vực III vùng dân tộc và miền núi, xã đặc biệt khó khăn vùng bãi ngang ven biển hải đảo theo quy định của cơ quan có thẩm quyền.
+2. Ủy ban Thường vụ Quốc hội quyết định điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách trung ương giữa các Bộ, cơ quan trung ương và địa phương trong trường hợp không thay đổi tổng mức vốn trung hạn và hằng năm đã được Quốc hội quyết định.
 
-2. Các đối tượng được giảm 50% học phí gồm:
+3. Thủ tướng Chính phủ căn cứ tình hình cụ thể trong kỳ kế hoạch quyết định điều chỉnh kế hoạch đầu tư công trung hạn vốn ngân sách trung ương của các Bộ, cơ quan trung ương và địa phương được giao theo quy định tại khoản 3 Điều 60 của Luật này trong tổng mức vốn của từng Bộ, cơ quan trung ương và địa phương đã được Quốc hội quyết định.
 
-a) Trẻ em học mẫu giáo và học sinh, sinh viên là con cán bộ, công chức, viên chức, công nhân mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên;
+4. Bộ Kế hoạch và Đầu tư có trách nhiệm:
 
-b) Trẻ em học mẫu giáo và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông có cha hoặc mẹ hoặc cả cha và mẹ hoặc ông bà (trong trường hợp ở với ông bà) thuộc diện hộ cận nghèo theo quy định của Thủ tướng Chính phủ.
+a) Chủ trì thẩm định phương án điều chỉnh kế hoạch đầu tư công trung hạn vốn ngân sách trung ương giữa các Bộ, cơ quan trung ương và địa phương, báo cáo Chính phủ trình Ủy ban Thường vụ Quốc hội xem xét, quyết định;
 
-3. Đối tượng được hỗ trợ tiền đóng học phí: Học sinh tiểu học trong cơ sở giáo dục tư thục ở địa bàn không đủ trường công lập được Nhà nước hỗ trợ tiền đóng học phí.
+b) Chủ trì thẩm định phương án điều chỉnh kế hoạch đầu tư công trung hạn vốn ngân sách trung ương trong nội bộ và giữa các ngành, lĩnh vực, chương trình của các Bộ, cơ quan trung ương và địa phương, báo cáo Thủ tướng Chính phủ xem xét, quyết định.
 
-**Điều 17. Không thu học phí có thời hạn**
+5. Người đứng đầu Bộ, cơ quan trung ương có thẩm quyền và trách nhiệm sau đây:
 
-Khi xảy ra thiên tai, dịch bệnh, các sự kiện bất khả kháng do cơ quan có thẩm quyền công bố; tùy theo mức độ và phạm vi thiệt hại, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh xem xét, quyết định không thu học phí trong thời hạn nhất định đối với trẻ em học mẫu giáo và học sinh phổ thông công lập, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông thuộc vùng bị thiên tai, dịch bệnh, vùng xảy ra các sự kiện bất khả kháng.
+a) Điều chỉnh kế hoạch đầu tư công hằng năm vốn ngân sách trung ương giữa các dự án thuộc danh mục đã được cấp có thẩm quyền quyết định nhưng không vượt quá tổng mức vốn đã được cấp có thẩm quyền giao kế hoạch;
 
-**Điều 18. Đối tượng được hỗ trợ chi phí học tập**
+b) Gửi báo cáo cho Bộ Kế hoạch và Đầu tư, Bộ Tài chính để tổng hợp, theo dõi đối với vốn ngân sách trung ương.
 
-1. Trẻ em học mẫu giáo và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông mồ côi cả cha lẫn mẹ.
+6. Ủy ban nhân dân cấp tỉnh có thẩm quyền và trách nhiệm sau đây:
 
-2. Trẻ em học mẫu giáo và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông bị khuyết tật.
+a) Điều chỉnh kế hoạch đầu tư công hằng năm đối với vốn ngân sách trung ương bổ sung có mục tiêu thuộc quản lý của cấp mình nhưng không vượt quá tổng mức vốn đã được cấp có thẩm quyền giao kế hoạch;
 
-3. Trẻ em học mẫu giáo và học sinh phổ thông học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông có cha mẹ thuộc diện hộ nghèo theo quy định của Thủ tướng Chính phủ.
+b) Gửi báo cáo cho Bộ Kế hoạch và Đầu tư, Bộ Tài chính để tổng hợp, theo dõi đối với vốn ngân sách trung ương bổ sung có mục tiêu.
 
-4. Trẻ em học mẫu giáo và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông ở thôn/bản đặc biệt khó khăn, xã khu vực III vùng dân tộc và miền núi, xã đặc biệt khó khăn vùng bãi ngang ven biển hải đảo theo quy định của cơ quan có thẩm quyền.
+7. Hội đồng nhân dân các cấp điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách địa phương trong các trường hợp sau đây:
 
-**Mục 2. QUY TRÌNH THỦ TỤC THỰC HIỆN CHÍNH SÁCH MIỄN, GIẢM HỌC PHÍ VÀ PHƯƠNG THỨC CHI TRẢ**
+a) Do điều chỉnh mục tiêu của kế hoạch phát triển kinh tế \- xã hội của địa phương;
 
-**Điều 19. Hồ Sơ thủ tục thực hiện miễn giảm học phí, hỗ trợ chi phí học tập, hỗ trợ tiền đóng học phí đối với người học tại các cơ sở giáo dục mầm non, giáo dục phổ thông, giáo dục thường xuyên, giáo dục nghề nghiệp và giáo dục đại học**
+b) Do thay đổi đột biến về cân đối thu ngân sách địa phương hoặc khả năng huy động các nguồn vốn của địa phương;
 
-1. Hồ sơ:
+c) Do thay đổi nhu cầu sử dụng hoặc khả năng triển khai thực hiện vốn kế hoạch hằng năm giữa các cơ quan, đơn vị của địa phương.
 
-a) Đơn đề nghị miễn, giảm học phí và hỗ trợ chi phí học tập, hỗ trợ tiền đóng học phí:
+8. Ủy ban nhân dân các cấp quyết định điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách địa phương để đầu tư giữa các ngành, lĩnh vực, chương trình và trong nội bộ các ngành, lĩnh vực, chương trình của các đơn vị sử dụng các nguồn vốn này và báo cáo Hội đồng nhân dân cùng cấp tại kỳ họp gần nhất.
 
-\- Đối với các đối tượng thuộc diện được miễn, giảm học phí học mầm non, giáo dục phổ thông, giáo dục thường xuyên: Mẫu đơn theo Phụ lục II; các đối tượng học sinh tiểu học tư thục được hỗ trợ tiền đóng học phí: Mẫu đơn theo Phụ lục VI;
+9. Chính phủ quy định chi tiết trình tự, thủ tục điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách nhà nước.
 
-\- Đối với các đối tượng thuộc diện được hỗ trợ chi phí học tập học mầm non, giáo dục phổ thông, giáo dục thường xuyên: Mẫu đơn theo Phụ lục III;
+**Điều 68. Thời gian thực hiện và giải ngân vốn kế hoạch đầu tư công trung hạn và hằng năm**
 
-\- Đối với các đối tượng thuộc diện miễn, giảm học phí ở các cơ sở giáo dục nghề nghiệp và giáo dục đại học công lập: Mẫu theo Phụ lục V; đối với các đối tượng thuộc diện miễn, giảm học phí ở các cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục: Mẫu theo Phụ lục VII.
+1. Thời gian thực hiện và giải ngân vốn kế hoạch đầu tư công trung hạn giai đoạn trước đến hết ngày 31 tháng 01 năm đầu tiên của kế hoạch đầu tư công trung hạn giai đoạn sau.
 
-b) Bản sao chứng thực hoặc bản sao kèm bản chính để đối chiếu hoặc bản sao từ sổ gốc giấy tờ chứng minh thuộc đối tượng miễn, giảm học phí và hỗ trợ chi phí học tập đối với các đối tượng sau:
+2. Thời gian thực hiện và giải ngân vốn kế hoạch đầu tư công hằng năm đến ngày 31 tháng 01 năm sau. Trường hợp bất khả kháng, Thủ tướng Chính phủ quyết định đối với vốn ngân sách trung ương, Hội đồng nhân dân cấp tỉnh quyết định đối với vốn ngân sách địa phương cho phép kéo dài thời gian thực hiện nhưng không quá 31 tháng 12 năm sau.
 
-\- Giấy xác nhận của cơ quan quản lý đối tượng người có công đối với đối tượng được quy định tại khoản 1 Điều 15 Nghị định này;
+3. Đối với chương trình, dự án sử dụng vốn ODA viện trợ không hoàn lại chưa được dự toán hoặc vượt dự toán được giao, Chính phủ báo cáo Ủy ban Thường vụ Quốc hội cho ý kiến trước khi thực hiện và báo cáo Quốc hội tại kỳ họp gần nhất.
 
-\- Giấy xác nhận khuyết tật do Ủy ban nhân dân cấp xã cấp hoặc Quyết định về việc trợ cấp xã hội của Chủ tịch Ủy ban nhân dân cấp huyện đối với đối tượng được quy định tại khoản 2 Điều 15 Nghị định này;
+**Mục 2. THEO DÕI, KIỂM TRA, ĐÁNH GIÁ, THANH TRA, GIÁM SÁT KẾ HOẠCH, CHƯƠNG TRÌNH, DỰ ÁN ĐẦU TƯ CÔNG**
 
-\- Quyết định về việc trợ cấp xã hội của Chủ tịch Ủy ban nhân dân cấp huyện đối với đối tượng được quy định tại khoản 3 Điều 15 Nghị định này;
+**Điều 69. Theo dõi, kiểm tra kế hoạch đầu tư công**
 
-\- Giấy xác nhận hộ nghèo do Ủy ban nhân dân cấp xã cấp cho đối tượng được quy định tại khoản 4 Điều 15 Nghị định này;
+1. Cơ quan chuyên môn quản lý đầu tư công tổ chức theo dõi, kiểm tra kế hoạch đầu tư công thuộc cơ quan, đơn vị quản lý.
 
-\- Giấy chứng nhận đối tượng được hưởng chế độ miễn học phí theo quy định tại Nghị định số 27/2016/NĐ\-CP ngày 06 tháng 4 năm 2016 của Chính phủ quy định một số chế độ, chính sách đối với hạ sĩ quan, binh sĩ phục vụ tại ngũ, xuất ngũ và thân nhân của hạ sĩ quan, binh sĩ tại ngũ và văn bản hướng dẫn của Bộ Quốc phòng đối với đối tượng quy định tại khoản 7 Điều 15 Nghị định này;
+2. Nội dung theo dõi, kiểm tra kế hoạch đầu tư công bao gồm:
 
-\- Giấy khai sinh và giấy xác nhận hộ nghèo hoặc hộ cận nghèo do Ủy ban nhân dân cấp xã cấp cho đối tượng được quy định tại khoản 12 Điều 15 Nghị định này;
+a) Tình hình thực hiện quy định của pháp luật về đầu tư công;
 
-\- Giấy khai sinh và sổ hộ khẩu thường trú hoặc giấy xác nhận của cơ quan công an về việc đăng ký thường trú (trường hợp sổ hộ khẩu bị thất lạc) đối với đối tượng được quy định tại khoản 5, khoản 8, khoản 15 Điều 15 và điểm c khoản 1 và khoản 3 Điều 16 Nghị định này. Kể từ năm học 2024 \- 2025 (từ ngày 01 tháng 9 năm 2024) đối tượng quy định tại khoản 5, khoản 6 Điều 15 Nghị định này và kể từ năm học 2025 \- 2026 (từ ngày 01 tháng 9 năm 2025) đối tượng quy định tại khoản 8, khoản 9 Điều 15 Nghị định này chỉ phải nộp giấy khai sinh;
+b) Việc lập, thẩm định, phê duyệt, giao kế hoạch đầu tư công;
 
-\- Bằng tốt nghiệp trung học cơ sở hoặc giấy xác nhận tốt nghiệp tạm thời đối với đối tượng được quy định tại khoản 17 Điều 15 Nghị định này;
+c) Việc lập, thẩm định, phê duyệt và thực hiện các chương trình, dự án được bố trí trong kế hoạch đầu tư công;
 
-\- Sổ hưởng trợ cấp hàng tháng của cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp do tổ chức bảo hiểm xã hội cấp đối với đối tượng được quy định tại điểm a khoản 2 Điều 16 Nghị định này;
+d) Tình hình thực hiện kế hoạch đầu tư công;
 
-\- Giấy xác nhận hộ cận nghèo do Ủy ban nhân dân cấp xã cấp cho đối tượng được quy định tại điểm b khoản 2 Điều 16 Nghị định này.
+đ) Tình hình nợ đọng xây dựng cơ bản, lãng phí, thất thoát trong đầu tư công.
 
-c) Đối với trẻ em mầm non và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên theo chương trình giáo dục phổ thông vừa thuộc diện được miễn, giảm học phí vừa thuộc diện được hỗ trợ chi phí học tập, chỉ phải làm 01 bộ hồ sơ các giấy tờ liên quan nói trên kèm đơn theo mẫu (Phụ lục IV) của Nghị định này.
+**Điều 70. Đánh giá kế hoạch đầu tư công**
 
-d) Người học thuộc diện miễn, giảm học phí và hỗ trợ chi phí học tập chỉ phải làm 01 bộ hồ sơ nộp lần đầu cho cả thời gian học tập. Riêng đối với người học thuộc diện hộ nghèo, hộ cận nghèo thì vào mỗi đầu học kỳ phải nộp bổ sung giấy xác nhận hộ nghèo, hộ cận nghèo để làm căn cứ xem xét miễn, giảm học phí và hỗ trợ chi phí học tập cho kỳ học tiếp theo.
+1. Kế hoạch đầu tư công trung hạn được đánh giá giữa kỳ và khi kết thúc kế hoạch.
 
-đ) Trường hợp học sinh, sinh viên có thẻ căn cước công dân và được cấp mã số định danh cá nhân, thông tin về nơi thường trú có thể khai thác từ việc kết nối và chia sẻ dữ liệu về dân cư với các cơ sở giáo dục đào tạo, Phòng Giáo dục và Đào tạo, Sở Giáo dục và Đào tạo, Phòng Lao động \- Thương binh và Xã hội, Phòng Tài chính, Sở Tài chính, thì cha mẹ (hoặc người giám hộ) trẻ em, học sinh, sinh viên không phải nộp “Giấy khai sinh” và “Sổ hộ khẩu thường trú”.
+2. Kế hoạch đầu tư công hằng năm được đánh giá định kỳ hằng quý và hằng năm.
 
-2. Trình tự thực hiện:
+3. Nội dung đánh giá kế hoạch đầu tư công bao gồm:
 
-Trong vòng 45 ngày làm việc kể từ ngày khai giảng năm học, cha mẹ (hoặc người giám hộ) trẻ em mầm non, học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên; học sinh, sinh viên, học viên học ở các cơ sở giáo dục nghề nghiệp và giáo dục đại học thuộc đối tượng được miễn giảm học phí, hỗ trợ tiền đóng học phí, chi phí học tập nộp Đơn (theo mẫu tại Phụ lục II; Phụ lục III; Phụ lục IV; Phụ lục V; Phụ lục VI, Phụ lục VII Nghị định này) và bản sao chứng thực hoặc bản sao kèm bản chính để đối chiếu hoặc bản sao từ sổ gốc một trong các giấy tờ được quy định tại khoản 1 Điều này để minh chứng thuộc đối tượng miễn, giảm học phí và hỗ trợ chi phí học tập gửi cơ sở giáo dục theo hình thức nộp trực tiếp hoặc qua bưu điện hoặc hệ thống giao dịch điện tử.
+a) Mức độ đạt được so với kế hoạch được cấp có thẩm quyền phê duyệt;
 
-3. Trách nhiệm xét duyệt và thẩm định hồ sơ:
+b) Tác động của kế hoạch đầu tư công trong việc thu hút đầu tư từ các nguồn vốn khác và kết quả phát triển kinh tế \- xã hội;
 
-a) Đối với cơ sở giáo dục mầm non, tiểu học và trung học cơ sở, cơ sở giáo dục thường xuyên thuộc phòng giáo dục đào tạo: Trong vòng 10 ngày làm việc kể từ khi nhận được đơn đề nghị miễn giảm học phí và hỗ trợ chi phí học tập, hỗ trợ tiền đóng học phí cho học sinh tiểu học tư thục ở địa bàn không đủ trường công lập, Hiệu trưởng nhà trường có trách nhiệm xét duyệt hồ sơ và lập danh sách học sinh được miễn, giảm học phí và hỗ trợ chi phí học tập, hỗ trợ tiền đóng học phí học sinh tiểu học tư thục gửi phòng giáo dục và đào tạo thẩm định;
+c) Tính khả thi của kế hoạch đầu tư công;
 
-b) Đối với trường trung học phổ thông, cơ sở giáo dục thường xuyên và các cơ sở giáo dục khác trực thuộc Sở giáo dục và Đào tạo: Trong vòng 10 ngày làm việc kể từ khi nhận được đơn đề nghị miễn, giảm học phí, hỗ trợ chi phí học tập, Hiệu trưởng nhà trường có trách nhiệm xét duyệt hồ sơ và lập danh sách học sinh được miễn, giảm học phí và hỗ trợ chi phí học tập gửi sở giáo dục và đào tạo thẩm định;
+d) Tình hình quản lý đầu tư công;
 
-c) Đối với cơ sở giáo dục nghề nghiệp và giáo dục đại học công lập: Trong vòng 10 ngày làm việc kể từ khi nhận được đơn đề nghị miễn, giảm học phí, Thủ trưởng cơ sở giáo dục nghề nghiệp và giáo dục đại học công lập có trách nhiệm xét duyệt hồ sơ và quyết định miễn, giảm học phí đối với học sinh, sinh viên và học viên; đồng thời lập danh sách học sinh, sinh viên, học viên được miễn, giảm học phí theo mẫu quy định tại Phụ lục IX gửi cơ quan quản lý cấp trên trực tiếp. Cơ quan quản lý cấp trên thẩm định, lập dự toán kinh phí theo mẫu quy định tại Phụ lục X gửi Bộ Tài chính tổng hợp, trình cấp có thẩm quyền bố trí kinh phí thực hiện trong dự toán ngân sách hàng năm;
+đ) Tồn tại, hạn chế; nguyên nhân của tồn tại, hạn chế trong việc thực hiện kế hoạch đầu tư công và các giải pháp xử lý.
 
-d) Đối với cơ sở giáo dục mầm non dân lập, tư thục; cơ sở giáo dục phổ thông tư thục; cơ sở giáo dục thường xuyên tư thục, giáo dục nghề nghiệp và giáo dục đại học tư thục: Trong vòng 10 ngày làm việc kể từ khi nhận được đơn đề nghị miễn giảm học phí, cấp bù miễn giảm học phí và hỗ trợ chi phí học tập, hỗ trợ tiền đóng học phí của người học, cơ sở giáo dục mầm non dân lập, tư thục; cơ sở giáo dục phổ thông tư thục; cơ sở giáo dục thường xuyên tư thục, giáo dục nghề nghiệp và giáo dục đại học tư thục có trách nhiệm cấp cho người học giấy xác nhận theo quy định tại Phụ lục VIII của Nghị định này.
+**Điều 71. Theo dõi, kiểm tra chương trình, dự án**
 
-đ) Đối với cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục: Trong vòng 10 ngày làm việc kể từ khi nhận được đơn đề nghị miễn, giảm học phí, Thủ trưởng cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục có trách nhiệm xác nhận hồ sơ miễn, giảm học phí đối với người học; đồng thời lập danh sách người học được miễn, giảm học phí theo mẫu quy định tại Phụ lục IX gửi về Phòng Lao động \- Thương binh và Xã hội nơi người học đăng ký thường trú để thực hiện theo quy định.
+1. Cơ quan chủ quản, chủ chương trình và chủ đầu tư, người có thẩm quyền quyết định đầu tư chương trình, dự án và cơ quan quản lý nhà nước về đầu tư công thực hiện theo dõi, kiểm tra toàn bộ quá trình đầu tư chương trình, dự án theo nội dung và các chỉ tiêu đã được phê duyệt nhằm bảo đảm mục tiêu và hiệu quả đầu tư.
 
-**Điều 20. Cơ chế miễn giảm học phí, hỗ trợ chi phí học tập và hỗ trợ đóng học phí**
+2. Việc kiểm tra chương trình, dự án thực hiện như sau:
 
-1. Việc miễn, giảm học phí sẽ được thực hiện trong suốt thời gian học tập tại nhà trường, trừ trường hợp có những thay đổi về lý do miễn hoặc giảm học phí.
+a) Chủ chương trình và chủ đầu tư kiểm tra chương trình, dự án được giao quản lý;
 
-2. Ngân sách nhà nước có trách nhiệm cấp bù tiền miễn, giảm học phí đối với người học tại cơ sở giáo dục công lập, cụ thể như sau:
+b) Cơ quan chủ quản, người có thẩm quyền quyết định đầu tư tổ chức kiểm tra ít nhất một lần đối với chương trình, dự án có thời gian thực hiện trên 12 tháng;
 
-a) Nhà nước cấp bù tiền miễn, giảm học phí cho các cơ sở giáo dục mầm non, giáo dục phổ thông và cơ sở giáo dục thường xuyên công lập để thực hiện việc miễn, giảm học phí đối với người học thuộc các đối tượng miễn, giảm học phí quy định tại Nghị định này theo mức thu học phí do Hội đồng nhân dân cấp tỉnh quy định đối với cơ sở giáo dục công lập chưa tự bảo đảm chi thường xuyên tương ứng với từng vùng, từng cấp học;
+c) Cơ quan chủ quản, người có thẩm quyền quyết định đầu tư tổ chức kiểm tra khi điều chỉnh chương trình, dự án làm thay đổi địa điểm, mục tiêu, quy mô, tăng tổng mức đầu tư và trường hợp cần thiết khác;
 
-b) Nhà nước cấp bù tiền miễn, giảm học phí cho các cơ sở giáo dục nghề nghiệp, cơ sở giáo dục đại học công lập để thực hiện chính sách miễn, giảm học phí đối với người học thuộc các đối tượng miễn, giảm học phí theo mức trần học phí quy định tại điểm a khoản 1, điểm a khoản 2 Điều 10; điểm a khoản 1, điểm a khoản 2 Điều 11 Nghị định này.
+d) Cơ quan quản lý nhà nước về đầu tư công quyết định tổ chức kiểm tra chương trình, dự án theo kế hoạch hoặc đột xuất.
 
-Phần còn lại người học phải đóng bằng chênh lệch giữa mức trần học phí quy định tại điểm a khoản 1, điểm a khoản 2 Điều 10; điểm a khoản 1, điểm a khoản 2 Điều 11 và mức hỗ trợ của Nhà nước, trừ trường hợp đối với các ngành nghề quy định tại điểm a và điểm b khoản 1 Điều 16, người học phải đóng bằng phần chênh lệch giữa mức học phí thực tế của cơ sở giáo dục và mức hỗ trợ của Nhà nước.
+**Điều 72. Đánh giá chương trình, dự án**
 
-3. Nhà nước cấp trực tiếp tiền miễn, giảm học phí cho các đối tượng thuộc diện được miễn, giảm học phí theo học tại các cơ sở giáo dục mầm non dân lập, tư thục, cơ sở giáo dục phổ thông, giáo dục nghề nghiệp, giáo dục đại học tư thục; cấp trực tiếp tiền hỗ trợ đóng học phí cho gia đình học sinh tiểu học tại các cơ sở giáo dục tư thục ở địa bàn không đủ trường công lập theo mức học phí do Hội đồng nhân dân cấp tỉnh quy định đối với cơ sở giáo dục công lập chưa tự bảo đảm chi thường xuyên tương ứng với từng vùng, từng cấp học; theo mức học phí do cơ quan có thẩm quyền quy định trong các cơ sở giáo dục nghề nghiệp, giáo dục đại học công lập chưa tự đảm bảo chi thường xuyên tương ứng với các nhóm ngành, chuyên ngành quy định tại Điều 10 và Điều 11 Nghị định này.
+1. Đánh giá chương trình, dự án bao gồm đánh giá ban đầu, đánh giá giữa kỳ hoặc giai đoạn, đánh giá kết thúc, đánh giá tác động và đánh giá đột xuất.
 
-4. Trường hợp có sự trùng lặp về đối tượng hưởng chính sách miễn, giảm học phí và hỗ trợ chi phí học tập quy định tại Nghị định này với các văn bản quy phạm pháp luật khác đang thực hiện có mức hỗ trợ cao hơn thì được hưởng theo mức hỗ trợ cao hơn quy định tại văn bản pháp luật khác.
+2. Đối với chương trình đầu tư công, phải thực hiện đánh giá giữa kỳ hoặc giai đoạn, đánh giá kết thúc và đánh giá tác động.
 
-5. Không áp dụng miễn, giảm học phí đối với trường hợp đang hưởng lương và sinh hoạt phí khi đi học, các trường hợp học cao học, nghiên cứu sinh (trừ đối tượng quy định tại khoản 14, khoản 16 Điều 15 Nghị định này).
+3. Đối với dự án quan trọng quốc gia, dự án nhóm A phải thực hiện đánh giá ban đầu, đánh giá giữa kỳ, đánh giá kết thúc và đánh giá tác động.
 
-6. Không áp dụng chế độ ưu đãi về miễn, giảm học phí đối với người học trong trường hợp đã hưởng chế độ này tại một cơ sở giáo dục nghề nghiệp hoặc cơ sở giáo dục đại học, nay tiếp tục học thêm ở một cơ sở giáo dục nghề nghiệp và giáo dục đại học khác cùng cấp học và trình độ đào tạo. Nếu người học thuộc đối tượng được miễn, giảm học phí đồng thời học ở nhiều cơ sở giáo dục hoặc nhiều khoa, nhiều ngành trong cùng một trường thì chỉ được hưởng một chế độ ưu đãi.
+4. Đối với dự án nhóm B, nhóm C phải thực hiện đánh giá kết thúc và đánh giá tác động.
 
-7. Không áp dụng chế độ miễn, giảm học phí đối với người học theo hình thức giáo dục thường xuyên và đào tạo, bồi dưỡng ngắn hạn tại các cơ sở giáo dục thường xuyên trừ trường hợp các đối tượng học các cấp học thuộc chương trình giáo dục phổ thông theo hình thức giáo dục thường xuyên.
+5. Ngoài quy định tại các khoản 2, 3 và 4 Điều này, cơ quan chủ quản, người có thẩm quyền quyết định đầu tư và cơ quan quản lý nhà nước về đầu tư công quyết định thực hiện đánh giá khác quy định tại khoản 1 Điều này khi cần thiết.
 
-8. Không áp dụng chế độ miễn giảm học phí, hỗ trợ chi phí học tập trong thời gian người học bị kỷ luật ngừng học hoặc buộc thôi học, học lưu ban, học lại, học bổ sung. Trường hợp người học phải dừng học; học lại, lưu ban (không quá một lần) do ốm đau, tai nạn hoặc dừng học vì lý do bất khả kháng không do kỷ luật hoặc tự thôi học thì thủ trưởng cơ sở giáo dục xem xét cho tiếp tục học tập theo quy định và tiếp tục được hưởng chính sách hỗ trợ quy định tại Nghị định này.
+**Điều 73. Nội dung đánh giá chương trình, dự án**
 
-9. Kinh phí cấp bù miễn, giảm học phí; hỗ trợ đóng học phí được cấp theo thời gian học thực tế nhưng không quá 9 tháng/năm học đối với trẻ em mầm non, học sinh phổ thông, học viên tại cơ sở giáo dục thường xuyên và 10 tháng/năm học đối với học sinh, sinh viên học tại các cơ sở giáo dục nghề nghiệp, giáo dục đại học và thực hiện chi trả cho người học 2 lần trong năm vào đầu các học kỳ của năm học.
+1. Nội dung đánh giá ban đầu bao gồm:
 
-10. Nhà nước thực hiện hỗ trợ chi phí học tập trực tiếp cho các đối tượng quy định tại Điều 18 Nghị định này với mức 150.000 đồng/học sinh/tháng để mua sách, vở và các đồ dùng học tập khác. Thời gian được hưởng theo thời gian học thực tế và không quá 9 tháng/1 năm học và thực hiện chi trả 2 lần trong năm vào đầu các học kỳ của năm học.
+a) Công tác chuẩn bị, tổ chức, huy động các nguồn lực để thực hiện chương trình, dự án bảo đảm đúng mục tiêu, tiến độ đã được phê duyệt;
 
-11. Trường hợp cha mẹ (hoặc người giám hộ), học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên, học sinh, sinh viên học tại các cơ sở giáo dục nghề nghiệp, giáo dục đại học chưa nhận được tiền cấp bù học phí và hỗ trợ chi phí học tập theo thời hạn quy định thì được truy lĩnh trong lần chi trả tiếp theo.
+b) Những vướng mắc, phát sinh mới xuất hiện so với thời điểm phê duyệt chương trình, dự án;
 
-**Điều 21. Phương thức cấp bù tiền miễn, giảm học phí, hỗ trợ chi phí học tập đối với các cơ sở giáo dục công lập**
+c) Đề xuất các biện pháp giải quyết các vấn đề vướng mắc, phát sinh phù hợp với điều kiện thực tế.
 
-1. Phương thức cấp bù tiền miễn, giảm học phí đối với các cơ sở giáo dục công lập
+2. Nội dung đánh giá giữa kỳ hoặc đánh giá giai đoạn bao gồm:
 
-a) Kinh phí thực hiện cấp bù tiền miễn, giảm học phí cho cơ sở giáo dục công lập được ngân sách nhà nước cấp hàng năm theo hình thức giao dự toán. Việc phân bổ dự toán kinh phí thực hiện chính sách cấp bù học phí cho cơ sở giáo dục công lập được thực hiện đồng thời với thời điểm phân bổ dự toán ngân sách nhà nước hàng năm. Khi giao dự toán cho các cơ sở giáo dục, cơ quan chủ quản phải ghi rõ dự toán kinh phí thực hiện chính sách cấp bù học phí cho người học thuộc đối tượng được miễn, giảm học phí đang theo học tại cơ sở giáo dục công lập;
+a) Sự phù hợp của kết quả thực hiện chương trình, dự án so với mục tiêu đầu tư;
 
-b) Cơ sở giáo dục công lập gửi Kho bạc Nhà nước nơi giao dịch hồ sơ rút dự toán bao gồm: (i) Quyết định giao dự toán của cơ quan có thẩm quyền giao đối với kinh phí cấp bù tiền miễn, giảm học phí; (ii) Quyết định phê duyệt danh sách được hưởng chế độ miễn, giảm học phí của cơ sở giáo dục công lập kèm danh sách, tổng hợp đề nghị cấp bù tiền học phí miễn, giảm (gồm các nội dung: Họ tên, đối tượng, tổng số học sinh thuộc diện được miễn, giảm học phí hiện đang theo học tại trường, mức thu học phí của nhà trường, mức học phí miễn, giảm và kinh phí đề nghị cấp bù) và toàn bộ hồ sơ xét duyệt các đối tượng được miễn, giảm học phí, hỗ trợ chi phí học tập; (iii) Giấy rút dự toán theo quy định để rút dự toán kinh phí cấp bù tiền miễn, giảm học phí.
+b) Mức độ hoàn thành khối lượng công việc đến thời điểm đánh giá so với kế hoạch được phê duyệt;
 
-Kho bạc Nhà nước căn cứ Hồ sơ rút dự toán thực hiện kiểm soát và chuyển tiền vào tài khoản thu học phí của cơ sở giáo dục đảm bảo trong phạm vi dự toán được cấp có thẩm quyền giao và không vượt quá dự toán do cơ sở giáo dục đề nghị rút.
+c) Đề xuất các giải pháp cần thiết, kể cả việc điều chỉnh chương trình, dự án.
 
-Kinh phí ngân sách nhà nước cấp bù tiền miễn, giảm học phí cho cơ sở giáo dục công lập được chuyển và hạch toán vào tài khoản thu học phí của cơ sở này và được tự chủ sử dụng theo số lượng thực tế đối tượng được cấp bù và quy định hiện hành về chế độ tự chủ tài chính của đơn vị sự nghiệp công lập; trường hợp dự toán giao thực hiện cấp bù tiền miễn, giảm học phí cho cơ sở giáo dục công lập cao hơn số lượng đối tượng thụ hưởng thực tế và mức cấp bù theo quy định của Nhà nước thì cơ sở giáo dục báo cáo cơ quan chủ quản để xử lý theo quy định hiện hành.
+3. Nội dung đánh giá kết thúc bao gồm:
 
-2. Phương thức chi trả tiền hỗ trợ chi phí học tập đối với các đối tượng đang học tại các cơ sở giáo dục mầm non và phổ thông công lập.
+a) Quá trình thực hiện chương trình, dự án: hoạt động quản lý thực hiện chương trình, dự án; kết quả thực hiện các mục tiêu của chương trình, dự án; các nguồn lực đã huy động; các lợi ích do chương trình, dự án mang lại cho những đối tượng thụ hưởng; các tác động, tính bền vững của chương trình, dự án;
 
-a) Phòng Giáo dục và Đào tạo chịu trách nhiệm chi trả, quyết toán kinh phí hỗ trợ chi phí học tập trực tiếp cho cha mẹ (hoặc người giám hộ) trẻ em học mẫu giáo, học sinh tiểu học, học sinh trung học cơ sở; cha mẹ (hoặc học viên) học ở các cơ sở giáo dục thường xuyên hoặc ủy quyền cho cơ sở giáo dục chi trả, quyết toán với Phòng Giáo dục và Đào tạo;
+b) Bài học rút ra sau quá trình thực hiện chương trình, dự án và đề xuất các khuyến nghị cần thiết; trách nhiệm của tổ chức tư vấn, cơ quan chủ quản, chủ chương trình, chủ đầu tư, người có thẩm quyền quyết định chủ trương đầu tư, quyết định đầu tư và cơ quan, tổ chức, cá nhân có liên quan.
 
-b) Sở Giáo dục và Đào tạo chịu trách nhiệm chi trả, quyết toán kinh phí hỗ trợ chi phí học tập trực tiếp cho cha mẹ học sinh (hoặc học sinh) trung học phổ thông, học viên học ở các cơ sở giáo dục thường xuyên cấp tỉnh và học sinh học tại các cơ sở giáo dục khác do Sở Giáo dục và Đào tạo quản lý hoặc ủy quyền cho cơ sở giáo dục chi trả, quyết toán với Sở Giáo dục và Đào tạo;
+4. Nội dung đánh giá tác động của chương trình, dự án bao gồm:
 
-c) Kinh phí hỗ trợ chi phí học tập được cấp không quá 9 tháng/năm học và chi trả 2 lần trong năm: Lần 1 chi trả 4 tháng vào tháng 10 hoặc tháng 11; lần 2 chi trả 5 tháng vào tháng 3 hoặc tháng 4;
+a) Thực trạng kinh tế \- kỹ thuật vận hành;
 
-d) Trường hợp cha mẹ (hoặc người giám hộ) trẻ em học mẫu giáo và học sinh chưa nhận tiền hỗ trợ chi phí học tập theo thời hạn quy định thì được truy lĩnh trong kỳ chi trả tiếp theo;
+b) Tác động kinh tế \- xã hội;
 
-đ) Kho bạc Nhà nước căn cứ (i) Quyết định giao dự toán của cấp có thẩm quyền (trong đó ghi rõ dự toán kinh phí hỗ trợ chi phí học tập); (ii) chứng từ chuyển tiền; thực hiện tạm ứng cho Phòng Giáo dục và Đào tạo hoặc Sở Giáo dục và Đào tạo hoặc cơ sở giáo dục (trường hợp được ủy quyền).
+c) Tác động môi trường, sinh thái;
 
-Phòng Giáo dục và Đào tạo hoặc Sở Giáo dục và Đào tạo hoặc cơ sở giáo dục (trường hợp được ủy quyền) chịu trách nhiệm chi trả cho đúng đối tượng được hỗ trợ chi phí học tập; sau khi chi trả thực hiện thanh toán tạm ứng với Kho bạc Nhà nước. Kho bạc Nhà nước căn cứ Giấy đề nghị thanh toán tạm ứng và Bảng kê chứng từ tạm ứng/thanh toán để thanh toán tạm ứng cho đơn vị.
+d) Tính bền vững của dự án;
 
-**Điều 22. Phương thức chi trả tiền miễn, giảm học phí, hỗ trợ chi phí học tập đối với người học ở các cơ sở giáo dục dân lập, tư thục; cơ sở giáo dục nghề nghiệp và giáo dục đại học thuộc doanh nghiệp nhà nước, tổ chức kinh tế; chi trả tiền hỗ trợ đóng học phí cho học sinh tiểu học (ở địa bàn không đủ trường công lập) trong cơ sở giáo dục tư thục**
+đ) Bài học rút ra từ chủ trương đầu tư, quyết định đầu tư, thực hiện, vận hành chương trình, dự án; trách nhiệm của tổ chức tư vấn, cơ quan chủ quản, chủ chương trình, chủ đầu tư, người có thẩm quyền quyết định chủ trương đầu tư, quyết định đầu tư và cơ quan, tổ chức, cá nhân có liên quan.
 
-1. Phương thức chi trả tiền miễn, giảm học phí và hỗ trợ chi phí học tập
+5. Nội dung đánh giá đột xuất bao gồm:
 
-a) Phòng Giáo dục và Đào tạo chịu trách nhiệm chi trả, quyết toán kinh phí miễn, giảm học phí và hỗ trợ chi phí học tập trực tiếp (hoặc ủy quyền cho cơ sở giáo dục chi trả) cho cha mẹ (hoặc người giám hộ) trẻ em học mẫu giáo, học sinh tiểu học và học sinh trung học cơ sở;
+a) Sự phù hợp của kết quả thực hiện chương trình, dự án đến thời điểm đánh giá so với mục tiêu đầu tư;
 
-b) Sở Giáo dục và Đào tạo chịu trách nhiệm chi trả, quyết toán kinh phí miễn, giảm học phí và hỗ trợ chi phí học tập trực tiếp cho cha mẹ học sinh trung học phổ thông hoặc ủy quyền cho cơ sở giáo dục chi trả;
+b) Mức độ hoàn thành khối lượng công việc đến thời điểm đánh giá so với kế hoạch được phê duyệt;
 
-c) Phòng Lao động \- Thương binh và Xã hội chịu trách nhiệm chi trả, quyết toán kinh phí miễn, giảm học phí trực tiếp cho cha mẹ hoặc người giám hộ của học sinh; sinh viên đang học tại các cơ sở giáo dục nghề nghiệp và giáo dục đại học trên địa bàn;
+c) Xác định những phát sinh ngoài dự kiến (nếu có), nguyên nhân phát sinh ngoài dự kiến và trách nhiệm của các cơ quan, tổ chức, cá nhân có liên quan;
 
-d) Trường hợp cha mẹ (hoặc người giám hộ) trẻ em học mẫu giáo, học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên, học sinh, sinh viên chưa nhận tiền cấp bù học phí và hỗ trợ chi phí học tập theo thời hạn quy định thì được truy lĩnh trong kỳ chi trả tiếp theo;
+d) Ảnh hưởng và mức độ ảnh hưởng của những phát sinh ngoài dự án đến việc thực hiện chương trình, dự án, khả năng hoàn thành các mục tiêu của chương trình, dự án;
 
-đ) Kho bạc Nhà nước căn cứ (i) Quyết định giao dự toán của cấp có thẩm quyền (trong đó ghi rõ dự toán kinh phí miễn, giảm học phí và hỗ trợ chi phí học tập); (ii) chứng từ chuyển tiền; thực hiện tạm ứng cho Phòng Giáo dục và Đào tạo hoặc Sở Giáo dục và Đào tạo hoặc cơ sở giáo dục (trường hợp được ủy quyền), Phòng Lao động \- Thương binh và Xã hội.
+đ) Đề xuất các giải pháp cần thiết.
 
-Phòng Giáo dục và Đào tạo hoặc Sở Giáo dục và Đào tạo hoặc cơ sở giáo dục (trường hợp được ủy quyền), Phòng Lao động \- Thương binh và Xã hội chịu trách nhiệm chi trả cho đúng đối tượng được miễn, giảm học phí, hỗ trợ chi phí học tập; sau khi chi trả thực hiện thanh toán tạm ứng với Kho bạc Nhà nước. Kho bạc Nhà nước căn cứ Giấy đề nghị thanh toán tạm ứng và Bảng kê chứng từ tạm ứng/thanh toán để thanh toán tạm ứng cho đơn vị.
+6. Chính phủ quy định phương pháp, tiêu chí đánh giá hiệu quả đầu tư các chương trình, dự án đầu tư công.
 
-2. Phương thức chi trả tiền hỗ trợ đóng học phí cho học sinh tiểu học tư thục
+**Điều 74. Giám sát đầu tư của cộng đồng**
 
-a) Căn cứ vào hồ sơ tài liệu, số lượng học sinh được hỗ trợ và mức hỗ trợ được Hội đồng nhân dân cấp tỉnh phê duyệt, Phòng Giáo dục và Đào tạo chịu trách nhiệm rút dự toán tại kho bạc để chuyển khoản cho cơ sở giáo dục tiểu học tư thục. Cơ sở giáo dục tiểu học tư thục chịu trách nhiệm chi trả cho đúng đối tượng được hỗ trợ học phí. Cuối năm ngân sách và cuối năm học, căn cứ vào số lượng học sinh được hỗ trợ học phí thực tế trong từng học kỳ, cơ sở giáo dục tiểu học tư thục xác định lại số tiền hỗ trợ đóng học phí và thanh quyết toán với Phòng Giáo dục và Đào tạo để thực hiện quyết toán ngân sách theo quy định;
+1. Các chương trình, dự án chịu sự giám sát của cộng đồng. Mặt trận Tổ quốc Việt Nam các cấp chủ trì tổ chức thực hiện giám sát đầu tư của cộng đồng và phản biện xã hội.
 
-b) Khi rút dự toán kinh phí hỗ trợ đóng học phí, Phòng Giáo dục và Đào tạo phải gửi cơ quan Kho bạc Nhà nước nơi Phòng Giáo dục và Đào tạo giao dịch: Quyết định giao dự toán của cấp có thẩm quyền (trong đó có ghi cụ thể kinh phí hỗ trợ đóng học phí), bản tổng hợp đề nghị cấp kinh phí hỗ trợ đóng học phí (gồm các nội dung: Họ tên học sinh tiểu học thuộc diện được hỗ trợ đóng học phí hiện đang theo học tại từng trường tiểu học tư thục; mức hỗ trợ đóng học phí được Hội đồng nhân dân cấp tỉnh phê duyệt và tổng nhu cầu kinh phí đề nghị hỗ trợ đóng học phí) và chứng từ chuyển tiền.
+2. Cơ quan chủ quản tham khảo, giải trình, tiếp thu ý kiến cộng đồng dân cư nơi thực hiện dự án đối với việc quyết định đầu tư dự án quan trọng quốc gia, dự án nhóm A, dự án có quy mô di dân, tái định canh, định cư lớn, dự án có nguy cơ tác động lớn đến môi trường, dự án có ảnh hưởng trực tiếp tới đời sống kinh tế \- xã hội của cộng đồng dân cư nơi thực hiện dự án về chủ trương, chính sách đầu tư, xây dựng, đất đai, xử lý chất thải và bảo vệ môi trường, đền bù, giải phóng mặt bằng và phương án tái định canh, định cư theo quy định của pháp luật.
 
-Kho bạc Nhà nước thực hiện tạm ứng cho Phòng Giáo dục và Đào tạo để chuyển khoản cho cơ sở giáo dục tiểu học tư thục.
+3. Nội dung giám sát đầu tư của cộng đồng bao gồm:
 
-Căn cứ hồ sơ, chứng từ thanh quyết toán cơ sở giáo dục tiểu học tư thục gửi, Phòng Giáo dục và Đào tạo thực hiện thanh toán tạm ứng với Kho bạc Nhà nước. Kho bạc Nhà nước căn cứ Giấy đề nghị thanh toán tạm ứng và Bảng kê chứng từ tạm ứng/thanh toán để thanh toán tạm ứng cho Phòng Giáo dục và Đào tạo.
+a) Việc chấp hành quy định của pháp luật về đầu tư, xây dựng, đất đai, xử lý chất thải và bảo vệ môi trường;
 
-**Mục 3. LẬP, PHÂN BỔ DỰ TOÁN, QUYẾT TOÁN KINH PHÍ MIỄN, GIẢM HỌC PHÍ, HỖ TRỢ CHI PHÍ HỌC TẬP, HỖ TRỢ ĐÓNG HỌC PHÍ**
+b) Công tác đền bù, giải phóng mặt bằng và phương án tái định canh, định cư bảo đảm quyền lợi của Nhân dân;
 
-**Điều 23. Lập dự toán**
+c) Các chương trình, dự án sử dụng một phần vốn đóng góp của người dân;
 
-Hằng năm, căn cứ Chỉ thị của Thủ tướng Chính phủ về việc xây dựng kế hoạch phát triển kinh tế xã hội và dự toán ngân sách nhà nước năm kế hoạch, Thông tư hướng dẫn của Bộ Tài chính về việc xây dựng dự toán ngân sách nhà nước năm kế hoạch; trên cơ sở dự kiến số lượng các đối tượng thuộc diện được miễn, giảm học phí, hỗ trợ chi phí học tập và hỗ trợ tiền đóng học phí cho học sinh tiểu học tư thục ở địa bàn thiếu trường công lập; các Bộ ngành, cơ quan Trung ương, Ủy ban nhân dân cấp tỉnh xây dựng dự toán nhu cầu kinh phí thực hiện chế độ miễn giảm học phí, hỗ trợ chi phí học tập và hỗ trợ tiền đóng học phí cho học sinh tiểu học tư thục ở địa bàn chưa đủ trường công lập để tổng hợp chung trong dự toán chi ngân sách nhà nước của Bộ, ngành, địa phương gửi Bộ Tài chính cùng thời gian báo cáo dự toán ngân sách nhà nước năm kế hoạch.
+d) Tình hình triển khai và tiến độ thực hiện các chương trình, dự án;
 
-1. Kinh phí thực hiện chế độ miễn, giảm học phí cho các cơ sở giáo dục công lập
+đ) Việc thực hiện công khai, minh bạch trong đầu tư công theo quy định tại Điều 14 của Luật này;
 
-a) Cơ sở giáo dục mầm non, phổ thông và cơ sở giáo dục thường xuyên căn cứ mức thu học phí do Hội đồng nhân dân cấp tỉnh quy định đối với cơ sở giáo dục công lập chưa tự đảm bảo chi thường xuyên và số lượng đối tượng được miễn, giảm học phí để lập danh sách, xây dựng dự toán kinh phí đề nghị cấp bù tiền học phí miễn, giảm (kèm theo các hồ sơ xác nhận đối tượng theo quy định tại Nghị định này) như sau: Đối với trường mầm non, tiểu học và trung học cơ sở: Gửi về Phòng Giáo dục và Đào tạo thẩm định, tổng hợp gửi cơ quan tài chính cùng cấp để tổng hợp trình cấp có thẩm quyền bố trí dự toán kinh phí thực hiện; Đối với trường trung học phổ thông và các cơ sở giáo dục trực thuộc Sở Giáo dục và Đào tạo: Gửi về Sở Giáo dục và Đào tạo thẩm định, tổng hợp gửi cơ quan tài chính cùng cấp để tổng hợp trình cấp có thẩm quyền bố trí dự toán kinh phí thực hiện;
+e) Phát hiện những việc làm tổn hại đến lợi ích của cộng đồng; những tác động tiêu cực của dự án đến môi trường sinh sống của cộng đồng trong quá trình thực hiện đầu tư và vận hành dự án; những việc làm gây lãng phí, thất thoát vốn, tài sản thuộc dự án.
 
-b) Cơ sở giáo dục nghề nghiệp và giáo dục đại học căn cứ mức thu học phí tương ứng với từng ngành, nghề đào tạo của trường (không vượt quá mức trần học phí quy định tại Nghị định này đối với cơ sở giáo dục nghề nghiệp và cơ sở giáo dục đại học chưa tự đảm bảo chi thường xuyên) và số lượng đối tượng miễn, giảm học phí lập danh sách, xây dựng dự toán kinh phí gửi cơ quan dự toán cấp trên thẩm định, tổng hợp gửi cơ quan tài chính cùng cấp để tổng hợp trình cấp có thẩm quyền bố trí dự toán kinh phí thực hiện.
+**Điều 75. Trình tự, thủ tục, quy trình giám sát đầu tư của cộng đồng**
 
-2. Kinh phí hỗ trợ chi phí học tập
+1. Mặt trận Tổ quốc Việt Nam chủ trì, phối hợp với các tổ chức chính trị \- xã hội và các cơ quan liên quan thực hiện các nội dung sau đây:
 
-Phòng Giáo dục và Đào tạo hoặc Sở Giáo dục và Đào tạo căn cứ mức hỗ trợ chi phí học tập được quy định tại Nghị định này và số lượng đối tượng được hỗ trợ chi phí học tập để lập danh sách bao gồm cả các đối tượng học công lập và dân lập, tư thục (kèm theo các hồ sơ xác nhận đối tượng theo quy định tại Nghị định này) thẩm định, tổng hợp và xây dựng dự toán kinh phí gửi cơ quan tài chính cùng cấp tổng hợp trình cấp có thẩm quyền bố trí dự toán kinh phí thực hiện.
+a) Lập kế hoạch giám sát đầu tư của cộng đồng đối với chương trình, dự án hằng năm trên địa bàn theo các nội dung quy định tại khoản 3 Điều 74 của Luật này;
 
-3. Kinh phí miễn, giảm học phí cho người học tại các cơ sở giáo dục dân lập, tư thục; cơ sở giáo dục đại học; cơ sở giáo dục nghề nghiệp thuộc doanh nghiệp nhà nước, tổ chức kinh tế; hỗ trợ đóng học phí cho học sinh tiểu học (ở địa bàn không đủ trường công lập) trong cơ sở giáo dục tư thục
+b) Thành lập Ban giám sát đầu tư của cộng đồng cho từng chương trình, dự án;
 
-a) Phòng Giáo dục và Đào tạo căn cứ mức thu học phí của các trường mầm non, trung học cơ sở công lập chưa tự đảm bảo chi thường xuyên trong vùng và mức hỗ trợ đóng học phí cho học sinh tiểu học tư thục do Hội đồng nhân dân cấp tỉnh quy định; số lượng đối tượng được miễn, giảm học phí và hỗ trợ đóng học phí đang học tại các trường mầm non, tiểu học và trung học cơ sở dân lập, tư thục trên địa bàn để lập danh sách (kèm theo các hồ sơ xác nhận đối tượng theo quy định tại Nghị định này) thẩm định, tổng hợp và xây dựng dự toán kinh phí miễn, giảm học phí và hỗ trợ đóng học phí cho người học tại các cơ sở giáo dục dân lập, tư thục gửi cơ quan tài chính cùng cấp tổng hợp trình cấp có thẩm quyền bố trí dự toán kinh phí thực hiện;
+c) Thông báo cho chủ chương trình, chủ đầu tư và Ban quản lý chương trình, dự án về kế hoạch giám sát và thành phần Ban giám sát đầu tư của cộng đồng chậm nhất 45 ngày trước ngày thực hiện.
 
-b) Sở Giáo dục và Đào tạo căn cứ mức thu học phí của các trường trung học phổ thông công lập trong vùng chưa tự đảm bảo chi thường xuyên do Hội đồng nhân dân cấp tỉnh quy định và số lượng đối tượng được miễn, giảm học phí đang học tại các trường trung học phổ thông tư thục trên địa bàn để lập danh sách (kèm theo các hồ sơ xác nhận đối tượng theo quy định tại Nghị định này) thẩm định, tổng hợp và xây dựng dự toán kinh phí gửi cơ quan tài chính cùng cấp tổng hợp trình cấp có thẩm quyền bố trí dự toán kinh phí thực hiện;
+2. Chủ chương trình, chủ đầu tư và Ban quản lý chương trình, dự án có trách nhiệm:
 
-c) Phòng Lao động \- Thương binh và Xã hội cấp huyện căn cứ mức trần học phí của cơ sở giáo dục nghề nghiệp chưa tự đảm bảo chi thường xuyên và cơ sở giáo dục đại học chưa tự đảm bảo chi thường xuyên tương ứng với ngành, nghề đào tạo được quy định tại Điều 10 và Điều 11 Nghị định này, số lượng đối tượng được miễn, giảm học phí học ở các cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục, các cơ sở giáo dục nghề nghiệp và giáo dục đại học thuộc các doanh nghiệp nhà nước, tổ chức kinh tế để lập danh sách (kèm theo các hồ sơ xác nhận đối tượng theo quy định tại Nghị định này) thẩm định, tổng hợp và xây dựng dự toán kinh phí gửi cơ quan tài chính cùng cấp để tổng hợp trình cấp có thẩm quyền bố trí dự toán kinh phí thực hiện. Đồng thời gửi Sở Tài chính, Sở Lao động \- Thương binh và Xã hội để tổng hợp tham mưu Ủy ban nhân dân cấp tỉnh bố trí kinh phí.
+a) Cung cấp đầy đủ, trung thực, kịp thời tài liệu liên quan đến việc triển khai thực hiện chương trình, dự án quy định tại khoản 2 Điều 74 của Luật này cho Ban giám sát đầu tư của cộng đồng;
 
-4. Căn cứ báo cáo của Sở Giáo dục và Đào tạo, Sở Lao động \- Thương binh và Xã hội, Ủy ban nhân dân cấp huyện, Sở Tài chính chủ trì phối hợp với Sở Giáo dục và Đào tạo, Sở Lao động \- Thương binh và Xã hội, Ủy ban nhân dân cấp huyện tổng hợp số đối tượng, nhu cầu kinh phí để báo cáo Ủy ban nhân dân cấp tỉnh phê duyệt, bố trí kinh phí, đồng thời gửi báo cáo về Bộ Tài chính, Bộ Giáo dục và Đào tạo, Bộ Lao động \- Thương binh và Xã hội.
+b) Tạo điều kiện thuận lợi cho Ban giám sát đầu tư của cộng đồng thực hiện việc giám sát theo quy định của pháp luật;
 
-**Điều 24. Phân bổ dự toán**
+c) Tiếp thu ý kiến giám sát và tăng cường các biện pháp thực hiện dự án.
 
-Căn cứ quyết định giao dự toán ngân sách nhà nước của Thủ tướng Chính phủ:
+**Điều 76. Tổ chức thực hiện theo dõi, kiểm tra, đánh giá kế hoạch, chương trình, dự án**
 
-1. Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cùng cấp quyết định phân bổ kinh phí thực hiện chi trả cấp bù miễn, giảm học phí, hỗ trợ chi phí học tập và hỗ trợ đóng học phí cho học sinh tiểu học (ở địa bàn không đủ trường công lập) trong cơ sở giáo dục tư thục trong dự toán chi sự nghiệp giáo dục đào tạo địa phương theo chế độ quy định.
+1. Chủ chương trình và chủ đầu tư chịu trách nhiệm tổ chức thực hiện theo dõi, kiểm tra và đánh giá ban đầu, giữa kỳ và kết thúc chương trình, dự án.
 
-2. Các bộ, ngành, cơ quan trung ương quyết định phân bổ kinh phí cấp bù miễn, giảm học phí, hỗ trợ chi phí học tập cho các cơ sở giáo dục nghề nghiệp và giáo dục đại học công lập trực thuộc theo chế độ quy định.
+2. Cơ quan chủ quản, người quyết định đầu tư và cơ quan quản lý nhà nước về đầu tư công tổ chức thực hiện theo dõi, kiểm tra và đánh giá tác động, đánh giá đột xuất chương trình, dự án được giao quản lý.
 
-**Điều 25. Quản lý và quyết toán kinh phí**
+3. Cơ quan, tổ chức thực hiện đánh giá tự đánh giá hoặc thuê chuyên gia, tổ chức tư vấn có đủ điều kiện, năng lực để đánh giá.
 
-1. Các cơ quan, đơn vị được giao kinh phí thực hiện chi trả cấp bù miễn, giảm học phí, hỗ trợ chi phí học tập và hỗ trợ đóng học phí cho học sinh tiểu học (ở địa bàn không đủ trường công lập) trong cơ sở giáo dục tư thục có trách nhiệm quản lý và sử dụng kinh phí đúng mục đích, theo đúng quy định của Luật Ngân sách nhà nước và gửi báo cáo quyết toán kinh phí thực hiện các chính sách này về cơ quan quản lý cấp trên để tổng hợp, gửi cơ quan tài chính cùng cấp trước ngày 20/7 hàng năm làm căn cứ xác định, bố trí dự toán kinh phí của năm kế hoạch.
+4. Chính phủ quy định chi tiết việc theo dõi, kiểm tra, đánh giá kế hoạch, chương trình, dự án và giám sát đầu tư của cộng đồng.
 
-2. Số liệu quyết toán kinh phí chi trả cấp bù miễn, giảm học phí, hỗ trợ chi phí học tập và hỗ trợ đóng học phí cho học sinh tiểu học (ở địa bàn không đủ trường công lập) trong cơ sở giáo dục tư thục được tổng hợp chung trong báo cáo quyết toán chi ngân sách nhà nước hàng năm của đơn vị và được thực hiện theo đúng quy định hiện hành của Luật Ngân sách nhà nước, các văn bản hướng dẫn Luật và Mục lục ngân sách nhà nước hiện hành.
+**Điều 77. Thanh tra đầu tư công**
 
-**Điều 26. Nguồn kinh phí**
+1. Hoạt động thanh tra việc quản lý và sử dụng vốn đầu tư công thực hiện theo quy định của Luật này và quy định khác của pháp luật có liên quan.
 
-Nguồn kinh phí thực hiện chế độ miễn, giảm học phí, hỗ trợ chi phí học tập và hỗ trợ đóng học phí cho học sinh tiểu học (ở địa bàn không đủ trường công lập) trong cơ sở giáo dục tư thục theo quy định tại Nghị định này được giao trong dự toán chi sự nghiệp giáo dục, đào tạo và dạy nghề hàng năm theo phân cấp ngân sách nhà nước hiện hành. Ngân sách trung ương hỗ trợ các địa phương khó khăn thực hiện chính sách an sinh xã hội theo quy định của Luật Ngân sách nhà nước, các văn bản hướng dẫn và cơ chế hỗ trợ từ ngân sách trung ương cho ngân sách địa phương.
+2. Thanh tra hoạt động đầu tư công phải gắn với việc thực hiện chức năng, nhiệm vụ thanh tra của các cơ quan, tổ chức và phải đúng trình tự, thủ tục thanh tra theo quy định của pháp luật về thanh tra.
+
+3. Kết luận thanh tra về hoạt động đầu tư công được công khai theo quy định của pháp luật. Trường hợp phát hiện hành vi vi phạm pháp luật về đầu tư công, cơ quan thanh tra xử lý theo thẩm quyền hoặc chuyển hồ sơ tới cơ quan nhà nước có thẩm quyền để xử lý.
 
 **Chương V**
 
-**GIÁ DỊCH VỤ TRONG LĨNH VỰC GIÁO DỤC, ĐÀO TẠO KHI THỰC HIỆN GIAO NHIỆM VỤ, ĐẶT HÀNG, ĐẤU THẦU**
+**NHIỆM VỤ, QUYỀN HẠN, TRÁCH NHIỆM CỦA CƠ QUAN, TỔ CHỨC, CÁ NHÂN TRONG HOẠT ĐỘNG ĐẦU TƯ CÔNG**
 
-**Điều 27. Quy định chung về giá dịch vụ trong lĩnh vực giáo dục, đào tạo khi thực hiện giao nhiệm vụ, đặt hàng, đấu thầu**
+**Điều 78. Nhiệm vụ, quyền hạn của Quốc hội**
 
-1. Đối với dịch vụ trong lĩnh vực giáo dục, đào tạo do Nhà nước giao nhiệm vụ, đặt hàng, đấu thầu thực hiện theo quy định tại Nghị định số 32/2019/NĐ\-CP ngày 14 tháng 4 năm 2019 của Chính phủ quy định giao nhiệm vụ, đặt hàng hoặc đấu thầu cung cấp sản phẩm, dịch vụ công sử dụng ngân sách nhà nước từ nguồn kinh phí chi thường xuyên.
+1. Ban hành luật, nghị quyết về đầu tư công.
 
-2. Đơn giá tối đa thực hiện đặt hàng dịch vụ giáo dục mầm non, giáo dục phổ thông, đào tạo đại học, giáo dục nghề nghiệp xác định bằng mức trần giá dịch vụ quy định tại khoản 3 Điều này, Điều 28, Điều 29, Điều 30 của Nghị định này. Đối với các quy định về điều kiện, quy trình, thủ tục, phương thức, thẩm quyền giao nhiệm vụ, đặt hàng hoặc đấu thầu thực hiện theo quy định của Nghị định số 32/2019/NĐ\-CP và quy định của pháp luật có liên quan.
+2. Quyết định chủ trương đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia sử dụng vốn đầu tư công.
 
-3. Mức trần của giá dịch vụ giáo dục mầm non, giáo dục phổ thông, đào tạo đại học, giáo dục nghề nghiệp thực hiện đặt hàng ở các địa bàn có khả năng xã hội hóa cao hoặc yêu cầu đặc biệt về chất lượng đào tạo do bộ, ngành hoặc Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh xem xét phê duyệt trên cơ sở định mức kinh tế \- kỹ thuật, định mức chi phí do cơ quan có thẩm quyền ban hành, đảm bảo bù đắp chi phí hợp lý, hợp lệ, nhu cầu đào tạo và tương xứng với chất lượng dịch vụ giáo dục đào tạo.
+3. Quyết định và điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm.
 
-**Điều 28. Mức trần giá dịch vụ giáo dục mầm non, giáo dục phổ thông**
+4. Điều chỉnh tiêu chí phân loại dự án quan trọng quốc gia.
 
-1. Mức trần giá dịch vụ giáo dục mầm non, giáo dục phổ thông năm học 2021 \- 2022: Tối đa bằng mức học phí quy định tại khoản 1 Điều 9 Nghị định này.
+5. Giám sát việc thực hiện kế hoạch đầu tư công, chương trình mục tiêu quốc gia, dự án quan trọng quốc gia; giám sát việc thực hiện pháp luật về đầu tư công.
 
-2. Mức trần giá dịch vụ giáo dục mầm non, giáo dục phổ thông từ năm học 2022 \- 2023 như sau:
+**Điều 79. Nhiệm vụ, quyền hạn của Chính phủ**
 
-a) Cơ sở giáo dục mầm non, giáo dục phổ thông chưa tự bảo đảm chi thường xuyên: Tối đa bằng mức trần học phí quy định tại điểm a khoản 2 Điều 9 Nghị định này.
+1. Thống nhất quản lý nhà nước về đầu tư công.
 
-Từ năm học 2023 \- 2024 trở đi, mức trần giá dịch vụ giáo dục mầm non, giáo dục phổ thông được điều chỉnh đảm bảo phù hợp với điều kiện kinh tế xã hội của địa phương và khả năng chi trả của người dân nhưng tối đa không vượt 7,5%/năm;
+2. Trình Quốc hội ban hành luật, nghị quyết; trình Ủy ban Thường vụ Quốc hội ban hành pháp lệnh, nghị quyết về đầu tư công.
 
-b) Cơ sở giáo dục mầm non, giáo dục phổ thông tự bảo đảm chi thường xuyên: Tối đa bằng mức trần học phí quy định tại điểm b, khoản 2 Điều 9 Nghị định này;
+3. Ban hành văn bản pháp luật về quản lý đầu tư công.
 
-c) Cơ sở giáo dục mầm non, giáo dục phổ thông tự bảo đảm chi thường xuyên và chi đầu tư: Tối đa bằng mức trần học phí quy định tại điểm c, khoản 2 Điều 9 Nghị định này;
+4. Trình Quốc hội quyết định chủ trương đầu tư chương trình mục tiêu quốc gia, dự án quan trọng quốc gia.
 
-d) Cơ sở giáo dục mầm non, giáo dục phổ thông tự bảo đảm chi thường xuyên hoặc tự bảo đảm chi thường xuyên và chi đầu tư nếu đạt mức kiểm định chất lượng cơ sở giáo dục theo tiêu chuẩn do Bộ Giáo dục và Đào tạo quy định được tự xác định mức giá dịch vụ trên cơ sở định mức kinh tế \- kỹ thuật, định mức chi phí do cơ sở giáo dục ban hành; trình Ủy ban nhân dân cấp tỉnh để đề nghị Hội đồng nhân dân cấp tỉnh xem xét phê duyệt mức giá dịch vụ.
+5. Quyết định chủ trương đầu tư chương trình đầu tư công theo quy định tại khoản 2 Điều 17 của Luật này.
 
-**Điều 29. Mức trần giá dịch vụ giáo dục đại học**
+6. Lập và trình Quốc hội quyết định, điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm.
 
-1. Mức trần giá dịch vụ giáo dục đại học năm học 2021 \- 2022: Tối đa bằng mức học phí quy định tại khoản 1 Điều 11 Nghị định này.
+7. Tổ chức thực hiện kế hoạch đầu tư công trung hạn và hằng năm.
 
-2. Mức trần giá dịch vụ giáo dục đại học từ năm học 2022 \- 2023 như sau:
+8. Báo cáo Quốc hội về tình hình thực hiện kế hoạch đầu tư công trung hạn và hằng năm, chương trình mục tiêu quốc gia, dự án quan trọng quốc gia.
 
-a) Đối với cơ sở giáo dục đại học chưa tự bảo đảm chi thường xuyên: Tối đa bằng mức trần học phí quy định tại điểm a khoản 2 Điều 11 Nghị định này;
+9. Tổ chức kiểm tra, thanh tra việc thực hiện kế hoạch đầu tư công trung hạn và hằng năm; kiểm tra thực hiện chương trình, dự án sử dụng vốn ngân sách trung ương, vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư, kiểm tra việc thực hiện các mục tiêu, chính sách đầu tư công của các địa phương.
 
-b) Đối với cơ sở giáo dục đại học tự bảo đảm chi thường xuyên: Tối đa bằng mức trần học phí quy định tại điểm b khoản 2 Điều 11 tương ứng với từng khối ngành và từng năm học;
+**Điều 80. Nhiệm vụ, quyền hạn của Bộ Kế hoạch và Đầu tư**
 
-c) Đối với cơ sở giáo dục đại học tự bảo đảm chi thường xuyên và chi đầu tư: Tối đa bằng mức trần học phí quy định tại điểm c khoản 2 Điều 11 tương ứng với từng khối ngành và từng năm học;
+Bộ Kế hoạch và Đầu tư là cơ quan đầu mối giúp Chính phủ thực hiện quản lý nhà nước về đầu tư công và có nhiệm vụ, quyền hạn sau đây:
 
-d) Đối với chương trình đào tạo của cơ sở giáo dục đại học đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn do Bộ Giáo dục và Đào tạo quy định hoặc đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn nước ngoài hoặc tương đương được tự xác định mức giá dịch vụ đào tạo của chương trình đó trên cơ sở định mức kinh tế \- kỹ thuật do cơ sở giáo dục ban hành, thực hiện công khai giải trình với người học, xã hội;
+1. Ban hành hoặc trình cấp có thẩm quyền ban hành văn bản pháp luật liên quan đến đầu tư công, các nguyên tắc, tiêu chí, định mức phân bổ và sử dụng vốn đầu tư công;
 
-đ) Đối với dịch vụ đào tạo giáo viên: Thực hiện theo quy định tại Nghị định số 116/2020/NĐ\-CP ngày 25 tháng 9 năm 2020 của Chính phủ quy định về chính sách hỗ trợ tiền đóng học phí, chi phí sinh hoạt đối với sinh viên sư phạm;
+2. Chủ trì, phối hợp với Bộ Tài chính báo cáo Chính phủ xác định vốn đầu tư ngân sách nhà nước chi cho đầu tư phát triển của quốc gia theo từng ngành, lĩnh vực trong kế hoạch đầu tư công trung hạn và hằng năm;
 
-e) Mức trần giá dịch vụ đào tạo thạc sĩ, đào tạo tiến sĩ: Được xác định bằng mức trần giá dịch vụ đào tạo đại học nhân hệ số 1,5 đối với đào tạo thạc sĩ, hệ số 2,5 đối với đào tạo tiến sĩ tương ứng với từng khối ngành đào tạo của từng năm học và mức độ tự chủ của cơ sở giáo dục đại học công lập.
+3. Tổng hợp trình Chính phủ, Thủ tướng Chính phủ kế hoạch đầu tư công trung hạn và hằng năm của quốc gia;
 
-**Điều 30. Mức trần giá dịch vụ giáo dục nghề nghiệp**
+4. Tổng hợp trình Chính phủ, Thủ tướng Chính phủ xem xét, báo cáo Quốc hội, Ủy ban Thường vụ Quốc hội điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm của quốc gia;
 
-1. Mức trần giá dịch vụ giáo dục nghề nghiệp năm học 2021 \- 2022: Tối đa bằng mức học phí quy định tại khoản 1 Điều 10 Nghị định này.
+5. Chủ trì, phối hợp với các cơ quan liên quan thẩm định nguồn vốn và khả năng cân đối vốn theo quy định tại Điều 33 của Luật này;
 
-2. Mức trần giá dịch vụ giáo dục nghề nghiệp từ năm học 2022 \- 2023:
+6. Chịu trách nhiệm trước Chính phủ thực hiện thống nhất quản lý nhà nước về các chương trình mục tiêu quốc gia;
 
-a) Mức trần giá dịch vụ giáo dục nghề nghiệp được xác định trên cơ sở định mức kinh tế \- kỹ thuật do cơ quan có thẩm quyền ban hành, bảo đảm công khai, minh bạch các yếu tố hình thành giá;
+7. Tổ chức thực hiện, theo dõi, kiểm tra, đánh giá, thanh tra kế hoạch, chương trình, dự án và các nhiệm vụ quản lý nhà nước khác về đầu tư công.
 
-b) Trường hợp chưa ban hành được mức trần giá dịch vụ giáo dục nghề nghiệp:
+**Điều 81. Nhiệm vụ, quyền hạn của Bộ Tài chính**
 
-\- Đối với cơ sở giáo dục nghề nghiệp chưa tự bảo đảm chi thường xuyên: Mức trần giá dịch vụ giáo dục nghề nghiệp tối đa bằng mức trần học phí quy định tại điểm a khoản 2 Điều 10 Nghị định này.
+1. Phối hợp với Bộ Kế hoạch và Đầu tư lập kế hoạch đầu tư công trung hạn và hằng năm.
 
-\- Đối với cơ sở giáo dục nghề nghiệp tự bảo đảm chi thường xuyên: Mức trần giá dịch vụ giáo dục nghề nghiệp tối đa bằng mức trần học phí quy định tại điểm b khoản 2 Điều 10 Nghị định này.
+2. Phối hợp với Bộ Kế hoạch và Đầu tư báo cáo Chính phủ xác định vốn đầu tư nguồn ngân sách nhà nước chi cho đầu tư phát triển của quốc gia theo từng ngành, lĩnh vực trong kế hoạch đầu tư công trung hạn và hằng năm.
 
-\- Đối với cơ sở giáo dục nghề nghiệp công lập tự bảo đảm chi thường xuyên và chi đầu tư và các chương trình chất lượng cao: Mức trần giá dịch vụ giáo dục nghề nghiệp tối đa bằng 2,5 lần mức trần học phí quy định tại điểm a khoản 2 Điều 10 Nghị định này.
+3. Chủ trì, phối hợp với Bộ Kế hoạch và Đầu tư hướng dẫn cơ quan tài chính của địa phương cân đối kinh phí thường xuyên để thanh toán các chi phí lập, thẩm định, quyết định chủ trương đầu tư, phê duyệt quyết định đầu tư chương trình và bảo trì, vận hành dự án đưa vào sử dụng.
+
+4. Chủ trì trình cấp có thẩm quyền ban hành hoặc ban hành theo thẩm quyền quy định về quản lý, thanh toán, quyết toán dự án sử dụng vốn đầu tư công.
+
+5. Báo cáo Chính phủ tình hình giải ngân, quyết toán kế hoạch, chương trình, dự án.
+
+**Điều 82. Nhiệm vụ, quyền hạn của Bộ, cơ quan trung ương**
+
+1. Thực hiện chức năng quản lý nhà nước về đầu tư công theo quy định của pháp luật.
+
+2. Ban hành, hướng dẫn, kiểm tra, giám sát việc thực hiện tiêu chuẩn, quy chuẩn, định mức kinh tế \- kỹ thuật.
+
+3. Chủ trì, phối hợp với các cơ quan liên quan thẩm định nguồn vốn và khả năng cân đối vốn các dự án theo quy định tại Điều 33 của Luật này.
+
+4. Quyết định chủ trương đầu tư dự án theo quy định tại khoản 5 Điều 17 của Luật này và quyết định đầu tư dự án theo quy định tại khoản 2 Điều 35 của Luật này.
+
+5. Tổ chức lập kế hoạch đầu tư công.
+
+6. Theo dõi, đánh giá, giám sát, kiểm tra, thanh tra tình hình thực hiện kế hoạch, chương trình, dự án thuộc phạm vi quản lý.
+
+7. Báo cáo tình hình và kết quả thực hiện kế hoạch, chương trình, dự án.
+
+8. Phối hợp với Bộ, cơ quan trung ương và địa phương thực hiện kế hoạch, chương trình, dự án theo chức năng, nhiệm vụ được giao.
+
+**Điều 83. Nhiệm vụ, quyền hạn của Hội đồng nhân dân các cấp**
+
+1. Quyết định chủ trương đầu tư chương trình, dự án theo quy định tại khoản 6 và khoản 7 Điều 17 của Luật này.
+
+2. Xem xét, cho ý kiến về kế hoạch đầu tư công trung hạn và hằng năm của địa phương, bao gồm danh mục và mức vốn bố trí cho từng dự án sử dụng vốn ngân sách trung ương bổ sung có mục tiêu.
+
+3. Quyết định kế hoạch đầu tư công trung hạn và hằng năm của địa phương, bao gồm toàn bộ danh mục và mức vốn bố trí cho từng dự án sử dụng vốn ngân sách địa phương.
+
+4. Giám sát các dự án sử dụng vốn đầu tư công được giao cho địa phương quản lý, bao gồm vốn ngân sách trung ương, vốn ngân sách địa phương, vốn từ nguồn thu hợp pháp của các cơ quan nhà nước, đơn vị sự nghiệp công lập dành để đầu tư do địa phương quản lý.
+
+**Điều 84. Nhiệm vụ, quyền hạn của Ủy ban nhân dân cấp tỉnh**
+
+1. Thực hiện quản lý nhà nước về đầu tư công trên địa bàn theo quy định của pháp luật.
+
+2. Trình Hội đồng nhân dân cấp tỉnh các nội dung sau đây:
+
+a) Quyết định chủ trương đầu tư chương trình, dự án đầu tư công sử dụng vốn ngân sách địa phương;
+
+b) Xem xét, có ý kiến về chủ trương đầu tư dự án thuộc thẩm quyền quyết định chủ trương đầu tư của Thủ tướng Chính phủ theo quy định tại khoản 4 Điều 17 của Luật này;
+
+c) Xem xét, quyết định kế hoạch đầu tư công trung hạn và hằng năm theo danh mục và mức vốn bố trí cho từng dự án do địa phương quản lý.
+
+3. Chủ tịch Ủy ban nhân dân cấp tỉnh được ủy quyền cho cấp phó hoặc người đứng đầu cơ quan chuyên môn quyết định đầu tư đối với dự án nhóm B, nhóm C thuộc cấp tỉnh quản lý, trừ dự án quy định tại điểm c khoản 1 Điều 35 của Luật này.
+
+4. Tổ chức thực hiện và theo dõi, đánh giá kế hoạch đầu tư công thuộc nguồn vốn đầu tư công do cấp mình quản lý.
+
+5. Phối hợp với Bộ, cơ quan trung ương tổ chức thực hiện, theo dõi, kiểm tra, đánh giá chương trình, dự án trên địa bàn tỉnh.
+
+**Điều 85. Nhiệm vụ, quyền hạn của Ủy ban nhân dân cấp huyện, cấp xã**
+
+1. Tổ chức lập kế hoạch đầu tư công trung hạn và hằng năm thuộc cấp mình quản lý.
+
+2. Tổ chức thẩm định chương trình, dự án thuộc cấp mình quản lý.
+
+3. Trình Hội đồng nhân dân cùng cấp các nội dung sau đây:
+
+a) Quyết định chủ trương đầu tư chương trình, dự án đầu tư công sử dụng vốn ngân sách địa phương, bao gồm vốn bổ sung có mục tiêu từ ngân sách cấp trên;
+
+b) Tham gia ý kiến về chủ trương đầu tư dự án thuộc thẩm quyền quyết định chủ trương đầu tư của Thủ tướng Chính phủ theo quy định tại khoản 4 Điều 17 của Luật này và của Hội đồng nhân dân cấp trên;
+
+c) Quyết định kế hoạch đầu tư công trung hạn và hằng năm vốn ngân sách địa phương do cấp mình quản lý.
+
+4. Chủ tịch Ủy ban nhân dân cấp huyện, cấp xã quyết định đầu tư chương trình, dự án theo quy định tại khoản 4 Điều 35 của Luật này.
+
+5. Tổ chức thực hiện, theo dõi, đánh giá, kiểm tra, thanh tra kế hoạch, chương trình, dự án và các nhiệm vụ quản lý nhà nước khác về đầu tư công theo phân cấp quản lý.
+
+6. Phối hợp với cơ quan, tổ chức có liên quan triển khai thực hiện, theo dõi, kiểm tra, đánh giá chương trình, dự án trên địa bàn.
+
+**Điều 86. Nhiệm vụ, quyền hạn của Kiểm toán nhà nước**
+
+1. Quyết định kế hoạch kiểm toán hằng năm về kế hoạch, chương trình, dự án và báo cáo Quốc hội trước khi thực hiện.
+
+2. Tổ chức thực hiện kế hoạch kiểm toán hằng năm, kiểm toán chuyên đề và thực hiện kiểm toán về kế hoạch, chương trình, dự án theo yêu cầu của Quốc hội, Ủy ban Thường vụ Quốc hội, Chủ tịch nước, Chính phủ, Thủ tướng Chính phủ.
+
+3. Báo cáo Quốc hội, Ủy ban Thường vụ Quốc hội kết quả kiểm toán năm, kiểm toán chuyên đề và kết quả thực hiện kiến nghị kiểm toán về kế hoạch, chương trình, dự án.
+
+4. Tổ chức công bố, công khai báo cáo kiểm toán về kế hoạch, chương trình, dự án theo quy định của pháp luật.
+
+**Điều 87. Nhiệm vụ, quyền hạn của Mặt trận Tổ quốc Việt Nam**
+
+1. Chủ trì tổ chức giám sát đầu tư của cộng đồng và phản biện xã hội đối với các chương trình, dự án theo quy định tại khoản 1 và khoản 3 Điều 74 của Luật này và quy định khác của pháp luật có liên quan.
+
+2. Tổ chức lấy ý kiến cộng đồng về chủ trương đầu tư các chương trình, dự án trên địa bàn theo quy định tại khoản 2 Điều 74 của Luật này và theo quy định của pháp luật về thực hiện dân chủ ở xã, phường, thị trấn.
+
+**Điều 88. Quyền và trách nhiệm của cơ quan, tổ chức, cá nhân trong việc đề xuất chủ trương đầu tư**
+
+1. Đề xuất chương trình, dự án phù hợp với chiến lược, kế hoạch phát triển kinh tế \- xã hội và quy hoạch có liên quan theo quy định của pháp luật về quy hoạch trong từng thời kỳ.
+
+2. Bảo đảm huy động và cân đối được nguồn lực để thực hiện chương trình, dự án hoàn thành đúng tiến độ, thời gian quy định.
+
+3. Đề xuất cấp có thẩm quyền xem xét, quyết định chủ trương đầu tư khi chương trình không trùng lặp với chương trình khác và với nhiệm vụ thường xuyên theo chức năng, nhiệm vụ được giao.
+
+4. Chịu trách nhiệm về thông tin, số liệu liên quan đến chương trình, dự án đề xuất.
+
+**Điều 89. Quyền và trách nhiệm của cơ quan, tổ chức, cá nhân liên quan đến quyết định chủ trương đầu tư**
+
+1. Cơ quan, tổ chức, cá nhân và người đứng đầu tổ chức quyết định chủ trương đầu tư chương trình, dự án đáp ứng quy định tại Điều 18 của Luật này.
+
+2. Cơ quan, tổ chức, cá nhân và người đứng đầu tổ chức quyết định chủ trương đầu tư chương trình, dự án có thời gian thực hiện trong 02 kỳ kế hoạch đầu tư công trung hạn liên tiếp phải bảo đảm tổng số giá trị tổng mức đầu tư của các chương trình, dự án phải thực hiện trong kế hoạch đầu tư công trung hạn giai đoạn sau không vượt quá 20% tổng số vốn kế hoạch đầu tư công trung hạn giai đoạn trước của Bộ, cơ quan trung ương, địa phương đó.
+
+**Điều 90. Quyền và trách nhiệm của chủ chương trình, chủ đầu tư liên quan đến lập chương trình, dự án**
+
+1. Chịu trách nhiệm trước pháp luật về nội dung của hồ sơ trình cấp có thẩm quyền thẩm định, thẩm tra, quyết định.
+
+2. Cung cấp các tài liệu cần thiết cho các cơ quan thẩm định, thẩm tra chương trình, dự án.
+
+3. Đề xuất các giải pháp huy động các nguồn vốn để thực hiện chương trình, dự án theo đúng tiến độ, thời gian quy định.
+
+4. Chịu trách nhiệm trước pháp luật về lập chương trình, dự án.
+
+**Điều 91. Quyền và trách nhiệm của cơ quan, tổ chức, cá nhân quyết định đầu tư chương trình, dự án**
+
+1. Quyết định đầu tư chương trình, dự án đúng chủ trương đầu tư đã được cấp có thẩm quyền quyết định, phù hợp với khả năng cân đối vốn thuộc nguồn vốn cấp mình quản lý, theo đúng tiêu chuẩn, quy chuẩn trong đầu tư và kết quả thẩm định.
+
+2. Tổ chức thẩm định chương trình, dự án trước khi phê duyệt, bao gồm thẩm định nguồn vốn và khả năng cân đối vốn.
+
+3. Cân đối vốn để thanh toán các chi phí lập, thẩm định chương trình, dự án thuộc cấp mình quản lý.
+
+4. Chỉ đạo chủ chương trình, chủ đầu tư thực hiện chương trình, dự án đúng tiến độ, bảo đảm chất lượng trong phạm vi kế hoạch đầu tư được duyệt.
+
+5. Quyết định việc điều chỉnh, tạm ngừng, hủy bỏ chương trình, dự án.
+
+6. Tổ chức theo dõi, kiểm tra, đánh giá chương trình, dự án và hoạt động của chủ chương trình, chủ đầu tư trong quá trình thực hiện chương trình, dự án.
+
+7. Chịu trách nhiệm trước pháp luật về hành vi vi phạm quy định về thẩm quyền trong quá trình lựa chọn chủ chương trình, chủ đầu tư.
+
+**Điều 92. Quyền và trách nhiệm của cơ quan, tổ chức, cá nhân liên quan đến tư vấn thiết kế chương trình, dự án**
+
+1. Tổ chức tư vấn thiết kế có quyền yêu cầu chủ chương trình, chủ đầu tư cung cấp thông tin, tài liệu liên quan đến việc thiết kế chương trình, dự án.
+
+2. Thiết kế chương trình, dự án theo đúng quy chuẩn, tiêu chuẩn, định mức và giải pháp kỹ thuật bảo đảm chất lượng; không được thiết kế vượt quá quy chuẩn, tiêu chuẩn, định mức quy định.
+
+3. Chịu trách nhiệm về kết quả thiết kế chương trình, dự án.
+
+**Điều 93. Quyền và trách nhiệm của cơ quan, tổ chức, cá nhân liên quan đến thẩm định kế hoạch, chương trình, dự án**
+
+1. Cơ quan, tổ chức, cá nhân liên quan đến thẩm định kế hoạch, chương trình, dự án thực hiện việc thẩm định theo quy định của pháp luật, chịu trách nhiệm về kết quả thẩm định và những kiến nghị của mình.
+
+2. Việc thẩm định cần bảo đảm tính độc lập, trung thực, khách quan, tuân thủ quy định của Luật này và quy định khác của pháp luật có liên quan.
+
+**Điều 94. Quyền và trách nhiệm của chủ chương trình, chủ đầu tư trong quản lý, thực hiện chương trình, dự án**
+
+1. Tổ chức quản lý, thực hiện chương trình, dự án, bảo đảm đúng mục tiêu, tiến độ, chất lượng và hiệu quả của chương trình, dự án.
+
+2. Báo cáo, cung cấp thông tin cho các cơ quan quản lý, cơ quan Mặt trận Tổ quốc Việt Nam các cấp về việc thực hiện chương trình, dự án theo quy định của Luật này và quy định khác của pháp luật có liên quan.
+
+**Điều 95. Quyền và trách nhiệm của Ban quản lý chương trình, dự án**
+
+1. Đề xuất các phương án, giải pháp và tổ chức quản lý, thực hiện chương trình, dự án bảo đảm đúng mục tiêu, tiến độ, chất lượng theo ủy quyền của chủ chương trình, chủ đầu tư.
+
+2. Báo cáo chủ chương trình, chủ đầu tư về tình hình triển khai thực hiện chương trình, dự án.
+
+**Điều 96. Quyền và trách nhiệm của cơ quan, tổ chức, cá nhân thực hiện theo dõi, đánh giá và kiểm tra kế hoạch, chương trình, dự án**
+
+1. Người đứng đầu Bộ, cơ quan trung ương và địa phương, Chủ tịch Ủy ban nhân dân cấp huyện, cấp xã, chủ chương trình, chủ đầu tư chịu trách nhiệm về hậu quả do không tổ chức thực hiện theo dõi, đánh giá, kiểm tra kế hoạch, chương trình, dự án hoặc không báo cáo theo quy định.
+
+2. Cơ quan, tổ chức, cá nhân được giao nhiệm vụ thực hiện theo dõi, kiểm tra, đánh giá kế hoạch, chương trình, dự án phải chịu trách nhiệm về nội dung các báo cáo của mình.
+
+3. Chủ chương trình, chủ đầu tư chịu trách nhiệm về nội dung báo cáo và chịu trách nhiệm theo quy định của pháp luật do báo cáo, cung cấp thông tin không chính xác về tình hình thực hiện đầu tư trong phạm vi quản lý.
+
+**Điều 97. Hệ thống thông tin và cơ sở dữ liệu quốc gia về đầu tư công**
+
+1. Hệ thống thông tin và cơ sở dữ liệu quốc gia về đầu tư công được xây dựng, triển khai thống nhất trên phạm vi cả nước phục vụ cho hoạt động quản lý nhà nước về đầu tư công, bao gồm việc tổng hợp, báo cáo, giao, điều chỉnh kế hoạch đầu tư công trung hạn và hằng năm; theo dõi, đánh giá chương trình, dự án đầu tư công; quản lý, lưu trữ, công khai dữ liệu theo quy định.
+
+2. Trách nhiệm xây dựng, quản lý, triển khai và ứng dụng Hệ thống thông tin và cơ sở dữ liệu quốc gia về đầu tư công được quy định như sau:
+
+a) Bộ Kế hoạch và Đầu tư tổ chức xây dựng, quản lý, triển khai Hệ thống thông tin và cơ sở dữ liệu quốc gia về đầu tư công;
+
+b) Bộ, cơ quan trung ương và địa phương triển khai ứng dụng Hệ thống thông tin và cơ sở dữ liệu quốc gia về đầu tư công trong phạm vi quản lý.
+
+3. Thông tin, dữ liệu thuộc Hệ thống thông tin và cơ sở dữ liệu quốc gia về đầu tư công là thông tin, dữ liệu gốc của các chương trình, dự án và kế hoạch đầu tư công.
+
+4. Chính phủ quy định chi tiết Điều này.
+
+**Điều 98. Xử lý vi phạm**
+
+Cơ quan, tổ chức, cá nhân có hành vi vi phạm quy định của Luật này thì tùy theo tính chất, mức độ vi phạm mà bị xử lý kỷ luật, xử phạt vi phạm hành chính hoặc bị truy cứu trách nhiệm hình sự; nếu gây thiệt hại thì phải bồi thường theo quy định của pháp luật.
 
 **Chương VI**
 
 **ĐIỀU KHOẢN THI HÀNH**
 
-**Điều 31. Tổ chức thực hiện**
+**Điều 99. Sửa đổi điểm a khoản 2 Điều 25 của Luật Bảo vệ môi trường số 55/2014/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 35/2018/QH14**
 
-1. Bộ trưởng Bộ Giáo dục và Đào tạo, Bộ trưởng Bộ Lao động \- Thương binh và Xã hội theo thẩm quyền chủ trì, phối hợp với các bộ, ngành liên quan hướng dẫn tổ chức thực hiện Nghị định này.
+Sửa đổi điểm a khoản 2 Điều 25 của Luật Bảo vệ môi trường như sau:
 
-2. Ủy ban nhân dân cấp tỉnh xây dựng và trình Hội đồng nhân dân cấp tỉnh tiêu chí xác định địa bàn không đủ trường công lập tại địa phương.
+“a) Quyết định chủ trương đầu tư dự án đối với các đối tượng quy định tại Điều 18 của Luật này trong trường hợp pháp luật quy định dự án phải quyết định chủ trương đầu tư.
 
-3. Căn cứ điều kiện kinh tế \- xã hội của cả nước và các chỉ số lạm phát, tốc độ tăng trưởng kinh tế hằng năm, Hội đồng nhân dân cấp tỉnh quyết định khung và mức tăng học phí hằng năm không quá 7,5%/năm từ năm học 2023 \- 2024; cơ sở giáo dục nghề nghiệp và cơ sở giáo dục đại học công lập xác định mức học phí tương ứng với mức độ tự chủ tài chính và kiểm định chất lượng theo quy định tại khoản 2 Điều 10 và khoản 2 Điều 11, mức tăng học phí không quá 12,5%/năm từ năm học 2026 \- 2027.
+Đối với dự án đầu tư công, cấp có thẩm quyền căn cứ đánh giá sơ bộ tác động môi trường để quyết định chủ trương đầu tư; căn cứ đánh giá tác động môi trường để quyết định đầu tư đối với các đối tượng quy định tại Điều 18 của Luật này. Chính phủ quy định chi tiết đối tượng, nội dung đánh giá sơ bộ tác động môi trường;”.
 
-Cơ chế thu, quản lý học phí đối với các cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; nguyên tắc, phương pháp xác định giá dịch vụ trong lĩnh vực giáo dục, đào tạo tiếp tục thực hiện theo quy định tại Nghị định này.
+**Điều 100. Hiệu lực thi hành**
 
-4. Trường hợp cơ quan giải quyết thủ tục hành chính khai thác cơ sở dữ liệu dân cư và cơ sở dữ liệu có đầy đủ thông tin, hồ sơ theo yêu cầu của Nghị định này thì học sinh, sinh viên không phải nộp các giấy tờ có liên quan để hưởng chính sách miễn giảm học phí, hỗ trợ chi phí học tập, hỗ trợ đóng học phí.
+1. Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2020.
 
-**Điều 32. Điều khoản chuyển tiếp**
+2. Luật Đầu tư công số 49/2014/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 28/2018/QH14 hết hiệu lực kể từ ngày Luật này có hiệu lực thi hành, trừ trường hợp quy định tại khoản 3 và khoản 5 Điều 101 của Luật này.
 
-1. Đối với cơ sở giáo dục mầm non, phổ thông công lập đang thực hiện chương trình chất lượng cao theo quy định tại khoản 3 Điều 3 Nghị định số 86/2015/NĐ\-CP ngày 02 tháng 10 năm 2015 của Chính phủ nếu đạt mức kiểm định chất lượng cơ sở giáo dục theo tiêu chuẩn do Bộ Giáo dục và Đào tạo quy định được tự xác định mức thu học phí trên cơ sở định mức kinh tế \- kỹ thuật, định mức chi phí do cơ sở giáo dục ban hành; trình Ủy ban nhân dân cấp tỉnh để đề nghị Hội đồng nhân dân cấp tỉnh xem xét phê duyệt mức thu học phí.
+**Điều 101. Quy định chuyển tiếp**
 
-Trường hợp không đạt kiểm định chất lượng theo quy định trên thì tiếp tục áp dụng mức thu học phí theo Đề án chương trình chất lượng cao đã được phê duyệt tối đa trong thời gian 02 năm tính từ năm học 2021 \- 2022 để thực hiện công tác kiểm định chất lượng. Nếu sau thời gian 02 năm vẫn không đạt yêu cầu về kiểm định chất lượng thì áp dụng mức học phí tương ứng với cấp học và mức độ tự chủ tài chính do Hội đồng nhân dân cấp tỉnh quyết định.
+1. Đối với chương trình, dự án đã được bố trí vốn trong kế hoạch đầu tư được cấp có thẩm quyền quyết định đầu tư trước ngày 01 tháng 01 năm 2015 mà không được bố trí vốn trong kế hoạch đầu tư công trung hạn giai đoạn 2016 \- 2020 thì việc điều chỉnh quyết định đầu tư chương trình, dự án được thực hiện theo quy định của Luật này.
 
-2. Đối với các đơn vị sự nghiệp công thực hiện thí điểm đổi mới cơ chế hoạt động theo Nghị quyết số 77/NQ\-CP ngày 24 tháng 10 năm 2014 của Chính phủ về thí điểm đổi mới cơ chế hoạt động đối với cơ sở giáo dục đại học công lập giai đoạn 2014 \- 2017 thì thực hiện quy định về học phí, chế độ miễn giảm học phí, hỗ trợ chi phí học tập quy định tại Nghị định này từ năm học 2021 \- 2022.
+2. Đối với chương trình, dự án đã được quyết định chủ trương đầu tư, quyết định đầu tư theo quy định của Luật Đầu tư công số 49/2014/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 28/2018/QH14 mà chưa có trong kế hoạch đầu tư công được cấp có thẩm quyền quyết định thì việc điều chỉnh quyết định chủ trương đầu tư, quyết định đầu tư chương trình, dự án được thực hiện theo quy định của Luật này.
 
-3. Đối với cơ sở giáo dục đại học đang thực hiện chương trình chất lượng cao theo quy định tại khoản 3 Điều 3 Nghị định số 86/2015/NĐ\-CP ngày 02 tháng 10 năm 2015 của Chính phủ nếu đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn do Bộ Giáo dục và Đào tạo quy định hoặc đạt mức kiểm định chất lượng chương trình đào tạo theo tiêu chuẩn nước ngoài hoặc tương đương được tự xác định học phí của chương trình đó trên cơ sở định mức kinh tế \- kỹ thuật do cơ sở giáo dục ban hành, thực hiện công khai giải trình với người học và xã hội.
+3. Chương trình, dự án đã hoàn thành thủ tục lập, thẩm định trước ngày Luật này có hiệu lực thì tiếp tục thủ tục trình cấp có thẩm quyền xem xét, quyết định theo quy định của Luật Đầu tư công số 49/2014/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 28/2018/QH14 và các văn bản quy định chi tiết, hướng dẫn thi hành.
 
-Trường hợp không đạt kiểm định chất lượng chương trình theo quy định trên thì được áp dụng mức thu học phí theo Đề án chương trình chất lượng cao đã được phê duyệt trong thời gian tối đa 02 năm tính từ năm học 2021 \- 2022 để thực hiện công tác kiểm định chất lượng. Nếu sau thời gian 02 năm vẫn không đạt yêu cầu kiểm định chất lượng thì áp dụng mức trần học phí tương ứng với từng nhóm ngành và mức độ tự chủ tài chính theo quy định tại Nghị định này.
+4. Chỉ bố trí vốn kế hoạch đầu tư công để thanh toán nợ đọng xây dựng cơ bản phát sinh trước ngày 01 tháng 01 năm 2015.
 
-4. Cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; giá dịch vụ trong lĩnh vực giáo dục, đào tạo quy định tại Nghị định này áp dụng từ năm học 2021 \- 2022.
+5. Đối với kế hoạch vốn đầu tư công năm 2019 và năm 2020, các Bộ, cơ quan trung ương, địa phương được phép thực hiện và giải ngân theo quy định của Luật Đầu tư công số 49/2014/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 28/2018/QH14 và các văn bản quy định chi tiết, hướng dẫn thi hành.
 
-**Điều 33. Hiệu lực thi hành**
-
-1. Nghị định này có hiệu lực từ ngày 15 tháng 10 năm 2021 và thay thế Nghị định số 86/2015/NĐ\-CP ngày 02 tháng 10 năm 2015 của Chính phủ quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập từ năm học 2015 \- 2016 đến năm học 2020 \- 2021 và Nghị định số 145/2018/NĐ\-CP ngày 16 tháng 10 năm 2018 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 86/2015/NĐ\-CP ngày 02 tháng 10 năm 2015 của Chính phủ quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập từ năm học 2015 \- 2016 đến năm học 2020 \- 2021.
-
-2. Các Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương, các tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Nghị định này.
-
- 
-|  ***Nơi nhận:*** \
- \- Ban Bí thư Trung ương Đảng; \
- \- Thủ tướng, các Phó Thủ tướng Chính phủ; \
- \- Các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ; \
- \- HĐND, UBND các tỉnh, thành phố trực thuộc trung ương; \
- \- Văn phòng Trung ương và các Ban của Đảng; \
- \- Văn phòng Tổng Bí thư; \
- \- Văn phòng Chủ tịch nước; \
- \- Hội đồng Dân tộc và các Ủy ban của Quốc hội; \
- \- Văn phòng Quốc hội; \
- \- Tòa án nhân dân tối cao; \
- \- Viện kiểm sát nhân dân tối cao; \
- \- Ủy ban Giám sát tài chính Quốc gia; \
- \- Kiểm toán nhà nước; \
- \- Ngân hàng Chính sách xã hội; \
- \- Ngân hàng Phát triển Việt Nam; \
- \- Ủy ban trung ương Mặt trận Tổ quốc Việt Nam; \
- \- Cơ quan trung ương của các đoàn thể; \
- \- VPCP: BTCN, các PCN, Trợ lý TTg, TGĐ Cổng TTĐT, các Vụ, Cục, đơn vị trực thuộc, Công báo; \
- \- Lưu: VT, KGVX (2b)|**KT. THỦ TƯỚNG** \
-**PHÓ THỦ TƯỚNG** \
- \
- \
- \
- \
-**Vũ Đức Đam**|
-|:---|:---:|
-
-
-** **
-
-**PHỤ LỤC I**
-
-DANH MỤC VÙNG CÓ ĐIỀU KIỆN KINH TẾ\- XÃ HỘI KHÓ KHĂN VÀ ĐẶC BIỆT KHÓ KHĂN \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021)*
-
-**CÁC VĂN BẢN CỦA CƠ QUAN CÓ THẨM QUYỀN BAN HÀNH DANH MỤC VÙNG, ĐỊA BÀN CÓ ĐIỀU KIỆN KINH TẾ \- XÃ HỘI KHÓ KHĂN VÀ ĐẶC BIỆT KHÓ KHĂN**
-
-\- Quyết định 131/QĐ\-TTg ngày 25 tháng 01 năm 2017 của Thủ tướng Chính phủ về việc phê duyệt danh sách xã đặc biệt khó khăn vùng bãi ngang ven biển và hải đảo giai đoạn 2016 \- 2020.
-
-\- Quyết định số 861/QĐ\-TTg ngày 04 tháng 6 năm 2021 của Thủ tướng Chính phủ về phê duyệt danh sách các xã khu vực III, khu vực II, khu vực I thuộc vùng đồng bào dân tộc thiểu số và miền núi giai đoạn 2021 \- 2025.
-
-\- Các quyết định khác của cơ quan có thẩm quyền sửa đổi, bổ sung hoặc quy định mới về phê duyệt danh sách các xã đặc biệt khó khăn vùng bãi ngang ven biển và hải đảo, thôn đặc biệt khó khăn, xã khu vực III vùng dân tộc thiểu số và miền núi (nếu có).
-
- 
-
-**PHỤ LỤC II**
-
-ĐƠN ĐỀ NGHỊ MIỄN, GIẢM HỌC PHÍ \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
-**Độc lập \- Tự do \- Hạnh phúc**  \
- **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**
-
-**ĐƠN ĐỀ NGHỊ MIỄN, GIẢM HỌC PHÍ**
-
-*(Dùng cho cha mẹ (hoặc người giám hộ) trẻ em học mẫu giáo và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên công lập)*
-
-Kính gửi: Tên cơ sở giáo dục mầm non và phổ thông công lập.
-
-Họ và tên (1) :....................................................................................................................... 
-
-Là cha/mẹ (hoặc người giám hộ) của em (2) :..................................................................... 
-
-Hiện đang học tại lớp:.......................................................................................................... 
-
-Trường:................................................................................................................................ 
-
-Thuộc đối tượng: *(ghi rõ đối tượng được quy định tại Nghị định số...)*
-
-Căn cứ vào Nghị định số …/2021/NĐ\-CP của Chính phủ, tôi làm đơn này đề nghị được xem xét để được miễn, giảm học phí theo quy định hiện hành.
-
- 
-| |*..., ngày... tháng ... năm...* \
-**Người làm đơn (3)** \
- *(Ký tên và ghi rõ họ tên)*  |
-|:---|:---:|
-
-
-(1) Đối với đối tượng là trẻ em mẫu giáo ghi tên cha mẹ (hoặc người giám hộ), đối với học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên ghi tên của học sinh.
-
-(2) Nếu là học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên trực tiếp viết đơn thì không phải điền dòng này.
-
-(3) Cha mẹ (hoặc người giám hộ)/học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên.
-
- 
-
-**PHỤ LỤC III**
-
-ĐƠN ĐỀ NGHỊ HỖ TRỢ CHI PHÍ HỌC TẬP \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
-**Độc lập \- Tự do \- Hạnh phúc**  \
- **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**
-
-**ĐƠN ĐỀ NGHỊ HỖ TRỢ CHI PHÍ HỌC TẬP** \
- *(Dùng cho các đối tượng được hỗ trợ chi phí học tập theo quy định tại Nghị định số …/2021/NĐ\-CP)*
-
-Kính gửi: Tên cơ sở giáo dục mầm non và phổ thông.
-
-Họ và tên (1):....................................................................................................................... 
-
-Là cha/mẹ (hoặc người giám hộ) của em (2):..................................................................... 
-
-Hiện đang học tại lớp:......................................................................................................... 
-
-Trường:............................................................................................................................... 
-
-Thuộc đối tượng: *(ghi rõ đối tượng được quy định tại Nghị định số …./2021/NĐ\-CP)*
-
-Căn cứ vào Nghị định số …/2021/NĐ\-CP của Chính phủ, tôi làm đơn này đề nghị được xem xét để được cấp tiền hỗ trợ chi phí học tập theo quy định hiện hành.
-
- 
-| |*..., ngày... tháng ... năm...* \
-**Người làm đơn (3)** \
- *(Ký tên và ghi rõ họ tên)*  |
-|:---|:---:|
-
-
-(1) Đối với đối tượng là trẻ em mẫu giáo ghi tên cha mẹ (hoặc người giám hộ), đối với học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên ghi tên của học sinh.
-
-(2) Nếu là học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên trực tiếp viết đơn thì không phải điền dòng này.
-
-(3) Cha mẹ (hoặc người giám hộ)/học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên.
-
- 
-
-**PHỤ LỤC IV**
-
-ĐƠN ĐỀ NGHỊ MIỄN GIẢM HỌC PHÍ VÀ HỖ TRỢ CHI PHÍ HỌC TẬP \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
-**Độc lập \- Tự do \- Hạnh phúc**  \
- **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**
-
-**ĐƠN ĐỀ NGHỊ MIỄN GIẢM HỌC PHÍ VÀ HỖ TRỢ CHI PHÍ HỌC TẬP** \
- *(Dùng cho các đối tượng được hưởng đồng thời chính sách miễn, giảm học phí và hỗ trợ chi phí học tập theo quy định tại Nghị định số ..../2021/NĐ\-CP)*
-
-Kính gửi: Tên cơ sở giáo dục mầm non và phổ thông.
-
-Họ và tên (1) :...................................................................................................................... 
-
-Là cha/mẹ (hoặc người giám hộ) của em (2):..................................................................... 
-
-Hiện đang học tại lớp:......................................................................................................... 
-
-Trường:............................................................................................................................... 
-
-Thuộc đối tượng: *(ghi rõ đối tượng được quy định tại Nghị định số …/2021/NĐ\-CP)*
-
-Căn cứ vào Nghị định số …/2021/NĐ\-CP của Chính phủ, tôi làm đơn này đề nghị được xem xét để được miễn giảm học phí và cấp tiền hỗ trợ chi phí học tập theo quy định hiện hành.
-
- 
-| |*..., ngày... tháng ... năm...* \
-**Người làm đơn (3)** \
- *(Ký tên và ghi rõ họ tên)*  |
-|:---|:---:|
-
-
-(1) Đối với đối tượng là trẻ em mẫu giáo ghi tên cha mẹ (hoặc người giám hộ), đối với học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên ghi tên của học sinh.
-
-(2) Nếu là học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên trực tiếp viết đơn thì không phải điền dòng này.
-
-(3) Cha mẹ (hoặc người giám hộ)/học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên.
-
- 
-
-**PHỤ LỤC V**
-
-ĐƠN ĐỀ NGHỊ MIỄN, GIẢM HỌC PHÍ \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
-**Độc lập \- Tự do \- Hạnh phúc**  \
- **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**
-
-**ĐƠN ĐỀ NGHỊ MIỄN, GIẢM HỌC PHÍ** \
-* (Dùng cho học sinh, sinh viên đang học tại các cơ sở* \
-*giáo dục nghề nghiệp và giáo dục đại học công lập)*
-
-Kính gửi: Tên cơ sở giáo dục nghề nghiệp và giáo dục đại học công lập.
-
-Họ và tên:............................................................................................................................ 
-
-Ngày, tháng, năm sinh:....................................................................................................... 
-
-Nơi sinh:.............................................................................................................................. 
-
-Lớp:.................................... Khóa:................................................ Khoa:............................ 
-
-Mã số sinh viên:.................................................................................................................. 
-
-Thuộc đối tượng: *(ghi rõ đối tượng được quy định tại Nghị định số …/2021/NĐ\-CP)*
-
-Đã được hưởng chế độ miễn giảm học phí (ghi rõ tên cơ sở đã được hưởng chế độ miễn giảm học phí, cấp học và trình độ đào tạo):
-
-Căn cứ vào Nghị định số …/2021/NĐ\-CP của Chính phủ, tôi làm đơn này đề nghị được Nhà trường xem xét để được miễn, giảm học phí theo quy định hiện hành.
-
- 
-| |*..., ngày... tháng ... năm...* \
-**Người làm đơn (3)** \
- *(Ký tên và ghi rõ họ tên)*  |
-|:---|:---:|
-
-
-** **
-
-**PHỤ LỤC VI**
-
-ĐƠN ĐỀ NGHỊ CHI TRẢ TIỀN MIỄN, GIẢM HỌC PHÍ, HỖ TRỢ TIỀN ĐÓNG HỌC PHÍ \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
-**Độc lập \- Tự do \- Hạnh phúc**  \
- **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**
-
-**ĐƠN ĐỀ NGHỊ CHI TRẢ TIỀN MIỄN, GIẢM HỌC PHÍ, HỖ TRỢ TIỀN ĐÓNG HỌC PHÍ** \
- *(Dùng cho cha mẹ (hoặc người giám hộ) trẻ em mẫu giáo và học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên dân lập, tư thục)*
-
-Kính gửi: Tên cơ sở giáo dục mầm non, phổ thông dân lập, tư thục.
-
-Họ và tên (1) :...................................................................................................................... 
-
-Là cha/mẹ (hoặc người giám hộ) của em (2):..................................................................... 
-
-Hiện đang học tại lớp:......................................................................................................... 
-
-Là học sinh trường:............................................................................................................. 
-
-Thuộc đối tượng: *(ghi rõ đối tượng được quy định tại Nghị định số …/2021/NĐ\-CP)*
-
-Căn cứ vào Nghị định số …/2021/NĐ\-CP của Chính phủ, em làm đơn này đề nghị được xem xét để được cấp bù tiền miễn giảm học phí, cấp hỗ trợ tiền đóng học phí cho học sinh tiểu học tư thục theo quy định và chế độ hiện hành.
-
- 
-| |*..., ngày... tháng ... năm...* \
-**Người làm đơn (3)** \
- *(Ký tên và ghi rõ họ tên)*  |
-|:---|:---:|
-
-
-(1) Đối với đối tượng là trẻ em mẫu giáo ghi tên cha mẹ (hoặc người giám hộ) đối với học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên ghi tên của học sinh.
-
-(2) Nếu là học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên trực tiếp viết đơn thì không phải điền dòng này.
-
-(3) Cha mẹ (hoặc người giám hộ)/học sinh phổ thông, học viên học tại cơ sở giáo dục thường xuyên.
-
- 
-
-**PHỤ LỤC VII**
-
-ĐƠN ĐỀ NGHỊ CHI TRẢ TIỀN MIỄN, GIẢM HỌC PHÍ \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
-**Độc lập \- Tự do \- Hạnh phúc**  \
- **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**
-
-**ĐƠN ĐỀ NGHỊ CHI TRẢ TIỀN MIỄN, GIẢM HỌC PHÍ** \
- *(Dùng cho học sinh, sinh viên đang học tại các cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục)*
-
-Kính gửi: Tên cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục.
-
-Họ và tên:............................................................................................................................. 
-
-Ngày, tháng, năm sinh:........................................................................................................ 
-
-Nơi sinh:.............................................................................................................................. 
-
-Lớp:......................................... Khóa                                       Khoa:................................... 
-
-Họ tên cha/mẹ học sinh, sinh viên:...................................................................................... 
-
-Hộ khẩu thường trú (ghi đầy đủ):........................................................................................ 
-
-Xã (Phường):.................................................... Huyện (Quận):.......................................... 
-
-Tỉnh (Thành phố):................................................................................................................ 
-
-Thuộc đối tượng: *(ghi rõ đối tượng được quy định tại Nghị định số …/2021/NĐ\-CP)*
-
-Căn cứ vào Nghị định số …./2021/NĐ\-CP của Chính phủ, tôi làm đơn này đề nghị được xem xét, giải quyết để được cấp bù tiền hỗ trợ miễn, giảm học phí theo quy định và chế độ hiện hành.
-
- 
-| |*..., ngày... tháng ... năm...* \
-**Người làm đơn (3)** \
- *(Ký tên và ghi rõ họ tên)*  |
-|:---|:---:|
-
+*Luật này được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XIV, kỳ họp thứ 7 thông qua ngày 13 tháng 6 năm 2019.*
 
 * *
-
-**PHỤ LỤC VIII**
-
-GIẤY XÁC NHẬN \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM** \
-**Độc lập \- Tự do \- Hạnh phúc**  \
- **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**
-
-**GIẤY XÁC NHẬN**
-
-*(Dùng cho các cơ sở giáo dục mầm non, phổ thông dân lập, tư thục; cơ sở giáo dục thường xuyên tư thục; cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục)*
-
-Kính gửi:.............................................................. (1)
-
-**Phần I: Dùng cho cơ sở giáo dục mầm non, phổ thông dân lập, tư thục, cơ sở giáo dục thường xuyên tư thục xác nhận**
-
-Trường:................................................................................................................................. 
-
-Xác nhận em:........................................................................................................................ 
-
-Hiện đang học tại lớp................................. Học kỳ:.............. Năm học:................................ 
-
-**Phần II: Dùng cho các cơ sở giáo dục nghề nghiệp và giáo dục đại học tư thục**
-
-Trường:................................................................................................................................. 
-
-Xác nhận anh/chị: ................................................................................................................ 
-
-Hiện là học sinh, sinh viên năm thứ ........  Học kỳ: ........................ Năm học…. 
-
-Khoa.............. khóa ……………. học thời gian khóa học... (năm).
-
-Hình thức đào tạo: .......................................................................  (ghi rõ hình thức đào tạo: chính quy, liên thông ...).
-
-Kỷ luật:....................................... (ghi rõ mức độ kỷ luật nếu có).
-
-Mức thu học phí: ………………. đồng/tháng *(nếu thu học phí theo tín chỉ thì phải quy đổi về mức thu theo niên chế).*
-
-Đề nghị Phòng Giáo dục và Đào tạo/Sở Giáo dục và Đào tạo/Phòng Lao động \- Thương binh và Xã hội xem xét giải quyết tiền hỗ trợ miễn, giảm học phí, hỗ trợ đóng học phí theo quy định hiện hành.
-
-* *
-| |*..., ngày.... tháng... năm...* \
-**Thủ trưởng đơn vị** \
- *(Ký tên, đóng dấu)*  |
+| |**CHỦ TỊCH QUỐC HỘI** \
+ \
+ \
+ \
+ \
+**Nguyễn Thị Kim Ngân**|
 |:---|:---:|
-
-
-(1) Trẻ em học mẫu giáo, học sinh trung học cơ sở: gửi Phòng Giáo dục và Đào tạo; học sinh học trung học phổ thông: gửi Sở Giáo dục và Đào tạo; học sinh, sinh viên học ở cơ sở giáo dục nghề nghiệp và giáo dục đại học: gửi Phòng Lao động \- Thương binh và Xã hội.
-
- 
-
-**PHỤ LỤC IX**
-
-DỰ TOÁN KINH PHÍ CẤP BÙ TIỀN MIỄN, GIẢM HỌC PHÍ \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**Tên cơ sở giáo dục nghề nghiệp/giáo dục đại học …**
-
-**DỰ TOÁN KINH PHÍ CẤP BÙ TIỀN MIỄN, GIẢM HỌC PHÍ NĂM...**
-|**TT**|**Nội dung**|**Số đối tượng được miễn, giảm học phí**|**Mức thu học phí/tháng**|**Số tháng miễn, giảm**|**Tổng KP cấp bù tiền miễn, giảm học phí**|**Ghi chú**|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|1|Sau Đại học| | | | | |
-| |\- Tiến sĩ| | | | | |
-| |Nhóm ngành...| | | | | |
-| |\- Thạc sĩ| | | | | |
-| |Nhóm ngành...| | | | | |
-|2|Đại học| | | | | |
-| |Nhóm ngành...| | | | | |
-| |...| | | | | |
-|3|Cao đẳng| | | | | |
-| |Nhóm ngành...| | | | | |
-| |…| | | | | |
-|4|Trung cấp| | | | | |
-| |Nhóm ngành...| | | | | |
-| |...| | | | | |
-| |**Tổng cộng**| | | | | |
-
-
- 
-| |*..., ngày.... tháng... năm...* \
-**Thủ trưởng đơn vị** \
- *(Ký tên, đóng dấu)*  |
-|:---|:---:|
-
-
- 
-
-**PHỤ LỤC X**
-
-TỔNG HỢP DỰ TOÁN KINH PHÍ CẤP BÙ TIỀN MIỄN, GIẢM HỌC PHÍ \
- *(Kèm theo Nghị định số 81/2021/NĐ\-CP ngày 27 tháng 8 năm 2021 của Chính phủ)*
-
-**Bộ, ngành, địa phương...**
-
-**TỔNG HỢP DỰ TOÁN KINH PHÍ CẤP BÙ TIỀN MIỄN, GIẢM HỌC PHÍ** \
-**NĂM...**
-|**TT**|**Tên cơ sở giáo dục nghề nghiệp/giáo dục đại học**|**Số đối tượng được miễn, giảm học phí**|**Tổng dự toán kinh phí**|**Ghi chú**|
-|:---:|:---:|:---:|:---:|:---:|
-|1|Trường...| | | |
-|2|Trường...| | | |
-|3|Trường...| | | |
-|…| | | | |
-| |**Tổng cộng**| | | |
 
 
  

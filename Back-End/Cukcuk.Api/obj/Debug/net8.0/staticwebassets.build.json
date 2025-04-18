@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qYxsMRHWuSbmpJBu0ySwCvY8CWKYgsAbE2BkWPkYQ34=",
+  "Hash": "EHVyec0eudhOlPZYbZSynvhSavfmqN7EX2ceWy8ed9Y=",
   "Source": "Cukcuk.Api",
   "BasePath": "_content/Cukcuk.Api",
   "Mode": "Default",
@@ -141,27 +141,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\03b5bceb-33ef-42d7-912a-f32acb2cce46_Quyết định 02_2022_QD-TTg.doc"
-    },
-    {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ktfv7vz01e",
-      "Integrity": "KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc"
     },
     {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\055104ba-3170-406a-a33c-827ba6522ca0_Thông tư 69_2017_TT-BTC.doc",
@@ -2222,27 +2201,6 @@
       "OriginalItemSpec": "wwwroot\\files\\427f57b0-f1b8-423e-8231-e679f2382cd6_Quyết định 2014_QD-TTg.doc"
     },
     {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc",
-      "SourceId": "Cukcuk.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
-      "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "files/4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347#[.{fingerprint}]?.doc",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "wqaxv4d82a",
-      "Integrity": "WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc"
-    },
-    {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\44c889fc-7b62-4e63-829c-a1af55c18518_Thông tư 22_2023_QH15.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
@@ -2810,6 +2768,27 @@
       "OriginalItemSpec": "wwwroot\\files\\5220ed51-d0b5-4609-bec1-da5fcc77da44_Nghị định 32_2019_ND-CP.doc"
     },
     {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ktfv7vz01e",
+      "Integrity": "KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc"
+    },
+    {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\540ed4b9-1a2a-429c-aac4-89bcfbdfb919_Nghị định 60_2018_ND-CP.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
@@ -3312,6 +3291,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\640dca6d-9f49-44ae-855c-856f1ae970e0_Nghị định 44_2014_ND-CP.doc"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ugkym1d3wz",
+      "Integrity": "HqZh47K4lpE1Kg4p2EMlW8F1h229qsHb+vL8GZ0EI1w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc"
     },
     {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\64dfc365-c8bc-4f2b-bb5e-5ac0e9d21153_Quyết định 129_QD-BTTTT.doc",
@@ -6527,6 +6527,27 @@
       "OriginalItemSpec": "wwwroot\\files\\c487e9ec-c3ed-4d23-8047-fb11bffb300d_Quyết định 18_QD-BCDCTMTQG.doc"
     },
     {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347#[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hx9v0nrfjp",
+      "Integrity": "BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc"
+    },
+    {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\c48d0e45-a305-46ed-8410-5279776acef1_Thông tư 24_2020_TT-BTTTT.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
@@ -6882,6 +6903,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\files\\d1663ba5-4b51-4d77-a37d-334fd47b0385_Nghị định 47_2021_ND-CP.doc"
+    },
+    {
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx",
+      "SourceId": "Cukcuk.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
+      "BasePath": "_content/Cukcuk.Api",
+      "RelativePath": "files/d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP#[.{fingerprint}]?.docx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dmg1oqfyma",
+      "Integrity": "ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx"
     },
     {
       "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\d20ba92a-37a4-497b-99ca-57ab31664704_Thông tư 107_2017_TT-BTC.doc",
@@ -8396,12 +8438,12 @@
       "OriginalItemSpec": "wwwroot\\files\\fe65c3dc-93e0-4f71-bc11-3ae0878faeb6_Chỉ thị 01_CT-BTTTT_2024.doc"
     },
     {
-      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc",
+      "Identity": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc",
       "SourceId": "Cukcuk.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\",
       "BasePath": "_content/Cukcuk.Api",
-      "RelativePath": "tmp/0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739#[.{fingerprint}]?.doc",
+      "RelativePath": "tmp/c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347#[.{fingerprint}]?.doc",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -8410,11 +8452,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zfq2lzq8d9",
-      "Integrity": "XzPrfmtKXOg9oPTTtBoDEvvSy701fqenUFy9nKN0VP8=",
+      "Fingerprint": "hx9v0nrfjp",
+      "Integrity": "BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tmp\\0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc"
+      "OriginalItemSpec": "wwwroot\\tmp\\c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc"
     }
   ],
   "Endpoints": [
@@ -8907,88 +8949,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-IdOdWFrldlHrYG4zalVM5oyLdaYDz8GW0fOIE1kjuiQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1560576"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 03:14:52 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM="
-        }
-      ]
-    },
-    {
-      "Route": "files/04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.ktfv7vz01e.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1560576"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 03:14:52 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ktfv7vz01e"
-        },
-        {
-          "Name": "label",
-          "Value": "files/04eb903b-7034-43f5-94bb-932246021a35_12_2020_TT-BGTVT_292769.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM="
         }
       ]
     },
@@ -17029,88 +16989,6 @@
       ]
     },
     {
-      "Route": "files/4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "138752"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 03:14:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
-        }
-      ]
-    },
-    {
-      "Route": "files/4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.wqaxv4d82a.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "138752"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/msword"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 03:14:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wqaxv4d82a"
-        },
-        {
-          "Name": "label",
-          "Value": "files/4438f44e-d8b1-4751-b5e3-a2430ddaa642_20_2023_QH15_513347.doc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WGxTI1wb3nrIzLZ+mKR1be9tvCWOwsRS26J8JB4aJAQ="
-        }
-      ]
-    },
-    {
       "Route": "files/44c889fc-7b62-4e63-829c-a1af55c18518_Thông tư 22_2023_QH15.59t4o3a8lm.doc",
       "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\44c889fc-7b62-4e63-829c-a1af55c18518_Thông tư 22_2023_QH15.doc",
       "Selectors": [],
@@ -19325,6 +19203,88 @@
       ]
     },
     {
+      "Route": "files/53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1560576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 08:05:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM="
+        }
+      ]
+    },
+    {
+      "Route": "files/53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.ktfv7vz01e.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1560576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 08:05:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ktfv7vz01e"
+        },
+        {
+          "Name": "label",
+          "Value": "files/53e35745-c487-44e2-b93f-fd19012e3d71_12_2020_TT-BGTVT_292769.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KCskdySjzNXz2tS33Yr7vo5mZLCu1exkCm9CQpiMLAM="
+        }
+      ]
+    },
+    {
       "Route": "files/540ed4b9-1a2a-429c-aac4-89bcfbdfb919_Nghị định 60_2018_ND-CP.2w8v5st168.doc",
       "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\540ed4b9-1a2a-429c-aac4-89bcfbdfb919_Nghị định 60_2018_ND-CP.doc",
       "Selectors": [],
@@ -21289,6 +21249,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-QOaEtj+fdiE4HT0frdNXIdBaXkcPuTgEPSrxM9Ywbp4="
+        }
+      ]
+    },
+    {
+      "Route": "files/64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "454144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HqZh47K4lpE1Kg4p2EMlW8F1h229qsHb+vL8GZ0EI1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 03:40:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HqZh47K4lpE1Kg4p2EMlW8F1h229qsHb+vL8GZ0EI1w="
+        }
+      ]
+    },
+    {
+      "Route": "files/64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.ugkym1d3wz.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "454144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HqZh47K4lpE1Kg4p2EMlW8F1h229qsHb+vL8GZ0EI1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 03:40:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ugkym1d3wz"
+        },
+        {
+          "Name": "label",
+          "Value": "files/64d0f7e0-dc16-4408-9486-0a72d799b33d_Luật 01_2021_QH15.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HqZh47K4lpE1Kg4p2EMlW8F1h229qsHb+vL8GZ0EI1w="
         }
       ]
     },
@@ -33839,6 +33881,88 @@
       ]
     },
     {
+      "Route": "files/c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 08:05:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE="
+        }
+      ]
+    },
+    {
+      "Route": "files/c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.hx9v0nrfjp.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 08:05:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hx9v0nrfjp"
+        },
+        {
+          "Name": "label",
+          "Value": "files/c4895203-ecf2-4947-8625-df39d1c2e174_20_2023_QH15_513347.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE="
+        }
+      ]
+    },
+    {
       "Route": "files/c48d0e45-a305-46ed-8410-5279776acef1_Thông tư 24_2020_TT-BTTTT.1ullw65ajj.doc",
       "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\c48d0e45-a305-46ed-8410-5279776acef1_Thông tư 24_2020_TT-BTTTT.doc",
       "Selectors": [],
@@ -35229,6 +35353,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-zIaas+uLjzGeoLgP0zaS7W84EwdVd4SUv025NboPOLw="
+        }
+      ]
+    },
+    {
+      "Route": "files/d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.dmg1oqfyma.docx",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72543"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 08:05:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dmg1oqfyma"
+        },
+        {
+          "Name": "label",
+          "Value": "files/d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="
+        }
+      ]
+    },
+    {
+      "Route": "files/d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\files\\d1d9a274-f2bc-4117-926a-e796ef85db44_5.Nghị định 49_2024_ND-CP.docx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72543"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 08:05:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZTrhQegLtY9xmhAjhnse60AntHeMoHj9Juei3hlVepY="
         }
       ]
     },
@@ -41137,8 +41343,8 @@
       ]
     },
     {
-      "Route": "tmp/0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc",
+      "Route": "tmp/c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -41147,7 +41353,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "651776"
+          "Value": "138752"
         },
         {
           "Name": "Content-Type",
@@ -41155,11 +41361,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XzPrfmtKXOg9oPTTtBoDEvvSy701fqenUFy9nKN0VP8=\""
+          "Value": "\"BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 04:05:26 GMT"
+          "Value": "Thu, 17 Apr 2025 06:48:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -41169,13 +41375,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XzPrfmtKXOg9oPTTtBoDEvvSy701fqenUFy9nKN0VP8="
+          "Value": "sha256-BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE="
         }
       ]
     },
     {
-      "Route": "tmp/0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.zfq2lzq8d9.doc",
-      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc",
+      "Route": "tmp/c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.hx9v0nrfjp.doc",
+      "AssetFile": "D:\\demo\\Back-End\\Cukcuk.Api\\wwwroot\\tmp\\c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -41184,7 +41390,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "651776"
+          "Value": "138752"
         },
         {
           "Name": "Content-Type",
@@ -41192,11 +41398,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XzPrfmtKXOg9oPTTtBoDEvvSy701fqenUFy9nKN0VP8=\""
+          "Value": "\"BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 04:05:26 GMT"
+          "Value": "Thu, 17 Apr 2025 06:48:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -41206,15 +41412,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "zfq2lzq8d9"
+          "Value": "hx9v0nrfjp"
         },
         {
           "Name": "label",
-          "Value": "tmp/0ebfa1a0-1126-45f3-bdeb-6b9a15606ca5_01_NQ-CP_594739.doc"
+          "Value": "tmp/c3396a1a-1047-496e-b0c1-9129d2380acf_20_2023_QH15_513347.doc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-XzPrfmtKXOg9oPTTtBoDEvvSy701fqenUFy9nKN0VP8="
+          "Value": "sha256-BXA+9V+Oy9tuL1Ia305VjzKujpTpgBJCfvk4KdmciKE="
         }
       ]
     }

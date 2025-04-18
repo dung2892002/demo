@@ -1,6 +1,6 @@
 <template>
   <div class="document-blocks" @scroll="closeContextMenuAndPopup">
-    <div v-for="(blocks, index) in blocksData" :key="index">
+    <div v-for="(blocks, index) in blocksData" :key="index" >
       <div class="block title">
         <div @click="toggleBlock(index)" v-if="blocksData[index].length > 0" class="control">
           <font-awesome-icon :icon="['fas', 'chevron-down']" size="2xs" v-if="showBlocks[index]" />
@@ -278,7 +278,7 @@ async function handleSelection(block: DocumentBlock) {
     fullMarkdown.value = fullMarkdown.value.slice(3, -5)
   }
 
-  // console.log('Markdown: ', fullMarkdown.value);
+  console.log('Markdown: \n', fullMarkdown.value);
 
   // Loại bỏ các thẻ HTML khỏi Markdown
   const fullText = removeHtmlTags(fullMarkdown.value);
@@ -293,14 +293,17 @@ async function handleSelection(block: DocumentBlock) {
   const indexInMarkdown = calculateIndexInMarkdown(startIndex, selectedText.value, fullText, fullMarkdown.value);
   const textLenght = getSelectedTextLengthInMarkdown(indexInMarkdown, fullMarkdown.value, selectedText.value);
 
-  // console.log('Vị trí bắt đầu trong văn bản:', startIndex);
-  // console.log('Vị trí bắt đầu trong markdown:', indexInMarkdown);
-  // console.log('Độ dài Văn bản được chọn:', selectedText.value.length);
-  // console.log('Độ dài Văn bản được chọn trong markdown:', textLenght);
+  console.log('Vị trí bắt đầu trong văn bản: ', startIndex);
+  console.log('Vị trí bắt đầu trong markdown: ', indexInMarkdown);
+  console.log('Độ dài Văn bản được chọn: ', selectedText.value.length);
+  console.log('Độ dài Văn bản được chọn trong markdown :', textLenght);
+  console.log('Văn bản được chọn: ', selectedText.value);
 
   selectedText.value = fixHTMLSubstring(fullMarkdown.value, indexInMarkdown, indexInMarkdown + textLenght).trim()
   beforeText.value = fixAndCompleteHTML(fullMarkdown.value.substring(0, indexInMarkdown).trim())
   afterText.value = fixAndCompleteHTML(fullMarkdown.value.substring(indexInMarkdown + textLenght).trim());
+
+  console.log('Markdown được chọn: ', selectedText.value);
 
   // console.log('Trước:', beforeText.value);
   // console.log('Được chọn:', selectedText.value);
@@ -1105,6 +1108,10 @@ const props = defineProps({
     type: Boolean,
     required: true,
   },
+  state: {
+    type: Boolean,
+    required: true,
+  }
 })
 
 const emits = defineEmits(['updateBlocks'])
@@ -1128,6 +1135,9 @@ const blocksData = ref<DocumentBlock[][]>([])
 const stateHandleTable = ref(false)
 //chia blocks theo contentType
 function handleSplitBlock() {
+
+  // console.time('handleSplitBlock')
+
   const firstBlocks: DocumentBlock[] = []
   const contentBlocks: DocumentBlock[] = []
   const signBlocks: DocumentBlock[] = []
@@ -1150,7 +1160,10 @@ function handleSplitBlock() {
     stateHandleTable.value = true
   }
   blocksData.value = [firstBlocks, contentBlocks, signBlocks, otherBlocks]
+
+  // console.timeEnd('handleSplitBlock')
 }
+
 
 watch(
   () => props.propBlocks,
@@ -1167,7 +1180,7 @@ watch(
 )
 
 onMounted(() => {
-
+  if (!props.state) return
   blocks.value =  props.propBlocks.map((block) => ({
     ...block,
     State: 0,
@@ -1177,4 +1190,6 @@ onMounted(() => {
 
   handleSplitBlock()
 })
+
+
 </script>

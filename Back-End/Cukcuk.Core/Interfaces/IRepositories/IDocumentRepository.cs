@@ -32,7 +32,7 @@ namespace Cukcuk.Core.Interfaces.IRepositories
 
         Task AddBlockRange(List<DocumentBlock> blocks);
 
-        Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId);
+        Task<List<DocumentBlock>> GetBlockByDocumentId(Guid documentId);
 
         Task<DocumentBlock?> GetBlockById(Guid blockId);
 

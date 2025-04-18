@@ -10,6 +10,7 @@ button {
 
   &.button--add {
     background-color: #078cf8;
+    border: 1px solid transparent;
     color: #fff;
 
     &:hover {
@@ -28,6 +29,7 @@ button {
 
   &.button--complete {
     background-color: #078cf8;
+    border: 1px solid transparent;
     color: #fff;
 
     &:hover {

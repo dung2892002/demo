@@ -207,6 +207,7 @@ namespace Cukcuk.Infrastructure.Data
 
                 entity.Property(e => e.Issuer).HasMaxLength(255);
                 entity.Property(e => e.DocumentNo).HasMaxLength(255);
+                entity.Property(e => e.DocumentName).HasMaxLength(1000);
                 entity.Property(e => e.SignerName).HasMaxLength(255);
 
                 entity.Property(e => e.CreatedAt).HasColumnType("date_time");

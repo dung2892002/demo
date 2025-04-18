@@ -226,7 +226,7 @@
         <div class="form-group">
           <div class="form__item form__item--2">
             <label for="department" class="form__label">Phòng ban</label>
-            <div class="form-select">
+            <div class="form-select" style="width: 100%;">
               <div class="select-value" @click="toggleSelectDepartment">
                 <div
                   v-for="(department, index) in employee.DepartmentName.slice(0, showMaxSelect)"
@@ -272,7 +272,7 @@
           </div>
           <div class="form__item form__item--2">
             <label for="position" class="form__label">Vị trí</label>
-            <div class="form-select">
+            <div class="form-select" style="width: 100%;">
               <div class="select-value" @click="toggleSelectPosition">
                 <div
                   v-for="(position, index) in employee.PositionName.slice(0, showMaxSelect)"

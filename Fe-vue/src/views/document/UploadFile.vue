@@ -91,7 +91,7 @@
 <script setup lang="ts">
 import ToastComponent from '@/components/ToastComponent.vue'
 import { DocumentType, type Document, type DocumentCategory } from '@/entities/Document'
-import { formatDateForm, getSrcIconDocument } from '@/ts/utils'
+import {  getSrcIconDocument } from '@/ts/utils'
 import axios from 'axios'
 import { ref, type PropType } from 'vue'
 import FileReview from './FileReview.vue'
@@ -283,7 +283,8 @@ async function SubmitFormLaw() {
     })
     cacheId.value = response.data.CacheDataId
     documentsDemo.value = response.data.Documents.map((document: Document) => {
-      document.IssueDate = formatDateForm(document.IssueDate!)
+      // document.IssueDate = formatDateForm(document.IssueDate!)
+      // document.EffectiveDate = formatDateForm(document.EffectiveDate!)
       document.MarkdownContent = ''
       return document
     })

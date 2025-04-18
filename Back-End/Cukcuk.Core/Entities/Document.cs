@@ -29,10 +29,12 @@ namespace Cukcuk.Core.Entities
         public DateTime? IssueDate { get; set; }
 
         public string? DocumentNo { get; set; }
+        public string? DocumentName { get; set; }
 
         public string? SignerName { get; set; }
-
+        public DateTime? EffectiveDate { get; set; }
         public bool IsLaw { get; set; } = false;
+
 
     }
 }

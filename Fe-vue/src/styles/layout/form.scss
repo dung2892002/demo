@@ -197,10 +197,15 @@ form label {
   }
 }
 
+
+
 .form__input--date,
 .form__input--radio {
   cursor: pointer;
 }
+
+
+
 
 .form-group--column ul {
   max-height: 300px;
@@ -227,6 +232,7 @@ form label {
   padding: 4px 10px;
   border-radius: 6px;
   z-index: 2;
+  width: 100%;
 
   .select-value {
     width: 100%;
@@ -395,7 +401,7 @@ form label {
     margin-top: 20px;
 
     .file {
-      width: 360px;
+      width: 400px;
       background: #fff;
       height: calc(100vh - 56px - 20px - 40px);
       overflow-y: scroll;
@@ -782,72 +788,3 @@ form label {
   }
 }
 
-.file-category {
-  display: flex;
-  flex-flow: column;
-  width: 50%;
-  .category--current {
-    border: 1px solid #d6d6d6;
-    padding: 4px 12px;
-    border-radius: 4px;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 6px;
-    position: relative;
-
-    &.disabled {
-      background: #f5f7fa;
-      opacity: 0.3;
-      cursor: not-allowed;
-    }
-    span {
-      display: block; /* Hoặc inline-block nếu cần */
-      white-space: nowrap; /* Không cho phép xuống dòng */
-      overflow: hidden; /* Ẩn phần nội dung vượt quá chiều rộng */
-      text-overflow: ellipsis; /* Hiển thị dấu "..." nếu nội dung vượt quá */
-      max-width: 360px;
-    }
-    .category-data {
-      display: flex;
-      flex-flow: column;
-      width: 100%;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      padding: 8px 0;
-      position: absolute;
-      top: 105%;
-      left: 0;
-      z-index: 2;
-      background: #fff;
-      max-height: 240px;
-      &.more {
-        overflow-y: scroll;
-      }
-      div {
-        padding: 8px 12px;
-      }
-      .data {
-        
-        color: #616060;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        span {
-          max-width: 300px;
-          overflow-x: hidden;
-        }
-        &.selected {
-          color: #078cf8;
-          background: #c2e3fd;
-        }
-        &:hover {
-          color: #078cf8;
-          background: #a7d5f9;
-        }
-      }
-    }
-  }
-}

@@ -283,8 +283,10 @@ namespace Cukcuk.Core.Services
             {
                 exsitingdocument.IssueDate = document.IssueDate;
                 exsitingdocument.DocumentNo = document.DocumentNo;
+                exsitingdocument.DocumentName = document.DocumentName;
                 exsitingdocument.Issuer = document.Issuer;
                 exsitingdocument.SignerName = document.SignerName;
+                exsitingdocument.EffectiveDate = document.EffectiveDate;
             }
 
             await _documentRepository.Update(exsitingdocument);
@@ -437,9 +439,15 @@ namespace Cukcuk.Core.Services
                 documentsExport.Add(new DocumentExport
                 {
                     STT = index++,
-                    CreatedAt = document.CreatedAt.ToString(),
-                    DocumentName = document.Name,
-                    Category = categories.First(c => c.Id == document.CategoryId).Name,
+                    NgayTao = document.CreatedAt.ToString(),
+                    TenFile = document.Name,
+                    LinhVuc = categories.First(c => c.Id == document.CategoryId).Name,
+                    CoQuanBanHanh = document.Issuer,
+                    NgayBanHanh = document.IssueDate?.ToString("dd/MM/yyyy"),
+                    NgayCoHieuLuc = document.EffectiveDate?.ToString("dd/MM/yyyy"),
+                    NguoiKy = document.SignerName,
+                    SoTaiLieu = document.DocumentNo,
+                    TenTaiLieu = document.DocumentName
                 });
             }
 
@@ -693,13 +701,13 @@ namespace Cukcuk.Core.Services
         }
 
 
-        private static (string CoQuan, string SoLuat, string NgayBanHanh) ExtractLawInfo(string input)
+        private static (string CoQuan, string SoLuat, string NgayBanHanh, string tenTaiLieu) ExtractLawInfo(string input)
         {
             //Console.WriteLine("input: ");
             //Console.WriteLine(input);
 
             string coQuanPattern = @"\|\*\*(.*?)\*\*";
-            string soLuatPattern = @"[Ss]ố:\s*(\d{1,5}(?:\s*/\s*\d{4})?\s*/\s*[A-ZĐ]+(?:\\?-?[A-ZĐ0-9]+)*)";
+            string soLuatPattern = @"[Ss]ố:\s*(\d{1,5}(?:\s*/\s*\d{4})?\s*/\s*[A-Za-zĐđ]+(?:\\?-?[A-Za-zĐđ0-9]+)*)";
             string ngayPattern = @"(\d{1,2}) tháng (\d{1,2}) năm (\d{4})"; 
 
             string coQuan = Regex.Match(input, coQuanPattern).Groups[1].Value.Trim();
@@ -716,11 +724,26 @@ namespace Cukcuk.Core.Services
                 ngayBanHanh = $"{ngay.PadLeft(2, '0')}/{thang.PadLeft(2, '0')}/{nam}";
             }
 
+
+            string tenTaiLieu = "";
+            string[] parts = input.Split('|');
+            string[] lines = parts[parts.Length - 1].Trim().Split("\n", StringSplitOptions.RemoveEmptyEntries);
+            //Console.WriteLine($"lines: {lines.Length}");
+            //Console.WriteLine($"line 0: {lines[0]}");
+            //Console.WriteLine($"line 1: {lines[1]}");
+            tenTaiLieu = lines[0].Trim() + " " + lines[1].Trim();
+
+
+            tenTaiLieu = Regex.Replace(tenTaiLieu, @"(\*\*|__)(.*?)\1", "$2");
+            tenTaiLieu = Regex.Replace(tenTaiLieu, @"(\*|_)(.*?)\1", "$2");
+            tenTaiLieu = Regex.Replace(tenTaiLieu, @"\\-", "-");
+
+
             //Console.WriteLine($"co quan: {coQuan}");
             //Console.WriteLine($"so luat: {soLuat}");
             //Console.WriteLine($"ngay ban hanh: {ngayBanHanh}");
 
-            return (coQuan, soLuat, ngayBanHanh);
+            return (coQuan, soLuat, ngayBanHanh, tenTaiLieu);
         }
 
 
@@ -810,27 +833,27 @@ namespace Cukcuk.Core.Services
             string signature = parts[2].Trim();
 
             List<string> chucDanhCoTheKyVBPL = new List<string>
-                {
-                    "CHỦ TỊCH NƯỚC",
-                    "THỦ TƯỚNG CHÍNH PHỦ",
-                    "PHÓ THỦ TƯỚNG CHÍNH PHỦ",
-                    "CHỦ TỊCH QUỐC HỘI",
-                    "PHÓ CHỦ TỊCH QUỐC HỘI",
-                    "BỘ TRƯỞNG",
-                    "THỨ TRƯỞNG",
-                    "CHỦ NHIỆM ỦY BAN",
-                    "TỔNG KIỂM TOÁN NHÀ NƯỚC",
-                    "CHÁNH ÁN TÒA ÁN NHÂN DÂN TỐI CAO",
-                    "VIỆN TRƯỞNG VIỆN KIỂM SÁT NHÂN DÂN TỐI CAO",
-                    "CHỦ TỊCH ỦY BAN NHÂN DÂN CẤP TỈNH",
-                    "PHÓ CHỦ TỊCH ỦY BAN NHÂN DÂN CẤP TỈNH ĐƯỢC ỦY QUYỀN",
-                    "GIÁM ĐỐC SỞ",
-                    "TRƯỞNG PHÒNG TƯ PHÁP",
-                    "CHÍNH PHỦ",
-                    "THỦ TƯỚNG",
-                    "PHÓ THỦ TƯỚNG",
-                    "CHỦ TỊCH QUỐC HỘI"
-                };
+            {
+                "CHỦ TỊCH NƯỚC",
+                "THỦ TƯỚNG CHÍNH PHỦ",
+                "PHÓ THỦ TƯỚNG CHÍNH PHỦ",
+                "CHỦ TỊCH QUỐC HỘI",
+                "PHÓ CHỦ TỊCH QUỐC HỘI",
+                "BỘ TRƯỞNG",
+                "THỨ TRƯỞNG",
+                "CHỦ NHIỆM ỦY BAN",
+                "TỔNG KIỂM TOÁN NHÀ NƯỚC",
+                "CHÁNH ÁN TÒA ÁN NHÂN DÂN TỐI CAO",
+                "VIỆN TRƯỞNG VIỆN KIỂM SÁT NHÂN DÂN TỐI CAO",
+                "CHỦ TỊCH ỦY BAN NHÂN DÂN CẤP TỈNH",
+                "PHÓ CHỦ TỊCH ỦY BAN NHÂN DÂN CẤP TỈNH ĐƯỢC ỦY QUYỀN",
+                "GIÁM ĐỐC SỞ",
+                "TRƯỞNG PHÒNG TƯ PHÁP",
+                "CHÍNH PHỦ",
+                "THỦ TƯỚNG",
+                "PHÓ THỦ TƯỚNG",
+                "CHỦ TỊCH QUỐC HỘI"
+            };
 
 
             string[] words = signature.Split("**", StringSplitOptions.RemoveEmptyEntries);
@@ -882,12 +905,41 @@ namespace Cukcuk.Core.Services
                 if (string.IsNullOrEmpty(text)) continue;
                 if (IsValidSignature(text))
                 {
-                    Console.WriteLine(text);
+                    //Console.WriteLine(text);
                     signIndex = index;
                     break;
                 }
             }
 
+            for (int index = signIndex - 1; index >= contentIndex; index--)
+            {
+                var text = contents[index].Trim();
+
+                //Console.WriteLine($"text: {text}");
+
+                var pattern = @"này có hiệu lực thi hành\s+(?:kể\s+)?từ ngày\s+(\d{1,2})\s+tháng\s+(\d{1,2})\s+năm\s+(\d{4})";
+                var regex = new Regex(pattern, RegexOptions.IgnoreCase);
+
+                var match = regex.Match(text);
+
+                if (match.Success)
+                {
+                    string day = match.Groups[1].Value.PadLeft(2, '0');
+                    string month = match.Groups[2].Value.PadLeft(2, '0');
+                    string year = match.Groups[3].Value;
+
+                    var dateStr = $"{day}/{month}/{year}";
+                    DateTime? date = null;
+                    if (DateTime.TryParseExact(dateStr, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime outDate))
+                    {
+                        date = outDate;
+                    }
+
+                    document.EffectiveDate = date;
+
+                    break;
+                }
+            }
 
             var firstBlock = new DocumentBlock
             {
@@ -961,10 +1013,11 @@ namespace Cukcuk.Core.Services
 
             returnBlocks.Add(sightBlock);
 
-            var (coquan, soluat, ngaybanhanh) = ExtractLawInfo(firstBlock.Content);
+            var (coquan, soluat, ngaybanhanh, tentailieu) = ExtractLawInfo(firstBlock.Content);
 
             document.Issuer = coquan;
             document.DocumentNo = soluat;
+            document.DocumentName = tentailieu;
 
             DateTime? issueDate = null;
             if (DateTime.TryParseExact(ngaybanhanh, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
@@ -1024,7 +1077,7 @@ namespace Cukcuk.Core.Services
 
         private static int GetLevel(string content)
         {
-            string dataCheck = content.Trim().Trim('*').Trim();
+            string dataCheck = content.Trim().Trim('*');
 
             string partRegex = @"^Phần\s+([IVXLCDM\d]+)\.?";
             if (Regex.IsMatch(dataCheck, partRegex, RegexOptions.IgnoreCase)) return 1;
@@ -1071,7 +1124,7 @@ namespace Cukcuk.Core.Services
             parentBlocks.Push(block);
         }
 
-       public async Task<IEnumerable<DocumentBlock>> GetBlockByDocumentId(Guid documentId)
+       public async Task<List<DocumentBlock>> GetBlockByDocumentId(Guid documentId)
         {
             return await _documentRepository.GetBlockByDocumentId(documentId);
         }

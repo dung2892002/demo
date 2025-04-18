@@ -26,6 +26,9 @@ D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.pdb
 D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\ref\Cukcuk.Core.dll
 D:\intern\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.runtimeconfig.json
 D:\intern\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.genruntimeconfig.cache
+D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
 D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.deps.json
 D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.runtimeconfig.json
 D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\Cukcuk.Core.dll
@@ -41,6 +44,3 @@ D:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\refint\Cukcuk.Core.dll
 D:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.pdb
 D:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\Cukcuk.Core.genruntimeconfig.cache
 D:\demo\Back-End\Cukcuk.Core\obj\Debug\net8.0\ref\Cukcuk.Core.dll
-D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
-D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
-D:\demo\Back-End\Cukcuk.Core\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe

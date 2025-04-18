@@ -271,7 +271,7 @@ const deleteLoading = ref<number>(-1)
 const documentUpdatedId = ref<string | null>(null)
 
 const currentDocument = ref<Document | null>(null)
-const pageSize = ref(20)
+const pageSize = ref(10)
 const pageNumber = ref(1)
 
 const categoryFilterId = ref<string | null>(null)
@@ -418,9 +418,11 @@ const documentDetail = ref<Document>({
   FolderPath: '',
   DocumentBlocks: [],
   DocumentNo: null,
+  DocumentName: null,
   IssueDate: null,
   SignerName: null,
   Issuer: null,
+  EffectiveDate: null,
   IsLaw: false,
 })
 
@@ -509,8 +511,10 @@ function closeFile(state: boolean) {
     FolderPath: '',
     DocumentBlocks: [],
     DocumentNo: null,
+    DocumentName: null,
     IssueDate: null,
     SignerName: null,
+    EffectiveDate: null,
     Issuer: null,
     IsLaw: false,
   }

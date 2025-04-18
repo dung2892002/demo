@@ -2866,8 +2866,17 @@
             "type": "string",
             "nullable": true
           },
+          "DocumentName": {
+            "type": "string",
+            "nullable": true
+          },
           "SignerName": {
             "type": "string",
+            "nullable": true
+          },
+          "EffectiveDate": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           },
           "IsLaw": {

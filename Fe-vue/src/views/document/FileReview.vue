@@ -1,6 +1,6 @@
 <template>
   <div class="content-main">
-    <div class="file" @click="handleClosePopup">
+    <div class="file" @click="handleClosePopup" v-if="!loadingCategories">
       <div
         v-for="(document, index) in documents"
         :key="index"
@@ -16,18 +16,43 @@
           <span>{{ document.Name }}</span>
         </div>
         <div class="file-form">
-          <div class="form-data">
-            <span>Chủ đề </span>
-            <select v-model="document!.CategoryId" class="form__input" :disabled="checkEditMode()">
-              <option :value="category.Id" v-for="category in categories" :key="category.Id">
-                {{ category.Name }}
-              </option>
-            </select>
-          </div>
           <div v-if="document.IsLaw" class="form-data--law">
+            <div class="form-data data-select" style="width: 100%;" :disable="checkEditMode()" >
+              <span class="form__label">Lĩnh vực <span class="required">*</span></span>
+              <div class="value--current" @click.stop="toggleShowSelectCategory(index)" style="width: 100%;" :class="{ 'disabled': checkEditMode() }">
+                <span>{{  currentCategories[index].Name  }}</span>
+                <div>
+                  <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectCategory === index && !checkEditMode()" />
+                  <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
+                </div>
+                <div class="value-data more" v-if="showSelectCategory === index && !checkEditMode()">
+                  <div
+                    v-for="category in categories"
+                    :key="category.Id"
+                    @click.stop="selectCategory(category, index)"
+                    :class="{ selected: currentCategories[index].Id === category.Id }"
+                    class="data"
+                  >
+                    <span> {{ category.Name }}</span>
+                    <font-awesome-icon
+                      :icon="['fas', 'check']"
+                      v-if="currentCategories[index].Id === category.Id"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="form-data">
               <span>Cơ quan ban hành </span>
-              <input v-model="document!.Issuer" class="form__input" :disabled="checkEditMode()" />
+              <input v-model="document!.Issuer" class="form__input" :disabled="checkEditMode()" :class="{ 'disabled': checkEditMode() }"/>
+            </div>
+            <div class="form-data">
+              <span>Ngày ban hành</span>
+              <DateInput v-model="document.IssueDate!" :state="checkEditMode()"/>
+            </div>
+            <div class="form-data">
+              <span>Ngày có hiệu lực</span>
+              <DateInput v-model="document.EffectiveDate!" :state="checkEditMode()"/>
             </div>
             <div class="form-data">
               <span>Mã văn bản </span>
@@ -35,6 +60,16 @@
                 v-model="document!.DocumentNo"
                 class="form__input"
                 :disabled="checkEditMode()"
+                :class="{ 'disabled': checkEditMode() }"
+              />
+            </div>
+            <div class="form-data">
+              <span>Tên văn bản </span>
+              <input
+                v-model="document!.DocumentName"
+                class="form__input"
+                :disabled="checkEditMode()"
+                :class="{ 'disabled': checkEditMode() }"
               />
             </div>
             <div class="form-data">
@@ -43,17 +78,10 @@
                 v-model="document!.SignerName"
                 class="form__input"
                 :disabled="checkEditMode()"
+                :class="{ 'disabled': checkEditMode() }"
               />
             </div>
-            <div class="form-data">
-              <span>Ngày ban hành</span>
-              <input
-                v-model="document!.IssueDate"
-                class="form__input"
-                type="date"
-                :disabled="checkEditMode()"
-              />
-            </div>
+
           </div>
         </div>
       </div>
@@ -88,11 +116,12 @@
             </div>
           </div>
         </div>
-        <div class="file-content__body" @scroll="handleClosePopup" >
-          <div v-show="showBlock">
+        <div class="file-content__body" @scroll="handleClosePopup">
+          <div v-show="showBlock" style="min-height: 500px;" >
             <DocumentBlocks
               :propBlocks="showDocument?.DocumentBlocks!"
               :edit-mode="editMode"
+              :state="props.state"
               @update-blocks="handleUpdateBlocks"
               ref="blocksRef"
             />
@@ -127,8 +156,9 @@ import type { Document, DocumentBlock, DocumentCategory } from '@/entities/Docum
 import { getSrcIconDocument } from '@/ts/utils'
 import axios from 'axios'
 import { marked } from 'marked'
-import { onMounted, ref, type PropType } from 'vue'
+import {  onMounted, ref, type PropType } from 'vue'
 import DocumentBlocks from './DocumentBlocks.vue'
+
 
 const colors = [
   {
@@ -168,6 +198,7 @@ const blocksRef = ref<InstanceType<typeof DocumentBlocks> | null>(null);
 
 import { debounce } from "lodash";
 import { handleCretaeTableFromMarkdown } from '@/ts/markdown'
+import DateInput from '@/components/DateInput.vue'
 
 const handleClosePopup = debounce(() => {
   if (blocksRef.value?.closeContextMenuAndPopup) {
@@ -175,6 +206,22 @@ const handleClosePopup = debounce(() => {
   }
 }, 100); // Chỉ gọi sau 200ms nếu không có scroll mới
 
+
+const currentCategories = ref<DocumentCategory[]>([])
+const showSelectCategory = ref(-1)
+function toggleShowSelectCategory(index : number) {
+  if (showSelectCategory.value === index || checkEditMode()) {
+    showSelectCategory.value = -1
+    return
+  }
+  showSelectCategory.value = index
+}
+
+function selectCategory(category: DocumentCategory, index: number) {
+  currentCategories.value[index] = category
+  showDocument.value!.CategoryId = category.Id
+  showSelectCategory.value = -1
+}
 
 function toggleShowColorList() {
   showColorList.value = !showColorList.value
@@ -199,7 +246,7 @@ const props = defineProps({
   },
   updateLoading: {
     type: Boolean,
-  },
+  }
 })
 
 const emits = defineEmits(['cancelUpload', 'confirmUpload', 'updateFile', 'close'])
@@ -230,7 +277,7 @@ const showBlock = ref(true)
 
 function checkEditMode(): boolean {
   if (props.state) {
-    return false
+    return true
   }
   if (editMode.value) {
     return false
@@ -288,15 +335,27 @@ async function fetchCategories() {
   try {
     const response = await axios.get('https://localhost:7160/api/v1/Documents/categories')
     categories.value = response.data
+
+    props.documents.forEach((document) => {
+    const category = categories.value.find((category) => category.Id === document.CategoryId)
+    if (category) {
+      currentCategories.value.push(category)
+    }
+  })
   } catch (error) {
     console.error(error)
   }
 }
 
-onMounted(() => {
-  fetchCategories()
+const loadingCategories = ref(true)
+
+onMounted(async () => {
+  await fetchCategories()
+  loadingCategories.value = false
   showDocument.value = props.documents[0]
 })
+
+
 </script>
 
 <style lang="scss" scoped>

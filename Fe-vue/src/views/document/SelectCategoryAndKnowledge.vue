@@ -8,15 +8,15 @@
       gap: 10px;
     "
   >
-    <div class="file-category">
+    <div class="data-select">
       <span class="form__label">Chủ đề <span class="required">*</span></span>
-      <div class="category--current" @click.stop="toggleShowSelectCategory">
+      <div class="value--current" @click.stop="toggleShowSelectCategory">
         <span>{{ currentCategory ? currentCategory.Name : 'Chọn chủ đề' }}</span>
         <div>
           <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectCategory" />
           <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
         </div>
-        <div class="category-data more" v-if="showSelectCategory">
+        <div class="value-data more" v-if="showSelectCategory">
           <div
             v-for="category in categories"
             :key="category.Id"
@@ -33,15 +33,15 @@
         </div>
       </div>
     </div>
-    <div class="file-category">
+    <div class="data-select">
       <span class="form__label">Loại tri thức <span class="required">*</span></span>
-      <div class="category--current" @click.stop="toggleShowSelectKnowledgeType">
+      <div class="value--current" @click.stop="toggleShowSelectKnowledgeType">
         <span>{{ isLaw ? 'Văn bản quy phạm pháp luật' : 'Tri thức nghiệp vụ khác' }}</span>
         <div>
           <font-awesome-icon :icon="['fas', 'chevron-up']" v-if="showSelectKnowledgeType" />
           <font-awesome-icon :icon="['fas', 'chevron-down']" v-else />
         </div>
-        <div class="category-data" v-if="showSelectKnowledgeType">
+        <div class="value-data" v-if="showSelectKnowledgeType">
           <div @click.stop="selectLaw(true)" :class="{ selected: isLaw }" class="data">
             <span> Văn bản quy phạm pháp luật</span>
             <font-awesome-icon :icon="['fas', 'check']" v-if="isLaw" />
@@ -59,6 +59,7 @@
 <script setup lang="ts">
 import type { DocumentCategory } from '@/entities/Document'
 import { onBeforeUnmount, onMounted, ref, type PropType } from 'vue'
+import '../../styles/component/select.scss'
 
 const currentCategory = ref<DocumentCategory | null>(null)
 
